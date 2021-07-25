@@ -82,3 +82,7 @@ like a RiPLIB violation.
 Note: this add-on was originally part of my generalized mods collection;
 its history there can be found at: https://github.com/cooljeanius/wesnoth_mods
 Forum thread here: https://forums.wesnoth.org/viewtopic.php?f=8&t=1887
+
+WARNING for developers: please do NOT run wmllint on this campaign again until
+updating to a version where the bug with wmllint unnecessarily inserting icons
+is fixed.
