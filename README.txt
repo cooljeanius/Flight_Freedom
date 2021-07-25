@@ -1,4 +1,10 @@
-So yeah this was another hard one. Here's a writeup on my per-scenario changes:
+This is the story of the great Drake leader Malakar, who saw the near-destruction
+of his tribe at the hands of a dark wizard, and of how he gathered his shattered
+people and set out on a dangerous journey across unknown lands in the hopes of
+bringing them back home.
+
+This was a hard campaign for me (egallager) to complete. Here's a writeup on my
+per-scenario changes from the last version by MadMax:
 
 01 Survival: I didn't actually edit this one my first time thru, but in
   retrospect, if I'm going to be making everything easier, I might as well
@@ -72,3 +78,7 @@ So yeah this was another hard one. Here's a writeup on my per-scenario changes:
 Also, this doesn't exactly fit in any particular scenario, but I gave the
 Drake Guard the Steadfast ability, because otherwise at first glance it looks
 like a RiPLIB violation.
+
+Note: this add-on was originally part of my generalized mods collection;
+its history there can be found at: https://github.com/cooljeanius/wesnoth_mods
+Forum thread here: https://forums.wesnoth.org/viewtopic.php?f=8&t=1887
