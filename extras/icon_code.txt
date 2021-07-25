@@ -1,0 +1,11 @@
+glider-fire-se-1.png is included to show an icon on the web interface to the add-on server. The runemaster crop is a 72x72 black image, blitted over it in-game to show our fancy icon.
+
+units/drakes/glider-fire-se-1.png~RC(magenta>red)
+~BLIT(portraits/dwarves/runemaster.png~CROP(133,0,72,72),0,0)
+~BLIT(halo/fire-aura.png~CROP(164,164,72,72)~O(70%),0,0)
+~BLIT(projectiles/fireball-impact-4.png~CROP(14,33,72,72)~O(60%),0,0)
+~BLIT(items/cage.png~CROP(2,0,37,72),0,0)
+~BLIT(items/cage.png~CROP(37,0,31,62),41,0)
+~BLIT(units/drakes/glider-fly-2.png~CROP(0,0,68,72)~RC(magenta>red),4,0)
+
+units/drakes/glider-fire-se-1.png~RC(magenta>red)~BLIT(portraits/dwarves/runemaster.png~CROP(133,0,72,72),0,0)~BLIT(halo/fire-aura.png~CROP(164,164,72,72)~O(70%),0,0)~BLIT(projectiles/fireball-impact-4.png~CROP(14,33,72,72)~O(60%),0,0)~BLIT(items/cage.png~CROP(2,0,37,72),0,0)~BLIT(items/cage.png~CROP(37,0,31,62),41,0)~BLIT(units/drakes/glider-fly-2.png~CROP(0,0,68,72)~RC(magenta>red),4,0)
