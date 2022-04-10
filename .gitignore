@@ -1,6 +1,7 @@
 # unnecessary backup files:
 *~
 *.cfg-bak
+*.map-bak
 *.swp
 
 # has private things in it:
