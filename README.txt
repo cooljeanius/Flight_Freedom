@@ -85,4 +85,4 @@ Forum thread here: https://forums.wesnoth.org/viewtopic.php?f=8&t=1887
 
 WARNING for developers: please do NOT run wmllint on this campaign again until
 updating to a version where the bug with wmllint unnecessarily inserting icons
-is fixed.
+is fixed (at least, not unless you also use wmllint's -d or --dryrun flag)
