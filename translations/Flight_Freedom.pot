@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2022-05-18 04:00 UTC\n"
+"POT-Creation-Date: 2022-05-21 04:23 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -390,15 +390,15 @@ msgid "Underground"
 msgstr ""
 
 #: Flight_Freedom/macros/special-notes.cfg:5
-msgid " Some of this unit’s attacks are not available except on defense."
+msgid "Some of this unit’s attacks are not available except on defense."
 msgstr ""
 
 #: Flight_Freedom/macros/special-notes.cfg:8
-msgid " Some of this unit’s attacks are not available except on offense."
+msgid "Some of this unit’s attacks are not available except on offense."
 msgstr ""
 
 #: Flight_Freedom/macros/special-notes.cfg:12
-msgid " This unit cannot move to terrains other than water, castle and villages."
+msgid "This unit cannot move to terrains other than water, castle and villages."
 msgstr ""
 
 #. [part]
@@ -1376,14 +1376,14 @@ msgid "This weapon will never be used on defense."
 msgstr ""
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:35
 #: Flight_Freedom/macros/weapon-specials.cfg:36
+#: Flight_Freedom/macros/weapon-specials.cfg:37
 msgid "defend only"
 msgstr ""
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:37
 #: Flight_Freedom/macros/weapon-specials.cfg:38
+#: Flight_Freedom/macros/weapon-specials.cfg:39
 msgid "This weapon will only be available for defense."
 msgstr ""
 
@@ -2006,42 +2006,42 @@ msgid "It seems he dropped a potion!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1210
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1212
 msgid "Could this key fit that trapdoor?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1216
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1218
 msgid "I seem to have found a key. What it unlocks, I do not know."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1273
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1275
 msgid "Perfect!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1283
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1285
 msgid "Except I am standing on the trapdoor."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1289
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1291
 msgid "Except... that I'm standing on the trapdoor."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1303
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1305
 msgid "The trapdoor is locked! Could that key fit?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1309
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1311
 msgid "The trapdoor is locked!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/03a_Manor.cfg:1381
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1383
 msgid "This mansion is haunted!"
 msgstr ""
 
