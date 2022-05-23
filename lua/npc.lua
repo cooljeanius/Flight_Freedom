@@ -49,7 +49,9 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 		return (x >= x1 and x <= x2) and (y >= y1 and y <= y2)
 	end
 
-	-- wesnoth.message(string.format("moving birds in area ((%d, %d), (%d, %d))", x1, y1, x2, y2))
+	if (wesnoth.game_config.debug) then
+		wesnoth.message(string.format("moving birds in area ((%d, %d), (%d, %d))", x1, y1, x2, y2))
+	end
 
 	--
 	-- Store required units
@@ -108,7 +110,9 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 
 			wesnoth.extract_unit(npc)
 
-			-- wesnoth.message(string.format("x = %s; y = %s", path.x, path.y))
+			if (wesnoth.game_config.debug) then
+				wesnoth.message(string.format("x = %s; y = %s", path.x, path.y))
+			end
 
 			local npc_cfg = npc.__cfg
 
