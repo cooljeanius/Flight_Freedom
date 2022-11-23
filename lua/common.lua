@@ -24,7 +24,7 @@ end
 ---
 
 function wesnoth.wml_actions.count_units(cfg)
-	local units = wesnoth.get_units(cfg)
+	local units = wesnoth.units.find_on_map(cfg)
 	local varname = cfg.variable or "unit_count"
 
 	if units == nil then

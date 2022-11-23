@@ -14,6 +14,8 @@
 ---
 
 function wesnoth.wml_actions.npc_bird_behavior(cfg)
+	-- FIXME: deprecated, but updating it to the recommended replacement results in an error, so...
+	-- I dunno, maybe I just was doing it wrong...
 	local map_w, map_h, map_border = wesnoth.get_map_size()
 
 	local function do_error(msg)
@@ -49,15 +51,15 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 		return (x >= x1 and x <= x2) and (y >= y1 and y <= y2)
 	end
 
-	if (wesnoth.game_config.debug) then
-		wesnoth.message(string.format("moving birds in area ((%d, %d), (%d, %d))", x1, y1, x2, y2))
+	if (wesnoth.game_config.debug and wesnoth.game_config.debug_lua) then
+		wesnoth.interface.add_chat_message(string.format("moving birds in area ((%d, %d), (%d, %d))", x1, y1, x2, y2))
 	end
 
 	--
 	-- Store required units
 	--
 
-	local npcs = wesnoth.get_units {
+	local npcs = wesnoth.units.find_on_map {
 		type = types, side = side_num,
 		x = string.format("1-%d", map_w),
 		y = string.format("1-%d", map_h)
@@ -86,7 +88,7 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 			for j = 0, move_steps, 1 do
 				if oob then break end
 
-				local target = wesnoth.get_locations({
+				local target = wesnoth.map.find({
 					{ "filter_adjacent_location", {
 						adjacent = "-" .. path.direction,
 						x = endpoint.x,
@@ -108,10 +110,10 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 
 			-- Move the bird
 
-			wesnoth.extract_unit(npc)
+			wesnoth.units.extract(npc)
 
-			if (wesnoth.game_config.debug) then
-				wesnoth.message(string.format("x = %s; y = %s", path.x, path.y))
+			if (wesnoth.game_config.debug and wesnoth.game_config.debug_lua) then
+				wesnoth.interface.add_chat_message(string.format("x = %s; y = %s", path.x, path.y))
 			end
 
 			local npc_cfg = npc.__cfg
@@ -131,10 +133,10 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 			-- are not restored
 
 			if not oob then
-				npc.x, npc.y = wesnoth.find_vacant_tile(endpoint.x, endpoint.y)
+				npc.x, npc.y = wesnoth.paths.find_vacant_hex(endpoint.x, endpoint.y)
 				npc.facing = path.direction
 
-				wesnoth.put_unit(npc)
+				wesnoth.units.to_map(npc)
 			end
 
 			-- TODO: fire moveto or death events accordingly

@@ -477,7 +477,7 @@ end
 
 function wesnoth.wml_actions.animate_path(cfg)
 	if wesnoth.get_image_size == nil then
-		wesnoth.message("Animation skipped. To see the animation, upgrade to Battle for Wesnoth version 1.9.4 or later")
+		wesnoth.interface.add_chat_message("Animation skipped. To see the animation, upgrade to Battle for Wesnoth version 1.9.4 or later")
 		return
 	end
 	local animation = {}
