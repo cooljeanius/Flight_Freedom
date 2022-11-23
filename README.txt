@@ -10,18 +10,22 @@ per-scenario changes from the last version by MadMax:
   retrospect, if I'm going to be making everything easier, I might as well
   start here.
 02a Rebellion: I made it so that the hatchlings get wounded less, to try to
-  make it easier to keep them alive
+  make it easier to keep them alive. I also had to fix the cutscene.
 03a Manor: un-commented out code that had weakened some of the guardians and
-  instead made it guarded by "ifdef EASY"
+  instead made it guarded by "ifdef EASY". In later playthroughs, I made recalled
+  units turn loyal (all on EASY, 1 on NORMAL, none on HARD), added more healing,
+  made barrels act like villages, tweaked enemy AI, and had Donoaov drop a potion.
 04a Caravan: I didn't actually edit this one my first time thru, but since I'm
-  taking a second pass at this I figure I might as well edit this one, too, for
-  completeness.
+  taking second passes (and beyond) at this I figure I might as well edit this one,
+  too, for completeness. In later playthroughs I modified enemy AI and let Malakar
+  keep his spear if he picked one up previously.
 05a Blue River: Restricted clippers that Omandro can recruit to 1 on EASY
-06a Southern Shore: See note for 04a Caravan above.
+06a Southern Shore: See first sentence of note for 04a Caravan above.
 07a Open Ocean: Likewise.
 08 Landfall: OK this one was a pain. The enemies ganged up on me and just
   wrecked me on my first try, so I tweaked their AIs to try to make them fight
-  each other more. Also, tweaks to gold, income, and turns.
+  each other more. Also, tweaks to gold, income, and turns. Might need further
+  work.
 10 Underground: This one was too chokepoint-y, so I edited the map to make
   some of the corridors wider, and the terrain more passable for drakes.
   I also added some more villages. I also added a (vague) warning for units
@@ -49,14 +53,14 @@ per-scenario changes from the last version by MadMax:
   changed the turns on which Kogw gives you your progress notifications.
 12 Rockfall: Made the dwarves fight the lava monsters. Also gave the player
   more time to escape.
-13 Betrayal: See note for 04a Caravan above.
-14 Hordes of the Fould Undead: Likewise.
+13 Betrayal: See first sentence of note for 04a Caravan above.
+14 Hordes of the Foul Undead: Likewise.
 15 Gate of Storms: Likewise.
 16 Exodus: Likewise.
-17 Blockade: I tried to make the Merfolk and Nagas focus more on each other
-  than the player. Also I've noticed the whole thing where the WML messes with
-  the team colors doesn't exactly work, so I might want to change that, both
-  here and in other scenarios where it's done similarly.
+17 Blockade: I tried to make the Merfolk and Nagas focus more on each other than
+  the player. Also I noticed that the whole thing where the WML messes with the
+  team colors wasn't exactly working, so I've tried changing that, both here and
+  in other scenarios where it's done similarly.
 18 Return to Morogor: I had finally run thru my massive gold reserves left
   over from River of Skulls by this point (on my first playthru), but since
   all my spending of it previously had given me a large recall list, I
