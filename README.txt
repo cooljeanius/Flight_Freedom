@@ -58,7 +58,11 @@ per-scenario changes from the last version by MadMax:
 13 Betrayal: See first sentence of note for 04a Caravan above.
 14 Hordes of the Foul Undead: Likewise.
 15 Gate of Storms: Likewise.
-16 Exodus: Likewise.
+16 Exodus: Minor gold/income/AI tweaks; give enemies 1 Skeleton each so that your
+  allied pirates' comment about having seen a skeleton is accurate, scroll to
+  Unforgiver during opening cutscene so that the player is more likely to notice
+  it, scroll to enemy units for events with dialogue triggered by them being
+  recruited.
 17 Blockade: I tried to make the Merfolk and Nagas focus more on each other than
   the player. Also I noticed that the whole thing where the WML messes with the
   team colors wasn't exactly working, so I've tried changing that, both here and
