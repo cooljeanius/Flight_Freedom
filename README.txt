@@ -33,7 +33,9 @@ per-scenario changes from the last version by MadMax:
   maybe get the idea that they might lose a unit and choose an appropriate one
   accordingly. I didn't want to make it TOO scary of a warning, though, as the
   skeletal dragon is definitely worth the sacrifice, and players should still
-  definitely go for it.
+  definitely go for it. In a later playthru I also gave Malakar the "Illuminates"
+  ability here on EASY, if he has managed to advance to a point where his sword
+  is fiery.
 11 River of Skulls: Somehow the original 100 turn limit wasn't enough for me,
   so in my rage my first reaction was to set the turns as {TURNS 300 200 100}.
   This gave me such a huge early finish bonus when I finished with these edits
