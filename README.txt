@@ -74,7 +74,9 @@ per-scenario changes from the last version by MadMax:
   AI to try to make the enemy humans protect their leaders more, so that
   they'd fight the arriving AI drakes more than you, but that didn't really
   work. Also I edited the map to add more villages because I needed more
-  places to heal.
+  places to heal. Later playthrus: adjust AI some more, modify scout-returning
+  cutscene to try to prevent the player from forgetting to move their newly-arrived
+  scout
 19 Liberation: I actually debugged my way thru this level originally, instead
   of editing it first, so these edits were untested on my first playthru, but
   I have since tested them on a second playthru. Basically, I needed to up the
