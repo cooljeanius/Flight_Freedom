@@ -85,7 +85,11 @@ per-scenario changes from the last version by MadMax:
 20 Endgame: Mostly gold tweaks. The changes I made to the "enemy gold" event
   varied the amounts too much on difficulty in the changes I did my first
   playthru with, so these newer amounts should now be small enough in terms
-  of their differences. I still might want to reduce them again though.
+  of their differences. I still might want to reduce them again though. On later
+  playthrus: actually give enemies a bit more income so that the scenario has a
+  greater chance of lasting long enough to see some of the events that happen on
+  later turns (which now vary their turn numbers by difficulty), modify AI,
+  capture villages on start for all sides, improve opening cutscene
 
 Also, this doesn't exactly fit in any particular scenario, but I gave the
 Drake Guard the Steadfast ability, because otherwise at first glance it looks
@@ -94,6 +98,7 @@ like a RiPLIB violation.
 Note: this add-on was originally part of my generalized mods collection;
 its history there can be found at: https://github.com/cooljeanius/wesnoth_mods
 Forum thread here: https://forums.wesnoth.org/viewtopic.php?f=8&t=1887
+Secondary forum thread here: https://forums.wesnoth.org/viewtopic.php?t=40195
 
 WARNING for developers: please do NOT run wmllint on this campaign again until
 updating to a version where the bug with wmllint unnecessarily inserting icons
