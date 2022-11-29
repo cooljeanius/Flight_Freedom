@@ -99,6 +99,7 @@ Note: this add-on was originally part of my generalized mods collection;
 its history there can be found at: https://github.com/cooljeanius/wesnoth_mods
 Forum thread here: https://forums.wesnoth.org/viewtopic.php?f=8&t=1887
 Secondary forum thread here: https://forums.wesnoth.org/viewtopic.php?t=40195
+Outdated wiki page here: https://wiki.wesnoth.org/FlightToFreedom
 
 WARNING for developers: please do NOT run wmllint on this campaign again until
 updating to a version where the bug with wmllint unnecessarily inserting icons
