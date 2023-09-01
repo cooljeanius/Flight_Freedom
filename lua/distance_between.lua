@@ -2,7 +2,7 @@
 [distance_between]
 Author: MadMax (username on the Battle for Wesnoth forum)
 
-distance_between is a WML wrapper around the Lua function helper.distance_between, and returns the distance between two tiles.
+distance_between is a WML wrapper around the Lua function wesnoth.map.distance_between, and returns the distance between two tiles.
 
 Required keys:
 x, y: the first tile
@@ -23,10 +23,8 @@ Example:
 [/message]
 ]=]
 
-local helper = wesnoth.require "lua/helper.lua"
-
 function wesnoth.wml_actions.distance_between(cfg)
-	local dist = helper.distance_between(cfg.x, cfg.y, cfg.to_x, cfg.to_y)
+	local dist = wesnoth.map.distance_between({cfg.x, cfg.y}, {cfg.to_x, cfg.to_y})
 	local variable_name = cfg.variable or "distance"
-	wesnoth.set_variable(variable_name, dist)
+	wml.variables[variable_name] = dist
 end

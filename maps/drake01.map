@@ -1,6 +1,3 @@
-border_size=1
-usage=map
-
 Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo
 Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo
 Wo, Wo, Wo, Wo, Wo, Wo, Wwr, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Ww^Vm, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo
@@ -11,7 +8,7 @@ Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, 
 Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wwr, Wo, Wo, Wo, Wo, Wo, Wo, Ww, Wo, Wo, Wo, Wo, Wo, Wo, Wo
 Wwr, Wo, Ww, Wo, Ww, Ww, Ww, Ww, Ww, Wo, Wo, Ww, Ww, Ww, Ww, Wwr, Ww, Wwr, Wwr, Wwr, Wwr, Ww, Ww, Wwr, Ww, Ww, Wo, Ww, Ww, Ww, Wwr
 Wwr, Wwr, Wwr, Ww, Ww, Ww, Ww^Bw\, Ww, Ww, Wo, Ww, Ww, Ww^Bw\, Ww, Gs, Ww, Ww, Ww, Wwr, Wwr, Wwr, Wwr, Wwr, Ww, Ww^Bw\, Ww, Ww, Ww, Wwr, Wwr, Ds
-Ds, Wwr, Ds, Wwr, Ww, Ds, Ce, Ce, Ce, Ds, Ds, Ds, Ce, Ce, Ce, Ds, Ds, Ds, Ds, Ds, Ww, Ds, Ds, Ds, Ce, Ce, Ce, Ww, Wwr, Ds, Ds
+Ds, Wwr, Ds, Wwr, Ww, Ds, Ce, Ce, Ce, Ds, Ds, Ds, Ce, Ce, Ce, Ds, Ds, Ds, Ds, Ds^Ewsh, Ww, Ds, Ds, Ds, Ce, Ce, Ce, Ww, Wwr, Ds, Ds
 Hh^Fp, Ds, Gs, Ds, Ds, Ds, Ce, 1 Ke, Ce, Gs, Gs, Gs, Ce, 2 Ke, Ce, Gs, Gs, Gs, Gs, Ds, Ds, Gs, Ds, Gs, Ce, 3 Ke, Ce, Ww, Ds, Ds, Gs
 Hh^Fp, Hh^Fp, Gs, Gs, Gs, Ds, Gs, Ce, Gs, Gs, Gs, Gs, Gs^Vht, Ce, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Ds, Gs, Gs, Gs, Ce, Gs, Ww, Gs, Gs, Gs
 Hh^Fp, Gs, Gs, Gs, Gs, Gs, Gs^Vht, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Ww, Ww, Gs^Vht, Gs, Gs

@@ -1,6 +1,3 @@
-border_size=1
-usage=map
-
 Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu
 Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu
 Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Xu, Uu, Xu, Uu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu
@@ -29,7 +26,7 @@ Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Re, Rd, Uu, Uu, Uu, Uu, Uu, Rd, Xu, Uu, 
 Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Rd, Rd, Uu, Uu, Xu, Uu, Xu, Uu, Xu, Xu, Uu^Vu, Xu, Xu, Rd, Re, Uu, Xu, Xu, Xu, Xu
 Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Re, Uu, Uu, Uu, Xu, Xu, Xu, Xu, Xu, Uu^Vu, Uu^Vu, Uu^Vu, Xu, Uu, Rd, Uu, Xu, Xu, Xu, Xu, Xu
 Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Uu, Uu, Uu, Uu^Vud, Xu, Xu, Xu, Xu, Xu, Uu^Vu, Xu, Xu, Xu, Uu, Uu, Xu, Xu, Xu, Xu, Xu
-Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Uu^Ii, Uu, Uu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Uu, Xu, Cud, Xu, Xu, Xu
-Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu^Ii, Gg, Uu^Ii, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Uu, Cud, 3 Kud, Xu, Xu, Xu
-Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Gg, Gg, Gg, Gg, Gg, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Cud, Xu, Xu, Xu, Xu
-Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Gg, Gg, Gg, Gg, Gg, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Cud, Xu, Xu, Xu, Xu
+Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Uu^Ii, Uu, Uu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu, Uu^Qhh, Xu, Cud^Qhh, Xu, Xu, Xu
+Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu^Ii, Gg, Uu^Ii, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Uu^Qhh, Uu^Qhh, Cud^Qhh, 3 Kud^Qhh, Xu, Xu, Xu
+Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Gg, Gg, Gg, Gg, Gg, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Cud^Qhh, Xu, Xu, Xu, Xu
+Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Gg, Gg, Gg, Gg, Gg, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Cud^Qhh, Xu, Xu, Xu, Xu

@@ -78,7 +78,6 @@ The function must return the absolute x,y coordinates of the associated point
 x, y = get_point_on_current_segment_from_offset( offset )
 ]=]
 
-local helper = wesnoth.require "lua/helper.lua"
 local items = wesnoth.require "lua/wml/items.lua"
 
 -- Linear Algebra
@@ -133,7 +132,7 @@ local function get_image_name_with_offset(x, y, image)
 	-- requires a 72 pixel border around the image to work properly
 	x = x*2
 	y = y*2
-	local w, h = wesnoth.get_image_size(image)
+	local w, h = filesystem.image_size(image)
 
 	w = w-math.abs(x)
 	if w <= 0 then
@@ -293,7 +292,7 @@ function interpolation_methods.bspline(state, x_locs, y_locs, num_locs )
 		end
 
 		if num_locs < 4 then
-			helper.wml_error("[animate_path]: A B-spline path requires at least 4 points be specified")
+			wml.error("[animate_path]: A B-spline path requires at least 4 points be specified")
 		end
 
 		return calc_uniform_path_length, reached_point, get_location
@@ -306,7 +305,7 @@ function interpolation_methods.parabola(state, x_locs, y_locs, num_locs )
 	-- either increasing or decreasing order (second assumption allows determination of direction of travel)
 	return function ()
 		if num_locs ~= 3 then
-			helper.wml_error("[animate_path]: A parabola requires that exactly 3 points be specified")
+			wml.error("[animate_path]: A parabola requires that exactly 3 points be specified")
 		end
 		local A
 		A = {{x_locs[0]*x_locs[0], x_locs[0], 1},
@@ -316,7 +315,7 @@ function interpolation_methods.parabola(state, x_locs, y_locs, num_locs )
 		state.b = solve_system(A, state.b)
 		A = nil
 		if state.b == nil then
-			helper.wml_error("[animate_path]: The provided points do not form a parabola")
+			wml.error("[animate_path]: The provided points do not form a parabola")
 		end
 
 		local function get_parabola_path_length()
@@ -415,17 +414,17 @@ end
 
 local function load_path(cfg, container_name)
 	local animation = {}
-	local temp = cfg.image or helper.wml_error(container_name.." missing required image= attribute")
+	local temp = cfg.image or wml.error(container_name.." missing required image= attribute")
 	animation.images, animation.num_images = load_list(temp)
 	animation.linger = cfg.linger
-	temp = cfg.hex_x or helper.wml_error(container_name..": missing required hex_x= attribute")
+	temp = cfg.hex_x or wml.error(container_name..": missing required hex_x= attribute")
 	local hex_x, hex_x_count = load_list(temp)
 	animation.hex_x = hex_x[0]
-	temp = cfg.hex_y or helper.wml_error(container_name..": missing required hex_y= attribute")
+	temp = cfg.hex_y or wml.error(container_name..": missing required hex_y= attribute")
 	local hex_y, hex_y_count = load_list(temp)
 	animation.hex_y = hex_y[0]
 	if hex_x_count ~= hex_y_count then
-		helper.wml_error("The number of hex_x and hex_y values must be the same in "..container_name.." "..hex_x_count.." "..hex_y_count)
+		wml.error("The number of hex_x and hex_y values must be the same in "..container_name.." "..hex_x_count.." "..hex_y_count)
 	end
 
 	temp = cfg.x or "0"
@@ -433,7 +432,7 @@ local function load_path(cfg, container_name)
 	temp = cfg.y or "0"
 	animation.y_locs, animation.num_y_locs = load_list(temp)
 	if animation.num_locs ~= animation.num_y_locs then
-		helper.wml_error("The number of x and y values must be the same in "..container_name)
+		wml.error("The number of x and y values must be the same in "..container_name)
 	end
 	animation.transpose = cfg.transpose
 
@@ -458,7 +457,7 @@ local function load_path(cfg, container_name)
 
 	animation.interpolation = cfg.interpolation or "linear"
 	if not interpolation_methods[animation.interpolation] then
-		helper.wml_error(container_name..": Unknown interpolation method: "..animation.interpolation)
+		wml.error(container_name..": Unknown interpolation method: "..animation.interpolation)
 	end
 	if animation.transpose then
 		animation.x_locs, animation.y_locs = animation.y_locs, animation.x_locs
@@ -484,11 +483,11 @@ function wesnoth.wml_actions.animate_path(cfg)
 	animation[1] = load_path(cfg, "[animate_path]")
 	local frames = tonumber(cfg.frames) or animation[1].num_images
 	if frames < 2 then
-		helper.wml_error("[animate_path] requires frames be at least 2")
+		wml.error("[animate_path] requires frames be at least 2")
 	end
-	local delay = tonumber(cfg.frame_length) or helper.wml_error("Missing required frame_length= attribute in [animate_path]")
+	local delay = tonumber(cfg.frame_length) or wml.error("Missing required frame_length= attribute in [animate_path]")
 	local num_animations = 1
-	for extra_path in helper.child_range(cfg, "extra_path") do
+	for extra_path in wml.child_range(cfg, "extra_path") do
 		num_animations = num_animations + 1
 		animation[num_animations] = load_path(extra_path, "[extra_path]")
 	end
@@ -522,14 +521,14 @@ function wesnoth.wml_actions.animate_path(cfg)
 			end
 			animation[j].target_hex_x, animation[j].target_hex_y, x, y = calc_image_hex_offset(animation[j].hex_x,animation[j].hex_y,x,y)
 			animation[j].image_name = get_image_name_with_offset(x, y, animation[j].images[i%animation[j].num_images])
-			wesnoth.add_tile_overlay(animation[j].target_hex_x, animation[j].target_hex_y, {
+			wesnoth.interface.add_hex_overlay(animation[j].target_hex_x, animation[j].target_hex_y, {
 				x = animation[j].target_hex_x,
 				y = animation[j].target_hex_y,
 				halo = animation[j].image_name})
 		end
-		wesnoth.delay(delay)
+		wesnoth.interface.delay(delay)
 		for j = 1, num_animations do
-			wesnoth.remove_tile_overlay(animation[j].target_hex_x, animation[j].target_hex_y, animation[j].image_name)
+			wesnoth.interface.remove_hex_overlay(animation[j].target_hex_x, animation[j].target_hex_y, animation[j].image_name)
 		end
 	end
 	for j = 1, num_animations do

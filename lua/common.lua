@@ -3,13 +3,13 @@
 ---
 
 function safe_random(arg)
-	wesnoth.fire("set_variable", {
+	wml.fire("set_variable", {
 		name = "temp_ats_lua_random",
 		rand = arg,
 	})
 
-	local r = wesnoth.get_variable("temp_ats_lua_random")
-	wesnoth.set_variable("temp_ats_lua_random")
+	local r = wml.variables["temp_ats_lua_random"]
+	wml.variables["temp_ats_lua_random"] = nil
 
 	return r
 end
@@ -28,9 +28,17 @@ function wesnoth.wml_actions.count_units(cfg)
 	local varname = cfg.variable or "unit_count"
 
 	if units == nil then
-		wesnoth.set_variable(varname, 0)
+		wml.variables[varname] = 0
 	else
-		wesnoth.set_variable(varname, #units)
+		wml.variables[varname] = #units
 	end
 end
 
+---
+-- Clears the chat log.
+-- [clear_chat]
+-- [/clear_chat]
+---
+function wesnoth.wml_actions.clear_chat(cfg)
+	wesnoth.interface.clear_chat_messages()
+end
