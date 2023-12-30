@@ -22,3 +22,9 @@ jobs:
       if: always()
       with:
         wesnoth-version: ${{ env.WESNOTH_VERSION }}
+    - name: Verify images
+      uses: czyzby/wesnoth-png-optimizer@v1
+      if: always()
+      with:
+        wesnoth-version: ${{ env.WESNOTH_VERSION }}
+        threshold: 45
