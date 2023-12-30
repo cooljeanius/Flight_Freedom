@@ -110,6 +110,11 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 
 			-- Move the bird
 
+			if cfg.use_all_moves then
+				npc.moves = 0
+				npc.attacks_left=0
+			end
+
 			wesnoth.units.extract(npc)
 
 			if (wesnoth.game_config.debug and wesnoth.game_config.debug_lua) then
