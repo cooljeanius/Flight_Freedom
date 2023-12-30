@@ -16,15 +16,16 @@ jobs:
       uses: czyzby/wesnoth-wml-linter@v1
       with:
         wesnoth-version: ${{ env.WESNOTH_VERSION }}
-        spellcheck: false
+        spellcheck: true
+        lint-flags: -K
     - name: Verify resources scope
       uses: czyzby/wesnoth-wml-scope@v1
       if: always()
       with:
         wesnoth-version: ${{ env.WESNOTH_VERSION }}
+        flags: -c
     - name: Verify images
       uses: czyzby/wesnoth-png-optimizer@v1
       if: always()
       with:
         wesnoth-version: ${{ env.WESNOTH_VERSION }}
-        threshold: 5
