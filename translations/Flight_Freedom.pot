@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2023-12-30 23:35 UTC\n"
+"POT-Creation-Date: 2023-12-30 23:50 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3456,29 +3456,29 @@ msgid "By the Eyes... it's hopeless, Malakar! That's a whole fleet of their fine
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1180
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1181
 msgid "Cowardly thinskin. We are drakes! We shall take to the skies at once and make pyres of their worthless boats!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1184
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1185
 msgid "No, Captain, I fear the pirate has the way of it. Our tribe has spent much of our strength on our journey, and we would not survive a mad charge into their arrows and ballista bolts. We must regroup farther inland."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1190
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1191
 msgid "Hmm. So be it. Regroup farther inland!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1196
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1197
 msgid "Forgive me, darling. I've never had the honor of captaining a finer ship."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1200
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1208
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1201
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1209
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:603
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:321
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:745
@@ -3486,22 +3486,22 @@ msgid "..."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1204
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1205
 msgid "Haaarh. You must see, I have no choice. My hands are tied."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1212
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1213
 msgid "Let us go!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1285
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1286
 msgid "They have summoned reinforcements!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1289
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1290
 msgid "It's hopeless, Malakar. That's a whole fleet of their finest, and we can't escape!"
 msgstr ""
 
