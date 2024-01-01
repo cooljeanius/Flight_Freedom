@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2023-12-30 23:50 UTC\n"
+"POT-Creation-Date: 2024-01-01 01:21 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7848,7 +7848,7 @@ msgstr ""
 #. [unit_type]: id=Rabbit, race=animal
 #: Flight_Freedom/units/animals/Rabbit.cfg:20
 msgid ""
-"The rabbit is a cute creature which lives in fields and forests. In its gnawing attack, striking from powerful incisors, resides country farmers’ greatest fear. Alas, rabbits are victims of the appetite of many bigger creatures, like wolves or even humans, for their flesh is used in one of the most delicious dishes ever known.\n"
+"The rabbit is a cute creature which lives in fields and forests. In its gnawing attack, striking from powerful incisors, resides country farmers' greatest fear. Alas, rabbits are victims of the appetite of many bigger creatures, like wolves or even humans, for their flesh is used in one of the most delicious dishes ever known.\n"
 "\n"
 "Legend has it that they follow a king rabbit by the name of Cédric, whose whereabouts are yet unknown."
 msgstr ""
@@ -8896,17 +8896,17 @@ msgid ""
 msgstr ""
 
 #. [attack]: type=blade
-#: Flight_Freedom/units/undead/Avatar_of_Ending.cfg:76
+#: Flight_Freedom/units/undead/Avatar_of_Ending.cfg:75
 msgid "area attack"
 msgstr ""
 
 #. [attack]: type=pierce
-#: Flight_Freedom/units/undead/Avatar_of_Ending.cfg:90
+#: Flight_Freedom/units/undead/Avatar_of_Ending.cfg:89
 msgid "null blade"
 msgstr ""
 
 #. [attack]: type=arcane
-#: Flight_Freedom/units/undead/Avatar_of_Ending.cfg:102
+#: Flight_Freedom/units/undead/Avatar_of_Ending.cfg:101
 msgid "oblivion blast"
 msgstr ""
 
