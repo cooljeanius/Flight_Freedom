@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-01-01 01:21 UTC\n"
+"POT-Creation-Date: 2024-01-02 03:03 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5920,69 +5920,69 @@ msgstr ""
 msgid "Drakish Rebels"
 msgstr ""
 
+#. [side]
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:218
+msgid "Dunefolk Hunters"
+msgstr ""
+
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:296
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:301
 msgid "This is grim news, indeed. How is it that you are here to tell me of this?"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:300
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:305
 msgid "A small handful of rebels have been in hiding ever since the attack. We've fought our battles when and where we can, but our hopes are low and our numbers are dwindling. Your arrival will mean a great deal."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:304
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:309
 msgid "I will gather our leaders and meet you here at this beach as soon as I can."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:308
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:313
 msgid "Godspeed."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:327
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:332
 msgid "Mal, if they bring their leaders out in the open, they'll be slaughtered!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:332
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:337
 msgid "Malakar, we are too exposed here, we cannot protect their leaders!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:336
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:341
 msgid "I know. We will have the beaches cleared before they arrive."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:347
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:352
 msgid "NOTE: From now on, since the Unforgiver is no longer critical to your cause, the game will not end if it is lost."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:365
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:370
 msgid "No! My flagship!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:369
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:374
 msgid "You can mourn the boat another day. For now we are trapped on this beach. We prevail together this day or we both die."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:386
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:391
 msgid "Word is being passed to the resistance, and I have come back to help you claim the beach."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:436
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:441
 msgid "It's true! The Kakatars have returned!"
-msgstr ""
-
-#. [new_side]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:575
-msgid "Dunefolk Hunters"
 msgstr ""
 
 #. [message]: speaker=dune_harrier
