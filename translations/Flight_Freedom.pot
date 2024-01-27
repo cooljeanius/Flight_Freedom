@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-01-27 03:43 UTC\n"
+"POT-Creation-Date: 2024-01-27 04:29 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,7 +165,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/macros/deaths.cfg:119
-#: Flight_Freedom/scenarios/01_Survival.cfg:516
+#: Flight_Freedom/scenarios/01_Survival.cfg:523
 #: Flight_Freedom/scenarios/12_Rockfall.cfg:523
 msgid "RrrRRARGH!"
 msgstr ""
@@ -329,8 +329,8 @@ msgstr ""
 #: Flight_Freedom/macros/objectives.cfg:18
 #: Flight_Freedom/macros/objectives.cfg:24
 #: Flight_Freedom/scenarios/01_Survival.cfg:192
-#: Flight_Freedom/scenarios/01_Survival.cfg:326
-#: Flight_Freedom/scenarios/01_Survival.cfg:375
+#: Flight_Freedom/scenarios/01_Survival.cfg:333
+#: Flight_Freedom/scenarios/01_Survival.cfg:382
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:918
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:927
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:1017
@@ -1494,6 +1494,19 @@ msgstr ""
 msgid "Kakatar Tribe"
 msgstr ""
 
+#. [unit]: type=Drake Burner, id=Theracar0
+#. [unit]: type=Drake Burner, id=Theracar
+#. [message]: speaker=narrator
+#. [unit]: type=Drake Flameheart, id=Theracar
+#: Flight_Freedom/scenarios/01_Survival.cfg:127
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:314
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:253
+#: Flight_Freedom/scenarios/10_Underground.cfg:218
+#: Flight_Freedom/scenarios/11_River_Skulls.cfg:304
+#: Flight_Freedom/scenarios/12_Rockfall.cfg:179
+msgid "Theracar"
+msgstr ""
+
 #. [side]: type=Grand Knight, id=Mato
 #: Flight_Freedom/scenarios/01_Survival.cfg:144
 msgid "Mato"
@@ -1509,8 +1522,8 @@ msgstr ""
 #. [then]
 #. [scenario]: id=Rockfall
 #: Flight_Freedom/scenarios/01_Survival.cfg:193
-#: Flight_Freedom/scenarios/01_Survival.cfg:327
-#: Flight_Freedom/scenarios/01_Survival.cfg:376
+#: Flight_Freedom/scenarios/01_Survival.cfg:334
+#: Flight_Freedom/scenarios/01_Survival.cfg:383
 #: Flight_Freedom/scenarios/12_Rockfall.cfg:327
 #: Flight_Freedom/scenarios/12_Rockfall.cfg:370
 #: Flight_Freedom/scenarios/12_Rockfall.cfg:100
@@ -1523,94 +1536,94 @@ msgid "Necolag"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:256
+#: Flight_Freedom/scenarios/01_Survival.cfg:263
 msgid "What? No! NO! RrrrrrrRRRRRAAARGHH!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:260
+#: Flight_Freedom/scenarios/01_Survival.cfg:267
 msgid "Kakatar Tribe! To arms! Kill them all!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/01_Survival.cfg:265
+#: Flight_Freedom/scenarios/01_Survival.cfg:272
 msgid "For the course of this campaign <i>Inferno Drakes</i> can upgrade to <b>Armageddon Drakes</b>, and <i>Drake Clashers</i> can upgrade to <b>Drake Guards</b>."
 msgstr ""
 
 #. [message]: speaker=Necolag
-#: Flight_Freedom/scenarios/01_Survival.cfg:279
+#: Flight_Freedom/scenarios/01_Survival.cfg:286
 msgid "NYIEEEEEEEE!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/01_Survival.cfg:300
+#: Flight_Freedom/scenarios/01_Survival.cfg:307
 msgid "<span color='green'><b>Note: the campaign will not end if this scenario is lost.</b></span>"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:308
+#: Flight_Freedom/scenarios/01_Survival.cfg:315
 msgid "This is an army! We cannot hope to take them ourselves, but they will buy our lives dearly. Captain Theracar, I need you to warn the Jamolar tribe in the southeastern swamps."
 msgstr ""
 
 #. [message]: speaker=Theracar0
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/01_Survival.cfg:313
+#: Flight_Freedom/scenarios/01_Survival.cfg:320
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:277
 msgid "At once, Malakar."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:317
+#: Flight_Freedom/scenarios/01_Survival.cfg:324
 msgid "Tribesmen! We did not know it when we slept last night, nor when we awoke this morning, but it has always been written that this is our final hour. Our first priority is to stop the cavalrymen who would intercept our message to the Jamolars."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:321
+#: Flight_Freedom/scenarios/01_Survival.cfg:328
 msgid "Our second priority is to make sure that the children's children of these murderers still see our faces in their nightmares. Attack!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:325
+#: Flight_Freedom/scenarios/01_Survival.cfg:332
 msgid "Defeat the cavalry leader"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:365
+#: Flight_Freedom/scenarios/01_Survival.cfg:372
 msgid "Theracar! Without their horses, you should be able to outdistance them in the hills. Go!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:374
+#: Flight_Freedom/scenarios/01_Survival.cfg:381
 msgid "Move Theracar to the end of the southern stream"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:389
+#: Flight_Freedom/scenarios/01_Survival.cfg:396
 msgid "Drakes! Theracar is clear! For the honor of the tribe, let no human pass!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:477
+#: Flight_Freedom/scenarios/01_Survival.cfg:484
 msgid "I cannot abandon my tribe! As Chief, honor demands I fight to the last!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:491
+#: Flight_Freedom/scenarios/01_Survival.cfg:498
 msgid "Our fastest messenger is defeated! Abandon the defense! Everyone turn south! At least one voice must live to warn the Jamolar tribe!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/01_Survival.cfg:520
+#: Flight_Freedom/scenarios/01_Survival.cfg:527
 msgid "Haha! This one should fetch a hefty price at the market!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:547
+#: Flight_Freedom/scenarios/01_Survival.cfg:554
 msgid "No! The humans have overrun our lands, and their cavalry blocks our escape! Theracar, why are you still here?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:553
+#: Flight_Freedom/scenarios/01_Survival.cfg:560
 msgid "No! The humans have overrun our lands! Theracar, why are you still here?"
 msgstr ""
 
@@ -2004,6 +2017,11 @@ msgstr ""
 #. [message]: speaker=unit
 #: Flight_Freedom/scenarios/03a_Manor.cfg:1066
 msgid "An abomination! Help!"
+msgstr ""
+
+#. [scenario]: id=Manor, id=A key
+#: Flight_Freedom/scenarios/03a_Manor.cfg:1170
+msgid "Key"
 msgstr ""
 
 #. [message]: speaker=second_unit
@@ -3315,12 +3333,6 @@ msgstr ""
 msgid "We should regroup and prepare to attack them as they enter one-at-a-time!"
 msgstr ""
 
-#. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10_Underground.cfg:218
-#: Flight_Freedom/scenarios/11_River_Skulls.cfg:304
-msgid "Theracar"
-msgstr ""
-
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/10_Underground.cfg:226
 msgid "No. They will not enter after the first ambush; instead they will starve us out. We need an alternate exit."
@@ -3958,6 +3970,11 @@ msgstr ""
 #. [scenario]: id=Betrayal
 #: Flight_Freedom/scenarios/13_Betrayal.cfg:4
 msgid "Betrayal"
+msgstr ""
+
+#. [side]: type=Drake Burner, id=evil_Theracar
+#: Flight_Freedom/scenarios/13_Betrayal.cfg:40
+msgid "Error"
 msgstr ""
 
 #. [side]: type=Drake Burner, id=evil_Theracar
@@ -5720,52 +5737,52 @@ msgid "They have corrupted drakes for their evil ends! Those wretched sorcerers!
 msgstr ""
 
 #. [message]: speaker=rescuedA
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:348
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:350
 msgid "Finally, another drake. My caravan was ambushed by the undead four days ago. I'm from Weswyt, but I'll serve whoever rescued me, as long as I can leave this cursed place!"
 msgstr ""
 
 #. [message]: speaker=rescuedA
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:354
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:356
 msgid "Finally, a living being. My caravan was ambushed by the undead four days ago. I'm from Weswyt, but I'll serve whoever rescued me, as long as I can leave this cursed place!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:366
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:368
 msgid "Undead? Old slaves of Mal-Bronam?"
 msgstr ""
 
 #. [message]: speaker=rescuedA
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:370
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:372
 msgid "Yes, and I fear that they are on the prowl today."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:374
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:376
 msgid "Drakes! Continue traveling southeast, but be on your guard!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:421
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:423
 msgid "This cave is infested with bats!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:435
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:437
 msgid "Onward! We must reach Hafwyt soon!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:452
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:454
 msgid "We have cleared the undead from the forest!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:456
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:458
 msgid "Yes, but we must press on, before the humans catch us! I fear that we may have tarried too long here."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:468
+#: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:470
 msgid "The undead are gaining too much power! We are trapped!"
 msgstr ""
 
@@ -6179,17 +6196,17 @@ msgid "Quahgakar"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:286
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:287
 msgid "We must talk, about the future of our existence. I have commanded an end to the trial."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:292
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:293
 msgid "<span color='green'>You have finished the completed portion of the second branch of this campaign. Please reload from Survival to access the first.</span>"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:307
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:308
 msgid "The citadel has become impenetrable. We have failed."
 msgstr ""
 
