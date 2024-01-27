@@ -1,6 +1,3 @@
-border_size=1
-usage=map
-
 Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo
 Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo
 Wo, Wo, Wo, Wo, Wo, Wo, Wwr, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Ww^Vm, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo, Wo
@@ -20,7 +17,7 @@ Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Gs, 
 Ww, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Gs, Hh^Fp, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fp, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Ww, Gs, Hh^Fds, Gs, Gs
 Gs^Fp, Ww, Ww^Bw/, Gs, Hh, Gs, Hh, Gs, Gs, Gs, Hh^Fp, Hh^Fp, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fp, Hh^Fds, Hh, Hh, Hh, Hh, Hh, Hh, Ww, Hh, Hh^Fds, Hh^Fds, Gs
 Hh, Hh, Hh, Ww, Ww, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fds, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Wwr, Wwr, Wwr, Hh, Hh, Hh, Gg
-Gs, Gs, Mm, Hh, Hh, Ww, Ww, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fds, Hh, Hh, Wwr, Hh, Hh, Gg, Gg, Gg
+Gs, Gs, Mm, Hh, Hh, Ww, Ww, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fds, Hh, Hh^Es, Wwr, Hh, Hh, Gg, Gg, Gg
 Hh, Gs, Gs, Gs, Gs, Hh, Ww, Hh, Hh, Hh, Hh, Hh, Wo, Wo, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fds, Hh, Hh, Hh, Hh, Hh, Gg, Gg, Gg
 Gs, Gs, Gs, Gs, Gg^Vd, Gs, Ww, Hh, Hh, Hh, Hh, Hh, Ww, Wo, Hh^Fds, Hh, Hh, Hh, Hh, Hh, Hh, Hh^Fds, Hh, Hh, Hh, Hh, Hh, Hh, Gg, Gg, Gg
 Gs, Gs, Gs, Gs, Gs, Gs, Hh, Ww, Ww, Hh, Ww, Ww^Bw\, Hh, Hh, Hh, Hh, Gs, Hh, Hh, Hh, Hh, Hh, Hh, Hh, Gg, Gg, Gg, Hh, Hh, Gg, Hh
