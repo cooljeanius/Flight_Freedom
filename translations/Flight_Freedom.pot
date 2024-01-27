@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2022-11-28 01:16 UTC\n"
+"POT-Creation-Date: 2024-01-27 03:43 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,67 +36,67 @@ msgid "FtF - Wesnoth Tragedy"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:30
+#: Flight_Freedom/_main.cfg:31
 msgid "FtF"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
 #. [about]
-#: Flight_Freedom/_main.cfg:32
+#: Flight_Freedom/_main.cfg:33
 #: Flight_Freedom/credits.cfg:71
 msgid "Flight to Freedom"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:37
-#: Flight_Freedom/_main.cfg:39
+#: Flight_Freedom/_main.cfg:40
+#: Flight_Freedom/_main.cfg:42
 msgid "Hatchling"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:37
+#: Flight_Freedom/_main.cfg:40
 msgid "(Easier)"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:37
 #: Flight_Freedom/_main.cfg:40
+#: Flight_Freedom/_main.cfg:43
 msgid "Warrior"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:37
+#: Flight_Freedom/_main.cfg:40
 msgid "(Normal)"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:37
-#: Flight_Freedom/_main.cfg:42
+#: Flight_Freedom/_main.cfg:40
+#: Flight_Freedom/_main.cfg:45
 msgid "Hero"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:37
+#: Flight_Freedom/_main.cfg:40
 msgid "(Difficult)"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:39
+#: Flight_Freedom/_main.cfg:42
 msgid "Easier"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:40
+#: Flight_Freedom/_main.cfg:43
 msgid "Normal"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:42
+#: Flight_Freedom/_main.cfg:45
 msgid "Difficult"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:46
+#: Flight_Freedom/_main.cfg:49
 msgid ""
 "This is the story of the great Drake leader Malakar, who saw the near-destruction of his tribe at the hands of a dark wizard, and of how he gathered his shattered people and set out on a dangerous journey across unknown lands in the hopes of bringing them back home.\n"
 "\n"
@@ -105,7 +105,7 @@ msgid ""
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
-#: Flight_Freedom/_main.cfg:52
+#: Flight_Freedom/_main.cfg:55
 msgid "(for Wesnoth v1.16.0 or later)"
 msgstr ""
 
@@ -282,7 +282,9 @@ msgid "My energies are drained, I need rest."
 msgstr ""
 
 #. [set_menu_item]: id=fireball
+#. [unit_type]: id=Fireball, race=mechanical
 #: Flight_Freedom/macros/magi.cfg:336
+#: Flight_Freedom/units/fake_units.cfg:160
 msgid "Fireball"
 msgstr ""
 
@@ -349,7 +351,7 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:88
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:242
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:364
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:67
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:65
 msgid "Death of Malakar"
 msgstr ""
 
@@ -1459,7 +1461,7 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:31
 #: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:27
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:29
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:40
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:38
 msgid "Malakar"
 msgstr ""
 
@@ -1488,7 +1490,7 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:40
 #: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:35
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:40
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:47
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:45
 msgid "Kakatar Tribe"
 msgstr ""
 
@@ -5402,7 +5404,7 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:89
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:243
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:365
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:68
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:66
 msgid "Death of Hartholar"
 msgstr ""
 
@@ -6007,7 +6009,7 @@ msgstr ""
 #. [scenario]: id=Mountain_Crypt, id=Quemar
 #. [scenario]: id=Citadel
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:244
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:69
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:67
 msgid "Death of Quemar"
 msgstr ""
 
@@ -6067,127 +6069,127 @@ msgid "The Obsidian Citadel"
 msgstr ""
 
 #. [side]: type=Drake High Magus, id=SE Leader
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:53
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:51
 msgid "Taqkar"
 msgstr ""
 
 #. [side]: type=Drake High Magus, id=SE Leader
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:62
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:60
 msgid "Obsidian Citadel"
 msgstr ""
 
 #. [scenario]: id=Citadel
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:66
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:64
 msgid "Move a unit to the Citadel"
 msgstr ""
 
 #. [scenario]: id=Citadel
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:70
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:68
 msgid "Turns run out"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:87
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:85
 msgid "We have reached the Obsidian Citadel!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:91
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:89
 msgid "Now, we must fight our way to it. Why does ice fall from the sky here?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:95
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:93
 msgid "That ice is called snow, and it accompanies much of the Citadel's high magic. They have scryed us traveling here, and they are ready."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:99
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:97
 msgid "What will we have to fight?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:103
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:101
 msgid "The Magi will bring many enchantments to bear. We will have to contend with magical sentinels, and possibly the land itself."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:110
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:108
 msgid "NOTE: Your encampment will disappear on turn 3."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:151
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:149
 msgid "A great voice emanates from the tower."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:162
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:160
 msgid "Hear, intruders! You must face the four tests of the elements: air, fire, earth and water! Only the worthy shall pass!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:166
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:164
 msgid "This was once a traditional initiation rite that all Magi undergo. However, my colleagues have twisted it into a blasphemous weapon."
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:170
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:168
 msgid "What are the dangers of this trial?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:174
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:172
 msgid "These trials consist of magical manifestations of the four elements of our magic. The trial of air will pit us against creatures of the winds that will attack with lightning and chill."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:178
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:176
 msgid "Whatever we face, we must reach the Citadel!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:245
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:243
 msgid "The trial of fire will confront us with living flames."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:253
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:251
 msgid "The trial of earth will transform the very ground we stand on or fly over into an adversary."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:261
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:259
 msgid "The trial of water will attack us with beings of water that will attempt to douse our internal flames."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:273
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:271
 msgid "Quemar, we have reached the Citadel."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:279
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:277
 msgid "Quemar casts a great spell!"
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:284
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:282
 msgid "Quahgakar"
 msgstr ""
 
-#. [message]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:288
+#. [message]: speaker=Quahgakar
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:286
 msgid "We must talk, about the future of our existence. I have commanded an end to the trial."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:294
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:292
 msgid "<span color='green'>You have finished the completed portion of the second branch of this campaign. Please reload from Survival to access the first.</span>"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:309
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:307
 msgid "The citadel has become impenetrable. We have failed."
 msgstr ""
 
@@ -6686,6 +6688,26 @@ msgstr ""
 
 #: Flight_Freedom/units/fake_units.cfg:6
 msgid "If you are seeing this, you have either cheated or encountered a bug."
+msgstr ""
+
+#. [unit_type]: id=Worker Wood, race=monster
+#: Flight_Freedom/units/fake_units.cfg:48
+msgid "Worker Wood"
+msgstr ""
+
+#. [unit_type]: id=Slave Wood, race=monster
+#: Flight_Freedom/units/fake_units.cfg:67
+msgid "Slave Wood"
+msgstr ""
+
+#. [unit_type]: id=Arrow NE, race=monster
+#: Flight_Freedom/units/fake_units.cfg:86
+msgid "Arrow NE"
+msgstr ""
+
+#. [unit_type]: id=Invisible, race=monster
+#: Flight_Freedom/units/fake_units.cfg:234
+msgid "Invisible"
 msgstr ""
 
 #. [unit_type]: id=Ballista, race=human
