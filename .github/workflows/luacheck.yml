@@ -7,4 +7,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Luacheck linter
-        uses: lunarmodules/luacheck@v1
+        uses: nebularg/actions-luacheck@v1
+        with:
+          args: '-r'
