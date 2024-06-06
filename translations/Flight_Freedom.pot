@@ -6290,7 +6290,7 @@ msgstr ""
 
 #. [message]: speaker=Quemar
 #: Flight_Freedom/scenarios/18_Return_Morogor.cfg:715
-msgid "VERY WELL. YOUR PET THINKSKIN MAY LIVE. I WILL BE WATCHING YOU, HUMAN."
+msgid "VERY WELL. YOUR PET THINSKIN MAY LIVE. I WILL BE WATCHING YOU, HUMAN."
 msgstr ""
 
 #. [message]: speaker=dune_harrier
