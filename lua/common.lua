@@ -90,9 +90,7 @@ function wesnoth.wml_actions.remove_array_duplicates(cfg)
 	local inArray = wml.array_access.get(name)
 	local outArray = {}
 	for _, u in pairs(inArray) do
-		if values[u[attribute]] then
-			-- skip duplicate
-		else
+		if values[u[attribute]] == nil then
 			values[u[attribute]] = true
 			table.insert(outArray, u)
 		end
