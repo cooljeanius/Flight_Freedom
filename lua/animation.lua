@@ -1,3 +1,68 @@
+
+local function calc_image_hex_offset(hex_x, hex_y, x, y)
+	-- given a reference hex and an offset in pixels
+	-- find the hex closest to the target and adjust the offset to be relative to that hex
+	-- returns the new hex coordinates followed by the new pixel offset
+	local hex_off_x = math.floor((x + 27) / 54)
+	local k = 0
+	if math.abs(hex_off_x) % 2 == 1 then
+		if math.abs(hex_x) % 2 == 0 then
+			k = 36
+		else
+			y = y - 36
+		end
+	end
+	local hex_off_y = math.floor((y + 36) / 72)
+	local new_x = x - hex_off_x * 54
+	local new_y = y - (hex_off_y * 72) + k
+	if new_y > 36 then
+		new_y = new_y - 72
+		hex_off_y = hex_off_y+1
+	end
+
+	return hex_x+hex_off_x, hex_y+hex_off_y, new_x, new_y
+end
+
+--[=[
+[calc_image_hex_offset]
+Author: MadMax (username on the Battle for Wesnoth forum)
+
+Calculates the closest hex from an origin hex and an offest in polar coordinates.
+
+Required keys:
+origin_x, origin_y: the first tile
+radius: vector length in tiles
+theta: angle in radians; note that this is counterclockwise (i.e. not with reversed Y-axis)
+variable: the variable to write the distance to (default: distance)
+
+Example:
+[find_offset_hex_polar]
+	origin_x=30
+	origin_y=10
+	radius=9
+	theta=$(pi()/4)
+[/find_offset_hex_polar]
+[message]
+	speaker=narrator
+	#outputs 10
+	message="$distance"
+[/message]
+]=]
+
+function wesnoth.wml_actions.find_offset_hex_polar(cfg)
+	local origin_hex_x = tonumber(cfg.origin_x)
+	local origin_hex_y = tonumber(cfg.origin_y)
+	local radius = tonumber(cfg.radius) * 72.0
+	local theta = tonumber(cfg.theta) * -1
+	local offset_x = math.cos(theta) * radius
+	local offset_y = math.sin(theta) * radius
+	local new_x,new_y = calc_image_hex_offset(origin_hex_x, origin_hex_y, offset_x, offset_y)
+	local new_x_varname = cfg.new_x_variable or "new_x"
+	local new_y_varname = cfg.new_y_variable or "new_y"
+	wml.variables[new_x_varname] = new_x
+	wml.variables[new_y_varname] = new_y
+end
+
 --[=[
 [animate_path]
 Author: Alarantalara (username on the Battle for Wesnoth forum)
@@ -157,30 +222,6 @@ local function get_image_name_with_offset(x, y, image)
 	w = math.floor(w+0.5)
 	h = math.floor(h+0.5)
 	return string.format("%s~CROP(%d,%d,%d,%d)",image,x,y,w,h)
-end
-
-local function calc_image_hex_offset(hex_x, hex_y, x, y)
-	-- given a reference hex and an offset in pixels
-	-- find the hex closest to the target and adjust the offset to be relative to that hex
-	-- returns the new hex coordinates followed by the new pixel offset
-	local hex_off_x = math.floor((x + 27) / 54)
-	local k = 0
-	if math.abs(hex_off_x) % 2 == 1 then
-		if math.abs(hex_x) % 2 == 0 then
-			k = 36
-		else
-			y = y - 36
-		end
-	end
-	local hex_off_y = math.floor((y + 36) / 72)
-	local new_x = x - hex_off_x * 54
-	local new_y = y - (hex_off_y * 72) + k
-	if new_y > 36 then
-		new_y = new_y - 72
-		hex_off_y = hex_off_y+1
-	end
-
-	return hex_x+hex_off_x, hex_y+hex_off_y, new_x, new_y
 end
 
 -- x and y are hex values in this function
