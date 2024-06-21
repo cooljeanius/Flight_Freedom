@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-06-17 03:35 UTC\n"
+"POT-Creation-Date: 2024-06-21 03:24 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,7 +96,7 @@ msgid ""
 "This is the story of the great Drake leader Malakar, who saw the near-destruction of his tribe at the hands of a dark wizard, and of how he gathered his shattered people and set out on a dangerous journey across unknown lands in the hopes of bringing them back home.\n"
 "\n"
 "<span color='#808080'>Now updated for BFW 1.18+!</span>\n"
-"(Expert Level)"
+"(Expert Level, 20-26 scenarios)"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
@@ -104,193 +104,213 @@ msgstr ""
 msgid "(for Wesnoth v1.18.0 or later)"
 msgstr ""
 
-#. [achievement]: id=ftf_tribe_mother
+#. [achievement]: id=ftf_desperate_defense
+#: Flight_Freedom/achievements.cfg:8
+msgid "Desperate Defense"
+msgstr ""
+
+#. [achievement]: id=ftf_desperate_defense
 #: Flight_Freedom/achievements.cfg:9
+msgid "Kill at least 4 human units level 3 or above in Scenario 1 (Survival)."
+msgstr ""
+
+#. [achievement]: id=ftf_tribe_mother
+#: Flight_Freedom/achievements.cfg:15
 msgid "Tribe Mother"
 msgstr ""
 
 #. [achievement]: id=ftf_tribe_mother
-#: Flight_Freedom/achievements.cfg:10
+#: Flight_Freedom/achievements.cfg:16
 msgid "Save all seven hatchlings in Scenario 2 (Rebellion)."
 msgstr ""
 
 #. [achievement]: id=ftf_home_invasion
-#: Flight_Freedom/achievements.cfg:16
+#: Flight_Freedom/achievements.cfg:22
 msgid "Home Invasion"
 msgstr ""
 
 #. [achievement]: id=ftf_home_invasion
-#: Flight_Freedom/achievements.cfg:17
+#: Flight_Freedom/achievements.cfg:23
 msgid "Kill the bodyguard captain in Scenario 3 (Manor)."
 msgstr ""
 
 #. [achievement]: id=ftf_forest_friend
-#: Flight_Freedom/achievements.cfg:23
+#: Flight_Freedom/achievements.cfg:29
 msgid "Forest Friend"
 msgstr ""
 
 #. [achievement]: id=ftf_forest_friend
-#: Flight_Freedom/achievements.cfg:24
+#: Flight_Freedom/achievements.cfg:30
 msgid "Complete Scenario 4 (Caravan) without attacking any of the elves."
 msgstr ""
 
 #. [achievement]: id=ftf_elven_enemy
-#: Flight_Freedom/achievements.cfg:30
+#: Flight_Freedom/achievements.cfg:36
 msgid "Elven Enemy"
 msgstr ""
 
 #. [achievement]: id=ftf_elven_enemy
-#: Flight_Freedom/achievements.cfg:31
+#: Flight_Freedom/achievements.cfg:37
 msgid "Kill the Elven leader in Scenario 5 (Blue River) with Kogw striking the killing blow."
 msgstr ""
 
 #. [achievement]: id=ftf_incendiary_ammo
-#: Flight_Freedom/achievements.cfg:37
+#: Flight_Freedom/achievements.cfg:43
 msgid "Incendiary Ammunition"
 msgstr ""
 
 #. [achievement]: id=ftf_incendiary_ammo
-#: Flight_Freedom/achievements.cfg:38
+#: Flight_Freedom/achievements.cfg:44
 msgid "Upgrade the Unforgiver to shoot flaming ballista bolts in Scenario 6 (Southern Shore)."
 msgstr ""
 
 #. [achievement]: id=ftf_ironsides
-#: Flight_Freedom/achievements.cfg:44
+#: Flight_Freedom/achievements.cfg:50
 msgid "Ironsides"
 msgstr ""
 
 #. [achievement]: id=ftf_ironsides
-#: Flight_Freedom/achievements.cfg:45
+#: Flight_Freedom/achievements.cfg:51
 msgid "Complete Scenario 7 (Open Ocean) without losing a single ship."
 msgstr ""
 
 #. [achievement]: id=ftf_davy_jones_locker
-#: Flight_Freedom/achievements.cfg:51
+#: Flight_Freedom/achievements.cfg:57
 msgid "Davy Jones' Locker"
 msgstr ""
 
 #. [achievement]: id=ftf_davy_jones_locker
-#: Flight_Freedom/achievements.cfg:52
+#: Flight_Freedom/achievements.cfg:58
 msgid "Sink the human flagship in Scenario 8 (Landfall) before the human leader disembarks."
 msgstr ""
 
 #. [achievement]: id=ftf_clean_getaway
-#: Flight_Freedom/achievements.cfg:58
+#: Flight_Freedom/achievements.cfg:64
 msgid "Clean Getaway"
 msgstr ""
 
 #. [achievement]: id=ftf_clean_getaway
-#: Flight_Freedom/achievements.cfg:59
+#: Flight_Freedom/achievements.cfg:65
 msgid "Reach the cave in Scenario 9 (The Drake Escape) without losing a single unit to the elves, humans, or orcs."
 msgstr ""
 
 #. [achievement]: id=ftf_swift_refuge
-#: Flight_Freedom/achievements.cfg:65
+#: Flight_Freedom/achievements.cfg:71
 msgid "Swift Refuge"
 msgstr ""
 
 #. [achievement]: id=ftf_swift_refuge
-#: Flight_Freedom/achievements.cfg:66
+#: Flight_Freedom/achievements.cfg:72
 msgid "Finish Scenario 10B (Freezing Foothills) before your entire tribe arrives."
 msgstr ""
 
 #. [achievement]: id=ftf_nagas_bane
-#: Flight_Freedom/achievements.cfg:72
+#: Flight_Freedom/achievements.cfg:78
 msgid "Naga's Bane"
 msgstr ""
 
 #. [achievement]: id=ftf_nagas_bane
-#: Flight_Freedom/achievements.cfg:73
+#: Flight_Freedom/achievements.cfg:79
 msgid "Kill the naga leader in Scenario 11A (River of Skulls)."
 msgstr ""
 
 #. [achievement]: id=ftf_close_escape
-#: Flight_Freedom/achievements.cfg:79
+#: Flight_Freedom/achievements.cfg:85
 msgid "Close Escape"
 msgstr ""
 
 #. [achievement]: id=ftf_close_escape
-#: Flight_Freedom/achievements.cfg:80
+#: Flight_Freedom/achievements.cfg:86
 msgid "Escape the cave in Scenario 12A (Rockfall) at the last possible moment."
 msgstr ""
 
 #. [achievement]: id=ftf_can_be_only_one
-#: Flight_Freedom/achievements.cfg:86
+#: Flight_Freedom/achievements.cfg:92
 msgid "There Can Be Only One"
 msgstr ""
 
 #. [achievement]: id=ftf_can_be_only_one
-#: Flight_Freedom/achievements.cfg:87
+#: Flight_Freedom/achievements.cfg:93
 msgid "Kill the rebel leader in Scenario 13A (Betrayal) with Malakar striking the killing blow."
 msgstr ""
 
 #. [achievement]: id=ftf_rage_against_the_darkness
-#: Flight_Freedom/achievements.cfg:93
+#: Flight_Freedom/achievements.cfg:99
 msgid "Rage Against the Darkness"
 msgstr ""
 
 #. [achievement]: id=ftf_rage_against_the_darkness
-#: Flight_Freedom/achievements.cfg:94
+#: Flight_Freedom/achievements.cfg:100
 msgid "Slay one of the Liches in Scenario 14 (Hordes of the Foul Undead) with the survivor."
 msgstr ""
 
 #. [achievement]: id=ftf_kill_fire
-#: Flight_Freedom/achievements.cfg:100
+#: Flight_Freedom/achievements.cfg:106
 msgid "Kill it with Fire"
 msgstr ""
 
 #. [achievement]: id=ftf_kill_fire
-#: Flight_Freedom/achievements.cfg:101
+#: Flight_Freedom/achievements.cfg:107
 msgid "Destroy the Gate in Scenario 15 (Gate of Storms) with an Armageddon Drake."
 msgstr ""
 
 #. [achievement]: id=ftf_offshore_artillery
-#: Flight_Freedom/achievements.cfg:107
+#: Flight_Freedom/achievements.cfg:113
 msgid "Offshore Artillery"
 msgstr ""
 
 #. [achievement]: id=ftf_offshore_artillery
-#: Flight_Freedom/achievements.cfg:108
+#: Flight_Freedom/achievements.cfg:114
 msgid "Kill 3 enemy units with the Unforgiver in Scenario 16 (Exodus)."
 msgstr ""
 
 #. [achievement]: id=ftf_silence_deep
-#: Flight_Freedom/achievements.cfg:114
+#: Flight_Freedom/achievements.cfg:120
 msgid "Silence of the Deeps"
 msgstr ""
 
 #. [achievement]: id=ftf_silence_deep
-#: Flight_Freedom/achievements.cfg:115
+#: Flight_Freedom/achievements.cfg:121
 msgid "Defeat both enemy commanders in Scenario 17A (Blockade)."
 msgstr ""
 
 #. [achievement]: id=ftf_monster_hunter
-#: Flight_Freedom/achievements.cfg:121
+#: Flight_Freedom/achievements.cfg:127
 msgid "Monster Hunter"
 msgstr ""
 
 #. [achievement]: id=ftf_monster_hunter
-#: Flight_Freedom/achievements.cfg:122
+#: Flight_Freedom/achievements.cfg:128
 msgid "Hunt all of the monsters in Scenario 17B (Parched Sands)"
 msgstr ""
 
+#. [achievement]: id=ftf_start_revolution
+#: Flight_Freedom/achievements.cfg:134
+msgid "Start a Revolution"
+msgstr ""
+
+#. [achievement]: id=ftf_start_revolution
+#: Flight_Freedom/achievements.cfg:135
+msgid "In Scenario 18 (Return to Morogor), kill one of the human leaders with the resistance ambassador."
+msgstr ""
+
 #. [achievement]: id=ftf_family_reunion
-#: Flight_Freedom/achievements.cfg:128
+#: Flight_Freedom/achievements.cfg:141
 msgid "Family Reunion"
 msgstr ""
 
 #. [achievement]: id=ftf_family_reunion
-#: Flight_Freedom/achievements.cfg:130
+#: Flight_Freedom/achievements.cfg:143
 msgid "Reunite the two brothers in Scenario 19 (Liberation)."
 msgstr ""
 
 #. [achievement]: id=ftf_father_vengeance
-#: Flight_Freedom/achievements.cfg:136
+#: Flight_Freedom/achievements.cfg:149
 msgid "A Father's Vengeance"
 msgstr ""
 
 #. [achievement]: id=ftf_father_vengeance
-#: Flight_Freedom/achievements.cfg:137
+#: Flight_Freedom/achievements.cfg:150
 msgid "Avenge Necolag in Scenario 20 (Endgame)."
 msgstr ""
 
@@ -423,7 +443,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/macros/deaths.cfg:60
-#: Flight_Freedom/scenarios/01_Survival.cfg:574
+#: Flight_Freedom/scenarios/01_Survival.cfg:599
 msgid "RrrRRARGH!"
 msgstr ""
 
@@ -638,9 +658,9 @@ msgstr ""
 #: Flight_Freedom/macros/objectives.cfg:18
 #: Flight_Freedom/macros/objectives.cfg:43
 #: Flight_Freedom/scenarios/01_Survival.cfg:201
-#: Flight_Freedom/scenarios/01_Survival.cfg:357
-#: Flight_Freedom/scenarios/01_Survival.cfg:402
-#: Flight_Freedom/scenarios/01_Survival.cfg:433
+#: Flight_Freedom/scenarios/01_Survival.cfg:360
+#: Flight_Freedom/scenarios/01_Survival.cfg:405
+#: Flight_Freedom/scenarios/01_Survival.cfg:436
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:912
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:923
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:1014
@@ -683,8 +703,8 @@ msgstr ""
 #. [then]
 #: Flight_Freedom/macros/objectives.cfg:30
 #: Flight_Freedom/scenarios/01_Survival.cfg:202
-#: Flight_Freedom/scenarios/01_Survival.cfg:358
-#: Flight_Freedom/scenarios/01_Survival.cfg:403
+#: Flight_Freedom/scenarios/01_Survival.cfg:361
+#: Flight_Freedom/scenarios/01_Survival.cfg:406
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:240
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:338
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:410
@@ -2165,114 +2185,114 @@ msgid "Necolag"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:298
+#: Flight_Freedom/scenarios/01_Survival.cfg:301
 msgid "What? No! NO! RrrrrrrRRRRRAAARGHH!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:302
+#: Flight_Freedom/scenarios/01_Survival.cfg:305
 msgid "Kakatar Tribe! To arms! Kill them all!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/01_Survival.cfg:307
+#: Flight_Freedom/scenarios/01_Survival.cfg:310
 msgid "For the course of this campaign <i>Inferno Drakes</i> can upgrade to <b>Armageddon Drakes</b>, and <i>Drake Clashers</i> can upgrade to <b>Drake Guards</b>."
 msgstr ""
 
 #. [message]: speaker=Necolag
-#: Flight_Freedom/scenarios/01_Survival.cfg:321
+#: Flight_Freedom/scenarios/01_Survival.cfg:324
 msgid "NYIEEEEEEEE!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/01_Survival.cfg:330
+#: Flight_Freedom/scenarios/01_Survival.cfg:333
 msgid "<span color='green' size='larger'><b>Note: the campaign will not end if this scenario is lost.</b></span>"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:339
+#: Flight_Freedom/scenarios/01_Survival.cfg:342
 msgid "This is an army! We cannot hope to take them ourselves, but they will buy our lives dearly. Captain Theracar, I need you to warn the Jamolar tribe in the southeastern swamps."
 msgstr ""
 
 #. [message]: speaker=Theracar0
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/01_Survival.cfg:344
+#: Flight_Freedom/scenarios/01_Survival.cfg:347
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:282
 msgid "At once, Malakar."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:348
+#: Flight_Freedom/scenarios/01_Survival.cfg:351
 msgid "Tribesmen! We did not know it when we slept last night, nor when we awoke this morning, but it has always been written that this is our final hour. Our first priority is to stop the cavalrymen who would intercept our message to the Jamolars."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:352
+#: Flight_Freedom/scenarios/01_Survival.cfg:355
 msgid "Our second priority is to make sure that the children's children of these murderers still see our faces in their nightmares. Attack!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:356
+#: Flight_Freedom/scenarios/01_Survival.cfg:359
 msgid "Defeat the cavalry leader"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:392
+#: Flight_Freedom/scenarios/01_Survival.cfg:395
 msgid "Theracar! Without their horses, you should be able to outdistance them in the hills. Go!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:401
+#: Flight_Freedom/scenarios/01_Survival.cfg:404
 msgid "Move Theracar to the end of the southern stream"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:428
+#: Flight_Freedom/scenarios/01_Survival.cfg:431
 msgid "Drakes! Theracar is clear! Now, we follow the southern stream! Without their horses, they will have trouble chasing us through the hills."
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:432
+#: Flight_Freedom/scenarios/01_Survival.cfg:435
 msgid "Move Malakar to the end of the southern stream"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:446
+#: Flight_Freedom/scenarios/01_Survival.cfg:449
 msgid "Drakes! We must flee, at least for now!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:507
+#: Flight_Freedom/scenarios/01_Survival.cfg:510
 msgid "Drakes! Theracar is clear! For the honor of the tribe, let no human pass!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:538
+#: Flight_Freedom/scenarios/01_Survival.cfg:541
 msgid "I cannot abandon my tribe! As Chief, honor demands I fight to the last!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:553
+#: Flight_Freedom/scenarios/01_Survival.cfg:578
 msgid "Our fastest messenger is defeated! Abandon the defense! Everyone turn south! At least one voice must live to warn the Jamolar tribe!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/01_Survival.cfg:578
+#: Flight_Freedom/scenarios/01_Survival.cfg:603
 msgid "Haha! This one should fetch a hefty price at the market!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:608
+#: Flight_Freedom/scenarios/01_Survival.cfg:633
 msgid "No! The humans have overrun our lands, and their cavalry blocks our escape!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:619
+#: Flight_Freedom/scenarios/01_Survival.cfg:644
 msgid "No! The humans have overrun our lands! Theracar, why are you still here?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:625
+#: Flight_Freedom/scenarios/01_Survival.cfg:650
 msgid "The humans have overrun our lands yet our messenger has escaped. Our deaths will not be in vain."
 msgstr ""
 
@@ -6156,9 +6176,9 @@ msgstr ""
 #. [side]: type=Grand Marshal, id=Yrynyc
 #. [side]: type=General, id=Rhyrraent
 #. [side]: type=General, id=Lenvan
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:89
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:136
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:183
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:85
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:132
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:179
 #: Flight_Freedom/scenarios/19_Liberation.cfg:77
 #: Flight_Freedom/scenarios/19_Liberation.cfg:112
 #: Flight_Freedom/scenarios/20_Battle_Temple.cfg:119
@@ -6170,151 +6190,156 @@ msgid "Wesnoth Occupation Force"
 msgstr ""
 
 #. [side]: type=General, id=Careorra
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:94
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:90
 msgid "Careorra"
 msgstr ""
 
 #. [side]: type=Lieutenant, id=Lunnyn
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:141
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:137
 msgid "Lunnyn"
 msgstr ""
 
 #. [side]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:194
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:190
 msgid "Drakish Rebels"
 msgstr ""
 
 #. [side]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:222
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:218
 msgid "Dunefolk Hunters"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:305
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:301
 msgid "This is grim news, indeed. How is it that you are here to tell me of this?"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:309
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:305
 msgid "A small handful of rebels have been in hiding ever since the attack. We've fought our battles when and where we can, but our hopes are low and our numbers are dwindling. Your arrival will mean a great deal."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:313
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:309
 msgid "I will gather our leaders and meet you here at this beach as soon as I can."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:317
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:313
 msgid "Godspeed."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:336
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:332
 msgid "Mal, if they bring their leaders out in the open, they'll be slaughtered!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:341
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:337
 msgid "Malakar, we are too exposed here, we cannot protect their leaders!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:345
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:341
 msgid "I know. We will have the beaches cleared before they arrive."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:356
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:352
 msgid "NOTE: From now on, since the Unforgiver is no longer critical to your cause, the game will not end if it is lost."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:374
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:370
 msgid "No! My flagship!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:378
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:374
 msgid "You can mourn the boat another day. For now we are trapped on this beach. We prevail together this day or we both die."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:395
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:391
 msgid "Word is being passed to the resistance, and I have come back to help you claim the beach."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:445
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:441
 msgid "It's true! The Kakatars have returned!"
 msgstr ""
 
 #. [message]: speaker=scout
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:600
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:606
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:596
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:602
 msgid "What is this?"
 msgstr ""
 
-#. [unit]: type=Fire Dragon, id=Quemar
+#. [then]: type=Fire Dragon, id=Quemar
 #. [event]: id=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:653
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:649
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:168
 msgid "Quemar"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:689
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:686
 msgid "<span color='#ccff00' size='large'>I HAVE RETURNED. I AM QUEMAR. HUMANS, I AM YOUR DOOM.</span>"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:693
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:690
 msgid "Surely that big dragon fellow isn't talking about me? Right?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:697
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:694
 msgid "Quemar... is that you? The ritual, it was a success?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:701
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:698
 msgid "MALAKAR OF THE KAKATAR TRIBE. YOU STILL LIVE. TOGETHER WE SHALL CLEANSE MOROGOR OF THE PUNY THINSKINS."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:711
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:708
 msgid "Indeed, Quemar. Except for the pirate - he is an ally, a Kakatar, and under my protection."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:715
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:712
 msgid "VERY WELL. YOUR PET THINSKIN MAY LIVE. I WILL BE WATCHING YOU, HUMAN."
 msgstr ""
 
 #. [message]: speaker=dune_harrier
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:770
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:767
 msgid "Kal, we have tracked down the drakes who ransacked Al-Zaiybah!"
 msgstr ""
 
 #. [message]: speaker=dune_leader
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:780
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:777
 msgid "These monsters have eaten our kinsmen! They are worse than wild beasts. Put them down like the animals they are!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:795
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:792
 msgid "The rebel leaders are walking into enemy territory! We have failed them!"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:810
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:807
 msgid "For a free Morogor!"
 msgstr ""
 
+#. [message]: speaker=scout
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:822
+msgid "Your rule is ending! Morogor belongs to us drakes!"
+msgstr ""
+
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:827
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:840
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1348
 msgid "We continue!"
 msgstr ""
