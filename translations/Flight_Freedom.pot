@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-07-05 01:10 UTC\n"
+"POT-Creation-Date: 2024-07-05 01:22 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7140,7 +7140,7 @@ msgid "We cannot fight any longer! We have failed!"
 msgstr ""
 
 #. [scenario]: id=Endgame
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1424
+#: Flight_Freedom/scenarios/20_Endgame.cfg:5
 msgid "Endgame"
 msgstr ""
 
@@ -7568,6 +7568,11 @@ msgstr ""
 msgid "The undead are gaining too much power! We are trapped!"
 msgstr ""
 
+#. [scenario]: id=Hafwyt
+#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:5
+msgid "Hafwyt"
+msgstr ""
+
 #. [scenario]: id=Mogradesh
 #: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:6
 msgid "Mogradesh"
@@ -7693,11 +7698,6 @@ msgstr ""
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1082
 msgid "The humans have sent reinforcements and Mogradesh is still not secure! We are doomed!"
-msgstr ""
-
-#. [scenario]: id=Hafwyt
-#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1097
-msgid "Hafwyt"
 msgstr ""
 
 #. [scenario]: id=Mountain_Crypt
