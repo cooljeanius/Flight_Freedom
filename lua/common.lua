@@ -54,6 +54,32 @@ function wesnoth.wml_actions.get_zoom(cfg)
 	wml.variables[varname] = wesnoth.interface.zoom(1, true)
 end
 
+--[=[
+[shuffle_list]
+Author: MadMax (username on the Battle for Wesnoth forum)
+
+Shuffles a WML variable list.
+
+Required keys:
+variable: the variable name of the list to be shuffled.
+
+Optional keys:
+to_variable: if present, this variable will be set to the new list. If not present, the variable in variable= will be overwritten.
+
+Example:
+[shuffle_list]
+	variable=my_list
+	to_variable=my_list_shuffled
+[/shuffle_list]
+]=]
+function wesnoth.wml_actions.shuffle_list(cfg)
+	local varname = cfg.variable or wml.error("Missing required variable= attribute in [shuffle_list]")
+	local dest_varname = cfg.to_variable or varname
+	local temp = wml.array_access.get(varname)
+	mathx.shuffle(temp)
+	wml.array_access.set(dest_varname, temp)
+end
+
 function wesnoth.wml_actions.fading_message(cfg)
 	local message = cfg.message
 	local delay_time = tonumber(cfg.time)
