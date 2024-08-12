@@ -16,7 +16,7 @@ jobs:
       run:
         working-directory: utils/wesnoth-map-diff
     steps:
-      - uses: actions/checkout@v4
+      - {name: Checkout repository, uses: actions/checkout@v3, with: {submodules: "recursive"}}
       - uses: actions/setup-node@v4
         with:
           node-version: '16'
