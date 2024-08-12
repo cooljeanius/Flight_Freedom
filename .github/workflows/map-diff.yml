@@ -29,11 +29,11 @@ jobs:
         env:
           SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          sudo apt-get -y -q install pngquant
+          sudo apt-get -y install pngquant
           comment_body=""
           log() { printf '\e[1m%s\e[m\n' "$*"; } # write log message in bold
 
-          ## Get changed maps
+          sync && log "in $(pwd): getting changed maps with SHA of ${SHA}"
           git fetch --depth=1 origin "$SHA"
           mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
 
