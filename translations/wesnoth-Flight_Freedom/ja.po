@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: wescamp-i 18n\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
 "POT-Creation-Date: 2024-06-06 18:01 UTC\n"
-"PO-Revision-Date: 2024-08-15 13:33+0900\n"
+"PO-Revision-Date: 2024-08-16 00:48+0900\n"
 "Last-Translator: konami,k <konamit2008@gmail.com>\n"
 "Language-Team: Japanese Translation Team\n"
 "Language: ja\n"
@@ -135,7 +135,7 @@ msgstr "部族の母"
 #. [achievement]: id=ftf_tribe_mother
 #: Flight_Freedom/achievements.cfg:10
 msgid "Save all seven hatchlings in Scenario 2 (Rebellion)."
-msgstr "シナリオ２（反乱）で７体の雛すべてを救い出す。"
+msgstr "シナリオ２（反乱）で７体のヒナすべてを救い出す。"
 
 #. [achievement]: id=ftf_home_invasion
 #: Flight_Freedom/achievements.cfg:16
@@ -921,9 +921,9 @@ msgid ""
 "an official emissary of our tribe. If we turn them away too soon, without "
 "giving them the chance to resupply, they may become hostile."
 msgstr ""
-"NECOLAG: 許してください、お父様、しかし、我々の部族の公式特使として、人間と対"
-"話したいのです。我々があまりにすぐに彼らを締め出し、燃料補給の機会すら与えな"
-"いと、彼らは敵対的になるかもしれません。"
+"NECOLAG: 許してください、お父様。でも私は、我々の部族の公式特使として、人間と"
+"対話したいのです。我々があまりにすぐに彼らを締め出し、燃料補給の機会すら与え"
+"ないと、彼らは敵対的になるかもしれません。"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:39
@@ -931,8 +931,8 @@ msgid ""
 "MALAKAR: Heh. Captain! Hear the wisdom of the one who may become your new "
 "leader! Very well, meet with the thinskins, my child, but..."
 msgstr ""
-"MALAKAR: ヘイ、大尉！いずれは新しい部族長となる者の知恵を聞いたか？よし、薄い"
-"皮の者たちに会いに行け、我が子よ、しかし..."
+"MALAKAR: おい、大尉！いずれは新しい部族長となる者の知恵を聞いたか？よし、薄い"
+"皮の者たちに会いに行け、我が娘よ、しかし..."
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:44
@@ -941,9 +941,9 @@ msgid ""
 "night of rest. I want them on our shores no more than you do. By your "
 "leave..."
 msgstr ""
-"NECOLAG: わかっています、お父様。 採石場へ立ち入ることも、一晩以上の停泊をさ"
+"NECOLAG: 分かっています、お父様。 採石場へ立ち入ることも、二晩以上の停泊をさ"
 "せるつもりもありません。私は、お父様以上に、彼らには我々の海岸にいてほしくな"
-"いのです。お許しがあれば..."
+"いのです。どうか、お許しを戴きたく..."
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:49
@@ -1103,8 +1103,8 @@ msgid ""
 "GENERAL: Granted, Captain, but make it brief. Neighboring tribes may be "
 "sending scouts already."
 msgstr ""
-"将軍: いいだろう隊長、しかし手短に頼む。近隣の部族が既に斥候を送っているかも"
-"しれない。"
+"将軍: いいだろう隊長、しかし手短かに頼む。近隣の部族が既に斥候を送っているか"
+"もしれない。"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:193
@@ -1149,7 +1149,7 @@ msgid ""
 "weaken and die. Each lost warrior of the tribe deserved a funeral dirge, and "
 "the songs began at daybreak and often did not end until sundown."
 msgstr ""
-"そして数週間後が経過しました。捕われ傷ついたドレーク達は衰弱し、死に始めまし"
+"そして数週間が経過しました。捕われ傷ついたドレーク達は衰弱し、死に始めまし"
 "た。命を落とした部族の戦士一人ひとりに葬送の挽歌が捧げられましたが、その歌は"
 "夜明けに始まり、日暮れまで続くこともしばしばでした。"
 
@@ -1486,7 +1486,7 @@ msgstr ""
 #. [part]
 #: Flight_Freedom/macros/story.cfg:456
 msgid "THERACAR: I will serve always, Malakar."
-msgstr "THERACAR: どのようなときもあなたにお仕えいたします、Malakar 殿。"
+msgstr "THERACAR: どのようなときも、あなたにお仕えいたします、Malakar 殿。"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:463
@@ -1538,7 +1538,7 @@ msgstr ""
 #. [part]
 #: Flight_Freedom/macros/story.cfg:490
 msgid "MALAKAR: The humans have sown their seeds!"
-msgstr "MALAKAR: 種をまいたのは、人間ども自身なのだ！"
+msgstr "MALAKAR: 種を蒔いたのは、人間ども自身なのだ！"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:495
@@ -5672,7 +5672,7 @@ msgstr "Gomdrathsil"
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:50
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:69
 msgid "Dwarves"
-msgstr "ドワーフ族"
+msgstr "ドワーフ"
 
 #. [side]: type=Dwarvish Lord, id=Palmathio
 #: Flight_Freedom/scenarios/10a_Underground.cfg:65
@@ -6494,8 +6494,8 @@ msgid ""
 "Beards! Drakes, then elves, now drakes again! Why can't you all leave us "
 "alone?"
 msgstr ""
-"クソッ！ ドレークにエルフ、またドレークだ！なんで俺達のことをホッといてくれな"
-"いんだ？"
+"クソッ！ ドレークにエルフで、またドレークだ！なんで俺達のことをホッといてくれ"
+"ないんだ？"
 
 #. [message]: speaker=unit
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:273
