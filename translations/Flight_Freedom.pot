@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-07-05 21:14 UTC\n"
+"POT-Creation-Date: 2024-08-16 17:20 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7346,93 +7346,8 @@ msgstr ""
 msgid "Saurians"
 msgstr ""
 
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:98
-msgid "Many have died today. Far too many, all because of petty racism."
-msgstr ""
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:102
-msgid "Malakar, I must admit that you have great prowess, both martial and intellectual. I was wrong in opposing you, and I repent with my scar of penance."
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:106
-msgid "Very well, Hartholar. Let us strive to put this matter behind us, but do not dare to speak ill of Necolag. Who is this to my right?"
-msgstr ""
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:110
-msgid "He is Kzzklk, the leader of the saurians that opposed you earlier, under my directive. What is your plan?"
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:114
-msgid "Even with the might of both of our tribes, we cannot fight the humans by ourselves. I have seen their army, and it is not only large, but elite."
-msgstr ""
-
-#. [message]: id=Kzzklk
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:118
-msgid "My sssaurians will ssstand wwittth youuu."
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:122
-msgid "Kzzklk, I am honored. We can use every soldier that is willing to fight with us. However, we will need to leave these swamps soon, before the main human host arrives."
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:126
-msgid "Our ultimate goal should be the Obsidian Citadel, the dwelling place of the High Magi."
-msgstr ""
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:130
-msgid "But, Malakar, how will you convince them to leave their cloisters and join us?"
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:134
-msgid "They are our only hope. Just as their forerunners, led by the great drake Freon, cleared this island of the evils that once lived on it, they have the power to clear this island once again, this time from the evils that dare to invade it."
-msgstr ""
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:138
-msgid "You speak wisdom, Malakar. Perhaps the saurians can cover our retreat? They know the swamps well, much better than any drake, and can wage guerilla war against the thinskins."
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:142
-msgid "I agree. Kzzklk, what say you?"
-msgstr ""
-
-#. [message]: id=Kzzklk
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:146
-msgid "Yesss. Howwwevver, sssome of myyy warrriorrrss wwwant to followww yyoou."
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:150
-msgid "I accept their offer. Hartholar, have we decided?"
-msgstr ""
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:154
-msgid "The route to the Citadel will be treacherous. First, we must reach - and possibly retake - the stronghold at Mogradesh, across the Forest of Nightmares. Then, we must cross the Harkon Mountains, and the resting place of the ancient Mal-Bronam. Only then will we reach the Citadel... which may harbor dangers and guardians of its own."
-msgstr ""
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:158
-msgid "But, I am decided. This journey must be undertaken."
-msgstr ""
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:162
-msgid "Yes. Drakes! We must tarry no longer! Prepare to move to the southeast!"
-msgstr ""
-
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:185
+#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:104
 msgid "End the scenario to continue."
 msgstr ""
 
