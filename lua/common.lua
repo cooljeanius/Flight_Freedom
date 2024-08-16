@@ -93,16 +93,13 @@ SUF: do not include a [filter] subtag. If multiple units match the filter, the m
 
 Optional keys:
 fade_time: how long (milliseconds) message takes to fade out. Cannot be greater than time=.
-time_<language_code: override time= for a specific language.
+time_<language_code>: override time= for a specific language.
 	For example, specifying time=6000 and time_es_ES=8000 will cause the message to be displayed for 6 seconds unless Wesnoth language is Spanish, in which case it will be displayed for 8 seconds
 ]=]
 function wesnoth.wml_actions.fading_message(cfg)
 	local message = cfg.message
 	local delay_time = tonumber(cfg.time)
 	local fade_time = tonumber(cfg.fade_time) or 100
-	if fade_time > delay_time then
-		delay_time = fade_time
-	end
 	local matches = wesnoth.units.find_on_map(cfg)
 	local system_lang = wesnoth.get_language()
 	for k,v in pairs(cfg) do
@@ -114,6 +111,9 @@ function wesnoth.wml_actions.fading_message(cfg)
 				end
 			end
 		end
+	end
+	if fade_time > delay_time then
+		delay_time = fade_time
 	end
 	if matches ~= nil then
 		local name = matches[1].name
