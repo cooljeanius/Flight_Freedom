@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: wescamp-i 18n\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
 "POT-Creation-Date: 2024-06-06 18:01 UTC\n"
-"PO-Revision-Date: 2024-08-16 00:48+0900\n"
+"PO-Revision-Date: 2024-08-16 18:12+0900\n"
 "Last-Translator: konami,k <konamit2008@gmail.com>\n"
 "Language-Team: Japanese Translation Team\n"
 "Language: ja\n"
@@ -5085,7 +5085,6 @@ msgstr "この橋はガタが来てる！"
 msgid "I don't trust this bridge."
 msgstr "この橋は信用できないな。"
 
-# pass wind = おならをする
 #. [unit]: id=Passing Wind, type=Dreadnought
 #. This name is a pun:
 #: Flight_Freedom/scenarios/08_Landfall.cfg:503
@@ -5554,7 +5553,6 @@ msgstr ""
 "分かったよ。じゃあな、Malakar さん。俺にも、「麻の縄」にぶら下がって踊る時が"
 "きたようだな..."
 
-# $po: The expression is too graphic.
 #. [message]: speaker=Einelen
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:616
 msgid ""
@@ -5992,7 +5990,6 @@ msgstr ""
 "我々は森には戻れません、いいようにエルフに殺されてしまいます。ドレークたち"
 "よ！あたりを片付けて、休憩しなさい。"
 
-# ja: 動作を確認
 #. [message]: speaker=narrator
 #: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:241
 msgid ""
@@ -6459,7 +6456,7 @@ msgstr "私は溶岩の熱気しか感じないんですが、血管じゅうに
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:227
 msgid "This heat! I can't stand this much longer."
-msgstr "熱っいな！　もう耐えられないぜ。"
+msgstr "熱っついな！　もう耐えられないぜ。"
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:231
@@ -11119,13 +11116,11 @@ msgstr "静粛に！　我が部族の未来は、我々の肩にかかってい
 msgid "Quemar, are you prepared?"
 msgstr "Quemar、準備はよいか？"
 
-# ja: masu
 #. [message]: speaker=Quemar
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:178
 msgid "I will fulfill my duty, until my end and beyond."
-msgstr "私は、私の義務を、死ぬまで、いや、その先の先まで全ういたします。"
+msgstr "私は私の義務を、死ぬまで、いや、その先の先まで全ういたします。"
 
-# ja: masu
 #. [message]: speaker=Quahgakar
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:182
 msgid ""
@@ -11135,7 +11130,6 @@ msgstr ""
 "よろしい、Quemar 。私は、あの火山の火口までお前に同行しよう。弟子たちよ、所定"
 "の位置に着きなさい。"
 
-# ja: q
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:233
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:252
@@ -11144,11 +11138,10 @@ msgstr ""
 msgid "Apprentice"
 msgstr "弟子"
 
-# ja: temporary
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:307
 msgid "Move all four apprentices to the platforms"
-msgstr "４体の弟子全員をプラットフォームに移動させる"
+msgstr "4名の弟子全員をプラットフォームに移動させる"
 
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
 #. [objectives]
@@ -11164,7 +11157,6 @@ msgstr "弟子の死"
 msgid "Death of Quahgakar"
 msgstr "Quahgakar の死"
 
-# ja: masu
 #. [message]: speaker=messenger_08b
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:342
 msgid ""
@@ -11213,7 +11205,6 @@ msgstr "Emeric"
 msgid "We have them surrounded! Onward!"
 msgstr "奴らを包囲したぞ！　進め！"
 
-# ja: q
 #. [message]: speaker=Quahgakar
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:551
 msgid "We are all in place! Let us begin the convocation at once!"
@@ -11228,7 +11219,6 @@ msgstr ""
 "$num_turns_to_survive ターン生き残る（ $($turn_number - "
 "$survival_start_turn) / $num_turns_to_survive ）"
 
-# ja: masu
 #. [message]: role=concerned_human
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:616
 msgid ""
@@ -11366,7 +11356,6 @@ msgstr "私は死の淵へと歩んでいく。"
 msgid "And return with new life."
 msgstr "そして、新たな命とともに戻ってくる。"
 
-# chee
 #. [fading_message]: id=Quahgakar
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1079
 msgid "Open the way to the heart of the fire!"
@@ -12324,7 +12313,7 @@ msgstr "稲妻"
 msgid "Air Elemental"
 msgstr "大気の精霊"
 
-# po: "Abyssal" is not ordinary "abyssal" ?
+# #po: "Abyssal" -> "abyssal" ?
 #. [unit_type]: id=Air Elemental, race=elemental
 #: Flight_Freedom/units/elementals/Air_Elemental.cfg:19
 msgid ""
