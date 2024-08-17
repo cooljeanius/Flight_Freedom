@@ -37,7 +37,7 @@ jobs:
           log() { printf '\e[1m%s\e[m\n' "$*"; } # write log message in bold
 
           sync && log "in $(pwd): getting changed maps with SHA of ${SHA}"
-          git fetch --depth=1 origin "$SHA"
+          git fetch --depth=1 origin "$SHA" || git fetch origin || git fetch
           mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
 
           for map_path in "${map_paths[@]}"
@@ -67,6 +67,10 @@ jobs:
                 || continue
             comment_body+=$html
           done
+
+          if test -z "${comment_body}"; then
+            comment_body="ERROR: map diff workflow failed to generate a valid comment!"
+          fi
 
           printf 'COMMENT_BODY=%s\n' "$comment_body" >> "$GITHUB_OUTPUT"
       - name: Find comment

@@ -3,6 +3,8 @@
 *.swp
 .github/*
 .luacheckrc
+# The map-diff stuff doesn't need to go on the server:
+utils/
 
 # default values not already specified:
 .+
