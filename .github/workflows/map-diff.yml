@@ -68,6 +68,10 @@ jobs:
             comment_body+=$html
           done
 
+          if test -z "${comment_body}"; then
+            comment_body="ERROR: map diff workflow failed to generate a valid comment!"
+          fi
+
           printf 'COMMENT_BODY=%s\n' "$comment_body" >> "$GITHUB_OUTPUT"
       - name: Find comment
         uses: peter-evans/find-comment@v3
