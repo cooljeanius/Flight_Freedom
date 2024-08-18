@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wescamp-i 18n\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-06-06 18:01 UTC\n"
-"PO-Revision-Date: 2024-08-16 18:12+0900\n"
+"POT-Creation-Date: 2024-08-16 19:15 UTC\n"
+"PO-Revision-Date: 2024-08-18 13:19+0900\n"
 "Last-Translator: konami,k <konamit2008@gmail.com>\n"
 "Language-Team: Japanese Translation Team\n"
 "Language: ja\n"
@@ -112,7 +112,7 @@ msgid ""
 "unknown lands in the hopes of bringing them back home.\n"
 "\n"
 "<span color='#808080'>Now updated for BFW 1.18+!</span>\n"
-"(Expert Level)"
+"(Expert Level, 20-26 scenarios)"
 msgstr ""
 "これは、偉大なるドレークのリーダー Malakar の物語である。黒魔術師の手によって"
 "部族が滅亡寸前まで追い詰められるのを当たりにした彼は、散り散りになった仲間を"
@@ -120,62 +120,72 @@ msgstr ""
 "た。\n"
 "\n"
 "<span color='#808080'> BFW 1.18+ 用にアップデートされました！</span>\n"
-"(エキスパートレベル)"
+"(エキスパートレベル、20-26 シナリオ)"
 
 #. [campaign]: id=Flight_to_Freedom
 #: Flight_Freedom/_main.cfg:57
 msgid "(for Wesnoth v1.18.0 or later)"
 msgstr "(Wesnoth v1.18.0 以降用)"
 
-#. [achievement]: id=ftf_tribe_mother
+#. [achievement]: id=ftf_desperate_defense
+#: Flight_Freedom/achievements.cfg:8
+msgid "Desperate Defense"
+msgstr "決死の防衛"
+
+#. [achievement]: id=ftf_desperate_defense
 #: Flight_Freedom/achievements.cfg:9
+msgid "Kill at least 4 human units level 3 or above in Scenario 1 (Survival)."
+msgstr "シナリオ1（サバイバル）で、レベル3以上の人間ユニットを4人以上倒す。"
+
+#. [achievement]: id=ftf_tribe_mother
+#: Flight_Freedom/achievements.cfg:15
 msgid "Tribe Mother"
 msgstr "部族の母"
 
 #. [achievement]: id=ftf_tribe_mother
-#: Flight_Freedom/achievements.cfg:10
+#: Flight_Freedom/achievements.cfg:16
 msgid "Save all seven hatchlings in Scenario 2 (Rebellion)."
 msgstr "シナリオ２（反乱）で７体のヒナすべてを救い出す。"
 
 #. [achievement]: id=ftf_home_invasion
-#: Flight_Freedom/achievements.cfg:16
+#: Flight_Freedom/achievements.cfg:22
 msgid "Home Invasion"
 msgstr "邸内への侵入"
 
 #. [achievement]: id=ftf_home_invasion
-#: Flight_Freedom/achievements.cfg:17
+#: Flight_Freedom/achievements.cfg:23
 msgid "Kill the bodyguard captain in Scenario 3 (Manor)."
 msgstr "シナリオ３（荘園）で身辺警護兵長を倒す。"
 
 #. [achievement]: id=ftf_forest_friend
-#: Flight_Freedom/achievements.cfg:23
+#: Flight_Freedom/achievements.cfg:29
 msgid "Forest Friend"
 msgstr "森の友人"
 
 #. [achievement]: id=ftf_forest_friend
-#: Flight_Freedom/achievements.cfg:24
+#: Flight_Freedom/achievements.cfg:30
 msgid "Complete Scenario 4 (Caravan) without attacking any of the elves."
 msgstr "エルフを一人も攻撃せずにシナリオ4（キャラバン）をクリアする。"
 
 #. [achievement]: id=ftf_elven_enemy
-#: Flight_Freedom/achievements.cfg:30
+#: Flight_Freedom/achievements.cfg:36
 msgid "Elven Enemy"
 msgstr "エルフの敵"
 
 #. [achievement]: id=ftf_elven_enemy
-#: Flight_Freedom/achievements.cfg:31
+#: Flight_Freedom/achievements.cfg:37
 msgid ""
 "Kill the Elven leader in Scenario 5 (Blue River) with Kogw striking the "
 "killing blow."
 msgstr "シナリオ5（青き川）でエルフのリーダーを Kogw の打撃で倒す。"
 
 #. [achievement]: id=ftf_incendiary_ammo
-#: Flight_Freedom/achievements.cfg:37
+#: Flight_Freedom/achievements.cfg:43
 msgid "Incendiary Ammunition"
 msgstr "発火性弾薬"
 
 #. [achievement]: id=ftf_incendiary_ammo
-#: Flight_Freedom/achievements.cfg:38
+#: Flight_Freedom/achievements.cfg:44
 msgid ""
 "Upgrade the Unforgiver to shoot flaming ballista bolts in Scenario 6 "
 "(Southern Shore)."
@@ -184,22 +194,22 @@ msgstr ""
 "備する。"
 
 #. [achievement]: id=ftf_ironsides
-#: Flight_Freedom/achievements.cfg:44
+#: Flight_Freedom/achievements.cfg:50
 msgid "Ironsides"
 msgstr "戦艦"
 
 #. [achievement]: id=ftf_ironsides
-#: Flight_Freedom/achievements.cfg:45
+#: Flight_Freedom/achievements.cfg:51
 msgid "Complete Scenario 7 (Open Ocean) without losing a single ship."
 msgstr "シナリオ7（外洋）を1隻も失うことなくクリアする。"
 
 #. [achievement]: id=ftf_davy_jones_locker
-#: Flight_Freedom/achievements.cfg:51
+#: Flight_Freedom/achievements.cfg:57
 msgid "Davy Jones' Locker"
 msgstr "デイビー・ジョーンズ・ロッカー（海の墓場）"
 
 #. [achievement]: id=ftf_davy_jones_locker
-#: Flight_Freedom/achievements.cfg:52
+#: Flight_Freedom/achievements.cfg:58
 msgid ""
 "Sink the human flagship in Scenario 8 (Landfall) before the human leader "
 "disembarks."
@@ -207,12 +217,12 @@ msgstr ""
 "シナリオ8（陸地接近）で、人間のリーダーが下船する前に、人間の旗艦を撃沈する。"
 
 #. [achievement]: id=ftf_clean_getaway
-#: Flight_Freedom/achievements.cfg:58
+#: Flight_Freedom/achievements.cfg:64
 msgid "Clean Getaway"
 msgstr "まっさらな出入り口"
 
 #. [achievement]: id=ftf_clean_getaway
-#: Flight_Freedom/achievements.cfg:59
+#: Flight_Freedom/achievements.cfg:65
 msgid ""
 "Reach the cave in Scenario 9 (The Drake Escape) without losing a single unit "
 "to the elves, humans, or orcs."
@@ -221,55 +231,55 @@ msgstr ""
 "到達する。"
 
 #. [achievement]: id=ftf_swift_refuge
-#: Flight_Freedom/achievements.cfg:65
+#: Flight_Freedom/achievements.cfg:71
 msgid "Swift Refuge"
 msgstr "迅速な避難"
 
 #. [achievement]: id=ftf_swift_refuge
-#: Flight_Freedom/achievements.cfg:66
+#: Flight_Freedom/achievements.cfg:72
 msgid ""
 "Finish Scenario 10B (Freezing Foothills) before your entire tribe arrives."
 msgstr "部族全員が到着する前にシナリオ10B（凍てつく山麓）をクリアする。"
 
 #. [achievement]: id=ftf_nagas_bane
-#: Flight_Freedom/achievements.cfg:72
+#: Flight_Freedom/achievements.cfg:78
 msgid "Naga's Bane"
 msgstr "ナーガの受難"
 
 #. [achievement]: id=ftf_nagas_bane
-#: Flight_Freedom/achievements.cfg:73
+#: Flight_Freedom/achievements.cfg:79
 msgid "Kill the naga leader in Scenario 11A (River of Skulls)."
 msgstr "シナリオ11A（頭蓋骨の川）でナーガのリーダーを倒す。"
 
 #. [achievement]: id=ftf_close_escape
-#: Flight_Freedom/achievements.cfg:79
+#: Flight_Freedom/achievements.cfg:85
 msgid "Close Escape"
 msgstr "危機一髪"
 
 #. [achievement]: id=ftf_close_escape
-#: Flight_Freedom/achievements.cfg:80
+#: Flight_Freedom/achievements.cfg:86
 msgid "Escape the cave in Scenario 12A (Rockfall) at the last possible moment."
 msgstr "シナリオ12A（落盤）で、洞窟からできるだけギリギリの瞬間で脱出する。"
 
 #. [achievement]: id=ftf_can_be_only_one
-#: Flight_Freedom/achievements.cfg:86
+#: Flight_Freedom/achievements.cfg:92
 msgid "There Can Be Only One"
 msgstr "残れるのは一人だけ"
 
 #. [achievement]: id=ftf_can_be_only_one
-#: Flight_Freedom/achievements.cfg:87
+#: Flight_Freedom/achievements.cfg:93
 msgid ""
 "Kill the rebel leader in Scenario 13A (Betrayal) with Malakar striking the "
 "killing blow."
 msgstr "シナリオ13A（裏切り）で、Malakar の一撃で反乱軍のリーダーを倒す。"
 
 #. [achievement]: id=ftf_rage_against_the_darkness
-#: Flight_Freedom/achievements.cfg:93
+#: Flight_Freedom/achievements.cfg:99
 msgid "Rage Against the Darkness"
 msgstr "闇への怒り"
 
 #. [achievement]: id=ftf_rage_against_the_darkness
-#: Flight_Freedom/achievements.cfg:94
+#: Flight_Freedom/achievements.cfg:100
 msgid ""
 "Slay one of the Liches in Scenario 14 (Hordes of the Foul Undead) with the "
 "survivor."
@@ -277,67 +287,80 @@ msgstr ""
 "シナリオ14（汚いアンデッドの大群 ）で、リッチの一人を他の生存者とともに倒す。"
 
 #. [achievement]: id=ftf_kill_fire
-#: Flight_Freedom/achievements.cfg:100
+#: Flight_Freedom/achievements.cfg:106
 msgid "Kill it with Fire"
 msgstr "火炎で倒せ"
 
 #. [achievement]: id=ftf_kill_fire
-#: Flight_Freedom/achievements.cfg:101
+#: Flight_Freedom/achievements.cfg:107
 msgid ""
 "Destroy the Gate in Scenario 15 (Gate of Storms) with an Armageddon Drake."
 msgstr "シナリオ15（嵐の門）で、アルマゲドンドレークがゲートを破壊する。"
 
 #. [achievement]: id=ftf_offshore_artillery
-#: Flight_Freedom/achievements.cfg:107
+#: Flight_Freedom/achievements.cfg:113
 msgid "Offshore Artillery"
 msgstr "沖合砲撃"
 
 #. [achievement]: id=ftf_offshore_artillery
-#: Flight_Freedom/achievements.cfg:108
+#: Flight_Freedom/achievements.cfg:114
 msgid "Kill 3 enemy units with the Unforgiver in Scenario 16 (Exodus)."
 msgstr "シナリオ16（大脱出）で、敵ユニットを3体を Unforgiver号が倒す。"
 
 #. [achievement]: id=ftf_silence_deep
-#: Flight_Freedom/achievements.cfg:114
+#: Flight_Freedom/achievements.cfg:120
 msgid "Silence of the Deeps"
 msgstr "遠い海の静寂感"
 
 #. [achievement]: id=ftf_silence_deep
-#: Flight_Freedom/achievements.cfg:115
+#: Flight_Freedom/achievements.cfg:121
 msgid "Defeat both enemy commanders in Scenario 17A (Blockade)."
 msgstr "シナリオ17A（妨害）で敵の指揮官2人を倒す。"
 
 # [jp] "achevement" の内容を考慮して、"hunter" を 敢えて "hunt" に変えた。
 #. [achievement]: id=ftf_monster_hunter
-#: Flight_Freedom/achievements.cfg:121
+#: Flight_Freedom/achievements.cfg:127
 msgid "Monster Hunter"
 msgstr "怪物狩り"
 
-# #po: have no '.'
 #. [achievement]: id=ftf_monster_hunter
-#: Flight_Freedom/achievements.cfg:122
+#: Flight_Freedom/achievements.cfg:128
 msgid "Hunt all of the monsters in Scenario 17B (Parched Sands)"
 msgstr "シナリオ17B（乾いた砂地）の怪物を捕獲する。"
 
+#. [achievement]: id=ftf_start_revolution
+#: Flight_Freedom/achievements.cfg:134
+msgid "Start a Revolution"
+msgstr "革命を起こそう"
+
+#. [achievement]: id=ftf_start_revolution
+#: Flight_Freedom/achievements.cfg:135
+msgid ""
+"In Scenario 18 (Return to Morogor), kill one of the human leaders with the "
+"resistance ambassador."
+msgstr ""
+"シナリオ18（Morogor への帰還）で、抵抗勢力の特使と一緒に人間のリーダーの1人を"
+"殺す。"
+
 #. [achievement]: id=ftf_family_reunion
-#: Flight_Freedom/achievements.cfg:128
+#: Flight_Freedom/achievements.cfg:141
 msgid "Family Reunion"
 msgstr "家族の再会"
 
 #. [achievement]: id=ftf_family_reunion
-#: Flight_Freedom/achievements.cfg:130
+#: Flight_Freedom/achievements.cfg:143
 msgid "Reunite the two brothers in Scenario 19 (Liberation)."
 msgstr "シナリオ19（解放）で2人の兄弟を再会させる。"
 
 #. [achievement]: id=ftf_father_vengeance
-#: Flight_Freedom/achievements.cfg:136
+#: Flight_Freedom/achievements.cfg:149
 msgid "A Father's Vengeance"
 msgstr "父親としての仇敵"
 
 #. [achievement]: id=ftf_father_vengeance
-#: Flight_Freedom/achievements.cfg:137
-msgid "Avenge Necolag in Scenario 20 (Endgame)."
-msgstr "シナリオ20（最終決戦）で Necolag を討つ。"
+#: Flight_Freedom/achievements.cfg:150
+msgid "Avenge Necolag in Scenario 20 (Battle of the Temple)."
+msgstr "シナリオ20（最終決戦）で Necolag の敵を討つ。"
 
 #. [about]
 #: Flight_Freedom/credits.cfg:86
@@ -497,7 +520,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/macros/deaths.cfg:60
-#: Flight_Freedom/scenarios/01_Survival.cfg:574
+#: Flight_Freedom/scenarios/01_Survival.cfg:599
 msgid "RrrRRARGH!"
 msgstr "ルルルルルアーガー！"
 
@@ -641,7 +664,7 @@ msgstr "これでお終いだ...ドレーク族の終焉だ... 。"
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/macros/deaths.cfg:385
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:989
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:990
 msgid "No! Without him, I cannot hope to prevail!"
 msgstr "いけない！ 彼なしでは勝利を望めない！"
 
@@ -749,7 +772,7 @@ msgstr ""
 #. [then]
 #. [scenario]: id=Swamps_Jamolar
 #. [scenario]: id=Forest_of_Nightmares
-#. [scenario]: id=Hafwyt
+#. [scenario]: id=Mogradesh
 #. [event]: id=Quemar
 #. [scenario]: id=Mountain_Crypt
 #. [scenario]: id=Citadel
@@ -757,9 +780,9 @@ msgstr ""
 #: Flight_Freedom/macros/objectives.cfg:18
 #: Flight_Freedom/macros/objectives.cfg:43
 #: Flight_Freedom/scenarios/01_Survival.cfg:201
-#: Flight_Freedom/scenarios/01_Survival.cfg:357
-#: Flight_Freedom/scenarios/01_Survival.cfg:402
-#: Flight_Freedom/scenarios/01_Survival.cfg:433
+#: Flight_Freedom/scenarios/01_Survival.cfg:360
+#: Flight_Freedom/scenarios/01_Survival.cfg:405
+#: Flight_Freedom/scenarios/01_Survival.cfg:436
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:912
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:923
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:1014
@@ -771,28 +794,28 @@ msgstr ""
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:239
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:337
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:409
-#: Flight_Freedom/scenarios/19_Liberation.cfg:982
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1009
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:34
+#: Flight_Freedom/scenarios/19_Liberation.cfg:983
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1010
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:23
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:92
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:212
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:272
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:410
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:520
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:212
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:273
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:411
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:521
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:88
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:477
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:644
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:63
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:308
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:568
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:480
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:647
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:61
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:324
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:584
 msgid "Death of Malakar"
 msgstr "Malakarの死"
 
 #. [objective]: condition=lose
 #: Flight_Freedom/macros/objectives.cfg:20
 #: Flight_Freedom/macros/objectives.cfg:44
-#: Flight_Freedom/scenarios/19_Liberation.cfg:984
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1011
+#: Flight_Freedom/scenarios/19_Liberation.cfg:985
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1012
 msgid "Death of Kogw"
 msgstr "Kogwの死"
 
@@ -802,13 +825,13 @@ msgstr "Kogwの死"
 #. [then]
 #: Flight_Freedom/macros/objectives.cfg:30
 #: Flight_Freedom/scenarios/01_Survival.cfg:202
-#: Flight_Freedom/scenarios/01_Survival.cfg:358
-#: Flight_Freedom/scenarios/01_Survival.cfg:403
+#: Flight_Freedom/scenarios/01_Survival.cfg:361
+#: Flight_Freedom/scenarios/01_Survival.cfg:406
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:240
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:338
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:410
-#: Flight_Freedom/scenarios/19_Liberation.cfg:994
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1021
+#: Flight_Freedom/scenarios/19_Liberation.cfg:995
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1022
 msgid "Death of Theracar"
 msgstr "Theracarの死"
 
@@ -817,17 +840,17 @@ msgstr "Theracarの死"
 #. [then]
 #. [else]
 #. [scenario]: id=Battle_Temple
-#. [scenario]: id=Hafwyt
+#. [scenario]: id=Mogradesh
 #: Flight_Freedom/macros/objectives.cfg:81
 #: Flight_Freedom/macros/objectives.cfg:89
 #: Flight_Freedom/scenarios/01_Survival.cfg:200
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:259
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:246
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:241
 #: Flight_Freedom/scenarios/16_Exodus.cfg:276
 #: Flight_Freedom/scenarios/16_Exodus.cfg:420
 #: Flight_Freedom/scenarios/16_Exodus.cfg:680
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:275
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:211
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:276
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:211
 msgid "Defeat all enemy leaders"
 msgstr "敵のリーダーを全て倒す"
 
@@ -1214,11 +1237,10 @@ msgstr ""
 "隊長: ええ、もちろんです、将軍。お聞きしてよいでしょうか、捕虜はどうするおつ"
 "もりですか？"
 
-# #po: "a weeks time" -> "in a week's time" ?
 #. [part]
 #: Flight_Freedom/macros/story.cfg:271
 msgid ""
-"GENERAL: Execute the dying ones. A General Dacayan will come by in a weeks "
+"GENERAL: Execute the dying ones. A General Dacayan will come by in a week's "
 "time. I hear that he is willing to pay handsomely for slaves. See that we "
 "are able to sell him as many healthy drakes as possible."
 msgstr ""
@@ -2454,14 +2476,14 @@ msgstr ""
 #: Flight_Freedom/macros/story.cfg:1189 Flight_Freedom/macros/story.cfg:1270
 msgid ""
 "NAR: And their thirst for wealth has not stopped below ground. Most of our "
-"temples have been torn down and the stones hauled away. The Temple of Gar-"
-"Alagar still stands, but the humans use it as their base of operations; they "
-"now call it 'Weswyt.'"
+"temples have been torn down and the stones hauled away. The High Temple of "
+"Gar-Alagar still stands, but the humans use it as their base of operations; "
+"they now call it 'Weswyt.'"
 msgstr ""
 "NAR: そして彼らの強欲はそれで終わらなかった。我々の神殿は大半が悲しむべきこと"
-"になり再利用できる石材は持って行かれてしまった。 Gar-Alagar 神殿は依然として"
-"存在している。しかし、人間達はそれを総司令部として利用している。彼らが今 "
-"Weswyt と呼んでいるものだ。"
+"になり再利用できる石材は持って行かれてしまった。 Gar-Alagar の高位の神殿は依"
+"然として存在している。しかし、人間達はそれを総司令部として利用している。彼ら"
+"が今 Weswyt と呼んでいるものだ。"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:1194 Flight_Freedom/macros/story.cfg:1274
@@ -2781,16 +2803,16 @@ msgstr "MALAKAR: いいとも。Hartholar、決まりだね？"
 #: Flight_Freedom/macros/story.cfg:1431
 msgid ""
 "HARTHOLAR: The route to the Citadel will be treacherous. First, we must "
-"reach - and possibly retake - the stronghold at Hafwyt, across the Forest of "
-"Nightmares. Then we must cross the Harkon Mountains, the cursed resting "
+"reach - and possibly retake - the stronghold at Mogradesh, across the Forest "
+"of Nightmares. Then we must cross the Harkon Mountains, the cursed resting "
 "place of the ancient Mal-Bronam. Only then will we reach the Citadel... "
 "which may harbor dangers and guardians of its own."
 msgstr ""
-"HARTHOLAR: Cotadel への道は非常に険しいものです。先ずは、\"悪夢の森\"を越え"
-"て Hafwyt 要塞まで行かねばなりませんが、場合によっては奪還せねばなりません。"
-"その後、Harkon 山地と、古代 Mal-Bronam の呪われた安息の地を越えねばなりませ"
-"ん。そうしてやっと Citadel に辿り着くのですが... そこには危険と、その地の警護"
-"隊が潜んでいるかもしれないのです。"
+"HARTHOLAR: Citadel への道は非常に険しいものです。先ずは、\"悪夢の森\"を越え"
+"て Mogradesh 要塞まで行かねばなりませんが、場合によっては奪還せねばなりませ"
+"ん。その後、Harkon 山地と、古代 Mal-Bronam の呪われた安息の地を越えねばなりま"
+"せん。そうしてやっと Citadel に辿り着くのですが... そこには危険と、その地の警"
+"護隊が潜んでいるかもしれないのです。"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:1436
@@ -2804,8 +2826,8 @@ msgid ""
 "MALAKAR: Yes. Drakes! We must tarry no longer! Prepare to move to the "
 "southeast!"
 msgstr ""
-"MALAKAR: ええ。ドレーク達よ！これ以上留まってはいられない！南東への行程に向け"
-"て準備せよ！"
+"MALAKAR: そうだな。ドレーク達よ！これ以上留まってはいられない！南東への行程に"
+"向けて準備せよ！"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:1452
@@ -2818,11 +2840,11 @@ msgstr ""
 #. [part]
 #: Flight_Freedom/macros/story.cfg:1463
 msgid ""
-"HARTHOLAR: The mighty stronghold of Hafwyt lies before us. Here, we can rest "
-"and recruit more warriors, perhaps among the Jamolar expatriates here."
+"HARTHOLAR: The mighty stronghold of Mogradesh lies before us. Here we can "
+"rest and recruit more warriors, perhaps among the Jamolar expatriates here."
 msgstr ""
-"HARTHOLAR: Hafwyt の強力な要塞が目の前に聳えています。ここで休息しましょう。"
-"おそらく、この Jamolar に住む者たちから、もっと兵士を雇用できるでしょう。"
+"HARTHOLAR: Mogradesh の強力な要塞が目の前に聳えています。ここで休息しましょ"
+"う。おそらく、この Jamolar に住む者たちから、もっと兵士を雇用できるでしょう。"
 
 #. [part]
 #: Flight_Freedom/macros/story.cfg:1468
@@ -3032,10 +3054,9 @@ msgstr ""
 msgid "skilled"
 msgstr "熟練"
 
-# #po: have no '.'
 #. [chance_to_hit]: id=eoma_skilled
 #: Flight_Freedom/macros/weapon-specials.cfg:22
-msgid "This attack always has a minimum 60% chance to hit"
+msgid "This attack always has a minimum 60% chance to hit."
 msgstr "この攻撃は常に最低60％の確率で命中します。"
 
 #. [attacks]: id=nocounter
@@ -3043,15 +3064,14 @@ msgstr "この攻撃は常に最低60％の確率で命中します。"
 msgid "no counter-attack"
 msgstr "無反撃"
 
-# #po: "Berserker frenzy" = "berserk" ?
 #. [attacks]: id=nocounter
 #: Flight_Freedom/macros/weapon-specials.cfg:33
 msgid ""
 "The opponent has a 0% chance to hit when this unit is attacking. Does not "
-"work on opponents with berserker frenzy."
+"work on opponents with berserk."
 msgstr ""
-"攻撃を受ける側の反撃命中率が0%になります。ただし、\"狂戦\"（Berserker "
-"frenzy）を持つ相手には効果がありません。"
+"攻撃を受ける側の反撃命中率が0%になります。ただし、\"狂戦\"を持つ相手には効果"
+"がありません。"
 
 #. [attacks]: id=nocounter
 #: Flight_Freedom/macros/weapon-specials.cfg:34
@@ -3078,12 +3098,12 @@ msgid "Some of this unit's attacks can strike all adjacent targets."
 msgstr "このユニットのいくつかの攻撃は、隣接した全ての標的を攻撃できます。"
 
 #. [dummy]: id=eoma_cleave{DISPLAYVALUE}
-#: Flight_Freedom/macros/weapon-specials.cfg:351
+#: Flight_Freedom/macros/weapon-specials.cfg:355
 msgid "cleave"
 msgstr "分裂"
 
 #. [dummy]: id=eoma_cleave{DISPLAYVALUE}
-#: Flight_Freedom/macros/weapon-specials.cfg:352
+#: Flight_Freedom/macros/weapon-specials.cfg:356
 msgid ""
 "A unit with this ability can hurt units that are adjacent to the attacker "
 "and the defender at the same time. The damage dealt equals a specified % of "
@@ -3107,38 +3127,36 @@ msgstr ""
 "基本ダメージ倍率："
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:514
-#: Flight_Freedom/macros/weapon-specials.cfg:515
+#: Flight_Freedom/macros/weapon-specials.cfg:512
+#: Flight_Freedom/macros/weapon-specials.cfg:513
 msgid "attack only"
 msgstr "攻撃専用"
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:516
-#: Flight_Freedom/macros/weapon-specials.cfg:517
+#: Flight_Freedom/macros/weapon-specials.cfg:514
+#: Flight_Freedom/macros/weapon-specials.cfg:515
 msgid "This weapon will never be used on defense."
 msgstr "この武器は、防御以外には使用されません。"
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:518
+#: Flight_Freedom/macros/weapon-specials.cfg:516
 msgid "Some of this unit's attacks are not available except on offense."
 msgstr "このユニットの攻撃要素のいくつかは、攻撃時以外には使用できません。"
 
-# #po: The id of this [damege] may be a mistake for defend_only.
-# (see  source line#531 "id=attack_only")
-#. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:534
-#: Flight_Freedom/macros/weapon-specials.cfg:535
+#. [damage]: id=defend_only
+#: Flight_Freedom/macros/weapon-specials.cfg:532
+#: Flight_Freedom/macros/weapon-specials.cfg:533
 msgid "defend only"
 msgstr "防御専用"
 
-#. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:536
-#: Flight_Freedom/macros/weapon-specials.cfg:537
+#. [damage]: id=defend_only
+#: Flight_Freedom/macros/weapon-specials.cfg:534
+#: Flight_Freedom/macros/weapon-specials.cfg:535
 msgid "This weapon will only be available for defense."
 msgstr "この武器は、防御時だけに使用できます。"
 
-#. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:538
+#. [damage]: id=defend_only
+#: Flight_Freedom/macros/weapon-specials.cfg:536
 msgid "Some of this unit's attacks are not available except on defense."
 msgstr "このユニットの攻撃要素のいくつかは、防御時にしか使えません。"
 
@@ -3177,8 +3195,8 @@ msgstr "精鋭王立歩兵隊"
 #. [side]: type=Grand Marshal, id=Yrynyc
 #. [unit]: type=Grand Marshal, id=Yrynyc
 #: Flight_Freedom/scenarios/01_Survival.cfg:54
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:169
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1320
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:170
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1437
 msgid "Yrynyc"
 msgstr "Yrynyc"
 
@@ -3219,15 +3237,15 @@ msgstr "Dacayan"
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:36
 #: Flight_Freedom/scenarios/18_Return_Morogor.cfg:26
 #: Flight_Freedom/scenarios/19_Liberation.cfg:33
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:23
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:24
 #: Flight_Freedom/scenarios/21_Epilogue.cfg:19
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:42
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:31
 #: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:22
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:34
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:27
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:27
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:29
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:34
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:37
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:32
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:35
 #: Flight_Freedom/scenarios_b/09b_Epilogue_B.cfg:17
 msgid "Malakar"
 msgstr "Malakar"
@@ -3239,7 +3257,7 @@ msgstr "Malakar"
 #: Flight_Freedom/scenarios/01_Survival.cfg:116
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:33
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:32
-#: Flight_Freedom/scenarios/08_Landfall.cfg:264
+#: Flight_Freedom/scenarios/08_Landfall.cfg:265
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:40
 #: Flight_Freedom/scenarios/10a_Underground.cfg:35
 #: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:32
@@ -3252,15 +3270,15 @@ msgstr "Malakar"
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:44
 #: Flight_Freedom/scenarios/18_Return_Morogor.cfg:35
 #: Flight_Freedom/scenarios/19_Liberation.cfg:44
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:33
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:34
 #: Flight_Freedom/scenarios/21_Epilogue.cfg:27
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:53
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:42
 #: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:32
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:43
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:35
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:35
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:40
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:42
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:45
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:40
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:43
 #: Flight_Freedom/scenarios_b/09b_Epilogue_B.cfg:24
 msgid "Kakatar Tribe"
 msgstr "Kakatar 部族"
@@ -3281,32 +3299,32 @@ msgid "Necolag"
 msgstr "Necolag"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:298
+#: Flight_Freedom/scenarios/01_Survival.cfg:301
 msgid "What? No! NO! RrrrrrrRRRRRAAARGHH!"
 msgstr "え？そんな！駄目だ！ウアーーッ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:302
+#: Flight_Freedom/scenarios/01_Survival.cfg:305
 msgid "Kakatar Tribe! To arms! Kill them all!"
 msgstr "Kakatar 部族よ！戦闘準備せよ！やつらを皆殺しにしろ！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/01_Survival.cfg:307
+#: Flight_Freedom/scenarios/01_Survival.cfg:310
 msgid ""
 "For the course of this campaign <i>Inferno Drakes</i> can upgrade to "
 "<b>Armageddon Drakes</b>, and <i>Drake Clashers</i> can upgrade to <b>Drake "
 "Guards</b>."
 msgstr ""
-"このキャンペーン中では、<i>インフェルノドレーク </i>は<b>アルマゲドンドレー"
-"ク </b>に、<i>ドレークの粉砕者 </i>は<b>ドレークの警護兵 </b>に昇格できます。"
+"このキャンペーンでは、<i>インフェルノドレーク </i>は<b>アルマゲドンドレーク "
+"</b>に、<i>ドレークの粉砕者 </i>は<b>ドレークの警護兵 </b>に昇格できます。"
 
 #. [message]: speaker=Necolag
-#: Flight_Freedom/scenarios/01_Survival.cfg:321
+#: Flight_Freedom/scenarios/01_Survival.cfg:324
 msgid "NYIEEEEEEEE!"
 msgstr "キャーーーーー！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/01_Survival.cfg:330
+#: Flight_Freedom/scenarios/01_Survival.cfg:333
 msgid ""
 "<span color='green' size='larger'><b>Note: the campaign will not end if this "
 "scenario is lost.</b></span>"
@@ -3315,7 +3333,7 @@ msgstr ""
 "ンは終了しません。.</b></span>"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:339
+#: Flight_Freedom/scenarios/01_Survival.cfg:342
 msgid ""
 "This is an army! We cannot hope to take them ourselves, but they will buy "
 "our lives dearly. Captain Theracar, I need you to warn the Jamolar tribe in "
@@ -3327,13 +3345,13 @@ msgstr ""
 
 #. [message]: speaker=Theracar0
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/01_Survival.cfg:344
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:282
+#: Flight_Freedom/scenarios/01_Survival.cfg:347
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:281
 msgid "At once, Malakar."
 msgstr "直ちに、Malakar 殿。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:348
+#: Flight_Freedom/scenarios/01_Survival.cfg:351
 msgid ""
 "Tribesmen! We did not know it when we slept last night, nor when we awoke "
 "this morning, but it has always been written that this is our final hour. "
@@ -3345,7 +3363,7 @@ msgstr ""
 "部族への伝言を阻止しようとする騎兵どもを止めることが我々の最優先事項だ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:352
+#: Flight_Freedom/scenarios/01_Survival.cfg:355
 msgid ""
 "Our second priority is to make sure that the children's children of these "
 "murderers still see our faces in their nightmares. Attack!"
@@ -3354,12 +3372,12 @@ msgstr ""
 "顔を見させるようにすることだ。攻撃せよ！"
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:356
+#: Flight_Freedom/scenarios/01_Survival.cfg:359
 msgid "Defeat the cavalry leader"
 msgstr "騎兵の司令官を倒す"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:392
+#: Flight_Freedom/scenarios/01_Survival.cfg:395
 msgid ""
 "Theracar! Without their horses, you should be able to outdistance them in "
 "the hills. Go!"
@@ -3368,12 +3386,12 @@ msgstr ""
 "行け！"
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:401
+#: Flight_Freedom/scenarios/01_Survival.cfg:404
 msgid "Move Theracar to the end of the southern stream"
 msgstr "Theracar を南の小川の終点に移動させる"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:428
+#: Flight_Freedom/scenarios/01_Survival.cfg:431
 msgid ""
 "Drakes! Theracar is clear! Now, we follow the southern stream! Without their "
 "horses, they will have trouble chasing us through the hills."
@@ -3382,17 +3400,17 @@ msgstr ""
 "くぞ！馬がいなければ、丘陵地帯で我々を追いかけるのは難しいだろう。"
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:432
+#: Flight_Freedom/scenarios/01_Survival.cfg:435
 msgid "Move Malakar to the end of the southern stream"
 msgstr "Malakar を南の小川の終点に移動させる"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:446
+#: Flight_Freedom/scenarios/01_Survival.cfg:449
 msgid "Drakes! We must flee, at least for now!"
 msgstr "ドレークたちよ！逃げるのが先決だ！少なくとも今はな！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:507
+#: Flight_Freedom/scenarios/01_Survival.cfg:510
 msgid ""
 "Drakes! Theracar is clear! For the honor of the tribe, let no human pass!"
 msgstr ""
@@ -3400,13 +3418,13 @@ msgstr ""
 "い！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:538
+#: Flight_Freedom/scenarios/01_Survival.cfg:541
 msgid "I cannot abandon my tribe! As Chief, honor demands I fight to the last!"
 msgstr ""
 "我が部族を見捨てるわけにはいかぬ！族長として、名誉をかけて、最後まで戦う！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:553
+#: Flight_Freedom/scenarios/01_Survival.cfg:578
 msgid ""
 "Our fastest messenger is defeated! Abandon the defense! Everyone turn south! "
 "At least one voice must live to warn the Jamolar tribe!"
@@ -3415,12 +3433,12 @@ msgstr ""
 "一人でも Jamolar 部族に警告を伝えなければならない！"
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/01_Survival.cfg:578
+#: Flight_Freedom/scenarios/01_Survival.cfg:603
 msgid "Haha! This one should fetch a hefty price at the market!"
 msgstr "ハッハッハ！　こいつは、売れば高値がつくに違いないぞ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:608
+#: Flight_Freedom/scenarios/01_Survival.cfg:633
 msgid ""
 "No! The humans have overrun our lands, and their cavalry blocks our escape!"
 msgstr ""
@@ -3428,7 +3446,7 @@ msgstr ""
 "止している！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:619
+#: Flight_Freedom/scenarios/01_Survival.cfg:644
 msgid ""
 "No! The humans have overrun our lands! Theracar, why are you still here?"
 msgstr ""
@@ -3436,7 +3454,7 @@ msgstr ""
 "に居るのだ？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:625
+#: Flight_Freedom/scenarios/01_Survival.cfg:650
 msgid ""
 "The humans have overrun our lands yet our messenger has escaped. Our deaths "
 "will not be in vain."
@@ -3978,9 +3996,13 @@ msgstr "Haloran"
 #. [side]: type=Elvish Marshal, id=Haloran
 #. [modify_side]
 #. [side]: type=Elvish Captain, type=Elvish Marshal, id=Mandros
+#. [side]: type=Elvish Captain, id=Einelen
+#. [side]
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:52
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:737
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:53
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:119
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:102
 msgid "Elvish Melrithian Force"
 msgstr "エルフの Melrith 軍"
 
@@ -4687,9 +4709,9 @@ msgstr "Luna 号を撃沈する"
 #. [scenario]: id=Blockade, race=boat
 #: Flight_Freedom/scenarios/06a_Southern_Shore.cfg:60
 #: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:55
-#: Flight_Freedom/scenarios/08_Landfall.cfg:278
-#: Flight_Freedom/scenarios/08_Landfall.cfg:286
-#: Flight_Freedom/scenarios/08_Landfall.cfg:725
+#: Flight_Freedom/scenarios/08_Landfall.cfg:279
+#: Flight_Freedom/scenarios/08_Landfall.cfg:287
+#: Flight_Freedom/scenarios/08_Landfall.cfg:726
 #: Flight_Freedom/scenarios/08_Landfall.cfg:119
 #: Flight_Freedom/scenarios/16_Exodus.cfg:279
 #: Flight_Freedom/scenarios/17a_Blockade.cfg:126
@@ -4989,7 +5011,7 @@ msgstr "Skula-Teroa"
 #. [side]: type=Orcish Sovereign, id=Ugho
 #: Flight_Freedom/scenarios/08_Landfall.cfg:49
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:72
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:348
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:347
 #: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:66
 #: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:85
 msgid "Local Orcish Tribe"
@@ -5002,20 +5024,20 @@ msgstr "オークの地元部族"
 #. [side]: type=General, id=S Leader
 #: Flight_Freedom/scenarios/08_Landfall.cfg:58
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:58
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:51
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:80
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:94
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:124
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:143
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:56
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:67
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:78
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:51
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:80
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:94
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:124
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:143
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:54
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:65
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:76
 msgid "Wesnoth Expeditionary Force"
 msgstr "Wesnoth 遠征軍"
 
 #. [side]
 #: Flight_Freedom/scenarios/08_Landfall.cfg:107
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:150
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:149
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:87
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:92
 #: Flight_Freedom/scenarios/19_Liberation.cfg:259
@@ -5030,74 +5052,74 @@ msgstr "東の桟橋に Unforgiver号を移動させる"
 #. [then]
 #. [event]
 #. [scenario]: id=Hordes_Undead
-#: Flight_Freedom/scenarios/08_Landfall.cfg:277
-#: Flight_Freedom/scenarios/08_Landfall.cfg:724
+#: Flight_Freedom/scenarios/08_Landfall.cfg:278
+#: Flight_Freedom/scenarios/08_Landfall.cfg:725
 #: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:226
 #: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:67
 msgid "Defeat both enemy leaders"
 msgstr "両方の敵リーダーを倒す"
 
 #. [else]
-#: Flight_Freedom/scenarios/08_Landfall.cfg:285
+#: Flight_Freedom/scenarios/08_Landfall.cfg:286
 msgid "Defeat enemy leader"
 msgstr "敵リーダーを倒す"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08_Landfall.cfg:328
+#: Flight_Freedom/scenarios/08_Landfall.cfg:329
 msgid "Ieeeeee!"
 msgstr "イエエエエエ！"
 
 #. [message]: speaker=Malakar
 #. [message]
-#: Flight_Freedom/scenarios/08_Landfall.cfg:377
-#: Flight_Freedom/scenarios/08_Landfall.cfg:383
+#: Flight_Freedom/scenarios/08_Landfall.cfg:378
+#: Flight_Freedom/scenarios/08_Landfall.cfg:384
 msgid "The bridge collapsed!"
 msgstr "橋が崩壊した！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:402
+#: Flight_Freedom/scenarios/08_Landfall.cfg:403
 msgid "Phew, good thing I wasn't standing on that rickety thing!"
 msgstr "ふぅ、あんなオンボロの上に立ってなくてラッキーだったぜ！"
 
 #. [wml_message]
 #. debug message; ok to skip translating:
-#: Flight_Freedom/scenarios/08_Landfall.cfg:423
+#: Flight_Freedom/scenarios/08_Landfall.cfg:424
 msgid "The Unforgiver survived the bridge collapse!"
 msgstr "Unforgiver号が、橋の崩壊から生還したぞ！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:431
+#: Flight_Freedom/scenarios/08_Landfall.cfg:432
 msgid "Oh no, my ship!"
 msgstr "お、俺の船が！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08_Landfall.cfg:461
+#: Flight_Freedom/scenarios/08_Landfall.cfg:462
 msgid "I do not trust this bridge!"
 msgstr "この橋はどうも信用できないな！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08_Landfall.cfg:468
+#: Flight_Freedom/scenarios/08_Landfall.cfg:469
 msgid "This bridge be rickety!"
 msgstr "この橋はガタが来てる！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08_Landfall.cfg:474
+#: Flight_Freedom/scenarios/08_Landfall.cfg:475
 msgid "I don't trust this bridge."
 msgstr "この橋は信用できないな。"
 
 #. [unit]: id=Passing Wind, type=Dreadnought
 #. This name is a pun:
-#: Flight_Freedom/scenarios/08_Landfall.cfg:503
+#: Flight_Freedom/scenarios/08_Landfall.cfg:504
 msgid "Passing Wind"
 msgstr "過ぎゆく風"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:561
+#: Flight_Freedom/scenarios/08_Landfall.cfg:562
 msgid "(Malakar) Fie! The humans pursue us!"
 msgstr "(Malakar) まったく！人間どもが我々を追いかけてきた！"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:566
+#: Flight_Freedom/scenarios/08_Landfall.cfg:567
 msgid ""
 "(Kogw) Blast! There's low wind and we're in the island's tide. Our best bet "
 "is to land and hope they hesitate long enough for us to ready our defense."
@@ -5107,24 +5129,24 @@ msgstr ""
 "う。"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:571
+#: Flight_Freedom/scenarios/08_Landfall.cfg:572
 msgid ""
 "(Malakar) There is an old fortress on the eastern horizon. We can make our "
 "stand there."
 msgstr "(Malakar) 東の地平線に古い砦が見える。あそこに立てこもろう。"
 
 #. [unit]: id=Jako, type=General
-#: Flight_Freedom/scenarios/08_Landfall.cfg:602
+#: Flight_Freedom/scenarios/08_Landfall.cfg:603
 msgid "Jako"
 msgstr "Jako"
 
 #. [message]: speaker=Skula-Teroa
-#: Flight_Freedom/scenarios/08_Landfall.cfg:665
+#: Flight_Freedom/scenarios/08_Landfall.cfg:666
 msgid "Intruders! Die!"
 msgstr "侵略者よ！死ね！"
 
 #. [message]: speaker=Jako
-#: Flight_Freedom/scenarios/08_Landfall.cfg:692
+#: Flight_Freedom/scenarios/08_Landfall.cfg:693
 msgid ""
 "Men, be prepared for attacks from the South, but the Drakes remain our "
 "primary objective. Move out!"
@@ -5133,55 +5155,55 @@ msgstr ""
 "行け！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:896
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:749
+#: Flight_Freedom/scenarios/08_Landfall.cfg:897
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:748
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:850
 msgid "A spirit has attacked!"
 msgstr "精霊が攻撃してきた！"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:903
+#: Flight_Freedom/scenarios/08_Landfall.cfg:904
 msgid "(Kogw) A spirit has attacked!"
 msgstr "(Kogw) 精霊が攻撃してきた！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:920
+#: Flight_Freedom/scenarios/08_Landfall.cfg:921
 msgid "By the smoke of Gar-Alagar... a spirit!"
 msgstr "Gar-Alagar の煙のそばに...精霊だぞ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:932
+#: Flight_Freedom/scenarios/08_Landfall.cfg:933
 msgid "It... it did not attack. It just appeared."
 msgstr "あれは...あれは攻撃してこなかった。出現しただけか。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:944
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:783
+#: Flight_Freedom/scenarios/08_Landfall.cfg:945
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:782
 msgid "Are you going to say that EVERY time?"
 msgstr "おまえは<b>毎回</b>同じことを言うつもりか？"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:963
+#: Flight_Freedom/scenarios/08_Landfall.cfg:964
 msgid "(Malakar) By the smoke of Gar-Alagar... a spirit!"
 msgstr "(Malakar) Gar-Alagar の煙のそばに...精霊だぞ！"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:976
+#: Flight_Freedom/scenarios/08_Landfall.cfg:977
 msgid "(Malakar) It... it did not attack. It just appeared."
 msgstr "(Malakar) あれは...あれは攻撃してこなかった。出現しただけか。"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:983
+#: Flight_Freedom/scenarios/08_Landfall.cfg:984
 msgid "(Malakar) Are you going to say that EVERY time?"
 msgstr "(Malakar) おまえは<b>毎回</b>同じことを言うつもりか？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1109
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1110
 msgid "What is this? Why have we landed here?"
 msgstr "これは何だ？何でこんな所に上陸したのだ？"
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1114
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1115
 msgid ""
 "(Kogw) I'm truly sorry, Mal, but I can't keep doing this. The drake is all "
 "yours, boyos."
@@ -5190,28 +5212,27 @@ msgstr ""
 "全てあんたらのものだ、男ども。"
 
 #. [message]: speaker=slayer
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1149
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1150
 msgid "RUARRAGH!"
 msgstr "ルアルルラー！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1153
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1154
 msgid "We need an EMPTY fortress, you fool!"
 msgstr "我々には空っぽの砦が必要なんだ、馬鹿者め！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1157
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1158
 msgid "Back on the boat!"
 msgstr "船に戻れ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1188
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1189
 msgid "They have summoned reinforcements! Burn down their ships!"
 msgstr "奴らは援軍を招集したぞ、奴らの船を燃やし尽くせ！"
 
-# #po:"by the Eyes" -> "by the eyes" ?
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1192
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1193
 msgid ""
 "By the Eyes... it's hopeless, Malakar! That's a whole fleet of their finest. "
 "We must retreat!"
@@ -5220,7 +5241,7 @@ msgstr ""
 "揃ってる。撤退するしかない！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1203
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1204
 msgid ""
 "Cowardly thinskin. We are drakes! We shall take to the skies at once and "
 "make pyres of their worthless boats!"
@@ -5229,7 +5250,7 @@ msgstr ""
 "葬の薪にしてしまえ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1207
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1208
 msgid ""
 "No, Theracar, I fear the pirate has the way of it. Our tribe has spent much "
 "of our strength on our journey, and we would not survive a mad charge into "
@@ -5240,12 +5261,12 @@ msgstr ""
 "ろう。もっと内陸で軍を再編せねばならん。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1213
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1214
 msgid "Hmm. So be it. Regroup farther inland!"
 msgstr "まあ仕方がない。もっと内陸で軍を再編せねばならん！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1219
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1220
 msgid ""
 "Forgive me, darling. I've never had the honor of captaining a finer ship."
 msgstr ""
@@ -5254,32 +5275,32 @@ msgstr ""
 
 #. [message]: speaker=Unforgiver
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1223
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1231
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:574
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1224
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1232
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:573
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:330
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:748
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:660
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:676
 msgid "..."
 msgstr "..."
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1227
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1228
 msgid "Haaarh. You must see, I have no choice. My hands are tied."
 msgstr "ハァー、わかってくれよ、仕方がないんだよ、他に方法がないんだ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1235
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1236
 msgid "Let us go!"
 msgstr "よし、行くぞ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1308
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1309
 msgid "They have summoned reinforcements!"
 msgstr "奴ら、援軍を招集したぞ！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08_Landfall.cfg:1312
+#: Flight_Freedom/scenarios/08_Landfall.cfg:1313
 msgid ""
 "It's hopeless, Malakar. That's a whole fleet of their finest, and we can't "
 "escape!"
@@ -5304,25 +5325,17 @@ msgstr "Dredgno"
 #. [side]: type=Elvish Captain, id=Einelen
 #. [else]: type=Elvish Captain, id=Einelen
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:111
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:448
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:447
 msgid "Einelen"
 msgstr "Einelen"
 
-# #po: Melrithan? or Melrithian?   See id:502
-#. [side]: type=Elvish Captain, id=Einelen
-#. [side]
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:120
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:103
-msgid "Elvish Melrithan Force"
-msgstr "エルフの Melrith 軍"
-
 #. [scenario]: id=Drake_Escape
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:162
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:161
 msgid "Move Malakar to the cave entrance"
 msgstr "Malakar を洞窟の入り口まで移動させる"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:216
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:215
 msgid ""
 "We're completely outmanned! When we get to these caves we've got to vanish; "
 "we must escape through the bowels of the earth!"
@@ -5332,7 +5345,7 @@ msgstr ""
 "いのさ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:220
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:219
 msgid ""
 "No, Kogw, we must regroup and begin a counterattack. We are not bats! Wings "
 "do not work very well underground. Neither do cold blooded Drakes!"
@@ -5342,13 +5355,13 @@ msgstr ""
 "低温では不利なのだ！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:224
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:223
 msgid "Our enemies are at are our very backs! We must flee!"
 msgstr "敵はすぐ背後まで迫ってきてる！　逃げなきゃならん！"
 
 #. [message]: speaker=Einelen
 #. Meneldur is from Saving Elensefar:
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:229
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:228
 msgid ""
 "Kogw, your time has come! I, Einelen, son of Meneldur, shall make you pay "
 "for every Wose that you have murdered!"
@@ -5357,12 +5370,12 @@ msgstr ""
 "全てのウーズに償ってもらおう！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:233
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:232
 msgid "Kogw, what does he speak of?"
 msgstr "Kogw、どういうことだ？"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:237
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:236
 msgid ""
 "Arr, the Unforgiver. She's made of Wose wood. Bloody strong stuff, but the "
 "Elves seem to worship those walking trees."
@@ -5371,7 +5384,7 @@ msgstr ""
 "な、エルフどもは、あの歩く木を崇拝しているってわけよ。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:273
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:272
 msgid ""
 "That is what all this is about, softskin? Malakar, I demand to speak with "
 "you alone!"
@@ -5380,7 +5393,7 @@ msgstr ""
 "とがあります！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:277
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:276
 msgid ""
 "There is no time, Theracar! I need you to scout out the cave immediately: "
 "decide if it will be safe for us there."
@@ -5389,12 +5402,12 @@ msgstr ""
 "断してほしい。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:290
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:289
 msgid "This isn't over, human."
 msgstr "まだ終わっていないぞ、人間よ。"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:313
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:312
 msgid ""
 "We have found the foul one and his escorts. Remember! Parley with him not, "
 "and beware his silver tongue. We have traveled far, but shall not rest until "
@@ -5405,7 +5418,7 @@ msgstr ""
 "奴を、奴が触れて汚れた大地に突き刺すまで、安息の時は来ないのだ。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:317
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:316
 msgid ""
 "Wow. Now that's a firm order. If there's any way to get to the cave without "
 "going through those forests, I'd really appreciate it, Malakar."
@@ -5414,7 +5427,7 @@ msgstr ""
 "教えてほしいんな、Malakar さんよ。"
 
 #. [message]: speaker=Hago
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:325
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:324
 msgid ""
 "Hail, Orcish... um... King! You see our forces and must know that we have "
 "the ability to crush you. I propose an alternate plan. You will bring us the "
@@ -5429,12 +5442,12 @@ msgstr ""
 "支配者になれるだろう！"
 
 #. [message]: speaker=Dredgno
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:329
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:328
 msgid "Heuh! Now that is treating a warrior with respect! So be it!"
 msgstr "ほ～！これこそ、兵士に敬意を払うってことだ！よし、そうしよう！"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:334
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:333
 msgid ""
 "Even with your combined forces, we can hold you off at the borders of the "
 "forests indefinitely. However, we will not hinder your passage into the "
@@ -5447,79 +5460,79 @@ msgstr ""
 "している人間を殺すことだ。"
 
 #. [message]: speaker=Hago
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:338
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:337
 msgid "On behalf of both our peoples, let it be so."
 msgstr "両者を代表して、そうさせてもらおう。"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:342
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:341
 msgid "Let it be so."
 msgstr "ではそのように。"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:382
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:381
 msgid "I have traveled too far to fall today!"
 msgstr "ここまで来たのに、今日ここで倒れるわけにはいかぬ！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:408
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:407
 msgid "Einelen vanishes with a magical word!"
 msgstr "Einelen は魔法の呪文を唱え、姿を消してしまいました！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:424
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:423
 msgid "Underground!"
 msgstr "地下だ！"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:455
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:454
 msgid "The caves... Drake leader! Halt!"
 msgstr "洞窟がある... ドレークのリーダーだな！止まれ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:465
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:464
 msgid "There has been too much death here today. We must leave."
 msgstr "今日ここで、あまりに多くの命が奪われてしまった。我々は立ち去るべきだ。"
 
 #. [message]: speaker=Dredgno
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:471
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:470
 msgid "Heungah! You cannot run from our forces!"
 msgstr "フガーッ！　貴様、俺達の軍隊から逃げられやせんぞ！"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:475
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:474
 msgid "Halt! Please!"
 msgstr "止まれ！ 頼む！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:479
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:478
 msgid "We have no reason to speak with you."
 msgstr "あんたと話す理由などない。"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:483
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:482
 msgid "We do not need to be your enemies. I propose a peace offering."
 msgstr "我々には君の敵になる必要がない。停戦しようではないか。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:538
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:537
 msgid "I see. You have my complete attention, elf."
 msgstr "いいだろう。エルフ。何がしたいんだ、言ってみろ。"
 
 #. [message]: role=wimporc
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:552
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:551
 msgid "Dredgno? Boss?"
 msgstr "Dredgno 様？　親分？"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:558
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:557
 msgid "Our quarrel is not with you. Give us Kogw, and we will leave you be."
 msgstr ""
 "我々の諍いは、君達とは無関係だ。Kogw をこちらに引き渡すなら、我々は君たちのこ"
 "とには関与しない。"
 
 #. [option]
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:576
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:575
 msgid ""
 "Kogw has fought by our side even against other thinskins. Honor demands that "
 "I stand with him now!"
@@ -5528,7 +5541,7 @@ msgstr ""
 "は今、彼とともに立ち上がる！"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:581
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:580
 msgid ""
 "Our lives are long but our memories are longer! The forests shall "
 "forevermore be your foe!"
@@ -5537,7 +5550,7 @@ msgstr ""
 "だ！"
 
 #. [option]
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:591
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:590
 msgid ""
 "My first duty must be to my fellow drakes. We cannot afford more enemies, "
 "and if this means that Kogw must die then so be it."
@@ -5547,14 +5560,14 @@ msgstr ""
 "無いのだ。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:608
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:607
 msgid "I understand. Farewell, Malakar. Time for me to dance the hempen jig..."
 msgstr ""
 "分かったよ。じゃあな、Malakar さん。俺にも、「麻の縄」にぶら下がって踊る時が"
 "きたようだな..."
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:616
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:615
 msgid ""
 "Hear, hear! For his crimes against the Woses and my people, I hereby condemn "
 "the pirate to death. He is to be bound in living fetters of vine over a "
@@ -5568,12 +5581,12 @@ msgstr ""
 "で、彼の憎むべき存在を継続させることだろう！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:620
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:619
 msgid "No! Mercy, I beg of you! NO!!!"
 msgstr "やめてくれ、勘弁してくれ、お願いだ、やめてくれ！！！"
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:630
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:629
 msgid ""
 "All interlopers must leave the forest at once! Drakes, for your cooperation "
 "you may cross through the forest just this once to the southern edge while "
@@ -5586,28 +5599,28 @@ msgstr ""
 "なるぞ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:759
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:758
 msgid "Do these spirits pursue us, too?"
 msgstr "あの精霊たちが、また追いかけてきたのか？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:771
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:770
 msgid "It did not attack! It just appeared!"
 msgstr "攻撃してこないぞ！。出てきただけみたいだ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:813
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:812
 msgid "They pursue us! We must hurry!"
 msgstr "あいつら、追っかけてきた！急ぐぞ！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:826
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:825
 msgid ""
 "They murdered those people in cold blood! Those bloodthirsty monsters..."
 msgstr "奴らはあそこにいる者たちを冷酷に殺したんだ！血に飢えた怪物どもめ..."
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:830
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:829
 msgid ""
 "You are shocked only because the orcs are disorganized. The thinskins plan "
 "their killings; they are the ones that we must be wary of."
@@ -5616,17 +5629,17 @@ msgstr ""
 "なんだ。奴らこそ、警戒すべき相手なのだ。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:856
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:855
 msgid "Wose-slayer! The spirits of the forest thirst for vengeance!"
 msgstr "ウーズ殺しども！森の精霊が仇討ちしたいと意気込んでいるだろう！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:860
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:859
 msgid "Oh, shut up, forest rat."
 msgstr "あー、うるさいぞ、森ネズミめ。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:872
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:871
 msgid ""
 "Forgive me, Malakar, but there is no time. Drakes! Seal the cave before the "
 "human reinforcements arrive!"
@@ -5635,12 +5648,12 @@ msgstr ""
 "軍が到着する前に洞窟を塞げ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:876
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:875
 msgid "No, I beg you! I can make it!"
 msgstr "やめろ、頼むから！　私ならうまくやれる！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:883
+#: Flight_Freedom/scenarios/09_Drake_Escape.cfg:882
 msgid "Theracar!"
 msgstr "Theracar ！"
 
@@ -5749,7 +5762,6 @@ msgstr "このあたりに絶対、隠し扉があるな..... そんな気がす
 msgid "Half-men. Where do these caves reach the surface?"
 msgstr "そこの、ちっこい人間、この洞窟はどこで地表に通じてるんだ？"
 
-# #po: blikker?
 #. [message]: speaker=unit
 #: Flight_Freedom/scenarios/10a_Underground.cfg:466
 msgid "Half...? Are you the blikkers who just smashed up the doorway?"
@@ -5933,7 +5945,7 @@ msgid "Ugho"
 msgstr "Ugho"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:193
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:188
 msgid ""
 "True to their word, the elves did not attack the drakes. Nonetheless, their "
 "warriors relentlessly drove the drakes onward. Meanwhile the forest itself "
@@ -5949,7 +5961,7 @@ msgstr ""
 "でした。ドレークは、風や木が自分たちを見張っているのだと感じていました。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:200
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:195
 msgid ""
 "Disorganized and tired, the drakes finally began to emerge from the forest "
 "after several days of hard travel."
@@ -5958,31 +5970,31 @@ msgstr ""
 "後、ようやく森の外へ現れ始めました。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:206
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:201
 msgid ""
 "Finally, we have reached the edge of the forest! We will make camp and "
 "regroup as a tribe."
 msgstr "やっと森の端に到着したな！野営して部族として再結成するぞ。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:217
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:212
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:201
 msgid "I feel well enough to fight again, Malakar."
 msgstr "また戦えそうなほど私は回復しましたぞ、Malakar 殿。"
 
 #. [message]: speaker=Ugho
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:227
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:222
 msgid "These are our lands, lizards. For your trespass you shall die!"
 msgstr ""
 "この土地は俺達のものだぞ、トカゲども。勝手に入ってきたお前たちは死ぬのだ！"
 
 #. [message]: speaker=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:231
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:226
 msgid "NEW FLAVORS FOR THE COOK-POT! WE FEAST TONIGHT!!!"
 msgstr "こいつらで、煮物に新しい味付けができるな！　今夜は宴会だ！！！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:236
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:231
 msgid ""
 "We cannot go back into the forest, the elves will slaughter us at their "
 "leisure. Drakes! Clear the area! We must earn our rest."
@@ -5991,7 +6003,7 @@ msgstr ""
 "よ！あたりを片付けて、休憩しなさい。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:241
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:236
 msgid ""
 "NOTE: You will not be able to recall during this scenario; rather your "
 "veterans will slowly emerge from the forest."
@@ -6000,7 +6012,7 @@ msgstr ""
 "から少しずつ現れてきます。"
 
 #. [message]: speaker=elf_messenger
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:507
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:502
 msgid ""
 "Drakes! Your safe passage has ended; any who return to this forest will be "
 "killed!"
@@ -6009,7 +6021,7 @@ msgstr ""
 "とになるだろう！"
 
 #. [message]
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:587
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:582
 msgid ""
 "We are traveling as fast as we can, however the forest is slowing us. It may "
 "be some time before the whole tribe can arrive."
@@ -6018,17 +6030,17 @@ msgstr ""
 "族全員が到着するまでに、もう暫く時間がかかるだろう。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:603
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:598
 msgid "This land is becoming colder by the hour!"
 msgstr "この土地は次第に寒くなってきていますよ！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:621
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:616
 msgid "The cold is seeping through my scales and chilling my breath!"
 msgstr "この寒さは私の鱗に染み入るようだし、息が凍る！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:626
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:621
 msgid ""
 "NOTE: Your drakes' fire breath attacks will gradually weaken throughout the "
 "course of this scenario."
@@ -6037,27 +6049,27 @@ msgstr ""
 "きます。"
 
 #. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:727
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:722
 msgid "CHILL:"
 msgstr "寒気："
 
 #. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:728
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:723
 msgid "The freezing cold is chilling your drakes' fire breath! Fire attacks do"
 msgstr "凍るような寒気がドレークの火炎のブレスを冷えさせています！火炎攻撃は"
 
 #. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:728
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:723
 msgid " less damage."
 msgstr " のダメージを受けています。"
 
 #. [message]: speaker=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:774
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:769
 msgid "Lizard! GET! IN! MY! BELLY! NOW!!!"
 msgstr "トカゲだ！俺がいただく！　俺の！腹の中に！そぉれ！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:783
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:778
 msgid ""
 "We have defeated the orcs and their pet trolls! The stragglers flee already, "
 "I doubt they will find refuge in the forest or the chill."
@@ -6066,7 +6078,7 @@ msgstr ""
 "けれど、森の中やこの寒さでは避難場所は見つからないでしょうよ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:793
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:788
 msgid ""
 "Drakes! We shall gather around the camp and await the rest of our tribe. "
 "Then we warm ourselves, make good our wounds and leave these lands!"
@@ -6075,7 +6087,7 @@ msgstr ""
 "傷を癒やしたら、この土地を離れるぞ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:800
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:795
 msgid ""
 "Drakes! We are together again as a tribe. Today we rest, warm ourselves, and "
 "make good our wounds. Tomorrow we leave these lands!"
@@ -6084,18 +6096,18 @@ msgstr ""
 "めて傷を癒やしなさい。明日はこの地を離れるぞ！"
 
 #. [message]: role=freezing_drake
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:818
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:813
 msgid "So cold... my internal fire is fading..."
 msgstr "とても寒い... 俺の内なる炎が消えていく..."
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:822
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:817
 msgid ""
 "We must clear the area and return to shelter quickly lest we freeze to death!"
 msgstr "ここを片付けたらさっさと避難場所に戻るぞ。凍死するわけにはいかん！！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:831
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:826
 msgid ""
 "Already the last of my fire is flickering. We cannot press on through the "
 "cold. We're doomed!"
@@ -6871,7 +6883,6 @@ msgstr ""
 "オークを倒した後、残りの Kakatar 族は谷を去りました。滑空ドレーク達は、風に潮"
 "の香りがあることを報告しだしました。海は、そう遠くは無いようでした。"
 
-# #po: "If need be find" -> "If need be, find" ?
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:161
 msgid ""
@@ -6901,12 +6912,12 @@ msgid "We can rally the tribe at the ruined fortress! Go!"
 msgstr "廃墟となった要塞に部族を集結させるんだ！　行け！"
 
 #. [message]: id=Malakar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:239
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:246
 msgid "They fight with statues?"
 msgstr "彼らは彫像のままで戦うのか？"
 
 #. [message]: id=Kogw
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:243
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:250
 msgid ""
 "I've heard stories of them; step carefully, this is powerful black magic."
 msgstr ""
@@ -6914,7 +6925,7 @@ msgstr ""
 "なんだ。"
 
 #. [message]: id=Theracar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:248
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:255
 msgid ""
 "I recall rumors of them from my time serving that wretched Baron; this is "
 "powerful black magic."
@@ -6923,27 +6934,27 @@ msgstr ""
 "に進んでください。あれは、強力な黒魔術なんです。"
 
 #. [unit]: type=Arch Mage, id=Elealonna, gender=female
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:271
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:280
 msgid "Elealonna"
 msgstr "Elealonna"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:283
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:292
 msgid "Mercy! Mercy!"
 msgstr "お慈悲を、お慈悲を！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:293
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:302
 msgid "Give me one reason not to kill you, human."
 msgstr "おい、人間、お前を殺さない理由を教えてくれ。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:299
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:308
 msgid "Who goes there?"
 msgstr "そこを行くのは誰だ？"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:305
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:314
 msgid ""
 "I am... was... the Mage-Advisor to this expedition. I think I'm the only one "
 "left, but I'm old... so old..."
@@ -6952,12 +6963,12 @@ msgstr ""
 "はもう年老いていて... かなりの老齢で..."
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:309
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:318
 msgid "Human. What happened? Speak!"
 msgstr "人間か。何があったのだ？話しなさい！"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:313
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:322
 msgid ""
 "There was an earthquake. Then a purple fog rippling across the land, the air "
 "suddenly thick with dark magic. Then everyone started to age. I just can't "
@@ -6974,7 +6985,7 @@ msgstr ""
 "でした。"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:317
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:326
 msgid ""
 "And then everyone, wracked in agony, began to die. Flesh rotting and "
 "sloughing off as if it were but drool, bones and sinew bleaching in an "
@@ -6985,7 +6996,7 @@ msgstr ""
 "に..."
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:321
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:330
 msgid ""
 "I ran as fast... or slow... as my now aching, weak knees could carry me, "
 "when the rattling began. Skeletons, monsters, and worse standing up and once "
@@ -7000,12 +7011,12 @@ msgstr ""
 "伺って... どこか、この呪われた場所以外へ。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:325
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:334
 msgid "The cave-in, it must have woken the Gate!"
 msgstr "あの陥没が、あの門を目醒めさせたに違いない！"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:329
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:338
 msgid ""
 "Now I am old... so, so old... my magic is diminished but not yet faded. "
 "Yes... I still have that spark in my mind. I'll lend my staff to your "
@@ -7018,7 +7029,7 @@ msgstr ""
 "えアンデッドが、かつては我が親友であったとしても。私を受け入れてくれますか？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:333
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:342
 msgid ""
 "You came with your army to this island, across the ocean, to cast us once "
 "again into slavery. Perhaps unlife was a fitting punishment for your evil, "
@@ -7029,7 +7040,7 @@ msgstr ""
 "を死んだお仲間の所へ送ってやるべきだな。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:337
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:346
 msgid ""
 "But Mal, the Gate is a true evil! This black magic threatens us all, and she "
 "can help us!"
@@ -7038,7 +7049,7 @@ msgstr ""
 "し、彼女は俺たちを助けられるんだぜ！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:342
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:351
 msgid ""
 "Malakar, we must consider that the thinskins could be anywhere; if we don't "
 "stop the undead they can threaten our rear and I fear we cannot fight on two "
@@ -7049,7 +7060,7 @@ msgstr ""
 "線で戦うのは無理ですよ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:346
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:355
 msgid ""
 "Or perhaps she is behind this. The humans have proven they will stop at "
 "nothing to hunt us down. How suspicious that she is the only human here, and "
@@ -7060,7 +7071,7 @@ msgstr ""
 "で、しかも魔法使いだ。疑わしいこと極まりない。"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:350
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:359
 msgid ""
 "The undead are closing in... I pledge myself to your service, but if you "
 "wish to kill me... just be quick about it..."
@@ -7069,12 +7080,12 @@ msgstr ""
 "お望みでしたら... 気付かぬくらい手早くお願いします..."
 
 #. [option]
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:352
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:361
 msgid "Spare her."
 msgstr "彼女を助けてやって。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:356
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:365
 msgid ""
 "You may live. But give even the slightest hint of betrayal and you will wish "
 "you were among the undead."
@@ -7083,17 +7094,17 @@ msgstr ""
 "ればよかったと思うことだろう。"
 
 #. [option]
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:366
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:375
 msgid "Kill her."
 msgstr "彼女を殺せ。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:376
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:385
 msgid "Malakar, please! You ask me to kill her in cold blood!"
 msgstr "Malakar さん、お願いだ！彼女を冷酷に殺せというのか！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:380
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:389
 msgid ""
 "I do not ask. I am your chief! And I command you to kill her! She cannot be "
 "trusted."
@@ -7102,12 +7113,12 @@ msgstr ""
 "ない。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:384
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:393
 msgid "Arr... so be it. I'm sorry, lass."
 msgstr "あぁ... そうかい。すまねえな、ご婦人。"
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:421
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:430
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:645
 msgid "And so it ends... grant final rest to my companions, I beg you..."
 msgstr ""
@@ -7115,19 +7126,19 @@ msgstr ""
 "ます..."
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:443
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:452
 msgid ""
 "Thano... my love... I can only hope you now find peace in the hereafter..."
 msgstr "Thano... 我が愛する人よ... 来世であなたが平安を得られますように..."
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:454
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:463
 msgid "Nana... my apprentice... I failed you, I'm so sorry..."
 msgstr "Nana... 我が弟子よ... ガッカリさせてしまったわ、ごめんね..."
 
 #. [message]: speaker=Elealonna
 #. probably won't be reached, but the enemies can recruit Dark Adepts who could theoretically also advance to Liches:
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:463
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:472
 msgid ""
 "Seeing my fellow magi turning to darkness and lichdom... it pains my heart."
 msgstr ""
@@ -7136,8 +7147,8 @@ msgstr ""
 
 #. [message]: speaker=Kogw
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:474
-#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:479
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:483
+#: Flight_Freedom/scenarios/14_Hordes_Undead.cfg:488
 msgid "The undead are growing too powerful! We cannot prevail!"
 msgstr "アンデッド達はあまりに強力になってしまった！　俺達はもう勝てない！"
 
@@ -7480,15 +7491,14 @@ msgstr ""
 "引き返すのだ、全て運命付けられておる　<b>引き返せ<b>　終わりを告げる悪夢　破"
 "滅　寂寞　死　世界中に死を"
 
-# #po: emnity -> enmity ?
 #. [scenario]: id=Gate_Storms
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1025
 msgid ""
 "darkness awaits all YOU CANNOT PREVAIL failure despair empty death void "
-"hatred misery emnity black HATE"
+"hatred misery enmity black HATE"
 msgstr ""
 "闇が立ちはだかっている　<b>お前たちに勝ち目はない</b>　失敗 絶望 空虚な死 虚"
-"しい挫折 悲しみ 慟哭 黒い憎しみ"
+"しい挫折 悲しみ 敵意 黒い憎しみ"
 
 #. [scenario]: id=Gate_Storms
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1026
@@ -8397,48 +8407,48 @@ msgstr "Yraec"
 #. [side]: type=Grand Marshal, id=Yrynyc
 #. [side]: type=General, id=Rhyrraent
 #. [side]: type=General, id=Lenvan
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:89
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:136
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:183
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:85
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:132
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:179
 #: Flight_Freedom/scenarios/19_Liberation.cfg:77
 #: Flight_Freedom/scenarios/19_Liberation.cfg:112
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:119
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:163
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:199
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:214
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:249
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:120
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:164
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:200
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:215
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:250
 msgid "Wesnoth Occupation Force"
 msgstr "Wesnoth の占領軍"
 
 #. [side]: type=General, id=Careorra
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:94
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:90
 msgid "Careorra"
 msgstr "Careorra"
 
 #. [side]: type=Lieutenant, id=Lunnyn
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:141
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:137
 msgid "Lunnyn"
 msgstr "Lunnyn"
 
 #. [side]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:194
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:190
 msgid "Drakish Rebels"
 msgstr "ドレークの反乱軍"
 
 #. [side]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:222
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:218
 msgid "Dunefolk Hunters"
 msgstr "デューンフォークの狩猟者"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:305
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:301
 msgid ""
 "This is grim news, indeed. How is it that you are here to tell me of this?"
 msgstr ""
 "実に悲しい知らせだ。私にこれを伝えに、どうやって君はここまで来れたのだ？"
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:309
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:305
 msgid ""
 "A small handful of rebels have been in hiding ever since the attack. We've "
 "fought our battles when and where we can, but our hopes are low and our "
@@ -8449,7 +8459,7 @@ msgstr ""
 "到着は、我々反乱軍にとって大きな意味があるのです。"
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:313
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:309
 msgid ""
 "I will gather our leaders and meet you here at this beach as soon as I can."
 msgstr ""
@@ -8457,12 +8467,12 @@ msgstr ""
 "う。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:317
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:313
 msgid "Godspeed."
 msgstr "神のご加護を。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:336
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:332
 msgid ""
 "Mal, if they bring their leaders out in the open, they'll be slaughtered!"
 msgstr ""
@@ -8470,17 +8480,17 @@ msgstr ""
 "にされるぞ！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:341
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:337
 msgid "Malakar, we are too exposed here, we cannot protect their leaders!"
 msgstr "Malakar 殿、ここはあまりに無防備です。ここでは彼らを守れませんよ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:345
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:341
 msgid "I know. We will have the beaches cleared before they arrive."
 msgstr "分かっている。浜辺は、彼らが到着する前に掃討し確保する。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:356
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:352
 msgid ""
 "NOTE: From now on, since the Unforgiver is no longer critical to your cause, "
 "the game will not end if it is lost."
@@ -8489,12 +8499,12 @@ msgstr ""
 "終了しません。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:374
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:370
 msgid "No! My flagship!"
 msgstr "おい！俺の旗艦が！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:378
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:374
 msgid ""
 "You can mourn the boat another day. For now we are trapped on this beach. We "
 "prevail together this day or we both die."
@@ -8503,7 +8513,7 @@ msgstr ""
 "だ。この状況で共に打ち勝つか、でなければ、共に死ぬかだぞ。"
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:395
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:391
 msgid ""
 "Word is being passed to the resistance, and I have come back to help you "
 "claim the beach."
@@ -8512,21 +8522,21 @@ msgstr ""
 "けとしてやってきました。"
 
 #. [message]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:445
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:441
 msgid "It's true! The Kakatars have returned!"
 msgstr "本当だ！　Kakatar 部族が戻ってきたのだな！"
 
 #. [message]: speaker=scout
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:600
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:606
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:596
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:602
 msgid "What is this?"
 msgstr "これは一体、なんだ？"
 
-#. [unit]: type=Fire Dragon, id=Quemar
+#. [then]: type=Fire Dragon, id=Quemar
 #. [event]: id=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:653
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:167
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:654
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:168
 msgid "Quemar"
 msgstr "Quemar"
 
@@ -8540,17 +8550,17 @@ msgstr ""
 "よ、お前たちの運命は私が握っていますぞ。</span>"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:693
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:699
 msgid "Surely that big dragon fellow isn't talking about me? Right?"
 msgstr "えっ、あのでっかいドラゴンちゃんは俺のことを言ったのか？そうなのか？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:697
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:703
 msgid "Quemar... is that you? The ritual, it was a success?"
 msgstr "Quemar... お前か？例の儀式は成功したか？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:701
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:707
 msgid ""
 "MALAKAR OF THE KAKATAR TRIBE. YOU STILL LIVE. TOGETHER WE SHALL CLEANSE "
 "MOROGOR OF THE PUNY THINSKINS."
@@ -8559,7 +8569,7 @@ msgstr ""
 "もを一掃しましょう。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:711
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:717
 msgid ""
 "Indeed, Quemar. Except for the pirate - he is an ally, a Kakatar, and under "
 "my protection."
@@ -8568,19 +8578,19 @@ msgstr ""
 "しているのだ。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:715
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:721
 msgid "VERY WELL. YOUR PET THINSKIN MAY LIVE. I WILL BE WATCHING YOU, HUMAN."
 msgstr ""
 "いいとも。あなたの友人ペットの薄皮たちは生かそう。私が見守っているからな、人"
 "間さん。"
 
 #. [message]: speaker=dune_harrier
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:770
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:776
 msgid "Kal, we have tracked down the drakes who ransacked Al-Zaiybah!"
 msgstr "Kal さん、Al-Zaiybah を混乱させたドレークどもを突き止めた！"
 
 #. [message]: speaker=dune_leader
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:780
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:786
 msgid ""
 "These monsters have eaten our kinsmen! They are worse than wild beasts. Put "
 "them down like the animals they are!"
@@ -8589,7 +8599,7 @@ msgstr ""
 "奴らも獣みたいにやっつけてしまいなさい！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:795
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:801
 msgid ""
 "The rebel leaders are walking into enemy territory! We have failed them!"
 msgstr ""
@@ -8597,13 +8607,18 @@ msgstr ""
 "だ！"
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:810
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:816
 msgid "For a free Morogor!"
 msgstr "Morogor の自由のために！"
 
+#. [message]: speaker=scout
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:831
+msgid "Your rule is ending! Morogor belongs to us drakes!"
+msgstr "お前たちの支配は終焉を迎えた！ Morogor は我々ドレークのものだ！"
+
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:827
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1347
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:849
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1348
 msgid "We continue!"
 msgstr "我々は前進を続けるのだ！"
 
@@ -8636,9 +8651,9 @@ msgstr "Kamalar"
 #. [modify_side]
 #. [side]
 #: Flight_Freedom/scenarios/19_Liberation.cfg:164
-#: Flight_Freedom/scenarios/19_Liberation.cfg:897
-#: Flight_Freedom/scenarios/19_Liberation.cfg:963
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:73
+#: Flight_Freedom/scenarios/19_Liberation.cfg:898
+#: Flight_Freedom/scenarios/19_Liberation.cfg:964
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:74
 msgid "Kamalar's Guard"
 msgstr "Kamalar の護衛者"
 
@@ -8658,7 +8673,7 @@ msgid "Manual control"
 msgstr "手動操作"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:469
+#: Flight_Freedom/scenarios/19_Liberation.cfg:470
 msgid ""
 "<span color='green'>Kamalar can take command of rebelling mine slaves during "
 "his turn. To do so, right-click on the slave and select “Manual control”.</"
@@ -8670,17 +8685,17 @@ msgstr ""
 "更すると、再びAI操作に戻すことはできません。）</span>"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:561
+#: Flight_Freedom/scenarios/19_Liberation.cfg:562
 msgid "We're free! The oppressors must die!"
 msgstr "俺たちは自由だ！迫害者には死あるのみだ！"
 
 #. [scenario]: id=Liberation
-#: Flight_Freedom/scenarios/19_Liberation.cfg:617
+#: Flight_Freedom/scenarios/19_Liberation.cfg:618
 msgid "This mine is infested with monsters!"
 msgstr "この鉱山には怪物どもがはびこっている！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:676
+#: Flight_Freedom/scenarios/19_Liberation.cfg:677
 msgid ""
 "The drakes split into three forces. Malakar led the smallest, a hand-picked "
 "team tasked with liberating the former Drakkar Quarry, now known as Bosun's "
@@ -8691,7 +8706,7 @@ msgstr ""
 "率いました。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:687
+#: Flight_Freedom/scenarios/19_Liberation.cfg:688
 msgid ""
 "Couldn't we have led the scouting? I mean, do you really want us in more "
 "caves, Mal? Don't you remember the last ones?"
@@ -8700,7 +8715,7 @@ msgstr ""
 "を洞窟に引き連れたいのか？ 最期に入った洞窟のことは忘れてないだろ？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:691
+#: Flight_Freedom/scenarios/19_Liberation.cfg:692
 msgid ""
 "I do remember them. Of all the drakes, we are the most experienced fighting "
 "below ground. An inexperienced fighter tripping over his own wings in the "
@@ -8710,7 +8725,7 @@ msgstr ""
 "い戦士は、暗闇で自分の翼に躓くだけで、全軍を滅亡させるには十分だろうからな。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:701
+#: Flight_Freedom/scenarios/19_Liberation.cfg:702
 msgid ""
 "Not to be insensitive, but couldn't we have still used a few of the wing-"
 "tripping ones? Come to think of it, it's a pity your dragon friend couldn't "
@@ -8721,7 +8736,7 @@ msgstr ""
 "たのは残念だよな。俺達だって残った数は多くないし、なぁ、Mal。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:707
+#: Flight_Freedom/scenarios/19_Liberation.cfg:708
 msgid ""
 "Not to be insensitive, but couldn't we have still used a few of the wing-"
 "tripping ones? There's not many of us left, Mal."
@@ -8730,7 +8745,7 @@ msgstr ""
 "使ったほうが良かったんじゃないの？俺達だって残った数は多くないし、なぁ、Mal。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:713
+#: Flight_Freedom/scenarios/19_Liberation.cfg:714
 msgid ""
 "Indeed, we have lost a great many. So many that we cannot hope to retake "
 "this island by ourselves. Here, we can liberate others, to join our cause."
@@ -8740,7 +8755,7 @@ msgstr ""
 "る。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:720
+#: Flight_Freedom/scenarios/19_Liberation.cfg:721
 msgid ""
 "Chief, I must again inquire: why must we be the drakes to delve into these "
 "caves? We were fortunate to have avoided the caves of the Isle of Storms."
@@ -8749,7 +8764,7 @@ msgstr ""
 "か。幸運にも、嵐の島の洞窟は回避できたではありませんか。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:724
+#: Flight_Freedom/scenarios/19_Liberation.cfg:725
 msgid ""
 "We have lost a great many drakes. So many that we cannot hope to retake this "
 "island by ourselves. The humans have enslaved drakes of every tribe, many "
@@ -8762,7 +8777,7 @@ msgstr ""
 "る手助けをするため、族長の導きを必要としているのだ！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:735
+#: Flight_Freedom/scenarios/19_Liberation.cfg:736
 msgid ""
 "I am only concerned as a strategist that we are needlessly endangering "
 "ourselves, especially since Quemar cannot fit down here. Should we fall our "
@@ -8773,7 +8788,7 @@ msgstr ""
 "蜂起そのものも失敗するのは間違いありません。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:742
+#: Flight_Freedom/scenarios/19_Liberation.cfg:743
 msgid ""
 "I am only concerned as a strategist that we are needlessly endangering "
 "ourselves. Should we fall our uprising falls with us."
@@ -8783,13 +8798,13 @@ msgstr ""
 "ん。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:748
+#: Flight_Freedom/scenarios/19_Liberation.cfg:749
 msgid "Then we cannot afford to fall. I have decided. Drakes, move out!"
 msgstr ""
 "ならば、倒れるわけにはいかない。よし決めたぞ。ドレークたちよ、移動開始だ！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:755
+#: Flight_Freedom/scenarios/19_Liberation.cfg:756
 msgid ""
 "NOTE: Your encampment will disappear on turn 2, and your recall list will "
 "cease to be available for this scenario."
@@ -8798,14 +8813,14 @@ msgstr ""
 "召還できなくなります。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:800
+#: Flight_Freedom/scenarios/19_Liberation.cfg:801
 msgid ""
 "The invaders must have dug this tunnel very hastily; it falls apart already."
 msgstr ""
 "侵略者はこの坑道を性急に掘らせたに違いない。既に崩落し始めてるではないか。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:803
+#: Flight_Freedom/scenarios/19_Liberation.cfg:804
 msgid ""
 "It seems that the humans have expanded this mine. They even pillage the very "
 "foundations of Morogor itself."
@@ -8814,12 +8829,12 @@ msgstr ""
 "ている。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:815
+#: Flight_Freedom/scenarios/19_Liberation.cfg:816
 msgid "This bridge is shattered."
 msgstr "この橋は粉々に破壊されている。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:826
+#: Flight_Freedom/scenarios/19_Liberation.cfg:827
 msgid ""
 "There is a gate here. Although it may be unwise to open it, I can look "
 "through it if I get closer."
@@ -8828,18 +8843,18 @@ msgstr ""
 
 #. [then]
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:843
-#: Flight_Freedom/scenarios/19_Liberation.cfg:848
+#: Flight_Freedom/scenarios/19_Liberation.cfg:844
+#: Flight_Freedom/scenarios/19_Liberation.cfg:849
 msgid "The thinskins defile even our dead. This is no place for bones!"
 msgstr "薄皮どもは我々の死者さえも冒涜する。ここは骨の眠る場所ではない！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:860
+#: Flight_Freedom/scenarios/19_Liberation.cfg:861
 msgid "Bones? I thought you guys, you know, went up in smoke."
 msgstr "骨って？ あんたたちは煙と一緒に消えてくんだと思ってたよ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:864
+#: Flight_Freedom/scenarios/19_Liberation.cfg:865
 msgid ""
 "Only those who die in battle. These drakes have been starved, or worked to "
 "death. As well to spit on our ashes as to keep bones on display."
@@ -8849,34 +8864,34 @@ msgstr ""
 "だ。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:875
+#: Flight_Freedom/scenarios/19_Liberation.cfg:876
 msgid ""
 "These appear to be living quarters for the slaves. They must all be at work "
 "now."
 msgstr "ここは奴隷用の居住地区のようだ。今は全員、労役中に違いない。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:889
+#: Flight_Freedom/scenarios/19_Liberation.cfg:890
 msgid "There is a human garrison in the lower tunnels!"
 msgstr "下の坑道には、人間どもの守備隊がいるぞ！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:904
+#: Flight_Freedom/scenarios/19_Liberation.cfg:905
 msgid "Hello, my brothers."
 msgstr "やあ、ドレークの兄弟たち。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:908
+#: Flight_Freedom/scenarios/19_Liberation.cfg:909
 msgid "Kamalar, is it you?"
 msgstr "Kamalar、お前か？"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:918
+#: Flight_Freedom/scenarios/19_Liberation.cfg:919
 msgid "Who's this, now?"
 msgstr "ねえ、この方は...どなた？"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:923
+#: Flight_Freedom/scenarios/19_Liberation.cfg:924
 msgid ""
 "I am the high priest of Dalgar-El, the Murderer. I led a small band of "
 "warriors into this mine, but we were outnumbered and forced into this "
@@ -8889,14 +8904,13 @@ msgstr ""
 "安全だ。食糧として十分なキノコもある。しかし、我々が破壊した橋を人間たちは修"
 "復していて、こちらに近づいてきているようだ。"
 
-# #po: "Murderer" ->  "murderer" ?
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:931
+#: Flight_Freedom/scenarios/19_Liberation.cfg:932
 msgid "Hail, Kamalar, high-priest of Dalgar-El the Murderer!"
 msgstr "ご機嫌いかがですか、Dalgar-El の大司祭で殺戮者の Kamalar 殿！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:935
+#: Flight_Freedom/scenarios/19_Liberation.cfg:936
 msgid ""
 "I am heartened to learn that the Kakatars yet live. I led a small band of "
 "warriors into this mine, but we were outnumbered and forced into this "
@@ -8910,14 +8924,14 @@ msgstr ""
 "た橋を人間たちは修復していて、こちらに近づいてきているようだ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:941
+#: Flight_Freedom/scenarios/19_Liberation.cfg:942
 msgid ""
 "I request your assistance, brother, in driving the humans from our island."
 msgstr ""
 "お前の力を貸してほしいのだ、弟よ。我々の島から人間どもを追い出すためだ。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:945
+#: Flight_Freedom/scenarios/19_Liberation.cfg:946
 msgid ""
 "Very well. We too have borne their yoke, and your arrival brings hope. "
 "Malakar, if you can kill my besiegers, the slaves can revolt and my force "
@@ -8928,29 +8942,29 @@ msgstr ""
 "蜂起して部隊となり、兄さんの助けとなることだろう。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:976
+#: Flight_Freedom/scenarios/19_Liberation.cfg:977
 msgid "You now control Kamalar's team as well as your own."
 msgstr "今後あなたは Kamalar の部隊も直接指揮できます。"
 
 #. [objectives]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:981
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1008
+#: Flight_Freedom/scenarios/19_Liberation.cfg:982
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1009
 msgid "Defeat all human leaders"
 msgstr "人間軍のリーダーを全て倒す"
 
 #. [objectives]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1003
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1030
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1004
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1031
 msgid "Death of Kamalar"
 msgstr "Kamalar の死"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1094
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1095
 msgid "This... uh... skeleton had 180 pieces of gold!"
 msgstr "これは... おっと... スケルトンは 180 ゴールドを持ってた！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1103
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1104
 msgid ""
 "Malakar, you need this gold more than I do. You are a chieftain, and I am a "
 "priest."
@@ -8959,17 +8973,17 @@ msgstr ""
 "からね。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1123
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1124
 msgid "He was guarding a gate!"
 msgstr "彼は門を守っていたのた！"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1139
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1140
 msgid "He dropped a book!"
 msgstr "彼は書物を落とした！"
 
 #. [then]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1160
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1161
 msgid ""
 "It is a collection of orders and messages. They all appear to have been "
 "written by the same hand."
@@ -8977,7 +8991,7 @@ msgstr ""
 "これは命令書と連絡書を集めたものだ。全て同一人物が書いたもののようだな。"
 
 #. [else]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1163
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1164
 msgid ""
 "It's a collection of orders and messages. They look like they've been "
 "written by the same hand."
@@ -8985,7 +8999,7 @@ msgstr ""
 "これは命令書と連絡書の集まりですね。全て同一人物が書いたもののようです。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1175
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1176
 msgid ""
 "First, gentlemen, I would like to congratulate you on your ingenuity in "
 "sparing our citizens. If Prax did not pay for drakes, he no doubt would not "
@@ -9001,7 +9015,7 @@ msgstr ""
 "彼の魔術に用心せよ、しかし、何物にも作戦を邪魔させてはならない。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1180
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1181
 msgid ""
 "General Omandro, I received your message that little remained of value in "
 "the Baron's estate. We were lucky that the drakes finished him off, but we "
@@ -9016,7 +9030,7 @@ msgstr ""
 "り、彼らとの戦闘は回避せよ。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1191
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1192
 msgid ""
 "Your Highness, reports from the field indicate that our dealings with Prax "
 "were a dead end. He does not have, and perhaps never had, enough gold to "
@@ -9037,7 +9051,7 @@ msgstr ""
 "ドレーク臣民を集結させるような危険は避けるべきです。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1199
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1200
 msgid ""
 "Your Highness, reports from the field indicate that our dealings with Prax "
 "were a dead end. He does not have, and perhaps never had, enough gold to "
@@ -9064,7 +9078,7 @@ msgstr ""
 "るのは無理でしょう。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1206
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1207
 msgid ""
 "Attention - Omandro and all coastal forces. Your new top priority is to find "
 "the escaped Drakish slaves and destroy them. They must not return to "
@@ -9076,7 +9090,7 @@ msgstr ""
 "外洋を渡ってでも追跡し、必要とあらば、さらなる命令が下されるであろう。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1216
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1217
 msgid ""
 "This message is merely an expression of the King's gratitude for your "
 "efforts. The kingdom, so long poised on the brink of fiscal collapse, is "
@@ -9093,8 +9107,8 @@ msgstr ""
 
 #. [then]
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1236
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1241
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1237
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1242
 msgid ""
 "By Gar-Alagar... this is a torture chamber! The humans shall pay tenfold for "
 "this!"
@@ -9103,40 +9117,40 @@ msgstr ""
 "はこの１０倍の報いを受けることだろう！"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1253
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1254
 msgid "An axe... used to dismember drakes. How could anyone do this?"
 msgstr ""
 "斧だ... これを使ってドレークの体をバラバラにしたんだ、誰がどうして、こんなひ"
 "どいことができると言うのだ？"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1262
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1263
 msgid "This is some type of wicked poison, forced down captives' throats."
 msgstr "これはある種の悪意のある毒薬で、捕虜の喉へ無理やり流し込むものだ。"
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1271
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1272
 msgid "Gallows, to kill drakes after their ordeals."
 msgstr "絞首台だ、拷問の後にも生き残ったドレークを殺すためのものだ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1301
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:977
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1302
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:979
 msgid "Brother!"
 msgstr "弟よ！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1305
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1306
 msgid "I am gone!"
 msgstr "兄さん、先に逝くよ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1316
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1317
 msgid "Without him, we will be unable to continue. All is lost!"
 msgstr "彼なしでは、これ以上の続行は不可能だ。全てお終いだ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1341
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1342
 msgid ""
 "We have done so. Quickly, we must leave for the Temple at once, before the "
 "humans learn of their defeat today!"
@@ -9145,30 +9159,30 @@ msgstr ""
 "うちに！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1353
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1354
 msgid "Don't be so hasty, brother. I bring friends."
 msgstr "兄さん、そう急がずに。友人を連れてくるから。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1357
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1358
 msgid "Kzzklk, show yourself!"
 msgstr "Kzzklk こっちに出てきて！"
 
 #. [unit]: type=Saurian Margrave, id=Kzzklk
 #. [side]: type=Saurian Margrave, id=Kzzklk
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1364
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1051
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1365
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1053
 #: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:52
 msgid "Kzzklk"
 msgstr "Kzzklk"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1392
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1393
 msgid "Saurians? In a cave?"
 msgstr "トカゲか？洞窟の中に？"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1396
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1397
 msgid ""
 "I found a small group of them. Refugees from the humans, just like us. They "
 "have allied with me against our enslavers."
@@ -9177,7 +9191,7 @@ msgstr ""
 "奴隷化した者たちに対抗してきたんだ。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1400
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1401
 msgid ""
 "However, once the humans came to Morogor, we had to take refuge here. With "
 "their help, I was able to avoid their patrols, and I sustained them with my "
@@ -9188,7 +9202,7 @@ msgstr ""
 "た。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1404
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1405
 msgid ""
 "Now, with your arrival, we can emerge from these caverns, and they can thaw "
 "in the open sun. Kzzklk, will you assist us once again, in the liberation of "
@@ -9199,17 +9213,17 @@ msgstr ""
 "くれないか？"
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1408
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1409
 msgid "Yesss! My axxxxe iss reaaaddy!"
 msgstr "ああ！オーレの、斧は、ジューンビバーンタンよ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1412
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1413
 msgid "How should the saurians be fielded in battle?"
 msgstr "トカゲをどうやって戦わせればいいんだ？"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1416
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1417
 msgid ""
 "The saurians are elusive and deft of foot, but weak at arms. I propose that "
 "while we attack the humans head-on, the saurians sneak behind the enemy "
@@ -9219,28 +9233,25 @@ msgstr ""
 "けど、我々が正面から人間を攻撃している隙に、トカゲたちが敵の背後に忍び寄って"
 "リーダーを倒す、というのはどうだろう。"
 
-# #po: The following two could mean almost the same thing.
-# 1. "place the Saurians under your command"
-# 2. "add to your army"
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1420
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1421
 msgid "Or, I can place the saurians under your command, to add to your army."
 msgstr ""
 "または、私がトカゲ族を兄さんの司令下に置くので、兄さんの軍で使ってもらうのも"
 "いい。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1424
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1425
 msgid "How many do you have?"
 msgstr "どれくらいの要員がいるんだ？"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1428
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1429
 msgid "That will be ready for battle? I have around ten. Fifteen at most."
 msgstr "待機中の数かい？約１０名だけど、最多で１５名だね。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1436
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1437
 msgid ""
 "Then there will be a tough fight ahead of us. I must decide what I will do "
 "with the saurians."
@@ -9249,27 +9260,27 @@ msgstr ""
 "な。"
 
 #. [option]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1438
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1439
 msgid "I will take command of the saurians."
 msgstr "よし、トカゲ族は私が指揮しよう。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1442
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1443
 msgid "Use them well."
 msgstr "うん、そうしてよ。"
 
 #. [option]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1451
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1452
 msgid "The saurians will try to outflank the humans."
 msgstr "トカゲ族は人間軍の裏をかこうとするだろうな。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1455
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1456
 msgid "Very well. They will arrive at the third dawn."
 msgstr "その通りさ。彼らは３日目の夜明けに到着するよ。"
 
 #. [message]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1694
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1695
 msgid ""
 "Slaves! By order of Grand Marshal Yrynyc, you are to be executed for your "
 "treason, to the last drake!"
@@ -9278,47 +9289,47 @@ msgstr ""
 "れるのだ！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1734
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1735
 msgid "There was a key in this box!"
 msgstr "この箱に鍵が入ってた！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1753
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1754
 msgid "There is enough wood here to finish the bridge."
 msgstr "ここには橋を修復するのに十分な量の木材がある。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1759
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1760
 msgid "There's enough wood here to finish the bridge."
 msgstr "ここには橋を直すのに十分な量の木材があるね。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1763
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1764
 msgid "It's awkward to carry, but surprisingly light."
 msgstr "この量を運ぶには手間は掛かるが、驚くほど軽いな。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1785
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1786
 msgid "The bridge is almost finished -- one could almost jump across."
 msgstr "この橋の修復はほぼ完了したな。 -- 飛び越せる奴もいるだろうな。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1791
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1792
 msgid "The bridge is almost finished -- I could almost jump across."
 msgstr "この橋の修復はほぼ完了したな。 -- 俺なら飛び越せるだろうね。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1829
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1830
 msgid "The bridge is complete!"
 msgstr "この橋の修復は完全に終わった！"
 
 #. [message]: speaker=Cicyn
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1889
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1890
 msgid "Wake up! Wake up, you fools! The slaves have rebelled!"
 msgstr "起きろ！目を覚ませ、このバカども！奴隷たちが反乱を起こした！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1915
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1916
 msgid ""
 "There is a large human garrison sleeping here. We could attack them in their "
 "sleep, but the door is locked from the inside."
@@ -9332,43 +9343,44 @@ msgid "Battle of the Temple"
 msgstr "神殿の戦い"
 
 #. [side]: type=Lieutenant, id=Rycyn
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:81
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:82
 msgid "Rycyn"
 msgstr "Rycyn"
 
 #. [side]: type=Lieutenant, id=Rheoran
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:125
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:126
 msgid "Rheoran"
 msgstr "Rheoran"
 
 #. [side]: type=General, id=Rhyrraent
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:205
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:206
 msgid "Rhyrraent"
 msgstr "Rhyrraent"
 
 #. [side]: type=General, id=Lenvan
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:240
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:241
 msgid "Lenvan"
 msgstr "Lenvan"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:427
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:429
 msgid ""
 "Malakar and Kamalar continued moving towards the center of the island, "
 "unifying the scattered forces they found and overrunning the human forces "
-"they encountered. Within four days they had reached the former Temple of Gar-"
-"Alagar, now the humans' capital fortress of Weswyt. The humans expected no "
-"more than scattered resistance, and did not start raising appropriate "
-"defenses until the drakish warforce was virtually at the walls."
+"they encountered. Within four days they had reached the former High Temple "
+"of Gar-Alagar, now the humans' capital fortress of Weswyt. The humans "
+"expected no more than scattered resistance, and did not start raising "
+"appropriate defenses until the drakish warforce was virtually at the walls."
 msgstr ""
 "Malakar と Kamalar は島の中央に向かって移動し続けました。その途中で各地に散在"
 "していたドレーク軍を吸収し、遭遇した人間軍は壊滅させていきました。４日後、彼"
-"らは、かつて Gar-Alagar の神殿だった、人間達の首都 Weswyt の要塞に手が届く場"
-"所に到着した。人間達は散発的な抵抗勢力しか予想していませんでした。そのため、"
-"ドレーク軍が城壁の内側に入ってくるまで適切な防御体制をとっていませんでした。"
+"らは、かつて Gar-Alagar の高位の神殿だった、人間達の首都 Weswyt の要塞に手が"
+"届く場所に到着した。人間達は散発的な抵抗勢力しか予想していませんでした。その"
+"ため、ドレーク軍が城壁の内側に入ってくるまで適切な防御体制をとっていませんで"
+"した。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:443
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:445
 msgid ""
 "Kzzklk's scouts reported that the best approach was from the south, and the "
 "drake commanders prepared accordingly."
@@ -9377,7 +9389,7 @@ msgstr ""
 "告に沿って準備しました。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:455
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:457
 msgid ""
 "Malakar and Kamalar would lead the main force, and the saurian commander, "
 "Kzzklk, would lead his force of saurians, in hopes of outflanking the humans."
@@ -9386,22 +9398,22 @@ msgstr ""
 "トカゲ部隊を率いて人間達の裏をかく機会を窺うことになりました。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:526
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:528
 msgid "This... this is raw blasphemy!"
 msgstr "これは...これはなんと露骨な冒涜であろうか！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:530
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:532
 msgid "Yes. The humans have defiled the temple of Gar-Alagar."
 msgstr "まったくだ。人間達は Gar-Alagar 神殿を穢してしまった。"
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:535
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:537
 msgid "I will kill meeeeself ssssome humanssss!"
 msgstr "オーレは、オオゼーの、ニーンゲンどもを、コーの手で殺シーたるぜ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:539
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:541
 msgid ""
 "It ends. We have been bound, murdered, enslaved, and hounded to the ends of "
 "the earth. Those of us who live through this day will have seen the fury "
@@ -9412,22 +9424,22 @@ msgstr ""
 "とだろう！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:544
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:546
 msgid "Drakes! Our vengeance is at hand! Commence the assault!"
 msgstr "ドレークたちよ！復習の時が来た！戦いの始まりだ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:548
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:550
 msgid "THE FIGHT FOR FREEDOM BEGINS HERE!!!"
 msgstr "自由のための戦いは、ここから始まるのだ！！！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:577
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:579
 msgid "All of the saurian warriors have perished."
 msgstr "トカゲ族の戦士は全員死んでしまいました。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:581
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:583
 msgid ""
 "Hear me, drakes! Our saurian allies have given their last, so that we all "
 "may live free again! Honor their sacrifice and redouble your efforts!"
@@ -9437,24 +9449,24 @@ msgstr ""
 "て、自らの力をなお一層高めて奮闘しろ！"
 
 #. [message]: role=whiner
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:610
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:612
 msgid "Theeere are nooooo mmmore sssssaurians lleft."
 msgstr "もう、トーカゲ族、コーレ以上ノコってないサ。"
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:646
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:648
 msgid "I dddddie! Fffight ffor meee...avvvennnnge...kkkill huuumansssss..."
 msgstr ""
 "俺は、シーぬ！俺の...か、カータきをとってくれ...ニンゲーンどもを、ココ、コー"
 "ロしたってくれ..."
 
 #. [message]: role=pity
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:669
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:671
 msgid "NOOOOOOOO! Kzzklk! I cannot bear to live!"
 msgstr "なんてこった！ Kzzklk！　俺は生きることに耐えられそうにない！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:709
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:711
 msgid ""
 "You... you led the humans that took my people captive! YOU MURDERED MY "
 "DAUGHTER!"
@@ -9463,12 +9475,12 @@ msgstr ""
 "だ</b>！！"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:714
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:716
 msgid "So, you will kill me now?"
 msgstr "で、今度は君が私を殺すのかね？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:718
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:720
 msgid ""
 "A drake marked by the gods, sent to you as my messenger, and you slew her "
 "like a beast! Death is the least you deserve."
@@ -9477,7 +9489,7 @@ msgstr ""
 "害した！死こそ、お前に相応しい。"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:722
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:724
 msgid ""
 "I had my orders. Capture as many drakes as I could, kill any that were in "
 "the way. What else could I have done?"
@@ -9486,12 +9498,12 @@ msgstr ""
 "ぶ道が他にあったというのか？"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:726
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:728
 msgid "Yet now you give such orders."
 msgstr "今もまだ、お前はその命令を発している。"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:730
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:732
 msgid ""
 "In truth, I began to regret my actions the moment I set sail back to "
 "Wesnoth. When I was but a lad, I enlisted in the Royal Army of Wesnoth to "
@@ -9507,7 +9519,7 @@ msgstr ""
 "いな奴隷を連れてではなくな。"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:734
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:736
 msgid ""
 "Though I was born a commoner, my father, a veteran himself, raised me to be "
 "a man of honor. He would never have approved of our actions on this island. "
@@ -9519,7 +9531,7 @@ msgstr ""
 "された命令に従うしかないのだ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:738
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:740
 msgid ""
 "You could have chosen the path of honor. Yet though you forced countless "
 "drakes into slavery, you gave yourself over to the lowest form of slavery of "
@@ -9532,7 +9544,7 @@ msgstr ""
 "のだ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:742
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:744
 msgid ""
 "But in the end, no matter. It was you, you alone, who wielded the blade that "
 "struck down my daughter. Not some king across the sea in Wesnoth, but YOU."
@@ -9541,7 +9553,7 @@ msgstr ""
 "剣を振るったのだ。海の彼方にいる王などではない、お前なのだ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:746
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:748
 msgid ""
 "AND NOW, BY GAR-ALAGAR, <b>YOU SHALL BURN, IN THIS WORLD AND THE NEXT!!!</b>"
 msgstr ""
@@ -9549,27 +9561,27 @@ msgstr ""
 "世で！！！</b>"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:792
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:794
 msgid "I give my life... for my King."
 msgstr "王よ... 我が命を捧げます。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:797
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:799
 msgid "Yarr! A pox on your King, and all the King's men!"
 msgstr "ヤー！お前の王に呪いあれ！ 王の手下どもにも！"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:801
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:803
 msgid "Conqueror of the drakes, yet slain by a filthy pirate."
 msgstr "ドレークどもの征服者たる私が、汚らわしい海賊に討たれるとはな。"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:807
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:809
 msgid "Long live Wesnoth! I curse you monsters and pirates to my dying breath!"
 msgstr "Wesnoth よ、永遠なれ！我、怪物どもと海賊を死ぬまで呪わん！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:818
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:820
 msgid ""
 "You! You have no honor at all! You have brought so much pain to so many "
 "drakes! HOW MANY? HOW MANY BROKEN TRIBES? HOW MANY SLAUGHTERED HATCHLINGS? "
@@ -9580,7 +9592,7 @@ msgstr ""
 "だ？どれだけの卵を壊してきたんだ？卑劣な貴様の手で、どれだけ殺してきたんだ？"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:828
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:830
 msgid ""
 "You... you were the drake who nearly got away when I first came to this "
 "cursed isle! I knew you would be a problem then. I should have had you "
@@ -9591,12 +9603,12 @@ msgstr ""
 "が。殺しておくべきだった！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:833
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:835
 msgid "And a coward as well. BURN!!!"
 msgstr "そうさ、それに臆病者なんだ、燃えてしまえ！！！"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:839
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:841
 msgid ""
 "Are we truly so different? We captured a pirate ship last month, and I have "
 "learned of your betrayal of the pirates. Yet you bleat about 'honor'."
@@ -9605,71 +9617,71 @@ msgstr ""
 "別したという話も聞いた。なのに、\"名誉\"だ何だと騒ぎ立てる。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:844
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:846
 msgid "I care not for softskins. Least of all you. BURN!!!"
 msgstr "薄い皮の奴らに興味はない。少なくともお前なんかはな。燃えてしまえ！！！"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:877
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:879
 msgid "GUARDS!!! Slay them all!"
 msgstr "衛兵！！！奴らを皆殺しにしろ！"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:904
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:906
 msgid "Long live Wesnoth! I curse you monsters to my dying breath!"
 msgstr "Wesnoth よ、永遠なれ！我、怪物どもを死ぬまで呪わん！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:918
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:920
 msgid "MOROGOR IS OURS!"
 msgstr "MOROGOR は我々のものだ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:931
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:933
 msgid ""
 "But this is bittersweet. My brother is dead... just like Necolag, my "
 "daughter."
 msgstr "だが、これはほろ苦い。弟が亡くなった... 我が娘 Nikolag のように。"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:941
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:943
 msgid "He died fighting for you. Like any of your other soldiers would."
 msgstr "弟さんは、あんたのために戦って死んだんだ。他の兵士と同じように。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:945
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:947
 msgid "He was a true warrior."
 msgstr "あいつは真の戦士だった。"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:952
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:954
 msgid "He may have lived as a priest but he died as a warrior."
 msgstr "あの人は聖職者として生きたかもしれないけど、戦士として死んだんです。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:956
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:958
 msgid "He shall be forever remembered."
 msgstr "あいつは永遠に、忘れられることはないだろう。"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:981
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:983
 msgid "I am gone! Fight on against the humans without me!"
 msgstr "兄さん、お別れだね。　私がいなくても、人間達に立ち向かってくれ！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:996
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:998
 msgid ""
 "The humans' audacity knows no bounds. Their squatters have defiled the "
 "Temple!"
 msgstr "人間の大胆さは限界を超えている。奴らの不法占拠が神殿を穢したんだ！"
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1011
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1013
 msgid "Pirate! You're a traitor to your own race!"
 msgstr "海賊だ！お前は同じ海賊仲間を裏切ってるんだぞ！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1015
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1017
 msgid ""
 "I have plied the seas for years, and indeed I have plundered many a navy "
 "ship. Yet you pillage an entire island, and call me a pirate. Who among us "
@@ -9680,7 +9692,7 @@ msgstr ""
 "罪者は、一体誰なんだろうな！？"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1032
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1034
 msgid ""
 "Malakar, the so-called 'chief'. I shall hoist your skull above the ramparts "
 "of Weldyn, as an example to all who dare oppose the might of Wesnoth!"
@@ -9689,32 +9701,32 @@ msgstr ""
 "る。Wesnoth の権勢に敵対する者たちへの見せしめとしてな！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1036
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1038
 msgid "And your flayed corpse shall burn in Mount Morogor."
 msgstr "そうして、お前の死体は皮が剥がれて、Morogor 山で燃えることになる。"
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1118
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1120
 msgid "At yooourrr ccccommaaaand!"
 msgstr "あなターの、ゴメーイレイの通りに！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1134
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1136
 msgid "They have fortified the entrance!"
 msgstr "奴ら、入り口の護りを固めてるな！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1138
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1140
 msgid "The tower has fallen into disrepair. Onward!"
 msgstr "あの塔は廃墟同然、バラバラの様相だ。前進せよ！"
 
 #. [unit]: id=C'onolar, type=Drake Thrasher
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1173
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1175
 msgid "C'onolar"
 msgstr "C'onolar"
 
 #. [message]: speaker=C'onolar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1236
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1238
 msgid ""
 "Malakar of the Kakatars! Fighting has broken out in huge battles across the "
 "island! Every able-bodied drake remaining has pledged their lives to prevent "
@@ -9727,22 +9739,22 @@ msgstr ""
 "に活用してください！"
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1240
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1242
 msgid "Look sharp! You've been followed!"
 msgstr "よく見なよ！あんた、尾行されてるぜ！"
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1245
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1247
 msgid "On guard! You have pursuers!"
 msgstr "警戒しろ！追手が来たぞ！"
 
 #. [event]: id=Garranath
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1254
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1256
 msgid "Garranath"
 msgstr "Garranath"
 
 #. [message]: speaker=Garranath
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1259
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1261
 msgid ""
 "We are some of the last survivors of the Obsidian Citadel. Our fireballs are "
 "at your command!"
@@ -9751,19 +9763,24 @@ msgstr ""
 "命令のままに敵を攻撃する！"
 
 #. [message]: speaker=squad2_leader
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1338
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1340
 msgid "All right men, let's kill some lizards!"
 msgstr "よし、皆んな行くぞ、あのトカゲどもを殺すんだ！"
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1346
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1348
 msgid "Our forces cannot press this attack much longer! Hurry!"
 msgstr "私達の軍は、奴らの攻撃にこれ以上耐えられそうにない！急げ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1354
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1356
 msgid "We cannot fight any longer! We have failed!"
 msgstr "これ以上戦えない！私たちは負けたんだ！"
+
+#. [scenario]: id=Endgame
+#: Flight_Freedom/scenarios/20_Endgame.cfg:5
+msgid "Endgame"
+msgstr "最終決戦"
 
 #. [scenario]: id=Drake_Epilogue
 #. [scenario]: id=Drake_Epilogue_B
@@ -9788,50 +9805,50 @@ msgid "VICTORY IS OURS!!!"
 msgstr "勝利は我々のものだ！！！"
 
 #. [scenario]: id=Swamps_Jamolar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:15
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:4
 msgid "Swamps of the Jamolar"
 msgstr "Jamolar の湿地帯"
 
 #. [scenario]: id=Swamps_Jamolar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:33
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:22
 msgid "Survive for 20 turns"
 msgstr "20 ターン生き残る"
 
 #. [scenario]: id=Swamps_Jamolar
 #. [scenario]: id=Forest_of_Nightmares
-#. [scenario]: id=Hafwyt
+#. [scenario]: id=Mogradesh
 #. [event]: id=Quemar
 #. [event]
 #. [scenario]: id=Mountain_Crypt
 #. [objectives]
 #. [scenario]: id=Citadel
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:35
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:24
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:93
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:213
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:273
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:411
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:521
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:213
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:274
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:412
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:522
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:89
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:478
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:645
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:64
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:481
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:648
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:62
 msgid "Death of Hartholar"
 msgstr "Hartholar の死"
 
 #. [side]: type=Drake Chieftain, id=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:58
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:47
 #: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:38
 msgid "Hartholar"
 msgstr "Hartholar"
 
 #. [side]: type=Drake Chieftain, id=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:68
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:57
 #: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:47
 msgid "Jamolar Tribe"
 msgstr "Jamolar 部族"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:179
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:168
 msgid ""
 "Hmm... so Hartholar now wears the chieftain's robes. He is a bigot, but a "
 "wise drake nonetheless. And the Jamolar tribe, even in these swamps, is "
@@ -9842,27 +9859,27 @@ msgstr ""
 "大になっている。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:183
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:172
 msgid "You! Alien drake! Leave now, or face immolation!"
 msgstr "お前か！　よそ者ドレーク！　今すぐ立ち去れ！　さもなくば殺す！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:187
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:176
 msgid ""
 "I am Malakar, of the north. Our lands have been overrun by conquering humans!"
 msgstr "私は Malakar 、北の者だ。我が大地は人間どもによって征服されたのだ！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:191
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:180
 msgid ""
 "Leave, disgusting whelp. You are of the race of Stakron, the betrayer of "
 "Kahn the mighty! Perhaps that is why the humans have attacked you!"
 msgstr ""
 "立ち去れ、醜い犬め。お前は Stakron と同じ種族だな、強大な Kahn の裏切り者！人"
-"間に攻撃された理由は、それじゃないのか！"
+"間に攻撃されたのは、それが理由かもしれんな！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:195
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:184
 msgid ""
 "No. Not even humans punish children for the sins of their forefathers, "
 "unlike you. They seek our blood, and this island for themselves! They "
@@ -9874,16 +9891,16 @@ msgstr ""
 
 #. [message]: speaker=Hartholar
 #. Note for translators: 'wench' here is intended as a fairly mild gender-specific insult, not to literally mean 'prostitute':
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:200
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:189
 msgid ""
 "Oh, Necolag, that wench. When the humans come, I will thank them. Drakes! To "
 "arms, let us drive out these rabble!"
 msgstr ""
-"あぁ、Necolag 、あのおてんば娘か。人間が来たら礼を言っておこう。ドレークた"
-"ち！　武器を取れ、この連中を追い出せ！"
+"あぁ、Necolag ねえ、あのおてんば娘か。人間が来たら礼を言わなきゃな。ドレーク"
+"たち！　武器を取れ、この連中を追い出せ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:204
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:193
 msgid ""
 "I will not strike you down, chief Hartholar. However, we will defend "
 "ourselves, and maintain our honor!"
@@ -9892,51 +9909,51 @@ msgstr ""
 "を守り、自らの名誉を守り続ける！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:209
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:198
 msgid "NOTE: The campaign will not end if Hartholar is killed."
 msgstr "注記：このキャペーンは、Hartholar が死んでも終了しません。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:258
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:247
 msgid ""
 "Saurians! You have no part in this madness. The humans are our common enemy!"
 msgstr "トカゲ族よ！こんな狂気に関わっちゃいけない。人間族は、我々共通の敵だ！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:262
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:251
 msgid "These saurians are sworn to my service! You cannot stand against them!"
 msgstr ""
 "このトカゲ族は我々に忠誠を誓っている！　お前たちが立ち向かえる相手ではない！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:270
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:259
 msgid "Hartholar! End these games! As we fight, the humans approach!"
 msgstr ""
 "Hartholar！　こんな戦闘はやめるんだ！　こうしている間にも、人間どもは近づいて"
 "くる！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:275
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:264
 msgid "Hartholar does not respond."
 msgstr "Hartholar は返事をしませんでした。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:284
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:273
 msgid "Enough! Hartholar, surrender at once!"
 msgstr "もう十分だ！ Hartholar、すぐに降伏しろ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:322
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:311
 msgid "Stay your hand! We do not have the right of assassination!"
 msgstr "手を出すなよ！我々には暗殺する権利はない！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:336
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:325
 msgid "Die, foul one!"
 msgstr "死ね、穢れた奴め！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:360
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:349
 msgid ""
 "I will kill Hartholar, for the good of my tribe! Malakar, do not try to stop "
 "me. Although I understand that you are bound by honor to spare your vile "
@@ -9947,13 +9964,13 @@ msgstr ""
 "私は、やるべきことをやるだけです！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:364
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:353
 msgid "Loyal drakes! Kill the traitor, before he reaches Hartholar!"
 msgstr "忠義あるドレークたちよ！裏切り者を殺せ、Hartholar が迫る前に！"
 
 #. [message]: speaker=unit
 #. Note for translators: this is supposed to be sarcastic:
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:388
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:377
 msgid ""
 "For Malakar, the honorable! So honorable that he cannot even strike down his "
 "enemies!"
@@ -9962,7 +9979,7 @@ msgstr ""
 "だな！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:404
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:393
 msgid ""
 "The Jamolar tribe is shattered, and my honor blackened! Nobody will stand "
 "with me now!"
@@ -9971,7 +9988,7 @@ msgstr ""
 "うものはいない！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:460
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:449
 msgid ""
 "Hartholar! There, to the north, are the humans' scouts! All hope is lost! As "
 "chief, I will face the hordes in single combat."
@@ -9980,7 +9997,7 @@ msgstr ""
 "た！私は族長として、一騎打ちで大軍と戦うことになるだろう。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:464
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:453
 msgid ""
 "Hartholar, you are bound by this sacrifice to accept my people into your "
 "tribe. Perhaps your combined strength can succeed where ours has failed."
@@ -9990,12 +10007,12 @@ msgstr ""
 "だろう。"
 
 #. [event]: type=Drake Priest, id=Morlin Ka
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:476
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:465
 msgid "Morlin Ka"
 msgstr "Morlin Ka"
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:486
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:476
 msgid ""
 "The Kakatar chief speaks true! Our fighting in the face of a greater enemy "
 "is a dishonor to Gar-Alagar himself!"
@@ -10004,7 +10021,7 @@ msgstr ""
 "となれば、Gar-Alagar 自身の名誉に傷を付けてしまいますぞ！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:490
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:480
 msgid ""
 "Stay, warrior-chief! This sacrifice... I see that you are free of Stakron's "
 "taint. Forgive me, Malakar, I have done you a great wrong. I pledge myself "
@@ -10016,7 +10033,7 @@ msgstr ""
 "て。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:494
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:484
 msgid "Then we must plan our resistance!"
 msgstr "それならば、我々は、抵抗勢力としての計画を立てなければ！"
 
@@ -10030,153 +10047,8 @@ msgstr "戦争評議"
 msgid "Saurians"
 msgstr "トカゲ"
 
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:98
-msgid "Many have died today. Far too many, all because of petty racism."
-msgstr ""
-"今日この日、多大な犠牲が払われた。あまりに多くの。些細な種族差別が引き起こし"
-"たのだ。"
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:102
-msgid ""
-"Malakar, I must admit that you have great prowess, both martial and "
-"intellectual. I was wrong in opposing you, and I repent with my scar of "
-"penance."
-msgstr ""
-"Malakar、あなたが武力・知力ともに優れていることは言うまでもありません。あなた"
-"に反対したのは間違いでした、懺悔の傷をもって悔い改めます。"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:106
-msgid ""
-"Very well, Hartholar. Let us strive to put this matter behind us, but do not "
-"dare to speak ill of Necolag. Who is this to my right?"
-msgstr ""
-"いいさ、Hartholar。この件は水に流すとしても、決して Necolag を悪く言ってはな"
-"らない。私の右側にいるのは誰だ？"
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:110
-msgid ""
-"He is Kzzklk, the leader of the saurians that opposed you earlier, under my "
-"directive. What is your plan?"
-msgstr ""
-"彼は Kzzklk です。以前、あなたに反対したトカゲ族のリーダーで、私の指令下にあ"
-"りました。あなたの計画とは何ですか？"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:114
-msgid ""
-"Even with the might of both of our tribes, we cannot fight the humans by "
-"ourselves. I have seen their army, and it is not only large, but elite."
-msgstr ""
-"我々両部族が手を組んでも、人間と戦闘はできないだろう。奴らの軍隊を見たことが"
-"あるが、大きいだけでなく優秀なのだ。"
-
-#. [message]: id=Kzzklk
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:118
-msgid "My sssaurians will ssstand wwittth youuu."
-msgstr "わーたし達トカゲ族は、あなななたちーと、いいっしょに戦う。"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:122
-msgid ""
-"Kzzklk, I am honored. We can use every soldier that is willing to fight with "
-"us. However, we will need to leave these swamps soon, before the main human "
-"host arrives."
-msgstr ""
-"Kzzklk、光栄だよ。我々と一緒に戦う思いを持つ全ての兵士が戦える。しかし、我々"
-"はすぐにこの沼地から離れる必要があるのだ、人間の主力隊が到着する前に。"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:126
-msgid ""
-"Our ultimate goal should be the Obsidian Citadel, the dwelling place of the "
-"High Magi."
-msgstr ""
-"我々の最終目的地は、上級魔術師の住む Obsidian Citadel すなわち黒曜岩の城塞"
-"だ。"
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:130
-msgid ""
-"But, Malakar, how will you convince them to leave their cloisters and join "
-"us?"
-msgstr ""
-"しかし、Malakar、修道院から離れて我々に加わるよう、彼らを説得しないければ。ど"
-"うするおつもりですか？"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:134
-msgid ""
-"They are our only hope. Just as their forerunners, led by the great drake "
-"Freon, cleared this island of the evils that once lived on it, they have the "
-"power to clear this island once again, this time from the evils that dare to "
-"invade it."
-msgstr ""
-"我々にとって彼らは唯一の希望だ。偉大なるドレーク Freon に導かれた彼らの先達"
-"が、かつてこの島の悪魔を排除したように、今回は侵略を目論む悪魔を排除する力が"
-"あるのだ。"
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:138
-msgid ""
-"You speak wisdom, Malakar. Perhaps the saurians can cover our retreat? They "
-"know the swamps well, much better than any drake, and can wage guerilla war "
-"against the thinskins."
-msgstr ""
-"賢明ですね、Malakar。トカゲ族が我々の退却を援護してくれるかもしれませんね。彼"
-"らはどのドレークより沼地を熟知していて、薄い皮の奴らに対してゲリラ戦を仕掛け"
-"ることができます。"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:142
-msgid "I agree. Kzzklk, what say you?"
-msgstr "同感だよ。Kzzklk 、何か言うことはあるかな？"
-
-#. [message]: id=Kzzklk
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:146
-msgid ""
-"Yesss. Howwwevver, sssome of myyy warrriorrrss wwwant to followww yyoou."
-msgstr ""
-"同感ですスス。シしかし、我が兵士シシたちは、あなた達と一緒にシシ進軍したいん"
-"ですス。"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:150
-msgid "I accept their offer. Hartholar, have we decided?"
-msgstr "いいでしょう。Hartholar、決まりだな？"
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:154
-msgid ""
-"The route to the Citadel will be treacherous. First, we must reach - and "
-"possibly retake - the stronghold at Hafwyt, across the Forest of Nightmares. "
-"Then, we must cross the Harkon Mountains, and the resting place of the "
-"ancient Mal-Bronam. Only then will we reach the Citadel... which may harbor "
-"dangers and guardians of its own."
-msgstr ""
-"Cotadel への道は非常に険しいものです。先ずは、\"悪夢の森\"を越えて Hafwyt 要"
-"塞まで行かねばなりませんが、場合によっては奪還せねばなりません。その後、"
-"Harkon 山地と、古代 Mal-Bronam の休息地を越えねばなりません。そうしてやっと "
-"Citadel に辿り着くのですが... そこには危険と、その地の警護隊が潜んでいるかも"
-"しれないのです。"
-
-#. [message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:158
-msgid "But, I am decided. This journey must be undertaken."
-msgstr "でも、私は決心したんです。この行程は実行されるべきものです。"
-
-#. [message]: id=Malakar
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:162
-msgid "Yes. Drakes! We must tarry no longer! Prepare to move to the southeast!"
-msgstr ""
-"さあ、ドレーク達よ！これ以上留まってはいられない！南東への行程に向けて準備せ"
-"よ！"
-
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:185
+#: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:104
 msgid "End the scenario to continue."
 msgstr "シナリオを終了して次に進みます。"
 
@@ -10244,17 +10116,18 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:129
 msgid ""
 "Still, many drakes have died here. Due to the Harkon Mountains, the only "
-"practical routes from Weswyt to Hafwyt are through the swamps of my tribe, "
-"or the hills of the Lojmar tribe to the south. Even though both Weswyt and "
-"Hafwyt are, by the law of Kahn, tribeless cities, their citizens are often "
-"taxed or robbed because of their differing ancestries, so some have tried "
-"their luck here."
+"practical routes from the High Temple of Gar-Alagar to Mogradesh are through "
+"the swamps of my tribe, or the hills of the Ashtongue tribe to the south. "
+"Even though both the High Temple and Mogradesh are, by the law of Kahn, "
+"tribeless cities, their citizens are often taxed or robbed because of their "
+"differing ancestries. So some have tried their luck here."
 msgstr ""
-"それなのに、ここで多くのドレークが死んでいきました。Harkon 山脈のせいで、"
-"Weswyt から Hafwyt へ向かう実質的な道は、我が一族の沼地を抜けていくか、また"
-"は、南に棲む Lojmar 族の丘を行くかなのです。Weswyt もHafwyt も Kahn の法律下"
-"では部族の存在しない街なのに、そこの市民はしばしば、先祖が違うことから課税さ"
-"れたり強盗被害にあったりしているため、ここで運試しをする者さえいるんです。"
+"それなのに、ここで多くのドレークが死んでいきました。Harkon 山脈のせいで、Gar-"
+"Alagar の高位の神殿から Mogradesh へ向かう実質的な道は、我が一族の沼地を抜け"
+"ていくか、または、南に棲む Ashtongue 族の丘を行くかしかないのです。高位の神殿"
+"も Mogradesh も Kahn の法律下では部族の存在しない街なのに、そこの市民はしばし"
+"ば、先祖が違うことから課税されたり強盗被害にあったりしています。そのため、こ"
+"こで運試しをする者さえいるんです。"
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:133
@@ -10306,23 +10179,23 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:363
 msgid ""
 "Finally, another drake. My caravan was ambushed by the undead four days ago. "
-"I'm from Weswyt, but I'll serve whoever rescued me as long as I can leave "
-"this cursed place!"
+"I'm from the High Temple, but I'll serve whoever rescued me as long as I can "
+"leave this cursed place!"
 msgstr ""
 "やっと、他のドレークに会えた。4日前、私のいたキャラバンがアンデッドに待ち伏せ"
-"に遭ったんです。私は Weswyt 出身ですけど、この呪われた土地から抜け出せるのな"
-"ら、救っていただいた方にお仕えします！"
+"に遭ったんです。私は高位の神殿出身ですけど、この呪われた土地から抜け出せるの"
+"なら、救っていただいた方にお仕えします！"
 
 #. [message]: speaker=rescuedA
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:369
 msgid ""
 "Finally, a living being. My caravan was ambushed by the undead four days "
-"ago. I'm from Weswyt, but I'll serve whoever rescued me as long as I can "
-"leave this cursed place!"
+"ago. I'm from the High Temple, but I'll serve whoever rescued me as long as "
+"I can leave this cursed place!"
 msgstr ""
 "やっと、生きてるドレークに会えた。4日前、私のいたキャラバンがアンデッドに待ち"
-"伏せされたんです。Weswyt 出身ですが、救っていただいた方にお仕えします。この呪"
-"われた場所を離れられるなら！"
+"伏せされたんです。高位の神殿出身ですが、救っていただいた方にお仕えします。こ"
+"の呪われた場所を離れられるなら！"
 
 #. [message]: speaker=Hartholar
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:381
@@ -10346,8 +10219,8 @@ msgstr "この洞窟には怪物どもがはびこっている！"
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:450
-msgid "Onward! We must reach Hafwyt soon!"
-msgstr "前進しろ！もうすぐ Hafwyt に着くはずだ！"
+msgid "Onward! We must reach Mogradesh soon!"
+msgstr "前進しろ！もうすぐ Mogradesh に着くはずだ！"
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios_b/04b_Forest_of_Nightmares.cfg:467
@@ -10369,43 +10242,48 @@ msgid "The undead are gaining too much power! We are trapped!"
 msgstr "アンデッド達は強力過ぎるまでに力を付けてしまった！俺達はもう勝てない！"
 
 #. [scenario]: id=Hafwyt
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:6
+#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:5
 msgid "Hafwyt"
 msgstr "Hafwyt"
 
+#. [scenario]: id=Mogradesh
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:6
+msgid "Mogradesh"
+msgstr "Mogradesh"
+
 #. [side]: type=Drake Flare, id=W Leader
 #. [side]: type=Drake Flameheart, id=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:163
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:207
-msgid "Hafwyt Drakes"
-msgstr "Hafwyt のドレーク"
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:163
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:207
+msgid "Mogradesh Drakes"
+msgstr "Mogradesh のドレーク"
 
 #. [side]: type=Drake Flameheart, id=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:184
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:184
 msgid "Tenbakar"
 msgstr "Tenbakar"
 
-#. [scenario]: id=Hafwyt
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:214
+#. [scenario]: id=Mogradesh
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:214
 msgid "Death of Tenbakar"
 msgstr "Tenbaker の死"
 
-#. [scenario]: id=Hafwyt
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:215
-msgid "Invasion of Hafwyt's inner keep"
-msgstr "Hafwyt の内部主塔が侵略される"
+#. [scenario]: id=Mogradesh
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:215
+msgid "Invasion of Mogradesh's inner keep"
+msgstr "Mogradesh の内部主塔が侵略される"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:261
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:261
 msgid ""
-"Hafwyt shall not fall. Its walls are solid stone, enchanted by the magi of "
-"the Citadel."
+"Mogradesh shall not fall. Its walls are solid stone, enchanted by the magi "
+"of the Citadel."
 msgstr ""
-"Hafwyt は陥落しません。Citadel の魔術師によって、城壁がより強固となっているの"
-"です。"
+"Mogradesh は陥落しません。Citadel の魔術師によって、城壁がより強固となってい"
+"るのです。"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:265
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:265
 msgid ""
 "Hail, Chieftains! We have been trapped for days, and already we are at the "
 "brink of starvation. Help us to break the siege!"
@@ -10414,16 +10292,16 @@ msgstr ""
 "いを壊すのを手伝ってください！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:269
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:269
 msgid ""
-"If Hafwyt falls, Malakar, none of northern Morogor will be safe. We must "
+"If Mogradesh falls, Malakar, none of northern Morogor will be safe. We must "
 "attack!"
 msgstr ""
-"もしも Hafwyt が陥落したら、Malakar 、Morogor 北部は安全でなくなります。攻撃"
-"するしかないでしょう！"
+"もしも Mogradesh が陥落したら、Malakar 、Morogor 北部は安全でなくなります。攻"
+"撃するしかないでしょう！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:273
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:273
 msgid ""
 "Tenbakar! We will drive off the humans, just hold them at bay until we "
 "arrive."
@@ -10432,82 +10310,82 @@ msgstr ""
 "てくれ。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:278
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:278
 msgid "NOTE: The campaign will not end if Malakar is defeated."
 msgstr "注記：このキャペーンは、Malakar が死んでも終了しません。"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:290
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:290
 msgid ""
 "All able-bodied drakes! I call upon the pledges you have given to your "
 "tribes, to your families, and to me. Now, with everything you have left, "
 "attack. Yes, their swords and arrows will sting, but not one of us shall go "
-"to our graves today knowing that we let the softskins take Hafwyt without "
+"to our graves today knowing that we let the softskins take Mogradesh without "
 "first paying with every drop of blood we can wring from them. By honor and "
 "by Gar-Alagar, forward!"
 msgstr ""
 "全ての身体健康なドレークよ！自分の部族に、自分の家族に、そして私に誓ってほし"
 "い。今こそ、君たちの今持てるすべてをかけて攻撃せよ。そう、奴らの剣が、矢が、"
 "君たちに刺さることだろう、しかし、我々は薄い皮の者たちに、その血の一滴さえも"
-"流させることなく Hafwyt を奪われたと知れば、一人たりとも墓に入るわけにはいか"
-"ないだろう。名誉と Gar-Alagar の名において前進せよ！"
+"流させることなく Mogradesh を奪われたと知れば、一人たりとも墓に入るわけにはい"
+"かないだろう。名誉と Gar-Alagar の名において前進せよ！"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:303
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:303
 msgid "Retract the drawbridge! Quickly!"
 msgstr "跳ね橋を引っ込めろ！急げ！"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:331
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:331
 msgid "The humans are setting up strange war machines!"
 msgstr "人間どもは奇妙な戦争機械を設置しようとしている！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:335
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:335
 msgid ""
 "They are ballistas, like those on the humans' ships! Drakes! Dispatch them "
-"quickly, before they destroy Hafwyt!"
+"quickly, before they destroy Mogradesh!"
 msgstr ""
 "あれはバリスタだ、アイツらの船に積んであるようなやつだ！ドレークたちよ！あの"
-"機械をさっさと仕留めるんだ、Hafwyt が破壊される前に！"
+"機械をさっさと仕留めるんだ、Mogradesh が破壊される前に！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:500
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:500
 msgid "The ballistas are firing! Destroy them!"
 msgstr "バリスタが火を吹いたぞ！バリスタを壊せ！"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:513
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:513
 msgid "Our walls are failing! Hurry!"
 msgstr "壁が崩壊するぞ！急げ！"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:861
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:861
 msgid "Dump the boiling oil!"
 msgstr "沸騰した油を廃棄しろ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:967
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:968
 msgid "ARRRRGH!"
 msgstr "アグッ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1007
-msgid "No! Hafwyt has fallen!"
-msgstr "ダメだ！Hafwyt が陥落する！"
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1008
+msgid "No! Mogradesh has fallen!"
+msgstr "ダメだ！Mogradesh が陥落する！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1030
-msgid "Hafwyt is secure and its walls undamaged."
-msgstr "Hafwyt は無事で、壁も損傷していない。"
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1031
+msgid "Mogradesh is secure and its walls undamaged."
+msgstr "Mogradesh は無事で、壁も損傷していない。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1036
-msgid "Finally, Hafwyt is secure."
-msgstr "ようやく Hafwyt の安全が確保された。"
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1037
+msgid "Finally, Mogradesh is secure."
+msgstr "ようやく Mogradesh の安全が確保された。"
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1042
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1043
 msgid ""
 "Northern warriors, thank you for saving us today from the spears and swords "
 "of the humans. Although my soldiers and I must remain and defend this "
@@ -10518,12 +10396,12 @@ msgstr ""
 "して、我々の持ってる財宝を寄付するよ。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1055
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1056
 msgid "You receive $reward_amt pieces of gold!"
 msgstr "$reward_amt ゴールドを受け取ります！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1062
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1063
 msgid ""
 "Thank you. Drakes! For now, we rest and reprovision, but tomorrow, we fly at "
 "dawn!"
@@ -10532,13 +10410,13 @@ msgstr ""
 "けには飛翔だ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/05b_Hafwyt.cfg:1081
+#: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:1082
 msgid ""
-"The humans have sent reinforcements and Hafwyt is still not secure! We are "
-"doomed!"
+"The humans have sent reinforcements and Mogradesh is still not secure! We "
+"are doomed!"
 msgstr ""
-"人間どもは援軍を送ってきたし、 Hafwyt はまだ安全とはいえない！我々は絶望的な"
-"状況だ！"
+"人間どもは援軍を送ってきたし、 Mogradesh はまだ安全とは言えない！我々は絶望的"
+"な状況だ！"
 
 #. [scenario]: id=Mountain_Crypt
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:4
@@ -10558,15 +10436,15 @@ msgstr "Mal-Bronam"
 #. [event]: id=Quemar
 #. [event]
 #. [scenario]: id=Mountain_Crypt
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:271
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:409
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:519
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:272
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:410
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:520
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:87
 msgid "Move Malakar to the southern end of the valley"
 msgstr "Malakar を渓谷の南端まで移動させる"
 
 #. [message]: speaker=$branchb_narration_recipient
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:122
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:123
 msgid ""
 "I have never seen such land as this, with mountains taller than the "
 "strongest gliders fly."
@@ -10575,7 +10453,7 @@ msgstr ""
 "な。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:126
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:127
 msgid ""
 "We are within a valley in the Harkon Mountains - one of only a few where "
 "drakes can survive. However, this land is, some say, cursed."
@@ -10584,12 +10462,12 @@ msgstr ""
 "す。しかしここは、呪われた土地、とも言われています。"
 
 #. [message]: speaker=$branchb_narration_recipient
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:130
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:131
 msgid "Why? What is this curse, and why must we traverse this valley?"
 msgstr "なぜだ？何の呪いだ？それに、この渓谷を縦走する訳は何だ？"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:134
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:135
 msgid ""
 "We are at the site of the battle between Kahn and Mal-Bronam. The site where "
 "our ancestors defeated that lich, and won this island. However, when he "
@@ -10603,7 +10481,7 @@ msgstr ""
 "はこの渓谷を渡らねばならないのです。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:138
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:139
 msgid ""
 "We should leave this valley as quickly as possible. Not only are the humans "
 "conquering Morogor as we speak, I have learned to fear even the dead undead. "
@@ -10614,17 +10492,17 @@ msgstr ""
 "るようになった。我々全員が、あの森のことを思い出しているはずだ。"
 
 #. [then]
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:198
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:199
 msgid "Fellow drake! Of what tribe are... a magus?!?"
 msgstr "仲間のドレークがいる！どこの部族の者だろう... 魔術師か？"
 
 #. [else]
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:201
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:202
 msgid "Drake! Of what tribe are... a magus?!?"
 msgstr "ドレークがいる！どこの部族の者たちだろう... 魔術師か？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:206
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:207
 msgid ""
 "Greetings. I am Quemar, a magus of the Citadel. I was sent here by "
 "headmaster Quahgakar to scout the undead remnant here, but I never "
@@ -10637,7 +10515,7 @@ msgstr ""
 "う。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:210
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:211
 msgid ""
 "Perhaps I can explain. Humans have invaded Morogor in several places and "
 "butchered my daughter, and are slaughtering drakes by the score as we speak, "
@@ -10648,7 +10526,7 @@ msgstr ""
 "で火を使って遊んでいる間にもだ！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:214
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:215
 msgid ""
 "I know full well of the apathy that you speak of. For some reason, many of "
 "my colleagues have lost their ardor. I remember, when they first began their "
@@ -10668,7 +10546,7 @@ msgstr ""
 "ているようです。Quahgakar と、そして私だけが。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:218
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:219
 msgid ""
 "Yet the Magi are more powerful than ever. If you can reach them, they can "
 "form a convocation, with enough power to annihilate a thousand human armies. "
@@ -10681,7 +10559,7 @@ msgstr ""
 "い。私にも支援はできるが、多くの犠牲は避けられないだろう。大変大きな。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:222
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:223
 msgid ""
 "We must reach the Magi, as all of Morogor depends on it. Quemar, what are "
 "your powers?"
@@ -10690,7 +10568,7 @@ msgstr ""
 "Quemar よ、君にはどんな力がある？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:258
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:259
 msgid ""
 "I can create flame and frost with my hands and fire. I can control the "
 "magics around us, and shape conduits with the ethers that surround us. With "
@@ -10702,12 +10580,12 @@ msgstr ""
 "を放てます。その炎は、一瞬にして木々を焼き尽くせるのです。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:262
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:263
 msgid "Your assistance honors us. Thank you."
 msgstr "君の支援は我々の誇りだね、感謝するよ。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:266
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:267
 msgid ""
 "However, we must vanquish Mal-Bronam's restless spirit. Unless his evil is "
 "banished from this realm, the convocation cannot form."
@@ -10717,8 +10595,8 @@ msgstr ""
 
 #. [event]: id=Quemar
 #. [event]
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:270
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:408
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:271
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:409
 msgid "Defeat Mal-Bronam"
 msgstr "Mal-Bronam を倒す"
 
@@ -10726,24 +10604,24 @@ msgstr "Mal-Bronam を倒す"
 #. [objectives]
 #. [scenario]: id=Citadel
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:274
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:479
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:646
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:65
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:310
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:570
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:275
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:482
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:649
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:63
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:326
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:586
 msgid "Death of Quemar"
 msgstr "Quemar の死"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:367
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:368
 msgid ""
 "A curtain of darkness descends from the mountains, cloaking the entire "
 "valley."
 msgstr "暗闇の幕が山側から降りてきて、渓谷全体を覆い始めています。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:393
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:394
 msgid ""
 "The undead have found us. Remember, Mal-Bronam must be our target. Although "
 "he will only possess a remnant of his former power, he will still be a "
@@ -10753,12 +10631,12 @@ msgstr ""
 "力の残り滓でしかないが、それでも尚、強敵なのだ。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:399
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:400
 msgid "That darkness... it must be Mal-Bronam!"
 msgstr "あの暗闇は... Mal-Bronam に違いない！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:405
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:406
 msgid ""
 "Drakes! Use the mountains for cover and defend yourselves! We must escape "
 "the valley!"
@@ -10767,7 +10645,7 @@ msgstr ""
 "るぞ！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:480
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:481
 msgid ""
 "Mal-Bronam has finally been defeated. The darkness is already fading and the "
 "undead are melting away. We must reach the citadel quickly to begin the "
@@ -10777,17 +10655,17 @@ msgstr ""
 "ぞ。すぐにも城塞に戻り、会議を持たなければならない！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:566
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:567
 msgid "We must defeat Mal-Bronam first!"
 msgstr "先ずは Mal-Bronam を倒さねばならんぞ！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:572
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:573
 msgid "We must hurry, before Morogor is overrun by the humans!"
 msgstr "さあ、急がないと、Morogor が人間どもに蹂躙されてしまう！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:576
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:577
 msgid ""
 "Yes, but we must plan our strategy. The Citadel will not be easy to breach."
 msgstr ""
@@ -10795,13 +10673,13 @@ msgstr ""
 "んよ。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:580
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:581
 msgid "We will, Quemar, we will. May Gar-Alagar be with us."
 msgstr ""
 "ああ、そうだな Quemar 、そうしよう。Gar-Alagar が我らと共にあらんことを。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:613
+#: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:614
 msgid "We have tarried too long... we cannot reach the citadel in time!"
 msgstr "あまりに遅くなりすぎた... 城塞に行っても、もう間に合わない！"
 
@@ -10811,53 +10689,53 @@ msgid "The Obsidian Citadel"
 msgstr "黒曜岩の城塞"
 
 #. [side]: type=Drake High Magus, id=Taqkar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:48
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:46
 msgid "Taqkar"
 msgstr "Taqkar"
 
 #. [side]: type=Drake High Magus, id=Taqkar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:58
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:56
 msgid "Obsidian Citadel"
 msgstr "Obsidian Citadel"
 
 #. [scenario]: id=Citadel
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:62
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:60
 msgid "Move a unit to the Citadel"
 msgstr "Citadel へ１ユニットを移動させる"
 
 #. [objectives]
 #. [scenario]: id=Citadel
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:480
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:647
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:66
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:483
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:650
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:64
 msgid "Death of Taqkar"
 msgstr "Taqkar の死"
 
 #. [objectives]
 #. [scenario]: id=Citadel
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:481
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:648
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:67
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:312
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:572
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:484
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:651
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:65
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:328
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:588
 msgid "Turns run out"
 msgstr "時間切れ"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:119
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:118
 msgid "We have reached the Obsidian Citadel!"
 msgstr "Obsidian Citadel に着きましたぞ！"
 
 #. [message]: speaker=$branchb_narration_recipient
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:123
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:122
 msgid "Now, we must fight our way to it. Why does ice fall from the sky here?"
 msgstr ""
 "よし、あそこに行くには戦いを始めねばならん。おや、ここは、空から氷が降ってく"
 "るようだ、なぜだ？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:127
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:126
 msgid ""
 "That ice is called snow, and it accompanies much of the Citadel's high "
 "magic. I have no doubt that they have scryed us traveling here, and they are "
@@ -10868,12 +10746,12 @@ msgstr ""
 "んです。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:131
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:130
 msgid "What will we have to fight?"
 msgstr "我々は何と戦うのだ？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:135
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:134
 msgid ""
 "The Magi will bring many enchantments to bear. We will have to contend with "
 "magical sentinels, and possibly the land itself."
@@ -10882,12 +10760,12 @@ msgstr ""
 "そのものと戦うことになるでしょう。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:329
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:332
 msgid "A great voice emanates from the tower."
 msgstr "何か大きな声が塔から響いてきます。"
 
 #. [message]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:345
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:348
 msgid ""
 "Hear, intruders! You must face the four tests of the elements: air, fire, "
 "earth and water! Only the worthy shall pass!"
@@ -10897,7 +10775,7 @@ msgstr ""
 "う！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:455
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:458
 msgid ""
 "This was once a traditional initiation rite that all Magi undergo. However "
 "my colleagues have twisted it into a blasphemous weapon."
@@ -10906,12 +10784,12 @@ msgstr ""
 "同僚たちは、冒涜的な武器へと捻じ曲げてしまいました。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:459
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:462
 msgid "What are the dangers of this trial?"
 msgstr "その試練の危険性とは何です？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:463
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:466
 msgid ""
 "These trials consist of magical manifestations of the four fundamental "
 "elements. The trial of air will pit us against creatures of the winds that "
@@ -10921,12 +10799,12 @@ msgstr ""
 "試練では、稲妻と冷気で攻撃してくる風の生き物と戦うことになります。"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:467
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:470
 msgid "Whatever we face, we must reach the Citadel!"
 msgstr "どんな者が来ようと、我々は Citadel に辿り着かねばならない！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:471
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:474
 msgid ""
 "First we must banish the four guardians that orbit the Citadel. Then the way "
 "will be open. But beware, should we approach the Citadel while the guardians "
@@ -10937,52 +10815,52 @@ msgstr ""
 "ら、間違いなく我々の命はありません。"
 
 #. [objectives]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:476
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:479
 msgid "Kill the elemental guardians ($dead_guardians / 4)"
 msgstr "精霊の警護兵を殺す（ $dead_guardians / 4 ）"
 
 #. [message]: speaker=Taqkar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:573
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:576
 msgid "Fool! Now you die! The elements, they strengthen me!"
 msgstr "馬鹿め！ 死ね！　精霊たちは俺を強靭にしてくれるのだ！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:613
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:616
 msgid "We must defeat the guardians first!"
 msgstr "先ずは警護兵を倒さねばならんぞ！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:631
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:634
 msgid "The guardians have been dealt with!"
 msgstr "警護兵たちを始末したぞ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:635
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:638
 msgid "Onward! Seize the Citadel!"
 msgstr "前進せよ！ Citadel を奪え！"
 
 #. [objectives]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:643
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:646
 msgid "Move a unit next to the Citadel"
 msgstr "Citadel のすぐ隣に１ユニットを移動させる"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:660
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:663
 msgid "Quemar, we have reached the Citadel."
 msgstr "Quemar、Citadel に到着したぞ。"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:666
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:669
 msgid "Quemar casts a great spell!"
 msgstr "Quemar が、偉大なる魔法の呪文を唱えます！"
 
 #. [event]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:671
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:674
 msgid "Quahgakar"
 msgstr "Quahgakar"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:681
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:685
 msgid ""
 "We must talk about the future of our existence. I have commanded an end to "
 "the trial."
@@ -10991,27 +10869,27 @@ msgstr ""
 "したぞ。"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:712
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:717
 msgid "I feel an anger surging through me, an urge to rend and kill!"
 msgstr "怒りが沸々と込み上げてきて、引き裂いて殺したい衝動に駆られてるんだ！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:728
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:733
 msgid "Unit gains 1 more round of all attacks!"
 msgstr "ユニットの全攻撃の回数が１ずつ増えました！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:755
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:762
 msgid "I feel my mind expanding... the winds around me obey my command!"
 msgstr "心が広がってゆくようだ... 吹き抜ける風が、私の命令を受け入れる！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:774
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:781
 msgid "Unit's attacks become magical! (70% chance to hit)"
 msgstr "ユニットの攻撃特性に\"魔法\"が付加されました！(命中率70%）"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:801
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:810
 msgid ""
 "The energy imbues my muscle and sinew... I feel more flexible than ever! I "
 "shall reach new heights of greatness!"
@@ -11020,12 +10898,12 @@ msgstr ""
 "は、偉大なるものの新たな高みに到達するだろう！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:819
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:828
 msgid "Unit gains the skirmisher ability! (ignore enemy zones of control)"
 msgstr "ユニットが散兵能力（ZOCをすり抜ける能力）を獲得しました！"
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:846
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:857
 msgid ""
 "I feel a connection to life around me, as if I can draw essence from the "
 "decay of others!"
@@ -11034,12 +10912,12 @@ msgstr ""
 "センスを引き出すかのようだ！"
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:865
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:876
 msgid "Unit's attacks gain the drain ability!"
 msgstr "ユニットが生命吸収能力を獲得しました！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:881
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:893
 msgid ""
 "The trial of fire will confront us with living flames, seeking to turn our "
 "inner fires against us."
@@ -11048,7 +10926,7 @@ msgstr ""
 "るでしょう。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:889
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:901
 msgid ""
 "The trial of earth will transform the very ground we stand on or fly over "
 "into an adversary."
@@ -11057,7 +10935,7 @@ msgstr ""
 "することでしょう。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:897
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:909
 msgid ""
 "The trial of water will attack us with beings of water that will attempt to "
 "douse our internal flames."
@@ -11066,7 +10944,7 @@ msgstr ""
 "ることでしょう。"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:913
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:925
 msgid ""
 "No! He was a focal point of the trial. With his death the unchained elements "
 "will consume us all!"
@@ -11075,7 +10953,7 @@ msgstr ""
 "霊たちが我々全員を蝕むだろう！"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:925
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:937
 msgid "The citadel has become impenetrable. We have failed."
 msgstr "あの城塞は難攻不落と化してしまった。作戦は失敗だ。"
 
@@ -11084,15 +10962,37 @@ msgstr "あの城塞は難攻不落と化してしまった。作戦は失敗だ
 msgid "Apocalypse"
 msgstr "大惨事"
 
+# #ja: 光過敏性てんかんほかの方向けとして、日本国内向けの一般的な記述に変更している。（The description has been changed to a general description for Japan for people with photosensitive epilepsy and others.）
+#. [message]: speaker=narrator
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:152
+msgid ""
+"<b>EPILEPSY WARNING</b>: this scenario contains flashing lights which may "
+"potentially trigger seizures for people with photosensitive epilepsy."
+msgstr ""
+"<b>光過敏性てんかんに関する警告</b>: このシナリオには点滅する光が含まれてお"
+"り、光過敏性てんかんをお持ちの方や感受性の高い方は発作を引き起こす可能性があ"
+"りますのでご注意ください。万が一、気分が悪くなったり、めまいを感じたりした場"
+"合は、直ちに使用を中止し、必要に応じて医師にご相談ください。"
+
+#. [option]
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:154
+msgid "Continue normally"
+msgstr "通常通りに続ける"
+
+#. [option]
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:159
+msgid "Continue without flashing lights"
+msgstr "光の点滅無しで続ける"
+
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:151
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:167
 msgid ""
 "Mount Morogor... as majestic as the day of my ascension to Chief of my "
 "tribe..."
 msgstr "Morogor 山... なんと荘厳なのだ。私が族長に昇進したあの日のようだ..."
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:155
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:171
 msgid ""
 "I recall my ascension as well. It is a true shame that war beckons at this "
 "most sacred place."
@@ -11101,28 +11001,28 @@ msgstr ""
 "しているなんて、残念でなりません。"
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:164
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:180
 msgid ""
 "Blasphemy! Blasphemy! You seek to claim the mantle of Gar-Alagar himself!"
 msgstr "冒涜だ！ 冒涜だ！ お前たちは Gar-Alagar の外套を手に入れるつもりだな！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:168
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:184
 msgid "Silence! The future of our entire race rests on our shoulders!"
 msgstr "静粛に！　我が部族の未来は、我々の肩にかかっているのだ！"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:174
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:190
 msgid "Quemar, are you prepared?"
 msgstr "Quemar、準備はよいか？"
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:178
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:194
 msgid "I will fulfill my duty, until my end and beyond."
 msgstr "私は私の義務を、死ぬまで、いや、その先の先まで全ういたします。"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:182
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:198
 msgid ""
 "Very well. Quemar, I shall accompany you to the mouth of the volcano. "
 "Apprentices, set forth to take your places."
@@ -11131,34 +11031,34 @@ msgstr ""
 "の位置に着きなさい。"
 
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:233
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:252
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:271
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:290
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:249
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:268
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:287
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:306
 msgid "Apprentice"
 msgstr "弟子"
 
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:307
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:323
 msgid "Move all four apprentices to the platforms"
 msgstr "4名の弟子全員をプラットフォームに移動させる"
 
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
 #. [objectives]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:309
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:569
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:325
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:585
 msgid "Death of an apprentice"
 msgstr "弟子の死"
 
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
 #. [objectives]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:311
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:571
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:327
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:587
 msgid "Death of Quahgakar"
 msgstr "Quahgakar の死"
 
 #. [message]: speaker=messenger_08b
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:342
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:358
 msgid ""
 "The humans are closing in on Mount Morogor! Doubtless they know that to "
 "conquer its slopes would break the spirit of every drake on the island."
@@ -11167,27 +11067,27 @@ msgstr ""
 "す。あの斜面を征服すれば島じゅうのドレークの心が打つ砕かれるということを。"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:346
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:362
 msgid "Then we must make haste!"
 msgstr "それなら急がなければ！"
 
 #. [unit]: id=NW_leader, type=Lieutenant
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:365
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:381
 msgid "Urien"
 msgstr "Urien"
 
 #. [message]: speaker=NW_leader
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:373
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:389
 msgid "In the name of the King, Morogor shall be ours! Long live Wesnoth!"
 msgstr "王様の名誉にかけて、Morogor は我々のものだ！ Wesnoth 万歳！"
 
 #. [unit]: id=NE_leader, type=General
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:392
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:408
 msgid "Galeran"
 msgstr "Galeran"
 
 #. [message]: speaker=NE_leader
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:400
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:416
 msgid ""
 "Soldiers of Wesnoth! Our conquest of this island is nearly complete. Soon "
 "its riches shall be ours for the taking!"
@@ -11196,22 +11096,22 @@ msgstr ""
 "かな資源が我々のものとなるのだ！"
 
 #. [unit]: id=SE_leader, type=Grand Marshal
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:419
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:435
 msgid "Emeric"
 msgstr "Emeric"
 
 #. [message]: speaker=SE_leader
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:427
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:443
 msgid "We have them surrounded! Onward!"
 msgstr "奴らを包囲したぞ！　進め！"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:551
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:567
 msgid "We are all in place! Let us begin the convocation at once!"
 msgstr "全員、配置につきました！直ちに行動を開始しましょう！"
 
 #. [objectives]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:567
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:583
 msgid ""
 "Survive for $num_turns_to_survive turns ($($turn_number - "
 "$survival_start_turn) / $num_turns_to_survive)"
@@ -11220,14 +11120,14 @@ msgstr ""
 "$survival_start_turn) / $num_turns_to_survive ）"
 
 #. [message]: role=concerned_human
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:616
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:632
 msgid ""
 "The lizards are conducting some strange ritual! We must stop them "
 "immediately!"
 msgstr "あのトカゲどもが奇妙な儀式を行っています！すぐにやめさせなければ！"
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:640
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:656
 msgid ""
 "The humans are redoubling their efforts! Quahgakar, is there any way we can "
 "finish this ritual faster?"
@@ -11236,7 +11136,7 @@ msgstr ""
 "せられないか？"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:644
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:660
 msgid ""
 "Not unless you wish to condemn all of us to a fate worse than death. But "
 "there may be an alternative..."
@@ -11245,12 +11145,12 @@ msgstr ""
 "他に何かいい手があるかも..."
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:648
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:664
 msgid "No... not that... please..."
 msgstr "やめて... それだけは... お願いだから..."
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:652
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:668
 msgid ""
 "It would involve the darkest of magicks, but we can force Mount Morogor to "
 "erupt. The lava flows would sweep the thinskins from our lands! And it could "
@@ -11261,7 +11161,7 @@ msgstr ""
 "れますよ。"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:656
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:672
 msgid ""
 "Malakar, if we do this, Morogor will never be the same. I implore you to "
 "think carefully!"
@@ -11270,12 +11170,12 @@ msgstr ""
 "進めてください！"
 
 #. [option]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:662
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:678
 msgid "We continue with our original plan to awaken Quemar as a dragon!"
 msgstr "当初の予定どおり、Quemar をドラゴンとして覚醒させる！"
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:666
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:682
 msgid ""
 "Drakes! We must hold the line just a while longer while the magi finish "
 "their work!"
@@ -11284,119 +11184,131 @@ msgstr ""
 "ばならない！"
 
 #. [option]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:671
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:687
 msgid ""
 "There is no time! We must purge the humans before they slaughter us all!"
 msgstr ""
 "もう時間がない！人間たちにやられる前に、こっちが奴らを全滅させねばなるまい！"
 
+#. [message]: speaker=Morlin Ka
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:696
+msgid "Turn back at once! Gar-Alagar will never forgive this!"
+msgstr "すぐに引き返すんだ！ Gar-Alagar は決して許さないだろう！"
+
+#. [message]: speaker=Malakar
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:700
+msgid ""
+"My will is set. The thinskins are closing in. Either Mount Morogor erupts or "
+"we all die!"
+msgstr ""
+"私の決意は固まった。薄い皮の者たちが迫っている。Morogor 山が噴火するか、我々"
+"全員が死ぬかだ！"
+
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:675
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:706
 msgid "Very well, Malakar. Drakes! Take flight at once!"
 msgstr "承知しました、Malakar。ドレークたちよ！今すぐ翔び立て！"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:767
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:840
 msgid "Powers below, hear me! Powers above, fear me!"
 msgstr "下界の力よ、私の言葉を聞くがよい！　上界の力よ、私を恐れなさい！"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:775
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:848
 msgid ""
 "I call upon your wrath! Accept our life force, so that your fires may be "
 "quickened!"
 msgstr ""
-"私があなたの怒りを呼び起こしましょう！私たちの生命力を受け入れなさい、そうで"
-"す、あなたの炎は吹き上がることでしょう！"
+"私があなたの怒りを呼び起こそう！我らの生命力を受け入れよ。あなたの炎は吹き上"
+"がることだろう！"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:843
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:916
 msgid "Accept my sacrifice of blood, so that your hatred may surge forth!"
-msgstr ""
-"私の血の犠牲を受け入れるのです、そうです、あなたの憎しみの心が溢れ出ることで"
-"しょう！"
+msgstr "私の血の犠牲を受け入れてほしい。あなたの憎悪が溢れ出ることだろう！"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:862
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:935
 msgid "And now I offer myself to the flames."
-msgstr "そうして今、私は炎に身を捧げます。"
+msgstr "そして今、私は炎に身を捧げよう。"
 
 #. [fading_message]: id=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:909
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1000
 msgid "What... what have we done..."
 msgstr "どうした... 何が起きたのだ..."
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1016
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1122
 msgid "Breath of Gar-Alagar! Spirit of Morogor! Hear my voice."
 msgstr "Gar-Alagar の息吹よ！ Morogor の魂よ！ 私の声を聴くがよい。"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1024
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1130
 msgid "Accept your servant and infuse him with your might!"
 msgstr "あなたのしもべを受け入れ、あなたの力を注ぎ込むのです！"
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1033
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1139
 msgid "Hear me, a humble servant."
 msgstr "私の話を聞いてほしい、謙虚なしもべたる私の。"
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1051
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1157
 msgid "I walk the path of my ancestors."
 msgstr "私は先祖の道を歩んでいく。"
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1060
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1166
 msgid "I walk to the edge of death."
 msgstr "私は死の淵へと歩んでいく。"
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1069
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1175
 msgid "And return with new life."
 msgstr "そして、新たな命とともに戻ってくる。"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1079
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1185
 msgid "Open the way to the heart of the fire!"
 msgstr "炎の中心に続く道を開くのだ！"
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1179
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1293
 msgid "I surrender, to be reborn in flame."
 msgstr "降伏する、炎の中で生まれ変わるためにな。"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1222
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1336
 msgid "Malakar, it is done."
 msgstr "Malakar 殿、終わりました。"
 
 #. [fading_message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1239
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1353
 msgid "Quahgakar, what's happening?"
 msgstr "Quahgakar、どうしたんだ？"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1257
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1372
 msgid "The ritual, it's going out of control!"
 msgstr "儀式が制御不能になろうとしている！"
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1310
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1427
 msgid ""
 "The life force needed was much greater than I had imagined... the spell "
-"stole what it needed from us!"
+"stole what it sought from us!"
 msgstr ""
-"必要な生命力は、私の想像を遥かに超えていた... 必要なものが、呪文によって我々"
-"から奪われたのだ！"
+"必要な生命力は、私の想像を遥かに超えていた... 私たちの求めていたものが、呪文"
+"によって奪われたのだ！"
 
 #. [message]: speaker=capturer_1
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1415
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1532
 msgid "We have found the last of the rebels! Shall we kill them?"
 msgstr "逆賊の最後の一匹を見つけた！殺しますか？"
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1419
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1536
 msgid ""
 "No. Bind them in iron fetters and muzzle their snouts. I intend to make an "
 "example out of them, so all drakes may fear the name of our King!"
@@ -11405,13 +11317,13 @@ msgstr ""
 "ドレーク野郎の全てが我らの王様の名前に恐れをなすだろう！"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1523
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1561
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1640
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1678
 msgid "No! We cannot complete the ritual!"
 msgstr "だめだ！ 儀式を全うできない！"
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1544
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1661
 msgid ""
 "We must protect the apprentices at all cost! Only with their combined will "
 "can we contain the energies we hope to let forth!"
@@ -12313,7 +12225,6 @@ msgstr "稲妻"
 msgid "Air Elemental"
 msgstr "大気の精霊"
 
-# #po: "Abyssal" -> "abyssal" ?
 #. [unit_type]: id=Air Elemental, race=elemental
 #: Flight_Freedom/units/elementals/Air_Elemental.cfg:19
 msgid ""
@@ -12862,19 +12773,20 @@ msgstr "氷の嵐"
 msgid "Cave Ant"
 msgstr "洞窟アリ"
 
-# #po: Giant ants -> Cave ants
 #. [unit_type]: id=Cave Ant, race=monster
 #: Flight_Freedom/units/monsters/Cave_Ant.cfg:20
 msgid ""
 "Giant ants are common in almost any environment, from caverns deep under the "
-"earth to the tops of tall mountains. Those that live deep underground tend "
-"to grow up over their normal size. Though normally not hostile, they can "
-"bite at close range, dealing more damage than their cousins above-ground."
+"earth to the tops of tall mountains. Cave ants such as these live deep "
+"underground and tend to grow up over their normal size. Though normally not "
+"hostile, they can bite at close range, dealing more damage than their "
+"cousins above-ground."
 msgstr ""
 "洞窟アリは地底の洞窟から高山の頂上に至るまでほぼいかなる環境にも普通に生息し"
-"ています。その中で地底深く生活するものは通常の大きさを超えて成長しがちです。"
-"その成長したアリは、通常は攻撃的ではありませんが、接近しすぎると噛み付いてき"
-"ます。そのダメージは地上にいる同類のアリより、ずっと大きいのです。"
+"ています。このような洞窟アリは地底深くで生活し、通常の大きさを超えて成長する"
+"傾向があります。その成長したアリは、通常は攻撃的ではありませんが、接近しすぎ"
+"ると噛み付いてきます。そのダメージは地上にいる同類のアリより、ずっと大きいも"
+"のです。"
 
 #. [unit_type]: id=Giant Boar, race=monster
 #: Flight_Freedom/units/monsters/Giant_Boar.cfg:5
@@ -13659,6 +13571,125 @@ msgstr ""
 "これは以前ドワーフでしたが、アンデッドにされました。これはドワーフの腕力を維"
 "持していますが、同様に鈍重さも引き継いでいます。"
 
+# #po: Melrithan? or Melrithian?   See id:502
+#~ msgid "Elvish Melrithan Force"
+#~ msgstr "エルフの Melrith 軍"
+
+#~ msgid "Many have died today. Far too many, all because of petty racism."
+#~ msgstr ""
+#~ "今日この日、多大な犠牲が払われた。あまりに多くの。些細な種族差別が引き起こ"
+#~ "したのだ。"
+
+#~ msgid ""
+#~ "Malakar, I must admit that you have great prowess, both martial and "
+#~ "intellectual. I was wrong in opposing you, and I repent with my scar of "
+#~ "penance."
+#~ msgstr ""
+#~ "Malakar、あなたが武力・知力ともに優れていることは言うまでもありません。あ"
+#~ "なたに反対したのは間違いでした、懺悔の傷をもって悔い改めます。"
+
+#~ msgid ""
+#~ "Very well, Hartholar. Let us strive to put this matter behind us, but do "
+#~ "not dare to speak ill of Necolag. Who is this to my right?"
+#~ msgstr ""
+#~ "いいさ、Hartholar。この件は水に流すとしても、決して Necolag を悪く言っては"
+#~ "ならない。私の右側にいるのは誰だ？"
+
+#~ msgid ""
+#~ "He is Kzzklk, the leader of the saurians that opposed you earlier, under "
+#~ "my directive. What is your plan?"
+#~ msgstr ""
+#~ "彼は Kzzklk です。以前、あなたに反対したトカゲ族のリーダーで、私の指令下に"
+#~ "ありました。あなたの計画とは何ですか？"
+
+#~ msgid ""
+#~ "Even with the might of both of our tribes, we cannot fight the humans by "
+#~ "ourselves. I have seen their army, and it is not only large, but elite."
+#~ msgstr ""
+#~ "我々両部族が手を組んでも、人間と戦闘はできないだろう。奴らの軍隊を見たこと"
+#~ "があるが、大きいだけでなく優秀なのだ。"
+
+#~ msgid "My sssaurians will ssstand wwittth youuu."
+#~ msgstr "わーたし達トカゲ族は、あなななたちーと、いいっしょに戦う。"
+
+#~ msgid ""
+#~ "Kzzklk, I am honored. We can use every soldier that is willing to fight "
+#~ "with us. However, we will need to leave these swamps soon, before the "
+#~ "main human host arrives."
+#~ msgstr ""
+#~ "Kzzklk、光栄だよ。我々と一緒に戦う思いを持つ全ての兵士が戦える。しかし、"
+#~ "我々はすぐにこの沼地から離れる必要があるのだ、人間の主力隊が到着する前に。"
+
+#~ msgid ""
+#~ "Our ultimate goal should be the Obsidian Citadel, the dwelling place of "
+#~ "the High Magi."
+#~ msgstr ""
+#~ "我々の最終目的地は、上級魔術師の住む Obsidian Citadel すなわち黒曜岩の城塞"
+#~ "だ。"
+
+#~ msgid ""
+#~ "But, Malakar, how will you convince them to leave their cloisters and "
+#~ "join us?"
+#~ msgstr ""
+#~ "しかし、Malakar、修道院から離れて我々に加わるよう、彼らを説得しないけれ"
+#~ "ば。どうするおつもりですか？"
+
+#~ msgid ""
+#~ "They are our only hope. Just as their forerunners, led by the great drake "
+#~ "Freon, cleared this island of the evils that once lived on it, they have "
+#~ "the power to clear this island once again, this time from the evils that "
+#~ "dare to invade it."
+#~ msgstr ""
+#~ "我々にとって彼らは唯一の希望だ。偉大なるドレーク Freon に導かれた彼らの先"
+#~ "達が、かつてこの島の悪魔を排除したように、今回は侵略を目論む悪魔を排除する"
+#~ "力があるのだ。"
+
+#~ msgid ""
+#~ "You speak wisdom, Malakar. Perhaps the saurians can cover our retreat? "
+#~ "They know the swamps well, much better than any drake, and can wage "
+#~ "guerilla war against the thinskins."
+#~ msgstr ""
+#~ "賢明ですね、Malakar。トカゲ族が我々の退却を援護してくれるかもしれません"
+#~ "ね。彼らはどのドレークより沼地を熟知していて、薄い皮の奴らに対してゲリラ戦"
+#~ "を仕掛けることができます。"
+
+#~ msgid "I agree. Kzzklk, what say you?"
+#~ msgstr "同感だよ。Kzzklk 、何か言うことはあるかな？"
+
+#~ msgid ""
+#~ "Yesss. Howwwevver, sssome of myyy warrriorrrss wwwant to followww yyoou."
+#~ msgstr ""
+#~ "同感ですスス。シしかし、我が兵士シシたちは、あなた達と一緒にシシ進軍したい"
+#~ "んですス。"
+
+#~ msgid "I accept their offer. Hartholar, have we decided?"
+#~ msgstr "いいでしょう。Hartholar、決まりだな？"
+
+#~ msgid ""
+#~ "The route to the Citadel will be treacherous. First, we must reach - and "
+#~ "possibly retake - the stronghold at Hafwyt, across the Forest of "
+#~ "Nightmares. Then, we must cross the Harkon Mountains, and the resting "
+#~ "place of the ancient Mal-Bronam. Only then will we reach the Citadel... "
+#~ "which may harbor dangers and guardians of its own."
+#~ msgstr ""
+#~ "Cotadel への道は非常に険しいものです。先ずは、\"悪夢の森\"を越えて Hafwyt "
+#~ "要塞まで行かねばなりませんが、場合によっては奪還せねばなりません。その後、"
+#~ "Harkon 山地と、古代 Mal-Bronam の休息地を越えねばなりません。そうしてやっ"
+#~ "と Citadel に辿り着くのですが... そこには危険と、その地の警護隊が潜んでい"
+#~ "るかもしれないのです。"
+
+#~ msgid "But, I am decided. This journey must be undertaken."
+#~ msgstr "でも、私は決心したんです。この行程は実行されるべきものです。"
+
+#~ msgid ""
+#~ "Yes. Drakes! We must tarry no longer! Prepare to move to the southeast!"
+#~ msgstr ""
+#~ "さあ、ドレーク達よ！これ以上留まってはいられない！南東への行程に向けて準備"
+#~ "せよ！"
+
+#~ msgid "Hafwyt Drakes"
+#~ msgstr "Hafwyt のドレーク"
+
 #~ msgid "FtF - Wesnoth Tragedy"
 #~ msgstr "FtF - Wesnoth Tragedy"
 
@@ -13788,9 +13819,6 @@ msgstr ""
 
 #~ msgid "Outlaws"
 #~ msgstr "無法者"
-
-#~ msgid "Endgame"
-#~ msgstr "最終決戦"
 
 #~ msgid "Hartholar! Who are your allies?"
 #~ msgstr "Hartholar ！お前の同盟者は誰だ？"
