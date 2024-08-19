@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: '16'
       - name: Package install
-        run: npm install
+        run: cd utils/wesnoth-map-diff && npm install
       - name: Package build
-        run: npm run build:prod
+        run: cd utils/wesnoth-map-diff && npm run build:prod
       - name: Get maps diff
         id: get-maps-diff
         env:
