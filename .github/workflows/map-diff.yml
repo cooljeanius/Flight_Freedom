@@ -34,7 +34,8 @@ jobs:
           log() { printf '\e[1m%s\e[m\n' "$*"; } # write log message in bold
 
           sync && log "in $(pwd): getting changed maps with SHA of ${SHA}"
-          git fetch --depth=1 origin "$SHA" || git fetch origin
+          git fetch origin
+          git checkout "$SHA"
           cd utils/wesnoth-map-diff
           git fetch
           mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
