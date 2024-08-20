@@ -48,8 +48,9 @@ jobs:
           else \
             ls -al; \
           fi
-          mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
+          mapfile -t map_paths < <(pushd ../.. && git diff --name-only HEAD "$SHA" | grep '\.map$' && popd)
 
+          sync && log "Looping throught map_paths next..."
           for map_path in "${map_paths[@]}"
           do
             ## Get new map version
