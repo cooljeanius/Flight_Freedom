@@ -93,45 +93,65 @@ SUF: do not include a [filter] subtag. If multiple units match the filter, the m
 
 Optional keys:
 fade_time: how long (milliseconds) message takes to fade out. Cannot be greater than time=.
-time_<language_code>: override time= for a specific language.
-	For example, specifying time=6000 and time_es_ES=8000 will cause the message to be displayed for 6 seconds unless Wesnoth language is Spanish, in which case it will be displayed for 8 seconds
+skippable: if yes, then do not show if messages are currently being skipped (e.g. if player has skipped replay)
+[time_lang]:
+	Override time= for specific languages. Accepts both two-letter (ISO 639-1) and longer language codes, with five-letter overriding two-letter.
+	Example:
+	time=4000
+	[time_lang]
+		time_es=6000
+		time_es_PE=8000
+	[/time_lang]
+	If Wesnoth language is Spanish (Paraguay), message will be displayed for 8 seconds, else if other Spanish 6 seconds, else 4 seconds.
 ]=]
 function wesnoth.wml_actions.fading_message(cfg)
-	local message = cfg.message
-	local delay_time = tonumber(cfg.time)
-	local fade_time = tonumber(cfg.fade_time) or 100
-	local matches = wesnoth.units.find_on_map(cfg)
-	local system_lang = wesnoth.get_language()
-	for k,v in pairs(cfg) do
-		if string.len(k) > 5 then
-			if string.sub(k,1,5) == "time_" then
-				local lang = string.sub(k,6, string.len(k))
-				if lang == system_lang then
-					delay_time = tonumber(v)
+	local skippable = cfg.skippable or false
+	if (not skippable) or (not wesnoth.interface.is_skipping_messages()) then
+		local message = cfg.message
+		local delay_time = tonumber(cfg.time)
+		local fade_time = tonumber(cfg.fade_time) or 100
+		local matches = wesnoth.units.find_on_map(cfg)
+		local time_lang = wml.get_child(cfg, "time_lang")
+		if time_lang ~= nil then
+			local system_lang = wesnoth.get_language()
+			for k,v in pairs(time_lang) do
+				if string.len(k) == 2 then
+					local lang = k
+					if lang == string.sub(system_lang, 1, 2) then
+						delay_time = tonumber(v)
+					end
+				end
+			end
+			for k,v in pairs(time_lang) do
+				if string.len(k) > 2 then
+					local lang = k
+					if lang == system_lang then
+						delay_time = tonumber(v)
+					end
 				end
 			end
 		end
-	end
-	if fade_time > delay_time then
-		delay_time = fade_time
-	end
-	if matches ~= nil then
-		local name = matches[1].name
-		local unit_x = matches[1].x
-		local unit_y = matches[1].y
-		wesnoth.interface.highlight_hex(unit_x, unit_y)
-		local options = {}
-		options.max_width = "80%"
-		options.color = "FFFFFF"
-		options.bgcolor = "000000"
-		options.duration = delay_time - fade_time
-		options.fade_time = fade_time
-		options.halign="center"
-		options.valign="bottom"
-		options.location={0,100}
-		local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. name .. "</span>\n<span size='large'>" .. message .. "</span>", options)
-		wesnoth.interface.delay(delay_time)
-		wesnoth.interface.deselect_hex()
+		if fade_time > delay_time then
+			delay_time = fade_time
+		end
+		if matches ~= nil then
+			local name = matches[1].name
+			local unit_x = matches[1].x
+			local unit_y = matches[1].y
+			wesnoth.interface.highlight_hex(unit_x, unit_y)
+			local options = {}
+			options.max_width = "80%"
+			options.color = "FFFFFF"
+			options.bgcolor = "000000"
+			options.duration = delay_time - fade_time
+			options.fade_time = fade_time
+			options.halign="center"
+			options.valign="bottom"
+			options.location={0,100}
+			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. name .. "</span>\n<span size='large'>" .. message .. "</span>", options)
+			wesnoth.interface.delay(delay_time)
+			wesnoth.interface.deselect_hex()
+		end
 	end
 end
 
