@@ -37,7 +37,11 @@ jobs:
           git fetch origin
           git checkout "$SHA"
           cd utils/wesnoth-map-diff
+          sync && log "now in $(pwd), which ought to report being a submodule…"
+          git status
+          git fsck
           git fetch
+          sync && log "mapfile is '$(which mapfile)'"
           mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
 
           for map_path in "${map_paths[@]}"
@@ -69,7 +73,7 @@ jobs:
           done
 
           if test -z "${comment_body}"; then
-            comment_body="ERROR: map diff workflow failed to generate a valid comment!"
+            comment_body="ERR: map diff action failed to output valid comment!"
           fi
 
           printf 'COMMENT_BODY=%s\n' "$comment_body" >> "$GITHUB_OUTPUT"
