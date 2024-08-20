@@ -41,7 +41,13 @@ jobs:
           git status
           git fsck
           git fetch
-          sync && log "mapfile is '$(which mapfile)'"
+          if test -x "$(which mapfile)"; then \
+            sync && log "mapfile is '$(which mapfile)'"; \
+          elif test -n "$(type mapfile 2>/dev/null)"; then \
+            sync && log "about mapfile: '$(type mapfile)'"; \
+          else \
+            ls -al; \
+          fi
           mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
 
           for map_path in "${map_paths[@]}"
