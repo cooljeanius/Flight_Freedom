@@ -95,12 +95,12 @@ Optional keys:
 fade_time: how long (milliseconds) message takes to fade out. Cannot be greater than time=.
 skippable: if yes, then do not show if messages are currently being skipped (e.g. if player has skipped replay)
 [time_lang]:
-	Override time= for specific languages. Accepts both two-letter (ISO 639-1) and longer language codes, with five-letter overriding two-letter.
+	Override time= for specific languages. Accepts both two-letter (ISO 639-1) and longer language codes, with longer overriding two-letter.
 	Example:
 	time=4000
 	[time_lang]
-		time_es=6000
-		time_es_PE=8000
+		es=6000
+		es_PE=8000
 	[/time_lang]
 	If Wesnoth language is Spanish (Paraguay), message will be displayed for 8 seconds, else if other Spanish 6 seconds, else 4 seconds.
 ]=]
