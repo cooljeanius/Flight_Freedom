@@ -12,9 +12,6 @@ jobs:
       pull-requests: write
     continue-on-error: true
     runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: utils/wesnoth-map-diff
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,9 +21,9 @@ jobs:
         with:
           node-version: '16'
       - name: Package install
-        run: npm install
+        run: cd utils/wesnoth-map-diff && npm install
       - name: Package build
-        run: npm run build:prod
+        run: cd utils/wesnoth-map-diff && npm run build:prod
       - name: Get maps diff
         id: get-maps-diff
         env:
@@ -37,9 +34,23 @@ jobs:
           log() { printf '\e[1m%s\e[m\n' "$*"; } # write log message in bold
 
           sync && log "in $(pwd): getting changed maps with SHA of ${SHA}"
-          git fetch --depth=1 origin "$SHA" || git fetch origin || git fetch
-          mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
+          git fetch origin
+          git checkout "$SHA"
+          cd utils/wesnoth-map-diff
+          sync && log "now in $(pwd), which ought to report being a submodule…"
+          git status
+          git fsck
+          git fetch
+          if test -x "$(which mapfile)"; then \
+            sync && log "mapfile is '$(which mapfile)'"; \
+          elif test -n "$(type mapfile 2>/dev/null)"; then \
+            sync && log "about mapfile: '$(type mapfile)'"; \
+          else \
+            ls -al; \
+          fi
+          mapfile -t map_paths < <(pushd ../.. && git diff --name-only HEAD "$SHA" | grep '\.map$' && popd)
 
+          sync && log "Looping through map_paths next..."
           for map_path in "${map_paths[@]}"
           do
             ## Get new map version
@@ -69,7 +80,7 @@ jobs:
           done
 
           if test -z "${comment_body}"; then
-            comment_body="ERROR: map diff workflow failed to generate a valid comment!"
+            comment_body="ERR: map diff action failed to output valid comment!"
           fi
 
           printf 'COMMENT_BODY=%s\n' "$comment_body" >> "$GITHUB_OUTPUT"
