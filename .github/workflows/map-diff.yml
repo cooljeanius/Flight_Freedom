@@ -12,18 +12,19 @@ jobs:
       pull-requests: write
     continue-on-error: true
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: utils/wesnoth-map-diff
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: "recursive"
       - uses: actions/setup-node@v4
         with:
           node-version: '16'
       - name: Package install
-        run: cd utils/wesnoth-map-diff && npm install
+        run: npm install
       - name: Package build
-        run: cd utils/wesnoth-map-diff && npm run build:prod
+        run: npm run build:prod
       - name: Get maps diff
         id: get-maps-diff
         env:
@@ -51,6 +52,7 @@ jobs:
           mapfile -t map_paths < <(pushd ../.. && git diff --name-only HEAD "$SHA" | grep '\.map$' && popd)
 
           sync && log "Looping through map_paths next..."
+
           for map_path in "${map_paths[@]}"
           do
             ## Get new map version
