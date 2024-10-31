@@ -30,7 +30,7 @@ jobs:
         env:
           SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          sudo apt-get -y install pngquant
+          sudo apt-get -y -q install pngquant
           comment_body=""
           log() { printf '\e[1m%s\e[m\n' "$*"; } # write log message in bold
 
