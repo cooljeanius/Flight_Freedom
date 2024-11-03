@@ -16,7 +16,8 @@ jobs:
       run:
         working-directory: utils/wesnoth-map-diff
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '16'
@@ -33,9 +34,24 @@ jobs:
           comment_body=""
           log() { printf '\e[1m%s\e[m\n' "$*"; } # write log message in bold
 
-          ## Get changed maps
-          git fetch --depth=1 origin "$SHA"
-          mapfile -t map_paths < <(git diff --name-only HEAD "$SHA" | grep '\.map$')
+          sync && log "in $(pwd): getting changed maps with SHA of ${SHA}"
+          git fetch origin
+          git checkout "$SHA"
+          cd utils/wesnoth-map-diff
+          sync && log "now in $(pwd), which ought to report being a submodule…"
+          git status
+          git fsck
+          git fetch
+          if test -x "$(which mapfile)"; then \
+            sync && log "mapfile is '$(which mapfile)'"; \
+          elif test -n "$(type mapfile 2>/dev/null)"; then \
+            sync && log "about mapfile: '$(type mapfile)'"; \
+          else \
+            ls -al; \
+          fi
+          mapfile -t map_paths < <(pushd ../.. && git diff --name-only HEAD "$SHA" | grep '\.map$' && popd)
+
+          sync && log "Looping through map_paths next..."
 
           for map_path in "${map_paths[@]}"
           do
@@ -64,6 +80,10 @@ jobs:
                 || continue
             comment_body+=$html
           done
+
+          if test -z "${comment_body}"; then
+            comment_body="ERR: map diff action failed to output valid comment!"
+          fi
 
           printf 'COMMENT_BODY=%s\n' "$comment_body" >> "$GITHUB_OUTPUT"
       - name: Find comment

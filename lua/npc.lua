@@ -14,12 +14,12 @@
 ---
 
 function wesnoth.wml_actions.npc_bird_behavior(cfg)
-	-- FIXME: deprecated, but updating it to the recommended replacement results in an error, so...
-	-- I dunno, maybe I just was doing it wrong...
-	local map_w, map_h, map_border = wesnoth.get_map_size()
+	local map_w = wesnoth.current.map.playable_width
+	local map_h = wesnoth.current.map.playable_height
+	local map_border = wesnoth.current.map.border_size
 
 	local function do_error(msg)
-		helper.wml_error("[npc_bird_behavior]: " .. msg)
+		wml.error("[npc_bird_behavior]: " .. msg)
 	end
 
 	if map_border ~= 1 then
@@ -109,6 +109,11 @@ function wesnoth.wml_actions.npc_bird_behavior(cfg)
 			end
 
 			-- Move the bird
+
+			if cfg.use_all_moves then
+				npc.moves = 0
+				npc.attacks_left=0
+			end
 
 			wesnoth.units.extract(npc)
 
