@@ -95,13 +95,13 @@ msgstr ""
 msgid ""
 "This is the story of the great Drake leader Malakar, who saw the near-destruction of his tribe at the hands of a dark wizard, and of how he gathered his shattered people and set out on a dangerous journey across unknown lands in the hopes of bringing them back home.\n"
 "\n"
-"<span color='#808080'>Now updated for BFW 1.18+!</span>\n"
+"<span color='#808080'>Now updated for BFW 1.19+!</span>\n"
 "(Expert Level, 20-26 scenarios)"
 msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
 #: Flight_Freedom/_main.cfg:57
-msgid "(for Wesnoth v1.18.0 or later)"
+msgid "(for Wesnoth v1.19.6 or later)"
 msgstr ""
 
 #. [achievement]: id=ftf_desperate_defense
