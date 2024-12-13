@@ -1,0 +1,1857 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wescamp-i 18n\n"
+"Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2008-01-22 00:21+0100\n"
+"PO-Revision-Date: 2007-10-26 13:44+0200\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " *growl*"
+msgstr " *brøl*"
+
+msgid "#If a unit is in lava, it will lose 4 hitpoints per turn."
+msgstr "Hvis en enhed er i lava, vil enheden miste 4 liv per runde."
+
+msgid "(Kogw) A spirit has attacked!"
+msgstr "(Kogw) En ånd angreb!"
+
+msgid "(Kogw) All is lost!"
+msgstr "(Kogw) Alt er tabt!"
+
+msgid "(Kogw) On to Morogor!"
+msgstr "(Kogw) Fremad mod Morogor!"
+
+msgid "(Kogw) The storm is gaining strength! We're doomed!"
+msgstr "(Kogw) Stormen tager til i styrke! Vi er fortabt!"
+
+msgid "(Kogw) Uh, Mal...?"
+msgstr "(Kogw) Uh, Mal...?"
+
+msgid "(Malakar) Are you going to say that EVERY time?"
+msgstr "(Malakar) Har du tænkt dig at sige det hver gang?"
+
+msgid "(Malakar) By the smoke of Gar-Alagar... a spirit!"
+msgstr "(Malakar) Ved røgen af Gar-Alagar... en ånd!"
+
+msgid "(Malakar) It did not attack! It just appeared!"
+msgstr "(Malakar) Den angreb ikke! Den dukkede bare op!"
+
+msgid "(Malakar) Let us press on!"
+msgstr "(Malakar) Fremad!"
+
+msgid "(Malakar) Never!"
+msgstr "(Malakar) Aldrig!"
+
+msgid "(Malakar) The bridge collapsed!"
+msgstr "(Malakar) Broen faldt sammen!"
+
+msgid "(Malakar) The humans pursue us!"
+msgstr "(Malakar) Menneskene forfølger os!"
+
+msgid "(easiest)"
+msgstr "(nemmest)"
+
+msgid "(hardest)"
+msgstr "(sværest)"
+
+msgid "..."
+msgstr "..."
+
+msgid "500 gold! This will go a long way toward our cause!"
+msgstr "500 guldstykker! Det vil være til stor hjælp for vores mission!"
+
+msgid ""
+"A Drake Lord is the chieftain of a powerful and respected tribe. He wields a "
+"sword doused in naphtha, against which few foes can stand. This, coupled "
+"with his mastery of his internal fires, makes him an enemy few would dare to "
+"fight.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"En fyrstehestedrage er kaptajn for en magtfuld og respekteret stamme. Han "
+"bærer et sværd overhældt med sprit, som kun få fjender kan modstå. Dette "
+"kombineret med hans evner med sin egen ild gør at kun få fjender ønsker at "
+"kæmpe imod ham.\n"
+"\n"
+"Specielle bemærkninger:"
+
+msgid ""
+"A Fire, Inferno or Armageddon Drake is necessary to destroy the Gate of "
+"Storms."
+msgstr ""
+"En ild-, inferno eller infernohestedrage er nødvendig for at ødelægge "
+"Stormenes port."
+
+msgid "A river of lava! How am I supposed to cross?"
+msgstr "En flod af lava! Hvordan skal jeg komme over?"
+
+msgid ""
+"A role mostly filled by the dregs of society, Taskmasters live a perverted "
+"life of torturing the slaves under their watch. They especially like beating "
+"Drake slaves with their short swords."
+msgstr ""
+"En rolle normalt udfyldt af de laveste i samfundet. Torturmestre lever et "
+"perverteret liv hvor de torturerer slaver. De kan specielt li' at banke "
+"hestedrager med deres korte sværd."
+
+msgid "A spider web!"
+msgstr "Et edderkopspind!"
+
+msgid "A spirit has attacked!"
+msgstr "En ånd har angrebet!"
+
+msgid "AAAAH!"
+msgstr "AAAAH!"
+
+msgid "AAAAH! I'm doomed!"
+msgstr "Aaaah! Jeg er fortabt!"
+
+msgid "ARRRRGH!"
+msgstr "Arrrgh!"
+
+msgid ""
+"After defeating the rebels, Malakar left the valley, his intent to go to the "
+"landing site and sail to his homeland."
+msgstr ""
+"Efter at have besejret rebellerne forlod Malakar dalen. Han havde en "
+"intention om at gå til landingsområdet og sejle til sit hjemland."
+
+msgid ""
+"After killing the baron and torching his house, Malakar headed out to "
+"intercept the caravan."
+msgstr ""
+"Efter at have dræbt baronen og brændt hans hus ned tog Malakar ud for at "
+"afbryde karavanen."
+
+msgid ""
+"After liberating their home, Malakar and Kamalar mounted a joint offensive "
+"against the capital city of Weswyt."
+msgstr ""
+"Efter befrielsen af deres hjem startede Malakar og Kamalar en fælles "
+"offensiv imod hovedstaden Weswyt."
+
+msgid ""
+"After securing the Blue River, Malakar and Kogw boarded the pirates' "
+"flagship, the Unforgiver, and set sail for Morogor."
+msgstr ""
+"Efter sikringen af Den Blå Flod, gik Malakar og Kogw ombord på "
+"piratflagskibet Den Nagede, og satte sejl mod Morogor."
+
+msgid "Aigaithing"
+msgstr "Aigaithing"
+
+msgid "All is lost!"
+msgstr "Alt er tabt!"
+
+msgid ""
+"And how do I guarantee that you will not kill us while we sleep? Swear on "
+"the fire of Gar-Alagar, king of the gods of Morogor, an oath to me, Malakar "
+"of the Drakes!"
+msgstr ""
+"Og hvordan garanteres jeg, at du ikke dræber os mens vi sover? Svær en ed "
+"til mig på Gar-Alagars ild, konge af Morogors guder du Malakar af "
+"hestedragerne."
+
+msgid "Are you going to say that EVERY time?"
+msgstr "Skal du sige det hver gang?"
+
+msgid ""
+"Armed with a heavy mace, Highwaymen are the last people you want to meet on "
+"a deserted road late at night."
+msgstr ""
+"Bevæbnet med en stor økse er en landevejsrøver den sidste person du ønsker "
+"at møde på en afsondret vej sent om natten."
+
+msgid "Around ten. Fifteen at most."
+msgstr "Omkring 10. Maks 15."
+
+msgid ""
+"As it happens, I'm the leader of a band of... adventurers. We're good sorts, "
+"but those damn elves have been after us for no good reason!"
+msgstr ""
+"Jeg er leder af en gruppe ... opdagelsesrejsende. Vi er gode mennesker, men "
+"de forpulede elver har uden grund jagtet os!"
+
+msgid "At least four hatchlings must survive"
+msgstr "Mindst 4 børn skal overleve"
+
+msgid "At yooourrr ccccommaaaand!"
+msgstr "Under din kommando!"
+
+msgid "Ballista"
+msgstr "Ballist"
+
+msgid "Betrayal"
+msgstr "Forræderi"
+
+msgid "Blockade"
+msgstr "Blokade"
+
+msgid "Blue River"
+msgstr "Blå flod"
+
+msgid "Brother!"
+msgstr "Bror!"
+
+msgid ""
+"But this is bittersweet. My brother is dead... just like Necolar, my "
+"daughter."
+msgstr ""
+"Men det er en bitter dag. Min bror er død... ligesom Necolar, min datter."
+
+msgid "By the smoke of Gar-Alagar... a spirit!"
+msgstr "Ved røgen af Gar-Alagar... en ånd!"
+
+msgid "C'onolar"
+msgstr "C'onolar"
+
+msgid "Captain Kogw! Captain Kogw!"
+msgstr "Kaptajn Kogw! Kaptajn Kogw!"
+
+msgid "Caravan"
+msgstr "Karavane"
+
+msgid "Caravan escapes"
+msgstr "Karavanen undslipper"
+
+msgid "Caravan is destroyed by wolves"
+msgstr "Karavanen er ødelagt af ulve"
+
+msgid ""
+"Caravans are used to carry gold or supplies over long distances. They are "
+"guarded, but they usually also have a soldier with a spear and crossbow in "
+"the back to defend them."
+msgstr ""
+"Karavaner bruges til at transportere guld og forsyninger over lange "
+"distancer. De bevogtes men har normalt også en soldat med et spyd eller "
+"armbrøst bag dem til at forsvare sig med."
+
+msgid ""
+"Caravels are medium-sized attack ships, armed with a ballista and a long-"
+"range catapult."
+msgstr ""
+"Karaveller er mellestore angrebsskibe, bevæbned med en ballist og en "
+"langtrækkende katapult."
+
+msgid "Careorra"
+msgstr "Careorra"
+
+msgid "Cave Naga"
+msgstr "Hulenaga"
+
+msgid "Caves as far as the eye can see. We are completely lost."
+msgstr "Huler så langt øjet rækker. Vi er fuldstændig fortabt."
+
+msgid "Ceomyr"
+msgstr "Ceomyr"
+
+msgid "Chicken"
+msgstr "Kylling"
+
+msgid "Chickens are kept for their meat and eggs."
+msgstr "Kyllinger holdes for deres kød og æg."
+
+msgid "Cicyn"
+msgstr "Cicyn"
+
+msgid ""
+"Clippers, although fast, are very weak. Armed with a ballista, they are used "
+"primarily as scouts."
+msgstr ""
+"Clippere, selvom hurtige, er svage. Bevæbnet med en ballist bruges de mest "
+"som spejdere."
+
+msgid "Collapse the cave exit by destroying the six boulders that support it"
+msgstr "Kollaps huleudgangen ved at ødelægge seks sten som understøtter den"
+
+msgid "Could this key fit that trapdoor?"
+msgstr "Må denne nøgler passer til den gulvdør?"
+
+msgid "Cow"
+msgstr "Ko"
+
+msgid "Cows are livestock that are used for their meat, leather and milk."
+msgstr "Ko er dyrehold som holdes for deres køb, læder og mælk."
+
+msgid "Creatures of the lava! We cannot leave this way!"
+msgstr "Lavaskabninger! Vi kan ikke gå denne vej!"
+
+msgid "Crow"
+msgstr "Krage"
+
+msgid ""
+"Crows are carrion birds which will eat anything dead. Larger ones such as "
+"this have been also known to attack when food is scarce."
+msgstr ""
+"Krageer er ådselædere som vil spise alt dødt. Større dyr som dette er også "
+"kendt for at angribe når maden er sparsom."
+
+msgid "Dacayan"
+msgstr "Dacayan"
+
+msgid "Davies"
+msgstr "Davies"
+
+msgid "Death of Davies"
+msgstr "Davies død"
+
+msgid "Death of Hartholar"
+msgstr "Hartholars død"
+
+msgid "Death of Kamalar"
+msgstr "Kamalars død"
+
+msgid "Death of Kogw"
+msgstr "Kogws død"
+
+msgid "Death of Malakar"
+msgstr "Malakars død"
+
+msgid "Death of Rhys"
+msgstr "Rhys død"
+
+msgid "Death of Tenbakar"
+msgstr "Tenbakars død"
+
+msgid "Death of Theracar"
+msgstr "Theracars død"
+
+msgid "Defeat Prax III"
+msgstr "Besejr Prax 3."
+
+msgid "Defeat all enemy leaders"
+msgstr "Besejr alle fjendtlige ledere"
+
+msgid "Defeat both enemy leaders"
+msgstr "Besejr begge fjendtlige ledere"
+
+msgid "Defeat enemy leader"
+msgstr "Besejr fjendlig leder"
+
+msgid "Defeat the cavalry leader"
+msgstr "Besejr kavalerilederen"
+
+msgid "Destroy the Gate of Storms"
+msgstr "Ødelæg Stormenes port"
+
+msgid "Destroy the caravan"
+msgstr "Ødlæg karavanen"
+
+msgid "Destruction of the Unforgiver"
+msgstr "Ødelæggelse af Den Nagede"
+
+msgid "Die, drake scum!"
+msgstr "Dø dit hestedrage afskum!"
+
+msgid ""
+"Do not mention your 'gods' again, infidel human. I see I will have to teach "
+"you manners."
+msgstr ""
+"Nævn ikke dine »guder« igen dit ugudelige menneske. Jeg kan se at jeg må "
+"lære dig nogle manerer."
+
+msgid ""
+"Dogs of the sea, pirates are outlaws who prey in the open water. Armed with "
+"a cutlass, they make nasty foes."
+msgstr ""
+"Hunde på havet, pirater er fredløse som tager bytte på åbent hav. Med en "
+"huggert er de en modbydelig fjende."
+
+msgid "Don't be so hasty, brother. I bring friends."
+msgstr "Ikke så hurtigt bror. Jeg har venner med."
+
+msgid "Donoaov"
+msgstr "Donoaov"
+
+msgid "Door"
+msgstr "Dør"
+
+msgid "Drake Chieftain"
+msgstr "Hestedragekaptajn"
+
+msgid ""
+"Drake Chieftains are the leaders of their tribes. Skilled in the use of both "
+"their sword and their internal fire, they are also trained from a young age "
+"to lead their fellow Drakes into battle.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Hestedragekaptajner er ledere af deres stammer. De er øvede i brugen af både "
+"deres sværd og deres ild, de trænes også fra en ung alder i at anføre deres "
+"artsfæller i krig.\n"
+"\n"
+"Specielle bemærkninger:"
+
+msgid "Drake Guard"
+msgstr "Hestedragevagt"
+
+msgid "Drake Guerilla"
+msgstr "Hestedrageguerilla"
+
+msgid "Drake Hatchling"
+msgstr "Hestedrage barn"
+
+msgid "Drake Lord"
+msgstr "Fyrstehestedrage"
+
+msgid "Drake Priest"
+msgstr "Hestedragepræst"
+
+msgid "Drake Rebel"
+msgstr "Hestedragerebel"
+
+msgid "Drake Slave"
+msgstr "Hestedrageslave"
+
+msgid "Drake Slaves are servile members of this reptilian race."
+msgstr "Hestedrageslaver er underdanige medlemmer af denne øglerace."
+
+msgid "Drake Spear"
+msgstr "Hestedragespyd"
+
+msgid "Drake Worker"
+msgstr "Hestedragearbejder"
+
+msgid "Drakes! We must flee, at least for now!"
+msgstr "Hestedrager! Vi må flygte, i det mindste for nu!"
+
+msgid ""
+"Dreadnoughts are the pride of the humans' navy. With 3 ballistae and a "
+"catapult, they can sink or kill almost anything unlucky enough to be in "
+"their way."
+msgstr ""
+"En dreadnought er stoltheden i menneskenes flåde. Med 3 ballister og en "
+"katapult kan de dræbe næsten alle, som er så uheldige at være foran dem."
+
+msgid "Dredgno"
+msgstr "Dredgno"
+
+msgid "Dredgno? Leader?"
+msgstr "Dredgno? Leder?"
+
+msgid "Driver"
+msgstr "Slavepisker"
+
+msgid "Dump the boiling oil!"
+msgstr "Kast den kogende olie!"
+
+msgid "Einelen"
+msgstr "Einelen"
+
+msgid "Endgame"
+msgstr "Slutspil"
+
+msgid "Enough! Your time has come!"
+msgstr "Nok! Dit tid er kommet!"
+
+msgid "Epilogue"
+msgstr "Epilog"
+
+msgid ""
+"Eventually, he and Kogw were deified. Their spirits remained to watch over "
+"the drakes from above."
+msgstr ""
+"Tilsidst blev han og Kogw ophøjet til guder. Deres ånder blev tilbage for at "
+"vogte over hestedragerne fra himlen."
+
+msgid "Exit the cave"
+msgstr "Ud af hulen"
+
+msgid "Explore the river"
+msgstr "Udforsk floden"
+
+msgid "Explore the surrounding area"
+msgstr "Undersøg det omgivende område"
+
+msgid "Explore to the south"
+msgstr "Udforsk mod syd"
+
+msgid "Falcon"
+msgstr "Falk"
+
+msgid "Fighter"
+msgstr "Kæmper"
+
+msgid "Find a way out of the caverns"
+msgstr "Find en vej ud af hulerne"
+
+msgid "Flight to Freedom"
+msgstr "Vejen til Frihed"
+
+msgid ""
+"For hundreds of years afterward, Malakar was remembered as one of the heroes "
+"of the drakes."
+msgstr "I århundreder blev Malakar husket som en af hestedragernes helte."
+
+msgid "Forest of Nightmares"
+msgstr "Mareridtenes skov"
+
+msgid "GUARDS!!! Slay them all!"
+msgstr "Vagter!!! Dræb dem alle!"
+
+msgid "GUGGAGUGGAGU!"
+msgstr "Guggaguggagu!"
+
+msgid ""
+"Galleons are sailing warships. The humans' attempt at sea travel, they are "
+"expensive, but very strong. Armed with three ballistae, they mete out "
+"justice with deadly efficency."
+msgstr ""
+"Galeoner er sejlende krigsskibe. De er dyre, men meget solide. Bevæbnet med "
+"tre ballister kan de udddel retfærdighed med dødelig præcision."
+
+msgid "Gargoyle"
+msgstr "Gargoil"
+
+msgid "Gate of Storms"
+msgstr "Stormenes port"
+
+msgid "Giant Boar"
+msgstr "Kæmpevildsvin"
+
+msgid ""
+"Giant Boars are overgrown pigs with a nasty disposition that will attack "
+"anything that moves. It is fortunate that these animals are rare."
+msgstr ""
+"Kæmpevildsvin er store svin der har en modbydelig vane med at angribe alt "
+"som bevæger sig. Heldigvis er disse dyr sjældne."
+
+msgid "Glider: 'Malakar, we have sighted land!'"
+msgstr "Glider: Malakar Vi har set land!«"
+
+msgid "Gomgaotilo"
+msgstr "Gomgaotilo"
+
+msgid "Grilcyn"
+msgstr "Grilcyn"
+
+msgid "Guard"
+msgstr "Vagt"
+
+msgid "HELP!!!"
+msgstr "Hjælp!!!"
+
+msgid "Ha! Stupid human, what do you think those things on our backs are?"
+msgstr "Dumme menneske, hvad tror du det er for ting vi har på ryggen?"
+
+msgid "Habnar"
+msgstr "Habnar"
+
+msgid "Hafwyt is secure, and its walls undamaged."
+msgstr "Hafwyt er sikker, og dets mure uskadte."
+
+msgid ""
+"Hafwyt shall not fall. Its walls are solid stone, enchanted by the magi of "
+"the Citadel."
+msgstr ""
+"Hafwyt vil ikke falde. Dens mure er lavet af solide sten, fortryllet af magi."
+
+msgid "Hago"
+msgstr "Hago"
+
+msgid "Haloran"
+msgstr "Haloran"
+
+msgid "Halt! Please!"
+msgstr "Holdt! Venligst!"
+
+msgid "Hartholar"
+msgstr "Hartholar"
+
+msgid "He died fighting for you. Like any of your other soldiers would."
+msgstr ""
+"Han døde i kamp for dig. Som enhver af dine andre soldater ville have gjort."
+
+msgid "He was a true warrior."
+msgstr "Han var en sand kriger."
+
+msgid "Hello brother!"
+msgstr "Hej bror!"
+
+msgid "Help us! We are pursued by humans!"
+msgstr "Hjælp os! Vi forfølges af mennesker!"
+
+msgid "Heungah! You cannot run from our forces!"
+msgstr "Heungah! Du kan ikke løbe fra vores styrker!"
+
+msgid "Hey! $gold_given pieces of gold were in this chest!"
+msgstr "Hej! Der var $gold_given guldstykker i denne kiste!"
+
+msgid "Highwayman"
+msgstr "Landevejsrøver"
+
+msgid "Hmmm... $gold_given pieces of gold were in this chest!"
+msgstr "Hmmm... Der var $gold_given guldstykker i denne kiste!"
+
+msgid "Hmmm... A statue of a dragon."
+msgstr "Hmmm... En dragestatue."
+
+msgid "Hmmm... the bones of a dragon."
+msgstr "Hmmm... En drages skelet."
+
+msgid "Hold! I feel something!"
+msgstr "Holdt! Jeg kan mærke noget!"
+
+msgid "Hordes of the Foul Undead"
+msgstr "Horder af fæle udøde"
+
+msgid "Horse"
+msgstr "Hest"
+
+msgid ""
+"Horses that escape captivity often become wild and hostile to humans, "
+"especially if cornered or frightened.  Though they are easily put down, "
+"their kicks can smash a man's skull."
+msgstr ""
+"Heste som er undsluppet fangenskab bliver ofte vilde og fjendtlige over for "
+"mennesker specielt hvis de føler sig klemt op i et hjørne eller skræmmes. "
+"Selvom de hurtigt kan nedlægges kan deres spark knuse en mands kranie."
+
+msgid ""
+"Horses, when tamed, are used as mounts by Elvish and Human armies, and also "
+"as beasts of burden."
+msgstr ""
+"Heste, når de er tæmmet, anvendes som ridedyr af elvernes og menneskenes "
+"hære."
+
+msgid "How DARE you insult my clashers, puny softskin!"
+msgstr "Hvor vover du at fornærme mine spydmænd, ynkelige blødhud!"
+
+msgid "How am I to cross the lava?"
+msgstr "Hvordan skal jeg komme forbi lavaen?"
+
+msgid "How should the saurians be fielded in battle?"
+msgstr "Hvordan bruger vi bedst øglerne i slaget?"
+
+msgid ""
+"However, once the humans came to Morogor, we had to go into hiding. With the "
+"help of the saurians, I was able to avoid their patrols."
+msgstr ""
+"Men da menneskene kom til Morogor måtte vi gå i skjul. Med hjælp fra øglerne "
+"var jeg i stand til at undgå patruljerne."
+
+msgid "Human! Feel my wrath! For Necolar!"
+msgstr "Menneske! Mærk min vrede! For Necolar!"
+
+msgid ""
+"I am done being at the hands of humans! Drakes! Rally to me! Gather what "
+"strength you have! ATTACK! For VENGEANCE!!!"
+msgstr ""
+"Jeg er færdig med at være i hænderne på mennesker! Hestedrage! Alle! Saml "
+"den styrke i har! Angrib! HÆVN!!!"
+
+msgid "I am gone!"
+msgstr "Jeg forsvinder!"
+
+msgid "I am gone! Fight on against the humans without me!"
+msgstr "Jeg er færdig! Kæmp videre mod menneskene uden mig!"
+
+msgid ""
+"I call upon Gar-Hagar, god of all that is burning and favored child of Gar-"
+"Alagar, to destroy this portal of evil!"
+msgstr ""
+"Jeg hidkalder Gar-Hagar gud over alt som brænder til at ødelægge denne "
+"portal af ondskab!"
+
+msgid "I dddddie! Fffight ffor meee...avvvennnnge...kkkill huuumansssss..."
+msgstr "Jeg dør! Kæmp for mig ... Hævn mig ... Dræb menneskene ..."
+
+msgid "I feel only the blasting heat of the lava."
+msgstr "Jeg kan kun mærke varmen fra lavaen."
+
+msgid ""
+"I found a small group of them. Refugees from the humans, just like us. They "
+"have allied with me against the humans."
+msgstr ""
+"Jeg fandt en lille gruppe af dem. Flygtninge fra menneskene, ligesom os. De "
+"har allieret sig med mig imod menneskene."
+
+msgid "I guess you'd just have to leave them behind."
+msgstr "Jeg antager at du bare må lade dem blive tilbage."
+
+msgid "I have failed!"
+msgstr "Jeg er mislykket!"
+
+msgid "I really failed this time..."
+msgstr "Jeg svigtede virkelig denne gang..."
+
+msgid "I request your assistance fighting the evil humans."
+msgstr "Jeg anmoder om din assistance til at kæmpe mod de onde mennesker."
+
+msgid "I seem to have found a key. What it unlocks, I do not know."
+msgstr "Jeg har fundet en nøgle. Hvad den skal bruges til ved jeg ikke."
+
+msgid "I will carry you, hop on my back."
+msgstr "Jeg bærer dig, hop op på min ryg."
+
+msgid "I will kill meeeeself ssssome humanssss!"
+msgstr "Jeg vil dræbe miiiig nooogle mennnnnesker!"
+
+msgid "I will take care of that later. Drakes! We need to explore this river!"
+msgstr "Jeg tager mig af det senere. Hestedrager! Vi må udforske floden!"
+
+msgid "I will take command of the saurians."
+msgstr "Jeg tager kommando over øglerne."
+
+msgid "Intruders! Die!"
+msgstr "Ubudne gæster! Dø!"
+
+msgid "Invasion of Hafwyt's inner keep"
+msgstr "Invasion af Hafwyts indre borgtårn"
+
+msgid "It did not attack! It just appeared!"
+msgstr "Den angreb ikke! Den dukkede bare op!"
+
+msgid ""
+"It's hopeless, Malakar. That's a whole fleet of their finest, and we cannot "
+"escape!"
+msgstr ""
+"Det er håbløst Malakar. Det er en hel flåde af deres bedste, og vi kan ikke "
+"undslippe."
+
+msgid "It's too small for drakes..."
+msgstr "Det er for lille for en hestedrage..."
+
+msgid "Just how many of these saurians do you have?"
+msgstr "Hvor mange af disse øgler har du?"
+
+msgid "Kamalar"
+msgstr "Kamalar"
+
+msgid "Kill both guards"
+msgstr "Dræb begge vagter"
+
+msgid "Kill the hatchlings! Kill them all!"
+msgstr "Dræb børnene! Dræb dem alle!"
+
+msgid "Kill the overseer"
+msgstr "Dræb den tilsynsførende"
+
+msgid "Kogw"
+msgstr "Kogw"
+
+msgid "Kogw lived to be 47, and was a noble in Malakar's court."
+msgstr "Kogw levede til han blev 47. Han var en adelig i Malakars hus."
+
+msgid "Kogw: 'Be wary, this is not Morogor, but the Isle of Storms.'"
+msgstr "Kogw: »Vær forsigtig, dette er ikke Morogor, men Stormenes Ø.«"
+
+msgid ""
+"Kogw: 'I do not know. Some say it is a plague, others say it is something "
+"within the earth, but the most common reports describe powerful spirits, "
+"ogre-like creatures made of solid thunder that travel in flashes of "
+"lightning. Even these are supposedly only the vanguard of far worse "
+"creatures to come.'"
+msgstr ""
+"Kogw: »Jeg ved det ikke. Nogle siger det er en pest, andre at det er noget "
+"inde fra jorden, men de fleste rapporter beskriver magtfulde ånder, "
+"ogrelignende skabninger skabt af lyn, der fremstår i et lysglimt. Disse "
+"skulle så være forposten for endnu værre skabninger.«"
+
+msgid "Kogw: 'Malakar... I...'"
+msgstr "Kogw: »Malakar... Jeg...«"
+
+msgid "Kogw: 'The funny thing about elves is this... oh well.'"
+msgstr "Kogw: Den sjove ting ved elver er at... nå«"
+
+msgid ""
+"Kogw: 'Thousands of years ago, according to legend, a great wizard was "
+"exiled here. While he was here, he opened a gate to the netherworld and "
+"contacted the Lich-Lord, in an attempt to conquer the world.'"
+msgstr ""
+"Kogw: »Ifølge legenden var en stor troldmand i eksil her for tusinder af år "
+"siden. Mens han var her, han åbnede en port til den anden versen og "
+"kontaktede lichlensherrerne, kongerne i den anden verden, i et forsøg på at "
+"erobre verden for tusinder af år siden.«"
+
+msgid "Kogw: ..."
+msgstr "Kogw: ..."
+
+msgid "Kzzklk"
+msgstr "Kzzklk"
+
+msgid "Kzzklk, show yourself!"
+msgstr "Kzzklk, vis dig selv!"
+
+msgid "Labryn"
+msgstr "Labryn"
+
+msgid "Landfall"
+msgstr "Landgang"
+
+msgid ""
+"Large dogs, wolves are aggressive animals that hunt in packs. Although weak "
+"individually, a pack can kill even the strongest man in minutes. Wolves are "
+"trained and ridden by goblins."
+msgstr ""
+"Store hunde, ulve er aggressive dyr som jager i grupper. Selvom de er svage "
+"individuelt, kan et ulvekobbel dræbe selv den stærkeste mand på minutter. "
+"Ulve trænes og bruges som ridedyr af gobliner."
+
+msgid "Lava Beast"
+msgstr "Lavabæst"
+
+msgid "Lava Monster"
+msgstr "Lavamonster"
+
+msgid "Lava hot!!! Ouch!!!"
+msgstr "Lavaen er varm!!! Ouch!!!"
+
+msgid "Lenvan"
+msgstr "Lenvan"
+
+msgid "Let us go!"
+msgstr "Lad os gå!"
+
+msgid "Liberation"
+msgstr "Befrielse"
+
+msgid ""
+"Like all pirates, these are thieves of the water. This one is a captain, who "
+"is in charge of leading his thugs into battle."
+msgstr ""
+"Som alle andre pirater er de havets tyve. Denne er kaptajn og dermed anfører "
+"af sine bøller i kamp."
+
+msgid "Like me?"
+msgstr "Som mig?"
+
+msgid "Look. Buddy."
+msgstr "Se. Ven."
+
+msgid "Looky here. $gold_given pieces of gold were in this chest!"
+msgstr "Heldig med denne her. Der var $gold_given guldstykker i denne kiste!"
+
+msgid "Lord"
+msgstr "Lensherre"
+
+msgid "Luna"
+msgstr "Luna"
+
+msgid "Lunnyn"
+msgstr "Lunnyn"
+
+msgid "Major Spirit"
+msgstr "Større ånd"
+
+msgid "Malakar"
+msgstr "Malakar"
+
+msgid ""
+"Malakar and Kamalar would lead the main force, and the saurian commander, "
+"Kzzklk, would lead his force of saurians, in hopes of outflanking the humans."
+msgstr ""
+"Malakar og Kamalar skulle anføre hovedstyrken, og øglekommandøren Kzzklk "
+"skulle anføre hans styrke af øgler i håb om at kunne flanke menneskene."
+
+msgid ""
+"Malakar lived to the ripe old age of 133. It was rumored that a massive "
+"firestorm erupted when he died, engulfing half of Morogor."
+msgstr ""
+"Malakar levede til han var 133. Der var rygter om at en enorm ildstorm brød "
+"ud da han døede og at den spiste halvdelen af Morogor."
+
+msgid ""
+"Malakar then traveled to the home of his older brother Kamalar, high priest "
+"of Gar-Dalgar, the Murderer."
+msgstr ""
+"Malakar rejste herefter til hjemmet for sin ældre bror Kamlar, ypperstepræst "
+"i Gar-Dalgar, morderen."
+
+msgid ""
+"Malakar was crowned King of the Drakes, for saving his people from the hands "
+"of the humans."
+msgstr ""
+"Malakar blev kronet som konge over hestedragerne, da han var den som havde "
+"reddet sit folk fra menneskene."
+
+msgid ""
+"Malakar would command the saurians, and the drake army would be split "
+"between them."
+msgstr ""
+"Malakar skulle stå for kommandoen af øglerne og hestedragehæren skulle deles "
+"imellem dem."
+
+msgid ""
+"Malakar... our hatchlings... they've been tortured and wounded. Why... why "
+"would they do this?"
+msgstr ""
+"Malakar, børnene er blevet tortureret og skadet. Hvorfor... hvorfor har de "
+"gjort dette?"
+
+msgid "Malakar: '...Kogw, captain...'"
+msgstr "Malakar: »...Kogw, kaptajn...«"
+
+msgid "Malakar: 'Into the caves, and prepare to seal the entrance!'"
+msgstr "Malakar: »Ind i hulerne, og forbered at forsegle indgangen!«"
+
+msgid "Malakar: 'It is I. Do I know you?'"
+msgstr "Malakar: »Det er mig. Kender jeg dig?«"
+
+msgid "Malakar: 'Morogor! At last!'"
+msgstr "Malakar: »Morogor! Endelig!«"
+
+msgid "Malakar: 'No.'"
+msgstr "Malakar: »Nej.«"
+
+msgid "Malakar: 'This matter is not open for discussion. We must move!'"
+msgstr "Malakar: »Denne sag er ikke til diskussion. Vi må af sted!«"
+
+msgid "Malakar: 'What evil?'"
+msgstr "Malakar: »Hvilken ondskab?«"
+
+msgid "Malakar: ..."
+msgstr "Malakar: ..."
+
+msgid "Mato"
+msgstr "Mato"
+
+msgid "Men! Round up the slaves, and make them suffer for their disobedience!"
+msgstr "Mænd! Saml slaverne, og lad dem lide for deres ulydighed!"
+
+msgid "Minor Spirit"
+msgstr "Mindre ånd"
+
+msgid "More advanced Drakes, the Workers fight with their maces."
+msgstr "Mere avancerede hestedrager, arbejderne kæmper med deres køller."
+
+msgid ""
+"More advanced Drakes, these guerilla fighters have so far led a successful "
+"campaign against their masters.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Mere avancerede hestedragere. Disse guerillakæmpere har indtil nu anført en "
+"succesfuld kampagne imod deres herrer.\n"
+"\n"
+"Specielle bemærkninger:"
+
+msgid ""
+"More experienced Skalds, the Jugglers can throw more daggers. They have also "
+"learned to supplement their natural poison with swamp berry extracts."
+msgstr ""
+"Mere erfarne skjalde kaldet jonglører kan kaste flere daggerter. De har også "
+"lært sig at supplere deres gift med sumpbærudtræk."
+
+msgid "Morogor is ours!"
+msgstr "Morogor er vores!"
+
+msgid "Move Malakar to the cave entrance"
+msgstr "Flyt Malakar til huleindgangen"
+
+msgid "Move Malakar to the end of the road"
+msgstr "Flyt Malakar til afslutningen af vejen"
+
+msgid "Move Malakar to the end of the southern stream"
+msgstr "Flyt Malakar til afslutningen af den sydlige strøm"
+
+msgid "Move Malakar to the ruined keep"
+msgstr "Flyt Malakr til det forladte borgtårn"
+
+msgid "Move Malakar to the western edge of the river of lava"
+msgstr "Flyt Malakar til det vestlige hjørne af lavafloden"
+
+msgid ""
+"Move a Drake Burner, Fire Drake, or Inferno Drake onto the Gate of Storms"
+msgstr ""
+"Flyt en Brændende hestedrage, ildhestedrage eller infernohestedrage hen på "
+"Stormenes port"
+
+msgid "Move a Fire, Inferno or Armageddon Drake onto the Gate of Storms"
+msgstr "Flyt en ild-, inferno eller armageddonhestedrage hen på Stormenes port"
+
+msgid "Move a unit onto the Gate of Storms"
+msgstr "Flyt en enhed over på Stormenes port"
+
+msgid "Move the Unforgiver to the East"
+msgstr "Flyt Den Nagede til Øst"
+
+msgid "Move the Unforgiver to the bottom"
+msgstr "Flyt Den Nagede til bunden"
+
+msgid "Move the Unforgiver to the pier"
+msgstr "Flyt Den Nagede til landgangsbroen"
+
+msgid "My fire is too weak. We need a stronger firebreather!"
+msgstr "Min ild er for svag. Brug en ild- eller infernohestedrage!"
+
+msgid "NO!! Our hatchlings... our tribe is lost. Oh, Necolar, I am sorry..."
+msgstr ""
+"NEJ!! Vores børn.. vores stamme er fortabt. Oh, Necolar, Jeg er ked af det..."
+
+msgid "NOOOOOOOO! I cannot bear to live!"
+msgstr "Nej! Jeg begår selvmord!"
+
+msgid ""
+"NOTE: This campaign has two branches, determined by the outcome of this "
+"scenario. To play the original branch, lose this level."
+msgstr ""
+"BEMÆRK: Denne kampagne har to grene som afgøres af udfaldet af dette "
+"scenarie. Hvis du ønsker at spille den originale gren, så tab dette scenarie."
+
+msgid "Naga Hunter"
+msgstr "Nagadusørjæger"
+
+msgid "Naga Mage"
+msgstr "Nagatroldmand"
+
+msgid "Nagini Mage"
+msgstr "Naginitroldmand"
+
+msgid ""
+"Newborn Drakes, Hatchlings are used as cannon fodder and as cheap walls."
+msgstr "En barne hestedrage. De bruges som kanonføde og som billige vægge."
+
+msgid "No! Hafwyt has fallen!"
+msgstr "Nej! Hafwyt er faldet!"
+
+msgid "No! The caravan has escaped into the hills!"
+msgstr "Nej! Karavanen er undsluppet ind i bakkerne!"
+
+msgid ""
+"No! The humans have overrun our lands, and their cavalry blocks our escape!"
+msgstr ""
+"Nej! Menneskene har løbet vores land over ende, og deres kavaleri blokerer "
+"vores flugtmulighed!"
+
+msgid "No! Without him, I cannot hope to prevail!"
+msgstr "Nej! Uden ham har jeg intet håb om at vinde!"
+
+msgid ""
+"No, Kogw, we must rejoin the tribe and begin a counterattack. We are not "
+"bats! Wings do not work very well underground. Neither do cold blooded "
+"Drakes!"
+msgstr ""
+"Nej Kogw, vi må samle stamme og begynde et modangreb. Vi er ikke flagermus! "
+"Vinger er ikke gode at have under jorden. Koldblodede hestedrager hører "
+"heller ikke hjemme dernede!"
+
+msgid "Now I will get revenge for my enslavement!"
+msgstr "Nu får jeg hævn for mit fangenskab!"
+
+msgid "Now that I have freed the tribe, I have true warriors at hand!"
+msgstr "Nu da jeg har befriet stammen har jeg rigtige krigere til rådighed!"
+
+msgid "Now the drakes will be enslaved again!"
+msgstr "Nu bliver hestedragerne til slaver igen!"
+
+msgid ""
+"Now, we follow the southern stream! Without their horses, they will have "
+"trouble chasing us through the hills."
+msgstr ""
+"Nu følger vi den sydlige strøm! Uden deres heste vil de få problemer med at "
+"jage os igennem bakkerne."
+
+msgid ""
+"Now, with your arrival, we can emerge from our hiding place. Kzzklk, will "
+"you assist us once again?"
+msgstr ""
+"Med din ankomst er der håb om at vi kan komme ud fra vores skjulested. "
+"Kzzklk vil du hjælpe os endnu engang?"
+
+msgid "OW! Wait... the guards' fresh replacements... they are late tonight..."
+msgstr "Ow! Vent... vagternes afløsninger... de er sent på den i dag..."
+
+msgid "Oddryn"
+msgstr "Oddryn"
+
+msgid ""
+"On the island of Morogor, a drake tribe was sleeping one day when they saw a "
+"strange sight."
+msgstr "På øen Morogor sov en hestedragestamme da de så et mærkeligt skue."
+
+msgid "Or, I can place the saurians under your command, to add to your army."
+msgstr "Eller jeg kan placere øglerne under din kommando, for at øge din hær."
+
+msgid "Our enemies are at are our very backs! We must flee!"
+msgstr "Vores fjender er lige i hælene på os! Vi må flygte!"
+
+msgid "Our hatchlings are under attack! Hurry!"
+msgstr "Vores børn er under angreb! Hurtigt!"
+
+msgid "Our supplies are dangerously low! Hurry!"
+msgstr "Vores forsyninger er faretruende lave! Hurtigt!"
+
+msgid "Our walls are failing! Hurry!"
+msgstr "Vores mure falder ned! Hurtigt!"
+
+msgid "Overseer"
+msgstr "Tilsynsførende"
+
+msgid "Pig"
+msgstr "Svin"
+
+msgid ""
+"Pigs are instrumental in the production of ham. Also, their skin is used to "
+"make Wesballs, like those used in the popular game of Wesbowl."
+msgstr ""
+"Svin bruges til kødproduktion. Deres skin anvendes også til produktionen af "
+"bolde (Wesbolde), som bruges i spillet Wesbowl."
+
+msgid "Pirate"
+msgstr "Pirat"
+
+msgid "Pirate Captain"
+msgstr "Piratkaptajn"
+
+msgid "Prax III"
+msgstr "Prax 3."
+
+msgid "Protect Kamalar"
+msgstr "Beskyt Kamalar"
+
+msgid ""
+"Protected by their massive golden shields, Drake Guards are responsible for "
+"the protection of more important drakes.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Beskyttet af deres massive gyldne skjolde gør at hestedragevagterne er "
+"ansvarlige for beskyttelsen af mere vigtige hestedrager.\n"
+"\n"
+"Specielle bemærkninger:"
+
+msgid "RUARRAGH!"
+msgstr "Ruarragh!"
+
+msgid "Rabbit"
+msgstr "Kanin"
+
+msgid "Rebel"
+msgstr "Rebel"
+
+msgid "Rebellion"
+msgstr "Oprør"
+
+msgid "Remember, men, take the caravan! We have no quarrel with the elves."
+msgstr "Husk, mænd, tag karavanen! Vi har intet udestående med elverne."
+
+msgid "Rescue the Hatchlings"
+msgstr "Red børnene"
+
+msgid "Resist for as long as possible"
+msgstr "Gør modstand i så lang tid som muligt"
+
+msgid "Return to Morogor"
+msgstr "Tilbage til Morogor"
+
+msgid "Rhaedoc"
+msgstr "Rhaedoc"
+
+msgid "Rheoran"
+msgstr "Rheoran"
+
+msgid "Rhygwyn"
+msgstr "Rhygwyn"
+
+msgid "Rhyrraent"
+msgstr "Rhyrraent"
+
+msgid "Rhys"
+msgstr "Rhys"
+
+msgid "Rhys?"
+msgstr "Rhys?"
+
+msgid "River of Skulls"
+msgstr "Kraniernes flod"
+
+msgid "Rock"
+msgstr "Spærrende sten"
+
+msgid "Rock Golem"
+msgstr "Stengolem"
+
+msgid ""
+"Rock Golems are creatures made out of solid, living rock. They have a weak "
+"attack, but are incredibly hard to destroy."
+msgstr ""
+"Stengolem er skabninger skabt af solid levende sten. De har et svagt angreb "
+"men er utrolig svære at ødelægge."
+
+msgid "Rockfall"
+msgstr "Stenskred"
+
+msgid "Saurian Headhunter"
+msgstr "Øgledusørjæger"
+
+msgid ""
+"Saurian Headhunters are the heavy fighters of the saurians. Armed with an "
+"axe, they can deliver relatively strong blows, but are encumbered by armor."
+msgstr ""
+"Øgledusørjægere er blandt de stærke kæmpere hos øglerne. Bevæbnet med en "
+"økse kan de yde stærke slag, men deres rustning gør dem langsomme."
+
+msgid "Saurian Jarl"
+msgstr "Øglejarl"
+
+msgid ""
+"Saurian Jarls are the leaders of saurian attack squads. Armed with an axe "
+"and armored, they are capable of doing decent damage and can take some hits, "
+"but the armor slows them down to the point where they cannot sneak pass "
+"enemies."
+msgstr ""
+"Øglejarlen er ledere af øglernes angrebsgrupper. Bevæbnet med en økse og "
+"rustning, kan de øve stor skade og kan også selv tåle nogle slag, men "
+"rustningen gør dem langsomme og de kan derfor ikke snige sig forbi fjender."
+
+msgid "Saurian Juggler"
+msgstr "Øglejonglør"
+
+msgid "Saurian Knifethrower"
+msgstr "Øgleknivkaster"
+
+msgid "Saurian Margrave"
+msgstr "Øglemarkis"
+
+msgid ""
+"Saurian Margraves are the leaders of saurian armies. They are also skilled "
+"with the axe, but like the Jarls, are, due to their armor, slower than most "
+"saurians and unable to sneak past enemies."
+msgstr ""
+"Øglemarkiser er lederne af øglernes hær. De er også dygtige med en økse, men "
+"som jarlerne er de langsommere end de fleste andre øgler på grund af deres "
+"rustning og de kan ikke snige sig forbi fjender."
+
+msgid "Saurian Skald"
+msgstr "Øgleskjald"
+
+msgid "Shadow Mage"
+msgstr "Skyggetroldmand"
+
+msgid "Sink the Luna"
+msgstr "Sænk Luna"
+
+msgid "Skula-Teroa"
+msgstr "Skula-Teroa"
+
+msgid "Slaves! Surrender or die!"
+msgstr "Slaver! Overgiv jer eller dø!"
+
+msgid "So be it. Prepare to be sunk!"
+msgstr "Så gør jer klar til at blive sænket!"
+
+msgid "So this is what the bastards did with our city!"
+msgstr "Så dette er hvad møgsvinene gjorde med vores by!"
+
+msgid "So this is why the mansion is haunted..."
+msgstr "Så det er derfor dette sted er hjemsøgt..."
+
+msgid ""
+"Soldiers! Attack! I expect each of you to bring back the scalp of a human!"
+msgstr ""
+"Soldater! Angrib! Jeg forventer, at i alle sammen kommer med en "
+"menneskeskalp!"
+
+msgid "Southern Shore"
+msgstr "Sydlig bred"
+
+msgid "Survival"
+msgstr "Overlevelse"
+
+msgid "Survive for 20 turns"
+msgstr "Overlev i 20 runder"
+
+msgid "Swamps of the Jamolar"
+msgstr "Jamolar-sumpen"
+
+msgid "Take your place at the throne"
+msgstr "Indtag din plads på tronen"
+
+msgid "Taskmaster"
+msgstr "Torturmester"
+
+msgid "Tenbakar"
+msgstr "Tenbakar"
+
+msgid "That is a hidden door. Let us see what is behind it!"
+msgstr "Det er en skjult dør. Lad os se hvad der gemmer sig bag den!"
+
+msgid "The Baron's army has arrived! We are defeated... for now."
+msgstr "Baronens hær er ankommet! Vi er besejret... for nu."
+
+msgid ""
+"The Battleship, very fast and armed with 3 ballistae, is a very versatile "
+"ship."
+msgstr ""
+"Slagskibet, meget hurtigt og bevæbnet med 3 ballistaer, er et meget alsidigt "
+"skib."
+
+msgid ""
+"The Cave Naga have adapted to survive deep underground, and are thus capable "
+"of traveling through even lava. With eyes adapted to low-light conditions, "
+"they excel underground and at night, but are hindered by bright light. Their "
+"muscles have evolved to be stronger, but slower. Their tail also has a "
+"deadly poison."
+msgstr ""
+"Hulenagaen er tilpasset et liv dybt under jorden. De kan endda bevæge sig "
+"igennem lava. Med øjne tilpasset meget lidt lys kan de nemt orientere sig om "
+"natten, men de hæmmes af direkte lys. Deres muskler har udviklet sig til at "
+"blive stærkere, men langsommere. Deres hale har også en dødelig gift."
+
+msgid "The Drake Escape"
+msgstr "Hestedrage flugten"
+
+msgid "The Exodus"
+msgstr "Udvandringen"
+
+msgid "The Frigate is rather slow, but it is powerful and well-protected."
+msgstr "Fregaten er langsom, men stærk og godt beskyttet."
+
+msgid "The Lava Beast is a living, breathing hunk of lava with a bad attitude."
+msgstr ""
+"Lavabæstet er en levende, åndende klump lave med en dårlig indstilling."
+
+msgid ""
+"The Lava Monster is a nasty creature made of living lava, who can punch and "
+"throw red-hot boulders. It is also immune to fire."
+msgstr ""
+"Lavamonstret er en fæl skabning af levende lava, som kan kaste rødglødende "
+"sten. Monstret er immum over for ild."
+
+msgid "The Luna is sinking! All hands, prepare for emergency boarding!"
+msgstr "Luna synker! Alle gør klar til nødevakuering!"
+
+msgid ""
+"The Major Spirit is one of the most powerful beings known. Literally "
+"radiating with power, it can throw lightning bolts that destroy entire "
+"cities."
+msgstr ""
+"Den større ånd er en af de mest magtfulde væsner kendt. Magten strømmer ud "
+"fra dem, og de kan kaste lynkugler som ødelægger hele byer."
+
+msgid "The Manor"
+msgstr "Huset"
+
+msgid "The Open Ocean"
+msgstr "Det åbne hav"
+
+msgid ""
+"The Pirate Cruiser is a larger pirate ship, either built or captured. It has "
+"3 ballistae."
+msgstr ""
+"Piratkrydseren er et stort piratskib, enten selv bygget eller erobret. Den "
+"har 3 ballister."
+
+msgid ""
+"The Pirate Galleon is a former battleship of the Wesnothian navy, captured "
+"by renegades and pressed into service. It has 5 ballistae."
+msgstr ""
+"Piratgaleonen er et tidligere slagskib fra Wesnoths hær, erobret af "
+"overløbere og tvunget ind i pirattjeneste. Den har 5 ballister."
+
+msgid ""
+"The Saurian Knifethrowers are the elite of the Skalds. They possess "
+"incredible skill with their arms, enabling them to throw many daggers at "
+"blindingly fast speeds."
+msgstr ""
+"Øgleknivkasterne er eliten blandt skjaldene. De har utrolige evner med deres "
+"arme, hvilket gør dem i stand til at kaste mange daggerter i ekstrem høj "
+"fart."
+
+msgid ""
+"The Saurian Skalds are selected from a slower-moving but considerably "
+"stronger race of saurians, which also bear a dreaded poison bite. However, "
+"they are best known for their manual dexterity, which they translate into "
+"fast dagger throwing."
+msgstr ""
+"Øgleskjaldene vælges fra en ikke så hurtig bevægende race af øgler der er "
+"stærkere og også har en dødelig gift i deres bid. De er dog mest kendt for "
+"deres behændighed som de bruger til at kaste daggerter med."
+
+msgid ""
+"The Slave Driver makes a living by beating slaves in order to boost their "
+"productivity."
+msgstr ""
+"Slavepiskeren tjener sine penge ved at banke slaver så de producerer mest "
+"muligt."
+
+msgid ""
+"The Thunder Spirit is an awesome foe, that can punch with electric fury and "
+"fire lightning bolts capable of destroying houses."
+msgstr ""
+"Tordenånden er en imponerende modstander, emmende af elektricitet er de i "
+"stand til at sende elektriske lynkugler af sted som kan ødelægge huse."
+
+msgid ""
+"The Thunder Spirits are very powerful and mysterious. Even though this "
+"spirit is a minor one, it still wields tremendous power."
+msgstr ""
+"Tordenånder er meget magtfulde og mystiske. Selvom denne ånd er en mindre "
+"ånd, har den stadig imponerende kraft."
+
+msgid "The bridge collapsed!"
+msgstr "Broen faldt sammen!"
+
+msgid ""
+"The cave is no resting place! We must escape through the bowels of the earth!"
+msgstr ""
+"Hulen er ikke et hvilerum! Vi må undslippe igennem åbningerne i jorden."
+
+msgid "The caves... Drake leader! Halt!"
+msgstr "Hulerne... Hestedrageleder! Holdt!"
+
+msgid ""
+"The circle has darkened, but it reeks of decay. This is the work of a "
+"powerful necromancer."
+msgstr ""
+"Cirklen er blevet mørkere, men den modstår nedbrydning. Dette er en magfuld "
+"åndemaners værk."
+
+msgid ""
+"The circle is crackling with magical energy! This is the work of a powerful "
+"necromancer!"
+msgstr "Cirklen emmer af magisk energi! Dette er en magtfuld åndemaners værk!"
+
+msgid "The door will not open for any who are not allied with it."
+msgstr "Døren åbner sig kun for allierede."
+
+msgid "The ground is unstable!"
+msgstr "Jorden er ustabil!"
+
+msgid "The guards have arrived! Everyone! FIGHT!!!!!"
+msgstr "Vagterne er ankommet! Alle! Kæmp!!!!!"
+
+msgid "The hatchlings are free!"
+msgstr "Børnene er befriet!"
+
+msgid "The hatchlings are free! We must kill the taskmaster!"
+msgstr "Børnene er befriet! Vi må dræbe den tilsynsførende!"
+
+msgid "The humans follow us! We must continue!"
+msgstr "Menneskene følger efter os! Vi må fortsætte!"
+
+msgid "The humans pursue us!"
+msgstr "Menneskene forfølger os!"
+
+msgid "The humans?"
+msgstr "Menneskene?"
+
+msgid "The key fits!"
+msgstr "Nøglen passer!"
+
+msgid ""
+"The ocean winds blow with great speed. You cannot fly against them. And what "
+"will become of your flightless spearmen?"
+msgstr ""
+"Havvindene er kraftige. Du kan ikke flyve imod dem. Og hvad skal der blive "
+"af dine spydmænd, der ikke har vinger?"
+
+msgid ""
+"The rabbit is a cute creature living in the fields and forests. In its "
+"gnawing attack, striking from powerful incisors, resides the Wesnoth "
+"carrots' greatest fear. Alas, rabbits are victims of the appetite of many "
+"other nasty creatures like wolves or even humans, for their flesh is used in "
+"one of the most delicious known dishes. Legend has it that they follow a "
+"king rabbit by the name of Cedric."
+msgstr ""
+"Kaninen er en sød skabning som lever i marker og skove. Dens gnavende angreb "
+"udført af stærke fortænder er frygtet blandt Wesnoths gulerødder. Kaninen er "
+"ofre for mange andre skabningers appetit, såsom ulve og selv mennesker, da "
+"deres kød er blandt det mest delikate. Legenden siger at de følger en "
+"kaninkonge ved navn Cedric."
+
+msgid ""
+"The saurians are elusive and deft of foot, but weak at arms. I propose that "
+"while we attack the humans head-on, the saurians sneak behind the enemy "
+"lines and kill their leaders."
+msgstr ""
+"Øglerne er hurtige på fødderne, men svage i direkte kamp. Jeg foreslår at "
+"mens vi angriber menneskene direkte, så skal øglerne snige sig bag fjendens "
+"linjer og dræbe deres ledere."
+
+msgid "The saurians will try to outflank the humans."
+msgstr "Øglerne vil forsøge at omgå menneskene."
+
+msgid "The sign says: Storeroom"
+msgstr "På skiltet står der: Lagerrum"
+
+msgid "The taskmaster - that monster - is dead! We must free the hatchlings!"
+msgstr "Herren - det monster - er død! vi må befri børnene!"
+
+msgid "The tower has fallen into disrepair. Onward!"
+msgstr "Tårnet er faldet sammen. Fremad!"
+
+msgid "The trapdoor is locked!"
+msgstr "Gulvdøren er lukket!"
+
+msgid "The trapdoor is locked! Could that key fit?"
+msgstr "Gulvdøren er lukket! Mon den nøgle passer?"
+
+msgid "Theeere are nooooo mmmore sssssaurians lleft."
+msgstr "Der er ikke flere øgler tilbage."
+
+msgid ""
+"Then there will be a tough fight ahead of us. I must decide what I will do "
+"with the saurians."
+msgstr ""
+"Så venter der os en hård kamp. Jeg må beslutte hvad jeg gør med øglerne."
+
+msgid "There, beyond that castle! This is the Gate of Storms!"
+msgstr "Der, bag borgen! Dette er Stormenes port!"
+
+msgid ""
+"These are former dwarves, raised into unlife. They retain the power of "
+"dwarves, but also their lack of speed.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"En tidligere dværg bragt tilbage til livet. De bevarer stryken fra en "
+"levende dværg, men også deres manglende bevægelseshastighed.\n"
+"\n"
+"Specielle bemærkninger:"
+
+msgid "They are called saurians. A little curiosity I came across one night."
+msgstr "De kaldes for øgler. En lille sjældenhed jeg faldt over den anden dag."
+
+msgid "They have fortified the entrance!"
+msgstr "De har befæstet indgangen!"
+
+msgid "They have summoned reinforcements!"
+msgstr "De har hidkaldt forstærkninger!"
+
+msgid "They have summoned reinforcements! Burn down their ships!"
+msgstr "De har hidkaldt forstærkninger. Brænd deres skibe ned!"
+
+msgid "They pursue us still?"
+msgstr "De forfølger os stadig?"
+
+msgid "They pursue us! We must hurry!"
+msgstr "De forfølger os! Vi må skynde os!"
+
+msgid "They use gargoyles!"
+msgstr "De bruger gargoyler!"
+
+msgid "This heat! I can't stand this much longer."
+msgstr "Denne varme! Jeg kan ikke holde den ud meget længere."
+
+msgid ""
+"This is Commodore Jack of the Wesnothian Ship Luna. In the name of the King, "
+"lower your sails and prepare to be boarded."
+msgstr ""
+"Dette er kommandør Jack fra Wesnoth-skibet Luna. I kongens navn: »Reb jeres "
+"sejl og gør klar til, at vi kommer om bord.«"
+
+msgid ""
+"This is a statue animated by dark magic. It is not very powerful, but it is "
+"annoying, as it reverts to its stone form during the day, making it utterly "
+"invulnerable to any and all forces."
+msgstr ""
+"En statue der indeholder mørk magi. Den er ikke særlig magtfuld, men den er "
+"irriterende, da den vender tilbage til sin stenform om dagen, hvilket gør "
+"den usårlig overfor alle styrker."
+
+msgid ""
+"This is impassable to all corporeal things. It can be destroyed, but not "
+"easily."
+msgstr "Denne kan ikke flyttes, men kan ødelægges, dog ikke nemt."
+
+msgid "This is the end... of the drakes."
+msgstr "Dette er slutningen... for hestedragerne."
+
+msgid "This mansion is haunted!"
+msgstr "Dette sted er hjemsøgt!"
+
+msgid ""
+"This was a drake slave, but it has grabbed a spear in rebellion against its "
+"masters.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Dette var en hestedrageslave, men den har taget et spyd i oprøret imod dens "
+"herrer.\n"
+"\n"
+"Specielle bemærkninger:"
+
+msgid "This weapon is excellent for a drake rising against its masters."
+msgstr "Dette våben er glimrende for en hestedrage i oprør mod sin herre."
+
+msgid "This weapon is only fit for adult drakes."
+msgstr "Dette våben er kun egnet for voksne hestedrager."
+
+msgid "Thunder Spirit"
+msgstr "Tordenånd"
+
+msgid "To Morogor!"
+msgstr "Til Morogor!"
+
+msgid "Turns run out"
+msgstr "Tiden løber ud"
+
+msgid "Ugh! Dwarven whiskey!"
+msgstr "Ugh! Dværgewhisky!"
+
+msgid "Undead Dwarf"
+msgstr "Udød dværg"
+
+msgid "Underground"
+msgstr "Under jorden"
+
+msgid "Underground!"
+msgstr "Under jorden!"
+
+msgid ""
+"Understand. You swear by Gar-Alagar, king of the gods of Morogor, in the "
+"future, or you will be sacrificed to him."
+msgstr ""
+"Svær ved Gar-Alagar, konge af Morogors guder, i fremtiden eller du bliver "
+"ofret til ham din hedning."
+
+msgid "Unforgiver"
+msgstr "Naget"
+
+msgid "Upon the very eyes of the pirate gods I swear my loyalty."
+msgstr "Under piraternes gudeøjne sværger jeg min loyalitet."
+
+msgid "Use them well."
+msgstr "Brug dem godt."
+
+msgid "VICTORY IS OURS!!!"
+msgstr "Sejren er vores!!!"
+
+msgid "Very well, we will be gone from your lands shortly."
+msgstr "Udmærket vi vil snart være ude af dit land."
+
+msgid "Very well. I am honored to have fought with a dragon of old."
+msgstr "Udmærket. Jeg er beæret over at have kæmpet med en historisk drage."
+
+msgid "Very well. They will arrive at the third dawn."
+msgstr "Udmærket. De ankommer ved den tredje morgensol."
+
+msgid "WORK!"
+msgstr "Gå i gang!"
+
+msgid ""
+"We can run south, into the swamps of the Jamolar tribe. But first, we must "
+"destroy the humans' cavalry, so that they cannot pursue us!"
+msgstr ""
+"Vi kan løbe mod syd, ind i sumpene hvor Jamolar-stammen holder til. Men "
+"først, må vi ødelægge menneskenes kavaleri, så de ikke kan forfølge os!"
+
+msgid "We continue!"
+msgstr "Vi fortsætter!"
+
+msgid "We have no reason to speak with you."
+msgstr "Vi har ingen grund til at tale med dig."
+
+msgid "We have run out of supplies, these caverns shall be our tomb!"
+msgstr "Vi er løbet tør for forsyninger. Disse huler bliver vores gravsted!"
+
+msgid "We have used up half of our supplies."
+msgstr "Vi har brugt halvdelen af vores forsyninger."
+
+msgid "We must continue!"
+msgstr "Vi må fortsætte!"
+
+msgid "We must seize these caverns!"
+msgstr "Vi må erobre disse huler!"
+
+msgid "We seek only to leave."
+msgstr "Vi ønsker kun at rejse."
+
+msgid "We've used up three-quarters of our supplies. I suggest you make haste."
+msgstr "Vi har brugt 3/4 af vores forsyninger. Jeg forslår at du skynder dig."
+
+msgid "Well said, brother. THE FIGHT FOR FREEDOM BEGINS HERE!!!"
+msgstr "Godt sagt bror. Kampen for frihed begynder her!!!"
+
+msgid "Well, at least not yet."
+msgstr "I det mindste ikke endnu."
+
+msgid "Well, we can't go that way."
+msgstr "Vi kan ikke gå den vej."
+
+msgid "Well, well, well. $gold_given pieces of gold were in this chest!"
+msgstr "Ja ja ja. Der var $gold_given guldstykker i denne kiste!"
+
+msgid "What are these... creatures?"
+msgstr "Hvad er dette ... for skabninger?"
+
+msgid "Wild Horse"
+msgstr "Vild hest"
+
+msgid ""
+"With the seizure of Weswyt, Morogor was once again the homeland of the "
+"Drakes."
+msgstr "Med erobringen af Weswyt blev Morogor igen hjemland for hestedragerne."
+
+msgid "Without him, we will be unable to continue. All is lost!"
+msgstr "Uden ham vil vi ikke være i stand til at fortsætte. Alt er tabt!"
+
+msgid "Wolf"
+msgstr "Ulv"
+
+msgid ""
+"Years of violence and brutality to support the study of forbidden magical "
+"arts have turned the shadow mages into feared fighters. Now completely "
+"enthralled with power, they have been known to command small followings of "
+"henchmen. They are outmatched in direct magical combat with their magic-"
+"using peers, and instead channel their energies into devastating melee "
+"attacks. Despite their offensive power, the corruption in their souls has "
+"begun to adversely affect their health."
+msgstr ""
+"År med vold og brutalitet i studiet af forbudt magi har gjort "
+"skyggetroldmænd til frygtede kæmpere. Nu fuldstændig forblændet af magt, er "
+"de kendt for at have kommando over små følger af fanatikere. De bliver "
+"overgået i direkte magisk kampstyrke af deres jævnbyrdige, i steden for "
+"kanaliserer de deres energi ind i en ødelæggende nærkampstyrke. På trods af "
+"deres offensive kraft, er korruptionen i deres sjæl begyndt at påvirke deres "
+"helbred."
+
+msgid "Yes. The humans have defiled the temple of Gar-Alagar!"
+msgstr "Ja. Menneskene har skændet Gar-Alagars tempel!"
+
+msgid "Yesss! My axxxxe iss reaaaddy!"
+msgstr "Ja! Min økse er klar!"
+
+msgid "You help us throw off the elves, and we'll join you."
+msgstr "Du hjælper os med at smide elverne ud og vi slutter os til dig."
+
+msgid "You old scoundrel! How in blazes are you still alive?"
+msgstr "Din gamle svindler! Hvordan kan du stadig være i live?"
+
+msgid "You! Why do your men pursue us!"
+msgstr "Dig! Hvorfor forfølger du os!"
+
+msgid "You're riding a drake?!?"
+msgstr "Du rider på en hestedrage?!?"
+
+msgid "Yraec"
+msgstr "Yraec"
+
+msgid "Yreddyn"
+msgstr "Yreddyn"
+
+msgid "Yrynyc"
+msgstr "Yrynyc"
+
+msgid "axe"
+msgstr "økse"
+
+msgid "ballista"
+msgstr "ballist"
+
+msgid "bawk"
+msgstr "bawk"
+
+msgid "bite"
+msgstr "bid"
+
+msgid "boulder"
+msgstr "sten"
+
+msgid "bow"
+msgstr "bue"
+
+msgid "bump"
+msgstr "bump"
+
+msgid "catapult"
+msgstr "katapult"
+
+msgid "claws"
+msgstr "kløer"
+
+msgid "crossbow"
+msgstr "armbrøst"
+
+msgid "cutlass"
+msgstr "huggert"
+
+msgid "dagger"
+msgstr "daggert"
+
+msgid "female^Battleship"
+msgstr "Slagskib"
+
+msgid "female^Caravel"
+msgstr "Karavel"
+
+msgid "female^Clipper"
+msgstr "Clipper"
+
+msgid "female^Dreadnought"
+msgstr "Dreadnought"
+
+msgid "female^Frigate"
+msgstr "Fregat"
+
+msgid "female^Galleon"
+msgstr "Galeon"
+
+msgid "female^Pirate Cruiser"
+msgstr "Piratkrydser"
+
+msgid "female^Pirate Galleon"
+msgstr "Piratgaleon"
+
+msgid "female^Pirate Schooner"
+msgstr "Piratskonnert"
+
+msgid "fire breath"
+msgstr "ildånde"
+
+msgid "fire sword"
+msgstr "ildsværd"
+
+msgid "fist"
+msgstr "knytnæve"
+
+msgid "hoof"
+msgstr "hoof"
+
+msgid "ice blast"
+msgstr "iseksplosion"
+
+msgid "ice shot"
+msgstr "isskud"
+
+msgid "incisors"
+msgstr "fortænder"
+
+msgid "kick"
+msgstr "spark"
+
+msgid "lightning"
+msgstr "lyn"
+
+msgid "mace"
+msgstr "morgenstjerne"
+
+msgid "none"
+msgstr "ingen"
+
+msgid "oink"
+msgstr "oink"
+
+msgid "short sword"
+msgstr "kortsværd"
+
+msgid "spear"
+msgstr "spyd"
+
+msgid "staff"
+msgstr "stav"
+
+msgid "sword"
+msgstr "sværd"
+
+msgid "tail"
+msgstr "hale"
+
+msgid "teeth"
+msgstr "tand"
+
+msgid "touch"
+msgstr "berøring"
+
+msgid "trident"
+msgstr "trefork"
+
+msgid "whip"
+msgstr "pisk"
