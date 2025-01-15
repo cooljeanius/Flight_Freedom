@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-01-12 06:19 UTC\n"
+"POT-Creation-Date: 2025-01-15 21:46 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -723,7 +723,7 @@ msgstr ""
 #: Flight_Freedom/macros/objectives.cfg:89
 #: Flight_Freedom/scenarios/01_Survival.cfg:200
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:259
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:241
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:276
 #: Flight_Freedom/scenarios/16_Exodus.cfg:276
 #: Flight_Freedom/scenarios/16_Exodus.cfg:420
 #: Flight_Freedom/scenarios/16_Exodus.cfg:680
@@ -2111,7 +2111,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/06a_Southern_Shore.cfg:26
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:32
 #: Flight_Freedom/scenarios/10a_Underground.cfg:25
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:24
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:26
 #: Flight_Freedom/scenarios/11a_River_Skulls.cfg:45
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:20
 #: Flight_Freedom/scenarios/13a_Betrayal.cfg:30
@@ -2146,7 +2146,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/08_Landfall.cfg:265
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:40
 #: Flight_Freedom/scenarios/10a_Underground.cfg:35
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:32
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:34
 #: Flight_Freedom/scenarios/11a_River_Skulls.cfg:55
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:29
 #: Flight_Freedom/scenarios/13a_Betrayal.cfg:40
@@ -2771,7 +2771,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:737
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:53
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:119
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:102
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:104
 msgid "Elvish Melrithian Force"
 msgstr ""
 
@@ -3425,17 +3425,17 @@ msgid "Move the Unforgiver to the bottom"
 msgstr ""
 
 #. [set_menu_item]: id=control_rain_sound
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:239
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:214
 msgid "Toggle Rain Sound Effects"
 msgstr ""
 
 #. [set_menu_item]: id=control_rain
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:265
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:235
 msgid "Toggle Rain Visual Effects"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:302
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:273
 msgid ""
 "This scenario has visual and audio effects that may cause noticeable slowdown on weaker devices.\n"
 "\n"
@@ -3443,77 +3443,77 @@ msgid ""
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:306
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:277
 msgid "Load rain"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:316
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:284
 msgid "Continue without rain"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:325
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:297
 msgid "You can always turn on/off some weather effects. To do that, right-click anywhere on the map and choose which effects you want to disable/enable."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:334
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:306
 msgid "(Kogw) Welcome to the Sea of Webs, boys and girls, home to the nastiest beasts you're likely to find this side of an undead family reunion."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:339
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:311
 msgid "(Malakar) None will obstruct our passage. We will kill anything that tries to stop us!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:344
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:316
 msgid "(Kogw) Good plan! Let's round up every monster in the ocean, and a few of the larger fish, and fight them one-on-one!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:349
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:321
 msgid "(Malakar) Only the ones that oppose... do not mock me, thinskin."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:354
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:326
 msgid "(Kogw) Heh-heh, I'm the one with thin skin, now? Keep the Unforgiver oriented South, men, and keep us well clear of the larger monsters! If we don't get wrapped up fighting, we should have more than enough time to be out of here before that storm hits."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:359
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:331
 msgid "(Malakar) Storm? You would let this rain stop you?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:364
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:336
 msgid "(Kogw) Spend enough time on the waves, Mal, and you can read the waves and the wind like a book. This place is right in the path of Heaven's own fury, and we've got to be gone before then."
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:381
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:353
 msgid "(Pirate) Incoming! Monsters!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:386
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:358
 msgid "(Kogw) Hold your course!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:436
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:408
 msgid "(Kogw) Full speed thataway!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:444
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:416
 msgid "(Kogw) A shame we lost a member of our fleet in this storm, but I suppose it couldn't be helped. Onwards!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:456
+#: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:428
 msgid "(Kogw) We'll never outdistance this storm, and it's gaining strength by the minute! We're doomed!"
 msgstr ""
 
@@ -3535,8 +3535,8 @@ msgstr ""
 #: Flight_Freedom/scenarios/08_Landfall.cfg:49
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:72
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:347
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:66
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:85
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:68
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:87
 msgid "Local Orcish Tribe"
 msgstr ""
 
@@ -4272,133 +4272,138 @@ msgid "Freezing Foothills"
 msgstr ""
 
 #. [side]: type=Troll Hero, id=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:39
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:41
 msgid "Bük Shuurb"
 msgstr ""
 
 #. [side]: type=Troll Hero, id=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:47
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:49
 msgid "Local Trolls"
 msgstr ""
 
 #. [side]: type=Orcish Warlord, id=Prurbo
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:58
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:60
 msgid "Prurbo"
 msgstr ""
 
 #. [side]: type=Orcish Sovereign, id=Ugho
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:77
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:79
 msgid "Ugho"
 msgstr ""
 
+#. [set_menu_item]: id=control_snow
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:185
+msgid "Toggle Snow Visual Effects"
+msgstr ""
+
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:188
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:223
 msgid "True to their word, the elves did not attack the drakes. Nonetheless, their warriors relentlessly drove the drakes onward. Meanwhile the forest itself seemed to hinder the drakes; vines would seemingly grow from nowhere to ensnare those who took flight, drakes would frequently find themselves stumbling into dead ends, and every drake in the tribe felt they were being watched by the wind and the trees."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:195
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:230
 msgid "Disorganized and tired, the drakes finally began to emerge from the forest after several days of hard travel."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:201
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:236
 msgid "Finally, we have reached the edge of the forest! We will make camp and regroup as a tribe."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:212
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:247
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:201
 msgid "I feel well enough to fight again, Malakar."
 msgstr ""
 
 #. [message]: speaker=Ugho
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:222
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:257
 msgid "These are our lands, lizards. For your trespass you shall die!"
 msgstr ""
 
 #. [message]: speaker=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:226
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:261
 msgid "NEW FLAVORS FOR THE COOK-POT! WE FEAST TONIGHT!!!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:231
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:266
 msgid "We cannot go back into the forest, the elves will slaughter us at their leisure. Drakes! Clear the area! We must earn our rest."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:236
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:271
 msgid "NOTE: You will not be able to recall during this scenario; rather your veterans will slowly emerge from the forest."
 msgstr ""
 
 #. [message]: speaker=elf_messenger
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:502
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:537
 msgid "Drakes! Your safe passage has ended; any who return to this forest will be killed!"
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:582
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:617
 msgid "We are traveling as fast as we can, however the forest is slowing us. It may be some time before the whole tribe can arrive."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:598
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:633
 msgid "This land is becoming colder by the hour!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:617
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:652
 msgid "The cold is seeping through my scales and chilling my breath!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:622
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:657
 msgid "NOTE: Your drakes' fire breath attacks will gradually weaken throughout the course of this scenario."
 msgstr ""
 
 #. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:722
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:773
 msgid "<span color='red'>CHILL: -$value%</span>"
 msgstr ""
 
 #. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:723
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:774
 msgid "The freezing cold is chilling your drakes' fire breath! Fire attacks do $value% less damage."
 msgstr ""
 
 #. [message]: speaker=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:772
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:823
 msgid "Lizard! GET! IN! MY! BELLY! NOW!!!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:781
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:832
 msgid "We have defeated the orcs and their pet trolls! The stragglers flee already, I doubt they will find refuge in the forest or the chill."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:791
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:842
 msgid "Drakes! We shall gather around the camp and await the rest of our tribe. Then we warm ourselves, make good our wounds and leave these lands!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:798
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:849
 msgid "Drakes! We are together again as a tribe. Today we rest, warm ourselves, and make good our wounds. Tomorrow we leave these lands!"
 msgstr ""
 
 #. [message]: role=freezing_drake
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:816
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:867
 msgid "So cold... my internal fire is fading..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:820
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:871
 msgid "We must clear the area and return to shelter quickly lest we freeze to death!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:829
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:880
 msgid "Already the last of my fire is flickering. We cannot press on through the cold. We're doomed!"
 msgstr ""
 
