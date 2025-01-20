@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-01-15 21:46 UTC\n"
+"POT-Creation-Date: 2025-01-20 11:32 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,7 +101,7 @@ msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
 #: Flight_Freedom/_main.cfg:62
-msgid "(for Wesnoth v1.19.6 or later)"
+msgid "(for Wesnoth v1.19.8 or later)"
 msgstr ""
 
 #. [achievement]: id=ftf_desperate_defense
@@ -527,62 +527,62 @@ msgid "Dalgar-El has fated my death this day. Malakar, in Gar-Alagar's name you 
 msgstr ""
 
 #. [message]: role=despairing_drake
-#: Flight_Freedom/macros/deaths.cfg:274
+#: Flight_Freedom/macros/deaths.cfg:275
 msgid "No! They can even slay dragons... what chance do we have..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/macros/deaths.cfg:278
+#: Flight_Freedom/macros/deaths.cfg:279
 msgid "Silence! Do not give in to despair, rather make the humans pay for his death! Pick yourself up and fight!"
 msgstr ""
 
-#: Flight_Freedom/macros/deaths.cfg:303
+#: Flight_Freedom/macros/deaths.cfg:304
 msgid "All is lost!"
 msgstr ""
 
-#: Flight_Freedom/macros/deaths.cfg:304
+#: Flight_Freedom/macros/deaths.cfg:305
 msgid "My flagship! Our fleet is shattered!"
 msgstr ""
 
-#: Flight_Freedom/macros/deaths.cfg:319
+#: Flight_Freedom/macros/deaths.cfg:320
 msgid "(Kogw) All is lost!"
 msgstr ""
 
-#: Flight_Freedom/macros/deaths.cfg:320
+#: Flight_Freedom/macros/deaths.cfg:321
 msgid "(Kogw) We're dead in the water! And, soon to be dead."
 msgstr ""
 
-#: Flight_Freedom/macros/deaths.cfg:321
+#: Flight_Freedom/macros/deaths.cfg:322
 msgid "(Kogw) ...time to walk the plank."
 msgstr ""
 
-#: Flight_Freedom/macros/deaths.cfg:322
+#: Flight_Freedom/macros/deaths.cfg:323
 msgid "(Kogw) ...time to feed the sharks."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/macros/deaths.cfg:362
+#: Flight_Freedom/macros/deaths.cfg:363
 msgid "This is the end... of the drakes."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/macros/deaths.cfg:385
+#: Flight_Freedom/macros/deaths.cfg:386
 #: Flight_Freedom/scenarios_b/05b_Mogradesh.cfg:990
 msgid "No! Without him, I cannot hope to prevail!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/macros/deaths.cfg:400
+#: Flight_Freedom/macros/deaths.cfg:401
 msgid "No! My tribe's chief priest has fallen!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/macros/deaths.cfg:404
+#: Flight_Freedom/macros/deaths.cfg:405
 msgid "We are drakes first and foremost and we must press on!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/macros/deaths.cfg:419
+#: Flight_Freedom/macros/deaths.cfg:420
 msgid "No! Without the Magi, the drakes are doomed!"
 msgstr ""
 
@@ -2082,7 +2082,7 @@ msgstr ""
 #. [unit]: type=Grand Marshal, id=Yrynyc
 #: Flight_Freedom/scenarios/01_Survival.cfg:54
 #: Flight_Freedom/scenarios/20_Battle_Temple.cfg:170
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1488
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1520
 msgid "Yrynyc"
 msgstr ""
 
@@ -3299,7 +3299,7 @@ msgstr ""
 #. [then]
 #. [else]
 #. [scenario]: id=Landfall
-#. [scenario]: id=Blockade, race=transport
+#. [scenario]: id=Blockade, race=ship
 #: Flight_Freedom/scenarios/06a_Southern_Shore.cfg:60
 #: Flight_Freedom/scenarios/07a_Open_Ocean.cfg:55
 #: Flight_Freedom/scenarios/08_Landfall.cfg:279
@@ -3771,7 +3771,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:573
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:330
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:746
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:676
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:703
 msgid "..."
 msgstr ""
 
@@ -4393,17 +4393,19 @@ msgid "Drakes! We are together again as a tribe. Today we rest, warm ourselves, 
 msgstr ""
 
 #. [message]: role=freezing_drake
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:867
+#. [message]: speaker=Theracar
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:873
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:879
 msgid "So cold... my internal fire is fading..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:871
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:885
 msgid "We must clear the area and return to shelter quickly lest we freeze to death!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:880
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:894
 msgid "Already the last of my fire is flickering. We cannot press on through the cold. We're doomed!"
 msgstr ""
 
@@ -5812,7 +5814,7 @@ msgstr ""
 msgid "To Morogor!"
 msgstr ""
 
-#. [scenario]: id=Blockade, race=transport
+#. [scenario]: id=Blockade, race=ship
 #: Flight_Freedom/scenarios/17a_Blockade.cfg:4
 msgid "Blockade"
 msgstr ""
@@ -5832,7 +5834,7 @@ msgstr ""
 msgid "Mermen"
 msgstr ""
 
-#. [scenario]: id=Blockade, race=transport
+#. [scenario]: id=Blockade, race=ship
 #: Flight_Freedom/scenarios/17a_Blockade.cfg:125
 msgid "Move the Unforgiver to the East"
 msgstr ""
@@ -6212,136 +6214,136 @@ msgid "Dunefolk Hunters"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:301
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:302
 msgid "This is grim news, indeed. How is it that you are here to tell me of this?"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:305
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:306
 msgid "A small handful of rebels have been in hiding ever since the attack. We've fought our battles when and where we can, but our hopes are low and our numbers are dwindling. Your arrival will mean a great deal."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:309
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:310
 msgid "I will gather our leaders and meet you here at this beach as soon as I can."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:313
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:314
 msgid "Godspeed."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:332
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:333
 msgid "Mal, if they bring their leaders out in the open, they'll be slaughtered!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:337
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:338
 msgid "Malakar, we are too exposed here, we cannot protect their leaders!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:341
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:342
 msgid "I know. We will have the beaches cleared before they arrive."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:352
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:353
 msgid "NOTE: From now on, since the Unforgiver is no longer critical to your cause, the game will not end if it is lost."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:370
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:371
 msgid "No! My flagship!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:374
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:375
 msgid "You can mourn the boat another day. For now we are trapped on this beach. We prevail together this day or we both die."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:391
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:392
 msgid "Word is being passed to the resistance, and I have come back to help you claim the beach."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:441
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:442
 msgid "It's true! The Kakatars have returned!"
 msgstr ""
 
 #. [message]: speaker=scout
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:596
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:602
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:589
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:595
 msgid "What is this?"
 msgstr ""
 
 #. [then]: type=Fire Dragon, id=Quemar
 #. [event]: id=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:654
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:647
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:168
 msgid "Quemar"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:689
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:682
 msgid "<span color='#ccff00' size='large'>I HAVE RETURNED. I AM QUEMAR. HUMANS, I AM YOUR DOOM.</span>"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:699
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:692
 msgid "Surely that big dragon fellow isn't talking about me? Right?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:703
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:696
 msgid "Quemar... is that you? The ritual, it was a success?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:707
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:700
 msgid "MALAKAR OF THE KAKATAR TRIBE. YOU STILL LIVE. TOGETHER WE SHALL CLEANSE MOROGOR OF THE PUNY THINSKINS."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:717
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:710
 msgid "Indeed, Quemar. Except for the pirate - he is an ally, a Kakatar, and under my protection."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:721
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:714
 msgid "VERY WELL. YOUR PET THINSKIN MAY LIVE. I WILL BE WATCHING YOU, HUMAN."
 msgstr ""
 
 #. [message]: speaker=dune_harrier
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:776
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:806
 msgid "Kal, we have tracked down the drakes who ransacked Al-Zaiybah!"
 msgstr ""
 
 #. [message]: speaker=dune_leader
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:786
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:816
 msgid "These monsters have eaten our kinsmen! They are worse than wild beasts. Put them down like the animals they are!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:801
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:831
 msgid "The rebel leaders are walking into enemy territory! We have failed them!"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:816
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:846
 msgid "For a free Morogor!"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:831
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:861
 msgid "Your rule is ending! Morogor belongs to us drakes!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:849
+#: Flight_Freedom/scenarios/18_Return_Morogor.cfg:879
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1348
 msgid "We continue!"
 msgstr ""
@@ -6659,7 +6661,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1302
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:979
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:944
 msgid "Brother!"
 msgstr ""
 
@@ -6691,7 +6693,7 @@ msgstr ""
 #. [unit]: type=Saurian Margrave, id=Kzzklk
 #. [side]: type=Saurian Margrave, id=Kzzklk
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1365
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1053
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1018
 #: Flight_Freedom/scenarios_b/03b_Council_of_War.cfg:52
 msgid "Kzzklk"
 msgstr ""
@@ -6847,297 +6849,297 @@ msgid "Lenvan"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:429
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:394
 msgid "Malakar and Kamalar continued moving towards the center of the island, unifying the scattered forces they found and overrunning the human forces they encountered. Within four days they had reached the former High Temple of Gar-Alagar, now the humans' capital fortress of Weswyt. The humans expected no more than scattered resistance, and did not start raising appropriate defenses until the drakish warforce was virtually at the walls."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:445
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:410
 msgid "Kzzklk's scouts reported that the best approach was from the south, and the drake commanders prepared accordingly."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:457
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:422
 msgid "Malakar and Kamalar would lead the main force, and the saurian commander, Kzzklk, would lead his force of saurians, in hopes of outflanking the humans."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:528
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:493
 msgid "This... this is raw blasphemy!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:532
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:497
 msgid "Yes. The humans have defiled the temple of Gar-Alagar."
 msgstr ""
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:537
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:502
 msgid "I will kill meeeeself ssssome humanssss!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:541
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:506
 msgid "It ends. We have been bound, murdered, enslaved, and hounded to the ends of the earth. Those of us who live through this day will have seen the fury that only true justice can call!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:546
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:511
 msgid "Drakes! Our vengeance is at hand! Commence the assault!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:550
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:515
 msgid "THE FIGHT FOR FREEDOM BEGINS HERE!!!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:579
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:544
 msgid "All of the saurian warriors have perished."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:583
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:548
 msgid "Hear me, drakes! Our saurian allies have given their last, so that we all may live free again! Honor their sacrifice and redouble your efforts!"
 msgstr ""
 
 #. [message]: role=whiner
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:612
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:577
 msgid "Theeere are nooooo mmmore sssssaurians lleft."
 msgstr ""
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:648
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:613
 msgid "I dddddie! Fffight ffor meee...avvvennnnge...kkkill huuumansssss..."
 msgstr ""
 
 #. [message]: role=pity
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:671
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:636
 msgid "NOOOOOOOO! Kzzklk! I cannot bear to live!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:711
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:676
 msgid "You... you led the humans that took my people captive! YOU MURDERED MY DAUGHTER!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:716
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:681
 msgid "So, you will kill me now?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:720
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:685
 msgid "A drake marked by the gods, sent to you as my messenger, and you slew her like a beast! Death is the least you deserve."
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:724
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:689
 msgid "I had my orders. Capture as many drakes as I could, kill any that were in the way. What else could I have done?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:728
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:693
 msgid "Yet now you give such orders."
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:732
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:697
 msgid "In truth, I began to regret my actions the moment I set sail back to Wesnoth. When I was but a lad, I enlisted in the Royal Army of Wesnoth to bring the King's justice to his enemies at the edge of my sword. When I became a General, then Grand Marshal of the Royal Vanguard, I imagined myself marching at the head of grand conquests in the King's name, not taking slaves like common highwaymen and pirates."
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:736
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:701
 msgid "Though I was born a commoner, my father, a veteran himself, raised me to be a man of honor. He would never have approved of our actions on this island. However, I am but a servant of the King. I could do naught but follow my orders."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:740
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:705
 msgid "You could have chosen the path of honor. Yet though you forced countless drakes into slavery, you gave yourself over to the lowest form of slavery of all. Others may call you 'Lord' and 'Grand Marshal', but you are merely a slave. A slave to your King."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:744
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:709
 msgid "But in the end, no matter. It was you, you alone, who wielded the blade that struck down my daughter. Not some king across the sea in Wesnoth, but YOU."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:748
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:713
 msgid "AND NOW, BY GAR-ALAGAR, <b>YOU SHALL BURN, IN THIS WORLD AND THE NEXT!!!</b>"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:794
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:759
 msgid "I give my life... for my King."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:799
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:764
 msgid "Yarr! A pox on your King, and all the King's men!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:803
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:768
 msgid "Conqueror of the drakes, yet slain by a filthy pirate."
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:809
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:774
 msgid "Long live Wesnoth! I curse you monsters and pirates to my dying breath!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:820
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:785
 msgid "You! You have no honor at all! You have brought so much pain to so many drakes! HOW MANY? HOW MANY BROKEN TRIBES? HOW MANY SLAUGHTERED HATCHLINGS? HOW MANY SMASHED EGGS? HOW MANY DEAD AT YOUR WRETCHED HANDS?"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:830
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:795
 msgid "You... you were the drake who nearly got away when I first came to this cursed isle! I knew you would be a problem then. I should have had you killed!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:835
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:800
 msgid "And a coward as well. BURN!!!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:841
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:806
 msgid "Are we truly so different? We captured a pirate ship last month, and I have learned of your betrayal of the pirates. Yet you bleat about 'honor'."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:846
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:811
 msgid "I care not for softskins. Least of all you. BURN!!!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:879
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:844
 msgid "GUARDS!!! Slay them all!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:906
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:871
 msgid "Long live Wesnoth! I curse you monsters to my dying breath!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:920
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:885
 msgid "MOROGOR IS OURS!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:933
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:898
 msgid "But this is bittersweet. My brother is dead... just like Necolag, my daughter."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:943
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:908
 msgid "He died fighting for you. Like any of your other soldiers would."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:947
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:912
 msgid "He was a true warrior."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:954
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:919
 msgid "He may have lived as a priest but he died as a warrior."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:958
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:923
 msgid "He shall be forever remembered."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:983
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:948
 msgid "I am gone! Fight on against the humans without me!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:998
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:963
 msgid "The humans' audacity knows no bounds. Their squatters have defiled the Temple!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1013
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:978
 msgid "Pirate! You're a traitor to your own race!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1017
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:982
 msgid "I have plied the seas for years, and indeed I have plundered many a navy ship. Yet you pillage an entire island, and call me a pirate. Who among us are the greatest criminals?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1034
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:999
 msgid "Malakar, the so-called 'chief'. I shall hoist your skull above the ramparts of Weldyn, as an example to all who dare oppose the might of Wesnoth!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1038
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1003
 msgid "And your flayed corpse shall burn in Mount Morogor."
 msgstr ""
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1120
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1085
 msgid "At yooourrr ccccommaaaand!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1136
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1101
 msgid "They have fortified the entrance!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1140
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1105
 msgid "The tower has fallen into disrepair. Onward!"
 msgstr ""
 
 #. [unit]: id=C'onolar, type=Drake Thrasher
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1175
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1140
 msgid "C'onolar"
 msgstr ""
 
 #. [message]: speaker=C'onolar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1238
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1203
 msgid "Malakar of the Kakatars! Fighting has broken out in huge battles across the island! Every able-bodied drake remaining has pledged their lives to prevent the human reinforcements from reaching Weswyt. They can buy you no more than a few days: make the most of this time!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1242
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1207
 msgid "Look sharp! You've been followed!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1247
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1212
 msgid "On guard! You have pursuers!"
 msgstr ""
 
 #. [event]: id=Garranath
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1256
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1221
 msgid "Garranath"
 msgstr ""
 
 #. [message]: speaker=Garranath
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1261
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1226
 msgid "We are some of the last survivors of the Obsidian Citadel. Our fireballs are at your command!"
 msgstr ""
 
 #. [message]: speaker=squad2_leader
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1340
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1305
 msgid "All right men, let's kill some lizards!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1348
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1313
 msgid "Our forces cannot press this attack much longer! Hurry!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1356
+#: Flight_Freedom/scenarios/20_Battle_Temple.cfg:1321
 msgid "We cannot fight any longer! We have failed!"
 msgstr ""
 
@@ -8139,163 +8141,163 @@ msgid "The lizards are conducting some strange ritual! We must stop them immedia
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:656
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:683
 msgid "The humans are redoubling their efforts! Quahgakar, is there any way we can finish this ritual faster?"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:660
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:687
 msgid "Not unless you wish to condemn all of us to a fate worse than death. But there may be an alternative..."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:664
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:691
 msgid "No... not that... please..."
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:668
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:695
 msgid "It would involve the darkest of magicks, but we can force Mount Morogor to erupt. The lava flows would sweep the thinskins from our lands! And it could be done at a moment's notice."
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:672
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:699
 msgid "Malakar, if we do this, Morogor will never be the same. I implore you to think carefully!"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:678
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:705
 msgid "We continue with our original plan to awaken Quemar as a dragon!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:682
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:709
 msgid "Drakes! We must hold the line just a while longer while the magi finish their work!"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:687
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:714
 msgid "There is no time! We must purge the humans before they slaughter us all!"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:696
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:723
 msgid "Turn back at once! Gar-Alagar will never forgive this!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:700
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:727
 msgid "My will is set. The thinskins are closing in. Either Mount Morogor erupts or we all die!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:706
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:733
 msgid "Very well, Malakar. Drakes! Take flight at once!"
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:840
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:870
 msgid "Powers below, hear me! Powers above, fear me!"
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:851
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:881
 msgid "I call upon your wrath! Accept our life force, so that your fires may be quickened!"
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:922
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:952
 msgid "Accept my sacrifice of blood, so that your hatred may surge forth!"
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:944
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:974
 msgid "And now I offer myself to the flames."
 msgstr ""
 
 #. [fading_message]: id=Malakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1012
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1042
 msgid "What... what have we done..."
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1137
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1173
 msgid "Breath of Gar-Alagar! Spirit of Morogor! Hear my voice."
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1148
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1184
 msgid "Accept your servant and infuse him with your might!"
 msgstr ""
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1160
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1196
 msgid "Hear me, a humble servant."
 msgstr ""
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1181
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1217
 msgid "I walk the path of my ancestors."
 msgstr ""
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1193
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1229
 msgid "I walk to the edge of death."
 msgstr ""
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1205
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1241
 msgid "And return with new life."
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1218
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1254
 msgid "Open the way to the heart of the fire!"
 msgstr ""
 
 #. [fading_message]: id=Quemar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1329
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1361
 msgid "I surrender, to be reborn in flame."
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1375
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1407
 msgid "Malakar, it is done."
 msgstr ""
 
 #. [fading_message]: id=Hartholar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1395
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1427
 msgid "Quahgakar, what's happening?"
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1417
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1449
 msgid "The ritual, it's going out of control!"
 msgstr ""
 
 #. [fading_message]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1475
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1507
 msgid "The life force needed was much greater than I had imagined... the spell stole what it sought from us!"
 msgstr ""
 
 #. [message]: speaker=capturer_1
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1583
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1618
 msgid "We have found the last of the rebels! Shall we kill them?"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1587
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1622
 msgid "No. Bind them in iron fetters and muzzle their snouts. I intend to make an example out of them, so all drakes may fear the name of our King!"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1691
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1729
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1726
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1764
 msgid "No! We cannot complete the ritual!"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1712
+#: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:1747
 msgid "We must protect the apprentices at all cost! Only with their combined will can we contain the energies we hope to let forth!"
 msgstr ""
 
@@ -8549,12 +8551,12 @@ msgstr ""
 msgid "charge"
 msgstr ""
 
-#. [unit_type]: id=Battleship, race=transport
+#. [unit_type]: id=Battleship, race=ship
 #: Flight_Freedom/units/boats/Battleship.cfg:5
 msgid "Battleship"
 msgstr ""
 
-#. [unit_type]: id=Battleship, race=transport
+#. [unit_type]: id=Battleship, race=ship
 #: Flight_Freedom/units/boats/Battleship.cfg:24
 msgid "The Battleship, very fast and armed with 3 ballistas, is a very versatile ship."
 msgstr ""
@@ -8576,12 +8578,12 @@ msgstr ""
 msgid "ballista"
 msgstr ""
 
-#. [unit_type]: id=Caravel, race=transport
+#. [unit_type]: id=Caravel, race=ship
 #: Flight_Freedom/units/boats/Caravel.cfg:5
 msgid "Caravel"
 msgstr ""
 
-#. [unit_type]: id=Caravel, race=transport
+#. [unit_type]: id=Caravel, race=ship
 #: Flight_Freedom/units/boats/Caravel.cfg:23
 msgid "Caravels are medium-sized attack ships, armed with a ballista and a long-range catapult."
 msgstr ""
@@ -8593,82 +8595,82 @@ msgstr ""
 msgid "catapult"
 msgstr ""
 
-#. [unit_type]: id=Clipper, race=transport
+#. [unit_type]: id=Clipper, race=ship
 #: Flight_Freedom/units/boats/Clipper.cfg:5
 msgid "Clipper"
 msgstr ""
 
-#. [unit_type]: id=Clipper, race=transport
+#. [unit_type]: id=Clipper, race=ship
 #: Flight_Freedom/units/boats/Clipper.cfg:23
 msgid "Clippers, although fast, are very weak. Armed with a ballista, they are used primarily as scouts."
 msgstr ""
 
-#. [unit_type]: id=Dreadnought, race=transport
+#. [unit_type]: id=Dreadnought, race=ship
 #: Flight_Freedom/units/boats/Dreadnought.cfg:5
 msgid "Dreadnought"
 msgstr ""
 
-#. [unit_type]: id=Dreadnought, race=transport
+#. [unit_type]: id=Dreadnought, race=ship
 #: Flight_Freedom/units/boats/Dreadnought.cfg:24
 msgid "Dreadnoughts are the pride of the humans' navy. With 3 ballistas and a catapult, they can sink or kill almost anything unlucky enough to be in their way."
 msgstr ""
 
-#. [unit_type]: id=Frigate, race=transport
+#. [unit_type]: id=Frigate, race=ship
 #: Flight_Freedom/units/boats/Frigate.cfg:5
 msgid "Frigate"
 msgstr ""
 
-#. [unit_type]: id=Frigate, race=transport
+#. [unit_type]: id=Frigate, race=ship
 #: Flight_Freedom/units/boats/Frigate.cfg:23
 msgid "The Frigate is rather slow, but it is powerful and well-protected."
 msgstr ""
 
-#. [unit_type]: id=Galleon2, race=transport
+#. [unit_type]: id=Galleon2, race=ship
 #: Flight_Freedom/units/boats/Galleon.cfg:5
 msgid "Galleon"
 msgstr ""
 
-#. [unit_type]: id=Galleon2, race=transport
+#. [unit_type]: id=Galleon2, race=ship
 #: Flight_Freedom/units/boats/Galleon.cfg:23
 msgid "Galleons are human sailing warships, used for exploration and combat. Though they are large and expensive, they are very strong. Armed with three ballistas, they mete out justice with deadly efficiency."
 msgstr ""
 
-#. [unit_type]: id=Pirate Cruiser, race=transport
+#. [unit_type]: id=Pirate Cruiser, race=ship
 #: Flight_Freedom/units/boats/Pirate_Cruiser.cfg:5
 msgid "Pirate Cruiser"
 msgstr ""
 
-#. [unit_type]: id=Pirate Cruiser, race=transport
+#. [unit_type]: id=Pirate Cruiser, race=ship
 #: Flight_Freedom/units/boats/Pirate_Cruiser.cfg:24
 msgid "The Pirate Cruiser is a larger pirate ship, either taken as plunder or built in a clandestine shipyard. It has 3 ballistas."
 msgstr ""
 
-#. [unit_type]: id=Pirate Galleon2, race=transport
+#. [unit_type]: id=Pirate Galleon2, race=ship
 #: Flight_Freedom/units/boats/Pirate_Galleon.cfg:5
 msgid "Pirate Galleon"
 msgstr ""
 
-#. [unit_type]: id=Pirate Galleon2, race=transport
+#. [unit_type]: id=Pirate Galleon2, race=ship
 #: Flight_Freedom/units/boats/Pirate_Galleon.cfg:25
 msgid "The Pirate Galleon is a former battleship of the Wesnothian navy, captured by renegades and pressed into service. It has 5 ballistas."
 msgstr ""
 
-#. [unit_type]: id=Pirate Sloop, race=transport
+#. [unit_type]: id=Pirate Sloop, race=ship
 #: Flight_Freedom/units/boats/Pirate_Sloop.cfg:5
 msgid "Pirate Sloop"
 msgstr ""
 
-#. [unit_type]: id=Pirate Sloop, race=transport
+#. [unit_type]: id=Pirate Sloop, race=ship
 #: Flight_Freedom/units/boats/Pirate_Sloop.cfg:25
 msgid "Pirates are the aquatic vector of Thieves. Manned by human renegades, these widely feared ships ply the seaways in search of plunder."
 msgstr ""
 
-#. [unit_type]: id=Pirate War Galley, race=transport
+#. [unit_type]: id=Pirate War Galley, race=ship
 #: Flight_Freedom/units/boats/Pirate_War_Galley.cfg:5
 msgid "Pirate War Galley"
 msgstr ""
 
-#. [unit_type]: id=Pirate War Galley, race=transport
+#. [unit_type]: id=Pirate War Galley, race=ship
 #: Flight_Freedom/units/boats/Pirate_War_Galley.cfg:24
 msgid "Some pirates are not content to sink their prey from afar. Their captains trade larger sails for banks of oars, delighting in reckless charges against their hapless victims. Although their broadsides are less powerful than other ships of similar tonnage, their cast iron rams are capable of breaking smaller ships in two and severely damaging larger ships."
 msgstr ""
