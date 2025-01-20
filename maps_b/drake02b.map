@@ -1,6 +1,3 @@
-border_size=1
-usage=map
-
 Ss, Ss, Ss, Ww, Ww, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Wo, Ss, Ss, Ss, Wo, Ss, Ss, Ss, Ds, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Ss, Ww, Ss, Ww, Ww, Ww, Ww, Ww, Ww
 Ss, Ss^Vhs, Ss, Ww, Ww, Ww, Ss, Ss, Chs, Ss, Ss, Ss, Ss, Ss, Ww, Ss^Vhs, Wo, Ss, Ss, Ss, Wo, Ss, Ss, Ss, Ds, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Ss, Ww, Ss, Ww, Ww, Ww, Ww, Ww, Ww
 Ss, Ss, Ss, Ww, Ss, Ss, Ss, Chs, 1 Khs, Chs, Re, Ss, Re, Ss, Ww, Ww, Ss, Ww, Ww, Ww, Ww, Ss, Ww, Ss, Ss, Ds, Ss, Gg, Ss, Ss, Ww, Ww, Ds, Ss, Ww, Ww, Ww, Ww, Ww, Ss, Ww, Ww
@@ -41,5 +38,5 @@ Ww, Ww, Ss^Vhs, Ss, Ss, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ds, Ss, Ss, Ss, 
 Ww, Ww, Ss, Ss, Ss, Ss, Ss^Bw\, Ww, Ww, Ss, Ww, Ww, Ss, Ss, Ss, Ss, Ww, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Re, Re, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ww
 Wo, Wo, Chs, Ww, Ss, Ww, Ss, Ss, Ww, Ww, Wo, Ww, Ww, Ss, Ss^Bw|r, Ww, Ww^Vm, Ww, Ww, Ss, Ss, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Re, Re, Ss, Ss, Ss^Vhs, Ww, Ww, Ww, Ss, Ss, Ss, Ww, Ww
 Ww, Ww, Ww^Bw|, Ss, Ww, Ww, Ss, Ss, Ss, Ss^Vhs, Ss, Ww, Ww, Ww, Ss, Ww, Ww, Ww, Ww, Ww, Ww, Ss, Ww, Ww, Ss, Ss, Ww, Ss, Ss, Ss, Ss, Re, Ss, Ww, Ss, Ww, Ss^Vhs, Ww, Ww, Ww, Ww, Ww
-Ww, Ww, Ww^Bw|, Ww, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss^Vhs, Ww, Ww, Ww, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Re, Ss, Ss, Ss^Bw|, Ss, Ss, Ww, Ss, Ss
+Ww, Ww, Ww^Bw|, Ww, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss^Vhs, Ww, Ww, Ww, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Re, Ss, Ss, Ss^Bw|, Ss, Ss, Ww, Ss^Em, Ss
 Ww, Ww, Ww^Bw|, Ww, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ss, Ww, Ss, Ww, Ww, Ww, Ss, Ww, Ss, Ss, Ss, Ss, Ss, Re, Ss, Ss, Ss^Bw|, Ss, Ss, Ww, Ss, Ss

@@ -1,6 +1,3 @@
-border_size=1
-usage=map
-
 Hh, Hh, Hh, Hh, Rr, Gg, Gg, Gg, Gg, Xu, Uu, Uu, Uu, Xu, Gs^Fp, Ww, Ww, Ww, Ww, Ww, Gg, Gg
 Hh, Hh, Hh, Hh, Rr, Gg, Gg, Gg, Gg, Xu, Uu, Uu, Uu, Xu, Gg, Gg, Gg^Em, Ww, Gg^Vh, Ww, Gg, Gg
 Gg, Gg, Gg, Gg, Rr, Aa, Gg, Gg, Gg^Vh, Xu, Uu, Uu, Uu, Xu, Gg, Gg, Gg, Gg, Gg, Ww, Gg, Gg
@@ -29,7 +26,7 @@ Gg, Rr, Rr, Gg, Rr, Gg, Gg, Rr, Rr, Gs^Fp, Gg, Gg, Gg, Gg, Aa, Gg, Gg, Gg, Gg, G
 Gg, Gg, Gg, Rr, Gg^Vh, Rr, Gg, Gg, Gs^Fp, Rr, Rr, Gg, Gg^Em, Gg, Gg, Gg, Gg, Gg^Es, Gg, Gg, Gg, Gg
 Gg, Gg, Gg^Es, Gg, Gg, Rr, Rr, Gg, Gs^Fp, Gs^Fp, Gg^Vh, Rr, Gg, Gg, Aa, Gg, Gg, Gg, Gg, Gs^Fp, Gs^Fp, Gg
 Gg, Gg, Gg, Gg, Ww, Gg, Gg, Rr, Rr, Gg, Gg, Rr, Gg, Aa, Gg, Gg, Gg, Gg, Gs^Fp, Gs^Fp, Gs^Fp, Gs^Fp
-Gg, Aa, Aa, Ai, Aa, Ww, Ww, Ww, Ww, Rr, Gg, Rr, Aa, Aa, Gg, Gg, Gg, Gg, Gg^Ve, Gs^Fp, Gs^Fp, Gs^Fp
+Gg^Esa, Aa, Aa, Ai, Aa, Ww, Ww, Ww, Ww, Rr, Gg, Rr, Aa, Aa, Gg, Gg, Gg, Gg, Gg^Ve, Gs^Fp, Gs^Fp, Gs^Fp
 Ww, Ai, Ai, Ai, Aa, Gg, Gg, Ww, Ww, Rr, Gg^Es, Rr, Aa, Aa, Gg, Gg, Gg, Gs^Fp, Gs^Fp, Gs^Fp, Gs^Fp, Gg
 Hh, Ha, Ha, Aa, Ha, Hh, Gg, Gg, Ww, Rr, Rr, Rr, Rr, Gg, Rr, Ce, Ce, Ce, Gs^Fp, Gg, Gg, Gg
 Ha, Ha, Ha, Ha, Ha, Hh, Gg, Gg, Gg, Ww, Gg, Rr, Gg^Vh, Rr, Ww, Ce, 2 Ke, Ce, Gg, Hh, Hh, Hh
