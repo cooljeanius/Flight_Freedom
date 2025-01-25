@@ -34,6 +34,26 @@ function wesnoth.wml_actions.count_units(cfg)
 end
 
 ---
+-- Sum cost in gold of units matching a filter.
+--
+-- [total_unit_cost]
+--     ... SUF ...
+--     variable=unit_count
+-- [/total_unit_cost]
+---
+function wesnoth.wml_actions.total_unit_cost(cfg)
+	local units = wesnoth.units.find_on_map(cfg)
+	local varname = cfg.variable or "total_cost"
+
+	local functional = wesnoth.require("functional")
+	if units == nil then
+		wml.variables[varname] = 0
+	else
+		wml.variables[varname] = functional.reduce(units, function(a,b) return a + b.cost end, 0)
+	end
+end
+
+---
 -- Clears the chat log.
 -- [clear_chat]
 -- [/clear_chat]
