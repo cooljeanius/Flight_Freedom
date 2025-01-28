@@ -113,6 +113,7 @@ SUF: do not include a [filter] subtag. If multiple units match the filter, the m
 
 Optional keys:
 fade_time: how long (milliseconds) message takes to fade out. Cannot be greater than time=.
+caption: similar to [message], override the name displayed for the speaker
 skippable: if yes, then do not show if messages are currently being skipped (e.g. if player has skipped replay)
 [time_lang]:
 	Override time= for specific languages. Accepts both two-letter (ISO 639-1) and longer language codes, with longer overriding two-letter.
@@ -155,7 +156,7 @@ function wesnoth.wml_actions.fading_message(cfg)
 			delay_time = fade_time
 		end
 		if matches ~= nil then
-			local name = matches[1].name
+			local caption = cfg.caption or matches[1].name
 			local unit_x = matches[1].x
 			local unit_y = matches[1].y
 			wesnoth.interface.highlight_hex(unit_x, unit_y)
@@ -168,7 +169,7 @@ function wesnoth.wml_actions.fading_message(cfg)
 			options.halign="center"
 			options.valign="bottom"
 			options.location={0,100}
-			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. name .. "</span>\n<span size='large'>" .. message .. "</span>", options)
+			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. caption .. "</span>\n<span size='large'>" .. message .. "</span>", options)
 			wesnoth.interface.delay(delay_time)
 			wesnoth.interface.deselect_hex()
 		end
