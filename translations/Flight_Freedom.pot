@@ -2053,7 +2053,7 @@ msgstr ""
 msgid ""
 "This scenario has visual weather effects that may cause noticeable slowdown on weaker devices.\n"
 "\n"
-"        Note that you can toggle these effects at any time during the scenario by using the relevant options in the context menu."
+"Note that you can toggle these effects at any time during the scenario by using the relevant options in the context menu."
 msgstr ""
 
 #. [option]
