@@ -1,0 +1,973 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wescamp-i 18n\n"
+"Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2008-01-22 00:21+0100\n"
+"PO-Revision-Date: 2007-07-25 18:00+0200\n"
+"Last-Translator: Stefan Bergström (tephlon) <stefan DOT bergstrom AT gmail "
+"DOT com>\n"
+"Language-Team: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+msgid "#If a unit is in lava, it will lose 4 hitpoints per turn."
+msgstr "#En trupp som står i lava förlorar 4 hälsopoäng per drag."
+
+msgid "(Kogw) A spirit has attacked!"
+msgstr "(Kogw) Vi är anfallna av en ande!"
+
+msgid "(Kogw) On to Morogor!"
+msgstr "(Kogw) Vidare till Morogor!"
+
+msgid "(Malakar) Are you going to say that EVERY time?"
+msgstr "(Malakar) Tänker du påpeka det VARENDA gång?"
+
+msgid "(Malakar) Never!"
+msgstr "(Malakar) Aldrig!"
+
+msgid "(Malakar) The bridge collapsed!"
+msgstr "(Malakar) Bron kollapsade!"
+
+msgid "(Malakar) The humans pursue us!"
+msgstr "(Malakar) Människorna förföljer oss!"
+
+msgid "(easiest)"
+msgstr "(lättast)"
+
+msgid "(hardest)"
+msgstr "(svårast)"
+
+msgid "A river of lava! How am I supposed to cross?"
+msgstr "En lavaflod! Hur skall jag kunna ta mig över den?"
+
+msgid ""
+"A role mostly filled by the dregs of society, Taskmasters live a perverted "
+"life of torturing the slaves under their watch. They especially like beating "
+"Drake slaves with their short swords."
+msgstr ""
+"Ett yrke som samhällets värsta drägg lockas till. Tuktomästarna lever ett "
+"perverterat liv med att tortera sina slavarna. De tycker speciellt om att "
+"slå drakslavarna med sina kortsvärd."
+
+msgid "A spider web!"
+msgstr "Ett spindelnät!"
+
+msgid "A spirit has attacked!"
+msgstr "En ande har anfallit!"
+
+msgid "AAAAH!"
+msgstr "AAAAH!"
+
+msgid "ARRRRGH!"
+msgstr "ARRRRGH!"
+
+msgid ""
+"After defeating the rebels, Malakar left the valley, his intent to go to the "
+"landing site and sail to his homeland."
+msgstr ""
+"Efter att ha besegrat rebellerna så lämnade Malakar dalen för att gå till "
+"landstigningsplatsen och segla till sitt hemland."
+
+msgid "All is lost!"
+msgstr "Allt är förlorat!"
+
+msgid "Are you going to say that EVERY time?"
+msgstr "Tänker du påpeka det VARENDA gång?"
+
+msgid ""
+"Armed with a heavy mace, Highwaymen are the last people you want to meet on "
+"a deserted road late at night."
+msgstr ""
+"Beväpnade med tunga spikklubbor som de är, så är stråtrövarna de sista du "
+"vill möta på en ödslig väg sent på natten."
+
+msgid "Around ten. Fifteen at most."
+msgstr "Kanske tio, som mest femton."
+
+msgid "At yooourrr ccccommaaaand!"
+msgstr "Pååå dinnnn beefalllniiiing!"
+
+msgid "Betrayal"
+msgstr "Förräderi"
+
+msgid "Blockade"
+msgstr "Blockad"
+
+msgid "Blue River"
+msgstr "Blå floden"
+
+msgid "Brother!"
+msgstr "Broder!"
+
+msgid "Caravan"
+msgstr "Karavan"
+
+msgid "Caravan escapes"
+msgstr "Karavanen kommer undan"
+
+msgid "Caravan is destroyed by wolves"
+msgstr "Karavanen förstörs av vargar"
+
+msgid "Cave Naga"
+msgstr "Grottnaga"
+
+msgid "Caves as far as the eye can see. We are completely lost."
+msgstr "Grottor så långt ögat kan nå. Vi har gått vilse."
+
+msgid "Chicken"
+msgstr "Kyckling"
+
+msgid "Chickens are kept for their meat and eggs."
+msgstr "Kycklingar används för att ge kött och, längre fram, ägg."
+
+msgid ""
+"Clippers, although fast, are very weak. Armed with a ballista, they are used "
+"primarily as scouts."
+msgstr ""
+"Klipperskepp är snabba men mycket klena. De är utrustade med en ballista och "
+"används mest till spaningsuppdrag."
+
+msgid "Collapse the cave exit by destroying the six boulders that support it"
+msgstr ""
+"Rasera grottmynningen genom att förstöra de sex stenblock som stöttar upp den"
+
+msgid "Could this key fit that trapdoor?"
+msgstr "Går den här nyckeln till den där dörren?"
+
+msgid "Cow"
+msgstr "Ko"
+
+msgid "Creatures of the lava! We cannot leave this way!"
+msgstr "Varelser av lava! Vi kan inte komma ut den här vägen!"
+
+msgid "Crow"
+msgstr "Kråka"
+
+msgid ""
+"Crows are carrion birds which will eat anything dead. Larger ones such as "
+"this have been also known to attack when food is scarce."
+msgstr ""
+"Kråkor är asfåglar som äter allt som är dött. Större fåglar, som den här, "
+"har även gått till anfall när det är dåligt med mat."
+
+msgid "Death of Kamalar"
+msgstr "Kamalar dör"
+
+msgid "Death of Kogw"
+msgstr "Kogw dör"
+
+msgid "Death of Malakar"
+msgstr "Malakar dör"
+
+msgid "Defeat Prax III"
+msgstr "Besegra Prax III"
+
+msgid "Defeat all enemy leaders"
+msgstr "Besegra alla fiendeledare"
+
+msgid "Defeat both enemy leaders"
+msgstr "Besegra båda fiendeledarna"
+
+msgid "Defeat enemy leader"
+msgstr "Besegra fiendens ledare"
+
+msgid "Destroy the Gate of Storms"
+msgstr "Förstör Stormporten"
+
+msgid "Destroy the caravan"
+msgstr "Förstör karavanen"
+
+msgid "Destruction of the Unforgiver"
+msgstr "Den Oförsonlige besegras"
+
+msgid ""
+"Do not mention your 'gods' again, infidel human. I see I will have to teach "
+"you manners."
+msgstr ""
+"Nämn inte dina 'gudar' igen, otrogna människa. Jag måste visst lära dig lite "
+"folkvett."
+
+msgid "Don't be so hasty, brother. I bring friends."
+msgstr "Inte så snabbt, broder. Jag har vänner med mig."
+
+msgid "Door"
+msgstr "Dörr"
+
+msgid "Drake Guard"
+msgstr "Drakvakt"
+
+msgid "Drake Guerilla"
+msgstr "Drakgerillakrigare"
+
+msgid "Drake Hatchling"
+msgstr "Drakfolksunge"
+
+msgid "Drake Rebel"
+msgstr "Drakrebell"
+
+msgid "Drake Slave"
+msgstr "Drakslav"
+
+msgid "Drake Slaves are servile members of this reptilian race."
+msgstr "Drakslavar är denna reptilras tjänstvilliga medlemmar."
+
+msgid "Drake Spear"
+msgstr "Drakspjut"
+
+msgid "Drake Worker"
+msgstr "Drakarbetare"
+
+msgid "Driver"
+msgstr "Slavdrivare"
+
+msgid "Endgame"
+msgstr "Slutspel"
+
+msgid "Epilogue"
+msgstr "Epilog"
+
+msgid ""
+"Eventually, he and Kogw were deified. Their spirits remained to watch over "
+"the drakes from above."
+msgstr ""
+"Slutligen blev han och Kogw gudsförklarade. Deras andar vaktade över "
+"drakfolket från ovan."
+
+msgid "Exit the cave"
+msgstr "Ta dig ut ur grottan"
+
+msgid "Explore the river"
+msgstr "Utforska floden"
+
+msgid "Explore the surrounding area"
+msgstr "Utforska det omkringliggande området"
+
+msgid "Explore to the south"
+msgstr "Utforska södern"
+
+msgid "Falcon"
+msgstr "Falk"
+
+msgid "Find a way out of the caverns"
+msgstr "Hitta en väg ut ur grottorna"
+
+msgid "Flight to Freedom"
+msgstr "Flykten till Frihet"
+
+msgid ""
+"For hundreds of years afterward, Malakar was remembered as one of the heroes "
+"of the drakes."
+msgstr ""
+"I hundratals år därefter var Malakar ihågkommen som en av drakfolkets stora "
+"hjältar."
+
+msgid "GUARDS!!! Slay them all!"
+msgstr "VAKTER!!! Döda dem allihop!"
+
+msgid "GUGGAGUGGAGU!"
+msgstr "GUGGAGUGGAGU!"
+
+msgid ""
+"Galleons are sailing warships. The humans' attempt at sea travel, they are "
+"expensive, but very strong. Armed with three ballistae, they mete out "
+"justice with deadly efficency."
+msgstr ""
+"Galjoner är dyra men väldigt starka. Bestyckade med tre ballistor mäter de "
+"ut rättvisa med dödlig effektivitet."
+
+msgid "Gargoyle"
+msgstr "Gargoyl"
+
+msgid "Gate of Storms"
+msgstr "Stormporten"
+
+msgid "Giant Boar"
+msgstr "Jättevildsvin"
+
+msgid ""
+"Giant Boars are overgrown pigs with a nasty disposition that will attack "
+"anything that moves. It is fortunate that these animals are rare."
+msgstr ""
+"Jättevildsvin är förvuxna grisar med den olyckliga läggningen att anfalla "
+"allt som rör sig. Turligt nog är de dock sällsynta."
+
+msgid "HELP!!!"
+msgstr "HJÄLP!!!"
+
+msgid "He died fighting for you. Like any of your other soldiers would."
+msgstr ""
+"Han dog medan han slogs för dig. Som vilken annan av dina soldater som helst "
+"skulle göra."
+
+msgid "He was a true warrior."
+msgstr "Han var en sann krigare."
+
+msgid "Hello brother!"
+msgstr "Var hälsad, broder!"
+
+msgid "Hey! $gold_given pieces of gold were in this chest!"
+msgstr "Titta! Det låg $gold_given guldstycken i den här kistan!"
+
+msgid "Highwayman"
+msgstr "Stråtrövare"
+
+msgid "Hmmm... $gold_given pieces of gold were in this chest!"
+msgstr "Hmmm... Det fanns $gold_given guldstycken i den här kistan!"
+
+msgid "Hmmm... A statue of a dragon."
+msgstr "Hmmm... En drakstaty."
+
+msgid "Hmmm... the bones of a dragon."
+msgstr "Hmm... Benen av en drake."
+
+msgid "Hordes of the Foul Undead"
+msgstr "De vidriga vandödas horder"
+
+msgid "Horse"
+msgstr "Häst"
+
+msgid ""
+"Horses that escape captivity often become wild and hostile to humans, "
+"especially if cornered or frightened.  Though they are easily put down, "
+"their kicks can smash a man's skull."
+msgstr ""
+"Hästar som flyr sin fångenskap blir ofta vilda och fientliga mot människor, "
+"särskilt om de blir trängda eller om de blir rädda. Även om de enkelt "
+"nedgörs, så kan deras sparkar krossa skallen på den som kommer i vägen."
+
+msgid ""
+"Horses, when tamed, are used as mounts by Elvish and Human armies, and also "
+"as beasts of burden."
+msgstr ""
+"Tämjda hästar används som riddjur av alver och människor. De är även "
+"praktiska som last- och dragdjur."
+
+msgid "How DARE you insult my clashers, puny softskin!"
+msgstr "Hur VÅGAR du förolämpa mina soldater, ditt ynkliga vekskinn!"
+
+msgid "How am I to cross the lava?"
+msgstr "Hur skall jag komma över lavan?"
+
+msgid ""
+"However, once the humans came to Morogor, we had to go into hiding. With the "
+"help of the saurians, I was able to avoid their patrols."
+msgstr ""
+"När människorna kom till Morogor så var vi tvungna att hålla oss gömda. Med "
+"hjälp av ödlefolket har jag kunnat undvika deras patruller."
+
+msgid "I am gone!"
+msgstr "Jag är förgjord!"
+
+msgid "I am gone! Fight on against the humans without me!"
+msgstr "Jag är förlorad! Slåss vidare mot människorna utan mig!"
+
+msgid "I dddddie! Fffight ffor meee...avvvennnnge...kkkill huuumansssss..."
+msgstr "Jag döööör! Slåssss föör miiig... Hämnassss... Döööda männissskor..."
+
+msgid "I have failed!"
+msgstr "Jag har misslyckats!"
+
+msgid "I really failed this time..."
+msgstr "Jag har verkligen misslyckats den här gången..."
+
+msgid "I request your assistance fighting the evil humans."
+msgstr "Jag behöver din hjälp med att slåss mot de onda människorna."
+
+msgid "I will kill meeeeself ssssome humanssss!"
+msgstr "Ääääntligen kommer jaaaag få döda nååågra männisssskor!"
+
+msgid "I will take command of the saurians."
+msgstr "Jag tar kommandot över ödlefolket."
+
+msgid "Intruders! Die!"
+msgstr "Inkräktare! Dö!"
+
+msgid "Just how many of these saurians do you have?"
+msgstr "Hur många av detta ödlefolk har du?"
+
+msgid "Kamalar"
+msgstr "Kamalar"
+
+msgid "Kill the hatchlings! Kill them all!"
+msgstr "Döda ungarna! Döda dem allihop!"
+
+msgid "Kill the overseer"
+msgstr "Döda övervakaren"
+
+msgid "Kogw"
+msgstr "Kogw"
+
+msgid "Kogw lived to be 47, and was a noble in Malakar's court."
+msgstr "Kogw blev en adelsman vid Malakars hov och levde tills han var 47."
+
+msgid "Kzzklk"
+msgstr "Kzzklk"
+
+msgid "Kzzklk, show yourself!"
+msgstr "Kzzklk, visa dig!"
+
+msgid "Landfall"
+msgstr "Landstigning"
+
+msgid "Lava Beast"
+msgstr "Lavabest"
+
+msgid "Lava Monster"
+msgstr "Lavamonster"
+
+msgid "Lava hot!!! Ouch!!!"
+msgstr "Lava varmt!!! Ajj!!!"
+
+msgid "Liberation"
+msgstr "Befrielse"
+
+msgid ""
+"Like all pirates, these are thieves of the water. This one is a captain, who "
+"is in charge of leading his thugs into battle."
+msgstr ""
+"Som alla pirater är dessa havens tjuvar. Den här är kapten, och leder sina "
+"busar i strid."
+
+msgid "Looky here. $gold_given pieces of gold were in this chest!"
+msgstr "Titta där. Det fanns $gold_given guldstycken i den här kistan!"
+
+msgid "Luna"
+msgstr "Luna"
+
+msgid "Major Spirit"
+msgstr "Större ande"
+
+msgid "Malakar"
+msgstr "Malakar"
+
+msgid ""
+"Malakar and Kamalar would lead the main force, and the saurian commander, "
+"Kzzklk, would lead his force of saurians, in hopes of outflanking the humans."
+msgstr ""
+"Malakar och Kamalar skulle leda huvudstyrkan, och ödlemännens befälhavare, "
+"Kzzklk, skulle leda sin trupp med ödlemän mot människornas flank."
+
+msgid ""
+"Malakar lived to the ripe old age of 133. It was rumored that a massive "
+"firestorm erupted when he died, engulfing half of Morogor."
+msgstr ""
+"Malakar levde till den respektabla åldern av 133 år. Det ryktades att en "
+"kraftig eldstorm bröt ut när han dog, som slukade halva Morogor."
+
+msgid ""
+"Malakar then traveled to the home of his older brother Kamalar, high priest "
+"of Gar-Dalgar, the Murderer."
+msgstr ""
+"Malakar färdades sedan till sin äldre bror Kamalar, Gar-Dalgar Mördarens "
+"högste präst."
+
+msgid ""
+"Malakar was crowned King of the Drakes, for saving his people from the hands "
+"of the humans."
+msgstr ""
+"Malakar blev krönt till drakfolkets kung, eftersom han hade räddat sitt folk "
+"ur människornas klor."
+
+msgid ""
+"Malakar would command the saurians, and the drake army would be split "
+"between them."
+msgstr ""
+"Malakar skulle föra befälet över ödlefolket och drakarmén bli uppdelad "
+"mellan dem."
+
+msgid "Minor Spirit"
+msgstr "Mindre ande"
+
+msgid "More advanced Drakes, the Workers fight with their maces."
+msgstr ""
+"Drakarbetarna är lite mer avancerade bland drakfolket, och slåss med "
+"spikklubbor."
+
+msgid ""
+"More experienced Skalds, the Jugglers can throw more daggers. They have also "
+"learned to supplement their natural poison with swamp berry extracts."
+msgstr ""
+"Jonglörerna är mer erfarna skalder som kan kasta fler knivar. De har lärt "
+"sig att ersätta sitt naturliga gift med saften från träskbär."
+
+msgid "Morogor is ours!"
+msgstr "Morogor är vårt!"
+
+msgid "Move Malakar to the cave entrance"
+msgstr "Led Malakar till grottmynningen"
+
+msgid "Move Malakar to the ruined keep"
+msgstr "Led Malakar till slottsruinen"
+
+msgid "Move Malakar to the western edge of the river of lava"
+msgstr "Förflytta Malakar till den västra kanten av lavafloden"
+
+msgid ""
+"Move a Drake Burner, Fire Drake, or Inferno Drake onto the Gate of Storms"
+msgstr "Led en sotdrake, elddrake eller infernodrake till Stormporten"
+
+msgid "Move a unit onto the Gate of Storms"
+msgstr "Led en trupp till Stormporten"
+
+msgid "Move the Unforgiver to the East"
+msgstr "Segla Den Oförsonlige österut"
+
+msgid "Move the Unforgiver to the bottom"
+msgstr "För Den Oförsonlige till bottnen"
+
+msgid "Move the Unforgiver to the pier"
+msgstr "Segla Den Oförsonlige till piren"
+
+msgid "No! The caravan has escaped into the hills!"
+msgstr "Nej! Karavanen har flytt in bland kullarna!"
+
+msgid "Now I will get revenge for my enslavement!"
+msgstr "Nu skall jag få hämnd för mitt förslavande!"
+
+msgid "Now that I have freed the tribe, I have true warriors at hand!"
+msgstr ""
+"Nu när vi har befriat stammen så har jag tillgång till riktiga krigare!"
+
+msgid "Now the drakes will be enslaved again!"
+msgstr "Nu kommer drakarna att bli förslavade igen!"
+
+msgid ""
+"On the island of Morogor, a drake tribe was sleeping one day when they saw a "
+"strange sight."
+msgstr ""
+"På ön Morogor låg en drakfolksstam och sov när en underlig syn uppenbarade "
+"sig."
+
+msgid "Or, I can place the saurians under your command, to add to your army."
+msgstr ""
+"Eller så kan jag placera ödlefolket under ditt kommando, för att förstärka "
+"din armé."
+
+msgid "Our enemies are at are our very backs! We must flee!"
+msgstr "Fienden är i ryggen på oss! Vi måste fly!"
+
+msgid "Our hatchlings are under attack! Hurry!"
+msgstr "Våra ungar är under attack! Skynda!"
+
+msgid "Our supplies are dangerously low! Hurry!"
+msgstr "Våra förråd är nästan slut! Skynda!"
+
+msgid "Overseer"
+msgstr "Övervakare"
+
+msgid "Pig"
+msgstr "Gris"
+
+msgid "Pirate"
+msgstr "Pirat"
+
+msgid "Pirate Captain"
+msgstr "Piratkapten"
+
+msgid "Protect Kamalar"
+msgstr "Skydda Kamalar"
+
+msgid "RUARRAGH!"
+msgstr "RUARRAGH!"
+
+msgid "Rabbit"
+msgstr "Kanin"
+
+msgid "Rebel"
+msgstr "Rebell"
+
+msgid "Rebellion"
+msgstr "Uppror"
+
+msgid "Rescue the Hatchlings"
+msgstr "Rädda ungarna"
+
+msgid "Resist for as long as possible"
+msgstr "Håll stånd så länge som möjligt"
+
+msgid "Return to Morogor"
+msgstr "Återvänd till Morogor"
+
+msgid "River of Skulls"
+msgstr "Skallarnas flod"
+
+msgid "Rock"
+msgstr "Sten"
+
+msgid "Rock Golem"
+msgstr "Stengolem"
+
+msgid ""
+"Rock Golems are creatures made out of solid, living rock. They have a weak "
+"attack, but are incredibly hard to destroy."
+msgstr ""
+"Stengolem är varelser gjorda av solid, levande sten. De har en svag attack, "
+"men är otroligt svåra att nedgöra."
+
+msgid "Rockfall"
+msgstr "Stenras"
+
+msgid "Saurian Headhunter"
+msgstr "Huvudjägare"
+
+msgid ""
+"Saurian Headhunters are the heavy fighters of the saurians. Armed with an "
+"axe, they can deliver relatively strong blows, but are encumbered by armor."
+msgstr ""
+"Dessa huvudjägare utgör det tunga infanteriet hos ödlefolket. Med sina yxor "
+"kan de dela ut tunga slag, men de hindras av sin rustning."
+
+msgid "Saurian Jarl"
+msgstr "Ödlejarl"
+
+msgid ""
+"Saurian Jarls are the leaders of saurian attack squads. Armed with an axe "
+"and armored, they are capable of doing decent damage and can take some hits, "
+"but the armor slows them down to the point where they cannot sneak pass "
+"enemies."
+msgstr ""
+"Ödlefolkets jarlar är deras attackstyrkors ledare. Bepansrade och beväpnade "
+"med yxor har de möjlighet att göra ordentligt med skada. De klarar att ta "
+"några smällar men deras rustning sinkar dem så att de inte längre kan smita "
+"förbi sina fiender utan att märkas."
+
+msgid "Saurian Juggler"
+msgstr "Ödlejonglör"
+
+msgid "Saurian Knifethrower"
+msgstr "Ödleknivkastare"
+
+msgid "Saurian Margrave"
+msgstr "Ödlefältkommendant"
+
+msgid "Saurian Skald"
+msgstr "Ödleskald"
+
+msgid "Shadow Mage"
+msgstr "Skuggmagiker"
+
+msgid "Sink the Luna"
+msgstr "Sänk Luna"
+
+msgid "So this is what the bastards did with our city!"
+msgstr "Se vad de gjort med vår stad!"
+
+msgid "Southern Shore"
+msgstr "Södra stranden"
+
+msgid "Survival"
+msgstr "Överlevnad"
+
+msgid "Take your place at the throne"
+msgstr "Ta din plats på tronen"
+
+msgid "Taskmaster"
+msgstr "Tuktomästare"
+
+msgid ""
+"The Battleship, very fast and armed with 3 ballistae, is a very versatile "
+"ship."
+msgstr "Örlogskeppet är mycket snabbt och beväpnat med tre ballistor."
+
+msgid "The Drake Escape"
+msgstr "Drakfolkets flykt"
+
+msgid "The Exodus"
+msgstr "Utvandringen"
+
+msgid "The Frigate is rather slow, but it is powerful and well-protected."
+msgstr "Frigatten är långsam men kraftig och välskyddad."
+
+msgid "The Lava Beast is a living, breathing hunk of lava with a bad attitude."
+msgstr "Lavabesten är en levande lavaklump med ett genuint dåligt humör."
+
+msgid ""
+"The Major Spirit is one of the most powerful beings known. Literally "
+"radiating with power, it can throw lightning bolts that destroy entire "
+"cities."
+msgstr ""
+"De större andarna är bland de mäktigaste varelserna som finns. De "
+"bokstavligen strålar av kraft, och kastar åskviggar som kan förstöra hela "
+"städer."
+
+msgid "The Manor"
+msgstr "Herrgården"
+
+msgid "The Open Ocean"
+msgstr "Öppna havet"
+
+msgid ""
+"The Pirate Cruiser is a larger pirate ship, either built or captured. It has "
+"3 ballistae."
+msgstr ""
+"Piratskeppen är ett stort skepp, antingen byggt eller kapat. Det har tre "
+"ballistor."
+
+msgid ""
+"The Pirate Galleon is a former battleship of the Wesnothian navy, captured "
+"by renegades and pressed into service. It has 5 ballistae."
+msgstr ""
+"Piratgaljonen är ett kapat före detta örlogsskepp från Wesnoths flotta. Det "
+"har fem ballistor."
+
+msgid ""
+"The Saurian Knifethrowers are the elite of the Skalds. They possess "
+"incredible skill with their arms, enabling them to throw many daggers at "
+"blindingly fast speeds."
+msgstr ""
+"Ödleknivkastare är skaldernas elit. De är fantastiskt skickliga med sitt "
+"vapen och kan kasta flera knivar i snabb följd."
+
+msgid ""
+"The Saurian Skalds are selected from a slower-moving but considerably "
+"stronger race of saurians, which also bear a dreaded poison bite. However, "
+"they are best known for their manual dexterity, which they translate into "
+"fast dagger throwing."
+msgstr ""
+"Skalderna väljs ut bland de långsammare men starkare av ödlemännen, som "
+"också har ett farligt och giftigt bett. De är bäst kända för sin flinkhet, "
+"som de använder för att kasta knivar."
+
+msgid ""
+"The Thunder Spirits are very powerful and mysterious. Even though this "
+"spirit is a minor one, it still wields tremendous power."
+msgstr ""
+"De mindre andarna är mycket mäktiga och mystiska. Dessa mindre andar kan "
+"fortfarande handha väldiga mängder kraft."
+
+msgid "The bridge collapsed!"
+msgstr "Bron kollapsade!"
+
+msgid "The door will not open for any who are not allied with it."
+msgstr "Dörren öppnar sig bara för allierade."
+
+msgid "The ground is unstable!"
+msgstr "Marken är inte stabil!"
+
+msgid "The guards have arrived! Everyone! FIGHT!!!!!"
+msgstr "Vakterna har kommit! Allihop, SLÅSS!"
+
+msgid "The hatchlings are free! We must kill the taskmaster!"
+msgstr "Ungarna är fria! Vi måste döda tuktomästaren!"
+
+msgid "The humans follow us! We must continue!"
+msgstr "Människorna följer efter oss! Vi måste fortsätta!"
+
+msgid "The humans pursue us!"
+msgstr "Människorna förföljer oss!"
+
+msgid "The key fits!"
+msgstr "Nyckeln passar!"
+
+msgid ""
+"The saurians are elusive and deft of foot, but weak at arms. I propose that "
+"while we attack the humans head-on, the saurians sneak behind the enemy "
+"lines and kill their leaders."
+msgstr ""
+"Ödlefolket är gäckande och snabbfotade, men ganska klena i strid. Jag "
+"föreslår att ödlemännen smiter bakom människornas linjer och mördar deras "
+"ledare medan vi uppehåller dem."
+
+msgid "The saurians will try to outflank the humans."
+msgstr "Ödlefolket skall försöka anfalla människornas flank."
+
+msgid "The sign says: Storeroom"
+msgstr "På skylten står det 'Förråd'."
+
+msgid "The tower has fallen into disrepair. Onward!"
+msgstr "Tornet har inte reparerats på bra länge. Framåt!"
+
+msgid "The trapdoor is locked!"
+msgstr "Dörren är låst!"
+
+msgid "The trapdoor is locked! Could that key fit?"
+msgstr "Dörren är låst! Passar den här nyckeln?"
+
+msgid "Theeere are nooooo mmmore sssssaurians lleft."
+msgstr "Deeet finns iiiinga ödlemäään kvaar."
+
+msgid ""
+"Then there will be a tough fight ahead of us. I must decide what I will do "
+"with the saurians."
+msgstr ""
+"I så fall har vi en hård strid framför oss. Jag måste bestämma mig för vad "
+"jag skall göra med dem."
+
+msgid "They are called saurians. A little curiosity I came across one night."
+msgstr "De kallas ödlefolk. En liten ovanlighet som jag stötte på en natt."
+
+msgid "They have fortified the entrance!"
+msgstr "De har förstärkt och blockerat ingången!"
+
+msgid "They pursue us! We must hurry!"
+msgstr "De förföljer oss! Vi måste skynda oss!"
+
+msgid "They use gargoyles!"
+msgstr "De använder gargoyler!"
+
+msgid "This mansion is haunted!"
+msgstr "Herrgården är hemsökt!"
+
+msgid "This weapon is excellent for a drake rising against its masters."
+msgstr ""
+"Det här vapnet är utmärkt för en av drakfolket som gör uppror mot sina "
+"herrar."
+
+msgid "This weapon is only fit for adult drakes."
+msgstr "Det här vapnet passar bara drakfolkets fullvuxna trupper."
+
+msgid "Thunder Spirit"
+msgstr "Åskande"
+
+msgid "To Morogor!"
+msgstr "Till Morogor!"
+
+msgid "Turns run out"
+msgstr "Dragen tar slut"
+
+msgid "Ugh! Dwarven whiskey!"
+msgstr "Usch! Dvärgwhisky!"
+
+msgid "Undead Dwarf"
+msgstr "Vandöd dvärg"
+
+msgid "Underground"
+msgstr "Underjorden"
+
+msgid "Underground!"
+msgstr "Under jord!"
+
+msgid "Use them well."
+msgstr "Använd dem väl."
+
+msgid "VICTORY IS OURS!!!"
+msgstr "SEGERN ÄR VÅR!!!"
+
+msgid "Very well. They will arrive at the third dawn."
+msgstr "Nåväl. De kommer om tre gryningar."
+
+msgid "WORK!"
+msgstr "ARBETA!"
+
+msgid "We continue!"
+msgstr "Vi fortsätter!"
+
+msgid "We have run out of supplies, these caverns shall be our tomb!"
+msgstr "Våra förråd är slut! De här grottorna kommer att bli vår grav!"
+
+msgid "We have used up half of our supplies."
+msgstr "Vi har använt hälften av våra förråd."
+
+msgid "We must continue!"
+msgstr "Vi måste fortsätta!"
+
+msgid "We must seize these caverns!"
+msgstr "Vi måste erövra de här grottorna!"
+
+msgid "Well said, brother. THE FIGHT FOR FREEDOM BEGINS HERE!!!"
+msgstr "Väl talat, broder. FRIHETSKAMPEN BÖRJAR HÄR!!!"
+
+msgid "Well, we can't go that way."
+msgstr "Vi kan inte gå den vägen."
+
+msgid "Well, well, well. $gold_given pieces of gold were in this chest!"
+msgstr "Se där ja! Det fanns $gold_given guldstycken i den här kistan!"
+
+msgid "What are these... creatures?"
+msgstr "Vilka är dessa...varelser?"
+
+msgid "Wild Horse"
+msgstr "Vildhäst"
+
+msgid ""
+"With the seizure of Weswyt, Morogor was once again the homeland of the "
+"Drakes."
+msgstr ""
+"När Weswyt hade blivit återtaget så var Morogor återigen drakfolkets hemland."
+
+msgid "Without him, we will be unable to continue. All is lost!"
+msgstr "Utan honom så kommer vi inte att kunna fortsätta. Allt är förlorat!"
+
+msgid "Wolf"
+msgstr "Varg"
+
+msgid "Yesss! My axxxxe iss reaaaddy!"
+msgstr "Jaaaa! Min yxssssa ärrr rrreedo!"
+
+msgid "axe"
+msgstr "yxa"
+
+msgid "ballista"
+msgstr "ballista"
+
+msgid "bawk"
+msgstr "kvack"
+
+msgid "bite"
+msgstr "bett"
+
+msgid "boulder"
+msgstr "stenblock"
+
+msgid "bump"
+msgstr "stöt"
+
+msgid "catapult"
+msgstr "katapult"
+
+msgid "claws"
+msgstr "klor"
+
+msgid "crossbow"
+msgstr "armborst"
+
+msgid "cutlass"
+msgstr "sabel"
+
+msgid "dagger"
+msgstr "dolk"
+
+msgid "fire breath"
+msgstr "spruta eld"
+
+msgid "fist"
+msgstr "knytnäve"
+
+msgid "hoof"
+msgstr "hov"
+
+msgid "ice blast"
+msgstr "isstöt"
+
+msgid "incisors"
+msgstr "framtand"
+
+msgid "kick"
+msgstr "spark"
+
+msgid "mace"
+msgstr "spikklubba"
+
+msgid "none"
+msgstr "inget"
+
+msgid "oink"
+msgstr "oink"
+
+msgid "spear"
+msgstr "spjut"
+
+msgid "tail"
+msgstr "svans"
+
+msgid "teeth"
+msgstr "tänder"
+
+msgid "trident"
+msgstr "treudd"
+
+msgid "whip"
+msgstr "piska"

@@ -1,0 +1,4677 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wescamp-i 18n\n"
+"Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2008-01-22 00:21+0100\n"
+"PO-Revision-Date: 2008-02-01 14:37+0100\n"
+"Last-Translator: Brivido <brivido(at)gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.1\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+
+msgid ""
+" *gasp* Elves! Have mercy on me! I come from the Baron's manor, to the west, "
+"with terrible news! I need your shelter!"
+msgstr ""
+"(ansima) Elfi! Abbiate pietà di me! Vengo dal maniero del barone, a ovest, "
+"con terribili notizie! Chiedo asilo!"
+
+msgid " *growl*"
+msgstr "(ringhia)"
+
+msgid " *growls*"
+msgstr "(ringhia)"
+
+msgid " *gulp*"
+msgstr "(ammutolito)"
+
+msgid " *pukes* I don't feel very well."
+msgstr "(vomita) Non mi sento molto bene."
+
+msgid "#If a unit is in lava, it will lose 4 hitpoints per turn."
+msgstr "#Se un'unità è sulla lava, perderà 4 punti ferita per turno."
+
+msgid "(Davies) Did you tell him about..."
+msgstr "(Davies) Gli hai detto di..."
+
+msgid "(Davies) It was mostly my work."
+msgstr "(Davies) È quasi tutta opera mia."
+
+msgid ""
+"(Davies) Rhys, you idiot! The mermen are attacking us! And look, the nagas "
+"are massing against us as well!"
+msgstr ""
+"(Davies) Rhys, idiota! I tritoni ci stanno attaccando! E, guarda, anche i "
+"naga si raggruppano contro di noi!"
+
+msgid ""
+"(Davies) Rhys, you idiot! The nagas are attacking us! And look, the mermen "
+"are massing against us as well!"
+msgstr ""
+"(Davies) Rhys, idiota! I naga ci stanno attaccando! E, guarda, anche i "
+"tritoni si raggruppano contro di noi!"
+
+msgid "(Kogw) A spirit has attacked!"
+msgstr "(Kogw) Uno spirito ci ha attaccato!"
+
+msgid "(Kogw) All hands! Watch the depths!"
+msgstr "(Kogw) Ai posti! Attenti al fondale!"
+
+msgid "(Kogw) All is lost!"
+msgstr "Kogw: «Tutto è perduto!»"
+
+msgid ""
+"(Kogw) And if we go East here until the reefs, we can drop South and catch a "
+"strong current that should sweep us all the way back to Morogor, no problem."
+msgstr ""
+"(Kogw) E se andiamo a oriente fino agli scogli, possiamo scendere a sud e "
+"prendere una forte corrente che ci dovrebbe riportare lisci a Morogor."
+
+msgid ""
+"(Kogw) Aye, I don't know why they're after us. Perhaps they hate all "
+"outsiders?"
+msgstr ""
+"(Kogw) Già, non so perché ce l'hanno con noi. Forse odiano gli estranei?"
+
+msgid ""
+"(Kogw) Blast! There's low wind and we're in the island's tide. Our best bet "
+"is to land and hope they hesitate long enough for us to ready our defense."
+msgstr ""
+"(Kogw) Dannazione! Il vento è debole e la marea contraria. La cosa migliore "
+"da fare è approdare e sperare che esitino abbastanza a lungo da darci il "
+"tempo per preparare la nostra difesa."
+
+msgid ""
+"(Kogw) Good plan! Let's round up every monster in the ocean, and a few of "
+"the larger fish, and fight them one-on-one!"
+msgstr ""
+"(Kogw) Bel piano! Raccogliamo tutti i mostri del mare e i pesci più grossi e "
+"combattiamoli uno per uno!"
+
+msgid ""
+"(Kogw) Heh-heh, I'm the one with thin skin, now? Keep the Unforgiver "
+"oriented South, men, and keep us well clear of the larger monsters!"
+msgstr ""
+"(Kogw) Eh, eh, adesso sono io quello con la pelle molle? Mantenete la rotta "
+"a sud, uomini e teneteci alla larga dai mostri più grossi!"
+
+msgid ""
+"(Kogw) Now, while they're distracted! Full sails south! Let's leave Wesnoth "
+"for good!"
+msgstr ""
+"(Kogw) Ora, mentre sono distratti! A gonfie vele verso sud! Lasciamo "
+"finalmente Wesnoth!"
+
+msgid "(Kogw) On to Morogor!"
+msgstr "(Kogw) Avanti, verso Morogor!"
+
+msgid "(Kogw) Rhys, here, says that he's got a map."
+msgstr "(Kogw) Rhys, qui, dice di avere una mappa."
+
+msgid ""
+"(Kogw) The only, uh, hitch is that the slightest disturbance is likely to "
+"start the Mermen and Nagas fighting again. They've both claimed this stretch "
+"for as long as anyone can remember."
+msgstr ""
+"(Kogw) L'unico, eh, intoppo è che al minimo disturbo è probabile che tritoni "
+"e naga ricomincino a combattere di nuovo. Entrambi reclamano questo "
+"passaggio da così tanto tempo che nessuno se lo ricorda."
+
+msgid "(Kogw) The storm is gaining strength! We're doomed!"
+msgstr "(Kogw) La tempesta acquista vigore! Siamo condannati!"
+
+msgid "(Kogw) Uh, Mal...?"
+msgstr "(Kogw) Eh, Mal...?"
+
+msgid ""
+"(Kogw) Welcome to the Sea of Webs, boys and girls, home to the nastiest "
+"beasts you're likely to find this side of an undead family reunion."
+msgstr ""
+"(Kogw) Benvenuti al mare dei sargassi, ragazzi e ragazze, patria delle "
+"bestie più disgustose che potreste trovare a una riunione di famiglia di non-"
+"morti."
+
+msgid "(Malakar) Are you going to say that EVERY time?"
+msgstr "(Malakar) Vuoi sottolinearlo TUTTE le volte?"
+
+msgid "(Malakar) By the smoke of Gar-Alagar... a spirit!"
+msgstr "(Malakar) Per il fumo di Gar-Alagar... uno spirito!"
+
+msgid "(Malakar) It did not attack! It just appeared!"
+msgstr "(Malakar) Non ci ha attaccato! È solo comparso!"
+
+msgid "(Malakar) Let us press on!"
+msgstr "(Malakar) Affrettiamoci!"
+
+msgid "(Malakar) Never!"
+msgstr "(Malakar) Mai!"
+
+msgid ""
+"(Malakar) None will obstruct our passage. We will kill anything that tries "
+"to stop us!"
+msgstr ""
+"(Malakar) Nessuno ci impedirà di passare. Noi uccideremo chiunque cercherà "
+"di fermarci!"
+
+msgid "(Malakar) Only the ones that oppose... do not mock me, thinskin."
+msgstr ""
+"(Malakar) Solo quelli che si oppongono... non farti gioco di me, pellemolle."
+
+msgid ""
+"(Malakar) Regardless, we will not be stopped. See that we make it, Kogw."
+msgstr ""
+"(Malakar) Comunque, non ci fermeremo. Fa' in modo che ce la facciamo, Kogw."
+
+msgid "(Malakar) The bridge collapsed!"
+msgstr "(Malakar) Il ponte è crollato!"
+
+msgid "(Malakar) The humans pursue us!"
+msgstr "(Malakar) Gli uomini ci inseguono!"
+
+msgid ""
+"(Malakar) There is an old fortress on the eastern horizon. We can make our "
+"stand there."
+msgstr ""
+"(Malakar) C'è una vecchia fortezza all'orizzonte a est. Potremmo sistemarci "
+"laggiù."
+
+msgid "(easiest)"
+msgstr "(facile)"
+
+msgid "(hardest)"
+msgstr "(difficile)"
+
+msgid "..."
+msgstr "..."
+
+msgid "... along before the winds shift. My ship is ready to go, when you are."
+msgstr ""
+"... finché soffia il vento. La mia nave è pronta ad andare quando volete."
+
+msgid ""
+"...never sleeping, never stopping, never tiring, hungering only for blood..."
+msgstr ""
+"... non dormono mai, non si fermano mai, non si stancano mai, cercano solo "
+"il sangue fresco..."
+
+msgid "...who seems to be missing a few bones."
+msgstr "... a cui pare manchino delle ossa"
+
+msgid "500 gold! This will go a long way toward our cause!"
+msgstr "500 pezzi d'oro! È un bel passo verso la nostra causa!"
+
+msgid ""
+"@But first, I must return to the first scenario, and get defeated, so that I "
+"can be enslaved!"
+msgstr ""
+"@Ma prima, devo tornare al primo scenario e venire sconfitto in modo da "
+"poter essere fatto schiavo!"
+
+msgid ""
+"@Drake High Magi can launch fireballs (damage: 30 fire) within a four-hex "
+"radius. They are limited to three fireballs per level per magus. A green "
+"square signifies that the magus has energy left, and a red square signifies "
+"that the magus' energy is depleted. Fireballs are invoked by right-clicking "
+"the target and selecting the appropriate item in the menu."
+msgstr ""
+"I draghi archimaghi possono scagliare palle di fuoco (danni: 30 fuoco) in un "
+"raggio di quattro esagoni. Sono limitati a tre palle di fuoco per livello "
+"per arcimago. Un quadrato verde vuol dire che il mago ha energia residua "
+"mentre uno rosso vuol dire che l'energia del mago è esaurita. La palle di "
+"fuoco sono invocate cliccando con il tasto destro sul bersaglio e "
+"selezionando la voce appropriata sul menu."
+
+msgid ""
+"A Drake Lord is the chieftain of a powerful and respected tribe. He wields a "
+"sword doused in naphtha, against which few foes can stand. This, coupled "
+"with his mastery of his internal fires, makes him an enemy few would dare to "
+"fight.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Il signore dei draghi è il capitano di una tribù potente e rispettata. "
+"Contro quei pochi nemici che possono affrontarlo, maneggia una spada bagnata "
+"nel petrolio. Questa, abbinata al suo fuoco interno, lo rendono un nemico "
+"che pochi oserebbero combattere.\n"
+"\n"
+"Note speciali:"
+
+msgid ""
+"A Fire, Inferno or Armageddon Drake is necessary to destroy the Gate of "
+"Storms."
+msgstr ""
+"Per distruggere il «cancello delle tempeste» è necessario un drago di fuoco, "
+"un drago infernale o un drago dell'apocalisse."
+
+msgid ""
+"A Wisp is a magically created and bound spirit. Although its artificial "
+"nature limits its power, it is as ethereal as any Ghost, and has the "
+"potential, through repeated killing, to steal a soul into its vile magics.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Un ciuffetto è uno spirito creato e legato magicamente. Anche se la sua "
+"natura artificiale limita il suo potere, è etereo come qualsiasi fantasma e "
+"ha il potenziale, attraverso ripetute uccisioni, di rubare un'anima alla sua "
+"abominevole magia.\n"
+"\n"
+"Note speciali:"
+
+msgid ""
+"A curtain of darkness descends from the mountains, cloaking the entire "
+"valley."
+msgstr "Una cortina di tenebra scende dalle montagne oscurando tutta la valle."
+
+msgid "A healing potion!"
+msgstr "Una pozione guaritrice!"
+
+msgid "A river of lava! How am I supposed to cross?"
+msgstr "Un fiume di lava! Come faccio ad attraversarlo?"
+
+msgid ""
+"A role mostly filled by the dregs of society, Taskmasters live a perverted "
+"life of torturing the slaves under their watch. They especially like beating "
+"Drake slaves with their short swords."
+msgstr ""
+"Un ruolo occupato dalla feccia della società, i sorveglianti vivono "
+"torturando perversamente gli schiavi sotto la sua custodia. Essi amano, "
+"sopra ogni cosa, picchiare gli schiavi draghi con le loro spade corte."
+
+msgid ""
+"A small handful of rebels have been in hiding ever since the attack. We've "
+"fought our battles when and where we can, but our hopes are low and our "
+"numbers are dwindling. Your arrival will mean a great deal."
+msgstr ""
+"Un piccolo manipolo di ribelli è rimasto nascosto fin dall'attacco. Abbiamo "
+"combattuto le nostre battaglie quando e dove potevamo, ma le nostre speranze "
+"erano poche e il nostro numero scemava. Il tuo arrivo vorrà dire molto per "
+"noi."
+
+msgid "A spider web!"
+msgstr "Una ragnatela!"
+
+msgid "A spirit has attacked!"
+msgstr "Uno spirito ci ha attaccato!"
+
+msgid "AAAAH!"
+msgstr "AAAAH!"
+
+msgid "AAAAH! I'm doomed!"
+msgstr "AAAAH! Sono condannato!"
+
+msgid ""
+"ARRH! You fight like a crazed beast, and I wish to lose no more men. You "
+"have whatever it is you have come for - get out! Get out of our forest! If "
+"we ever cross paths again, it will be your death!"
+msgstr ""
+"ARRH! Combatti come una belva ferita e non voglio perdre altri uomini. Non "
+"so da dove vieni - vattene! Vattene dalla nostra foresta! Se le nostre "
+"strade si incroceranno di nuovo, sarà la tua morte!"
+
+msgid "ARRRRGH!"
+msgstr "ARRRRGH!"
+
+msgid "Abomination"
+msgstr "Abominio"
+
+msgid "Abraxa"
+msgstr "Abraxa"
+
+msgid ""
+"After defeating the rebels, Malakar left the valley, his intent to go to the "
+"landing site and sail to his homeland."
+msgstr ""
+"Dopo aver sconfitto i ribelli, Malakar lasciò la valle con l'intento di "
+"recarsi all'approdo e salpare per la sua patria."
+
+msgid ""
+"After killing the baron and torching his house, Malakar headed out to "
+"intercept the caravan."
+msgstr ""
+"Dopo aver ucciso il barone e incendiato la sua casa, Malakar si dispose a "
+"intercettare la carovana."
+
+msgid ""
+"After liberating their home, Malakar and Kamalar mounted a joint offensive "
+"against the capital city of Weswyt."
+msgstr ""
+"Dopo aver liberato la loro patria, Malakar e Kamalar organizzarono "
+"un'offensiva congiunta contro la capitale di Weswyt."
+
+msgid ""
+"After securing the Blue River, Malakar and Kogw boarded the pirates' "
+"flagship, the Unforgiver, and set sail for Morogor."
+msgstr ""
+"Dopo aver messo in sicurezza il fiume Blu, Malakar e Kogw salirono a bordo "
+"dell'Implacabile, nave ammiraglia dei pirati, e salparono per Morogor."
+
+msgid "Ahh... tasty!"
+msgstr "Ahh... buona!"
+
+msgid "Aigaithing"
+msgstr "Aigaithing"
+
+msgid ""
+"All 6 boulders have been destroyed! The cave could collapse at any time! "
+"Everyone out, now!"
+msgstr ""
+"Tutti e 6 i macigni sono stati distrutti! La caverna potrebbe crollare in "
+"qualsiasi momento! Uscite tutti, subito!"
+
+msgid ""
+"All able-bodied drakes! I call upon the pledges you have given to your "
+"tribes, to your families, and to me. Now, with everything you have left, "
+"attack their leaders. Yes, their swords and arrows will sting, but not one "
+"of us shall go to our graves today knowing that we let the softskins take "
+"Hafwyt without first paying every drop of blood we can wring from them. By "
+"honor and by Gar-Alagar, forward!"
+msgstr ""
+"A tutti i draghi abili! Faccio appello a tutti i giuramenti che avete fatto "
+"alle vostre tribù, alle vostre famiglie e a me. Ora, attaccate i loro "
+"comandanti con tutto quello che vi è rimasto. Sì, spade e frecce pungono "
+"ancora, ma nessuno di noi morirà oggi sapendo che abbiamo permesso ai "
+"pellimolli di prendere Hafwyt senza prima pagare con ogni goccia di sangue "
+"che possiamo strappar loro. Per l'onore e per Gar-Alagar, avanti!"
+
+msgid ""
+"All are pardoned. None of you will ever forget the sides that were chosen "
+"here today, but any who are found telling the hatchlings, or accusing your "
+"neighbors of old treasons, will face the harshest penalties. We must live "
+"again as a tribe if we are to survive. MOVE OUT!"
+msgstr ""
+"Sono tutti perdonati. Nessuno di voi dimenticherà mai quali fazioni sono "
+"state scelte qui oggi ma chiunque verrà scoperto a parlare delle nidiate o "
+"ad accusare i nostri vicini di vecchi tradimenti, affronterà le punizioni "
+"più dure. Dobbiamo vivere di nuovo come uan tribù se vogliamo sopravvivere. "
+"SGOMBRIAMO!"
+
+msgid "All is lost!"
+msgstr "Tutto è perduto!"
+
+msgid ""
+"All right, all right. I just thought you could use some help escaping from "
+"the, uh, humans."
+msgstr ""
+"Benisimo, benissimo. Pensavo solo che ti serviva una mano per fuggire da, "
+"eh, gli uomini."
+
+msgid ""
+"Although the hatchlings were now safe, they had suffered grievous wounds, "
+"rendering most of them unable to fight. Many died from their wounds, "
+"throwing Malakar and the drakes into a ferocious bloodlust."
+msgstr ""
+"Anche se adesso la nidiata era in salvo, avevano patito ferite molto gravi e "
+"molti di loro non avrebbero potuto volare. Per le ferite riportate molti di "
+"loro morirono e ciò alimentò la bramosia di sangue di Malakar e dei draghi."
+
+msgid ""
+"An Abomination is a mongrel of assorted body parts, not all of which are "
+"necessarily human. The work of an evil mage, it is an unnaturally strong, "
+"utterly obedient thrall of its master."
+msgstr ""
+"Un abominio è l'insieme di diverse parti del corpo, non tutte "
+"necessariamente umane. Opera di un mago malvagio, è uno schiavo "
+"innaturalmente forte e assolutamente obbediente al suo padrone."
+
+msgid "An abomination! Help!"
+msgstr "Un abominio! Aiuto!"
+
+msgid ""
+"And how do I guarantee that you will not kill us while we sleep? Swear on "
+"the fire of Gar-Alagar, king of the gods of Morogor, an oath to me, Malakar "
+"of the Drakes!"
+msgstr ""
+"E come faccio a assicurarmi che non ci ucciderai nel sonno? Giura sul fuoco "
+"di Gar-Alager, re degli dei di Morogor, fedeltà a me, Malakar dei draghi!"
+
+msgid ""
+"And so Necolar, as an official emissary of her father's tribe, went to meet "
+"with the human leaders. The humans were not interested in trading, however."
+msgstr ""
+"Quindi Necolar, in veste di emissaria della tribù di suo padre, si recò a "
+"incontrare i comandanti degli uomini. Gli uomini, però, non erano "
+"interessati a mercanteggiare."
+
+msgid ""
+"And you've brought elves in here with you? Gol, by the Beard. This is "
+"nothing less than an invasion! Mobilize! Dwarven units, mobilize!"
+msgstr ""
+"E avete portato gli elfi qui con voi? Gold, per tutte le barbe. Questa è una "
+"vera e propria invasione! Alle armi! Nani, alle armi!"
+
+msgid ""
+"Anyways, the wind blew us back and we've been circling the island since, "
+"trying to resupply without getting attacked."
+msgstr ""
+"Comunque, il vento ci ha spinto indietro e da allora stiamo girando attorno "
+"all'isola cercando di rifornirci senza essere attaccati."
+
+msgid "Are you going to say that EVERY time?"
+msgstr "Ci dirai questa cosa TUTTE le volte?"
+
+msgid ""
+"Armed with a heavy mace, Highwaymen are the last people you want to meet on "
+"a deserted road late at night."
+msgstr ""
+"Armati di una pesante mazza, i briganti sono le ultime persone che si "
+"desiderano incontrare in una strada deserta nella notte fonda."
+
+msgid "Around ten. Fifteen at most."
+msgstr "Circa dieci. Quindici al massimo."
+
+msgid ""
+"As it happens, I'm the leader of a band of... adventurers. We're good sorts, "
+"but those damn elves have been after us for no good reason!"
+msgstr ""
+"Si dà il caso che io sia il capo di una banda di... avventurieri. Siamo dei "
+"bravi ragazzi, ma quei dannati elfi ce l'hanno con noi senza ragione!"
+
+msgid "At least four hatchlings must survive"
+msgstr "Almeno quattro nidiate devono sopravvivere"
+
+msgid "At yooourrr ccccommaaaand!"
+msgstr "Aagli oordinii!"
+
+msgid "Augcatsil"
+msgstr "Augcatsil"
+
+msgid "Ballista"
+msgstr "Balista"
+
+msgid ""
+"Baron: 'Foolish insectz! You think you have won, but I have only begun to "
+"show you my true power!'"
+msgstr ""
+"Barone: «Sciocchi inzetti! Penzate di afer vinto, ma io ho zolo cominciato a "
+"farvi federe il mio fero potere!»"
+
+msgid ""
+"Baron: 'Hear me Sol'kan, bringer of the void and arbiter of souls! I summon "
+"thee forth from your pit of eternal suffering to aid me now! Hear me, unholy "
+"groom of the darkezt one, lord of...'"
+msgstr ""
+"Barone: «Ascoltami, Sol'kan, signora del vuoto e giudice delle anime! Io ti "
+"invoco dal tuo pozzo di eterna sofferenza per aiutarmi adesso! Ascoltami, "
+"terribile sposa del più ozcuro zignore di...»"
+
+msgid ""
+"Baron: 'I think you will find, Marshal, that even your prezious King would "
+"anzwer like a lapdog if his pocketbook dozn't begin to fill soon. Money doez "
+"strange thingz to people...'"
+msgstr ""
+"Barone: «Penso che scoprirete, colonnello, che perzino il fostro prezioso re "
+"ubbidirebbe come un cagnolino ze il suo borzellino zi riempisse in fretta. "
+"L'oro fa fare strane cose alla gente...»"
+
+msgid ""
+"Baron: 'Very well, Marshal, I suppoze I can hardly expect a mere merzenary "
+"to share in the bazic social grazes to which I am accuztomed.'"
+msgstr ""
+"Barone: «Benizzimo, colonnello. Zuppongo che diffizilmente posso pretendere "
+"che un zemplice mercenario condivida le cortesie zociali di baze a cui zono "
+"stato educato.»"
+
+msgid ""
+"Baron: 'Yez, Marshal, they are uzeful to me, and so I let you live. Never, "
+"though, did I zay that I what I needed waz manpower. Perhapz next time you "
+"will pay a little more attenzion and bring me the humans I had azked for. "
+"Now, get out of here.'"
+msgstr ""
+"Barone: «Zì, colonnello, mi saranno utili ed è per questo che vi lascerò "
+"vivere. Però non vi ho mai detto di volere forza lavoro. Forze la prossima "
+"volta farete più attenzione e mi porterete gli uomini che vi ho chiesto. "
+"Adesso andatevene.»"
+
+msgid ""
+"Baron: 'You have failed me, Marshal; you and your men. I requezted human... "
+"help, and you brought me dying lizards. You are lucky I do not chooz to "
+"punish you for your shameful performanz.'"
+msgstr ""
+"Barone: «Mi avete deluso, colonnello, voi e i vostri uomini. Mi servivano "
+"uomini... e voi mi portate lucertole agonizzanti. Siete fortunati che abbia "
+"deciso di non punirvi per il vostro pietoso servizio.»"
+
+msgid ""
+"Be that as it may, you're tearing up our tunnels and profaning our land by "
+"dragging the ding-blasted elves everywhere."
+msgstr ""
+"Sarà anche come dici, ma state devastando le nostre gallerie e profanando i "
+"nostri territori trascinando ovunque quei maledetti elfi."
+
+msgid ""
+"Beards! Drakes, then elves, now drakes again! Why can't you all leave us "
+"alone?"
+msgstr ""
+"Per tutte le barbe! Draghi, poi elfi e adesso di nuovo draghi! Perché non ci "
+"lasciamo tutti da soli?"
+
+msgid ""
+"Begone from here, softskin. We have no need of you, and no need of your aid."
+msgstr ""
+"Vattenenda qui, pelle-molle. Non abbiamo bisogno di te, non ci serve il tuo "
+"aiuto."
+
+msgid "Betrayal"
+msgstr "Tradimento"
+
+msgid "Blockade"
+msgstr "Palizzata"
+
+msgid "Blue River"
+msgstr "Fiume blu"
+
+msgid "Brother!"
+msgstr "Fratello!"
+
+msgid ""
+"But Malakar, that dragon is a dark abomination! We cannot ally with such "
+"evil!"
+msgstr ""
+"Ma Malakar, quel dragone è un oscuro abominio! Non possiamo allearci al male!"
+
+msgid ""
+"But there are dwarves everywhere. We must flee to somewhere. Start looking "
+"for an exit. We do not have the time or the strength to fight with the half-"
+"men. Avoid them if possible, kill any who pose a serious threat. Go!"
+msgstr ""
+"Solo che ci sono nani ovunque. Dobbiamo fuggire da qualche parte. Inizia a "
+"cercare una uscita. Non abbiamo il tempo né la forza di combattere con i "
+"mezzi-uomini. evitiamoli se possibile, uccidete tutti quelli che diventano "
+"una minaccia seria. Via!"
+
+msgid ""
+"But this is bittersweet. My brother is dead... just like Necolar, my "
+"daughter."
+msgstr ""
+"Ma è una triste vittoria. Mio fratello è morto... proprio come Necolar, mia "
+"figlia."
+
+msgid ""
+"By the Eyes... it's hopeless, Malakar! That's a whole fleet of their finest. "
+"We must retreat!"
+msgstr ""
+"Per le fiamme... non abbiamo speranza, Malakar! È una flotta intera e delle "
+"migliori. Dobbiamo ritirarci!"
+
+msgid "By the smoke of Gar-Alagar... a spirit!"
+msgstr "Per il fumo di Gar-Alagar... uno spirito!"
+
+msgid "C'onolar"
+msgstr "C'onolar"
+
+msgid "Captain Kogw! Captain Kogw!"
+msgstr "Capitano Kogw! Capitano Kogw!"
+
+msgid ""
+"Captain: 'A moment of your time, Malakar. My scouts have reported an "
+"approaching fleet manned by humans. No doubt they wish to discuss the use of "
+"our quarries, again.'"
+msgstr ""
+"Capitano: «Concedimi un attimo del tuo tempo, Malakar. I miei esploratori "
+"riferiscono che una flotta con equipaggio di uomini si sta avvicinando. Non "
+"c'è dubbio che vogliano di nuovo discutere dell'uso delle nostre cave.»"
+
+msgid ""
+"Captain: 'General, I'm pleased to report that our cavalry says that the last "
+"of the stragglers have been rounded up.'"
+msgstr ""
+"Capitano: «Generale, ho il piacere di riferire che la nostra cavalleria dice "
+"che gli ultimi sbandati sono rastrellati.»"
+
+msgid ""
+"Captain: 'No, Sir. Sir, may I ask what is to be done with the captives?'"
+msgstr ""
+"Capitano: «Nossignore. Signore, posso chiedervi cosa devo fare dei "
+"prigionieri?»"
+
+msgid "Captain: 'Sir, I assure you that our men fought their hardest!'"
+msgstr ""
+"Capitano: «Signore, vi garantisco che i nostri uomini hanno combattuto al "
+"loro meglio!»"
+
+msgid "Captain: 'Sir, yes, sir.'"
+msgstr "Capitano: «Signorsì, signore!»"
+
+msgid "Captain: 'Thank you, Sir. Requesting permission to speak freely?'"
+msgstr "Capitano: «Grazie, signore. Posso parlare liberamente?»"
+
+msgid ""
+"Captain: 'The drake tribes are often in competition, Sir. They are unlikely "
+"to be upset at the removal of a rival tribe. However, they do share certain "
+"beliefs, and if we do not bury the dead warriors, I'm certain that every "
+"drake in Morogor will unite and swear vengeance upon us.'"
+msgstr ""
+"Capitano: «Le tribù dei draghi sono spesso in competizione, signore. "
+"Difficilmente sarebbero furiosi per l'eliminazione di una tribù rivale. "
+"Tuttavia, condividono certe credenze e se non seppelliamo i guerrieri morti "
+"sono certo che tutti i draghi a Morogor si uniranno e giureranno vendetta "
+"contro di noi.»"
+
+msgid "Caravan"
+msgstr "Carovana"
+
+msgid "Caravan escapes"
+msgstr "Fuga della carovana"
+
+msgid "Caravan is destroyed by wolves"
+msgstr "Distruzione della carovana da parte dei lupi"
+
+msgid ""
+"Caravans are used to carry gold or supplies over long distances. They are "
+"guarded, but they usually also have a soldier with a spear and crossbow in "
+"the back to defend them."
+msgstr ""
+"Le carovane sono usate per spostare oro e merci per grandi distanze. Sono "
+"scortate, inoltre di solito c'è anche un soldato armato di lancia e balestra "
+"sul retro per difenderle."
+
+msgid ""
+"Caravels are medium-sized attack ships, armed with a ballista and a long-"
+"range catapult."
+msgstr ""
+"Le caravelle sono navi da battaglia di taglia media, armate con una balista "
+"e una catapulta a lunga portata."
+
+msgid "Careorra"
+msgstr "Careorra"
+
+msgid "Cave Naga"
+msgstr "Naga delle caverne"
+
+msgid "Caves as far as the eye can see. We are completely lost."
+msgstr "Grotte in qualunque direzione. Siamo completamente sperduti."
+
+msgid "Ceomyr"
+msgstr "Ceomyr"
+
+msgid "Chicken"
+msgstr "Pollo"
+
+msgid "Chickens are kept for their meat and eggs."
+msgstr "I polli sono allevati per la carne e le uova."
+
+msgid "Cicyn"
+msgstr "Cicyn"
+
+msgid ""
+"Clippers, although fast, are very weak. Armed with a ballista, they are used "
+"primarily as scouts."
+msgstr ""
+"I clipper, anche se veloci, sono molto deboli. Armati di una balista, sono "
+"usate principalmente per la ricognizione."
+
+msgid "Collapse the cave exit by destroying the six boulders that support it"
+msgstr ""
+"Fa' cadere l'uscita della grotta distruggendo i sei macigni che la "
+"sostengono."
+
+msgid "Could this key fit that trapdoor?"
+msgstr "Chissà se questa chiave apre la botola?"
+
+msgid "Council of War"
+msgstr "Consiglio di guerra"
+
+msgid "Cow"
+msgstr "Mucca"
+
+msgid "Cows are livestock that are used for their meat, leather and milk."
+msgstr ""
+"Le mucche sono animali allevati per la loro carne, il cuoio e il latte."
+
+msgid ""
+"Created by accident in the garbage can of an alchemist, fungoids are magical "
+"mushrooms that can multiply very quickly. Since they were so soft and weak, "
+"nobody in the region took the things too seriously... until a couple hundred "
+"of them showed up at the nearest town. After that, all the town's families "
+"enjoyed the weekly picnic and fungoid smashing in the nearby forest, small "
+"kids and elderly included. Eventually, the fungoids adopted defensive "
+"weapons - twigs."
+msgstr ""
+"Creati per caso nella spazzatura di un alchimista, i fungoidi sono funghi "
+"magici che si moltiplicano molto velocemente. Dato che erano così flaccidi e "
+"deboli, nessuno nella regione prese la cosa troppo seriamente... finché un "
+"paio di centiania di essi spuntò nella città vicina. Dopo di ché, tutte le "
+"famiglie delal città si divertì al picnic settimanale e alla caccia al "
+"fungoide nella vicina foresta, compresi bambini e anziani. Probabilmente i "
+"fungoidi adottarono armi difensive - dei ramoscelli."
+
+msgid "Creatures of the lava! We cannot leave this way!"
+msgstr "Creature di lava! Non possiamo andare da questa parte!"
+
+msgid "Crow"
+msgstr "Corvo"
+
+msgid ""
+"Crows are carrion birds which will eat anything dead. Larger ones such as "
+"this have been also known to attack when food is scarce."
+msgstr ""
+"I corvi sono uccelli che si cibano di carogne. Si sa che i più grandi, come "
+"questo, possono attaccare quando il cibo è scarso."
+
+msgid "Dacayan"
+msgstr "Dacayan"
+
+msgid "Davies"
+msgstr "Davies"
+
+msgid "Death of Davies"
+msgstr "Morte di Davies"
+
+msgid "Death of Hartholar"
+msgstr "Morte di Hartolar"
+
+msgid "Death of Kamalar"
+msgstr "Morte di Kamalar"
+
+msgid "Death of Kogw"
+msgstr "Morte di Kogw"
+
+msgid "Death of Malakar"
+msgstr "Morte di Malakar"
+
+msgid "Death of Quemar"
+msgstr "Morte di Quemar"
+
+msgid "Death of Rhys"
+msgstr "Morte di Rhys"
+
+msgid "Death of Tenbakar"
+msgstr "Morte di Tenbakar"
+
+msgid "Death of Theracar"
+msgstr "Morte di Theracar"
+
+msgid "Defeat Mal-Bronam"
+msgstr "Sconfiggi Mal-Bronam"
+
+msgid "Defeat Prax III"
+msgstr "Sconfiggi Prax III"
+
+msgid "Defeat all enemy leaders"
+msgstr "Sconfiggi tutti i condottieri nemici"
+
+msgid "Defeat both enemy leaders"
+msgstr "Sconfiggi entrambi i condottieri nemici"
+
+msgid "Defeat enemy leader"
+msgstr "Sconfiggi il condottiero nemico"
+
+msgid "Defeat the cavalry leader"
+msgstr "Sconfiggi il comandante della cavalleria"
+
+msgid ""
+"Despite the hindrances of their serpentine anatomy, these nagas have "
+"persevered at magic anyway. Their work now begins to pay off."
+msgstr ""
+"Nonostante gli impacci della loro anatomia serpentina, questi naga hanno "
+"perseverato comunque nella magia. Il loro impegno adesso comincia a "
+"ripagarli."
+
+msgid "Destroy the Gate of Storms"
+msgstr "Distruggi il «cancello delle tempeste»"
+
+msgid "Destroy the caravan"
+msgstr "Distruggi la carovana"
+
+msgid "Destruction of the Unforgiver"
+msgstr "Distruzione dell'Implacabile"
+
+msgid "Die the death you meant for us!"
+msgstr "Muoia la morte che volevate per noi!"
+
+msgid "Die, drake scum!"
+msgstr "Muori, feccia di un drago!"
+
+msgid "Die, foul one!"
+msgstr "Muori, sciocco!"
+
+msgid ""
+"Do not mention your 'gods' again, infidel human. I see I will have to teach "
+"you manners."
+msgstr ""
+"Non menzionare più i tuoi dei, uomo infedele. Vedo che dovrò insegnarti le "
+"buone maniere."
+
+msgid ""
+"Dogs of the sea, pirates are outlaws who prey in the open water. Armed with "
+"a cutlass, they make nasty foes."
+msgstr ""
+"Lupi di mare, i pirati sono fuorilegge che scorrazzano in mare aperto in "
+"cerca di bottino. Armati di sciabola, sono nemici pericolosi."
+
+msgid "Don't be so hasty, brother. I bring friends."
+msgstr "Non essere così frettoloso, fratello. Porto degli amici."
+
+msgid "Donoaov"
+msgstr "Donoaov"
+
+msgid "Door"
+msgstr "Porta"
+
+msgid "Drake Chieftain"
+msgstr "Drago capitano"
+
+msgid ""
+"Drake Chieftains are the leaders of their tribes. Skilled in the use of both "
+"their sword and their internal fire, they are also trained from a young age "
+"to lead their fellow Drakes into battle.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"I draghi capitani sono i comandanti delle loro tribù. Esperti nell'uso della "
+"spada e del loro fuoco interno, sono anche addestrati fin dalla giovane età "
+"a guidare i loro compagni draghi in battaglia.\n"
+"\n"
+"Note speciali:"
+
+msgid "Drake Guard"
+msgstr "Drago guardiano"
+
+msgid "Drake Guerilla"
+msgstr "Drago guerrigliero"
+
+msgid "Drake Hatchling"
+msgstr "Nidiata di drago"
+
+msgid "Drake High Magus"
+msgstr "Drago arcimago"
+
+msgid "Drake Lord"
+msgstr "Signore dei draghi"
+
+msgid "Drake Priest"
+msgstr "Drago sacerdote"
+
+msgid "Drake Rebel"
+msgstr "Drago ribelle"
+
+msgid "Drake Slave"
+msgstr "Drago schiavo"
+
+msgid "Drake Slaves are servile members of this reptilian race."
+msgstr "I draghi schiavi sono membri servili di questa razza di rettili."
+
+msgid "Drake Spear"
+msgstr "Lancia dei draghi"
+
+msgid "Drake Worker"
+msgstr "Drago lavoratore"
+
+msgid "Drake! Of what tribe are... a magus?!?"
+msgstr "Drago! Di quale tribù sei... un mago?!?"
+
+msgid ""
+"Drake: 'I mean no offense, Malakar, but what use do we have for the humans' "
+"filthy coins? We have our freedom!'"
+msgstr ""
+"Drago: «Senza offesa, Malakar, ma cosa ce ne facciamo delle puzzolenti "
+"monete degli uomini? Siamo liberi!»"
+
+msgid ""
+"Drakes! Clear the area of interference. We are leaving these cursed shores!"
+msgstr ""
+"Draghi! Sgombrate l'area di interferenza. Stiamo per lasciare questi porti "
+"maledetti!"
+
+msgid "Drakes! Continue traveling southeast, but be on your guard!"
+msgstr "Draghi! Continuate verso sud-est ma siate prudenti!"
+
+msgid ""
+"Drakes! Fight on! KILL! Kill all that dare to oppose us! Give no quarter, "
+"and show no mercy!"
+msgstr ""
+"Draghi! Continuate a combattere! UCCIDETE! Uccidete tutti quelli che si "
+"oppongono a noi! Non prendete prigionieri e non abbiate pietà!"
+
+msgid ""
+"Drakes! Use the mountains for cover, and defend yourselves! We must escape "
+"the valley!"
+msgstr ""
+"Draghi! Usate le montagne per proteggervi e difendetevi! Dobbiamo fuggire "
+"dalla valle!"
+
+msgid "Drakes! We must flee, at least for now!"
+msgstr "Draghi! Dobbiamo fuggire, almeno per il momento!"
+
+msgid ""
+"Dreadnoughts are the pride of the humans' navy. With 3 ballistae and a "
+"catapult, they can sink or kill almost anything unlucky enough to be in "
+"their way."
+msgstr ""
+"Le corazzate sono l'orgoglio della marina degli uomini. Con tre baliste e "
+"una catapulta, possono affondare o uccidere quasi qualsiasi cosa abbastanza "
+"sfortunata da trovarsi sulla loro strada."
+
+msgid "Dredgno"
+msgstr "Dredgno"
+
+msgid "Dredgno? Leader?"
+msgstr "Dredgno? Comandante?"
+
+msgid "Driver"
+msgstr "Guardiano"
+
+msgid "Dulating"
+msgstr "Dulating"
+
+msgid "Dulcatlos"
+msgstr "Dulcatlos"
+
+msgid "Dump the boiling oil!"
+msgstr "Gettate l'olio bollente!"
+
+msgid "Einelen"
+msgstr "Einelen"
+
+msgid "Einelen vanishes with a magical word!"
+msgstr "Einelen scompare con una formula magica!"
+
+msgid "Einelen: 'All we ask for is your companion.'"
+msgstr "Einelen: «Non chiediamo altro che il vostro compagno.»"
+
+msgid ""
+"Einelen: 'They reorganized faster than I'd imagined. Keep moving two teams "
+"of assassins toward the cave mouth, but pull one squad back to keep the orcs "
+"at bay. We're not about to lose to those beasts.'"
+msgstr ""
+"Einelen: «Si sono riorganizzati più velocemente di quanto immaginassi. "
+"Continuate a spostare due squadre di assassini verso l'imboccatura della "
+"caverna, ma rimandate una squadra indietro a tenere a bada gli orchi. Non "
+"perderemo queste bestie.»"
+
+msgid "End the scenario to continue."
+msgstr "Finisci lo scenario per continuare."
+
+msgid "Endgame"
+msgstr "Fine gioco"
+
+msgid "Enough! Hartholar, surrender at once!"
+msgstr "Basta! Hartholar, per l'ultima volta arrenditi!"
+
+msgid "Enough! Your time has come!"
+msgstr "Basta! È giunta la tua ora!"
+
+msgid "Epilogue"
+msgstr "Epilogo"
+
+msgid ""
+"Even the insulting are allowed safe passage through our forest. Do not try "
+"us, however, or you will find us unmatched in the woods. The rules are "
+"simple: take no longer than necessary, start no fires of any kind, and harm "
+"no living creature while within our borders."
+msgstr ""
+"Sarà concesso di passare per la nostra foresta anche agli ingiuriosi. "
+"Tuttavia non metteteci alla prova, altrimenti scoprirete che non abbiamo "
+"rivali nei boschi. Le regole sono semplici: non impiegateci più tempo del "
+"necessario, non accendete fuochi di nessun tipo e non fate del male e "
+"nessuna creatura vivente fintanto che sarete nei nostri confini."
+
+msgid ""
+"Eventually, he and Kogw were deified. Their spirits remained to watch over "
+"the drakes from above."
+msgstr ""
+"Alla fine lui e Kogw furono elevati a dei. I loro spiriti rimasero a "
+"vegliare sui draghi dall'alto."
+
+msgid "Exit the cave"
+msgstr "Esci dalla grotta"
+
+msgid "Explore the river"
+msgstr "Esplora il fiume"
+
+msgid "Explore the surrounding area"
+msgstr "Esplora l'area circostante"
+
+msgid "Explore to the south"
+msgstr "Esplora verso sud"
+
+msgid "Falcon"
+msgstr "Falco"
+
+msgid "Farewell, my progeny."
+msgstr "Addio, mia progenie."
+
+msgid "Fellow drake! Of what tribe are... a magus?!?"
+msgstr "Compagno drago! A quale tribù appartieni... un magus?!?"
+
+msgid "Fighter"
+msgstr "Guerriero"
+
+msgid "Finally, Hafwyt is secure."
+msgstr "Finalmente, Hafwyt è sicura."
+
+msgid ""
+"Finally, another drake. My caravan was ambushed by the undead four days ago. "
+"I'm from Weswyt, but I'll serve whoever rescued me, as long as I can get out "
+"of this cursed place!"
+msgstr ""
+"Finalmente un altro drago. La mia carovana è stata assalita dai non-morti 4 "
+"giorni fa. Vengo da Weswyt, ma mi metterò al aservizio dal mio salvatore "
+"chiunque esso sia finché non avremo abbandonato questo luogo maledetto!"
+
+msgid "Find a way out of the caverns"
+msgstr "Trova l'uscita delle caverne"
+
+msgid ""
+"First we must bury the body of that one, Omandro. The others were merely "
+"puppets, but he was their leader."
+msgstr ""
+"Pre prima cosa dobbiamo seppellire questo corpo, quello di Omandro. Gli "
+"altri erano solo pupazzi, ma egli era il capo."
+
+msgid "Flight to Freedom"
+msgstr "Fuga per la libertà"
+
+msgid ""
+"For hundreds of years afterward, Malakar was remembered as one of the heroes "
+"of the drakes."
+msgstr "Per centinaia di anni, Malakar fu ricordato come un eroe fra i draghi."
+
+msgid "Forest of Nightmares"
+msgstr "La foresta degli incubi"
+
+msgid ""
+"Forgive me, Malakar, but there is no time. Drakes! Seal the cave before the "
+"human reinforcements arrive!"
+msgstr ""
+"Perdonami, Malakar, ma non c'è tempo. Draghi! Sigillate la caverna prima che "
+"arrivino i rinforzi degli uomini!"
+
+msgid ""
+"Forgive me, darling. I've never had the honor of captaining a finer ship."
+msgstr ""
+"Perdonami, tesoro. Non avevo mai avuto l'onore di comandare una nave più "
+"bella."
+
+msgid "FtF"
+msgstr "Fpll"
+
+msgid "Fungoid"
+msgstr "Fungoide"
+
+msgid "GUARDS!!! Slay them all!"
+msgstr "GUARDIE!!! Uccideteli tutti!!!"
+
+msgid "GUGGAGUGGAGU!"
+msgstr "GUGGAGUGGAGU!"
+
+msgid "Gala-Thano"
+msgstr "Gala-Thano"
+
+msgid ""
+"Galleons are sailing warships. The humans' attempt at sea travel, they are "
+"expensive, but very strong. Armed with three ballistae, they mete out "
+"justice with deadly efficency."
+msgstr ""
+"I galeoni sono navi da guerra a vela. Sono il tentativo degli uomini di "
+"viaggiare per mare, costosi ma molto potenti. Armate di tre baliste, "
+"dispensano giustizia con efficienza mortale."
+
+msgid "Gargoyle"
+msgstr "Gargoyle"
+
+msgid "Gate of Storms"
+msgstr "Cancello delle tempeste"
+
+msgid ""
+"General: 'Execute the dying ones. A General Dacayan will come by in a week's "
+"time. I hear that he is willing to pay handsomely for slaves. See that we "
+"are able to sell him as many healthy drakes as possible.'"
+msgstr ""
+"Generale: «Date il colpo di grazia ai morenti. Nel giro di una settimana "
+"arriverà un generale dacaiano. Ho sentito che pagherà profumatamente per "
+"degli schiavi. Facciamo in modo di potergli vendere più draghi sani "
+"possibile.»"
+
+msgid ""
+"General: 'Granted, Captain, but make it brief. Neighboring tribes may be "
+"sending scouts already.'"
+msgstr ""
+"General: «Concesso, capitano, ma siate breve. Le tribù dei dintorni stanno "
+"già mandando degli esploratori.»"
+
+msgid ""
+"General: 'Lieutenant! It has come to my attention that we must leave no "
+"trace of our actions here today. As soon as the last able-bodied drake is "
+"aboard, I want your unit to burn this village to the ground. Let nothing "
+"remain but ashes.'"
+msgstr ""
+"Generale: «Tenente! È stato portato alla mia attenzione il fatto che non "
+"dobbiamo lasciare traccia alcuna della nostra azione di oggi. Appena "
+"l'ultimo drago è a bordo, voglio che la vostra unità riduca in cenere questo "
+"villaggio. Non deve rimanere nulla oltre alla cenere.»"
+
+msgid ""
+"General: 'Spare me your hollow pleasantries, Baron. I find both you and your "
+"work distasteful and have no desire to continue our relationship any longer "
+"than is necessary.'"
+msgstr ""
+"Generale: «Risparmiatemi i vostri vacui scherzi, barone. Voi e il vostro "
+"lavoro siete ripugnanti e non voglio prolungare i nostri rapporti oltre lo "
+"stretto necessario. »"
+
+msgid ""
+"General: 'The Royal Armies of Wesnoth are not mercenaries! You may have "
+"provided us with an escape from crisis, but do not ever presume that we "
+"answer to anyone but the Crown.'"
+msgstr ""
+"Generale: «L'esercito reale di Wesnoth non è un esercito di mercenari! Ci "
+"avrai anche dato una via di fuga dalla crisi, ma avresti dovuto saperlo che "
+"noi non avremmo ubbidito ad altri che alla corona.»"
+
+msgid "General: 'This... this is a tenth of what was promised!'"
+msgstr ""
+"Generale: «Questo... è appena un decimo di quanto mi avevate promesso!»"
+
+msgid ""
+"General: 'Very good, Captain. That was a careless battle, on our part. Our "
+"losses were much higher than they should have been.'"
+msgstr ""
+"Generale: «Benissimo, capitano. Sarebbe dovuta essere una battaglia facile "
+"per noi. Le nostre perdite sono state molto più alte di quello che avrebbero "
+"dovuto essere.»"
+
+msgid ""
+"General: 'We are nearly three days behind schedule, already. We do not have "
+"time to pander to their superstitions. Thank you for your insight, Captain. "
+"You are dismissed.'"
+msgstr ""
+"Generale: «Siamo già in ritardo di quasi tre giorni. Non abbiamo il tempo "
+"per compiacere le loro superstizioni. Grazie per la vostro perspicacia, "
+"capitano. Potete andare.»"
+
+msgid ""
+"General: 'Yes, Captain. I do not doubt their courage or their effort. "
+"However, we need to increase our training twofold. If we're to hold these "
+"quarries, we cannot afford to fight another battle like this.'"
+msgstr ""
+"Generale: «Sì, capitano. Non ho dubbi sul loro coraggio né sul loro impegno. "
+"Comunque dobbiamo raddoppiare il nostro addestramento. Se vogliamo tenere "
+"queste cave, non possiamo permetterci di combattere un'altra battaglia come "
+"questa.»"
+
+msgid ""
+"General: 'You will never, as long as the kingdom stands, lay a finger upon "
+"our lowliest peasant! The drakes are strong, powerful, and will heal soon! "
+"You have all the slaves you need to run your plantations, and the drakes...'"
+msgstr ""
+"Generale: «Voi, finché il regno di Wesnoth sarà in piedi, non alzerete "
+"nemmeno un dito contro il più umile dei contadini! I draghi sono forti, "
+"possenti e guariscono in fretta! Avete tutti gli schiavi che vi servono per "
+"mandare avanti le vostre piantagioni e i draghi...»"
+
+msgid ""
+"General: 'Your squad did particularly well today, Captain. We killed fewer "
+"Drakes than I might have imagined. You have my authorization to begin "
+"loading the best-looking ones onto the ships.'"
+msgstr ""
+"General: «La vostra squadra si è particolarmente distinta oggi, capitano. "
+"Abbiamo ucciso meno draghi di quello che immaginavo. Avete la mia "
+"autorizzazione a cominciare a caricare i migliori sulle navi.»"
+
+msgid "Giant Boar"
+msgstr "Cinghiale gigante"
+
+msgid ""
+"Giant Boars are overgrown pigs with a nasty disposition that will attack "
+"anything that moves. It is fortunate that these animals are rare."
+msgstr ""
+"I cinghiali giganti sono maiali troppo cresciuti con un pessimo carattere "
+"che attaccano qualsiasi cosa si muova. Fortunatamente sono animali rari."
+
+msgid ""
+"Glider: 'Even worse, the stone of Gar-Alagar is simply gone. No one knows "
+"what is keeping the island afloat anymore, and some fear the waters are "
+"rising already.'"
+msgstr ""
+"Drago leggero: «Quel che è peggio, la pietra di Gar-Alagar è semplicemente "
+"scomparsa. Nessuno sa cosa fa ancora galleggiare l'isola e qualcuno teme già "
+"che le acque si stiano alzando.»"
+
+msgid "Glider: 'Gar-Alagar... it is Malakar, returned to us!'"
+msgstr "Drago leggero: «Gar-Alagar... è Malakar, è tornato!»"
+
+msgid "Glider: 'I have words, sir, for your ears only.'"
+msgstr "Drago leggero: «Sire, ho un messaggio riservato a voi solo.»"
+
+msgid ""
+"Glider: 'In the wake of your disappearance, the other tribes were stirred to "
+"action.'"
+msgstr ""
+"Drago leggero: «In seguito alla tua scomparsa, le altre tribù erano incitate "
+"ad agire.»"
+
+msgid "Glider: 'Malakar, we have sighted land!'"
+msgstr "Drago leggero: «Malakar, abbiamo avvistato la terra!»"
+
+msgid ""
+"Glider: 'Most thought your tribe had met with foul play at the hands of "
+"another tribe, and many of the old feuds began again. Your brother was one "
+"of the few who suspected something worse had happened, but none listened. We "
+"were weak, weary and distracted when the humans came.'"
+msgstr ""
+"Drago leggero: «I più pensavano che la tua tribù fosse andata incontro a una "
+"triste sorte per mano di un'altra tribù e molte delle vecchie faide "
+"ricominciarono. Tuo fratello è stato uno dei pochi a sospettare che fosse "
+"successo qualcosa di peggio, ma nessuno lo ascoltò. Eravamo deboli, esausti "
+"e distratti quando gli uomini arrivarono.»"
+
+msgid "Glider: 'Oh, I. Uh. Very good.'"
+msgstr "Drago leggero: «Oh, io. Eh. Benissimo.»"
+
+msgid ""
+"Glider: 'The quarries are mined day and night by teams of slaves, the "
+"forests have been clear-cut and turned into great ships of war, our temples "
+"have been looted and destroyed... everything of value on the island.'"
+msgstr ""
+"Drago leggero: «Squadre di schiavi lavorano nelle cave giorno e notte, le "
+"foreste sono state disboscate e hanno costruito enormi navi da guerra, i "
+"nostri templi sono stati saccheggiati e distrutti... come tutto quello che "
+"c'era di valore sull'isola.»"
+
+msgid ""
+"Glider: 'Their efficiency was incredible. They pinpointed and eliminated the "
+"largest threats, and within two months had the entire island under their "
+"thumb. They've been stripping it clean ever since.'"
+msgstr ""
+"Drago leggero: «la loro efficienza era incredibile. Bloccarono ed "
+"eliminarono le minacce più grosse e in capo a due mesi avevano tutta l'isola "
+"in pugno. Da allora hanno cominciato a portare via tutto.»"
+
+msgid "Godspeed."
+msgstr "Buon viaggio."
+
+msgid "Gomdrathsil"
+msgstr "Gomdrathsil"
+
+msgid "Gomgaotilo"
+msgstr "Gomgaotilo"
+
+msgid ""
+"Greetings. I am Quemar, a magus of the Citadel. I was sent here by "
+"headmaster Quahgakar to scout the undead remnant here, but I never "
+"anticipated their power. Apparently, something has roused them from their "
+"sleep."
+msgstr ""
+"Salute. Sono Quemar, magus della cittadella. È il direttore Quahgakar che mi "
+"ha mandato qua in caccia dei non-morti rimasti ma non mi sarei mai aspettato "
+"questa forza. Sembra che qualcosa li abbia risvegliati dal loro sonno."
+
+msgid "Grilcyn"
+msgstr "Grilcyn"
+
+msgid "Guard"
+msgstr "Guardia"
+
+msgid "Guards! Rally to me!"
+msgstr "Guardie! A me!"
+
+msgid "Gul-Nana"
+msgstr "Gul-Nana"
+
+msgid "HELP!!!"
+msgstr "AIUTO!!!"
+
+msgid "Ha! Stupid human, what do you think those things on our backs are?"
+msgstr ""
+"Ha! Stupido uomo, che cosa credi che siano queste cose che abbiamo sulla "
+"schiena?"
+
+msgid "Haaarh. You must see, I have no choice. My hands are tied."
+msgstr "Haaarh. Devi capire, non ho scelta. Ho le mani legate."
+
+msgid "Habnar"
+msgstr "Habnar"
+
+msgid "Hafwyt"
+msgstr "Hafwyt"
+
+msgid "Hafwyt is secure, and its walls undamaged."
+msgstr "Hafwyt è sicura e le sue mura sono intatte."
+
+msgid ""
+"Hafwyt shall not fall. Its walls are solid stone, enchanted by the magi of "
+"the Citadel."
+msgstr ""
+"Hafwyt non cadrà. Le sua mura sono di solida roccia, incantata dai maghi "
+"della cittadella."
+
+msgid "Hago"
+msgstr "Hago"
+
+msgid ""
+"Hail, Chieftains! We have been holed up for days, and already we are at the "
+"brink of starvation. Help us to break the siege!"
+msgstr ""
+"Salve, capitani! Siamo stati nascosti per giorni e stiamo ormai per morire "
+"di fame. Aiutateci a rompere l'assedio!"
+
+msgid ""
+"Hail, Orcish... um... King! You see our forces and must know that we have "
+"the ability to crush you. I propose an alternate plan. You will bring us the "
+"head of the drake leader, and we will leave your land. Additionally, we will "
+"leave behind every weapon we carry with us. You could become the most "
+"powerful leader on this island!"
+msgstr ""
+"Salute, orco... ehm... re! Tu vedi le nostre forze e devi riconoscere che "
+"possiamo schiacciarvi. Ti propongo un altro piano. Se ci porterai la testa "
+"del capo dei draghi, noi lasceremo la tua terra. Inoltre, abbandoneremo "
+"dietro di noi tuttel e armi che ci siamo portati. Potresti diventare il "
+"comandante più potente su tutta l'isola!"
+
+msgid "Half-men. Where do these caves reach the surface?"
+msgstr "Mezzi-uomini. Quale di queste gallerie porta alla superficie?"
+
+msgid "Half...? Are you the blikkers who just smashed up the doorway?"
+msgstr "Mezz...? Siete voi i balenghi che hanno appena distrutto il portone?"
+
+msgid "Haloran"
+msgstr "Haloran"
+
+msgid "Halt! Please!"
+msgstr "Fermi! Per favore!"
+
+msgid "Hartholar"
+msgstr "Hartholar"
+
+msgid "Hartholar does not respond."
+msgstr "Hartholar non risponde."
+
+msgid "Hartholar! End these games! As we fight, the humans approach!"
+msgstr ""
+"Hartholar! Smettila di giocare! Mentre combattiamo, gli uomini si avvicinano!"
+
+msgid ""
+"Hartholar! There, to the north, are the humans' scouts! All hope is lost! As "
+"chief, I will face the hordes in single combat."
+msgstr ""
+"Hartholar! Laggiù, a nord, ci sono gli esploratori degli uomini! Non abbiamo "
+"più speranza! Come capo, affronterò le orde in combattimento singolo."
+
+msgid "Hartholar! Who are your allies?"
+msgstr "Hartholar! Chi sono i tuoi alleati?"
+
+msgid ""
+"Hartholar, you are bound by this sacrifice to accept my people into your "
+"tribe. Perhaps your combined strength can succeed where ours has failed."
+msgstr ""
+"Hartholar, questo sacrificio ti impone id accettare la mia gente nella tua "
+"tribù. Forse l'unione delle vostre forze potranno riuscire dove le nostre "
+"hanno fallito."
+
+msgid "Hartholar: 'But, I am decided. This journey must be undertaken.'"
+msgstr "Hartholar: «Però io sono deciso. Bisogna fare questo viaggio.»"
+
+msgid ""
+"Hartholar: 'But, Malakar, how will you convince them to leave their "
+"cloisters and join us?'"
+msgstr ""
+"Hartholar: «Ma, Malakar, come li convincera a lasciare i loro chiostri e "
+"unirsi a noi?»"
+
+msgid ""
+"Hartholar: 'He is Kzzklk, the leader of the saurians that opposed you "
+"earlier, under my directive. What is your plan?'"
+msgstr ""
+"Hartholar: «È Kzzklk, capo dei sauri che prima si opponevano a noi, sotto i "
+"miei ordini. Qual è il tuo piano?»"
+
+msgid ""
+"Hartholar: 'Malakar, I must admit that you have great prowess, both martial "
+"and intellectual. I was wrong in opposing you, and I repent with my scar of "
+"penance.'"
+msgstr ""
+"Hartholar: «Malakar, devo ammettere che sei stato capace di grandi prodezze, "
+"marziali e intellettuali. Mi sbagliavo a oppormi a te e me ne rammarico con "
+"la mia cicatrice di penitenza.»"
+
+msgid ""
+"Hartholar: 'The mighty stronghold of Hafwyt lies before us. Here, we can "
+"rest and recruit more warriors, perhaps among the Jamolar expatriates here.'"
+msgstr ""
+"Hartholar: «Abbiamo di fronte la potente fortezza di Hafwyt. Qui, possiamo "
+"riposarci e reclutare qualche altro guerriero, forse tra i Jamolar "
+"espatriati qua.»"
+
+msgid ""
+"Hartholar: 'The route to the Citadel will be treacherous. First, we must "
+"reach - and possibly retake - the stronghold at Hafwyt, across the Forest of "
+"Nightmares. Then, we must cross the Harkon Mountains, and the resting place "
+"of the ancient Mal-Bronam. Only then will we reach the Citadel... which may "
+"harbor dangers and guardians of its own.'"
+msgstr ""
+"Hartholar: «La strada per la cittadella sarà insidiosa. Per prima cosa, "
+"dobbiamo raggiungere - e magari riconquistare - la fortezza di Hafwyt, oltre "
+"la foresta degli incubi. Poi, dobbiamo attraversare le montagne Harkon e i "
+"luoghi dove riposa l'antico Mal-Bronam. Sollo allora raggiungeremo la "
+"cittadella--- che potrebbe avere proprie insidie e custodi.»"
+
+msgid ""
+"Hartholar: 'You speak wisdom, Malakar. Perhaps the saurians can cover our "
+"retreat? They know the swamps well, much better than any drake, and can wage "
+"guerilla war against the thinskins.'"
+msgstr ""
+"Hartholar: «Parli saggiamente, Malakar. Forse i sauri potrebbero coprire la "
+"nostra ritirata? Conoscono bene la palude, molto meglio di qualunque drago e "
+"possono compiere azioni di guerriglia contro i pelli-molli.»"
+
+msgid ""
+"Having completely given up the use of offensive magic, these warrior mages "
+"have learned to compensate for their small size by using magic to enhance "
+"their agility and reflexes, meaning that they are better on land than any of "
+"their fellow nagas. Wielding dual swords that glow with magical energy, they "
+"strike fear into the hearts of their enemies."
+msgstr ""
+"Questi guerrieri maghi, dopo aver rinunciato completamente all'uso della "
+"magia d'attacco, hanno imparato a compensare la loro piccola statura usando "
+"la magia per migliorare la loro agilità e i riflessi, perciò sono sulla "
+"terraferma si muovono meglio di qualunque altro dei loro cugini naga. "
+"Maneggiano spade gemelle che ardono di energia magica, incutendo la paura "
+"nei cuori dei loro nemici."
+
+msgid ""
+"Having completely given up the use of offensive magic, these warrior mages "
+"have learned to compensate for their small size by using magic to enhance "
+"their agility and reflexes. Wielding dual swords that glow with magical "
+"energy, they strike fear into the hearts of their enemies."
+msgstr ""
+"Questi guerrieri maghi, dopo aver rinunciato completamente all'uso della "
+"magia d'attacco, hanno imparato a compensare la loro piccola statura usando "
+"la magia per migliorare la loro agilità e i riflessi, perciò sono sulla "
+"terraferma si muovono meglio di qualunque altro dei loro cugini naga. "
+"Maneggiano spade gemelle che ardono di energia magica, incutendo la paura "
+"nei cuori dei loro nemici."
+
+msgid "He died fighting for you. Like any of your other soldiers would."
+msgstr "È morto combattendo per te. Come ogni altro soldato avrebbe fatto."
+
+msgid "He was a true warrior."
+msgstr "Era un vero guerriero."
+
+msgid "He was wounded and I'd be faster; but we've got trouble!"
+msgstr "Era ferito e io sarei stato più veloce; ma siamo nei guai!"
+
+msgid "Hello brother!"
+msgstr "Ciao, fratello!"
+
+msgid "Help us! We are pursued by humans!"
+msgstr "Aiutateci! Gli uomini ci inseguono!"
+
+msgid "Heuh! Now that is treating a warrior with respect! So be it!"
+msgstr ""
+"Perbacco! Questo è quello che si dice trattare con rispetto un guerriero! Ci "
+"sto!"
+
+msgid "Heungah! You cannot run from our forces!"
+msgstr "Heungah! Non potete fuggire alle nostre forze!"
+
+msgid "Hey! $gold_given pieces of gold were in this chest!"
+msgstr "Ehi! C'erano $gold_given pezzi d'oro in questo forziere!"
+
+msgid "Highwayman"
+msgstr "Brigante"
+
+msgid "Hmm. So be it. Regroup farther inland!"
+msgstr "mmh. Così sia. Raduniamoci più avanti nell'entroterra!"
+
+msgid ""
+"Hmm... so Hartholar now wears the chieftain's robes. He is a bigot, but a "
+"wise drake nonetheless. And the Jamolar tribe, even in these swamps, is "
+"mightier than ever before."
+msgstr ""
+"Hmm... dunque ora Hartholar indossa i panni di capitano. È un fanatico ma "
+"indubbiamente intelligente. E la tribù di Jamolar, anche in queste paludi, è "
+"più potente che mai."
+
+msgid "Hmmm... $gold_given pieces of gold were in this chest!"
+msgstr "Hmmm... C'erano $gold_given pezzi d'oro in questo forziere!"
+
+msgid "Hmmm... A statue of a dragon."
+msgstr "Hmmm... una statua di drago."
+
+msgid "Hmmm... the bones of a dragon."
+msgstr "Hmmm... ossa di drago."
+
+msgid "Hold! I feel something!"
+msgstr "Fermi! Sento qualcosa!"
+
+msgid "Hordes of the Foul Undead"
+msgstr "Orde dei malefici non-morti"
+
+msgid "Horse"
+msgstr "Cavallo"
+
+msgid ""
+"Horses that escape captivity often become wild and hostile to humans, "
+"especially if cornered or frightened.  Though they are easily put down, "
+"their kicks can smash a man's skull."
+msgstr ""
+"I cavalli sfuggiti alla cattività spesso diventano selvaggi ed ostili nei "
+"riguardi degli uomini, specialmente se accerchiati o spaventati. Sebbene si "
+"calmino facilmente, il loro calcio può spaccare il cranio di un uomo."
+
+msgid ""
+"Horses, when tamed, are used as mounts by Elvish and Human armies, and also "
+"as beasts of burden."
+msgstr ""
+"I cavalli, quando sono addomesticati, sono usati come destrieri dagli "
+"eserciti degli elfi e degli uomini e anche come bestie da soma."
+
+msgid "How DARE you insult my clashers, puny softskin!"
+msgstr "Come OSI insultare i miei draghi corazzati, debole pelle-molle!"
+
+msgid "How am I to cross the lava?"
+msgstr "Come faccio ad attraversare la lava?"
+
+msgid "How should the saurians be fielded in battle?"
+msgstr "Come dovrebbero essere schierati i sauri in battaglia?"
+
+msgid ""
+"However, once the humans came to Morogor, we had to go into hiding. With the "
+"help of the saurians, I was able to avoid their patrols."
+msgstr ""
+"Però da quando gli uomini giunsero a Morogor abbiamo dovuto nasconderci. Con "
+"l'aiuto dei sauri, sono riuscito ad evitare le loro pattuglie."
+
+msgid ""
+"However, they still have scant traces of honor. We respect those with honor. "
+"In the end, it is one thing that makes us different from them. Bury their "
+"leader."
+msgstr ""
+"Comunque, hanno ancora qualche traccia di onore. Noi rispettiamo quelli "
+"hanno il senso dell'onore e Omandro lo aveva. In pratica, questa è l'unica "
+"cosa che ci fa differenti da loro. Seppellite il capo."
+
+msgid ""
+"However, we must vanquish Mal-Bronam's restless spirit. Unless his evil is "
+"banished, the convocation cannot form."
+msgstr ""
+"Comunque dobbiamo sconfiggere lo spirito inquieto di Mal-Bronam. Se il male "
+"non viene bandito, la convocazione non si può formare."
+
+msgid ""
+"Human Leader: 'The leaders are virtually unprotected! This is our chance!'"
+msgstr ""
+"Comandante degli uomini: «I comandanti sono praticamente senza protezione! È "
+"la nostra chance!»"
+
+msgid "Human! Feel my wrath! For Necolar!"
+msgstr "Uomini! Patirete la mia ira! Per Necolar!"
+
+msgid ""
+"I am Malakar, of the north. Our lands have been overrun by conquering humans!"
+msgstr ""
+"Io sono Malakar, del nord. Le nostre terre sono state devastate da uomini "
+"conquistatori!"
+
+msgid ""
+"I am done being at the hands of humans! Drakes! Rally to me! Gather what "
+"strength you have! ATTACK! For VENGEANCE!!!"
+msgstr ""
+"Non mi piegherò più agli ordini degli uomini! Draghi! A me! Raccogliete "
+"tutta la forza che avete! ALL'ATTACCO! VENDETTA!!!"
+
+msgid "I am gone!"
+msgstr "Me ne vado!"
+
+msgid "I am gone! Fight on against the humans without me!"
+msgstr "Sono perduto! Combatti contro gli uomini senza di me!"
+
+msgid "I am the Chief of this tribe!"
+msgstr "Io sono il capo di questa tribù!"
+
+msgid ""
+"I call upon Gar-Hagar, god of all that is burning and favored child of Gar-"
+"Alagar, to destroy this portal of evil!"
+msgstr ""
+"Invoco Gar-Hagar, dio di tutto ciò che brucia e figlio prediletto di Gar-"
+"Alagar, perché distrugga questo portale demoniaco!"
+
+msgid ""
+"I can create flame and frost with my hands and fire. I can control the "
+"magics around us, and shape conduits with the ethers that surround us. With "
+"these tools, I can launch fires from vast distances. Fires that can consume "
+"trees in moments."
+msgstr ""
+"Posso produrre fiamme e gelo con le mia mani e fuoco. Posso controllare la "
+"magia intorno a noi e formare passaggi con l'etere che ci circonda. Con "
+"questi mezzi, posso lanciare fiamme a grandi distanze. Fiamme che consumano "
+"alberi all'istante."
+
+msgid "I dddddie! Fffight ffor meee...avvvennnnge...kkkill huuumansssss..."
+msgstr "Mmuoioo! Lottaate peer mee... vvendicaatemi... ucccidetee umaanii..."
+
+msgid "I don't trust this bridge."
+msgstr "Questo ponte non mi ispira fiducia."
+
+msgid "I feel only the blasting heat of the lava."
+msgstr "Io sento solo il dannato calore della lava."
+
+msgid ""
+"I found a small group of them. Refugees from the humans, just like us. They "
+"have allied with me against the humans."
+msgstr ""
+"Ho trovato un piccolo gruppo di loro, in fuga dagli uomini proprio come noi. "
+"Si sono alleati con me contro gli uomini."
+
+msgid "I guess you'd just have to leave them behind."
+msgstr "Scommetto che hai appena dovuto lasciarli indietro."
+
+msgid "I have failed!"
+msgstr "Ho fallito!"
+
+msgid ""
+"I have never seen such land as this, with mountains taller than the "
+"strongest glider flies."
+msgstr ""
+"Non ho mai visto una terra come questa con montagne che salgono al cielo più "
+"in alto di qualsiasi aliante."
+
+msgid ""
+"I have new orders. I want any available scouts to investigate the Gate. We "
+"will see if it has a weakness, and attempt to shut it before moving on."
+msgstr ""
+"Ho dei nuovi ordini. Voglio che tutti gli esploratori disponibili esaminino "
+"il cancello. Cercheremo dei punti deboli e tenteremo di chiuderlo prima di "
+"proseguire."
+
+msgid "I have traveled too far to fall today!"
+msgstr "Abbiamo viaggiato così a lungo per cadere oggi!"
+
+msgid ""
+"I know full well of the apathy that you speak of. For some reason, many of "
+"my colleagues have lost their ardor. I remember, when they first began their "
+"training, how eager they were for knowledge. Their inquisitiveness, their "
+"passion. But, they have recently taken to pursuit of strange magics and even "
+"perverse depravity, neglecting their studies and withdrawing from life. They "
+"believe that their status as magi places them above all other drakes, and "
+"even above civilized laws and basic morality. Only Quahgakar seems to still "
+"carry the torch of Freon. Only Quahgakar, and I."
+msgstr ""
+"Conosco benissimo l'apatia di cui stai parlando. Per qualche motivo molti "
+"dei miei colleghi hanno perso il loro ardore. Mi ricordo, quando "
+"cominciarono il loro addestramento, quando bramavano la conoscenza. La loro "
+"curiosità, la loro passione. Solo che di recente hanno cominciato a "
+"inseguire strane magie e persino perverse depravazioni, trascurando i loro "
+"studi e ritirandosi dalla vita. Credono che il loro stato di magi li ponga "
+"al di sopra degli altri draghi e persino oltre le leggi e l'etica. Quahgakar "
+"sembra essere l'unico a reggere ancora la torcia di Freon. Solo Quahgakar e "
+"io."
+
+msgid ""
+"I know, but I fear that they will call reinforcements, which we cannot hope "
+"to fight."
+msgstr ""
+"Lo so, ma temo che potrebbero chiamare dei rinforzi che non abbiamo speranza "
+"di combattere."
+
+msgid "I know. We will have the beaches cleared before they arrive."
+msgstr "Lo so. Le spiagge saranno liberate prima del nostro arrivo."
+
+msgid ""
+"I personally despise slavery, and I thank you for slaying that occult Baron, "
+"but I have my orders."
+msgstr ""
+"Io disprezzo la schiavitù e ti ringrazio per aver ucciso quel barone "
+"occulto, ma ho degli ordini."
+
+msgid "I really failed this time..."
+msgstr "Ho veramente fallito questa volta..."
+
+msgid "I request your assistance fighting the evil humans."
+msgstr "Richiedo la tua assistenza per combattere contro i perfidi uomini."
+
+msgid "I see. You have my complete attention, elf."
+msgstr "Capisco. Hai tutta la mia attenzione, elfo."
+
+msgid "I seem to have found a key. What it unlocks, I do not know."
+msgstr "Pare che abbia trovato una chiave. Che cosa possa aprire non so dirlo."
+
+msgid ""
+"I want three scouts sent south and east. Find a safe path past the Gate. "
+"Hopefully, it will distract and slow any who would follow us."
+msgstr ""
+"Voglio tre esploratori a sud ed est. Che trovino una strada sicura oltre il "
+"portale. Speriamo che distragga e rallenti chiunque ci seguisse."
+
+msgid "I will carry you, hop on my back."
+msgstr "Ti porterò io, saltami in groppa."
+
+msgid ""
+"I will gather our leaders and meet you here at this beach as soon as I can."
+msgstr ""
+"Radunerò i nostri capi e ci incontreremo su questa spiaggia appena riesco."
+
+msgid "I will kill meeeeself ssssome humanssss!"
+msgstr "Ammazzeeeerooò qualcheee umaaano!"
+
+msgid ""
+"I will not strike you down, chief Hartholar. However, we will defend "
+"ourselves, and maintain our honor!"
+msgstr ""
+"Noi attaccheremo, capo Hartholar. Comunque, ci difenderemo e conserveremo il "
+"nostro onore!"
+
+msgid "I will take care of that later. Drakes! We need to explore this river!"
+msgstr "Me ne occuperò più tardi. Draghi! Dobbiamo esplorare questo fiume!"
+
+msgid "I will take command of the saurians."
+msgstr "Assumerò il comando dei sauri."
+
+msgid "Ieeeeee!"
+msgstr "Ieeeeee!"
+
+msgid ""
+"If Hafwyt falls, Malakar, none of northern Morogor will be safe. We must "
+"attack!"
+msgstr ""
+"Se Hafwyt cade, Malakar, tutto il Morogor settentrionale sarà in pericolo. "
+"Dobbiamo attaccare!"
+
+msgid ""
+"If he is undead, it is not by his own choosing. Although we drakes are only "
+"shadows of his might, the same fire that once flowed through his veins flows "
+"through ours. We are kin, and I will ask for his help."
+msgstr ""
+"Se è un non-morto non lo per sua scelta. Comunque noi draghi siamo solo "
+"l'ombra del suo potere, lo stesso fuoco che un tempo scorreva nelle sue vene "
+"adesso scorre nelle nostre. Siamo la stessa stirpe e io chiederò il suo "
+"aiuto."
+
+msgid "If it's supplies you need..."
+msgstr "Se sono i rifornimenti che ti servono..."
+
+msgid ""
+"If you've got trouble with Wesnoth's army, then no place here is safe. You "
+"need to leave these lands, and fast."
+msgstr ""
+"Se avete problemi con l'esercito di Wesnoth, qui non c'è un posto in cui "
+"sarete al sicuro. Dovrete lasciare questi territori e in fretta."
+
+msgid "Ikatere"
+msgstr "Ikatere"
+
+msgid "Indoors"
+msgstr "All'interno"
+
+msgid ""
+"Instead of learning their serpentine form, these Nagas have focused upon "
+"armor and steel. Because of this, they are often used as line fighters, and "
+"do more than their fair share of killing and dying."
+msgstr ""
+"Invece di lavorare la loro forma serpentina, questi naga si sono concentrati "
+"sull'armatura e sull'acciaio. Per questo motivo, sono spesso impiegati come "
+"combattenti di linea e fanno la loro parte nell'uccidere e nel morire."
+
+msgid "Intruders! Die!"
+msgstr "Intrusi! Morite!"
+
+msgid "Invasion of Hafwyt's inner keep"
+msgstr "Invasion del maschio di Hafwyt"
+
+msgid "It did not attack! It just appeared!"
+msgstr "Non ci ha attaccato! È solo comparso!"
+
+msgid ""
+"It has always been my opinion that the fog has claimed more lives than "
+"anything else here, but we still must be wary. We must remain on the main "
+"road, marked by the myriad fortifications built by Mal-Bronam in his day."
+msgstr ""
+"È sempre stata mia opinione che la nebbia ha provocato più vittime di ogni "
+"altra cosa qua, ma dobbiamo ancora essere cauti. Dobbiamo rimanere sulla "
+"strada principale, segnata dalla miriade di fortificazioni costruite da Mal-"
+"Bronam ai suoi tempi."
+
+msgid ""
+"It is hardly by my wishes, drake. The King has ordered that you all be "
+"killed, so that you cannot report back to your people. The whole army has "
+"been pressed into service."
+msgstr ""
+"Eseguono solo degli ordini. Il re ha ordinato che siate uccisi, perciò non "
+"potete tornare a riferire alla vostra gente. Tutto l'esercito è stato "
+"richiamato in servizio."
+
+msgid "It's another box."
+msgstr "Solo un'altra scatola."
+
+msgid ""
+"It's hopeless, Malakar. That's a whole fleet of their finest, and we cannot "
+"escape!"
+msgstr ""
+"Non c'è speranza, Malakar. Quella è una flotta intera delle loro migliori e "
+"non possiamo scappare!"
+
+msgid "It's just a box."
+msgstr "È solo una scatola."
+
+msgid "It's just some nonsense about talking to skeletons..."
+msgstr "È una assurdità parlare agli scheletri..."
+
+msgid "It's too small for drakes..."
+msgstr "È troppo piccolo per i draghi..."
+
+msgid "Jako"
+msgstr "Jako"
+
+msgid ""
+"Just as the Unforgiver cleared the coast, it was intercepted by the Royal "
+"Navy."
+msgstr ""
+"Appena l'Implacabile ripulì la costa, fu intercettato dalla marina del re."
+
+msgid "Just how many of these saurians do you have?"
+msgstr "Di quanti di questi sauri disponi?"
+
+msgid "Kamalar"
+msgstr "Kamalar"
+
+msgid "Kill both guards"
+msgstr "Uccidi entrambe le guardie"
+
+msgid "Kill the hatchlings! Kill them all!"
+msgstr "Uccidete la nidiata! Uccideteli tutti!"
+
+msgid "Kill the overseer"
+msgstr "Uccidi il sovrintendente"
+
+msgid "Kogw"
+msgstr "Kogw"
+
+msgid "Kogw lived to be 47, and was a noble in Malakar's court."
+msgstr "Kogw visse fino a 47 anni e fu fatto nobile alla corte di Malakar."
+
+msgid ""
+"Kogw! By the order of Lord Mandros and the entire Elder Council of the Elven "
+"Nations, I order you to lay down your weapons and surrender at once!"
+msgstr ""
+"Kogw! In nome di lord Mandros e di tutto l'alto consiglio delle nazioni "
+"edgli elfi, ti ordino di deporre le armi e di arrenderti!"
+
+msgid "Kogw! This is your last warning!"
+msgstr "Kogw! Questà è la tua ultima minaccia!"
+
+msgid "Kogw: '...all the pirate gods be damned. Run!'"
+msgstr "Kogw: «... che tutti gli dei pirati vadano all'inferno. Corri!»"
+
+msgid "Kogw: 'Ah. Well, ah.'"
+msgstr "Kogw: «Ah. Bene, eh.»"
+
+msgid ""
+"Kogw: 'Are you sure it was wise to issue such a sweeping pardon, so soon? If "
+"this'd been aboard my ship, I'd have keelhauled the lot of them.'"
+msgstr ""
+"Kogw: «Sei sicuro che sia stato saggio emanare un amnistia generale, così "
+"presto? Se fossimo stato a bordo della mia nave, li avrei gettati in mare la "
+"maggior parte.»"
+
+msgid ""
+"Kogw: 'Aye. I do not ask that you wait for me. I'm heading East. Unlike you "
+"flyin' types, I leave footprints. If I have any luck at all, there will be "
+"something left of the Unforgiver and I can be out of here before the army's "
+"done following me. Good luck on your journey, Malakar.'"
+msgstr ""
+"Kogw: «Sissignore. Non voglio che mi aspettiate. Sto andando a est. A "
+"differenza di voi che volate, io lascio delle tracce. Se sono fortunato, ci "
+"potrebbe essere rimasto qualcosa dell'Implacabile e io potrei essere fuori "
+"di qua prima che l'esercito abbia finito di seguirmi. Buona fortuna per il "
+"tuo viaggio, Malakar.»"
+
+msgid "Kogw: 'Be wary, this is not Morogor, but the Isle of Storms.'"
+msgstr "Kogw: «Sta' attento, questa non è Morogor, ma l'isola delle tempeste.»"
+
+msgid ""
+"Kogw: 'Fair enough. As you may have noticed, I'm not too popular with the "
+"elves these days. I suppose you're probably curious as to why.'"
+msgstr ""
+"Kogw: «Benissimo. Avrai notato che non sono proprio popolare tra gli elfi di "
+"questi tempi. Forse sei curioso di sapere perché.»"
+
+msgid "Kogw: 'Hey, you did what you had to do!'"
+msgstr "Kogw: «Ehi, hai fatto solo quello che dovevi fare!»"
+
+msgid ""
+"Kogw: 'I do not know. Some say it is a plague, others say it is something "
+"within the earth, but the most common reports describe powerful spirits, "
+"ogre-like creatures made of solid thunder that travel in flashes of "
+"lightning. Even these are supposedly only the vanguard of far worse "
+"creatures to come.'"
+msgstr ""
+"Kogw: «Non lo so. Qualcuno dice che è una malattia, altri dicono che è "
+"qualcosa nel terreno, ma nella maggior parte dei casi si parla di potenti "
+"spiriti, creature simili a orchi, fatti di tuono solido, che compaiono in un "
+"lampo di luce. Ma anche queste dovrebbero essere solo le avanguardie di "
+"creature molto peggiori che devono ancora venire.»"
+
+msgid ""
+"Kogw: 'If the legend is true, the portal will open again in only a few "
+"years, and Jeyvan's successor will rise to finish his work. This is a cursed "
+"place, haunted by a great evil.'"
+msgstr ""
+"Kogw: «Se la leggenda è vera, il portale si aprirà di nuovo tra pochi anni e "
+"il successore di Jeyvan si leverà per completare la sua opera. Questo è un "
+"posto maledetto, sede di un grande male.»"
+
+msgid "Kogw: 'Mal? ...Mal, you okay?'"
+msgstr "Kogw: «Mal? ...Mal, stai bene?»"
+
+msgid "Kogw: 'Malakar... I...'"
+msgstr "Kogw: «Malakar... io...»"
+
+msgid ""
+"Kogw: 'Not surprisingly, the Lich-Lord was hostile, and killed the "
+"necromancer. From his ashes, the Lich-Lord raised the race of orcs, who in "
+"turn killed the Lich-Lord. Upon his death, the portal shut; but it opens "
+"every 400 years, releasing another Lich-Lord into the world.'"
+msgstr ""
+"Kogw: «Non è sorprendente che il signore lich fosse ostile e avesse ucciso "
+"il negromante. Dalle sue ceneri, il signore lich ha levato una razza di "
+"orchi che in cambio hanno ucciso il signore lich. Alla sua morte, il portale "
+"si chiuse; solo che si apre ogni 400 anni, liberando un altro signore lich "
+"nel mondo.»"
+
+msgid ""
+"Kogw: 'Of course, I learned this from a drunken sailor named Bert in a "
+"lovely little hole by the name of the 'Flagrant Maiden,' and he... what? "
+"Where are you all going?'"
+msgstr ""
+"Kogw: «Naturalmente, ho appreso queste cose da un marinaio ubriaco di nome "
+"Bert incontrato un una deliziosa bettola chiamata le “fragrante pulzella” "
+"e ... cosa? Ma dove state andando tutti?»"
+
+msgid ""
+"Kogw: 'Oh, no... Mal, Malakar, it's okay. It's okay. You've got your tribe "
+"back... and... look. Look, not all honor is on the battlefield. There's "
+"honor, too, in just showing up every day and doing your best, right? I've "
+"kept my ear to the ground among the men, er... among everyone here, and I "
+"sure wish I'd met her. Everyone clearly respected her. I... Oh, Mal, I'm "
+"sorry.'"
+msgstr ""
+"Kogw: «Oh, no... Mal, Malakar, va bene. Va tutto bene. Hai di nuovo la tua "
+"tribù... e... ascolta. Ascoltami, l'onore non è tutto sul campo di "
+"battaglia. L'onore sta anche fare del proprio meglio giorno dopo giorno, no? "
+"Sono stato all'erta tra gli uomini, er... tra tutti noi, e di sicuro avrei "
+"voluto voluto incontrarla. Chiaramente chiunque la rispettava. Io... Oh, "
+"Mal, mi spiace.»"
+
+msgid "Kogw: 'Oi!'"
+msgstr "Kogw: «Oh!»"
+
+msgid ""
+"Kogw: 'Stop. I know what you're going to say. I haven't necessarily lived a "
+"model life, and you have your tribe to think of. There's so few of you left, "
+"and I can't ask you to side with me. I will go with the elves. I... goodbye.'"
+msgstr ""
+"Kogw: «Basta. So cosa stai per dire. Non ho condotto una vita esemplare e tu "
+"hai la tua tribù a cui pensare. Ne sono rimasti così pochi e io non posso "
+"chiedervi di schierarvi dalla mia parte. Andrò con questi elfi. Io... addio.»"
+
+msgid "Kogw: 'The forum went well, I thought.'"
+msgstr "Kogw: «Pensavo che il dibattito fosse andato bene.»"
+
+msgid "Kogw: 'The funny thing about elves is this... oh well.'"
+msgstr "Kogw: «La cosa divertente sugli elfi è che... oh, va bene.»"
+
+msgid ""
+"Kogw: 'The last time it opened, Lord Jeyvan was unleashed. He created a "
+"portal to the Green Isle, our ancestral home, and used the orcs to drive my "
+"people into the sea.'"
+msgstr ""
+"Kogw: «L'ultima volta che si è aperto, è stato scatenato lord Jeyvan. Creò "
+"un portale alla isola verde, la nostra patria ancestrale, e impiegò gli "
+"orchi per ricacciare in mare la mia gente.»"
+
+msgid ""
+"Kogw: 'Thousands of years ago, according to legend, a great wizard was "
+"exiled here. While he was here, he opened a gate to the netherworld and "
+"contacted the Lich-Lord, in an attempt to conquer the world.'"
+msgstr ""
+"Kogw: «Migliaia di anni fa, secondo la leggenda, un grande stregone fu "
+"mandato in esilio qui. Durante la sua permanenza, aprì un accesso per il "
+"mondo degli inferi e contattò il signore dei lich, per tentare di "
+"conquistare il mondo.»"
+
+msgid ""
+"Kogw: 'Very well. All hands! Prepare to anchor on the north beach! We'll "
+"take six hours to load up all the fruit and fresh water that we can. "
+"Hopefully we can be there by tomorrow morning and be sailing again before "
+"noon.'"
+msgstr ""
+"Kogw: «Benissimo. Ai posti! Preparatevi a calare l'ancora alla spiaggia "
+"settentrionale! Ci vorranno sei ore per caricare tutta la frutta e l'acqua "
+"dolce che possiamo. Speriamo di portarci arrivare domani mattina e di "
+"ripartire prima di mezzogiorno.»"
+
+msgid ""
+"Kogw: 'Well, if we're to be shipmates, I think it fitting that we learn a "
+"little about each other. Now, what's your quarrel with the bleedin' army?'"
+msgstr ""
+"Kogw: «Be', se dobbiamo essere compagni, penso che dovremmo conoscerci "
+"meglio. Dunque, che problemi avete con l'esercito sanguinario?»"
+
+msgid "Kogw: 'Ye gods! Has the sun always been this bright?'"
+msgstr "Kogw: «Per gli dei! È mai stato così brillante il sole?»"
+
+msgid "Kogw: ..."
+msgstr "Kogw: ..."
+
+msgid "Kzzklk"
+msgstr "Kzzklk"
+
+msgid "Kzzklk, show yourself!"
+msgstr "Kzzklk, fatti vedere!"
+
+msgid "Kzzklk: 'My sssaurians will ssstand wwittth youuu.'"
+msgstr "Kzzklk: «I miei sssauri ssstaranno con te.»"
+
+msgid ""
+"Kzzklk: 'Yesss. Howwwevver, sssome of myyy warrriorrrss wwwant to followww "
+"yyoou.'"
+msgstr ""
+"Kzzklk: «Sssì. Perooò, alcuni deeei mieeei guerrieri vorrrebberrro "
+"ssseguirti.»"
+
+msgid "Labryn"
+msgstr "Labryn"
+
+msgid "Landfall"
+msgstr "Terra"
+
+msgid ""
+"Large dogs, wolves are aggressive animals that hunt in packs. Although weak "
+"individually, a pack can kill even the strongest man in minutes. Wolves are "
+"trained and ridden by goblins."
+msgstr ""
+"Grossi cani, i lupi sono animali aggressivi che cacciano in branco. Sebbene "
+"siano individualmente deboli, un branco di lupi può uccidere anche il più "
+"forte degli uomini in pochi istanti. I lupi sono addestrati e cavalcati dai "
+"goblin."
+
+msgid "Lava Beast"
+msgstr "Bestia di lava"
+
+msgid "Lava Monster"
+msgstr "Mostro di lava"
+
+msgid "Lava hot!!! Ouch!!!"
+msgstr "È rovente!!! Ahi!!!"
+
+msgid "Lay down your weapons! The traitor is fallen!"
+msgstr "Gettate le armi! Il traditore è morto!"
+
+msgid ""
+"Lead Malakar and his Drake tribe to freedom from the humans!\n"
+" \n"
+"Version 4.3.3, 1.3.10+ ONLY"
+msgstr ""
+"Conduci Malakar e la sua tribù di draghi alla libertà dagli uomini!\n"
+"\n"
+"Version 4.3.3, SOLO per 1.3.10+"
+
+msgid "Leave me out of this, bilge-rat."
+msgstr "Levatemi di torno questo topo di sentina."
+
+msgid ""
+"Leave, disgusting whelp. You are of the race of Stakron, the betrayer of "
+"Kahn the mighty! Perhaps that is why the humans have attacked you!"
+msgstr ""
+"Vattene, disgustoso marmocchio. Appartieni alla razza di Stakron, il "
+"traditore del possente Kahn! Forse è questo il motivo per cui gli uomini ti "
+"hanno attaccato!"
+
+msgid "Lenvan"
+msgstr "Lenvan"
+
+msgid "Let us go!"
+msgstr "Andiamo!"
+
+msgid "Let us make the overseer pay for that hatchling! In blood!"
+msgstr "Che il sovrintendente paghi per le nostre nidiate! Con il suo sangue!"
+
+msgid ""
+"Let us make the overseer pay for those $hatchlings_killed hatchlings! In "
+"blood!"
+msgstr ""
+"Che il sovrintendente paghi per quelle $hatchlings_killed nidiate! Con il "
+"suo sangue!"
+
+msgid "Let's make the overseer pay for our hatchlings! In blood!"
+msgstr "Che il sovrintendente paghi per le nostre nidiate! Con il suo sangue!"
+
+msgid "Liberation"
+msgstr "Liberazione"
+
+msgid ""
+"Like all pirates, these are thieves of the water. This one is a captain, who "
+"is in charge of leading his thugs into battle."
+msgstr ""
+"Come i pirati, sono i ladri del mare. Questo è un capitano, che comanda i "
+"suoi uomini in battaglia."
+
+msgid "Like me?"
+msgstr "Come me?"
+
+msgid ""
+"Listen to me! If any of you have any sense of goodness or justice, find a "
+"thin-skin and cleanse this world of a little of their evil!"
+msgstr ""
+"Ascoltatemi! Se qualcuno di voi conosce il significato delle parole bontà e "
+"giustizia, trovi un pelle-molle e ripulisca questo mondo di un po' della sua "
+"malvagità!"
+
+msgid "Look, friend, as one captain to another..."
+msgstr "Ascolta, amico, da capitano a capitano..."
+
+msgid "Look. Buddy."
+msgstr "Guarda. Compagno."
+
+msgid "Looky here. $gold_given pieces of gold were in this chest!"
+msgstr "Guarda qui. C'erano $gold_given pezzi d'oro in questo forziere!"
+
+msgid "Lord"
+msgstr "Signore"
+
+msgid "Lord Haloran, my men have returned. The western hills are ablaze!"
+msgstr ""
+"Signor Haloran, i miei uomini sono tornati. Le colline occidentali sono in "
+"fiamme!"
+
+msgid "Luna"
+msgstr "Luna"
+
+msgid "Lunnyn"
+msgstr "Lunnyn"
+
+msgid ""
+"Majestic birds of prey, falcons are the fastest creatures in the world. Even "
+"though these wild falcons have escaped from their keepers, they continue to "
+"hunt with their razor-sharp claws."
+msgstr ""
+"Maestosi rapaci, i falchi sono le creature più veloci al mondo. Anche se "
+"questi falchi selvaggi sono fuggiti dai loro custodi, continuano a cacciare "
+"con i loro artigli affilati come rasoi."
+
+msgid "Major Spirit"
+msgstr "Spirito maggiore"
+
+msgid "Mal! Mal!"
+msgstr "Mal! Mal!"
+
+msgid ""
+"Mal, if they bring their leaders out in the open, they'll be slaughtered!"
+msgstr "Mal, se portassero i loro capi in campo aperto, sarebbero massacrati!"
+
+msgid "Mal-Bronam"
+msgstr "Mal-Bronam"
+
+msgid ""
+"Mal-Bronam has finally been defeated. The darkness is already fading, and "
+"the undead are melting away. We must reach the citadel quickly, and begin "
+"the convocation!"
+msgstr ""
+"Mal-Bronam è stato finalmente sconfitto. L'oscurità già si sta dissipando e "
+"i non-morti si disperdono. Dobbiamo raggiungere la cittadella in fretta e "
+"iniziare l'invocazione!"
+
+msgid "Mal-Troyam"
+msgstr "Mal-Troyam"
+
+msgid "MalAKAR, Kogw, Malakar."
+msgstr "MalAKAR, Kogw, Malakar."
+
+msgid "Malakar"
+msgstr "Malakar"
+
+msgid ""
+"Malakar and Kamalar would lead the main force, and the saurian commander, "
+"Kzzklk, would lead his force of saurians, in hopes of outflanking the humans."
+msgstr ""
+"Malakar e Kamalar dovrebbero condurre la forza principale, il comandante dei "
+"sauri, Kzzklk, dovrebbe guidare la sua forza di sauri, nella speranza di "
+"circondare gli uomini."
+
+msgid "Malakar has 4 turns to escape the cave-in."
+msgstr "Rimangono quattro turni a Malakar per uscire dalle caverne"
+
+msgid ""
+"Malakar lived to the ripe old age of 133. It was rumored that a massive "
+"firestorm erupted when he died, engulfing half of Morogor."
+msgstr ""
+"Malakar visse fino alla bella età di 133 anni. Si dice che quando morì ci fu "
+"un'eruzione di una tempesta di fuoco che abbracciò mezza Morogor."
+
+msgid ""
+"Malakar then traveled to the home of his older brother Kamalar, high priest "
+"of Gar-Dalgar, the Murderer."
+msgstr ""
+"Malakar viaggiò quindi fino a casa del suo vecchio fratello Kamalar, alto "
+"prelato di Gar-Dalgar, l'assassino."
+
+msgid ""
+"Malakar was crowned King of the Drakes, for saving his people from the hands "
+"of the humans."
+msgstr ""
+"Malakar fu incoronato re dei draghi, per aver salvato la sua gente dalle "
+"mani degli uomini."
+
+msgid ""
+"Malakar would command the saurians, and the drake army would be split "
+"between them."
+msgstr ""
+"Malakar dovrebbe comandare i sauri, e l'armata dei draghi verrebbe suddivisa "
+"fra i due condottieri."
+
+msgid "Malakar, chief..."
+msgstr "Malakar, capo..."
+
+msgid ""
+"Malakar, there are humans on the other side of the river. I cannot tell if "
+"they're looking for us or not."
+msgstr ""
+"Malakar, sull'altra sponda ci sono degli uomini. Non so dire se ci stanno "
+"cercando o no."
+
+msgid ""
+"Malakar, with respect, these drakes have spilled our tribe's blood. Surely "
+"you cannot..."
+msgstr ""
+"Malakar, con rispetto parlando, questi draghi hanno sparso il sangue della "
+"nostra tribù. Di sicuro non potrai..."
+
+msgid ""
+"Malakar... our hatchlings... they've been tortured and wounded. Why... why "
+"would they do this?"
+msgstr ""
+"Malakar... la nostra nidiata... è stata torturata e ferita. Perché... perché "
+"lo hanno fatto?"
+
+msgid "Malakar: '...Kogw, captain...'"
+msgstr "Malakar: «...Kogw, capitano...»"
+
+msgid ""
+"Malakar: '...he died with a blade in his hand and a battle-cry on his lips. "
+"He died with honor. Where is the honor for Necolar? She... she was never... "
+"even buried... where... she... Gar-Alagar... oh... why?!?'"
+msgstr ""
+"Malakar: «... è morto con una spada in mano e un urlo di battaglia in gola. "
+"È morto con onore. Dov'è l'onore per Necolar? Non.. non è stata... nemmeno "
+"sepolta... dove... lei... Gar-Alagar... oh... perché!?»"
+
+msgid ""
+"Malakar: 'Ahhhhrr. How many times must I refuse before they leave us alone? "
+"Captain, deny any requests for landing on Morogor's shores. Surely, by now, "
+"they would know that we have no interest in trade with thin-skins.'"
+msgstr ""
+"Malakar: «Ahhhhrr. Quante volte dovrò rifiutare ancora prima che ci lascino "
+"in pace? Capitano, rifiutate ogni richiesta di approdo sulle rive di "
+"Morogor. Certamente, adesso, dovrebbero sapere che non abbiamo nessun "
+"interesse a commerciare con questi pelle molli.»"
+
+msgid ""
+"Malakar: 'Drakes! Hear me! We move west within the hour! For now, spread out "
+"through the manor. For every friend you have lost, for every noble warrior "
+"you have seen dishonored,'"
+msgstr ""
+"Malakar: «Draghi! Ascoltatemi! Ci sposteremo verso occidente tra un'ora! Per "
+"il momento sparpagliatevi per il maniero. Per ogni amico che avete perso, "
+"per ogni nobile guerriero che è stato disonorato, ...»"
+
+msgid ""
+"Malakar: 'Even with the might of both of our tribes, we cannot fight the "
+"humans by ourselves. I have seen their army, and it is not only large, but "
+"elite.'"
+msgstr ""
+"Malakar: «Anche con la forza delle nostre due tribù, non possiamo combattere "
+"gli uomini da soli. Ho visto il loro esercito, che non solo è enorme, ma "
+"anche di elite.»"
+
+msgid "Malakar: 'HIYA!!!'"
+msgstr "Malakar: «HIYA!!!»"
+
+msgid ""
+"Malakar: 'Heh. Captain! Hear the wisdom of the one who may become your new "
+"leader! Very well, meet with the thin-skins, little Necolar, but...'"
+msgstr ""
+"Malakar: «Eh. Capitano! Ascolta la saggezza di uno che potrebbe diventare il "
+"nostro nuovo capo! Benissimo, incontrati con i pelle molli, piccolo Necolar, "
+"ma...»"
+
+msgid "Malakar: 'I accept their offer. Hartholar, have we decided?'"
+msgstr "Malakar: «Accetto la loro offerta. Hartholar, abbiamo deciso?»"
+
+msgid "Malakar: 'I agree. Kzzklk, what say you?'"
+msgstr "Malakar: «Sono d'accordo. Kzzklk, cosa ne dici?»"
+
+msgid ""
+"Malakar: 'I need my tribe's strength to return home. If any feared "
+"repercussions in Morogor, we would never make it.'"
+msgstr ""
+"Malakar: «Mi serve la forza della mia tribù per tornare a casa. Se avessero "
+"temuto delle ripercussioni a Morogor, non ce l'avremmo mai fatta.»"
+
+msgid ""
+"Malakar: 'I will never lay eyes on you again. Do you understand? Go. Go!'"
+msgstr "Malakar: «Non ti voglio più vedere. Capito? Va', va'!»"
+
+msgid "Malakar: 'Into the caves, and prepare to seal the entrance!'"
+msgstr "Malakar: «Nelle caverne e preparatevi a bloccare l'ingresso!»"
+
+msgid ""
+"Malakar: 'Is this honor, Theracar? Your honor needs to assign blame for the "
+"unforseeable? Your honor brought you through the caves - thinking not of our "
+"survival but of grand treason? Your honor would cave to blackmail and "
+"sacrifice our friends to save...'"
+msgstr ""
+"Malakar: «È questo l'onore, Theracar? Il tuo onore ha bisogno di distribuire "
+"colpe per l'imprevedibile? Il tuo onore ti ha portato attraverso le caverne "
+"- pensando non alla nostra sopravvivenza ma a un alto tradimento? Il tuo "
+"onore è diventato estorsione e sacrifica i nostri amici per salvare... »"
+
+msgid "Malakar: 'It is I. Do I know you?'"
+msgstr "Malakar: «Sono io. Io ti conosco?»"
+
+msgid ""
+"Malakar: 'Kogw, by the flame of Gar-Alagar, I welcome you into our tribe. "
+"Theracar has borne witness, and I suggest we hold the festivities at a later "
+"date.'"
+msgstr ""
+"Malakar: «Kogw, per il fuoco di Gar-Alagar, ti do il benvenuto nella nostra "
+"tribù. Theracar ne è testimone e suggerisco di rimandare i festeggiamenti a "
+"un altro momento.»"
+
+msgid ""
+"Malakar: 'Kzzklk, I am honored. We can use every soldier that is willing to "
+"fight with us. However, we will need to leave these swamps soon, before the "
+"main human host arrives.'"
+msgstr ""
+"Malakar: «Kzzklk, sono onorato. Possiamo impiegare ogni soldato che vorrà "
+"combattere con noi. Comunque dobbiamo lasciare queste paludi al più presto, "
+"prima che arrivi il grosso dell'esercito degli uomini.»"
+
+msgid ""
+"Malakar: 'Many have died today. Far too many, all because of petty racism.'"
+msgstr ""
+"Malakar: «Oggi sono morti in tanti. Veramente troppi, solo per del meschino "
+"razzismo.»"
+
+msgid "Malakar: 'Morogor! At last!'"
+msgstr "Malakar: «Morogor! Finalmente!»"
+
+msgid "Malakar: 'Move, softskin! We cannot afford to wait for you later!'"
+msgstr "Malakar: «Muoviti, pellemolle! Non possiamo aspettarti ancora!»"
+
+msgid "Malakar: 'No.'"
+msgstr "Malakar: «No.»"
+
+msgid ""
+"Malakar: 'Not yet. We will need money to finance our campaign. We will only "
+"be free when the humans cower at our name and we again breathe the air of "
+"Morogor in peace. Our fight is only beginning.'"
+msgstr ""
+"Malakar: «Non ancora. Ci serve l'oro per finanziare la nostra campagna. "
+"Saremo liberi solo quando gli uomini tremeranno sentendo il nostro nome e "
+"quando respireremo l'aria di Morogor in pace. La nostra battaglia è solo "
+"all'inizio.»"
+
+msgid "Malakar: 'Now, they reap the inferno!'"
+msgstr "Malakar: «Ora, che brucino all'inferno!»"
+
+msgid ""
+"Malakar: 'Our ultimate goal should be the Obsidian Citadel, the dwelling "
+"place of the High Magi.'"
+msgstr ""
+"Malakar: «L'obiettivo finale dovrebbe essere la cittadella di ossidiana, "
+"dove abitano gli alti maghi.»"
+
+msgid "Malakar: 'THAT'S ENOUGH, THERACAR!'"
+msgstr "Malakar: «ADESSO BASTA, THERACAR!»"
+
+msgid ""
+"Malakar: 'The fog is thickening down there. I hope that this is not a sign "
+"of worse things to come.'"
+msgstr ""
+"Malakar: «Sta scendendo la nebbia. Speriamo che non preannunci l'arrivo di "
+"cose peggiori.»"
+
+msgid ""
+"Malakar: 'The humans destroyed our home, killed our people, tortured our "
+"young, and sold us in chains like cattle. There can be no forgiveness, and "
+"every man involved has rightly earned himself a dark and merciless death.'"
+msgstr ""
+"Malakar: «Gli uomini hanno distrutto la nostra patria, massacrato la nostra "
+"gente, torturato i nostri piccoli e ci hanno venduto in catene come "
+"bestiame. Non ci può essere perdono e tutti gli uomini coinvolti si sono "
+"meritati una morte dolorosa e senza pietà.»"
+
+msgid "Malakar: 'Theracar is dead. He died...'"
+msgstr "Malakar: «Theracar è morto. È morto...»"
+
+msgid ""
+"Malakar: 'Theracar! There appears to be a system of caves to the South. I am "
+"entrusting you with the tribe - leave as few traces as you can, and I will "
+"attempt to create a diversion to slow down the humans. I will meet up as "
+"soon as I can.'"
+msgstr ""
+"Malakar: «Theracar! Laggiù a sud sembra che ci sia un sistema di caverne. Ti "
+"affido la tribù - lasciate meno tracce possibile e io cercherò di creare un "
+"diversivo per rallentare gli uomini. Vi raggiungerò appena posso.»"
+
+msgid ""
+"Malakar: 'They are our only hope. Just as their forerunners, led by the "
+"great drake Freon, cleared this island of the evils that once lived on it, "
+"they have the power to clear this island once again, this time from the "
+"evils that dare to invade it.'"
+msgstr ""
+"Malakar: «Sono la nostra unica speranza. Come i loro antenati, guidati dal "
+"rgande drago Freon, liberarono questa isola dal male che l'abitava un tempo, "
+"hanno il potere di liberare di nuovo questa isola, questa volta dal male che "
+"osa invaderla.»"
+
+msgid "Malakar: 'This matter is not open for discussion. We must move!'"
+msgstr ""
+"Malakar: «Non è un argomento che può essere messo in discussione. Dobbiamo "
+"muoverci!»"
+
+msgid ""
+"Malakar: 'Very well, Hartholar. Let us strive to put this matter behind us, "
+"but do not dare to speak ill of Necolar. Who is this to my right?'"
+msgstr ""
+"Malakar: «Benissimo, Hartholar. Sforziamoci di lasciarci alle spalle questa "
+"faccenda, ma non osare più parlare male di Necolar. Chi è questi alla mia "
+"destra?»"
+
+msgid "Malakar: 'Watch your tongue!'"
+msgstr "Malakar: «Frena la lingua!»"
+
+msgid ""
+"Malakar: 'We cannot rest now. Look! The softskins are laying siege to the "
+"fortress!'"
+msgstr ""
+"Malakar: «Non possiamo riposare ora. Guardate i pellimolli stanno assediando "
+"la fortezza!»"
+
+msgid ""
+"Malakar: 'We must press on quickly. We must find an alternate means of "
+"transportation if we are to make it back to Morogor. We cannot tell how much "
+"time we have before the elves free themselves and resume the chase.'"
+msgstr ""
+"Malakar: «Dobbiamo affrettarci. Dobbiamo trovare un mezzo di trasporto "
+"alternativo se vogliano tornare a Morogor. Non sappiamo quanto tempo abbiamo "
+"prima che gli elfi si liberino e riprendano la caccia.»"
+
+msgid "Malakar: 'What evil?'"
+msgstr "Malakar: «Quale male?»"
+
+msgid ""
+"Malakar: 'Yes. Drakes! We must tarry no longer! Prepare to move to the "
+"southeast!'"
+msgstr ""
+"Malakar: «Sì. Draghi! Non dobbiamo più indugiare! Preparatevi a dirigervi a "
+"sud-est!»"
+
+msgid "Malakar: 'You WILL hold your tongue! Blockade the entrance!'"
+msgstr "Malakar: «Vuoi stare ZITTO? Barricate l'ingresso!»"
+
+msgid ""
+"Malakar: 'You are right, Kogw. Our tribe is small enough as it is. We cannot "
+"lose another.'"
+msgstr ""
+"Malakar: «Hai ragione, Kogw. La nostra tribù è già troppo piccola. Non "
+"possiamo perdere un altro.»"
+
+msgid "Malakar: 'You may speak in front of the captain. He is of our tribe.'"
+msgstr "Malakar: «Puoi parlare, il capitano fa parte della nostra tribù.»"
+
+msgid ""
+"Malakar: 'You! I offer you your life in exchange for the location of the "
+"manor's vaults. You have 10 seconds!'"
+msgstr ""
+"Malakar: «Tu! Risparmierò la tua vita se mi dici dove è il tesoro del "
+"maniero. Hai dieci secondi!»"
+
+msgid ""
+"Malakar: 'for every hatchling you will never see grow old, for every scar "
+"upon your back, set one fire. The humans have sown their seeds!'"
+msgstr ""
+"Malakar: «...per ogni nidiata che non vedrete più crescere, per ogni "
+"cicatrice sulla vostra pelle accendete un fuoco.»"
+
+msgid "Malakar: ..."
+msgstr "Malakar: ..."
+
+msgid "Mandros"
+msgstr "Mandros"
+
+msgid "Many elves were in pursuit. We had no other choice."
+msgstr "Molti elfi ci stavano inseguendo. Non avevamo altra scelta."
+
+msgid ""
+"Many weeks passed. The captive drakes, already wounded, quickly began to "
+"weaken and die. Each lost warrior of the tribe deserved a funeral dirge, and "
+"the songs began at daybreak and often did not end until sundown."
+msgstr ""
+"Passarono molte settimane. I draghi prigionieri, già feriti, cominciarono "
+"rapidamente a perdere le forze e morire. Ogni guerriero perduto delal tribù "
+"meritava un canto funebre e le canzoni cominciavano all'alba e spesso non "
+"terminavano fino al tramonto."
+
+msgid "Mato"
+msgstr "Mato"
+
+msgid "Men! Round up the slaves, and make them suffer for their disobedience!"
+msgstr ""
+"Uomini! Raggruppate gli schiavi e fategli pagare la loro disobbedienza!"
+
+msgid ""
+"Men! Spread out through the forest! While these beasts have done nothing yet "
+"to provoke us, we must be wary!"
+msgstr ""
+"Uomini! Sparpagliatevi per la foresta! Anche se queste bestie non hanno "
+"fatto niente per provocarci, dobbiamo essere cauti!"
+
+msgid ""
+"Men, be prepared for attacks from the East, but the Drakes remain our "
+"primary objective. Move out!"
+msgstr ""
+"Uomini, preparatevi per gli attacchi da est, ma i draghi rimangono il nostro "
+"obiettivo primario. Muovetevi!"
+
+msgid "Minor Spirit"
+msgstr "Spirito minore"
+
+msgid "More advanced Drakes, the Workers fight with their maces."
+msgstr "Draghi più avanzati, i lavoratori combattono con le mazze."
+
+msgid ""
+"More advanced Drakes, these guerilla fighters have so far led a successful "
+"campaign against their masters.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Draghi più avanzati, questi combattenti guerriglieri sono riusciti finora ad "
+"opporre una forte resistenza contro gli oppressori.\n"
+"\n"
+"Note speciali:"
+
+msgid ""
+"More experienced Skalds, the Jugglers can throw more daggers. They have also "
+"learned to supplement their natural poison with swamp berry extracts."
+msgstr ""
+"Più esperti dei saltimbanchi, i giocolieri possono lanciare più pugnali. "
+"Hanno anche imparato a potenziare il loro veleno naturale con estratti di "
+"bacche di palude."
+
+msgid "Morogor is ours!"
+msgstr "Morogor è nostra!"
+
+msgid ""
+"Most of the Drakes were allowed to simply sink beneath the murky waters, but "
+"a few of the stronger survivors were bound and dragged by horses back toward "
+"the shore."
+msgstr ""
+"La maggior parte dei draghi fu lasciata affondare sotto le acque tenebrose, "
+"tranne pochi dei più forti sopravvissuti che furono legati e trascinati dai "
+"cavalli di nuovo al porto."
+
+msgid "Move Malakar to the cave entrance"
+msgstr "Muovi Malakar fino all'ingresso delle grotte"
+
+msgid "Move Malakar to the end of the road"
+msgstr "Sposta Malakar al termine della strada"
+
+msgid "Move Malakar to the end of the southern stream"
+msgstr "Sposta Malakar al termine del braccio meridionale"
+
+msgid "Move Malakar to the end of the valley"
+msgstr "Sposta Malakar all'estremità della vallata"
+
+msgid "Move Malakar to the ruined keep"
+msgstr "Muovi Malakar sulla fortezza in rovina"
+
+msgid "Move Malakar to the western edge of the river of lava"
+msgstr "Muovi Malakar sulla riva est del fiume di lava"
+
+msgid ""
+"Move a Drake Burner, Fire Drake, or Inferno Drake onto the Gate of Storms"
+msgstr ""
+"Muovi un drago bruciatore, un drago di fuoco o un drago infernale sul "
+"«cancello delle tempeste»"
+
+msgid "Move a Fire, Inferno or Armageddon Drake onto the Gate of Storms"
+msgstr ""
+"Sposta un drago di fuoco, un drago infernale o un drago dell'apocalisse sul "
+"«cancello delle tempeste»"
+
+msgid "Move a unit onto the Gate of Storms"
+msgstr "Muovi un'unità sul «cancello delle tempeste»"
+
+msgid "Move the Unforgiver to the East"
+msgstr "Muovi l'Implacabile verso est"
+
+msgid "Move the Unforgiver to the bottom"
+msgstr "Muovi l'Implacabile fino al fondo"
+
+msgid "Move the Unforgiver to the pier"
+msgstr "Muovi l'Implacabile fino al molo"
+
+msgid ""
+"My bones are brittle, and I cannot brave the flaming river. I will return to "
+"the surface, and harass the softskins that pursue you."
+msgstr ""
+"Le mie ossa sono fragili e non posso attraversare il fiume fiammeggiante. "
+"Tornerò in superficie e impegnerò i pelle-molli che vi inseguono."
+
+msgid "My fire is too weak. We need a stronger firebreather!"
+msgstr "La mia fiamma è troppo debole. Ci serve un soffio più potente!"
+
+msgid "NO!! Our hatchlings... our tribe is lost. Oh, Necolar, I am sorry..."
+msgstr ""
+"NO!! La nostra nidiata... la nostra tribù è persa. Oh, Necolar, mi spiace..."
+
+msgid "NOOOOOOOO! I cannot bear to live!"
+msgstr "NOOOOOOOO! Come posso vivere ancora dopo tutto questo?"
+
+msgid ""
+"NOTE: Since Hartholar is no longer critical from now on, the game will not "
+"end if Hartholar is killed."
+msgstr ""
+"NOTA: Dato che Hartholar non è più decisivo, la partita non termina se "
+"Hartholar venisse ucciso."
+
+msgid "NOTE: The campaign will not end if Hartholar is killed."
+msgstr "NOTA: La campagna non termina se Hartholar venisse ucciso."
+
+msgid "NOTE: The campaign will not end if Malakar is defeated."
+msgstr "NOTA: La campagna non termina se Malakar fosse sconfitto."
+
+msgid ""
+"NOTE: This campaign has two branches, determined by the outcome of this "
+"scenario. To play the original branch, lose this level."
+msgstr ""
+"NOTA: Questa campagna ha due filoni a seconda dell'esito di questo scenario. "
+"Per giocare il filone originale devi perdere questo livello."
+
+msgid "Naga Depthstalker"
+msgstr "Naga assassino degli abissi"
+
+msgid "Naga Guardian"
+msgstr "Naga guardiano"
+
+msgid "Naga Hunter"
+msgstr "Naga cacciatore"
+
+msgid ""
+"Naga Hunters are Naga who are skilled at hunting with a bow. Since the naga "
+"are naturally resistant to poison, they have no qualms about hunting with "
+"poisoned arrows. These two foot long shafts, tipped with a potent poison, "
+"have been known to slay many kinds of prey."
+msgstr ""
+"I cacciatori naga sono abili nella caccia con l'arco. Poiché sono "
+"naturalmente resistenti al veleno, non hanno remore a cacciare con frecce "
+"avvelenate. Queste lunghe aste dalla punta impregnata di potente veleno sono "
+"note per aver abbattuto molti tipi di preda diversi."
+
+msgid "Naga Mage"
+msgstr "Naga mago"
+
+msgid "Naga Sentinel"
+msgstr "Naga sentinella"
+
+msgid "Naga Spellwarrior"
+msgstr "Naga guerriero magico"
+
+msgid "Naga Warden"
+msgstr "Naga custode"
+
+msgid "Naga Warlock"
+msgstr "Naga stregone"
+
+msgid "Naga Warrior Mage"
+msgstr "Naga mago guerriero"
+
+msgid "Nagini Depthstalker"
+msgstr "Naga assassina degli abissi"
+
+msgid "Nagini Mage"
+msgstr "Naga maga"
+
+msgid "Nagini Spellcrafter"
+msgstr "Naga maestra di magia"
+
+msgid "Nagini Spellwarrior"
+msgstr "Naga guerriera magica"
+
+msgid "Nagini Warlock"
+msgstr "Naga strega"
+
+msgid "Nagini Warrior Mage"
+msgstr "Naga maga guerriera"
+
+msgid "Nardrol"
+msgstr "Nardrol"
+
+msgid ""
+"Necolar: 'Forgive me, Father, but I would like to speak with the humans, as "
+"an official emissary of our tribe. If we turn them away too soon, without "
+"giving them the chance to resupply their water, they may become hostile.'"
+msgstr ""
+"Necolar: «Perdonatemi, padre, ma vorrei parlare con gli uomini come inviato "
+"ufficiale della nostra tribù. Se li rimandiamo indietro troppo presto senza "
+"dar loro la possibilità di rifornirsi di acqua, potrebbero diventare ostili.»"
+
+msgid ""
+"Necolar: 'I know, Father. No access to the quarries, and no more than one "
+"night of rest. I want them on our shores no more than you do. By your "
+"leave...'"
+msgstr ""
+"Necolar: «Lo so, padre. Nessun accesso alle cave e solo una notte di riposo. "
+"Voglio che abbandonino le nostre sponde quanto voi. Con il vostro "
+"permesso...»"
+
+msgid "Negotiations were short."
+msgstr "I negoziati furono brevi."
+
+msgid ""
+"Newborn Drakes, Hatchlings are used as cannon fodder and as cheap walls."
+msgstr ""
+"I draghi appena nati sono usati come carne da macello e sbarramento da poco."
+
+msgid "No! Hafwyt has fallen!"
+msgstr "No! Hafwyt è caduta!"
+
+msgid "No! Hartholar is dead!"
+msgstr "No! Hartholar è morto!"
+
+msgid "No! I cannot continue..."
+msgstr "No! Non posso proseguire..."
+
+msgid "No! The caravan has escaped into the hills!"
+msgstr "No! La carovana è fuggita fra le colline!"
+
+msgid "No! The exit is collapsing! We are trapped!"
+msgstr "No! L'uscita sta crollando! Siamo in trappola!"
+
+msgid ""
+"No! The humans have overrun our lands, and their cavalry blocks our escape!"
+msgstr ""
+"No! Gli uomini si sono impadroniti della nostra terra e la loro cavalleria "
+"ci blocca la fuga!"
+
+msgid "No! The winds have subsided! We cannot sail further!"
+msgstr "No! Il vento è calato! Non possiamo più navigare!"
+
+msgid ""
+"No! The wolves have destroyed the caravan, and the elves approach on all "
+"sides! Retreat!"
+msgstr ""
+"No! I lupi hanno distrutto la carovana e gli elfi arrivano da tutte le "
+"parti! Ripiegare!"
+
+msgid "No! Without him, I cannot hope to prevail!"
+msgstr "No! Senza di lui, non ho speranze di vincere!"
+
+msgid "No! Without my helmsman, we cannot sail!"
+msgstr "No! Senza il mio timoniere, non possiamo partire!"
+
+msgid "No! Without my navigator, we cannot sail!"
+msgstr "No! Senza il mio navigatore, non possiamo partire!"
+
+msgid "No! Without the Magi, the drakes are doomed!"
+msgstr "No! Senza i maghi, i draghi sono condannati!"
+
+msgid "No, I beg you! I can make it!"
+msgstr "No, ti prego! Non posso farlo!"
+
+msgid ""
+"No, Kogw, we must rejoin the tribe and begin a counterattack. We are not "
+"bats! Wings do not work very well underground. Neither do cold blooded "
+"Drakes!"
+msgstr ""
+"No, Kogw, dobbiamo raggiungere la tribù e iniziare a contrattaccare. Non "
+"siamo pipistrelli! Le ali non sono d'aiuto sottoterra. E nemmeno i draghi a "
+"sangue freddo."
+
+msgid "No. I have heard of no such name. Out of my way!"
+msgstr "No. Non ho mai sentito questo nome. Lasciami passare!"
+
+msgid ""
+"No. Not even humans punish children for the sins of their forefathers, "
+"unlike you. They seek our blood, and this island for themselves! They "
+"murdered my daughter!"
+msgstr ""
+"No. Neanche gli uomini puniscono i figli per le colpe dei padri, a "
+"differenza di te. Cercano il nostro sangue e questa isola per loro stessi! "
+"Hanno assassinato mia figlia!"
+
+msgid ""
+"Noble warriors, thank you for freeing me from this magical prison. I must "
+"now travel to my rightful place in the underworld. You may rest assured that "
+"my brethren will harm you no more."
+msgstr ""
+"Nobili guerrieri, grazie per avermi liberato da questa prigioen magica. Ora "
+"devo andare nel mio legittimo luogo nel mondo sotterraneo. Potete star certi "
+"che i miei confratelli non vi faranno più alcun male."
+
+msgid "North? Wouldn't a, y'know, daring rescue been more appropriate?"
+msgstr ""
+"Nord? Non sarebbe, diciamo, più appropriato tentare un intrepido salvataggio?"
+
+msgid ""
+"Northern warriors, thank you for saving us today from the spears and swords "
+"of the humans. Although my soldiers and I must remain and defend this "
+"fortress, I pledge what treasure we have to you and your cause."
+msgstr ""
+"Guerrieri del nord, grazie per averci salvato oggi dalle lance e dalle spade "
+"degli uomini. Anche se i miei soldati e io dobbiamo restare a difendere "
+"questa fortezza, impegno il nostro tesoro per voi e la vostra causa."
+
+msgid "Not... really. Where's the exit?"
+msgstr "Non... proprio. Dov'è l'uscita?"
+
+msgid ""
+"Note for translators: 'wench' here is intended as a fairly mild gender-"
+"specific insult, not to literally mean 'prostitute'."
+msgstr ""
+"Nota per i traduttori: 'wench' è da intendersi come un lieve insulto di "
+"genere, non letteralmente come 'prostituta'."
+
+msgid "Now I will get revenge for my enslavement!"
+msgstr "Ora mi vendicherò di chi mi ha ridotto in schiavitù!"
+
+msgid "Now that I have freed the tribe, I have true warriors at hand!"
+msgstr "Ora che ho liberato la tribù, ho veri guerrieri a disposizione!"
+
+msgid ""
+"Now that I have freed the tribe, I have true warriors at hand, including the "
+"Chieftain of the Jamolar!"
+msgstr ""
+"Ora che ho liberato la tribù, ho veri guerrieri a disposizione, tra cui il "
+"capitano dei Jamolar!"
+
+msgid "Now the drakes will be enslaved again!"
+msgstr "Ora i draghi saranno nuovamente ridotti in schiavitù!"
+
+msgid ""
+"Now, we follow the southern stream! Without their horses, they will have "
+"trouble chasing us through the hills."
+msgstr ""
+"Be', ora seguiremo il braccio meridionale! Senza i loro cavalli, avranno dei "
+"problemi a darci la caccia attraverso le colline."
+
+msgid ""
+"Now, with your arrival, we can emerge from our hiding place. Kzzklk, will "
+"you assist us once again?"
+msgstr ""
+"Ora, con il tuo arrivo, possiamo uscire dal nostro nascondiglio. Kzzklk, ci "
+"aiuterai ancora una volta?"
+
+msgid "OW! Wait... the guards' fresh replacements... they are late tonight..."
+msgstr ""
+"UAU! Aspetta... i sostitui freschi delle guardie... sono in ritardo "
+"stanotte..."
+
+msgid "Oddryn"
+msgstr "Oddryn"
+
+msgid ""
+"Oh, Necolar, that wench. When the humans come, I will thank them. Drakes! To "
+"arms, let us drive out these rabble!"
+msgstr ""
+"Oh, Necolar, quella stronzetta. Quando arriveranno gli uomini, li "
+"ringrazierò. Draghi! Alle armi, scacciamo questa spazzatura!"
+
+msgid "Omandro"
+msgstr "Omandro"
+
+msgid ""
+"Omandro had been wrong, however, and the human reinforcements were much "
+"closer than he had thought."
+msgstr ""
+"Omandro, però, si sbagliava e i rinforzi degli uomini erano molto più vicini "
+"di quanto avesse pensato."
+
+msgid ""
+"On the island of Morogor, a drake tribe was sleeping one day when they saw a "
+"strange sight."
+msgstr ""
+"Sull'isola di Morogor, una tribù di draghi stava tranquillamente dormendo "
+"una notte quando vide uno spettacolo inconsueto."
+
+msgid ""
+"Once, this was a major hub in his domain, where many of his minions were "
+"trained. His roads and castles remain to this day."
+msgstr ""
+"Un tempo, questo era uno centri più importanti del suo dominio, dove molti "
+"dei suoi servi venivano addestrati. Le sue strade e i suoi castelli sono "
+"arrivati fino ai nostri giorni."
+
+msgid "Onward! We must reach Hafwyt soon!"
+msgstr "Avanti! Dobbiamo raggiungere Hafwyt presto!"
+
+msgid "Or, I can place the saurians under your command, to add to your army."
+msgstr ""
+"Se vuoi posso mettere i sauri sotto il tuo comando, puoi aggiungerli al tuo "
+"esercito."
+
+msgid ""
+"Orc Leader: 'Raiders! Heuylah! Tonight we dine on the marrow of those who "
+"take our lands!'"
+msgstr ""
+"Capo degli orchi: «Razziatori! Heuylah! Questa sera banchetteremo con il "
+"midollo di quelli che hanno preso la nostra terra!»"
+
+msgid "Our enemies are at are our very backs! We must flee!"
+msgstr "I nemici ci sono alle calcagna! Dobbiamo fuggire!"
+
+msgid "Our hatchlings are under attack! Hurry!"
+msgstr "Stanno attaccando la nostra nidiata! Presto!"
+
+msgid ""
+"Our next step towards home is simple: seize the caravan. It must not enter "
+"the hills!"
+msgstr ""
+"Il nostro prossimo passo verso casa è semplice: dobbiamo assaltare la "
+"carovana. Non deve entrare nelle colline!"
+
+msgid "Our quarrel is not with you. Give us Kogw, and we will leave you be."
+msgstr "Non abbiamo contrasti con voi. Dateci Kogw e vi lasceremo andare."
+
+msgid "Our supplies are dangerously low! Hurry!"
+msgstr "Le provviste rimaste sono pericolosamente poche! Più in fretta!"
+
+msgid "Our walls are failing! Hurry!"
+msgstr "I nostri muri crollano! Presto!"
+
+msgid "Overseer"
+msgstr "Sovrintendente"
+
+msgid "Palmathio"
+msgstr "Palmathio"
+
+msgid "Passing Wind"
+msgstr "Brezza passeggera"
+
+msgid "Pelaling"
+msgstr "Pelaling"
+
+msgid ""
+"Perhaps I can explain. Humans have invaded Morogor in several places and "
+"butchered my daughter, and are slaughtering drakes by the hundreds, while "
+"your magi are screwing off in the citadel!"
+msgstr ""
+"Forse ho una spiegazione. Gli uomini hanno invaso Morogor in diversi punti e "
+"hanno massacrato mia figlia e stanno massacrando draghi a centinaia mentre i "
+"vostri maghi si girano i pollici nella cittadella!"
+
+msgid "Pig"
+msgstr "Maiale"
+
+msgid ""
+"Pigs are instrumental in the production of ham. Also, their skin is used to "
+"make Wesballs, like those used in the popular game of Wesbowl."
+msgstr ""
+"I maiali servono per produrre prosciutti. Inoltre la loro pelle è usata per "
+"fare le wespalle, come quelle usate nel gioco del wesbol."
+
+msgid "Pirate"
+msgstr "Pirata"
+
+msgid "Pirate Captain"
+msgstr "Capitano pirata"
+
+msgid ""
+"Pirates are the aquatic vector of Thieves. Manned by human renegades, these "
+"widely feared ships ply the seaways, looking for plunder."
+msgstr ""
+"Le golette pirata sono i trasportatori acquatici dei ladri. Equipaggiate da "
+"uomini rinnegati, queste navi solcano i mari alla ricerca di bottino."
+
+msgid "Prax III"
+msgstr "Prax III"
+
+msgid "Protect Kamalar"
+msgstr "Proteggi Kamalar"
+
+msgid ""
+"Protected by their massive golden shields, Drake Guards are responsible for "
+"the protection of more important drakes.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Protetti da massicci scudi dorati, i draghi guardiani sono responsabili "
+"della protezione di draghi draghi più importanti.\n"
+"\n"
+"Note speciali:"
+
+msgid "Quemar"
+msgstr "Quemar"
+
+msgid "RUARRAGH!"
+msgstr "RUARRAGH!"
+
+msgid "RUARRRRR!!! Now new life flows through me!!!"
+msgstr "ROARRRRR!!! Ora nuova vita scorre nel mio corpo!!!"
+
+msgid "Rabbit"
+msgstr "Coniglio"
+
+msgid "Rebel"
+msgstr "Ribelle"
+
+msgid "Rebellion"
+msgstr "Ribellione"
+
+msgid "Remember, men, take the caravan! We have no quarrel with the elves."
+msgstr ""
+"Ricordate, uomini, attaccate la carovana! Non abbiamo contese con gli elfi."
+
+msgid "Rescue the Hatchlings"
+msgstr "Salva la nidiata"
+
+msgid "Resist for as long as possible"
+msgstr "Resisti il più possibile"
+
+msgid "Retract the drawbridge! Quickly!"
+msgstr "Sollevate il ponte levatoio! Presto!"
+
+msgid "Return to Morogor"
+msgstr "Ritorno a Morogor"
+
+msgid "Rhaedoc"
+msgstr "Rhaedoc"
+
+msgid "Rheoran"
+msgstr "Rheoran"
+
+msgid "Rhygwyn"
+msgstr "Rhygwyn"
+
+msgid "Rhyrraent"
+msgstr "Rhyrraent"
+
+msgid "Rhys"
+msgstr "Rhys"
+
+msgid "Rhys?"
+msgstr "Rhys?"
+
+msgid "River of Skulls"
+msgstr "Fiume dei teschi"
+
+msgid "Rock"
+msgstr "Roccia"
+
+msgid "Rock Golem"
+msgstr "Golem di roccia"
+
+msgid ""
+"Rock Golems are creatures made out of solid, living rock. They have a weak "
+"attack, but are incredibly hard to destroy."
+msgstr ""
+"I golem di roccia sono creature costituite di solida roccia vivente. Hanno "
+"un attacco debole, ma sono incredibilmente difficili da distruggere."
+
+msgid "Rockfall"
+msgstr "Frana"
+
+msgid "Rotten grape juice! Yuck!"
+msgstr "Succo d'uva marcio! Slurp!"
+
+msgid "Rycyn"
+msgstr "Rycyn"
+
+msgid "Saurian Headhunter"
+msgstr "Sauro cacciatore di teste"
+
+msgid ""
+"Saurian Headhunters are the heavy fighters of the saurians. Armed with an "
+"axe, they can deliver relatively strong blows, but are encumbered by armor."
+msgstr ""
+"I cacciatori di teste sauri sono la fanteria pesante dei sauri. Armati di "
+"ascia, possono infliggere colpi relativamente forti, ma sono impacciati "
+"dall'armatura."
+
+msgid "Saurian Jarl"
+msgstr "Sauro capoguerra"
+
+msgid ""
+"Saurian Jarls are the leaders of saurian attack squads. Armed with an axe "
+"and armored, they are capable of doing decent damage and can take some hits, "
+"but the armor slows them down to the point where they cannot sneak pass "
+"enemies."
+msgstr ""
+"I sauri capoguerra sono i capi delle squadre di combattimento dei sauri. "
+"Armati di ascia e coperti da una robusta armatura, possono infliggere "
+"abbastanza danni e resistere a qualche colpo, ma l'armatura li rallenta al "
+"punto in cui non possono infiltrarsi tra i nemici."
+
+msgid "Saurian Juggler"
+msgstr "Sauro giocoliere"
+
+msgid "Saurian Knifethrower"
+msgstr "Sauro lanciatore di coltelli"
+
+msgid "Saurian Margrave"
+msgstr "Sauro margravio"
+
+msgid ""
+"Saurian Margraves are the leaders of saurian armies. They are also skilled "
+"with the axe, but like the Jarls, are, due to their armor, slower than most "
+"saurians and unable to sneak past enemies."
+msgstr ""
+"I sauri margravi sono i condottieri delle armate dei sauri. Sono anche abili "
+"con l'ascia, ma come i capoguerra sono più lenti degli altri sauri a causa "
+"della loro armatura e non possono infiltrarsi tra i nemici."
+
+msgid "Saurian Skald"
+msgstr "Sauro saltimbanco"
+
+msgid "Save the highest-ranking officers first!"
+msgstr "Salvate per primi gli ufficiali più alti in grado!"
+
+msgid "Saxiala"
+msgstr "Saxiala"
+
+msgid "Scaled creatures! Do you know of Kogw?"
+msgstr "Creature scagliose! Conoscete Kogw?"
+
+msgid ""
+"Sea Hags are older and more experienced Nagas who have learned to control "
+"the water magic."
+msgstr ""
+"Le streghe del mare sono le naga più anziane ed esperte che hanno appreso il "
+"controllo della magia acquatica."
+
+msgid ""
+"Serf: 'Th-there is a caravan. P-p-prax kept no money here, but a large sum "
+"was sent once a month from his castle i-in the south. The caravan arrives on "
+"the west road t-tomorrow morning.'"
+msgstr ""
+"Serf: «C-c'è una carovana. P-p-prax non tiene qui l'oro, ma ogni mese ne "
+"manda un bel po' al suo castello a-a sud. La carovana arriverà dalla strada "
+"occidentale d-domani mattina.»"
+
+msgid "Shadow Mage"
+msgstr "Mago oscuro"
+
+msgid ""
+"Silence! The humans hound us, enslave us, and kill our young. They are our "
+"sworn enemies, and they will be destroyed every time our peoples meet!"
+msgstr ""
+"Silenzio! Gli uomini ci cacciano, ci fanno schiavi uccidono i nostri "
+"piccoli. Sono i nostri nemici giurati e saranno distrutti ogni volta che i "
+"nostri popoli si incontreranno!"
+
+msgid ""
+"Simply put, no tribe has yet laid claim to this area, and none have seen fit "
+"to cleanse it. They are more interested in their petty feuds."
+msgstr ""
+"È semplice, nessuna tribù ha ancora reclamato questa area e nessuno ha "
+"trovato conveniente ripulirla. Sono più interessati ai loro meschini feudi."
+
+msgid "Sink the Luna"
+msgstr "Affonda la Luna"
+
+msgid "Skula-Teroa"
+msgstr "Skula-Teroa"
+
+msgid "Slaves! Surrender or die!"
+msgstr "Schiavi! Arrendetevi o morirete!"
+
+msgid "So be it."
+msgstr "Così sia."
+
+msgid "So be it. Prepare to be sunk!"
+msgstr "Così sia. Vi affonderemo!"
+
+msgid "So be it. This is our chance to leave our pursuers behind."
+msgstr "Così sia. È la nostra occasione per seminare i nostri inseguitori."
+
+msgid "So this is what the bastards did with our city!"
+msgstr "Ecco che cosa hanno fatto, quei bastardi, alla nostra città!"
+
+msgid "So this is why the mansion is haunted..."
+msgstr "Ecco perché questa dimora è infestata da fantasmi..."
+
+msgid ""
+"Soldiers! Attack! I expect each of you to bring back the scalp of a human!"
+msgstr ""
+"Soldati! All'attacco! Mi aspetto che ognuno di voi torni con lo scalpo di un "
+"uomo!"
+
+msgid ""
+"Some nagas, whether through cowardice or cunning, develop a knack for "
+"surviving in darker depths of the water. After special training, this "
+"knowledge can develop into an entirely different branch of combat, although "
+"it is just as deadly. Naga Depthstalkers are especially valued as brood "
+"guardians, where they keep watch over eggs laid in hidden caves.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Alcuni naga, forse per codardia o forse per astuzia, sviluppano l'arte di "
+"sopravvivere nelle profondità più oscure del mare. Dopo un addestramento "
+"particolare, da questa conoscenza può nascere un nuovo stile di "
+"combattimento anche se altrettanto mortale. Gli assassini degli abissi sono "
+"preziosi guardiani delle covate, perché sorvegliano le uova deposte negli "
+"anfratti nascosti.\n"
+"\n"
+"Note speciali:"
+
+msgid "Southern Shore"
+msgstr "Sponda meridionale"
+
+msgid ""
+"Speaking of which, I think I saw a skeleton last week. Craziest thing..."
+msgstr ""
+"A proposito, mi pare di aver visto uno scheletro la settimana scorsa. Che "
+"sciocchezza..."
+
+msgid "Spot of trouble with the army, eh?"
+msgstr "C'è qualche problema in arrivo con l'esercito, eh?"
+
+msgid "Stay your hand! We do not have the right of assassination!"
+msgstr "Fermatevi! Non avete il diritto di assassinare!"
+
+msgid ""
+"Stay, warrior-chief! This sacrifice... I see that you are free of Stakron's "
+"taint. Forgive me, Malakar, I have done you a great wrong. I pledge myself "
+"and my tribe to your service, upon my honor."
+msgstr ""
+"Aspetta, capo guerriero! Questo sacrificio... capisco che sei mondo dalla "
+"contaminazione di Stakron. Perdonami, Malakar, ti ho fatto un grave torto. "
+"Impegno me stesso e la mia tribù al tuo servizio, sul mio onore."
+
+msgid ""
+"Still, many drakes have died here. Due to the Harkon Mountains, the only "
+"practical routes from Weswyt to Hafwyt are through the swamps of my tribe, "
+"or the hills of the Lojmar tribe to the south. Even though both Weswyt and "
+"Hafwyt are, by the law of Kahn, tribeless cities, their citizens are often "
+"taxed or robbed because of their differing ancestries, so some have tried "
+"their luck here."
+msgstr ""
+"Nondimeno, molti draghi sono morti qua. A causa delle montagne Harkon, "
+"l'unica via percorribile da Weswyt a Hafwyt è attraverso le paludi della mia "
+"tribù oppure le colline della tribù Lojmar a sud. Inoltre sia Weswyt sia "
+"Hafwyt sono, per la legge di Kahn, città senza tribù, i loro cittadini sono "
+"spesso tassati o rapinati a causa delle loro diversi stirpi perciò alcuni "
+"hanno cercato fortuna qua."
+
+msgid ""
+"Such... strange... power. I cannot get close enough to touch the gate. "
+"Physical force is worthless here!"
+msgstr ""
+"Che... strana... energia. Non riesco ad avvicinarmi abbastanza da toccare il "
+"portale. La froza fisica non ha alcun valore in questo caso!"
+
+msgid ""
+"Surprising number of unfriendly-types around here. They look freaky, like "
+"they're not themselves."
+msgstr ""
+"Ci sono un sacco di persone non amichevoli da queste parti. Sono tutti "
+"strambi, come se non fossero in se stessi."
+
+msgid "Survival"
+msgstr "Sopravvivere"
+
+msgid "Survive for 20 turns"
+msgstr "Sopravvivi per 20 turni"
+
+msgid "Swamps of the Jamolar"
+msgstr "Palude di Jamolar"
+
+msgid "Take your place at the throne"
+msgstr "Prendi il tuo posto sul trono"
+
+msgid "Taskmaster"
+msgstr "Sorvegliante"
+
+msgid "Tenbakar"
+msgstr "Tenbakar"
+
+msgid ""
+"Tenbakar! We will drive off the humans, just hold them at bay until we "
+"arrive."
+msgstr ""
+"Tenbakar! Scaccieremo gli uomini, devi solo tenerli a bada fino al nostro "
+"arrivo."
+
+msgid ""
+"Thank you, Malakar, Chief of the Drakes, but I decline. Our thirst for your "
+"blood sickens me, but I am still sworn to the crown, and have given my oath "
+"to the King. I must fight you."
+msgstr ""
+"Grazie, Malakar, capo dei draghi, ma rifiuto. La nostra sete per il vostro "
+"sangue mi disgusta, ma sono ancora fedele alla corona e ho prestato "
+"giuramento al re. Devo combatterti."
+
+msgid ""
+"Thank you. Drakes! For now, we rest and reprovision, but tomorrow, we fly at "
+"dawn!"
+msgstr ""
+"Grazie. Draghi! Per ora riposeremo e ci rinfocilleremo, ma domani voleremo "
+"all'alba!"
+
+msgid "That darkness... it must be Mal-Bronam!"
+msgstr "Questa oscurità... deve essere opera di Mal-Bronam!"
+
+msgid "That is a hidden door. Let us see what is behind it!"
+msgstr "Questa è una porta segreta. Vediamo che cosa c'è dietro!"
+
+msgid "The Baron's army has arrived! We are defeated... for now."
+msgstr "L'esercito del barone è arrivato! Abbiamo perso... per il momento."
+
+msgid ""
+"The Battleship, very fast and armed with 3 ballistae, is a very versatile "
+"ship."
+msgstr ""
+"La nave da guerra, molto veloce e armata di tre balliste, è una nave molto "
+"versatile."
+
+msgid ""
+"The Cave Naga have adapted to survive deep underground, and are thus capable "
+"of traveling through even lava. With eyes adapted to low-light conditions, "
+"they excel underground and at night, but are hindered by bright light. Their "
+"muscles have evolved to be stronger, but slower. Their tail also has a "
+"deadly poison."
+msgstr ""
+"I naga delle caverne si sono adattati a vivere nel sottosuolo e dunque sono "
+"capace di muoversi persino fra la lava. Con occhi adattati alle condizioni "
+"di scarsa illuminazione, sono a proprio agio nel sottosuolo e di notte, ma "
+"sono infastiditi dalla luce intensa. I muscoli si sono evoluti per essere "
+"più forti, ma più lenti. La loro coda ha anche un potente veleno."
+
+msgid "The Crypt of the Mountains"
+msgstr "La cripta delle montagne"
+
+msgid "The Drake Escape"
+msgstr "La fuga dei draghi"
+
+msgid ""
+"The Drake High Magi are members of an order of magic-using drakes who spend "
+"their days in the Obsidian Citadel, honing their powers for use in times of "
+"crisis. They can summon blasts of intense cold with a gesture, and can hurl "
+"powerful fireballs across great distances. However, due to the extensive "
+"mutilations that are required of drakes to harness and use these powers, "
+"they are frail and slow."
+msgstr ""
+"I draghi archimaghi sono membri di un ordine di draghi maghi che passano i "
+"loro giorni nella cittadella di ossidiana, affinando i loro poteri in attesa "
+"dei tempi di crisi. Possono invocare esplosioni di freddo intenso con un "
+"solo gesto e possono scagliare potenti palle di fuoco a grandi distanze. "
+"Tuttavia a causa delle ampie mutilazioni che sono necessarie ai draghi per "
+"gestire e impiegare questi poteri sono fragili e lenti."
+
+msgid "The Exodus"
+msgstr "L'esodo"
+
+msgid "The Frigate is rather slow, but it is powerful and well-protected."
+msgstr "La fregata è piuttosto lenta, ma è potente e ben protetta."
+
+msgid ""
+"The Gate of Storms, Mal, the Gate! This half of the island is crawling with "
+"undead!"
+msgstr ""
+"Il cancello delle tempeste, Mal, il cancello! Questa parte dell'isola "
+"pullula di non-morti!"
+
+msgid "The Gate... it's glowing..."
+msgstr "Il cancello... è incandescente..."
+
+msgid ""
+"The Jamolar tribe is shattered, and my honor blackened! Nobody will stand "
+"with me now!"
+msgstr ""
+"La tribù di Jamolar è distrutta e il mio onore macchiato! Ora nessuno starà "
+"dalla mia parte!"
+
+msgid "The Lava Beast is a living, breathing hunk of lava with a bad attitude."
+msgstr ""
+"La bestia di lava è un vivente e respirante blocco di lava con un pessimo "
+"carattere."
+
+msgid ""
+"The Lava Monster is a nasty creature made of living lava, who can punch and "
+"throw red-hot boulders. It is also immune to fire."
+msgstr ""
+"Il mostro di lava è un'orribile creatura di lava vivente che può dare pugni "
+"e tirare macigni incandescenti. È anche immune al fuoco."
+
+msgid "The Luna is sinking! All hands, prepare for emergency boarding!"
+msgstr ""
+"La Luna sta affondando! Ai vostri pposti, prepariamoci per un abbordaggiodi "
+"emergenza!"
+
+msgid ""
+"The Major Spirit is one of the most powerful beings known. Literally "
+"radiating with power, it can throw lightning bolts that destroy entire "
+"cities."
+msgstr ""
+"Lo spirito maggiore è uno dei più potenti esseri conosciuti. Irradia "
+"letteralmente potenza, e può scagliare saette capaci di distruggere città "
+"intere."
+
+msgid "The Manor"
+msgstr "Il maniero"
+
+msgid "The Open Ocean"
+msgstr "In alto mare"
+
+msgid ""
+"The Pirate Cruiser is a larger pirate ship, either built or captured. It has "
+"3 ballistae."
+msgstr ""
+"L'incrociatore pirata è una grande nave pirata, costruita appositamente o "
+"catturata. Ha tre baliste."
+
+msgid ""
+"The Pirate Galleon is a former battleship of the Wesnothian navy, captured "
+"by renegades and pressed into service. It has 5 ballistae."
+msgstr ""
+"Il galeone pirata è una nave da guerra catturata alla marina di Wesnoth da "
+"rinnegati e rimessa in servizio. Ha cinque baliste."
+
+msgid ""
+"The Saurian Knifethrowers are the elite of the Skalds. They possess "
+"incredible skill with their arms, enabling them to throw many daggers at "
+"blindingly fast speeds."
+msgstr ""
+"I lanciatori di coltelli sauri fanno parte dell'elite dei saltimbanchi. "
+"Possiedono un'incredibile abilità con le loro armi, che permette loro di "
+"lanciare molti coltelli ad una velocità incredibile."
+
+msgid ""
+"The Saurian Skalds are selected from a slower-moving but considerably "
+"stronger race of saurians, which also bear a dreaded poison bite. However, "
+"they are best known for their manual dexterity, which they translate into "
+"fast dagger throwing."
+msgstr ""
+"I sauri saltimbanchi sono selezionati da un ceppo più lento, ma "
+"considerevolmente più forte di sauri, che in più posseggono un terribile "
+"morso velenoso. Comunque, essi sono più conosciuti per la loro destrezza "
+"manuale, che traducono nell'abilità di lanciare coltelli ad alta velocità ."
+
+msgid ""
+"The Slave Driver makes a living by beating slaves in order to boost their "
+"productivity."
+msgstr ""
+"Il guardiano degli schiavi si guadagna da vivere frustando gli schiavi per "
+"renderli più produttivi."
+
+msgid ""
+"The Thunder Spirit is an awesome foe, that can punch with electric fury and "
+"fire lightning bolts capable of destroying houses."
+msgstr ""
+"Lo spirito del tuono è un nemico temibile, capace di dare pugni carichi di "
+"furia elettrica e di scagliare saette in grado di distruggere anche edifici."
+
+msgid ""
+"The Thunder Spirits are very powerful and mysterious. Even though this "
+"spirit is a minor one, it still wields tremendous power."
+msgstr ""
+"Gli spiriti del tuono sono molto potenti e misteriosi. Anche se questi "
+"spiriti fanno parte degli spiriti minori, dispongono comunque di un potere "
+"tremendo."
+
+msgid ""
+"The armies of Wesnoth will often, in their conquests, come across a "
+"fortified town that refuses to surrender. Instead of storming the walls of "
+"the city, they simply wheel out the artillery. The town invariably falls.\n"
+"\n"
+"The Ballista is also effective on the battlefield, although it moves rather "
+"slowly. It is guarded by a skilled swordsman, and can shoot from extreme "
+"range."
+msgstr ""
+"Gli eserciti di Wesnoth, nelle loro conquiste, spesso incontrano una città "
+"fortificata che rifiuta di arrendersi. Invece di prendere d'assalto le mura "
+"della città, semplicemente tirano fuori l'artiglieria. La città "
+"immancabilmente cade.\n"
+"\n"
+"La balista è anche efficace sul campo di battaglia, anche se si muove "
+"piuttosto lentamente. È sorvegliata da un armigero esperto e può sparare da "
+"molto lontano."
+
+msgid "The ballistae are firing! Destroy them!"
+msgstr "Le baliste stanno sparando! Distruggetele!"
+
+msgid "The bridge collapsed!"
+msgstr "Il ponte è crollato!"
+
+msgid ""
+"The cave is no resting place! We must escape through the bowels of the earth!"
+msgstr ""
+"La caverna non è un posto per riposare! Dobbiamo fuggire attraverso le "
+"viscere della terra!"
+
+msgid "The caves... Drake leader! Halt!"
+msgstr "Le caverne... Capo dei draghi! Alt!"
+
+msgid ""
+"The circle has darkened, but it reeks of decay. This is the work of a "
+"powerful necromancer."
+msgstr ""
+"Il cerchio si è oscurato, ma emana un odore di putrefazione. Deve essere "
+"l'opera di un potente necromante."
+
+msgid ""
+"The circle is crackling with magical energy! This is the work of a powerful "
+"necromancer!"
+msgstr ""
+"Il cerchio crepita di energia magica! Deve essere l'opera di un potente "
+"necromante!"
+
+msgid "The door will not open for any who are not allied with it."
+msgstr "La porta non si aprirà se non per chi è un suo alleato."
+
+msgid "The eastern fortress, you fool! We want to use the EMPTY one!"
+msgstr "La foresta orientale, sciocchi! Vogliamo occupare quella VUOTA!"
+
+msgid "The forest is crawling with elves! We must focus on the caravan!"
+msgstr "La foresta pullula di elfi! Dobbiamo concentrarci sulla carovana!"
+
+msgid ""
+"The form of the Naga is not well suited for the practice of magic. In spite "
+"of this, these Nagas have learned magic anyway, and although now weak and "
+"inexperienced, have the potential to become feared masters of the water."
+msgstr ""
+"Il corpo dei naga non è adatto alla pratica della magia. Nonostante ciò, "
+"questi naga hanno imparato lo stesso la magia e sebbene adesso siano deboli "
+"e inesperti, hanno il potenziale per divenire temuti signori delle acque."
+
+msgid "The ground is unstable!"
+msgstr "Il terreno è instabile!"
+
+msgid "The guards have arrived! Everyone! FIGHT!!!!!"
+msgstr "Sono arrivate le guardie! Ascoltate tutti! ALL'ATTACCO!!!"
+
+msgid "The hatchlings are free!"
+msgstr "La nidiata è libera!"
+
+msgid "The hatchlings are free! We must kill the taskmaster!"
+msgstr "La nidiata è libera! Dobbiamo uccidere il sorvegliante!"
+
+msgid "The heat, yes, but... there! The air... we must be near the exit!"
+msgstr "Che caldo, sì, ma... ecco! Aria... dobbiamo essere vicini all'uscita!"
+
+msgid "The humans are setting up strange war machines!"
+msgstr "Gli uomini stanno approntando bizzarre macchine da guerra!"
+
+msgid "The humans follow us! We must continue!"
+msgstr "Gli uomini ci inseguono! Dobbiamo continuare!"
+
+msgid ""
+"The humans have sent reinforcements, and Hafwyt is still not secure! The "
+"drakes are doomed!"
+msgstr ""
+"Gli uomini hanno mandato i rinforzi e Hafwyt non è ancora sicura! I draghi "
+"sono condannati!"
+
+msgid "The humans pursue us!"
+msgstr "Gli uomini ci inseguono!"
+
+msgid "The humans?"
+msgstr "Gli uomini?"
+
+msgid "The key fits!"
+msgstr "La chiave entra!"
+
+msgid ""
+"The manor house lies ahead! Tear out its black heart, and leave its shell "
+"for the vultures!"
+msgstr ""
+"Il maniero è più avanti! Strappategli il suo cuore nero e lasciate la sua "
+"carogna agli avvoltoi!"
+
+msgid ""
+"The nearest force advances from the south, but may be as far as a day behind."
+msgstr ""
+"La forza più vicina avanza da sud, ma forse sono indietro di una giornata."
+
+msgid ""
+"The ocean winds blow with great speed. You cannot fly against them. And what "
+"will become of your flightless spearmen?"
+msgstr ""
+"I venti oceanici soffiano con grande intensità. Non potete volare contro di "
+"loro. E che fine farebbero i tuoi fanti che non volano?"
+
+msgid ""
+"The rabbit is a cute creature living in the fields and forests. In its "
+"gnawing attack, striking from powerful incisors, resides the Wesnoth "
+"carrots' greatest fear. Alas, rabbits are victims of the appetite of many "
+"other nasty creatures like wolves or even humans, for their flesh is used in "
+"one of the most delicious known dishes. Legend has it that they follow a "
+"king rabbit by the name of Cedric."
+msgstr ""
+"Il coniglio è una simpatica creatura che vive nei campi e nelle foreste. La "
+"sua capacità di rodere, derivante da potenti incisivi, incute un terrore "
+"ineguagliabile alle carote. Purtroppo i conigli sono vittime dell'appetito "
+"di molte altre crudeli creature, come i lupi e anche gli uomini, poiché la "
+"loro carne è fra i piatti più prelibati. La leggenda narra che seguano un re "
+"coniglio dal nome di Cedric."
+
+msgid ""
+"The roof of the tunnel is extremely low here, and appears to be supported by "
+"these boulders."
+msgstr ""
+"Il soffitto della galleria è estremamente basso qui e sembra che siano "
+"questi macigni a sostenerlo."
+
+msgid ""
+"The saurians are elusive and deft of foot, but weak at arms. I propose that "
+"while we attack the humans head-on, the saurians sneak behind the enemy "
+"lines and kill their leaders."
+msgstr ""
+"I sauri sono elusivi e veloci, ma non molto bravi con le armi. Propongo che "
+"mentre attacchiamo gli uomini sul fronte, i sauri si infiltrino dietro le "
+"linee nemiche e uccidano i condottieri."
+
+msgid "The saurians will try to outflank the humans."
+msgstr "I sauri cercheranno di circondare gli uomini."
+
+msgid "The scouts do not report to you!"
+msgstr "Gli esploratori non devono fare rapporto a te!"
+
+msgid "The sign says: Storeroom"
+msgstr "Il cartello dice: «Magazzino»"
+
+msgid ""
+"The spirits are redoubling their efforts! I need any remaining Burners to "
+"surround the Gate, getting as close as you can, and set it ablaze! Everyone "
+"else, cover for them."
+msgstr ""
+"Gli spettri raddoppiano i loro sforzi! Occorre che tutti gli incendiari "
+"rimasti circondino il cancello e stando più vicino possibile lo incendino! "
+"Tutti gli altri li dovranno coprire."
+
+msgid "The taskmaster - that monster - is dead! We must free the hatchlings!"
+msgstr "Il sorvegliante - quel mostro - è morto! Dobbiamo liberare la nidiata!"
+
+msgid "The tower has fallen into disrepair. Onward!"
+msgstr "La torre è in uno stato di abbandono. Andiamo avanti!"
+
+msgid "The trapdoor is locked!"
+msgstr "La botola è chiusa a chiave!"
+
+msgid "The trapdoor is locked! Could that key fit?"
+msgstr "La botola è chiusa! Che la chiave sia sua?"
+
+msgid "The undead are gaining too much power! We are trapped!"
+msgstr "I non-morti stanno diventando troppo forti! Siamo in trappola!"
+
+msgid "The undead are growing too powerful! We cannot prevail!"
+msgstr "I non-morti stanno diventando troppo potenti! Non possiamo prevalere!"
+
+msgid "The undead have found us. Remember, Mal-Bronam must be our target."
+msgstr ""
+"I non-morti ci hanno trovato. Ricordate, il nostro bersaglio è Mal-Bronam."
+
+msgid "Theeere are nooooo mmmore sssssaurians lleft."
+msgstr "Noon ci sssoono piuù sssauri."
+
+msgid ""
+"Their bodies marred by extreme torture and self-mutilation, the priests are "
+"the spiritual leaders of the drakes, each one dedicated to a particular god. "
+"However, their rituals have left them enfeebled, and unable to fly or "
+"breathe fire.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Con i corpi segnati da drastiche torture e auto-mutilazioni, i sacerdoti "
+"sono i capi spirituali dei draghi, ciascuno devoto a una specifica divinità. "
+"Tuttavia, i loro rituali li hanno indeboliti e li hanno resi incapaci di "
+"volare o soffiare fuoco.\n"
+"\n"
+"Note speciali:"
+
+msgid ""
+"Then there will be a tough fight ahead of us. I must decide what I will do "
+"with the saurians."
+msgstr "Allora sarà una dura lotta. Devo decidere che cosa fare dei sauri."
+
+msgid "Then we must plan our resistance!"
+msgstr "Allora dobbiamo pianificare la nostra resistenza!"
+
+msgid "Theracar"
+msgstr "Theracar"
+
+msgid "Theracar!"
+msgstr "Theracar!"
+
+msgid ""
+"Theracar's complaints were just, but his methods were unforgivable. There "
+"have been hard times for us all, and we have all suffered much. Tonight we "
+"will hold a forum to discuss the future of our tribe, but for now we must "
+"put as many miles as we can between ourselves and the ruins of the cave "
+"mouth."
+msgstr ""
+"Le proteste di Theracar erano giuste ma i suoi metodi imperdonabili. Sono "
+"stati tempi duri per tutti e tutti noi abbiamo sofferto molto. Questa sera "
+"terremo un incontro per discutere del futuro della nostra tribù ma per "
+"adesso dobbiamo mettere tra noi e le rovine dell'imbocco delle caverne più "
+"miglia possibile."
+
+msgid "Theracar: 'A chase you began, Malakar.'"
+msgstr "Theracar: «Caccia che tu hai provocato, Malakar.»"
+
+msgid ""
+"Theracar: 'Enough. Drakes! Tribesmen! It is the dawn of a new day, for us. "
+"We must do away with the corrupt, the rotting, the old. Malakar, for your "
+"crimes, I hereby sentence you to death.'"
+msgstr ""
+"Theracar: «Basta. Draghi! Membri della tribù! È l'alba di un nuovo giorno "
+"per noi. Dobbiamo spazzare via la corruzione, il marcio, il decrepito. "
+"Malakar, per i tuoi crimini io qui ti condanno a morte.»"
+
+msgid "Theracar: 'Hear me! We have left the accursed caves behind us!'"
+msgstr ""
+"Theracar: «Ascoltatemi! Abbiamo lasciato le caverne maledette alle nostre "
+"spalle!»"
+
+msgid ""
+"Theracar: 'I have held my tongue for too long, Malakar. Under your lead, we "
+"have been murdered, imprisoned, and have known no rest. You allowed the "
+"humans to land on Morogor. You initiated an escape that killed off most of "
+"our hatchlings. You let that accursed serving-boy live, and brought down the "
+"wrath of the elves.'"
+msgstr ""
+"Theracar: «Ho frenato la mia lingua troppo a lungo, Malakar. Sotto la tua "
+"guida, siamo stati assassinati, imprigionati e non abbiamo conosciuto "
+"riposo. Hai permesso gli uomini di approdare a Morogor. Hai provocato una "
+"evasione che ha ucciso gran parte delle nostra nidiate. Hai lasciato vivere "
+"quel maledetto servetto e ci hai portato addosso l'ira degli elfi.»"
+
+msgid ""
+"Theracar: 'It's over, Malakar. I'm relieving you of your position. I hereby "
+"order you and the thinskin to remain here and hold off the... whoever's "
+"chasing us now for as long as you can. Perhaps you'll find some honor in "
+"death.'"
+msgstr ""
+"Theracar: «È finita, Malakar. Io ti sollevo dal tuo incarico. Io intimo a te "
+"e al pellemolle di rimanere qui e trattenere... chiunque ci stia dando la "
+"caccia il più a lungo possibile. Forse troverete un po' di onore nella "
+"morte.»"
+
+msgid "Theracar: 'Long live the chief.'"
+msgstr "Theracar: «Lunga vita al capo.»"
+
+msgid ""
+"Theracar: 'Malakar! With all due respect, this is madness! I do not wish to "
+"make concessions to the elves either, but the safety of our tribe must...'"
+msgstr ""
+"Theracar: «Malakar! Con rispetto parlando, è una pazzia! Non vorrei nemmeno "
+"io fare delle concessioni agli elfi, ma la sicurezza della nostra tribù "
+"deve...»"
+
+msgid ""
+"Theracar: 'No, Malakar. You must reconsider. He is a thin-skin, and can "
+"never be one of us, regardless of what services he may...'"
+msgstr ""
+"Theracar: «No, Malakar. Devi ripensarci. È un pelle-molle e non potrà mai "
+"essere uno di noi, per quanti favori ci possa...»"
+
+msgid ""
+"Theracar: 'Your leadership brought us to this island, wheere we face the "
+"blades of orcs, humans, elves and dwarves. Those tunnels were little more "
+"than a deathmarch, and you turned down our one hope of real allies by "
+"allowing this worthless softskin into our tribe. You've forgotten what it is "
+"to be a tribe, and I will not allow...'"
+msgstr ""
+"Theracar: «Il tuo comando ci ha portato su questa isola, dove affrontiamo le "
+"lame di orchi, uomini, elfi e nani. Queste gallerie sono state poco più di "
+"una marcia mortale e hai tolto la nostra unica speranza per dei veri alleati "
+"permettendo a questo inutile pellemolle di far parte della tribù. Hai "
+"dimenticato cosa vuol dire essere una tribù e io non permetterò...»"
+
+msgid "There are the undead! Drakes! We will have to fight our way through!"
+msgstr ""
+"Ci sono dei non-morti! Draghi! Ci dobbiamo aprire una strada combattendo!"
+
+msgid "There must have been a great battle here..."
+msgstr "Ci deve essere stata una grande battaglia qua..."
+
+msgid ""
+"There's a fresh corpse here! It's been stitched together... it's moving!"
+msgstr "Qui c'è un cadavere fresco! È stato ricucito... si muove!"
+
+msgid "There, beyond that castle! This is the Gate of Storms!"
+msgstr "Ecco, oltre il castello! Questo è il «cancello delle tempeste»!"
+
+msgid ""
+"These are former dwarves, raised into unlife. They retain the power of "
+"dwarves, but also their lack of speed.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Un tempo erano nanti e ora sono stati riportati alla non-vita. Conservano la "
+"resistenza dei nani, ma anche la loro scarsa velocità.\n"
+"\n"
+"Note speciali:"
+
+msgid ""
+"These heavy fighters are slower and more heavily armored than most naga and "
+"wield huge maces which they use to crush their enemies. They mostly guard "
+"naga outposts, but occasionally participate in offensive raids."
+msgstr ""
+"Questi combattenti pesantemente corazzati sono più lenti della maggior parte "
+"dei naga e brandiscono enormi mazze che usano per annientare i nemici. "
+"Solitamente sorvegliano gli avamposti, ma a volte partecipano a spedizioni "
+"punitive."
+
+msgid ""
+"These heavy fighters are the elite guards of the naga. Chosen because of "
+"their dedication and skill, their purpose is to defend their sleeping "
+"brethen from any menace, and to guard their hidden cities from outside "
+"invaders - until the great awakening of their civilization arrives. These "
+"nagas are mostly unknown in Wesnoth since they can only be found near Naga "
+"cities."
+msgstr ""
+"Questi pesanti guerrieri sono le guardie d'elite dei naga. Scelti per la "
+"loro devozione e esperienza, il loro scopo è quello di difendere i cugini "
+"nel sonno da qualunque minaccia o custodire le loro città nascoste da "
+"invasori esterni fino a quando la loro civiltà non si risveglierà. Questi "
+"naga sono praticamente sconosciuti a Wesnoth dato che possono essere trovati "
+"solo vicino alle città dei naga."
+
+msgid ""
+"They are ballistae, like those on the humans' ships! Drakes! Destroy them "
+"quickly, before they destroy Hafwyt!"
+msgstr ""
+"Sono baliste come quelle sulle navi degli uomini! Draghi! Distruggetele in "
+"fretta prima che distruggano Hafwyt!"
+
+msgid "They are called saurians. A little curiosity I came across one night."
+msgstr ""
+"Si chiamano sauri. Una piccola curiosità in cui sono imbattuto in una notte."
+
+msgid ""
+"They are saurians, lizards of the swamps! You cannot stand against them!"
+msgstr "Sono sauri, lucertole delle paludi! Non ce la farai a resistergli!"
+
+msgid ""
+"They have corrupted drakes for their evil ends! Those wretched sorcerers!"
+msgstr ""
+"Hanno corrotto dei draghi per i loro fini malvagi! Che sciagurati stregoni!"
+
+msgid "They have fortified the entrance!"
+msgstr "Hanno fortificato l'ingresso!"
+
+msgid "They have summoned reinforcements!"
+msgstr "Hanno chiamato i rinforzi!"
+
+msgid "They have summoned reinforcements! Burn down their ships!"
+msgstr "Hanno chiamato i rinforzi! Inceneriamo le loro navi!"
+
+msgid ""
+"They murdered those people in cold blood! Those bloodthirsty monsters..."
+msgstr ""
+"Hanno assassinato quella gente a sangue freddo! Quei mostri assetati di "
+"sangue..."
+
+msgid "They pursue us still?"
+msgstr "Ci inseguono ancora?"
+
+msgid "They pursue us! We must hurry!"
+msgstr "Ci inseguono! Dobbiamo sbrigarci!"
+
+msgid "They use gargoyles!"
+msgstr "Usano i gargoyle!"
+
+msgid "This cave is infested with bats!"
+msgstr "La caverna è infestata di pipistrelli!"
+
+msgid ""
+"This forest, like all of Morogor, was once part of Mal-Bronam's domain. Even "
+"though he has long since been vanquished, remnants of his power have "
+"survived. This is one of them."
+msgstr ""
+"Questa foresta, come tutto Morogor, faceva parte del dominio di Mal-Bronam. "
+"Anche se ormai è stato sconfitto da molto tempo, qualche resto del suo "
+"potere è rimasto. Questo è uno di quelli."
+
+msgid "This heat! I can't stand this much longer."
+msgstr "Che caldo! Non riesco più a resistere."
+
+msgid ""
+"This is Commodore Jack of the Wesnothian Ship Luna. In the name of the King, "
+"lower your sails and prepare to be boarded."
+msgstr ""
+"Questo è l'ammiraglio Jack della nave Luna della marina di Wesnoth. In nome "
+"del re, ammainate le vele e preparatevi all'abbordaggio."
+
+msgid ""
+"This is a statue animated by dark magic. It is not very powerful, but it is "
+"annoying, as it reverts to its stone form during the day, making it utterly "
+"invulnerable to any and all forces."
+msgstr ""
+"È una statua animata dalla magia nera. Non è molto potente, ma è fastidiosa, "
+"perché torna di pietra durante il giorno, rendendola invulnerabile a "
+"qualsiasi attacco."
+
+msgid ""
+"This is grim news, indeed. How is it that you are here to tell me of this?"
+msgstr ""
+"Questa è proprio una brutta notizia. Com'è che sei venuto tu a dirmelo?"
+
+msgid ""
+"This is impassable to all corporeal things. It can be destroyed, but not "
+"easily."
+msgstr ""
+"Solo le cose incorporee possono attraversarla. Può esser distrutta, ma non "
+"facilmente."
+
+msgid "This is the end... of the drakes."
+msgstr "Questo è la fine... dei draghi."
+
+msgid "This mansion is haunted!"
+msgstr "Questa dimora è infestata da fantasmi!"
+
+msgid ""
+"This must be the Blue River. I know you are all tired. We rest for ten "
+"minutes."
+msgstr ""
+"Questo deve essere il fiume azzurro. So che siete tutti stanchi. Ci "
+"riposeremo per dieci minuti."
+
+msgid ""
+"This was a drake slave, but it has grabbed a spear in rebellion against its "
+"masters.\n"
+"\n"
+"Special Notes:"
+msgstr ""
+"Questi era un drago schiavo, ma ha impugnato una lancia per ribellarsi ai "
+"suoi padroni.\n"
+"\n"
+"Note speciali:"
+
+msgid "This weapon is excellent for a drake rising against its masters."
+msgstr "Quest'arma è eccellente per un drago che si ribelli ai suoi padroni."
+
+msgid "This weapon is only fit for adult drakes."
+msgstr "Quest'arma è adatta solo ai draghi adulti."
+
+msgid ""
+"Those fiends! Rally! Drive out the beasts! Do not rest 'til you cannot see "
+"their scales beneath our arrows!"
+msgstr ""
+"Quei demoni! Adunata! Spazziamo via queste bestie! Non avremo riposo finché "
+"non vedremo le loro scaglie trapassate dalle nostre frecce!"
+
+msgid "Thromor"
+msgstr "Thromor"
+
+msgid "Thunder Spirit"
+msgstr "Spirito del tuono"
+
+msgid "To Morogor!"
+msgstr "A Morogor!"
+
+msgid "Trevor"
+msgstr "Trevor"
+
+msgid "Trithdurus"
+msgstr "Trithdurus"
+
+msgid "Turns run out"
+msgstr "Fine dei turni"
+
+msgid "Ugh! Dwarven whiskey!"
+msgstr "Ugh! È whiskey dei nani!"
+
+msgid ""
+"Uh, Mal? If we leave the tunnel open, the elves and humans will hound us "
+"into the ocean."
+msgstr ""
+"Eh, mal? Se lasciamo le gallerie aperte, gli elfi e gli uomini ci daranno la "
+"caccia nell'oceano."
+
+msgid "Undead Dwarf"
+msgstr "Nano non-morto"
+
+msgid ""
+"Undead... so this is why so many have died here. Drakes! We will have to "
+"fight our way through!"
+msgstr ""
+"Non-morti... ecco perché ci sono stati così tanti morti qui. Draghi! "
+"Dobbiamo aprirci una strada combattendo!"
+
+msgid "Undead? Old slaves of Mal-Bronam?"
+msgstr "Non-morti? Gli antichi schiavi di Mal-Bronam?"
+
+msgid "Underground"
+msgstr "Sottosuolo"
+
+msgid "Underground!"
+msgstr "Sottoterra!"
+
+msgid ""
+"Understand. You swear by Gar-Alagar, king of the gods of Morogor, in the "
+"future, or you will be sacrificed to him."
+msgstr ""
+"Capisco. Giura in nome di Gar-Alagar, re degli dei di Morogor, in futuro, o "
+"sarai sacrificato sul suo altare."
+
+msgid "Unforgiver"
+msgstr "L'Implacabile"
+
+msgid "Upon the very eyes of the pirate gods I swear my loyalty."
+msgstr "Sotto lo sguardo degli dei dei pirati giuro la mia fedeltà."
+
+msgid "Use them well."
+msgstr "Fanne buon uso."
+
+msgid "VICTORY IS OURS!!!"
+msgstr "LA VITTORIA È NOSTRA!!!"
+
+msgid "Very well, we will be gone from your lands shortly."
+msgstr "Benissimo, tra poco avremo abbandonato la vostra terra."
+
+msgid "Very well. I am honored to have fought with a dragon of old."
+msgstr ""
+"Benissimo. Sono onorato di aver combattuto con un dragone di una volta."
+
+msgid "Very well. Let us leave this forest as quickly as possible."
+msgstr "Benissimo. Lasceremo questa foresta prima possibile."
+
+msgid "Very well. They will arrive at the third dawn."
+msgstr "Molto bene. Arriveranno alla terza alba."
+
+msgid "Very well. We too have born their yoke, and your arrival brings hope."
+msgstr ""
+"Benissimo. Anche noi abbiamo patito il suo giogo e il vostro arrivo ci porta "
+"speranza."
+
+msgid ""
+"Very well. You have one minute to go. If I see you again, there will be no "
+"mercy. Go!"
+msgstr ""
+"Benissimo. Hai un minuto per andartene. Se ti vedo di nuovo, non avrò pietà. "
+"Va'!"
+
+msgid "WORK!"
+msgstr "LAVORATE!"
+
+msgid ""
+"Wait. You do speak some sense. You have my cooperation, for now, but do not "
+"think for a moment that you have my trust."
+msgstr ""
+"Aspetta. Il tuo è un discorso assennato. Avrai la mia cooperazione, per ora, "
+"ma non pensare nemmeno per un momento che mi fidi di te."
+
+msgid ""
+"Warrior Mages who master their art become even more skilled in battle than "
+"the feared Naga Myrmidons. Although they are still weaker, they move with "
+"impossible speed. They no longer need to carry swords around with them, "
+"because they can summon one when they need it."
+msgstr ""
+"I guerrieri maghi che padroneggiano la loro arte diventano persino più "
+"esperti in battaglia dei temuti mirmidoni. Anche se sono ancora più deboli, "
+"si muovono con rapidità inaudita. Non hanno più bisogno di portare una "
+"spada, perché possono invocarne una quando ne hanno bisogno."
+
+msgid "Watch your tongue, scaled one!"
+msgstr "Tieni a freno la lingua, pelle a squame!"
+
+msgid ""
+"We are at the site of the battle between Kahn and Mal-Bronam. The site where "
+"our ancestors defeated that lich, and won this island. However, when he "
+"died, the earth itself rejected his very essence, and these mountains rose "
+"to incredible heights. Because of the mountains, we must cross here, in this "
+"valley."
+msgstr ""
+"Noi siamo sul luogo della battaglia tra Kahn e Mal-Bronam. Il luogo dove i "
+"nostri antenati sconfissero quel lich e conquistarono l'isola. Tuttavia, "
+"quando morì la terra stessa respinse la sua essenza e queste montagne "
+"salirono ad altezze incredibili. A causa di queste montagne dobbiamo passare "
+"di qua, per questa valle."
+
+msgid ""
+"We are the children of your race, the drakes, sons of dragons. Come to the "
+"aid of your kin!"
+msgstr ""
+"Siamo i figli della vostra razza, i draghi, figli di dragoni. Vieni ad "
+"aiutare la tua stirpe!"
+
+msgid ""
+"We are within a valley in the Harkon Mountains - one of only a few where "
+"drakes can survive. However, this land is, some say, cursed."
+msgstr ""
+"Siamo in una valle delle montagne Harkon - una delle poche dove i draghi "
+"possono sopravvivere. Tuttavia, questa terra è, in un certo senso, maledetta."
+
+msgid ""
+"We can run south, into the swamps of the Jamolar tribe. But first, we must "
+"destroy the humans' cavalry, so that they cannot pursue us!"
+msgstr ""
+"Possiamo fuggire a sud, nelle paludi della tribù di Jamolar. Ma prima "
+"dobbiamo distruggere la cavalleria degli uomini in modo che non ci possano "
+"inseguire!"
+
+msgid "We can strand the elves here for days if we can bring down the tunnel!"
+msgstr ""
+"Potremo resistere agli elfi per giorni se facessimo crollare la galleria!"
+
+msgid ""
+"We cannot let you pass that way. Those tunnels are too fragile, and you have "
+"proven yourselves to be a menace. This is the end, lizards."
+msgstr ""
+"Non possiamo lasciarvi passare da questa parte. Queste gallerie sono troppo "
+"fragili e voi avete dimostrato di essere una minaccia. Questo è tutto, "
+"lucertole"
+
+msgid ""
+"We cannot offer you sanctuary, but we can promise you safe passage to the "
+"other..."
+msgstr ""
+"Non possiamo darti rifugio, ma possiamo prometterti un passaggio sicuro "
+"all'altra..."
+
+msgid "We continue!"
+msgstr "Continuiamo!"
+
+msgid "We do not need to be your enemies. I propose a peace offering."
+msgstr "Non vogliamo essere i vostri nemici. Propongo un'offerta di pace."
+
+msgid "We have cleared the undead from the forest!"
+msgstr "Abbiamo eliminato i non-morti dalla foresta!"
+
+msgid ""
+"We have found the foul one and his escorts. Remember! Parley with him not, "
+"and beware his silver tongue. We have traveled far, but shall not rest until "
+"our arrows pin him to the very earth his touch corrupts."
+msgstr ""
+"Abbiamo trovato quello schifoso e la sua scorta. Ricordate! Nessuna "
+"discussione con lui e attenti alla sua eloquenza. Abbiamo viaggiato molto, "
+"ma non avremo riposo fino a quando le nostre frecce non lo inchioderanno "
+"alla terra che il suo tocco corrompe."
+
+msgid "We have lost too many! Even if I win, we cannot continue!"
+msgstr "Ne abbiamo persi troppo! Anche se vincessimo, non potremo continuare!"
+
+msgid "We have no reason to speak with you."
+msgstr "Non abbiamo nessun motivo per parlare con te."
+
+msgid "We have run out of supplies, these caverns shall be our tomb!"
+msgstr ""
+"Abbiamo terminato le provviste, queste caverne saranno la nostra tomba!"
+
+msgid "We have tarried too long... we cannot reach the citadel in time!"
+msgstr ""
+"Abbiamo esitato troppo a lungo... non possiamo raggiungere la cittadella in "
+"tempo!"
+
+msgid "We have used up half of our supplies."
+msgstr "Abbiamo usato metà delle nostre provviste."
+
+msgid "We must continue!"
+msgstr "Dobbiamo continuare!"
+
+msgid "We must defeat Mal-Bronam first!"
+msgstr "Dobbiamo prima sconfiggere Mal-Bronam!"
+
+msgid "We must hurry, before Morogor is overrun by the humans!"
+msgstr ""
+"Dobbiamo fare in fretta, prima che Morogor sia conquistata dagli uomini!"
+
+msgid ""
+"We must reach the Magi, as all of Morogor depends on it. Quemar, what are "
+"your powers?"
+msgstr ""
+"Dobbiamo raggiungere i magi, il destino di Morogor dipende da questo. "
+"Quemar, quali sono i tuoi poteri?"
+
+msgid "We must seize these caverns!"
+msgstr "Dobbiamo prendere possesso di queste caverne."
+
+msgid ""
+"We respect those with honor, and Omandro had honor. In the end, it is one "
+"thing that makes us different from them."
+msgstr ""
+"Noi rispettiamo quelli che hanno il senso dell'onore e Omandro lo aveva. In "
+"pratica, questa è l'unica cosa che ci fa differenti da loro."
+
+msgid "We seek only to leave."
+msgstr "Stiamo solo cercando di andarcene."
+
+msgid ""
+"We should leave this valley as quickly as possible. Not only are the humans "
+"conquering Morogor as we speak, I have learned to fear even the dead undead. "
+"I am sure that we all remember the Forest."
+msgstr ""
+"Dovremmo lasciare questa valle il più presto possibile. Non solo gli uomini "
+"stanno conquistando Morogor mentre parliamo, ma ho anche imparato a temere "
+"il non-morto sconfitto. Sono sicuro che noi tutti ricorderemo la foresta."
+
+msgid "We will, Quemar, we will. May Gar-Alagar be with us."
+msgstr "Ce la faremo, Quemar, ce la faremo. Che Gar-Alagar sia con noi."
+
+msgid "We've used up three-quarters of our supplies. I suggest you make haste."
+msgstr ""
+"Abbiamo usato tre quarti delle nostre provviste. Suggerisco di sbrigarci."
+
+msgid "Well said, brother. THE FIGHT FOR FREEDOM BEGINS HERE!!!"
+msgstr "Ben detto, fratello. LA BATTAGLIA PER LA LIBERTÀ COMINCIA QUI!!!"
+
+msgid "Well, at least not yet."
+msgstr "Be', non ancora almeno."
+
+msgid "Well, that's what I said, but Davies, here..."
+msgstr "Be', è quello che ho detto anche io, ma Davies, qui..."
+
+msgid "Well, then. That's that. We will aid you, Chief."
+msgstr "Sta bene, allora. Questo è quanto. Vi aiuteremo, capo."
+
+msgid "Well, we can't go that way."
+msgstr "Be' non possiamo andare di là."
+
+msgid "Well, well, well. $gold_given pieces of gold were in this chest!"
+msgstr "Bene, bene, bene. c'erano $gold_given pezzi d'oro in questo forziere!"
+
+msgid ""
+"What a loss for the 'great chief of the drakes'. I guess I'll just have to "
+"take my ship elsewhere... so long."
+msgstr ""
+"Che perdita per il «grande capo dei draghi». Scommetto che dovrò portare la "
+"mia nave altrove... per ora."
+
+msgid "What about the elves? They will pursue us!"
+msgstr "E gli elfi? Ci inseguiranno!"
+
+msgid "What are these... creatures?"
+msgstr "Che cosa sono queste... creature?"
+
+msgid "What dangers do we face in this forest?"
+msgstr "Quali pericoli ci aspettano in questa foresta?"
+
+msgid "What do you mean, softskin?"
+msgstr "Cosa vuoi dire, pelle molle?"
+
+msgid "What forces do you have with you?"
+msgstr "Che forze avete con voi?"
+
+msgid ""
+"What has happened here today will forever be a black mark upon our tribe. "
+"Those who will swear allegiance to me and to the tribe are hereby pardoned. "
+"Those who will not must leave behind their weapons and go their separate "
+"ways."
+msgstr ""
+"Quello che è successo qui oggi rimarà per sempre come una macchia sulla "
+"nostra tribù. Quelli che presteranno giuramento a me e alla tribù seduta "
+"stante saranno perdonati. Quelli che non lo faranno dovranno abbandonare le "
+"loro armi e andarsene per un'altra strada."
+
+msgid ""
+"When the humans caught up, they found a tribe that was tired, dispirited and "
+"nearly lost. The battle that ensued was short and brutal."
+msgstr ""
+"Quando gli uomini li raggiunsero, trovarono una tribù che era stanca, "
+"scoraggiata e quasi dispersa. La battaglia che ne seguì fu breve e brutale."
+
+msgid "Who are you? Someone! Kill the human!"
+msgstr "Chi siete? Venite! Uccidete quest'uomo!"
+
+msgid "Why have these remnants been allowed to survive?"
+msgstr "Perché questi resti sono stati risparmiati?"
+
+msgid "Why? What is this curse, and why must we traverse this valley?"
+msgstr ""
+"Perché? Cos'è questa maledizione e perché dobbiamo attraversare questa valle?"
+
+msgid "Wild Horse"
+msgstr "Cavallo selvaggio"
+
+msgid ""
+"Winged beasts! They killed everyone, and burned everything! Fires! And "
+"bodies! And wings! And... scales... and... *collapses*."
+msgstr ""
+"Belve alate! Hanno ucciso tutti e bruciato ogni cosa! Incendi! E cadaveri! E "
+"ali! E... scaglie... e... (sviene)."
+
+msgid "Wisp"
+msgstr "Ciuffetto"
+
+msgid ""
+"With Hartholar dead, the swamp tribe quickly dispersed in a panic. Malakar "
+"attempted to lead his remaining forces forward, but was constantly hampered "
+"by tiny, desperate guerilla attacks from the surviving Jamolar drakes."
+msgstr ""
+"Con la morte di Hartholar, la tribù della palude si disperse rapidamente in "
+"preda al panico. Malakar tentò di guidare in avanti le forze rimaste ma era "
+"costantemente rallentato da minuscoli e disperati attacchi di guerriglia dai "
+"draghi di Jamolar sopravvissuti."
+
+msgid ""
+"With a mere half of the captives still alive, the human army eventually made "
+"landfall, and the drakes were sold as slaves to Baron Prax III."
+msgstr ""
+"Con solo la metà dei prigionieri ancora vivi, l'esercito degli uomini alla "
+"fine approdò e i draghi furono venduti al baron Prax III."
+
+msgid "With all due respect, Malakar, we hardly have the time to..."
+msgstr "Con rispetto parlando, Malakar, abbiamo appena il tempo..."
+
+msgid ""
+"With respect, Malakar, the Gate is open. It probably doesn't matter what we "
+"do - in time, this island, Wesnoth and all of Morogor will be overrun and "
+"destroyed. You can run to the ends of the world, and rotting corpses will "
+"still hound your steps..."
+msgstr ""
+"Con rispetto parlando, Malakar, il cancello è aperto. Qualsiasi cosa "
+"facciamo forse non importa - con il tempo, questa isola, Wesnoth e tutto "
+"Morogor saranno sopraffatti e distrutti. Anche se fuggirai in capo al mondo, "
+"i cadaveri in putrefazione saranno ancora alle tue calcagna..."
+
+msgid ""
+"With the might of all the other drake tribes behind him, Malakar struck the "
+"humans again and liberated their brothers still in bondage."
+msgstr ""
+"Con la forza di tutte le altre tribù dei draghi a sostenerlo, Malakar colpì "
+"ripetutamente gli uomini e liberò i fratelli ancora in prigionia."
+
+msgid ""
+"With the seizure of Weswyt, Morogor was once again the homeland of the "
+"Drakes."
+msgstr ""
+"Con la presa di Weswyt, Morogor tornò a essere nuovamente la patria dei "
+"draghi."
+
+msgid "Without him, we will be unable to continue. All is lost!"
+msgstr "Senza di lui non potremo continuare. Tutto è perduto!"
+
+msgid "Wolf"
+msgstr "Lupo"
+
+msgid "Wow, a wooden cube."
+msgstr "Uau, un cubo di legno."
+
+msgid ""
+"Wow. Now that's a firm order. If there's any way to get to the cave without "
+"going through those forests, I'd really appreciate it, Malakar."
+msgstr ""
+"Uau. Adesso è un ordine secco. Se ci fosse un qualsiasi modo di arrivare "
+"alla caverna senza attraversare quelle foreste, sarei felice di conoscerlo, "
+"Malakar."
+
+msgid "Wow. Well, Mal, we'd best be getting..."
+msgstr "Uau. Be', Mal, faremmo meglio ad andarcene..."
+
+msgid ""
+"Years of violence and brutality to support the study of forbidden magical "
+"arts have turned the shadow mages into feared fighters. Now completely "
+"enthralled with power, they have been known to command small followings of "
+"henchmen. They are outmatched in direct magical combat with their magic-"
+"using peers, and instead channel their energies into devastating melee "
+"attacks. Despite their offensive power, the corruption in their souls has "
+"begun to adversely affect their health."
+msgstr ""
+"Anni di violenza e di brutalità a supporto degli studi delle arti magiche "
+"proibite hanno trasformato i maghi oscuri i temibili combattenti. Ormai "
+"completamente asserviti dal potere, sono noti per avere una schiera di "
+"seguaci sotto il loro comando. Nessuno dei loro equivalenti maghi delle "
+"altre categorie è più abile nei combattimento magico corpo a corpo, grazie "
+"alla loro capacità di convogliare le loro energie in devastanti attacchi in "
+"mischia. A dispetto del loro potenziale offensivo, la corruzione delle loro "
+"anime ha iniziato a minare la loro salute."
+
+msgid "Yes, and I fear that they are on the prowl today."
+msgstr "Sì e temo che oggi siano in caccia."
+
+msgid ""
+"Yes, but we must plan our strategy. The Citadel will not be easy to breach."
+msgstr ""
+"Sì, ma dobbiamo organizzare la nostra strategia. Non sarà facile fare "
+"breccia nella cittadella."
+
+msgid ""
+"Yes, but we must press on, before the humans catch us! I fear that we may "
+"have tarried too long here."
+msgstr ""
+"Sì, ma dobbiamo spicciarci, prima che gli uomini ci prendano! Temo che "
+"abbiamo indugiato troppo qua."
+
+msgid "Yes, great! I just spoke with a scout and..."
+msgstr "Sì, magnifico! Ho appena parlato con un esploratore e..."
+
+msgid "Yes, like... AAAAH! A living skeleton!"
+msgstr "Sì, come... AAAAH! Uno scheletro parlante!"
+
+msgid ""
+"Yes. Even though I am bound in this foul unlife, I recognize our "
+"consanguinity. Perhaps I can now do some good, since my summoner is long "
+"dead, and my will is now free."
+msgstr ""
+"Sì. Anche se sono legato in questa lurida non vita, riconosco che siamo "
+"consangiunei. Forse posso fare qualcosa di buono adesso che colui che mi ha "
+"invocato è morto da molto tempo e la mia volontà ora è libera."
+
+msgid "Yes. The humans have defiled the temple of Gar-Alagar!"
+msgstr "Sì. Gli uomini hanno profanato il tempio di Gar-Alagar!"
+
+msgid "Yesss! My axxxxe iss reaaaddy!"
+msgstr "Ssì! La mia assia è prrontaa!"
+
+msgid "Yet another box. *mumbles* This is getting old..."
+msgstr "Ancora un'altra scatola. (mormora) Comincio a stifarmi..."
+
+msgid ""
+"Yet the Magi are more powerful than ever. If you can reach them, they can "
+"form a convocation, with enough power to annihilate a thousand human armies. "
+"However, their defenses are formidable, and you will have to penetrate them. "
+"I will help you, but you will inevitably lose many. A great many."
+msgstr ""
+"Già i magi sono più potenti che mai. Se poteste raggiungerli, potrebbero "
+"formare una convocazione con abbastanza potere per annientare migliaia di "
+"eserciti di uomini. Comunque le loro difese sono formidabili e dovrete "
+"penetrarle. Io vi aiuterò, ma molti di voi cadranno. Moltissimi."
+
+msgid ""
+"You are shocked only because the orcs are disorganized. The thinskins plan "
+"their killings; they are the ones that we must be wary of."
+msgstr ""
+"Tu sei scandalizzato solo perché gli orchi sono disorganizzati. I pellemolle "
+"pianificano le uccisioni; dobbiamo diffidare di loro."
+
+msgid "You can now recruit Pirate Schooners."
+msgstr "Ora puoi reclutare le golette pirata."
+
+msgid "You help us throw off the elves, and we'll join you."
+msgstr "Se ci aiuterete a scacciare gli elfi, ci uniremo a voi."
+
+msgid ""
+"You must continue this quest without me, Malakar. Although I die, the drakes "
+"- your people - still live on, and you are their chief. You cannot falter "
+"now."
+msgstr ""
+"Devi continuare questa missione senza di me, Malakar. Anche se io muoio, i "
+"draghi - la tua gente - vivranno ancora e tu sei il loro capo. Ora non puoi "
+"esitare."
+
+msgid "You old scoundrel! How in blazes are you still alive?"
+msgstr "Vecchio furfante! Come diavolo sei ancora vivo?"
+
+msgid "You receive 130 pieces of gold!"
+msgstr "Ricevi 130 pezzi d'oro!"
+
+msgid ""
+"You think a few measly warships could really stop the Unforgiver? We played "
+"'possum until they were fully docked, then high-tailed it back North."
+msgstr ""
+"Pensi davvero che poche miserabili navi da guerra potevano fermare "
+"l'Implacabile? Ci siamo finti spacciati finché non fossero attraccati, poi "
+"siamo ripartiti a vele spiegate di nuovo verso nord."
+
+msgid "You! Alien drake! Leave now, or be immolated!"
+msgstr "Tu! Drago estraneo! Vattene o sarai sacrificato!"
+
+msgid "You! Why do your men pursue us!"
+msgstr "Ehi tu! Perché i tuoi uomini ci inseguono?"
+
+msgid "You're riding a drake?!?"
+msgstr "Stai cavalcando un drago?!?"
+
+msgid "Your assistance honors us. Thank you."
+msgstr "Il tuo aiuto ci onora. Grazie."
+
+msgid "Yraec"
+msgstr "Yraec"
+
+msgid "Yreddyn"
+msgstr "Yreddyn"
+
+msgid "Yrynyc"
+msgstr "Yrynyc"
+
+msgid "axe"
+msgstr "ascia"
+
+msgid "ballista"
+msgstr "balista"
+
+msgid "bawk"
+msgstr "coccodè"
+
+msgid "bite"
+msgstr "morso"
+
+msgid "bombard"
+msgstr "bombarda"
+
+msgid "boulder"
+msgstr "masso"
+
+msgid "bow"
+msgstr "arco"
+
+msgid "bump"
+msgstr "sbam"
+
+msgid "catapult"
+msgstr "catapulta"
+
+msgid "claws"
+msgstr "artigli"
+
+msgid "crossbow"
+msgstr "balestra"
+
+msgid "crush"
+msgstr "impatto"
+
+msgid "cutlass"
+msgstr "sciabola"
+
+msgid "dagger"
+msgstr "pugnale"
+
+msgid "female^Battleship"
+msgstr "Nave da guerra"
+
+msgid "female^Caravel"
+msgstr "Caravella"
+
+msgid "female^Clipper"
+msgstr "Clipper"
+
+msgid "female^Dreadnought"
+msgstr "Corazzata"
+
+msgid "female^Frigate"
+msgstr "Fregata"
+
+msgid "female^Galleon"
+msgstr "Galeone"
+
+msgid "female^Pirate Cruiser"
+msgstr "Incrociatore pirata"
+
+msgid "female^Pirate Galleon"
+msgstr "Galeone pirata"
+
+msgid "female^Pirate Schooner"
+msgstr "Goletta pirata"
+
+msgid "female^Sea Hag"
+msgstr "Strega del mare"
+
+msgid "fire breath"
+msgstr "alito di fuoco"
+
+msgid "fire sword"
+msgstr "spada di fuoco"
+
+msgid "fist"
+msgstr "pugno"
+
+msgid "force ball"
+msgstr "sfera di forza"
+
+msgid "force wave"
+msgstr "onda di forza"
+
+msgid "headbutt"
+msgstr "testata"
+
+msgid "hoof"
+msgstr "woof"
+
+msgid "ice blast"
+msgstr "esplosione di gelo"
+
+msgid "ice shot"
+msgstr "esplosione ghiacciata"
+
+msgid "incisors"
+msgstr "incisivi"
+
+msgid "kick"
+msgstr "calcio"
+
+msgid "lightning"
+msgstr "fulmine"
+
+msgid "mace"
+msgstr "mazza"
+
+msgid "none"
+msgstr "nessuno"
+
+msgid "oink"
+msgstr "oink"
+
+msgid "ruarr... my children, avenge me..."
+msgstr "Roarr... figli miei, vendicatemi..."
+
+msgid "short sword"
+msgstr "spada corta"
+
+msgid "spear"
+msgstr "lancia"
+
+msgid "staff"
+msgstr "bastone"
+
+msgid "sword"
+msgstr "spada"
+
+msgid "tail"
+msgstr "coda"
+
+msgid "teeth"
+msgstr "denti"
+
+msgid "touch"
+msgstr "tocco"
+
+msgid "trident"
+msgstr "tridente"
+
+msgid "twig"
+msgstr "ramoscello"
+
+msgid "water spray"
+msgstr "spruzzo d'acqua"
+
+msgid "whip"
+msgstr "frusta"
