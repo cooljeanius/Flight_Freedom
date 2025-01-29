@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-01-29 00:23 UTC\n"
+"POT-Creation-Date: 2025-01-29 03:35 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -613,7 +613,9 @@ msgid "My energies are drained, I need rest."
 msgstr ""
 
 #. [set_menu_item]: id=fireball
+#. [unit_type]: id=Fireball, race=mechanical
 #: Flight_Freedom/macros/magi.cfg:365
+#: Flight_Freedom/units/fake_units.cfg:160
 msgid "Fireball"
 msgstr ""
 
@@ -9189,6 +9191,26 @@ msgstr ""
 
 #: Flight_Freedom/units/fake_units.cfg:6
 msgid "If you are seeing this, you have either cheated or encountered a bug."
+msgstr ""
+
+#. [unit_type]: id=Worker Wood, race=monster
+#: Flight_Freedom/units/fake_units.cfg:48
+msgid "Worker Wood"
+msgstr ""
+
+#. [unit_type]: id=Slave Wood, race=monster
+#: Flight_Freedom/units/fake_units.cfg:67
+msgid "Slave Wood"
+msgstr ""
+
+#. [unit_type]: id=Arrow NE, race=monster
+#: Flight_Freedom/units/fake_units.cfg:86
+msgid "Arrow NE"
+msgstr ""
+
+#. [unit_type]: id=Invisible, race=monster
+#: Flight_Freedom/units/fake_units.cfg:234
+msgid "Invisible"
 msgstr ""
 
 #. [unit_type]: id=Ballista, race=human
