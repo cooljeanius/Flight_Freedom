@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-01-29 22:57 UTC\n"
+"POT-Creation-Date: 2025-01-29 23:17 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -314,33 +314,38 @@ msgstr ""
 msgid "Avenge Necolag in Scenario 20 (Battle of the Temple)."
 msgstr ""
 
-#. [about]
-#: Flight_Freedom/credits.cfg:86
+#. [entry]
+#: Flight_Freedom/credits.cfg:87
 msgid "read credits.cfg for full list of contributions"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:92
+#: Flight_Freedom/credits.cfg:94
 msgid "Original Creator and Inspiration"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:96
+#: Flight_Freedom/credits.cfg:100
 msgid "Version 5 Author, Maintainer"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:100
+#: Flight_Freedom/credits.cfg:106
 msgid "New Maintainer"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:104
+#: Flight_Freedom/credits.cfg:112
 msgid "Graphics"
 msgstr ""
 
+#. [entry]
+#: Flight_Freedom/credits.cfg:225
+msgid "and others"
+msgstr ""
+
 #. [about]
-#: Flight_Freedom/credits.cfg:145
+#: Flight_Freedom/credits.cfg:229
 msgid "Sounds and Music"
 msgstr ""
 
