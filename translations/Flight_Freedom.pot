@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-01-28 07:38 UTC\n"
+"POT-Creation-Date: 2025-01-29 00:23 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -681,8 +681,8 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:412
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:522
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:88
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:501
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:679
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:503
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:685
 #: Flight_Freedom/scenarios_b/07b_Citadel.cfg:58
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:336
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:734
@@ -1942,68 +1942,83 @@ msgstr ""
 msgid "New tribes eventually emerged, shaped by common hardship and strife. Yet every drake alive today still remembers Malakar of the former Kakatar tribe. Some as a hero forced to make impossible choices to save what could be saved of his tribe and his people. Many more as a villian who sacrificed his own kin in the pursuit of power. But all share a burning hatred for humanity and a fierce resolve to defend their homes and way of life to the end."
 msgstr ""
 
-#. [chance_to_hit]: id=precision
+#. [damage_type]: id=fire_damage_flaming_blade_melee
+#: Flight_Freedom/macros/weapon-specials.cfg:7
+msgid "flaming"
+msgstr ""
+
+#. [damage_type]: id=fire_damage_flaming_blade_melee
+#: Flight_Freedom/macros/weapon-specials.cfg:8
+msgid "This attack can deal either blade or fire damage, depending on which would be more effective."
+msgstr ""
+
+#. [damage_type]: id=fire_damage_flaming_blade_melee
 #: Flight_Freedom/macros/weapon-specials.cfg:9
+msgid "This unit's melee attack can deal either blade or fire damage, depending on which would be more effective."
+msgstr ""
+
+#. [chance_to_hit]: id=precision
+#: Flight_Freedom/macros/weapon-specials.cfg:20
 msgid "precision"
 msgstr ""
 
 #. [chance_to_hit]: id=precision
-#: Flight_Freedom/macros/weapon-specials.cfg:10
+#: Flight_Freedom/macros/weapon-specials.cfg:21
 msgid "This attack always has a 80% chance to hit regardless of the defensive ability of the unit being attacked."
 msgstr ""
 
 #. [chance_to_hit]: id=precision
-#: Flight_Freedom/macros/weapon-specials.cfg:11
+#: Flight_Freedom/macros/weapon-specials.cfg:22
 msgid "This unit has precision attacks, which always have a very high chance of hitting an opponent."
 msgstr ""
 
 #. [chance_to_hit]: id=eoma_skilled
-#: Flight_Freedom/macros/weapon-specials.cfg:21
+#: Flight_Freedom/macros/weapon-specials.cfg:32
 msgid "skilled"
 msgstr ""
 
 #. [chance_to_hit]: id=eoma_skilled
-#: Flight_Freedom/macros/weapon-specials.cfg:22
+#: Flight_Freedom/macros/weapon-specials.cfg:33
 msgid "This attack always has a minimum 60% chance to hit."
 msgstr ""
 
 #. [attacks]: id=nocounter
-#: Flight_Freedom/macros/weapon-specials.cfg:32
+#: Flight_Freedom/macros/weapon-specials.cfg:43
 msgid "no counter-attack"
 msgstr ""
 
 #. [attacks]: id=nocounter
-#: Flight_Freedom/macros/weapon-specials.cfg:33
+#: Flight_Freedom/macros/weapon-specials.cfg:44
 msgid "The opponent has a 0% chance to hit when this unit is attacking. Does not work on opponents with berserk."
 msgstr ""
 
 #. [attacks]: id=nocounter
-#: Flight_Freedom/macros/weapon-specials.cfg:34
+#: Flight_Freedom/macros/weapon-specials.cfg:45
 msgid "Some of this unit's attacks are not subject to enemy counter-attack."
 msgstr ""
 
 #. [dummy]: id=allaround
-#: Flight_Freedom/macros/weapon-specials.cfg:115
+#: Flight_Freedom/macros/weapon-specials.cfg:126
 msgid "all around"
 msgstr ""
 
 #. [dummy]: id=allaround
-#: Flight_Freedom/macros/weapon-specials.cfg:117
+#: Flight_Freedom/macros/weapon-specials.cfg:128
 msgid "This attack, when used offensively, has a chance to hit adjacent enemy units."
 msgstr ""
 
 #. [dummy]: id=allaround
-#: Flight_Freedom/macros/weapon-specials.cfg:118
+#: Flight_Freedom/macros/weapon-specials.cfg:129
 msgid "Some of this unit's attacks can strike all adjacent targets."
 msgstr ""
 
 #. [dummy]: id=eoma_cleave{DISPLAYVALUE}
-#: Flight_Freedom/macros/weapon-specials.cfg:355
+#: Flight_Freedom/macros/weapon-specials.cfg:366
 msgid "cleave"
 msgstr ""
 
 #. [dummy]: id=eoma_cleave{DISPLAYVALUE}
-#: Flight_Freedom/macros/weapon-specials.cfg:356
+#: Flight_Freedom/macros/weapon-specials.cfg:367
 msgid ""
 "A unit with this ability can hurt units that are adjacent to the attacker and the defender at the same time. The damage dealt equals a specified % of the base damage.\n"
 "This ability does not work against berserker attacks.\n"
@@ -2015,41 +2030,41 @@ msgid ""
 msgstr ""
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:512
-#: Flight_Freedom/macros/weapon-specials.cfg:513
+#: Flight_Freedom/macros/weapon-specials.cfg:523
+#: Flight_Freedom/macros/weapon-specials.cfg:524
 msgid "attack only"
 msgstr ""
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:514
-#: Flight_Freedom/macros/weapon-specials.cfg:515
+#: Flight_Freedom/macros/weapon-specials.cfg:525
+#: Flight_Freedom/macros/weapon-specials.cfg:526
 msgid "This weapon will never be used on defense."
 msgstr ""
 
 #. [damage]: id=attack_only
-#: Flight_Freedom/macros/weapon-specials.cfg:516
+#: Flight_Freedom/macros/weapon-specials.cfg:527
 msgid "Some of this unit's attacks are not available except on offense."
 msgstr ""
 
 #. [damage]: id=defend_only
-#: Flight_Freedom/macros/weapon-specials.cfg:532
-#: Flight_Freedom/macros/weapon-specials.cfg:533
+#: Flight_Freedom/macros/weapon-specials.cfg:543
+#: Flight_Freedom/macros/weapon-specials.cfg:544
 msgid "defend only"
 msgstr ""
 
 #. [damage]: id=defend_only
-#: Flight_Freedom/macros/weapon-specials.cfg:534
-#: Flight_Freedom/macros/weapon-specials.cfg:535
+#: Flight_Freedom/macros/weapon-specials.cfg:545
+#: Flight_Freedom/macros/weapon-specials.cfg:546
 msgid "This weapon will only be available for defense."
 msgstr ""
 
 #. [damage]: id=defend_only
-#: Flight_Freedom/macros/weapon-specials.cfg:536
+#: Flight_Freedom/macros/weapon-specials.cfg:547
 msgid "Some of this unit's attacks are not available except on defense."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/macros/weather.cfg:464
+#: Flight_Freedom/macros/weather.cfg:510
 msgid ""
 "This scenario has visual weather effects that may cause noticeable slowdown on weaker devices.\n"
 "\n"
@@ -2057,17 +2072,17 @@ msgid ""
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/macros/weather.cfg:468
+#: Flight_Freedom/macros/weather.cfg:514
 msgid "Continue with weather"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/macros/weather.cfg:474
+#: Flight_Freedom/macros/weather.cfg:520
 msgid "Disable weather effects"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/macros/weather.cfg:487
+#: Flight_Freedom/macros/weather.cfg:533
 msgid "You can always turn on/off some weather effects. To do that, right-click anywhere on the map and choose effects to disable/enable."
 msgstr ""
 
@@ -7228,8 +7243,8 @@ msgstr ""
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:413
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:523
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:89
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:502
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:680
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:504
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:686
 #: Flight_Freedom/scenarios_b/07b_Citadel.cfg:59
 msgid "Death of Hartholar"
 msgstr ""
@@ -7747,8 +7762,8 @@ msgstr ""
 #. [scenario]: id=Citadel
 #. [event]: id=apprentice_1, id=apprentice_2, id=apprentice_3, id=apprentice_4
 #: Flight_Freedom/scenarios_b/06b_Mountain_Crypt.cfg:276
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:503
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:681
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:505
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:687
 #: Flight_Freedom/scenarios_b/07b_Citadel.cfg:60
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:338
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:736
@@ -7827,184 +7842,184 @@ msgstr ""
 
 #. [objectives]
 #. [scenario]: id=Citadel
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:504
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:682
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:506
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:688
 #: Flight_Freedom/scenarios_b/07b_Citadel.cfg:61
 msgid "Death of Taqkar"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:121
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:122
 msgid "We have reached the Obsidian Citadel!"
 msgstr ""
 
 #. [message]: speaker=$branchb_narration_recipient
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:125
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:126
 msgid "Now, we must fight our way to it. Why does ice fall from the sky here?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:129
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:130
 msgid "That ice is called snow, and it accompanies much of the Citadel's high magic. I have no doubt that they have scryed us traveling here, and they are ready."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:133
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:134
 msgid "What will we have to fight?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:137
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:138
 msgid "The Magi will bring many enchantments to bear. We will have to contend with magical sentinels, and possibly the land itself."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:335
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:336
 msgid "A great voice emanates from the tower."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:351
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:352
 msgid "Hear, intruders! You must face the four tests of the elements: air, fire, earth and water! Only the worthy shall pass!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:479
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:481
 msgid "This was once a traditional initiation rite that all Magi undergo. However my colleagues have twisted it into a blasphemous weapon."
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:483
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:485
 msgid "What are the dangers of this trial?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:487
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:489
 msgid "These trials consist of magical manifestations of the four fundamental elements. The trial of air will pit us against creatures of the winds that will attack with lightning and chill."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:491
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:493
 msgid "Whatever we face, we must reach the Citadel!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:495
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:497
 msgid "First we must banish the four guardians that orbit the Citadel. Then the way will be open. But beware, should we approach the Citadel while the guardians stand we shall surely perish."
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:500
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:502
 msgid "Kill the elemental guardians ($dead_guardians / 4)"
 msgstr ""
 
 #. [message]: speaker=Taqkar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:608
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:614
 msgid "Fool! Now you die! The elements, they strengthen me!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:648
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:654
 msgid "We must defeat the guardians first!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:666
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:672
 msgid "The guardians have been dealt with!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:670
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:676
 msgid "Onward! Seize the Citadel!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:678
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:684
 msgid "Move a unit next to the Citadel"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:695
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:701
 msgid "Quemar, we have reached the Citadel."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:701
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:707
 msgid "Quemar casts a great spell!"
 msgstr ""
 
 #. [event]: id=Quahgakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:706
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:712
 msgid "Quahgakar"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:717
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:723
 msgid "We must talk about the future of our existence. I have commanded an end to the trial."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:749
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:755
 msgid "I feel an anger surging through me, an urge to rend and kill!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:765
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:771
 msgid "Unit gains 1 more round of all attacks!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:794
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:800
 msgid "I feel my mind expanding... the winds around me obey my command!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:813
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:819
 msgid "Unit's attacks become magical! (70% chance to hit)"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:842
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:848
 msgid "The energy imbues my muscle and sinew... I feel more flexible than ever! I shall reach new heights of greatness!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:860
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:866
 msgid "Unit gains the skirmisher ability! (ignore enemy zones of control)"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:889
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:895
 msgid "I feel a connection to life around me, as if I can draw essence from the decay of others!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:908
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:914
 msgid "Unit's attacks gain the drain ability!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:925
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:931
 msgid "The trial of fire will confront us with living flames, seeking to turn our inner fires against us."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:933
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:939
 msgid "The trial of earth will transform the very ground we stand on or fly over into an adversary."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:941
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:947
 msgid "The trial of water will attack us with beings of water that will attempt to douse our internal flames."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:1017
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:1074
 msgid "No! He was a focal point of the trial. With his death the unchained elements will consume us all!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:1029
+#: Flight_Freedom/scenarios_b/07b_Citadel.cfg:1086
 msgid "The citadel has become impenetrable. We have failed."
 msgstr ""
 
@@ -8754,8 +8769,8 @@ msgstr ""
 #. [attack]: type=fire
 #: Flight_Freedom/units/drakes/Chieftain.cfg:92
 #: Flight_Freedom/units/drakes/High_Magus.cfg:48
-#: Flight_Freedom/units/drakes/Legend.cfg:93
-#: Flight_Freedom/units/drakes/Lord.cfg:93
+#: Flight_Freedom/units/drakes/Legend.cfg:96
+#: Flight_Freedom/units/drakes/Lord.cfg:96
 #: Flight_Freedom/units/drakes/Magus.cfg:47
 #: Flight_Freedom/units/elementals/Fire_Avatar.cfg:206
 #: Flight_Freedom/units/elementals/Fire_God.cfg:121
@@ -8774,8 +8789,8 @@ msgstr ""
 
 #. [attack]: type=impact
 #: Flight_Freedom/units/drakes/Chieftain.cfg:241
-#: Flight_Freedom/units/drakes/Legend.cfg:242
-#: Flight_Freedom/units/drakes/Lord.cfg:242
+#: Flight_Freedom/units/drakes/Legend.cfg:245
+#: Flight_Freedom/units/drakes/Lord.cfg:245
 #: Flight_Freedom/units/drakes/Worker.cfg:27
 #: Flight_Freedom/units/drakes/Worker.cfg:103
 #: Flight_Freedom/units/drakes/Worker_Malakar.cfg:35
@@ -8789,8 +8804,8 @@ msgstr ""
 #. [attack]: type=pierce
 #: Flight_Freedom/units/drakes/Chieftain.cfg:250
 #: Flight_Freedom/units/drakes/Guard.cfg:35
-#: Flight_Freedom/units/drakes/Legend.cfg:251
-#: Flight_Freedom/units/drakes/Lord.cfg:251
+#: Flight_Freedom/units/drakes/Legend.cfg:254
+#: Flight_Freedom/units/drakes/Lord.cfg:254
 #: Flight_Freedom/units/drakes/Slave.cfg:110
 #: Flight_Freedom/units/drakes/Worker.cfg:112
 #: Flight_Freedom/units/drakes/Worker_Malakar.cfg:128
@@ -8853,19 +8868,19 @@ msgstr ""
 msgid "A few drakes of uncommon skill and bravery rise to become legends among their people. A legend must be unmatched in military prowess, and fearless in the face of danger."
 msgstr ""
 
-#. [attack]: type=fire
+#. [attack]: type=blade
 #: Flight_Freedom/units/drakes/Legend.cfg:84
 #: Flight_Freedom/units/drakes/Lord.cfg:84
 msgid "fire sword"
 msgstr ""
 
 #. [variation]
-#: Flight_Freedom/units/drakes/Legend.cfg:232
+#: Flight_Freedom/units/drakes/Legend.cfg:235
 msgid "Armed Drake Legend"
 msgstr ""
 
 #. [variation]
-#: Flight_Freedom/units/drakes/Legend.cfg:233
+#: Flight_Freedom/units/drakes/Legend.cfg:236
 msgid "Drake Guerilla Legend"
 msgstr ""
 
@@ -8882,12 +8897,12 @@ msgid "A Drake Lord is the chieftain of a powerful and respected tribe. He wield
 msgstr ""
 
 #. [variation]
-#: Flight_Freedom/units/drakes/Lord.cfg:232
+#: Flight_Freedom/units/drakes/Lord.cfg:235
 msgid "Armed Drake Lord"
 msgstr ""
 
 #. [variation]
-#: Flight_Freedom/units/drakes/Lord.cfg:233
+#: Flight_Freedom/units/drakes/Lord.cfg:236
 msgid "Drake Guerilla Lord"
 msgstr ""
 
