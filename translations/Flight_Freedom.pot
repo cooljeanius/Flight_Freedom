@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-02-04 14:12 UTC\n"
+"POT-Creation-Date: 2025-02-06 19:41 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -668,11 +668,11 @@ msgstr ""
 #: Flight_Freedom/scenarios/01_Survival.cfg:357
 #: Flight_Freedom/scenarios/01_Survival.cfg:402
 #: Flight_Freedom/scenarios/01_Survival.cfg:455
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:937
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:948
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1039
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:928
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:939
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1030
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1140
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:1149
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1158
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:131
 #: Flight_Freedom/scenarios/03a_Manor.cfg:89
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:163
@@ -2151,7 +2151,7 @@ msgstr ""
 #. [unit]: type=Avatar of Ending, id=Malakar
 #: Flight_Freedom/scenarios/01_Survival.cfg:104
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:33
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:304
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:298
 #: Flight_Freedom/scenarios/03a_Manor.cfg:19
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:22
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:443
@@ -2383,7 +2383,7 @@ msgstr ""
 #. [modify_side]
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:85
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:113
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:842
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:831
 msgid "Overseers"
 msgstr ""
 
@@ -2405,176 +2405,176 @@ msgstr ""
 
 #. [objectives]
 #. [scenario]: id=Rebellion
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:945
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1037
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:936
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1028
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:129
 msgid "Kill the overseer"
 msgstr ""
 
 #. [objectives]
 #. [scenario]: id=Rebellion
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1157
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1148
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:130
 msgid "Rescue the Hatchlings"
 msgstr ""
 
 #. [fading_message]
 #. [unit_type]: id=Slave Driver, race=human
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:679
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:673
 #: Flight_Freedom/units/humans/Loyalist_Slave_Driver.cfg:5
 msgid "Slave Driver"
 msgstr ""
 
 #. [fading_message]
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:680
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:674
 msgid "WORK!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:722
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:716
 msgid "ARRGH!"
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:726
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:720
 msgid "Malakar, the guards' fresh replacements are late. Is this our time to strike?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:731
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:725
 msgid "Our rebellion has not yet been fully planned out, but if we wait any longer, we will have no strength left at all."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:736
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:730
 msgid "Drakes! Rally to me! Gather what strength you have! Our hour is come!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:748
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:742
 msgid "This, human, is for my daughter!"
 msgstr ""
 
 #. [message]: speaker=Overseer
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:759
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:753
 msgid "Men! Round up the slaves, and make them suffer for their disobedience!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:770
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:764
 msgid "Die the death you meant for us!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:861
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:852
 msgid "The hatchlings are free!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:868
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:859
 msgid "The hatchlings are free! We must kill the taskmaster!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:874
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:865
 msgid "Malakar... our hatchlings... they've been tortured and wounded. Why... why would they do this?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:879
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:870
 msgid "Listen to me! If any of you have any sense of justice, find a thinskin and cleanse this world of a little of their evil!"
 msgstr ""
 
 #. [unit]: id=Guard1, type=Spearman
 #. [unit]: id=Guard2, type=Spearman
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:890
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:899
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:908
 msgid "Guard"
 msgstr ""
 
 #. [message]: speaker=Overseer
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:919
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:910
 msgid "Kill the hatchlings! Kill them all!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:924
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:915
 msgid "The guards have arrived! Protect the hatchlings!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:935
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:946
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1147
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:926
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:937
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1138
 msgid "Kill both guards"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:936
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:947
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1038
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1148
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:927
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:938
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1029
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1139
 msgid "At least four hatchlings must survive ($hatchling_count / 4)"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:986
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:977
 msgid "The manor house lies ahead! Tear out its black heart and leave its shell for the vultures!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1007
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:998
 msgid "The overseer shall pay for the sufferings of our hatchlings! The debt must be paid in blood!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1020
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1011
 msgid "Let us make the overseer pay for that hatchling! A life for a life!!"
 msgstr ""
 
 #. [message]: speaker=Malakar
 #. if this would not work in the target language, feel free to remove the number of hatchlings:
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1028
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1019
 msgid "$hatchlings_killed hatchlings gone! Overseer, your time has come!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1056
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1047
 msgid "Our hatchlings are under attack! Hurry!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1078
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1069
 msgid "NO!! Our hatchlings... even if we win this battle, the heart of our tribe is lost. Oh, Necolag, I am sorry..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1094
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1085
 msgid "The thinskins are slaughtering our hatchlings! Our tribe is nearly broken!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1122
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1113
 msgid "The manor house lies ahead! Tear out its black heart, and leave its shell for the vultures!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1136
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1127
 msgid "The taskmaster - that monster - is dead! We must free the hatchlings!"
 msgstr ""
 
 #. [message]: speaker=Halberdier
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1228
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1219
 msgid "Slaves! Surrender or die!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1233
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1224
 msgid "The Baron's army has arrived! We are defeated... for now."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1255
+#: Flight_Freedom/scenarios/02a_Rebellion.cfg:1246
 msgid "We may have lost some of our hatchlings today, but we shall avenge our fallen! Onwards!"
 msgstr ""
 
@@ -5918,107 +5918,107 @@ msgid "Move the Unforgiver to the East"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:316
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:317
 msgid "(Kogw) Rhys, here, says that he's got a map."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:321
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:322
 msgid "(Davies) It was mostly my work."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:326
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:327
 msgid "(Kogw) And if we go East here until the reefs, we can drop South and catch a strong current that should sweep us all the way back to Morogor, no problem."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:331
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:332
 msgid "(Davies) Did you tell him about..."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:336
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:337
 msgid "(Kogw) The only, uh, hitch is that the slightest disturbance is likely to start the Mermen and Nagas fighting again. They've both claimed this stretch for as long as anyone can remember, and they've sunk many ships in these waters."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:341
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:342
 msgid "(Malakar) We tread lightly, then. Just get us home."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:356
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:357
 msgid "(Kogw) All hands! Watch the depths!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:378
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:379
 msgid "(Davies) Rhys, you idiot! You've navigated us straight into a naga attack!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:382
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:383
 msgid "(Rhys) Someday we'll look back on this and laugh. For now, it gets even better: the mermen are massing for an attack, too."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:388
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:389
 msgid "(Davies) Rhys, you idiot! You've navigated us straight into the mermen!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:392
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:393
 msgid "(Rhys) Someday we'll look back on this and laugh. For now, it gets even better: the nagas are massing for an attack, too."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:399
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:400
 msgid "(Kogw) Aye, I don't know why they're after us. Perhaps they hate all outsiders?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:404
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:405
 msgid "(Malakar) Regardless, we will not be stopped. See that we make it, Kogw."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:420
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:421
 msgid "(Kogw) On to Morogor!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:463
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:552
 msgid "(Malakar) The merman leader has fallen!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:468
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:557
 msgid "(Kogw) Great. Mal, the nagas will want a chunk of our hulls now. It's certainly hard to find good wood anywhere else out here."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:475
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:564
 msgid "(Malakar) The naga leader has fallen!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:480
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:569
 msgid "(Kogw) Great. Mal, the mermen will want a chunk of our hulls now. It's certainly hard to find good wood anywhere else out here."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:491
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:580
 msgid "(Malakar) The sea dwellers have been defeated!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:496
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:585
 msgid "(Kogw) They've only been driven back. Quickly, we need to leave these waters! And be wary for any stragglers."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:536
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:626
 msgid "(Kogw) No! The winds have subsided! We cannot sail further!"
 msgstr ""
 
@@ -7273,129 +7273,129 @@ msgid "Jamolar Tribe"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:170
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:156
 msgid "Hmm... so Hartholar now wears the chieftain's robes. He is a bigot, but a wise drake nonetheless. And the Jamolar tribe, even in these swamps, is mightier than ever before."
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:174
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:160
 msgid "You! Alien drake! Leave now, or face immolation!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:178
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:164
 msgid "I am Malakar, of the north. Our lands have been overrun by conquering humans!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:182
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:168
 msgid "Leave, disgusting whelp. You are of the race of Stakron, the betrayer of Kahn the mighty! Perhaps that is why the humans have attacked you!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:186
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:172
 msgid "No. Not even humans punish children for the sins of their forefathers, unlike you. They seek our blood, and this island for themselves! They murdered my daughter!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
 #. Note for translators: 'wench' here is intended as a fairly mild gender-specific insult, not to literally mean 'prostitute':
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:191
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:177
 msgid "Oh, Necolag, that wench. When the humans come, I will thank them. Drakes! To arms, let us drive out these rabble!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:195
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:181
 msgid "I will not strike you down, chief Hartholar. However, we will defend ourselves, and maintain our honor!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:200
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:186
 msgid "NOTE: The campaign will not end if Hartholar is killed."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:249
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:235
 msgid "Saurians! You have no part in this madness. The humans are our common enemy!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:253
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:239
 msgid "These saurians are sworn to my service! You cannot stand against them!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:261
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:247
 msgid "Hartholar! End these games! As we fight, the humans approach!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:266
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:252
 msgid "Hartholar does not respond."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:275
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:261
 msgid "Enough! Hartholar, surrender at once!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:313
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:299
 msgid "Stay your hand! We do not have the right of assassination!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:327
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:313
 msgid "Die, foul one!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:351
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:337
 msgid "I will kill Hartholar, for the good of my tribe! Malakar, do not try to stop me. Although I understand that you are bound by honor to spare your vile enemy, I will do what must be done!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:355
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:341
 msgid "Loyal drakes! Kill the traitor, before he reaches Hartholar!"
 msgstr ""
 
 #. [message]: speaker=unit
 #. Note for translators: this is supposed to be sarcastic:
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:379
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:365
 msgid "For Malakar, the honorable! So honorable that he cannot even strike down his enemies!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:395
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:381
 msgid "The Jamolar tribe is shattered, and my honor blackened! Nobody will stand with me now!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:451
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:437
 msgid "Hartholar! There, to the north, are the humans' scouts! All hope is lost! As chief, I will face the hordes in single combat."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:455
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:441
 msgid "Hartholar, you are bound by this sacrifice to accept my people into your tribe. Perhaps your combined strength can succeed where ours has failed."
 msgstr ""
 
 #. [event]: type=Drake Priest, id=Morlin Ka
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:467
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:453
 msgid "Morlin Ka"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:478
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:464
 msgid "The Kakatar chief speaks true! Our fighting in the face of a greater enemy is a dishonor to Gar-Alagar himself!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:482
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:468
 msgid "Stay, warrior-chief! This sacrifice... I see that you are free of Stakron's taint. Forgive me, Malakar, I have done you a great wrong. I pledge myself and my tribe to your service, upon my honor."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:486
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:472
 msgid "Then we must plan our resistance!"
 msgstr ""
 
@@ -8768,10 +8768,8 @@ msgstr ""
 #: Flight_Freedom/units/drakes/Chieftain.cfg:83
 #: Flight_Freedom/units/humans/Loyalist_Ballista.cfg:27
 #: Flight_Freedom/units/nagas/Depthstalker.cfg:55
-#: Flight_Freedom/units/nagas/Hunter.cfg:42
 #: Flight_Freedom/units/nagas/Mage.cfg:23
 #: Flight_Freedom/units/nagas/Mage.cfg:119
-#: Flight_Freedom/units/nagas/Marksman.cfg:29
 #: Flight_Freedom/units/nagas/Spellwarrior.cfg:32
 #: Flight_Freedom/units/nagas/Spellwarrior.cfg:74
 #: Flight_Freedom/units/nagas/Warrior_Mage.cfg:31
@@ -8808,9 +8806,6 @@ msgstr ""
 #: Flight_Freedom/units/drakes/Worker.cfg:103
 #: Flight_Freedom/units/drakes/Worker_Malakar.cfg:35
 #: Flight_Freedom/units/drakes/Worker_Malakar.cfg:119
-#: Flight_Freedom/units/nagas/Guardian.cfg:28
-#: Flight_Freedom/units/nagas/Sentinel.cfg:29
-#: Flight_Freedom/units/nagas/Warden.cfg:28
 msgid "mace"
 msgstr ""
 
@@ -9492,32 +9487,6 @@ msgstr ""
 msgid "Nagini Depthstalker"
 msgstr ""
 
-#. [unit_type]: id=Naga Guardian, race=naga
-#: Flight_Freedom/units/nagas/Guardian.cfg:5
-msgid "Naga Guardian"
-msgstr ""
-
-#. [unit_type]: id=Naga Guardian, race=naga
-#: Flight_Freedom/units/nagas/Guardian.cfg:23
-msgid "Instead of learning their serpentine form, these Nagas have focused upon armor and steel. Because of this, they are often used as line fighters, and do more than their fair share of killing and dying."
-msgstr ""
-
-#. [unit_type]: id=Naga Hunter, race=naga
-#: Flight_Freedom/units/nagas/Hunter.cfg:5
-msgid "Naga Hunter"
-msgstr ""
-
-#. [unit_type]: id=Naga Hunter, race=naga
-#: Flight_Freedom/units/nagas/Hunter.cfg:19
-msgid "Naga Hunters are Naga who are skilled at hunting with a bow. Since the naga are naturally resistant to poison, they have no qualms about hunting with poisoned arrows. These two foot long shafts, tipped with a potent poison, have been known to slay many kinds of prey."
-msgstr ""
-
-#. [attack]: type=pierce
-#: Flight_Freedom/units/nagas/Hunter.cfg:51
-#: Flight_Freedom/units/nagas/Marksman.cfg:38
-msgid "bow"
-msgstr ""
-
 #. [unit_type]: id=Naga Mage, race=naga, gender=male,female
 #: Flight_Freedom/units/nagas/Mage.cfg:5
 msgid "Naga Mage"
@@ -9542,26 +9511,6 @@ msgstr ""
 #. [female]: gender=female
 #: Flight_Freedom/units/nagas/Mage.cfg:113
 msgid "Nagini Mage"
-msgstr ""
-
-#. [unit_type]: id=Naga Marksman, race=naga
-#: Flight_Freedom/units/nagas/Marksman.cfg:5
-msgid "Naga Marksman"
-msgstr ""
-
-#. [unit_type]: id=Naga Marksman, race=naga
-#: Flight_Freedom/units/nagas/Marksman.cfg:20
-msgid "Naga hunters who show more mastery and accuracy with their bows are promoted to the ranks of the Marksman. They are more skilled with their bows and can shoot down anything that is foolish enough to enter their domains."
-msgstr ""
-
-#. [unit_type]: id=Naga Sentinel, race=naga
-#: Flight_Freedom/units/nagas/Sentinel.cfg:5
-msgid "Naga Sentinel"
-msgstr ""
-
-#. [unit_type]: id=Naga Sentinel, race=naga
-#: Flight_Freedom/units/nagas/Sentinel.cfg:24
-msgid "These heavy fighters are the elite guards of the naga. Chosen because of their dedication and skill, their purpose is to defend their sleeping brethren from any menace, and to guard their hidden cities from outside invaders - until the great awakening of their civilization arrives. These nagas are mostly unknown in Wesnoth since they can only be found near Naga cities."
 msgstr ""
 
 #. [unit_type]: id=Naga Spellcrafter, race=naga, gender=male,female
@@ -9610,16 +9559,6 @@ msgstr ""
 #. [female]: gender=female
 #: Flight_Freedom/units/nagas/Spellwarrior.cfg:67
 msgid "Nagini Spellwarrior"
-msgstr ""
-
-#. [unit_type]: id=Naga Warden, race=naga
-#: Flight_Freedom/units/nagas/Warden.cfg:5
-msgid "Naga Warden"
-msgstr ""
-
-#. [unit_type]: id=Naga Warden, race=naga
-#: Flight_Freedom/units/nagas/Warden.cfg:23
-msgid "These heavy fighters are slower and more heavily armored than most naga and wield huge maces which they use to crush their enemies. They mostly guard naga outposts, but occasionally participate in offensive raids."
 msgstr ""
 
 #. [unit_type]: id=Naga Warlock, race=naga, gender=male,female
