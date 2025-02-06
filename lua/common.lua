@@ -70,8 +70,7 @@ end
 -- [/get_zoom]
 ---
 function wesnoth.wml_actions.get_zoom(cfg)
-	local varname = cfg.variable or "zoom"
-	wml.variables[varname] = wesnoth.interface.zoom(1, true)
+	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
 end
 
 --[=[
