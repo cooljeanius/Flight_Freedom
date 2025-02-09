@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-02-09 21:14 UTC\n"
+"POT-Creation-Date: 2025-02-09 21:41 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3826,7 +3826,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/08_Landfall.cfg:1227
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:572
 #: Flight_Freedom/scenarios/15_Gate_Storms.cfg:357
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:743
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:744
 #: Flight_Freedom/scenarios_b/08b_Apocalypse.cfg:856
 msgid "..."
 msgstr ""
@@ -6132,126 +6132,126 @@ msgid "<span color='green'>You may view how much food you have acquired at any t
 msgstr ""
 
 #. [set_menu_item]: id=show_food_table
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:512
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:513
 msgid "Food..."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:520
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:521
 msgid "Hunt animals and monsters for food"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:566
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:567
 msgid "My palace is under attack! I, Nibir al-Nassim, command all who are able to take up arms and fight!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:584
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:585
 msgid "Look into my face, drake, and know that I, Nibir al-Nassim, shall be the one to end your life!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:600
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:601
 msgid "All hail I, Nibir al-Nassim, the Drakeslayer!"
 msgstr ""
 
 #. [message]: speaker=Zakara
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:618
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:619
 msgid "Such precious metals this lizard was wearing! These should fetch a princely sum indeed at the markets."
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:629
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:630
 msgid "I, Nibir al-Nassim, am the strongest! I am the greatest! I am... I am..."
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:649
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:650
 msgid "Food."
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:655
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:656
 msgid "Dead."
 msgstr ""
 
 #. [message]: speaker=Zakara
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:668
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:669
 msgid "No! My trading contracts, my riches, my fancy goods, all for naught!"
 msgstr ""
 
 #. [message]: speaker=second_unit
 #. [message]: role=hungry_drake
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:700
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:719
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:726
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:701
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:720
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:727
 msgid "So hungry... I could even eat this thinskin..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:734
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:735
 msgid "Check yourself! We will not sully ourselves with the meat of thinskins!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:739
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:740
 msgid "But Malakar, my chief, our tribe is starving! We need all the food we can carry, even long pig."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:745
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:746
 msgid "We are better than the humans, and we always will be! We shall not defile their dead."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:750
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:751
 msgid "Very well, chief. Just let us hope we find enough to eat in this sandy wasteland."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:755
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:756
 msgid "The health of my tribe must come before propriety. We shall feast on the flesh of our enemies this day!"
 msgstr ""
 
 #. [message]: role=angry_dune
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:769
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:770
 msgid "The monsters are eating our dead!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:773
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:774
 msgid "Men of the dunes! The drakes have brought unspeakable evil to our island. Slaughter them all! Do not rest until every fiend is dead! I, Nibir al-Nassim, shall lead you to victory!"
 msgstr ""
 
 #. [command]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:779
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:780
 msgid "Hunt enemies for food"
 msgstr ""
 
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:816
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:832
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:817
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:833
 msgid "<span color='green'>+$value food</span>"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:906
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:907
 msgid "We barely have scraps left to eat. We need to find more food quickly or we'll never make it to Morogor!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:914
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:915
 msgid "Our strength is spent here... we cannot go on."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:923
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:924
 msgid "We have the food we need. Malakar, let's plunder this island for ourselves!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:927
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:928
 msgid "No. Every day we spend on this island is another day Morogor remains unguarded. We fly onwards immediately!"
 msgstr ""
 
