@@ -55,6 +55,7 @@ end
 
 ---
 -- Clears the chat log.
+--
 -- [clear_chat]
 -- [/clear_chat]
 ---
@@ -173,6 +174,22 @@ function wesnoth.wml_actions.fading_message(cfg)
 			wesnoth.interface.deselect_hex()
 		end
 	end
+end
+
+---
+-- Shows a simple dialog with a scrollable image.
+--
+-- [show_image_dialog]
+--     image=path/to/image_file
+-- [/show_image_dialog]
+---
+function wesnoth.wml_actions.show_image_dialog(cfg)
+	local image_path = cfg.image
+	function pre_show(self)
+		self.image.label = image_path
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
 
 ---
