@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-02-09 21:41 UTC\n"
+"POT-Creation-Date: 2025-02-10 01:45 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr ""
 #. [campaign]: id=Flight_to_Freedom
 #. [about]
 #: Flight_Freedom/_main.cfg:37
-#: Flight_Freedom/credits.cfg:86
+#: Flight_Freedom/credits.cfg:87
 msgid "Flight to Freedom"
 msgstr ""
 
@@ -315,37 +315,37 @@ msgid "Avenge Necolag in Scenario 20 (Battle of the Temple)."
 msgstr ""
 
 #. [entry]
-#: Flight_Freedom/credits.cfg:88
+#: Flight_Freedom/credits.cfg:89
 msgid "read credits.cfg for full list of contributions"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:95
+#: Flight_Freedom/credits.cfg:96
 msgid "Original Creator and Inspiration"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:101
+#: Flight_Freedom/credits.cfg:102
 msgid "Version 5 Author, Maintainer"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:107
+#: Flight_Freedom/credits.cfg:108
 msgid "New Maintainer"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:113
+#: Flight_Freedom/credits.cfg:114
 msgid "Graphics"
 msgstr ""
 
 #. [entry]
-#: Flight_Freedom/credits.cfg:241
+#: Flight_Freedom/credits.cfg:245
 msgid "and others"
 msgstr ""
 
 #. [about]
-#: Flight_Freedom/credits.cfg:245
+#: Flight_Freedom/credits.cfg:249
 msgid "Sounds and Music"
 msgstr ""
 
@@ -8506,7 +8506,7 @@ msgstr ""
 
 #. [attack]: type=impact
 #: Flight_Freedom/units/animals/Cow.cfg:37
-#: Flight_Freedom/units/animals/Fungoid.cfg:27
+#: Flight_Freedom/units/animals/Fungoid.cfg:34
 msgid "headbutt"
 msgstr ""
 
@@ -8537,12 +8537,12 @@ msgid "Fungoid"
 msgstr ""
 
 #. [unit_type]: id=Fungoid, race=animal
-#: Flight_Freedom/units/animals/Fungoid.cfg:23
+#: Flight_Freedom/units/animals/Fungoid.cfg:30
 msgid "Created by accident in the garbage can of an alchemist, fungoids are magical mushrooms that can multiply very quickly. Since they were so soft and weak, nobody in the region took the things too seriously... until a couple hundred of them showed up at the nearest town. After that, all the town's families enjoyed the weekly picnic and fungoid smashing in the nearby forest, small kids and elderly included. Eventually, the fungoids adopted the use of twigs as defensive weapons."
 msgstr ""
 
 #. [attack]: type=pierce
-#: Flight_Freedom/units/animals/Fungoid.cfg:36
+#: Flight_Freedom/units/animals/Fungoid.cfg:43
 msgid "twig"
 msgstr ""
 
