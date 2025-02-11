@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-02-11 02:46 UTC\n"
+"POT-Creation-Date: 2025-02-11 03:03 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -748,6 +748,16 @@ msgstr ""
 #. [note]: description=<b>
 #: Flight_Freedom/macros/objectives.cfg:122
 msgid "Barrels in this scenario function as villages."
+msgstr ""
+
+#. [override_endlevel_message]
+#: Flight_Freedom/macros/objectives.cfg:129
+msgid "Defeat"
+msgstr ""
+
+#. [override_endlevel_message]
+#: Flight_Freedom/macros/objectives.cfg:130
+msgid "You have been defeated! However your story continues..."
 msgstr ""
 
 #. [time]: id=underground_ftf
