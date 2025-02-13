@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-02-13 03:45 UTC\n"
+"POT-Creation-Date: 2025-02-13 04:25 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8548,7 +8548,7 @@ msgstr ""
 
 #. [unit_type]: id=Fungoid, race=animal
 #: Flight_Freedom/units/animals/Fungoid.cfg:32
-msgid "Created by accident in the garbage can of an alchemist, fungoids are magical mushrooms that can multiply very quickly. Since they were so soft and weak, nobody in the region took the things too seriously... until a couple hundred of them showed up at the nearest town. After that, all the town's families enjoyed the weekly picnic and fungoid smashing in the nearby forest, small kids and elderly included. Eventually, the fungoids adopted the use of twigs as defensive weapons."
+msgid "Created by accident in the garbage can of an alchemist, Fungoids are magical mushrooms that can multiply very quickly. Since they were so soft and weak, nobody in the region took the things too seriously... until a couple hundred of them showed up at the nearest town. After that, all the town's families enjoyed the weekly picnic and Fungoid smashing in the nearby forest, small kids and elderly included. Eventually, the Fungoids adopted the use of twigs as defensive weapons."
 msgstr ""
 
 #. [attack]: type=pierce
@@ -8610,9 +8610,9 @@ msgstr ""
 #. [unit_type]: id=Rabbit, race=animal
 #: Flight_Freedom/units/animals/Rabbit.cfg:20
 msgid ""
-"The rabbit is a cute creature which lives in fields and forests. In its gnawing attack, striking from powerful incisors, resides country farmers' greatest fear. Alas, rabbits are victims of the appetite of many bigger creatures, like wolves or even humans, for their flesh is used in one of the most delicious dishes ever known.\n"
+"The Rabbit is a cute creature which lives in fields and forests. In its gnawing attack, striking from powerful incisors, resides country farmers' greatest fear. Alas, Rabbits are victims of the appetite of many bigger creatures, like wolves or even humans, for their flesh is used in one of the most delicious dishes ever known.\n"
 "\n"
-"Legend has it that they follow a king rabbit by the name of Cédric, whose whereabouts are yet unknown."
+"Legend has it that they follow a king Rabbit by the name of Cédric, whose whereabouts are yet unknown."
 msgstr ""
 
 #. [attack]: type=blade
@@ -8627,7 +8627,7 @@ msgstr ""
 
 #. [unit_type]: id=Sheep, race=animal
 #: Flight_Freedom/units/animals/Sheep.cfg:22
-msgid "Usually farmed by peasants for meat, wool and milk, sheep can subsist even on scarce roughage and are thus frequently raised in rural villages."
+msgid "Usually farmed by peasants for meat, wool and milk, Sheep can subsist even on scarce roughage and are thus frequently raised in rural villages."
 msgstr ""
 
 #. [attack]: type=impact
@@ -8865,7 +8865,7 @@ msgstr ""
 
 #. [unit_type]: id=Drake Hatchling, race=drake
 #: Flight_Freedom/units/drakes/Hatchling.cfg:21
-msgid "Hatchling is a general term applied to all young drakes who have lived for less than one full breeding cycle. Although not trained in the use of weapons, hatchlings are nontheless capable fighters, biting and slashing with no less bravery than a full-grown warrior."
+msgid "Hatchling is a general term applied to all young drakes who have lived for less than one full breeding cycle. Although not trained in the use of weapons, Hatchlings are nontheless capable fighters, biting and slashing with no less bravery than a full-grown warrior."
 msgstr ""
 
 #. [unit_type]: id=Drake High Magus, race=drake
@@ -8958,7 +8958,7 @@ msgstr ""
 
 #. [unit_type]: id=Drake Priest, race=drake
 #: Flight_Freedom/units/drakes/Priest.cfg:20
-msgid "Their bodies marred by ritual self-mutilation, the priests are the spiritual leaders of the drakes, each one dedicated to a particular god. However, their rituals have left them enfeebled, unable to fly or breathe fire."
+msgid "Their bodies marred by ritual self-mutilation, the Priests are the spiritual leaders of the drakes, each one dedicated to a particular god. However, their rituals have left them enfeebled, unable to fly or breathe fire."
 msgstr ""
 
 #. [unit_type]: id=Drake Slave, race=drake
@@ -9028,7 +9028,7 @@ msgstr ""
 
 #. [unit_type]: id=Air Avatar, race=elemental
 #: Flight_Freedom/units/elementals/Air_Avatar.cfg:18
-msgid "Air avatars have distinguished themselves from mere elementals, developing into stormy vortexes, wind and dark clouds circulating inside and outside itself. Avatars have transformed into breathing tempests. Gaining a more substantial body, avatars are less susceptible the common weaponry of swords and arrows. Air avatars guide themselves with the currents they have created, drifting from place to place, crackling with lightning from within their ethereal innards."
+msgid "Air Avatars have distinguished themselves from mere elementals, developing into stormy vortexes, wind and dark clouds circulating inside and outside itself. Air Avatars have transformed into breathing tempests. Gaining a more substantial body, Air Avatars are less susceptible to common weaponry such as swords and arrows. Air Avatars guide themselves with the currents they have created, drifting from place to place, crackling with lightning from within their ethereal innards."
 msgstr ""
 
 #. [attack]: type=impact
@@ -9055,9 +9055,9 @@ msgstr ""
 #. [unit_type]: id=Air Elemental, race=elemental
 #: Flight_Freedom/units/elementals/Air_Elemental.cfg:19
 msgid ""
-"Air elementals are magical entities built entirely out of the Abyssal atmosphere. Summoned elementals, introduced in a world where air is omnipresent, regenerate their bodies continually with time’s passage. Given their anatomies, elementals of this variety are quick and evasive, albeit having a delicate frame that could be destroyed instantly by a well-placed attack. However, a ‘well-placed attack’ would be difficult to place on these elementals, given their highly resistant bodies of air.\n"
+"Air Elementals are magical entities built entirely out of the Abyssal atmosphere. Summoned Elementals, introduced in a world where air is omnipresent, regenerate their bodies continually with time’s passage. Given their anatomies, Elementals of this variety are quick and evasive, albeit having a delicate frame that could be destroyed instantly by a well-placed attack. However, a ‘well-placed attack’ would be difficult to place on these Elementals, given their highly resistant bodies of air.\n"
 "\n"
-"Still, summoners who stir such beings into their world know that an air elemental could vanish just as quickly as it was summoned forth."
+"Still, summoners who stir such beings into their world know that an Air Elemental could vanish just as quickly as it was summoned forth."
 msgstr ""
 
 #. [attack]: type=arcane
@@ -9073,7 +9073,7 @@ msgstr ""
 #. [unit_type]: id=Air God, race=elemental
 #: Flight_Freedom/units/elementals/Air_God.cfg:19
 msgid ""
-"Men fear the wind — what can be a gentle zephyr in the afternoon can turn into a twister in the evening. Wind and storm can turn the staunchest man into a rag doll dancing in the sky; lightning will then shoot him down back to earth. Yet air gods have much more to be feared, for they ride upon their own wind and bring about disasters at a mere order. Gods of the air are nigh immune to physical assault with bodies that appear almost identical to an actual storm.\n"
+"Men fear the wind — what can be a gentle zephyr in the afternoon can turn into a twister in the evening. Wind and storm can turn the staunchest man into a rag doll dancing in the sky; lightning will then shoot him down back to earth. Yet Air Gods have much more to be feared, for they ride upon their own wind and bring about disasters at a mere order. Gods of the air are nigh immune to physical assault with bodies that appear almost identical to an actual storm.\n"
 "\n"
 "Summoners believe that even the heavens quake upon the sight of this great nimbus of raging thunder and rain living in the skies, extending calamity to wherever the eye of its storm gazes."
 msgstr ""
@@ -9090,7 +9090,7 @@ msgstr ""
 
 #. [unit_type]: id=Earth Avatar, race=elemental
 #: Flight_Freedom/units/elementals/Earth_Avatar.cfg:16
-msgid "Avatars of the earth, though colossal, are slow-moving, hobbled by the weight of their bulk. For this reason, earth avatars are bought out into the battlefield for defending important landmarks such as mountains and hilltops. Situated in defensible areas, avatars with their outlandish strength crush parties of opposition while bracing against all varieties of attacks. When all is done, these giants stand still and tall like massive sculptures; over time, avatars begin to house tiny sprigs of vegetation growing outside of its rocky cracks."
+msgid "Avatars of the earth, though colossal, are slow-moving, hobbled by the weight of their bulk. For this reason, Earth Avatars are bought out into the battlefield for defending important landmarks such as mountains and hilltops. Situated in defensible areas, Earth Avatars with their outlandish strength crush parties of opposition while bracing against all varieties of attacks. When all is done, these giants stand still and tall like massive sculptures; over time, Earth Avatars begin to house tiny sprigs of vegetation growing outside of its rocky cracks."
 msgstr ""
 
 #. [attack]: type=impact
@@ -9109,9 +9109,9 @@ msgstr ""
 #. [unit_type]: id=Earth Elemental, race=elemental
 #: Flight_Freedom/units/elementals/Earth_Elemental.cfg:17
 msgid ""
-"The most unswerving of all elementals are the ones born from the earth. Such large elementals carry the strength of easily ten men each, but their true function are living fortresses, defending lines of troops with their uncompromising and sturdy rock-skin. Earth elementals are capable of withstanding barrages of blows before finally collapsing into shambles of stones, returning back to the earth.\n"
+"The most unswerving of all Elementals are the ones born from the earth. Such large Elementals carry the strength of easily ten men each, but their true function are living fortresses, defending lines of troops with their uncompromising and sturdy rock-skin. Earth Elementals are capable of withstanding barrages of blows before finally collapsing into shambles of stones, returning back to the earth.\n"
 "\n"
-"After their summoning from the Abyss, earth elementals are imbued with regenerative abilities by their summoners to improve them as living shields, thus expanding their lifespans and their services to their masters."
+"After their summoning from the Abyss, Earth Elementals are imbued with regenerative abilities by their summoners to improve them as living shields, thus expanding their lifespans and their services to their masters."
 msgstr ""
 
 #. [unit_type]: id=Earth God, race=elemental
@@ -9121,7 +9121,7 @@ msgstr ""
 
 #. [unit_type]: id=Earth God, race=elemental
 #: Flight_Freedom/units/elementals/Earth_God.cfg:17
-msgid "Earth gods are simply gargantuan: one raised fist can shake the very foundations of the land. Many tales have been told about the work of such gods who lumber across the earth, so great in size that entire villages are dwarfed by their presence. Bulwarks against the strongest swords, lances, and spells, packing enough force to pulverize dozens in a single downward strike, and continuously regenerating their stony bodies, earth gods are no easy feat to bring down-or even force back."
+msgid "Earth Gods are simply gargantuan: one raised fist can shake the very foundations of the land. Many tales have been told about the work of such Gods who lumber across the earth, so great in size that entire villages are dwarfed by their presence. Bulwarks against the strongest swords, lances, and spells, packing enough force to pulverize dozens in a single downward strike, and continuously regenerating their stony bodies, Earth Gods are no easy feat to bring down-or even force back."
 msgstr ""
 
 #. [unit_type]: id=Fire Avatar, race=elemental
@@ -9131,7 +9131,7 @@ msgstr ""
 
 #. [unit_type]: id=Fire Avatar, race=elemental
 #: Flight_Freedom/units/elementals/Fire_Avatar.cfg:140
-msgid "After fire consumes enough fuel-flesh, bones, wood, iron, even entire landscapes-it will unavoidably grow into something far more sinister in shape and body. It is a dreadful sight to behold the fire avatar as it takes flight with its fiery wings, casting a blazing light on earth and man. The magic within its body has honed, granting the avatar a magical potency in its fire-wrought claws. Only dauntless summoners are able to lead such devastating beings in war without fear of being reduced to ashes."
+msgid "After fire consumes enough fuel-flesh, bones, wood, iron, even entire landscapes-it will unavoidably grow into something far more sinister in shape and body. It is a dreadful sight to behold the Fire Avatar as it takes flight with its fiery wings, casting a blazing light on earth and man. The magic within its body has honed, granting the Fire Avatar a magical potency in its fire-wrought claws. Only dauntless summoners are able to lead such devastating beings in war without fear of being reduced to ashes."
 msgstr ""
 
 #. [attack]: type=fire
@@ -9148,7 +9148,7 @@ msgstr ""
 
 #. [unit_type]: id=Fire Elemental, race=elemental
 #: Flight_Freedom/units/elementals/Fire_Elemental.cfg:19
-msgid "Fire is a dangerous manifestation of nature’s destruction. While adept users of magic can craft fire from nothing but thin air, there is nothing more terrible than an actual materialization of living flame and fury. Its fiery form visible in pitch darkness, the fire elemental is but an entity of arcane magic summoned from the Abyss, almost always brought out for intent of war. From the moment the elemental is brought into this world, it burns bright with mindlessness and follows the orders of its summoner until its very extinguishing."
+msgid "Fire is a dangerous manifestation of nature’s destruction. While adept users of magic can craft fire from nothing but thin air, there is nothing more terrible than an actual materialization of living flame and fury. Its fiery form visible in pitch darkness, the Fire Elemental is but an entity of arcane magic summoned from the Abyss, almost always brought out for intent of war. From the moment the Fire Elemental is brought into this world, it burns bright with mindlessness and follows the orders of its summoner until its very extinguishing."
 msgstr ""
 
 #. [attack]: type=fire
@@ -9163,7 +9163,7 @@ msgstr ""
 
 #. [unit_type]: id=Fire God, race=elemental
 #: Flight_Freedom/units/elementals/Fire_God.cfg:19
-msgid "Upon reaching the pinnacle of its conflagration, the elemental has utterly become a moving inferno, a god of its own respect. Even the very summoners who have brought these legendary beings from the Abyss tremble at the sight of the flying phoenix aflame, its massive wings sending sparks and embers downwards onto the far-below ground. Growing brighter and stronger with every foe fed into its flames, the fire god appears as a miniature sun in the darkest of nights. Everything in its marked path is set ablaze."
+msgid "Upon reaching the pinnacle of its conflagration, the Fire Elemental has utterly become a moving inferno, a god of its own respect. Even the very summoners who have brought these legendary beings from the Abyss tremble at the sight of the flying phoenix aflame, its massive wings sending sparks and embers downwards onto the far-below ground. Growing brighter and stronger with every foe fed into its flames, the Fire God appears as a miniature sun in the darkest of nights. Everything in its marked path is set ablaze."
 msgstr ""
 
 #. [unit_type]: id=Water Avatar, race=elemental
@@ -9173,7 +9173,7 @@ msgstr ""
 
 #. [unit_type]: id=Water Avatar, race=elemental
 #: Flight_Freedom/units/elementals/Water_Avatar.cfg:35
-msgid "With time, the water elemental dramatically increases both its size and strength of current to become something grander: an avatar of water. Ceaselessly turning in hypnotizing spirals of surges, water avatars manipulate their bodies into whatever form suits the battle. Their bodies have become tumultuous and wilder in the heat of combat, their whole form a chaotic typhoon of rain and water. To this effect, many a dazed soldier have sometimes wondered why the frothy tides of a beach were pulling at his feet in the middle of a battlefield."
+msgid "With time, the Water Elemental dramatically increases both its size and strength of current to become something grander: an avatar of water. Ceaselessly turning in hypnotizing spirals of surges, Water Avatars manipulate their bodies into whatever form suits the battle. Their bodies have become tumultuous and wilder in the heat of combat, their whole form a chaotic typhoon of rain and water. To this effect, many a dazed soldier have sometimes wondered why the frothy tides of a beach were pulling at his feet in the middle of a battlefield."
 msgstr ""
 
 #. [attack]: type=cold
@@ -9204,9 +9204,9 @@ msgstr ""
 #. [unit_type]: id=Water Elemental, race=elemental
 #: Flight_Freedom/units/elementals/Water_Elemental.cfg:36
 msgid ""
-"The Abyss is home to aquatic beings composed of nothing more than the same pure water essential for all living creatures. Such a being is held together by a singular magical bond circulating its whole watery form. This grants it regeneration when submerged in other bodies of water. The extraordinary water in its body has moderate healing properties, which can mend the injuries of allies. Less volatile than the other inhabitants of the Abyss, water elementals are preferred by the more conservative of summoners.\n"
+"The Abyss is home to aquatic beings composed of nothing more than the same pure water essential for all living creatures. Such a being is held together by a singular magical bond circulating its whole watery form. This grants it regeneration when submerged in other bodies of water. The extraordinary water in its body has moderate healing properties, which can mend the injuries of allies. Less volatile than the other inhabitants of the Abyss, Water Elementals are preferred by the more conservative of summoners.\n"
 "\n"
-"Yet these elementals are by no means harmless, and the unwary opponent may find their bodies frozen at a moment’s glance, their limbs transformed into cold, useless ice."
+"Yet Water Elementals are by no means harmless, and the unwary opponent may find their bodies frozen at a moment’s glance, their limbs transformed into cold, useless ice."
 msgstr ""
 
 #. [unit_type]: id=Water God, race=elemental
@@ -9217,7 +9217,7 @@ msgstr ""
 #. [unit_type]: id=Water God, race=elemental
 #: Flight_Freedom/units/elementals/Water_God.cfg:36
 msgid ""
-"Scarce even in the Abyss, water gods have frozen into the shape of glacial serpents. Despite their rigid appearance, these beasts of water dart across the land with startling grace and flexibility. Water gods are considered miracles of life by Summoners, the magical water within them allowing them to remedy the wounds of allies by their mere presence.\n"
+"Scarce even in the Abyss, Water Gods have frozen into the shape of glacial serpents. Despite their rigid appearance, these beasts of water dart across the land with startling grace and flexibility. Water Gods are considered miracles of life by Summoners, the magical water within them allowing them to remedy the wounds of allies by their mere presence.\n"
 "\n"
 "Their arctic beauty and strength, dazzling to all who oppose the Summoners, can freeze a man’s heart even before his body is engulfed in a bone-chilling blizzard."
 msgstr ""
@@ -9292,7 +9292,7 @@ msgstr ""
 
 #. [unit_type]: id=FtF Shadow Mage      #to differentiate from Liberty, race=human, gender=male
 #: Flight_Freedom/units/humans/Mage_Shadow.cfg:23
-msgid "Years of violence and brutality to support the study of forbidden magical arts have turned the shadow mages into feared fighters. Now completely enthralled with power, they have been known to command small followings of henchmen. They are outmatched in direct magical combat with their magic-using peers, and instead channel their energies into devastating melee attacks. Despite their offensive power, the corruption in their souls has begun to adversely affect their health."
+msgid "Years of violence and brutality to support the study of forbidden magical arts have turned the Shadow Mages into feared fighters. Now completely enthralled with power, they have been known to command small followings of henchmen. They are outmatched in direct magical combat with their magic-using peers, and instead channel their energies into devastating melee attacks. Despite their offensive power, the corruption in their souls has begun to adversely affect their health."
 msgstr ""
 
 #. [attack]: type=cold
@@ -9307,7 +9307,7 @@ msgstr ""
 
 #. [unit_type]: id=Pirate, race=human
 #: Flight_Freedom/units/humans/Outlaw_Pirate.cfg:17
-msgid "Dogs of the sea, pirates are outlaws who prey in the open water. Armed with a cutlass, they make nasty foes."
+msgid "Dogs of the sea, Pirates are outlaws who prey in the open water. Armed with a cutlass, they make nasty foes."
 msgstr ""
 
 #. [attack]: type=blade
@@ -9326,7 +9326,7 @@ msgstr ""
 
 #. [unit_type]: id=Pirate Captain, race=human
 #: Flight_Freedom/units/humans/Outlaw_Pirate_Captain.cfg:18
-msgid "Like all pirates, these are thieves of the water. This one is a captain, who is in charge of leading his thugs into battle."
+msgid "Like all Pirates, these are thieves of the water. This one is a Captain, who is in charge of leading his thugs into battle."
 msgstr ""
 
 #. [unit_type]: id=Pirate Legend 1
@@ -9369,7 +9369,7 @@ msgstr ""
 
 #. [unit_type]: id=Cave Ant, race=monster
 #: Flight_Freedom/units/monsters/Ant_Cave.cfg:20
-msgid "Giant ants are common in almost any environment, from caverns deep under the earth to the tops of tall mountains. Cave ants such as these live deep underground and tend to grow up over their normal size. Though normally not hostile, they can bite at close range, dealing more damage than their cousins above-ground."
+msgid "Giant Ants are common in almost any environment, from caverns deep under the earth to the tops of tall mountains. Cave Ants such as these live deep underground and tend to grow up over their normal size. Though normally not hostile, they can bite at close range, dealing more damage than their cousins above-ground."
 msgstr ""
 
 #. [unit_type]: id=Desert Lion, race=cats
@@ -9379,7 +9379,7 @@ msgstr ""
 
 #. [unit_type]: id=Desert Lion, race=cats
 #: Flight_Freedom/units/monsters/Cat_Desert.cfg:20
-msgid "The desert is a perilous place indeed for the traveler. But among all of its dangers, few are as feared as a pride of hungry lions lying in wait to pounce on the unwary."
+msgid "The desert is a perilous place indeed for the traveler. But among all of its dangers, few are as feared as a pride of hungry Lions lying in wait to pounce on the unwary."
 msgstr ""
 
 #. [unit_type]: id=Giant Boar, race=monster
@@ -9610,7 +9610,7 @@ msgstr ""
 
 #. [unit_type]: id=Naga Warrior Mage, race=naga, gender=male,female
 #: Flight_Freedom/units/nagas/Warrior_Mage.cfg:26
-msgid "Having completely given up the use of offensive magic, these warrior mages have learned to compensate for their small size by using magic to enhance their agility and reflexes, meaning that they are better on land than any of their fellow nagas. Wielding dual swords that glow with magical energy, they strike fear into the hearts of their enemies."
+msgid "Having completely given up the use of offensive magic, these Warrior Mages have learned to compensate for their small size by using magic to enhance their agility and reflexes, meaning that they are better on land than any of their fellow nagas. Wielding dual swords that glow with magical energy, they strike fear into the hearts of their enemies."
 msgstr ""
 
 #. [female]: gender=female
