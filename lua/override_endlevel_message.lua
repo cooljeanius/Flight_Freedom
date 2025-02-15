@@ -1,5 +1,6 @@
 ---
--- Override the title and report in endlevel dialog. Must be called before [endlevel] to work reliably.
+-- Override the title and report in endlevel dialog. Must be called
+-- immediately before [endlevel] to work reliably.
 --
 -- [override_endlevel_message]
 --     title= _ "Custom Title"
@@ -15,9 +16,6 @@ function wesnoth.wml_actions.override_endlevel_message(cfg)
 	custom_carryover.get_popup_text_basic = function()
 		return title, report
 	end
-	-- generates warning since this event can't be serialized since it's
-	-- registered after preload, but that doesn't actually matter since this
-	-- should only be called at scenario end
 	wesnoth.game_events.add {
 		name = "scenario_end",
 		id = "carryover_gold",
@@ -25,6 +23,9 @@ function wesnoth.wml_actions.override_endlevel_message(cfg)
 		priority = -1000,
 		action = function()
 			custom_carryover.do_carryover_gold()
+			-- avoids warning that this event can't be serialized
+			-- since it's registered after preload
+			wesnoth.game_events.remove("carryover_gold")
 		end
 	}
 end
