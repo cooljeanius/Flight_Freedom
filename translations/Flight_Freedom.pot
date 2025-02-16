@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-02-15 21:51 UTC\n"
+"POT-Creation-Date: 2025-02-16 02:22 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3740,7 +3740,7 @@ msgstr ""
 #. [message]: speaker=Kogw
 #: Flight_Freedom/scenarios/08_Landfall.cfg:895
 #: Flight_Freedom/scenarios/09_Drake_Escape.cfg:750
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:877
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:880
 msgid "A spirit has attacked!"
 msgstr ""
 
@@ -5505,104 +5505,104 @@ msgid "I call upon Gar-Hagar, god of all that is burning and favored child of Ga
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:730
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:733
 msgid "Wow, that was quite the fiery display! I just wonder if it could have been even more fiery..."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:735
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:738
 msgid "The portal seems to have closed. We must hope it remains closed for the foreseeable future... perhaps with a hotter flame."
 msgstr ""
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:746
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:749
 msgid "Noble drakes... you have my gratitude. Now I can die in peace..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:767
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:770
 msgid "The Gate is still open! Close it quickly before any more monsters come through!"
 msgstr ""
 
 #. [message]: speaker=Kogw
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:777
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:782
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:780
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:785
 msgid "I feel a growing sensation of evil. As if the undead are growing stronger before our eyes!"
 msgstr ""
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:793
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:796
 msgid "Indeed the dark magic in the air thickens... we must stop the thaumic flow at its source... destabilize the planar vortex... asymmetric local perturbation of entropy should initiate cascading harmonic failure and interrupt transdimensional flux..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:797
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:800
 msgid "Speak plainly, human!"
 msgstr ""
 
 #. [message]: speaker=Elealonna
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:801
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:804
 msgid "Apologies... we must set the gate on fire... that should close it..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:807
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:810
 msgid "I too feel the undead menace growing. We must close the gate quickly. Onward!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:887
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:890
 msgid "Focus on the gate!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:965
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:968
 msgid "The Gate... it's glowing..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1027
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1030
 msgid "Get... out... of... my... HEAD!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1035
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1038
 msgid "No... these voices compel me... must obey... no... no... NO!"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1039
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1042
 msgid "Malakar, hold fast! You must not let this evil overtake you!"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1056
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1059
 msgid "doom to all turn back TURN BACK nightmare of ending doom destruction desolation death DEATH to the world"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1057
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1060
 msgid "darkness awaits all YOU CANNOT PREVAIL failure despair empty death void hatred misery enmity black HATE"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1058
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1061
 msgid "evil will NOT BE DENIED all must die ALL MUST END torture PAIN agony terror suffering why fight the inevitable"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1059
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1062
 msgid "all must die YOU WILL DIE DARKNESS OBLIVION give up GIVE UP ALL IS DEATH death awaits you DIE DIE DIE"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1072
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1075
 msgid "Some sort of barrier is keeping me from approaching the lich!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1154
+#: Flight_Freedom/scenarios/15_Gate_Storms.cfg:1157
 msgid "We must destroy the Gate!"
 msgstr ""
 
