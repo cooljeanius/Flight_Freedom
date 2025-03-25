@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-03-25 00:04 UTC\n"
+"POT-Creation-Date: 2025-03-25 00:35 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6728,7 +6728,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1192
-msgid "Your Highness, reports from the field indicate that our dealings with Prax were a dead end. He does not have, and perhaps never had, enough gold to save the kingdom. It pleases me to report that he is now dead and his lands placed under our control. Our only financial hope is our new colony in Morogor. We have our hands on a fortune's worth of their unique stone, yet the first shipments have are still months away. We were only able to take Morogor because the natives were divided against each other. We cannot risk Prax's escaped slaves rallying our new Drakish subjects."
+msgid "Your Highness, reports from the field indicate that our dealings with Prax were a dead end. He does not have, and perhaps never had, enough gold to save the kingdom. It pleases me to report that he is now dead and his lands placed under our control. Our only financial hope is our new colony in Morogor. We have our hands on a fortune's worth of their unique stone, yet the first shipments are still months away. We were only able to take Morogor because the natives were divided against each other. We cannot risk Prax's escaped slaves rallying our new Drakish subjects."
 msgstr ""
 
 #. [message]: speaker=narrator
