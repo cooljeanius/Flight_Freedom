@@ -66,11 +66,11 @@ end
 ---
 -- Get current game zoom level.
 --
--- [get_zoom]
+-- [store_zoom]
 --     variable=zoom
--- [/get_zoom]
+-- [/store_zoom]
 ---
-function wesnoth.wml_actions.get_zoom(cfg)
+function wesnoth.wml_actions.store_zoom(cfg)
 	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
 end
 
