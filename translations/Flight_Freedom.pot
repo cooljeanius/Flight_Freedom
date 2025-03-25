@@ -766,7 +766,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: Flight_Freedom/macros/objectives.cfg:157
-msgid "Note: the campaign will not end if this scenario is lost."
+msgid "NOTE: the campaign will not end if this scenario is lost."
 msgstr ""
 
 #. [time]: id=underground_ftf
