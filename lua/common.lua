@@ -55,6 +55,7 @@ end
 
 ---
 -- Clears the chat log.
+--
 -- [clear_chat]
 -- [/clear_chat]
 ---
@@ -171,6 +172,57 @@ function wesnoth.wml_actions.fading_message(cfg)
 			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. caption .. "</span>\n<span size='large'>" .. message .. "</span>", options)
 			wesnoth.interface.delay(delay_time)
 			wesnoth.interface.deselect_hex()
+		end
+	end
+end
+
+---
+-- Shows a simple dialog with a scrollable image.
+--
+-- [show_image_dialog]
+--     image=path/to/image_file
+-- [/show_image_dialog]
+---
+function wesnoth.wml_actions.show_image_dialog(cfg)
+	local image_path = cfg.image
+	function pre_show(self)
+		self.image.label = image_path
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+-- CAUTION: This disables end turn during unit selection and afterwards enables it.
+-- If you wish for end turn to be disabled afterward, you should call allow_end_turn(false) afterward.
+-- Logic inspired in part by God Game Magic Mod
+function select_tile(caption, validator_func, action_func, cancel_func)
+	wesnoth.interface.allow_end_turn(false)
+	local width = math.floor(wesnoth.current.map.width / 2)
+	local height = math.floor(wesnoth.current.map.height / 2)
+	local step_guide = wesnoth.interface.add_overlay_text("")
+	local old_on_mouse_move = wesnoth.game_events.on_mouse_move or (function() end)
+	wesnoth.game_events.on_mouse_move = function(x, y)
+		step_guide:remove(0)
+		step_guide = wesnoth.interface.add_overlay_text(caption, {location = {(x-width)*5,(-y+height)*5+190}, duration = "unlimited", valign = "bottom", halign = "center", size = 20, bgcolor={0,0,0}, color={255,255,100}, bgalpha=80})
+	end
+	local old_on_mouse_button = wesnoth.game_events.on_mouse_button or (function() end)
+	wesnoth.game_events.on_mouse_button = function(x, y, button, event)
+		if button == "left" and event == "up" then
+			wesnoth.interface.select_unit()
+			if validator_func(x, y) then
+				wesnoth.game_events.on_mouse_move = old_on_mouse_move
+				wesnoth.game_events.on_mouse_button = old_on_mouse_button
+				step_guide:remove(0)
+				action_func(x, y)
+				wesnoth.interface.allow_end_turn(true)
+			end
+		elseif button == "right" and event == "click" then
+			wesnoth.game_events.on_mouse_move = old_on_mouse_move
+			wesnoth.game_events.on_mouse_button = old_on_mouse_button
+			step_guide:remove(0)
+			wesnoth.interface.allow_end_turn(true)
+			if cancel_func then cancel_func() end
+			return true
 		end
 	end
 end
