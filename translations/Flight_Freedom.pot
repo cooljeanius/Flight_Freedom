@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-04-05 21:17 UTC\n"
+"POT-Creation-Date: 2025-04-05 21:35 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7959,7 +7959,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1304
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1002
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1003
 msgid "Brother!"
 msgstr ""
 
@@ -8000,7 +8000,7 @@ msgstr ""
 
 #. [unit]: type=Saurian Margrave, id=Kzzklk
 #: Flight_Freedom/scenarios/19_Liberation.cfg:1392
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1076
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1077
 msgid "Kzzklk"
 msgstr ""
 
@@ -8350,142 +8350,142 @@ msgid "You... you were the chief of the swamp tribe! Curses, I knew we should ha
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:880
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:881
 msgid "Yet you failed to stop us. Our spirit, and the spirit of every drake on this island, remains strong! You could only hope to fail. And now you shall die!"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:887
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:888
 msgid "You shall burn in the pits of eternity!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:901
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:902
 msgid "GUARDS!!! Slay them all!"
 msgstr ""
 
 #. [message]: speaker=Yrynyc
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:928
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:929
 msgid "Long live Wesnoth! I curse you monsters to my dying breath!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:942
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:943
 msgid "MOROGOR IS OURS!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:955
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:956
 msgid "But this is bittersweet. My brother is dead... just like Necolag, my daughter."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:965
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:966
 msgid "He died fighting for you. Like any of your other soldiers would."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:969
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:970
 msgid "He was a true warrior."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:976
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:977
 msgid "He may have lived as a priest but he died as a warrior."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:980
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:981
 msgid "He shall be forever remembered."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1006
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1007
 msgid "I am gone! Fight on against the humans without me!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1021
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1022
 msgid "The humans' audacity knows no bounds. Their squatters have defiled the Temple!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1036
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1037
 msgid "Pirate! You're a traitor to your own race!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1040
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1041
 msgid "I have plied the seas for years, and indeed I have plundered many a navy ship. Yet you pillage an entire island, and call me a pirate. Who among us are the greatest criminals?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1057
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1058
 msgid "Malakar, the so-called 'chief'. I shall hoist your skull above the ramparts of Weldyn, as an example to all who dare oppose the might of Wesnoth!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1061
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1062
 msgid "And your flayed corpse shall burn in Mount Morogor."
 msgstr ""
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1144
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1145
 msgid "At yooourrr ccccommaaaand!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1160
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1161
 msgid "They have fortified the entrance!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1164
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1165
 msgid "The tower has fallen into disrepair. Onward!"
 msgstr ""
 
 #. [unit]: id=C'onolar, type=Drake Thrasher
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1199
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1200
 msgid "C'onolar"
 msgstr ""
 
 #. [message]: speaker=C'onolar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1262
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1263
 msgid "Malakar of the Kakatars! Fighting has broken out in huge battles across the island! Every able-bodied drake remaining has pledged their lives to prevent the human reinforcements from reaching Weswyt. They can buy you no more than a few days: make the most of this time!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1266
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1267
 msgid "Look sharp! You've been followed!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1271
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1272
 msgid "On guard! You have pursuers!"
 msgstr ""
 
 #. [event]: id=Garranath
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1280
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1281
 msgid "Garranath"
 msgstr ""
 
 #. [message]: speaker=Garranath
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1285
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1286
 msgid "We are some of the last survivors of the Obsidian Citadel. Our fireballs are at your command!"
 msgstr ""
 
 #. [message]: speaker=squad2_leader
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1364
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1365
 msgid "All right men, let's kill some lizards!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1372
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1373
 msgid "Our forces cannot press this attack much longer! Hurry!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1380
+#: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1381
 msgid "We cannot fight any longer! We have failed!"
 msgstr ""
 
