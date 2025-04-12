@@ -1,4 +1,4 @@
-
+-- Lua code used by scenario 11A (River of Skulls)
 
 -- graph representation of the map
 
@@ -36,7 +36,7 @@ local dest_node = 23
 
 --terrain coordinates that need to be changed to close a graph edge
 local terrains_to_close = {}
-terrains_to_close[1] = 
+terrains_to_close[1] =
 {
 	[2] = {{18, 10}},
 	[3] = {{17, 13}, {18, 13}, {22, 16}, {23, 17}},
@@ -150,7 +150,7 @@ local function is_in_list(e, list1)
 	end
 	return result
 end
-	
+
 local function concat_list(list1, list2)
 	for x = 1, #list2 do
 		table.insert(list1, list2[x])
@@ -199,7 +199,7 @@ local function find_guaranteed_path(cur_node, cur_path, dest_node, max_guarantee
 			end
 		end
 	end
-	return path	
+	return path
 end
 
 -- test if graph is connected
