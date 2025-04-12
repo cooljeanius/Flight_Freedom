@@ -314,9 +314,10 @@ function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
 				else
 					wesnoth.current.map[{terrain_x, terrain_y}] = "Xu"
 				end
-			local hex_coords = get_image_coords_from_hex(terrain_x, terrain_y)
-			local blit_string = "~BLIT(storyline/blackout_hex.png," .. hex_coords[1] .. "," .. hex_coords[2] .. ")"
-			map_image_overlay = map_image_overlay .. blit_string
+				-- extend the overlay that will be applied to the map image
+				local hex_coords = get_image_coords_from_hex(terrain_x, terrain_y)
+				local blit_string = "~BLIT(storyline/blackout_hex.png," .. hex_coords[1] .. "," .. hex_coords[2] .. ")"
+				map_image_overlay = map_image_overlay .. blit_string
 			end
 			edges_closed = edges_closed + 1
 			if edges_closed > num_edges_to_close then
