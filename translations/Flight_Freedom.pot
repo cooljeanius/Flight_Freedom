@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-04-17 04:31 UTC\n"
+"POT-Creation-Date: 2025-04-17 04:39 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2838,7 +2838,7 @@ msgid "Hartholar, you are bound by this sacrifice to accept my people into your 
 msgstr ""
 
 #. [then]: type=Drake Priest, id=Morlin Ka
-#: Flight_Freedom/scenarios/02b_Swamps_of_the_Jamolar.cfg:501
+#: Flight_Freedom/scenarios/02b_Swamps_of_the_Jamolar.cfg:502
 msgid "Morlin Ka"
 msgstr ""
 
@@ -3450,27 +3450,27 @@ msgid "Onward! We must reach Mogradesh soon!"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:486
+#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:487
 msgid "Gar-Alagar smiles on us today! The fog is breaking!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:492
+#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:493
 msgid "The fog is breaking! We must have weakened the hold of the undead!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:513
+#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:514
 msgid "We have cleared the undead from the forest!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:517
+#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:518
 msgid "Yes, but we must press on, before the humans catch us! I fear that we may have tarried too long here."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:536
+#: Flight_Freedom/scenarios/04b_Forest_of_Nightmares.cfg:537
 msgid "The undead are gaining too much power! We are trapped!"
 msgstr ""
 
