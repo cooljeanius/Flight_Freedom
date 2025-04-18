@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-04-17 04:39 UTC\n"
+"POT-Creation-Date: 2025-04-18 11:19 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4524,37 +4524,37 @@ msgid "No! Too much power... it's tearing me apart!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1044
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1056
 msgid "Such power! I cannot absorb more lest it should unmake me."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1050
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1062
 msgid "You have absorbed great power. Take caution that you are not consumed by it!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1088
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1100
 msgid "The trial of fire will confront us with living flames, seeking to turn our inner fires against us."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1096
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1108
 msgid "The trial of earth will transform the very ground we stand on or fly over into an adversary."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1104
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1116
 msgid "The trial of water will attack us with beings of water that will attempt to douse our internal flames."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1335
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1347
 msgid "No! He was a focal point of the trial. With his death the unchained elements will consume us all!"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1347
+#: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:1359
 msgid "The citadel has become impenetrable. We have failed."
 msgstr ""
 
