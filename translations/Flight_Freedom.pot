@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-04-19 03:02 UTC\n"
+"POT-Creation-Date: 2025-04-19 03:10 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4688,108 +4688,113 @@ msgstr ""
 msgid "Men, be prepared for attacks from the South, but the Drakes remain our primary objective. Move out!"
 msgstr ""
 
+#. [message]: speaker=Kogw
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:767
+msgid "They broke through our blockade!"
+msgstr ""
+
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:763
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:774
 msgid "(Kogw) They broke through our blockade!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:864
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:877
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:729
 #: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:859
 msgid "A spirit has attacked!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:871
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:884
 msgid "(Kogw) A spirit has attacked!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:888
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:901
 msgid "By the smoke of Gar-Alagar... a spirit!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:900
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:913
 msgid "It... it did not attack. It just appeared."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:912
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:925
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:763
 msgid "Are you going to say that EVERY time?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:931
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:944
 msgid "(Malakar) By the smoke of Gar-Alagar... a spirit!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:944
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:957
 msgid "(Malakar) It... it did not attack. It just appeared."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:951
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:964
 msgid "(Malakar) Are you going to say that EVERY time?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1071
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1084
 msgid "What is this? Why have we landed here?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1076
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1089
 msgid "(Kogw) I'm truly sorry, Mal, but I can't keep doing this. The drake is all yours, boyos."
 msgstr ""
 
 #. [message]: speaker=slayer
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1105
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1118
 msgid "RUARRAGH!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1110
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1123
 msgid "(Kogw) Back on the boat!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1141
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1154
 msgid "They have summoned reinforcements! Burn down their ships!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1145
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1158
 msgid "By the Eyes... it's hopeless, Malakar! That's a whole fleet of their finest. We must retreat!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1156
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1169
 msgid "Cowardly thinskin. We are drakes! We shall take to the skies at once and make pyres of their worthless boats!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1160
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1173
 msgid "No, Theracar, I fear the pirate has the way of it. Our tribe has spent much of our strength on our journey, and we would not survive a mad charge into their arrows and ballista bolts. We must regroup farther inland."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1166
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1179
 msgid "Hmm. So be it. Regroup farther inland!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1172
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1185
 msgid "Forgive me, darling. I've never had the honor of captaining a finer ship."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1177
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1186
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1190
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1199
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:875
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:586
 #: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:357
@@ -4798,22 +4803,22 @@ msgid "..."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1181
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1194
 msgid "Haaarh. You must see, I have no choice. My hands are tied."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1190
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1203
 msgid "Let us go!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1264
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1277
 msgid "They have summoned reinforcements!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1268
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1281
 msgid "It's hopeless, Malakar. That's a whole fleet of their finest, and we can't escape!"
 msgstr ""
 
