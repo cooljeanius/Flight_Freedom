@@ -213,12 +213,12 @@ local function is_connected()
 	local connected_nodes = enumerate_connected_nodes(start_node, {})
 	local result = false
 	local num_nodes_connected = 0
-	for x = 1, #adjacency_mat do
+	for x = 1, num_nodes do
 		if connected_nodes[x] ~= nil then
 			num_nodes_connected = num_nodes_connected + 1
 		end
 	end
-	if num_nodes_connected == #adjacency_mat then
+	if num_nodes_connected == num_nodes then
 		result = true
 	end
 	return result
@@ -270,8 +270,8 @@ function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
 
 	-- get edges not in guaranteed path
 	local candidate_closable_edges = {}
-	for x = 1, #adjacency_mat do
-		for y = x, #adjacency_mat do
+	for x = 1, num_nodes do
+		for y = x, num_nodes do
 			if adjacency_mat[x][y] == 1 then
 				table.insert(candidate_closable_edges, {x, y})
 			end
