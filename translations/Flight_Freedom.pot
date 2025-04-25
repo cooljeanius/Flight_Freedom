@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-04-25 19:38 UTC\n"
+"POT-Creation-Date: 2025-04-25 20:38 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -419,7 +419,7 @@ msgstr ""
 msgid "Sounds and Music"
 msgstr ""
 
-#: Flight_Freedom/dependency-utils.cfg:18
+#: Flight_Freedom/dependency-utils.cfg:20
 msgid "The required add-on “<i>Flight to Freedom: Resources</i>” is currently <b>not</b> installed."
 msgstr ""
 
