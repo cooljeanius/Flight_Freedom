@@ -1,0 +1,993 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wescamp-i 18n\n"
+"Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2008-01-22 00:21+0100\n"
+"PO-Revision-Date: 2006-12-20 21:57+0100\n"
+"Last-Translator: Guillaume MASSART <massart.guillaume@wanadoo.fr>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "#If a unit is in lava, it will lose 4 hitpoints per turn."
+msgstr "#Une unité dans la lave perd 4 points de vie par tour."
+
+msgid "(Kogw) A spirit has attacked!"
+msgstr "(Kogw) Un esprit a attaqué !"
+
+msgid "(Kogw) On to Morogor!"
+msgstr "(Kogw) En route pour Morogor !"
+
+msgid "(Malakar) Are you going to say that EVERY time?"
+msgstr "(Malakar) Est-ce que tu vas dire ça à CHAQUE fois ?"
+
+msgid "(Malakar) Never!"
+msgstr "(Malakar) Jamais !"
+
+msgid "(Malakar) The bridge collapsed!"
+msgstr "(Malakar) Le pont s'est effondré !"
+
+msgid "(Malakar) The humans pursue us!"
+msgstr "(Malakar) Les humains nous poursuivent !"
+
+msgid "(easiest)"
+msgstr "(facile)"
+
+msgid "(hardest)"
+msgstr "(difficile)"
+
+msgid "A river of lava! How am I supposed to cross?"
+msgstr "Une rivière de lave ! Comment suis-je censé la traverser ?"
+
+msgid ""
+"A role mostly filled by the dregs of society, Taskmasters live a perverted "
+"life of torturing the slaves under their watch. They especially like beating "
+"Drake slaves with their short swords."
+msgstr ""
+"Les garde-chiourmes proviennent souvent de la lie de l'humanité et vivent "
+"torturant les esclaves dont ils ont la garde. Ils aiment particulièrement "
+"frapper les drakes avec leur épée courte."
+
+msgid "A spider web!"
+msgstr "Une toile d'araignée !"
+
+msgid "A spirit has attacked!"
+msgstr "Un esprit a attaqué !"
+
+msgid "AAAAH!"
+msgstr "AAAAH !"
+
+msgid "ARRRRGH!"
+msgstr "ARRRRGH !"
+
+msgid ""
+"After defeating the rebels, Malakar left the valley, his intent to go to the "
+"landing site and sail to his homeland."
+msgstr ""
+"Après avoir vaincu les rebelles, Malakar quitta la vallée avec l'intention "
+"de se rendre au terrain de débarquement"
+
+msgid "All is lost!"
+msgstr "Tout est perdu !"
+
+msgid "Are you going to say that EVERY time?"
+msgstr "Est-ce que tu vas dire ça à CHAQUE fois ?"
+
+msgid ""
+"Armed with a heavy mace, Highwaymen are the last people you want to meet on "
+"a deserted road late at night."
+msgstr ""
+"Armés d'une lourde masse, les vagabonds sont les dernières personnes que "
+"vous souhaiteriez croiser en pleine nuit sur une route déserte."
+
+msgid "Around ten. Fifteen at most."
+msgstr "Environ une dizaine. Une quinzaine tout au plus."
+
+msgid "At yooourrr ccccommaaaand!"
+msgstr "A vos zzzzzzzordres !"
+
+msgid "Betrayal"
+msgstr "Trahison"
+
+msgid "Blockade"
+msgstr "Blocus"
+
+msgid "Blue River"
+msgstr "Le Fleuve Bleu"
+
+msgid "Brother!"
+msgstr "Frère !"
+
+msgid "Caravan"
+msgstr "Le Convoi"
+
+msgid "Caravan escapes"
+msgstr "Le convoi s'échappe"
+
+msgid "Caravan is destroyed by wolves"
+msgstr "Le convoi est détruit par les loups"
+
+msgid "Cave Naga"
+msgstr "Naga des cavernes"
+
+msgid "Caves as far as the eye can see. We are completely lost."
+msgstr "Des grottes à perte de vue. Nous sommes complètement perdus."
+
+msgid "Chicken"
+msgstr "Poule"
+
+msgid "Chickens are kept for their meat and eggs."
+msgstr "Les poules sont élevées pour leur viande et leurs oeufs."
+
+msgid ""
+"Clippers, although fast, are very weak. Armed with a ballista, they are used "
+"primarily as scouts."
+msgstr ""
+"Les clippers sont rapides mais très faibles. Armés d'une baliste, ils sont "
+"principalement employés en tant qu'éclaireurs."
+
+msgid "Collapse the cave exit by destroying the six boulders that support it"
+msgstr ""
+"Faire s'effondrer la voûte de la sortie en détruisant les six rochers qui la "
+"soutiennent."
+
+msgid "Could this key fit that trapdoor?"
+msgstr "Cette clé ouvre-t-elle la trappe ?"
+
+msgid "Cow"
+msgstr "Vache"
+
+msgid "Creatures of the lava! We cannot leave this way!"
+msgstr "Des créatures de lave ! Nous ne pouvons passer par cette route !"
+
+msgid "Crow"
+msgstr "Corbeau"
+
+msgid ""
+"Crows are carrion birds which will eat anything dead. Larger ones such as "
+"this have been also known to attack when food is scarce."
+msgstr ""
+"Les corbeaux sont des oiseaux charognards qui mangent tout ce qui est mort. "
+"On sait que les plus gros d'entre eux attaquent quand la nourriture se fait "
+"rare."
+
+msgid "Death of Kamalar"
+msgstr "Mort de Kamalar"
+
+msgid "Death of Kogw"
+msgstr "Mort de Kogw"
+
+msgid "Death of Malakar"
+msgstr "Mort de Malakar"
+
+msgid "Defeat Prax III"
+msgstr "Vaincre Prax III"
+
+msgid "Defeat all enemy leaders"
+msgstr "Vaincre tous les chefs ennemis"
+
+msgid "Defeat both enemy leaders"
+msgstr "Vaincre les deux chefs ennemis"
+
+msgid "Defeat enemy leader"
+msgstr "Vaincre le chef ennemi"
+
+msgid "Destroy the Gate of Storms"
+msgstr "Détruire le Portail des Tempêtes"
+
+msgid "Destroy the caravan"
+msgstr "Détruire le convoi"
+
+msgid "Destruction of the Unforgiver"
+msgstr "Le Rancunier est détruit"
+
+msgid ""
+"Do not mention your 'gods' again, infidel human. I see I will have to teach "
+"you manners."
+msgstr ""
+"Ne mentionne plus jamais tes 'dieux', humain infidèle. Je vois que je vais "
+"devoir t'apprendre les bonnes manières."
+
+msgid "Don't be so hasty, brother. I bring friends."
+msgstr "Ne sois pas si hâtif frère. J'amène des amis."
+
+msgid "Door"
+msgstr "Porte"
+
+msgid "Drake Guard"
+msgstr "Garde drake"
+
+msgid "Drake Guerilla"
+msgstr "Guérillero drake"
+
+msgid "Drake Hatchling"
+msgstr "Drakonnet"
+
+msgid "Drake Rebel"
+msgstr "Rebelle drake"
+
+msgid "Drake Slave"
+msgstr "Esclave drake"
+
+msgid "Drake Slaves are servile members of this reptilian race."
+msgstr ""
+"Les esclaves drakes sont des membres serviles de cette race reptilienne."
+
+msgid "Drake Spear"
+msgstr "Lance drake"
+
+msgid "Drake Worker"
+msgstr "Travailleur drake"
+
+msgid "Driver"
+msgstr "Conducteur d'esclaves"
+
+msgid "Endgame"
+msgstr "Fin du jeu"
+
+msgid "Epilogue"
+msgstr "Épilogue"
+
+msgid ""
+"Eventually, he and Kogw were deified. Their spirits remained to watch over "
+"the drakes from above."
+msgstr ""
+"Finalement, Malakar et Kogw furent déifiés. Leurs esprits demeurèrent pour "
+"surveiller les drakes depuis le ciel."
+
+msgid "Exit the cave"
+msgstr "Sortir de la grotte"
+
+msgid "Explore the river"
+msgstr "Explorer le fleuve"
+
+msgid "Explore the surrounding area"
+msgstr "Explorer la zone environnante"
+
+msgid "Explore to the south"
+msgstr "Explorer la zone sud"
+
+msgid "Falcon"
+msgstr "Faucon"
+
+msgid "Find a way out of the caverns"
+msgstr "Trouver la sortie des souterrains"
+
+msgid "Flight to Freedom"
+msgstr "Envol vers la liberté"
+
+msgid ""
+"For hundreds of years afterward, Malakar was remembered as one of the heroes "
+"of the drakes."
+msgstr ""
+"On se souvint de Malakar comme de l'un des héros du peuple drake des "
+"centaines d'années après ces événements."
+
+msgid "GUARDS!!! Slay them all!"
+msgstr "GARDES ! Tuez-les tous !"
+
+msgid "GUGGAGUGGAGU!"
+msgstr "GUGGAGUGGAGU !"
+
+msgid ""
+"Galleons are sailing warships. The humans' attempt at sea travel, they are "
+"expensive, but very strong. Armed with three ballistae, they mete out "
+"justice with deadly efficency."
+msgstr ""
+"Les galions sont des navires de guerre à voile. Ils sont la tentative des "
+"humains pour voyager en mer. Ils sont chers, mais très puissants. Armés de "
+"trois balistes, ils répandent la justice avec une efficacité mortelle."
+
+msgid "Gargoyle"
+msgstr "Gargouille"
+
+msgid "Gate of Storms"
+msgstr "Le Portail des Tempêtes"
+
+msgid "Giant Boar"
+msgstr "Sanglier géant"
+
+msgid ""
+"Giant Boars are overgrown pigs with a nasty disposition that will attack "
+"anything that moves. It is fortunate that these animals are rare."
+msgstr ""
+"Les sangliers géants sont des cochons surdimensionnés au tempérament vicieux "
+"qui attaquent tout ce qui bouge. Il est heureux que ces bêtes soient rares."
+
+msgid "HELP!!!"
+msgstr "À l'aide !"
+
+msgid "He died fighting for you. Like any of your other soldiers would."
+msgstr ""
+"Il est mort en combattant pour vous, comme l'aurait fait n'importe lequel de "
+"vos soldats."
+
+msgid "He was a true warrior."
+msgstr "C'était un véritable guerrier."
+
+msgid "Hello brother!"
+msgstr "Bonjour frère !"
+
+msgid "Hey! $gold_given pieces of gold were in this chest!"
+msgstr "Hé ! Il y avait $gold_given pièces d'or dans ce coffre !"
+
+msgid "Highwayman"
+msgstr "Vagabond"
+
+msgid "Hmmm... $gold_given pieces of gold were in this chest!"
+msgstr "Humm... Il y avait $gold_given pièces d'or dans ce coffre !"
+
+msgid "Hmmm... A statue of a dragon."
+msgstr "Humm... Une statue de dragon."
+
+msgid "Hmmm... the bones of a dragon."
+msgstr "Hum... des ossements de dragon."
+
+msgid "Hordes of the Foul Undead"
+msgstr "Les innommables hordes mortes-vivantes"
+
+msgid "Horse"
+msgstr "Cheval"
+
+msgid ""
+"Horses that escape captivity often become wild and hostile to humans, "
+"especially if cornered or frightened.  Though they are easily put down, "
+"their kicks can smash a man's skull."
+msgstr ""
+"Les chevaux qui échappent à la captivité deviennent souvent sauvages et "
+"hostiles aux humains, surtout s'ils sont acculés ou effrayés. Bien qu'ils "
+"soient facilement maîtrisés, leurs ruades peuvent fracasser un crâne d'homme."
+
+msgid ""
+"Horses, when tamed, are used as mounts by Elvish and Human armies, and also "
+"as beasts of burden."
+msgstr ""
+"Lorsqu'ils sont dressés, les chevaux sont utilisés par les armées elfes et "
+"humaines comme montures ou comme bêtes de somme."
+
+msgid "How DARE you insult my clashers, puny softskin!"
+msgstr "Comment oses-tu insulter mes cogneurs, chétive peau-molle !"
+
+msgid "How am I to cross the lava?"
+msgstr "Comment vais-je traverser la lave ?"
+
+msgid ""
+"However, once the humans came to Morogor, we had to go into hiding. With the "
+"help of the saurians, I was able to avoid their patrols."
+msgstr ""
+"Mais quand les humains arrivèrent à Morogor, nous dûmes nous cacher. Je fus "
+"en mesure d'éviter leurs patrouilles grâce aux sauriens."
+
+msgid "I am gone!"
+msgstr "Je meurs !"
+
+msgid "I am gone! Fight on against the humans without me!"
+msgstr "Je quitte ce monde ! Continue le combat sans moi !"
+
+msgid "I dddddie! Fffight ffor meee...avvvennnnge...kkkill huuumansssss..."
+msgstr ""
+"Je trépassssse ! Commmmbattez pour mmmmoi... vengeanccccce... masssssssacrez "
+"les zzzzzzumains..."
+
+msgid "I have failed!"
+msgstr "J'ai échoué !"
+
+msgid "I really failed this time..."
+msgstr "Cette fois, j'ai vraiment échoué..."
+
+msgid "I request your assistance fighting the evil humans."
+msgstr "Je sollicite ton aide pour lutter contre les maléfiques humains."
+
+msgid "I will kill meeeeself ssssome humanssss!"
+msgstr "Je vais ocsssssire cccccces zzzzzumains !"
+
+msgid "I will take command of the saurians."
+msgstr "Je prendrai le commandement des sauriens."
+
+msgid "Intruders! Die!"
+msgstr "Des intrus ! Mourez !"
+
+msgid "Just how many of these saurians do you have?"
+msgstr "De combien de ces sauriens disposes-tu au juste ?"
+
+msgid "Kamalar"
+msgstr "Kamalar"
+
+msgid "Kill the hatchlings! Kill them all!"
+msgstr "Tuez les drakonnets ! Tuez-les tous !"
+
+msgid "Kill the overseer"
+msgstr "Tuer le contremaître"
+
+msgid "Kogw"
+msgstr "Kogw"
+
+msgid "Kogw lived to be 47, and was a noble in Malakar's court."
+msgstr ""
+"Kogw vécut jusqu'à 47 ans, considéré comme un noble à la cour de Malakar."
+
+msgid "Kzzklk"
+msgstr "Kzzklk"
+
+msgid "Kzzklk, show yourself!"
+msgstr "Kzzklk, montre-toi !"
+
+msgid "Landfall"
+msgstr "Débarquement"
+
+msgid "Lava Beast"
+msgstr "Bête de lave"
+
+msgid "Lava Monster"
+msgstr "Monstre de lave"
+
+msgid "Lava hot!!! Ouch!!!"
+msgstr "La lave est brûlante ! Arg !"
+
+msgid "Liberation"
+msgstr "Libération"
+
+msgid ""
+"Like all pirates, these are thieves of the water. This one is a captain, who "
+"is in charge of leading his thugs into battle."
+msgstr ""
+"Comme tous les pirates, ils sont des voleurs des mers. Celui-ci est un "
+"capitaine, qui a pour tâche de mener ses malfrats à la bataille."
+
+msgid "Looky here. $gold_given pieces of gold were in this chest!"
+msgstr ""
+"Venez jeter un oeil ! Il y avait $gold_given pièces d'or dans ce coffre !"
+
+msgid "Luna"
+msgstr "Luna"
+
+msgid "Major Spirit"
+msgstr "Esprit majeur"
+
+msgid "Malakar"
+msgstr "Malakar"
+
+msgid ""
+"Malakar and Kamalar would lead the main force, and the saurian commander, "
+"Kzzklk, would lead his force of saurians, in hopes of outflanking the humans."
+msgstr ""
+"Malakar et Kamalar dirigeraient la force principale et les sauriens, "
+"commandé par Kzzklk, tenteraient de déborder les humains."
+
+msgid ""
+"Malakar lived to the ripe old age of 133. It was rumored that a massive "
+"firestorm erupted when he died, engulfing half of Morogor."
+msgstr ""
+"Malakar vécut jusqu'à l'âge avancé de 133 ans. La rumeur prétend qu'à sa "
+"mort, une gigantesque tempête de feu se déchaîna, engloutissant la moitié de "
+"Morogor."
+
+msgid ""
+"Malakar then traveled to the home of his older brother Kamalar, high priest "
+"of Gar-Dalgar, the Murderer."
+msgstr ""
+"Malakar voyagea ensuite jusqu'à la patrie de Kamalar, son frère aîné, grand "
+"prêtre de Gar-Dalgar le Meurtrier."
+
+msgid ""
+"Malakar was crowned King of the Drakes, for saving his people from the hands "
+"of the humans."
+msgstr ""
+"Malakar fut couronné roi des drakes pour avoir sauvé son peuple des griffes "
+"des humains."
+
+msgid ""
+"Malakar would command the saurians, and the drake army would be split "
+"between them."
+msgstr ""
+"Malakar commanderait les saurien, et l'armée drake devrait être disséminée "
+"parmi eux."
+
+msgid "Minor Spirit"
+msgstr "Esprit mineur"
+
+msgid "More advanced Drakes, the Workers fight with their maces."
+msgstr ""
+"Drakes plus évolués, les travailleurs drakes combattent avec des masses."
+
+msgid ""
+"More experienced Skalds, the Jugglers can throw more daggers. They have also "
+"learned to supplement their natural poison with swamp berry extracts."
+msgstr ""
+"Skalds plus expérimentés, les jongleurs peuvent lancer plus de dagues. Ils "
+"ont également appris à améliorer leur poison naturel avec des extraits de "
+"baies des marais."
+
+msgid "Morogor is ours!"
+msgstr "Morogor est à nous !"
+
+msgid "Move Malakar to the cave entrance"
+msgstr "Amener Malakar à l'entrée des souterrains"
+
+msgid "Move Malakar to the ruined keep"
+msgstr "Amener Malakar au donjon en ruines"
+
+msgid "Move Malakar to the western edge of the river of lava"
+msgstr "Amener Malakar sur la rive ouest de la rivière de lave"
+
+msgid ""
+"Move a Drake Burner, Fire Drake, or Inferno Drake onto the Gate of Storms"
+msgstr ""
+"Amener un drake ardent, un drake incendiaire ou un drake infernal sur le "
+"Portail des Tempêtes"
+
+msgid "Move a unit onto the Gate of Storms"
+msgstr "Amener une unité sur le Portail des Tempêtes"
+
+msgid "Move the Unforgiver to the East"
+msgstr "Amener le Rancunier vers l'est"
+
+msgid "Move the Unforgiver to the bottom"
+msgstr "Amener le Rancunier à la limite sud"
+
+msgid "Move the Unforgiver to the pier"
+msgstr "Amener le Rancunier sur le débarcadère"
+
+msgid "No! The caravan has escaped into the hills!"
+msgstr "Non ! Le convoi s'est échappé dans les collines !"
+
+msgid "Now I will get revenge for my enslavement!"
+msgstr "Maintenant je vais me venger d'avoir été mis en esclavage !"
+
+msgid "Now that I have freed the tribe, I have true warriors at hand!"
+msgstr ""
+"Je dispose de véritables guerriers maintenant que j'ai libéré la tribu !"
+
+msgid "Now the drakes will be enslaved again!"
+msgstr "Les drakes seront de nouveau des esclaves maintenant !"
+
+msgid ""
+"On the island of Morogor, a drake tribe was sleeping one day when they saw a "
+"strange sight."
+msgstr ""
+"Un jour sur l'île de Morogor, une tribu drake était en train de dormir quand "
+"ils virent un étrange spectacle."
+
+msgid "Or, I can place the saurians under your command, to add to your army."
+msgstr ""
+"Ou bien je peux te donner le commandement des sauriens sous ton "
+"commandement, pour agrandir ton armée."
+
+msgid "Our enemies are at are our very backs! We must flee!"
+msgstr "Nos ennemis sont juste derrière ! Nous devons fuir !"
+
+msgid "Our hatchlings are under attack! Hurry!"
+msgstr "Nos drakonnets se font attaquer ! Vite !"
+
+msgid "Our supplies are dangerously low! Hurry!"
+msgstr "Nous n'avons quasiment plus de ravitaillement ! Dépêchons-nous !"
+
+msgid "Overseer"
+msgstr "Contremaître"
+
+msgid "Pig"
+msgstr "Cochon"
+
+msgid "Pirate"
+msgstr "Pirate"
+
+msgid "Pirate Captain"
+msgstr "Capitaine pirate"
+
+msgid "Protect Kamalar"
+msgstr "Protéger Kamalar"
+
+msgid "RUARRAGH!"
+msgstr "RUARRAGH !"
+
+msgid "Rabbit"
+msgstr "Lapin"
+
+msgid "Rebel"
+msgstr "Rebelle"
+
+msgid "Rebellion"
+msgstr "Rébellion"
+
+msgid "Rescue the Hatchlings"
+msgstr "Délivrer les drakonnets"
+
+msgid "Resist for as long as possible"
+msgstr "Résister aussi longtemps que possible"
+
+msgid "Return to Morogor"
+msgstr "Retour à Morogor"
+
+msgid "River of Skulls"
+msgstr "Le Fleuve aux crânes"
+
+msgid "Rock"
+msgstr "Roche"
+
+msgid "Rock Golem"
+msgstr "Golem de roche"
+
+msgid ""
+"Rock Golems are creatures made out of solid, living rock. They have a weak "
+"attack, but are incredibly hard to destroy."
+msgstr ""
+"Les golems de roche sont des créatures constituées de roche vivante et "
+"solide. Leur attaque est faible, mais ils sont incroyablement difficiles à "
+"détruire."
+
+msgid "Rockfall"
+msgstr "Éboulement"
+
+msgid "Saurian Headhunter"
+msgstr "Chasseur de têtes saurien"
+
+msgid ""
+"Saurian Headhunters are the heavy fighters of the saurians. Armed with an "
+"axe, they can deliver relatively strong blows, but are encumbered by armor."
+msgstr ""
+"Les chasseurs de têtes constituent l'infanterie lourde des sauriens. Armés "
+"d'une hache, ils peuvent délivrer des coups relativement puissants, mais "
+"sont encombrés par leur armure."
+
+msgid "Saurian Jarl"
+msgstr "Sergent saurien"
+
+msgid ""
+"Saurian Jarls are the leaders of saurian attack squads. Armed with an axe "
+"and armored, they are capable of doing decent damage and can take some hits, "
+"but the armor slows them down to the point where they cannot sneak pass "
+"enemies."
+msgstr ""
+"Les sergents sauriens sont les meneurs des escouades d'assaut des sauriens. "
+"Équipés d'une hache et d'une armure, ils sont capables d'infliger des "
+"dommages honorables et de subir quelques blessures, mais leur armure les "
+"ralentit à tel point qu'ils ne peuvent s'infiltrer derrière les ennemis."
+
+msgid "Saurian Juggler"
+msgstr "Jongleur saurien"
+
+msgid "Saurian Knifethrower"
+msgstr "Saurien lanceur de couteaux"
+
+msgid "Saurian Margrave"
+msgstr "Margrave saurien"
+
+msgid "Saurian Skald"
+msgstr "Skald saurien"
+
+msgid "Shadow Mage"
+msgstr "Mage d'ombre"
+
+msgid "Sink the Luna"
+msgstr "Couler le Luna"
+
+msgid "So this is what the bastards did with our city!"
+msgstr "Voila donc ce que ces charognes ont fait de notre ville !"
+
+msgid "Southern Shore"
+msgstr "La Côte méridionale"
+
+msgid "Survival"
+msgstr "Survie"
+
+msgid "Take your place at the throne"
+msgstr "Prenez place sur le trône."
+
+msgid "Taskmaster"
+msgstr "Garde-chiourme"
+
+msgid ""
+"The Battleship, very fast and armed with 3 ballistae, is a very versatile "
+"ship."
+msgstr ""
+"Le cuirassé, très rapide et armé de trois balistes, est un navire très "
+"polyvalent."
+
+msgid "The Drake Escape"
+msgstr "La Fuite des drakes"
+
+msgid "The Exodus"
+msgstr "L'Exil"
+
+msgid "The Frigate is rather slow, but it is powerful and well-protected."
+msgstr ""
+"La frégate est relativement lente, mais elle est puissante et bien protégée."
+
+msgid "The Lava Beast is a living, breathing hunk of lava with a bad attitude."
+msgstr ""
+"La bête de lave est une masse de lave vivante et dotée d'un mauvais "
+"caractère."
+
+msgid ""
+"The Major Spirit is one of the most powerful beings known. Literally "
+"radiating with power, it can throw lightning bolts that destroy entire "
+"cities."
+msgstr ""
+"Les esprits majeurs sont parmi les êtres les plus puissants connus. Ils "
+"irradient le pouvoir dont ils sont imprégnés et peuvent projeter des éclairs "
+"qui peuvent détruire des cités entières."
+
+msgid "The Manor"
+msgstr "Le manoir"
+
+msgid "The Open Ocean"
+msgstr "Au large"
+
+msgid ""
+"The Pirate Cruiser is a larger pirate ship, either built or captured. It has "
+"3 ballistae."
+msgstr ""
+"Le croiseur pirate est un plus grand navire pirate, soit construit soit "
+"capturé. Il possède trois balistes."
+
+msgid ""
+"The Pirate Galleon is a former battleship of the Wesnothian navy, captured "
+"by renegades and pressed into service. It has 5 ballistae."
+msgstr ""
+"Le galion pirate est un ancien navire de guerre de la marine wesnothienne, "
+"capturés par des renégats et remis en service. Il possède 5 balistes."
+
+msgid ""
+"The Saurian Knifethrowers are the elite of the Skalds. They possess "
+"incredible skill with their arms, enabling them to throw many daggers at "
+"blindingly fast speeds."
+msgstr ""
+"Les lanceurs de couteaux sont l'élite des skalds. Ils sont incroyablement "
+"compétents avec leurs armes, ce qui leur permet de lancer de multiples "
+"dagues à une vitesse aveuglante."
+
+msgid ""
+"The Saurian Skalds are selected from a slower-moving but considerably "
+"stronger race of saurians, which also bear a dreaded poison bite. However, "
+"they are best known for their manual dexterity, which they translate into "
+"fast dagger throwing."
+msgstr ""
+"Les skalds sauriens sont choisis parmi une espèce de sauriens plutôt lente "
+"mais très forte et dont la queue renferme un poison particulièrement "
+"virulent. Ils sont aussi réputés pour leur adresse manuelle qui leur permet "
+"de lancer rapidement des dagues."
+
+msgid ""
+"The Thunder Spirits are very powerful and mysterious. Even though this "
+"spirit is a minor one, it still wields tremendous power."
+msgstr ""
+"Les esprits mineurs sont très puissants et très mystérieux. Même si ce sont "
+"des esprits plutôt faibles, leur puissance reste colossale."
+
+msgid "The bridge collapsed!"
+msgstr "Le pont s'est effondré !"
+
+msgid "The door will not open for any who are not allied with it."
+msgstr "La porte ne s'ouvre que pour des unités alliées."
+
+msgid "The ground is unstable!"
+msgstr "Le sol est instable !"
+
+msgid "The guards have arrived! Everyone! FIGHT!!!!!"
+msgstr "Les gardiens sont arrivés ! Tous au combat !"
+
+msgid "The hatchlings are free! We must kill the taskmaster!"
+msgstr "Les drakonnets sont libres ! Nous devons tuer le contremaître !"
+
+msgid "The humans follow us! We must continue!"
+msgstr "Les humains nous suivent ! Il devons continuer !"
+
+msgid "The humans pursue us!"
+msgstr "Les humains nous poursuivent !"
+
+msgid "The key fits!"
+msgstr "C'est la bonne clé !"
+
+msgid ""
+"The saurians are elusive and deft of foot, but weak at arms. I propose that "
+"while we attack the humans head-on, the saurians sneak behind the enemy "
+"lines and kill their leaders."
+msgstr ""
+"Les sauriens sont insaisissables et se déplacent sans bruit. Je suggère que "
+"pendant que nous attaquons l'avant-poste humains, les sauriens se faufilent "
+"derrière les lignes ennemis et tuent leurs chefs."
+
+msgid "The saurians will try to outflank the humans."
+msgstr "Les sauriens essaieront de déborder les humains."
+
+msgid "The sign says: Storeroom"
+msgstr "Le panneau indique : Entrepôt."
+
+msgid "The tower has fallen into disrepair. Onward!"
+msgstr "La tour a été laissée à l'abandon. En avant !"
+
+msgid "The trapdoor is locked!"
+msgstr "La trappe est verrouillée !"
+
+msgid "The trapdoor is locked! Could that key fit?"
+msgstr "La trappe est verrouillée ! Cette clé l'ouvrirait-elle ?"
+
+msgid "Theeere are nooooo mmmore sssssaurians lleft."
+msgstr "illll ne ressssste plllus de sssssauriens."
+
+msgid ""
+"Then there will be a tough fight ahead of us. I must decide what I will do "
+"with the saurians."
+msgstr ""
+"Un rude combat nous attend. Je dois décider de ce que je vais faire des "
+"sauriens."
+
+msgid "They are called saurians. A little curiosity I came across one night."
+msgstr ""
+"On les appelle sauriens. Une petite curiosité sur laquelle je suis tombé une "
+"nuit."
+
+msgid "They have fortified the entrance!"
+msgstr "Ils ont fortifié l'entrée !"
+
+msgid "They pursue us! We must hurry!"
+msgstr "Ils nous poursuivent ! Nous devons nous dépêcher !"
+
+msgid "They use gargoyles!"
+msgstr "Ils ont des gargouilles !"
+
+msgid "This mansion is haunted!"
+msgstr "Ce manoir est hanté !"
+
+msgid "This weapon is excellent for a drake rising against its masters."
+msgstr ""
+"Cette arme est parfaite pour un drake qui se soulève contre ses maîtres."
+
+msgid "This weapon is only fit for adult drakes."
+msgstr "Cette arme ne convient qu'aux drakes adultes."
+
+msgid "Thunder Spirit"
+msgstr "Esprit du tonnerre"
+
+msgid "To Morogor!"
+msgstr "Vers Morogor !"
+
+msgid "Turns run out"
+msgstr "Fin des tours atteinte"
+
+msgid "Ugh! Dwarven whiskey!"
+msgstr "Pouah ! Du whisky nain !"
+
+msgid "Undead Dwarf"
+msgstr "Nain mort-vivant"
+
+msgid "Underground"
+msgstr "Sous terre"
+
+msgid "Underground!"
+msgstr "Dans les souterrains !"
+
+msgid "Use them well."
+msgstr "Emploie-les à bon escient."
+
+msgid "VICTORY IS OURS!!!"
+msgstr "A NOUS LA VICTOIRE !"
+
+msgid "Very well. They will arrive at the third dawn."
+msgstr "Très bien. Ils arriveront à l'aube du troisième jour."
+
+msgid "WORK!"
+msgstr "AU TRAVAIL !"
+
+msgid "We continue!"
+msgstr "Nous continuons !"
+
+msgid "We have run out of supplies, these caverns shall be our tomb!"
+msgstr ""
+"Nous avons épuisé notre ravitaillement, ces grottes seront notre tombeau !"
+
+msgid "We have used up half of our supplies."
+msgstr "Nous avons consommé la moitié de nos provisions."
+
+msgid "We must continue!"
+msgstr "Nous devons continuer !"
+
+msgid "We must seize these caverns!"
+msgstr "Nous devons prendre le contrôle de ces grottes !"
+
+msgid "Well said, brother. THE FIGHT FOR FREEDOM BEGINS HERE!!!"
+msgstr "Bien parlé, frère. LE COMBAT POUR LA LIBERTE COMMENCE ICI !"
+
+msgid "Well, we can't go that way."
+msgstr "Eh bien, nous ne pouvons pas aller dans cette direction."
+
+msgid "Well, well, well. $gold_given pieces of gold were in this chest!"
+msgstr "Bien, bien, bien. Il y avait $gold_given pièces d'or dans ce coffre !"
+
+msgid "What are these... creatures?"
+msgstr "Que sont ces... créatures ?"
+
+msgid "Wild Horse"
+msgstr "Cheval sauvage"
+
+msgid ""
+"With the seizure of Weswyt, Morogor was once again the homeland of the "
+"Drakes."
+msgstr ""
+"Morogor était de nouveau la patrie des drakes après la capture de Weswyt."
+
+msgid "Without him, we will be unable to continue. All is lost!"
+msgstr "Nous ne pouvons continuer sans lui. Tout est perdu !"
+
+msgid "Wolf"
+msgstr "Loup"
+
+msgid "Yesss! My axxxxe iss reaaaddy!"
+msgstr "Bien sssssûr ! Ma hachhhhhe est prrrrrête !"
+
+msgid "axe"
+msgstr "hache"
+
+msgid "ballista"
+msgstr "baliste"
+
+msgid "bawk"
+msgstr "bec"
+
+msgid "bite"
+msgstr "morsure"
+
+msgid "boulder"
+msgstr "rocher"
+
+msgid "bump"
+msgstr "boum"
+
+msgid "catapult"
+msgstr "catapulte"
+
+msgid "claws"
+msgstr "griffes"
+
+msgid "crossbow"
+msgstr "arbalète"
+
+msgid "cutlass"
+msgstr "coutelas"
+
+msgid "dagger"
+msgstr "dague"
+
+msgid "fire breath"
+msgstr "souffle ardent"
+
+msgid "fist"
+msgstr "poing"
+
+msgid "hoof"
+msgstr "sabot"
+
+msgid "ice blast"
+msgstr "explosion de glace"
+
+msgid "incisors"
+msgstr "incisives"
+
+msgid "kick"
+msgstr "ruade"
+
+msgid "mace"
+msgstr "masse"
+
+msgid "none"
+msgstr "aucune"
+
+msgid "oink"
+msgstr "groin"
+
+msgid "spear"
+msgstr "lance"
+
+msgid "tail"
+msgstr "queue"
+
+msgid "teeth"
+msgstr "crocs"
+
+msgid "trident"
+msgstr "trident"
+
+msgid "whip"
+msgstr "fouet"

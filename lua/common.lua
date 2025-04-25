@@ -34,7 +34,28 @@ function wesnoth.wml_actions.count_units(cfg)
 end
 
 ---
+-- Sum cost in gold of units matching a filter.
+--
+-- [total_unit_cost]
+--     ... SUF ...
+--     variable=unit_count
+-- [/total_unit_cost]
+---
+function wesnoth.wml_actions.total_unit_cost(cfg)
+	local units = wesnoth.units.find_on_map(cfg)
+	local varname = cfg.variable or "total_cost"
+
+	local functional = wesnoth.require("functional")
+	if units == nil then
+		wml.variables[varname] = 0
+	else
+		wml.variables[varname] = functional.reduce(units, function(a,b) return a + b.cost end, 0)
+	end
+end
+
+---
 -- Clears the chat log.
+--
 -- [clear_chat]
 -- [/clear_chat]
 ---
@@ -45,13 +66,12 @@ end
 ---
 -- Get current game zoom level.
 --
--- [get_zoom]
+-- [store_zoom]
 --     variable=zoom
--- [/get_zoom]
+-- [/store_zoom]
 ---
-function wesnoth.wml_actions.get_zoom(cfg)
-	local varname = cfg.variable or "zoom"
-	wml.variables[varname] = wesnoth.interface.zoom(1, true)
+function wesnoth.wml_actions.store_zoom(cfg)
+	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
 end
 
 --[=[
@@ -93,6 +113,7 @@ SUF: do not include a [filter] subtag. If multiple units match the filter, the m
 
 Optional keys:
 fade_time: how long (milliseconds) message takes to fade out. Cannot be greater than time=.
+caption: similar to [message], override the name displayed for the speaker
 skippable: if yes, then do not show if messages are currently being skipped (e.g. if player has skipped replay)
 [time_lang]:
 	Override time= for specific languages. Accepts both two-letter (ISO 639-1) and longer language codes, with longer overriding two-letter.
@@ -135,7 +156,7 @@ function wesnoth.wml_actions.fading_message(cfg)
 			delay_time = fade_time
 		end
 		if matches ~= nil then
-			local name = matches[1].name
+			local caption = cfg.caption or matches[1].name
 			local unit_x = matches[1].x
 			local unit_y = matches[1].y
 			wesnoth.interface.highlight_hex(unit_x, unit_y)
@@ -148,9 +169,60 @@ function wesnoth.wml_actions.fading_message(cfg)
 			options.halign="center"
 			options.valign="bottom"
 			options.location={0,100}
-			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. name .. "</span>\n<span size='large'>" .. message .. "</span>", options)
+			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. caption .. "</span>\n<span size='large'>" .. message .. "</span>", options)
 			wesnoth.interface.delay(delay_time)
 			wesnoth.interface.deselect_hex()
+		end
+	end
+end
+
+---
+-- Shows a simple dialog with a scrollable image.
+--
+-- [show_image_dialog]
+--     image=path/to/image_file
+-- [/show_image_dialog]
+---
+function wesnoth.wml_actions.show_image_dialog(cfg)
+	local image_path = cfg.image
+	function pre_show(self)
+		self.image.label = image_path
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+-- CAUTION: This disables end turn during unit selection and afterwards enables it.
+-- If you wish for end turn to be disabled afterward, you should call allow_end_turn(false) afterward.
+-- Logic inspired in part by God Game Magic Mod
+function select_tile(caption, validator_func, action_func, cancel_func)
+	wesnoth.interface.allow_end_turn(false)
+	local width = math.floor(wesnoth.current.map.width / 2)
+	local height = math.floor(wesnoth.current.map.height / 2)
+	local step_guide = wesnoth.interface.add_overlay_text("")
+	local old_on_mouse_move = wesnoth.game_events.on_mouse_move or (function() end)
+	wesnoth.game_events.on_mouse_move = function(x, y)
+		step_guide:remove(0)
+		step_guide = wesnoth.interface.add_overlay_text(caption, {location = {(x-width)*5,(-y+height)*5+190}, duration = "unlimited", valign = "bottom", halign = "center", size = 20, bgcolor={0,0,0}, color={255,255,100}, bgalpha=80})
+	end
+	local old_on_mouse_button = wesnoth.game_events.on_mouse_button or (function() end)
+	wesnoth.game_events.on_mouse_button = function(x, y, button, event)
+		if button == "left" and event == "up" then
+			wesnoth.interface.select_unit()
+			if validator_func(x, y) then
+				wesnoth.game_events.on_mouse_move = old_on_mouse_move
+				wesnoth.game_events.on_mouse_button = old_on_mouse_button
+				step_guide:remove(0)
+				action_func(x, y)
+				wesnoth.interface.allow_end_turn(true)
+			end
+		elseif button == "right" and event == "click" then
+			wesnoth.game_events.on_mouse_move = old_on_mouse_move
+			wesnoth.game_events.on_mouse_button = old_on_mouse_button
+			step_guide:remove(0)
+			wesnoth.interface.allow_end_turn(true)
+			if cancel_func then cancel_func() end
+			return true
 		end
 	end
 end
