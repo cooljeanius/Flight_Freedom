@@ -124,8 +124,8 @@ msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
 #: Flight_Freedom/_main.cfg:57
-msgid "(for Wesnoth v1.19.8 or later)"
-msgstr "(Wesnoth v1.19.8 以降用)"
+msgid "(for Wesnoth v1.19.9 or later)"
+msgstr "(Wesnoth v1.19.9 以降用)"
 
 #. [achievement]: id=ftf_desperate_defense
 #: Flight_Freedom/achievements.cfg:8
