@@ -112,7 +112,7 @@ msgid ""
 "unknown lands in the hopes of bringing them back home.\n"
 "\n"
 "<span color='#808080'>Now updated for BFW 1.18+!</span>\n"
-"(Expert Level, 20-26 scenarios)"
+"(Expert level, 20-26 scenarios.)"
 msgstr ""
 "これは、偉大なるドレークのリーダー Malakar の物語である。黒魔術師の手によって"
 "部族が滅亡寸前まで追い詰められるのを当たりにした彼は、散り散りになった仲間を"
@@ -124,8 +124,8 @@ msgstr ""
 
 #. [campaign]: id=Flight_to_Freedom
 #: Flight_Freedom/_main.cfg:57
-msgid "(for Wesnoth v1.18.0 or later)"
-msgstr "(Wesnoth v1.18.0 以降用)"
+msgid "(for Wesnoth v1.18.4 or later)"
+msgstr "(Wesnoth v1.18.4 以降用)"
 
 #. [achievement]: id=ftf_desperate_defense
 #: Flight_Freedom/achievements.cfg:8

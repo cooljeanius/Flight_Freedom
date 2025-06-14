@@ -34,7 +34,28 @@ function wesnoth.wml_actions.count_units(cfg)
 end
 
 ---
+-- Sum cost in gold of units matching a filter.
+--
+-- [total_unit_cost]
+--     ... SUF ...
+--     variable=unit_count
+-- [/total_unit_cost]
+---
+function wesnoth.wml_actions.total_unit_cost(cfg)
+	local units = wesnoth.units.find_on_map(cfg)
+	local varname = cfg.variable or "total_cost"
+
+	local functional = wesnoth.require("functional")
+	if units == nil then
+		wml.variables[varname] = 0
+	else
+		wml.variables[varname] = functional.reduce(units, function(a,b) return a + b.cost end, 0)
+	end
+end
+
+---
 -- Clears the chat log.
+--
 -- [clear_chat]
 -- [/clear_chat]
 ---
@@ -45,13 +66,12 @@ end
 ---
 -- Get current game zoom level.
 --
--- [get_zoom]
+-- [store_zoom]
 --     variable=zoom
--- [/get_zoom]
+-- [/store_zoom]
 ---
-function wesnoth.wml_actions.get_zoom(cfg)
-	local varname = cfg.variable or "zoom"
-	wml.variables[varname] = wesnoth.interface.zoom(1, true)
+function wesnoth.wml_actions.store_zoom(cfg)
+	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
 end
 
 --[=[
@@ -93,45 +113,117 @@ SUF: do not include a [filter] subtag. If multiple units match the filter, the m
 
 Optional keys:
 fade_time: how long (milliseconds) message takes to fade out. Cannot be greater than time=.
-time_<language_code>: override time= for a specific language.
-	For example, specifying time=6000 and time_es_ES=8000 will cause the message to be displayed for 6 seconds unless Wesnoth language is Spanish, in which case it will be displayed for 8 seconds
+caption: similar to [message], override the name displayed for the speaker
+skippable: if yes, then do not show if messages are currently being skipped (e.g. if player has skipped replay)
+[time_lang]:
+	Override time= for specific languages. Accepts both two-letter (ISO 639-1) and longer language codes, with longer overriding two-letter.
+	Example:
+	time=4000
+	[time_lang]
+		es=6000
+		es_PE=8000
+	[/time_lang]
+	If Wesnoth language is Spanish (Paraguay), message will be displayed for 8 seconds, else if other Spanish 6 seconds, else 4 seconds.
 ]=]
 function wesnoth.wml_actions.fading_message(cfg)
-	local message = cfg.message
-	local delay_time = tonumber(cfg.time)
-	local fade_time = tonumber(cfg.fade_time) or 100
-	local matches = wesnoth.units.find_on_map(cfg)
-	local system_lang = wesnoth.get_language()
-	for k,v in pairs(cfg) do
-		if string.len(k) > 5 then
-			if string.sub(k,1,5) == "time_" then
-				local lang = string.sub(k,6, string.len(k))
-				if lang == system_lang then
-					delay_time = tonumber(v)
+	local skippable = cfg.skippable or false
+	if (not skippable) or (not wesnoth.interface.is_skipping_messages()) then
+		local message = cfg.message
+		local delay_time = tonumber(cfg.time)
+		local fade_time = tonumber(cfg.fade_time) or 100
+		local matches = wesnoth.units.find_on_map(cfg)
+		local time_lang = wml.get_child(cfg, "time_lang")
+		if time_lang ~= nil then
+			local system_lang = wesnoth.get_language()
+			for k,v in pairs(time_lang) do
+				if string.len(k) == 2 then
+					local lang = k
+					if lang == string.sub(system_lang, 1, 2) then
+						delay_time = tonumber(v)
+					end
+				end
+			end
+			for k,v in pairs(time_lang) do
+				if string.len(k) > 2 then
+					local lang = k
+					if lang == system_lang then
+						delay_time = tonumber(v)
+					end
 				end
 			end
 		end
+		if fade_time > delay_time then
+			delay_time = fade_time
+		end
+		if matches ~= nil then
+			local caption = cfg.caption or matches[1].name
+			local unit_x = matches[1].x
+			local unit_y = matches[1].y
+			wesnoth.interface.highlight_hex(unit_x, unit_y)
+			local options = {}
+			options.max_width = "80%"
+			options.color = "FFFFFF"
+			options.bgcolor = "000000"
+			options.duration = delay_time - fade_time
+			options.fade_time = fade_time
+			options.halign="center"
+			options.valign="bottom"
+			options.location={0,100}
+			local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. caption .. "</span>\n<span size='large'>" .. message .. "</span>", options)
+			wesnoth.interface.delay(delay_time)
+			wesnoth.interface.deselect_hex()
+		end
 	end
-	if fade_time > delay_time then
-		delay_time = fade_time
+end
+
+---
+-- Shows a simple dialog with a scrollable image.
+--
+-- [show_image_dialog]
+--     image=path/to/image_file
+-- [/show_image_dialog]
+---
+function wesnoth.wml_actions.show_image_dialog(cfg)
+	local image_path = cfg.image
+	function pre_show(self)
+		self.image.label = image_path
 	end
-	if matches ~= nil then
-		local name = matches[1].name
-		local unit_x = matches[1].x
-		local unit_y = matches[1].y
-		wesnoth.interface.highlight_hex(unit_x, unit_y)
-		local options = {}
-		options.max_width = "80%"
-		options.color = "FFFFFF"
-		options.bgcolor = "000000"
-		options.duration = delay_time - fade_time
-		options.fade_time = fade_time
-		options.halign="center"
-		options.valign="bottom"
-		options.location={0,100}
-		local handle = wesnoth.interface.add_overlay_text("<span size='x-large'>" .. name .. "</span>\n<span size='large'>" .. message .. "</span>", options)
-		wesnoth.interface.delay(delay_time)
-		wesnoth.interface.deselect_hex()
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+-- CAUTION: This disables end turn during unit selection and afterwards enables it.
+-- If you wish for end turn to be disabled afterward, you should call allow_end_turn(false) afterward.
+-- Logic inspired in part by God Game Magic Mod
+function select_tile(caption, validator_func, action_func, cancel_func)
+	wesnoth.interface.allow_end_turn(false)
+	local width = math.floor(wesnoth.current.map.width / 2)
+	local height = math.floor(wesnoth.current.map.height / 2)
+	local step_guide = wesnoth.interface.add_overlay_text("")
+	local old_on_mouse_move = wesnoth.game_events.on_mouse_move or (function() end)
+	wesnoth.game_events.on_mouse_move = function(x, y)
+		step_guide:remove(0)
+		step_guide = wesnoth.interface.add_overlay_text(caption, {location = {(x-width)*5,(-y+height)*5+190}, duration = "unlimited", valign = "bottom", halign = "center", size = 20, bgcolor={0,0,0}, color={255,255,100}, bgalpha=80})
+	end
+	local old_on_mouse_button = wesnoth.game_events.on_mouse_button or (function() end)
+	wesnoth.game_events.on_mouse_button = function(x, y, button, event)
+		if button == "left" and event == "up" then
+			wesnoth.interface.select_unit()
+			if validator_func(x, y) then
+				wesnoth.game_events.on_mouse_move = old_on_mouse_move
+				wesnoth.game_events.on_mouse_button = old_on_mouse_button
+				step_guide:remove(0)
+				action_func(x, y)
+				wesnoth.interface.allow_end_turn(true)
+			end
+		elseif button == "right" and event == "click" then
+			wesnoth.game_events.on_mouse_move = old_on_mouse_move
+			wesnoth.game_events.on_mouse_button = old_on_mouse_button
+			step_guide:remove(0)
+			wesnoth.interface.allow_end_turn(true)
+			if cancel_func then cancel_func() end
+			return true
+		end
 	end
 end
 
