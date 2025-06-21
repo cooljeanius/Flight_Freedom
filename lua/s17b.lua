@@ -58,7 +58,7 @@ function wesnoth.wml_actions.show_food_table(cfg)
 		self.total_food.label = total_food_label
 		local food_needed_label = stringx.vformat(_"Food needed: <b>$value</b>", {value=food_needed})
 		self.food_needed.label = food_needed_label
-		
+
 		local listbox = self.kills
 		for raw_unit_type,kill_count in pairs(food_kills) do
 			local unit_type = string.gsub(raw_unit_type, "_", " ")
@@ -78,7 +78,7 @@ function wesnoth.wml_actions.show_food_table(cfg)
 			new_item.food.label = tostring(wml.variables["humans_eaten"] * human_food_value)
 		end
 	end
-	
+
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/food_table.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
