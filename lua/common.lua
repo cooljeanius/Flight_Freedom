@@ -206,11 +206,11 @@ function wesnoth.wml_actions.show_image_dialog(cfg)
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
 
-function wesnoth.wml_actions.skip_messages
+function wesnoth.wml_actions.skip_messages(cfg)
 	wesnoth.interface.skip_messages(true)
 end
 
-function wesnoth.wml_actions.unskip_messages
+function wesnoth.wml_actions.unskip_messages(cfg)
 	wesnoth.interface.skip_messages(false)
 end
 
