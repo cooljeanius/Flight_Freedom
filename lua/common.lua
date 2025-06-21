@@ -74,6 +74,20 @@ function wesnoth.wml_actions.store_zoom(cfg)
 	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
 end
 
+--- Conditional tag if player has debug mode set
+--
+-- [if]
+--     [debug_mode]
+--     [/debug_mode]
+--     [then]
+--         ...
+--     [/then]
+-- [/if]
+---
+function wesnoth.wml_conditionals.debug_mode(cfg)
+	return (wesnoth.game_config.debug or wesnoth.game_config.debug_lua or wesnoth.game_config.mp_debug)
+end
+
 --[=[
 [shuffle_list]
 Author: MadMax (username on the Battle for Wesnoth forum)
@@ -190,6 +204,14 @@ function wesnoth.wml_actions.show_image_dialog(cfg)
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+function wesnoth.wml_actions.skip_messages
+	wesnoth.interface.skip_messages(true)
+end
+
+function wesnoth.wml_actions.unskip_messages
+	wesnoth.interface.skip_messages(false)
 end
 
 -- CAUTION: This disables end turn during unit selection and afterwards enables it.
