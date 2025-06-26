@@ -23,6 +23,32 @@ function random_norm(mean, sd)
 	return r
 end
 
+--- adjusts side numbers in the sidebar to 'skip over' listed sides
+--- used in 17A (Blockade) so that depthstalkers appear the same side as the main naga force
+function conceal_sides_sidebar(side_list)
+	local side_num_map = {}
+	for side in wesnoth.sides.iter() do
+		local new_side_num = side.side
+		for i, v in ipairs(side_list) do
+			if side.side >= v then
+				new_side_num = new_side_num - 1
+			end
+		end
+		print(side.side)
+		print(new_side_num)
+		side_num_map[side.side] = new_side_num
+	end
+	local old_unit_side_ui = wesnoth.interface.game_display.unit_side
+	function wesnoth.interface.game_display.unit_side()
+		local info = old_unit_side_ui()
+		if #info >= 2 then
+			local orig_side_num = info[2][2]["text"]
+			info[2][2]["text"] = side_num_map[tonumber(orig_side_num)]
+		end
+		return info
+	end
+end
+
 ---
 -- Counts the amount of matching units.
 --
