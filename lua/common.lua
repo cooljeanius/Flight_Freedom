@@ -14,6 +14,15 @@ function safe_random(arg)
 	return r
 end
 
+--- return a replay-safe random number sampled from specified normal distribution
+function random_norm(mean, sd)
+	local u = mathx.random()
+	local v = mathx.random()
+	local n = math.sqrt(-2.0 * math.log(u)) * math.cos(2.0 * math.pi * v)
+	local r = (n * sd) + mean
+	return r
+end
+
 ---
 -- Counts the amount of matching units.
 --
