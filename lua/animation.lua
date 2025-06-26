@@ -33,7 +33,10 @@ Required keys:
 origin_x, origin_y: the first tile
 radius: vector length in tiles
 theta: angle in radians; note that this is counterclockwise (i.e. not with reversed Y-axis)
-variable: the variable to write the distance to (default: distance)
+
+Optional keys:
+new_x_variable, new_y_variable: variable names to store new hex coordinates
+	If not specified, will default to "new_x" and "new_y" respectively
 
 Example:
 [find_offset_hex_polar]
@@ -42,11 +45,6 @@ Example:
 	radius=9
 	theta=$(pi()/4)
 [/find_offset_hex_polar]
-[message]
-	speaker=narrator
-	#outputs 10
-	message="$distance"
-[/message]
 ]=]
 
 function wesnoth.wml_actions.find_offset_hex_polar(cfg)
