@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-05-01 05:03 UTC\n"
+"POT-Creation-Date: 2025-06-28 04:32 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -454,6 +454,41 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
+#. [lua]: wesnoth.interface.game_display.unit_weapons
+#: Flight_Freedom/lua/s10b.lua:16
+msgid "<span color='red'>CHILL: -$value%</span>"
+msgstr ""
+
+#. [lua]: wesnoth.interface.game_display.unit_weapons
+#: Flight_Freedom/lua/s10b.lua:17
+msgid "The freezing cold is chilling your drakes' fire breath! Fire attacks do $value% less damage."
+msgstr ""
+
+#. [lua]: pre_show
+#: Flight_Freedom/lua/s17b.lua:54
+msgid "Food acquired: <b><span color='green'>$value</span></b>"
+msgstr ""
+
+#. [lua]: pre_show
+#: Flight_Freedom/lua/s17b.lua:56
+msgid "Food acquired: <b><span color='red'>$value</span></b>"
+msgstr ""
+
+#. [lua]: pre_show
+#: Flight_Freedom/lua/s17b.lua:59
+msgid "Food needed: <b>$value</b>"
+msgstr ""
+
+#. [lua]: pre_show
+#: Flight_Freedom/lua/s17b.lua:75
+msgid "Human"
+msgstr ""
+
+#. [lua]: float_food_label
+#: Flight_Freedom/lua/s17b.lua:87
+msgid "<span color='green'>+$value food</span>"
+msgstr ""
+
 #. [regenerate]: id=custom_regenerates{VALUE}
 #: Flight_Freedom/macros/abilities.cfg:8
 msgid "regenerates"
@@ -523,7 +558,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/macros/deaths.cfg:60
-#: Flight_Freedom/scenarios/01_Survival.cfg:573
+#: Flight_Freedom/scenarios/01_Survival.cfg:589
 msgid "RrrRRARGH!"
 msgstr ""
 
@@ -647,7 +682,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/macros/deaths.cfg:386
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:956
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:966
 msgid "No! Without him, I cannot hope to prevail!"
 msgstr ""
 
@@ -742,9 +777,9 @@ msgstr ""
 #: Flight_Freedom/macros/objectives.cfg:18
 #: Flight_Freedom/macros/objectives.cfg:43
 #: Flight_Freedom/scenarios/01_Survival.cfg:197
-#: Flight_Freedom/scenarios/01_Survival.cfg:351
-#: Flight_Freedom/scenarios/01_Survival.cfg:396
-#: Flight_Freedom/scenarios/01_Survival.cfg:439
+#: Flight_Freedom/scenarios/01_Survival.cfg:367
+#: Flight_Freedom/scenarios/01_Survival.cfg:412
+#: Flight_Freedom/scenarios/01_Survival.cfg:455
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:923
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:934
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:1025
@@ -768,16 +803,16 @@ msgstr ""
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:253
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:351
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:413
-#: Flight_Freedom/scenarios/19_Liberation.cfg:985
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1012
+#: Flight_Freedom/scenarios/19_Liberation.cfg:987
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1014
 msgid "Death of Malakar"
 msgstr ""
 
 #. [objective]: condition=lose
 #: Flight_Freedom/macros/objectives.cfg:20
 #: Flight_Freedom/macros/objectives.cfg:44
-#: Flight_Freedom/scenarios/19_Liberation.cfg:987
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1014
+#: Flight_Freedom/scenarios/19_Liberation.cfg:989
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1016
 msgid "Death of Kogw"
 msgstr ""
 
@@ -787,13 +822,13 @@ msgstr ""
 #. [then]
 #: Flight_Freedom/macros/objectives.cfg:30
 #: Flight_Freedom/scenarios/01_Survival.cfg:198
-#: Flight_Freedom/scenarios/01_Survival.cfg:352
-#: Flight_Freedom/scenarios/01_Survival.cfg:397
+#: Flight_Freedom/scenarios/01_Survival.cfg:368
+#: Flight_Freedom/scenarios/01_Survival.cfg:413
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:254
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:352
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:414
-#: Flight_Freedom/scenarios/19_Liberation.cfg:997
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1024
+#: Flight_Freedom/scenarios/19_Liberation.cfg:999
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1026
 msgid "Death of Theracar"
 msgstr ""
 
@@ -808,7 +843,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/01_Survival.cfg:196
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:263
 #: Flight_Freedom/scenarios/05b_Mogradesh.cfg:212
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:260
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:270
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:279
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:423
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:683
@@ -839,6 +874,12 @@ msgstr ""
 #. [message]: speaker=narrator
 #: Flight_Freedom/macros/objectives.cfg:157
 msgid "NOTE: The campaign will not end if this scenario is lost."
+msgstr ""
+
+#. [message]: speaker=narrator
+#. trailing space is intentional here due to achievement ID being spliced on afterwards:
+#: Flight_Freedom/macros/objectives.cfg:174
+msgid "achievement blocked due to debug mode: "
 msgstr ""
 
 #. [time]: id=underground_ftf
@@ -2215,12 +2256,6 @@ msgstr ""
 msgid "bombard"
 msgstr ""
 
-#. [message]: speaker=narrator
-#. trailing space is intentional here due to achievement ID being spliced on afterwards:
-#: Flight_Freedom/main.cfg:98
-msgid "achievement blocked due to BLOCK_ACHIEVEMENTS being defined: "
-msgstr ""
-
 #. [scenario]: id=Survival
 #: Flight_Freedom/scenarios/01_Survival.cfg:4
 msgid "Survival"
@@ -2290,7 +2325,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:27
 #: Flight_Freedom/scenarios/17a_Blockade.cfg:22
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:31
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:25
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:32
 #: Flight_Freedom/scenarios/19_Liberation.cfg:33
 #: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:19
 #: Flight_Freedom/scenarios/21_Epilogue.cfg:17
@@ -2310,7 +2345,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/05b_Mogradesh.cfg:33
 #: Flight_Freedom/scenarios/06b_The_Crypt_of_the_Mountains.cfg:33
 #: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:46
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:258
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:268
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:44
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:35
 #: Flight_Freedom/scenarios/10a_Underground.cfg:29
@@ -2322,7 +2357,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:35
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:35
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:39
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:34
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:41
 #: Flight_Freedom/scenarios/19_Liberation.cfg:44
 #: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:29
 #: Flight_Freedom/scenarios/21_Epilogue.cfg:24
@@ -2373,95 +2408,100 @@ msgstr ""
 msgid "For the course of this campaign <i>Inferno Drakes</i> can upgrade to <b>Armageddon Drakes</b>, and <i>Drake Clashers</i> can upgrade to <b>Drake Guards</b>."
 msgstr ""
 
+#. [message]: speaker=narrator
+#: Flight_Freedom/scenarios/01_Survival.cfg:319
+msgid "NOTE: Achievements are disabled if debug mode is enabled."
+msgstr ""
+
 #. [message]: speaker=Necolag
-#: Flight_Freedom/scenarios/01_Survival.cfg:320
+#: Flight_Freedom/scenarios/01_Survival.cfg:336
 msgid "NYIEEEEEEEE!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:333
+#: Flight_Freedom/scenarios/01_Survival.cfg:349
 msgid "This is an army! We cannot hope to take them ourselves, but they will buy our lives dearly. Captain Theracar, I need you to warn the Jamolar tribe in the southeastern swamps."
 msgstr ""
 
 #. [message]: speaker=Theracar0
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/01_Survival.cfg:338
+#: Flight_Freedom/scenarios/01_Survival.cfg:354
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:279
 msgid "At once, Malakar."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:342
+#: Flight_Freedom/scenarios/01_Survival.cfg:358
 msgid "Tribesmen! We did not know it when we slept last night, nor when we awoke this morning, but it has always been written that this is our final hour. Our first priority is to stop the cavalrymen who would intercept our message to the Jamolars."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:346
+#: Flight_Freedom/scenarios/01_Survival.cfg:362
 msgid "Our second priority is to make sure that the children's children of these murderers still see our faces in their nightmares. Attack!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:350
+#: Flight_Freedom/scenarios/01_Survival.cfg:366
 msgid "Defeat the cavalry leader"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:386
+#: Flight_Freedom/scenarios/01_Survival.cfg:402
 msgid "Theracar! Without their horses, you should be able to outdistance them in the hills. Go!"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:395
+#: Flight_Freedom/scenarios/01_Survival.cfg:411
 msgid "Move Theracar to the end of the southern stream"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:421
+#: Flight_Freedom/scenarios/01_Survival.cfg:437
 msgid "Drakes! Theracar is clear! For the honor of the tribe, let no human pass!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:434
+#: Flight_Freedom/scenarios/01_Survival.cfg:450
 msgid "Drakes! Theracar is clear! Now, we follow the southern stream! Without their horses, they will have trouble chasing us through the hills."
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/01_Survival.cfg:438
+#: Flight_Freedom/scenarios/01_Survival.cfg:454
 msgid "Move Malakar to the end of the southern stream"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:452
+#: Flight_Freedom/scenarios/01_Survival.cfg:468
 msgid "Drakes! We must flee, at least for now!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:515
+#: Flight_Freedom/scenarios/01_Survival.cfg:531
 msgid "I cannot abandon my tribe! As Chief, honor demands I fight to the last!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:552
+#: Flight_Freedom/scenarios/01_Survival.cfg:568
 msgid "Our fastest messenger is defeated! Abandon the defense! Everyone turn south! At least one voice must live to warn the Jamolar tribe!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/01_Survival.cfg:577
+#: Flight_Freedom/scenarios/01_Survival.cfg:593
 msgid "Haha! This one should fetch a hefty price at the market!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:607
+#: Flight_Freedom/scenarios/01_Survival.cfg:623
 msgid "No! The humans have overrun our lands, and their cavalry blocks our escape!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:618
+#: Flight_Freedom/scenarios/01_Survival.cfg:634
 msgid "No! The humans have overrun our lands! Theracar, why are you still here?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/01_Survival.cfg:624
+#: Flight_Freedom/scenarios/01_Survival.cfg:640
 msgid "The humans have overrun our lands yet our messenger has escaped. Our deaths will not be in vain."
 msgstr ""
 
@@ -2474,7 +2514,7 @@ msgstr ""
 #. [side]
 #: Flight_Freedom/scenarios/02a_Rebellion.cfg:48
 #: Flight_Freedom/scenarios/03a_The_Manor.cfg:28
-#: Flight_Freedom/scenarios/19_Liberation.cfg:181
+#: Flight_Freedom/scenarios/19_Liberation.cfg:182
 msgid "Drake Slaves"
 msgstr ""
 
@@ -3130,7 +3170,7 @@ msgstr ""
 #. [side]: type=Elvish Captain, id=Einelen
 #. [side]
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:47
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:789
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:806
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:51
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:114
 #: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:106
@@ -3229,108 +3269,113 @@ msgstr ""
 msgid "The Baron made this money on the backs of us drakes and the blood of our hatchlings! We merely repay them in kind."
 msgstr ""
 
+#. [message]: speaker=unit
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:693
+msgid "Our imprisonment was not kind to us, and it will be some time before we regain our former strength at arms. But we stand ready to fight, Chief, now and forever!"
+msgstr ""
+
 #. [message]: speaker=Haloran
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:686
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:703
 msgid "Elves! Spread out through the forest! While these beasts have done nothing yet to provoke us, we must be wary!"
 msgstr ""
 
 #. [message]: speaker=theCaravan
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:700
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:717
 msgid "We're being robbed! Guards!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:713
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:730
 msgid "No! The caravan has escaped into the hills!"
 msgstr ""
 
 #. [unit]: type=Peasant, id=Trevor
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:733
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:750
 msgid "Trevor"
 msgstr ""
 
 #. [message]: speaker=Trevor
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:739
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:756
 msgid " *gasp* Elves! Have mercy on me! I come from the Baron's manor, to the west, with terrible news! I need your shelter!"
 msgstr ""
 
 #. [message]: speaker=Haloran
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:743
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:760
 msgid "We cannot offer you sanctuary, but we can promise you safe passage to the other..."
 msgstr ""
 
 #. [message]: speaker=Trevor
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:747
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:764
 msgid "Winged beasts! They killed everyone, and burned everything! Fires! And bodies! And wings! And... scales... and... *collapses*."
 msgstr ""
 
 #. [message]: speaker=Scout
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:784
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:801
 msgid "Lord Haloran, my men have returned. The western hills are ablaze!"
 msgstr ""
 
 #. [message]: speaker=Haloran
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:793
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:810
 msgid "Those fiends! Rally! Drive out the beasts! Do not rest 'til you cannot see their scales beneath our arrows!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:809
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:826
 msgid "$gold_amt gold! This will go a long way toward our cause!"
 msgstr ""
 
 #. [message]: speaker=Haloran
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:814
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:831
 msgid "ARRH! You fight like a crazed beast, and I wish to lose no more men. You have whatever it is you have come for - get out! Get out of our forest! If we ever cross paths again, it will be your death!"
 msgstr ""
 
 #. [message]: role=questionb
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:828
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:845
 msgid "What about the elves? They will pursue us!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:832
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:849
 msgid "I know, but I fear that they will call reinforcements, which we cannot hope to fight."
 msgstr ""
 
 #. [message]: speaker=Haloran
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:859
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:876
 msgid "Guards! Rally to me!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:901
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:918
 msgid "The forest is crawling with elves! We must focus on the caravan!"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:916
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:933
 msgid "Malakar, I have slain the elven chief!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:920
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:937
 msgid "Now is not the time to celebrate our kills! Quickly, we must capture the caravan, before more humans or elves find us!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:938
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:955
 msgid "You will not take us alive, lizards!"
 msgstr ""
 
 #. [message]: speaker=Haloran
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:971
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:988
 msgid "We elves will remember this, lizards!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:978
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:995
 msgid "This victory would taste sweeter if we hadn't wasted so much time fighting those elves..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/04a_Caravan.cfg:995
+#: Flight_Freedom/scenarios/04a_Caravan.cfg:1012
 msgid "No! The wolves have destroyed the caravan and the elves approach on all sides! Retreat!"
 msgstr ""
 
@@ -3774,7 +3819,7 @@ msgstr ""
 
 #. [message]: speaker=Kogw
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:462
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:783
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:809
 msgid " *gulp*"
 msgstr ""
 
@@ -3835,102 +3880,102 @@ msgid "Invasion of Mogradesh's inner keep"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:262
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:272
 msgid "Mogradesh shall not fall. Its walls are solid stone, enchanted by the magi of the Citadel."
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:266
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:276
 msgid "Hail, Chieftains! We have been trapped for days, and already we are at the brink of starvation. Help us to break the siege!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:270
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:280
 msgid "If Mogradesh falls, Malakar, none of northern Morogor will be safe. We must attack!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:274
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:284
 msgid "Tenbakar! We will drive off the humans, just hold them at bay until we arrive."
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:286
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:296
 msgid "All able-bodied drakes! I call upon the pledges you have given to your tribes, to your families, and to me. Now, with everything you have left, attack. Yes, their swords and arrows will sting, but not one of us shall go to our graves today knowing that we let the softskins take Mogradesh without first paying with every drop of blood we can wring from them. By honor and by Gar-Alagar, forward!"
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:299
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:309
 msgid "Retract the drawbridge! Quickly!"
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:327
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:337
 msgid "The humans are setting up strange war machines!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:331
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:341
 msgid "They are ballistas, like those on the humans' ships! Drakes! Dispatch them quickly, before they destroy Mogradesh!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:495
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:505
 msgid "The ballistas are firing! Destroy them!"
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:502
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:512
 msgid "Our walls are failing! Hurry!"
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:847
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:857
 msgid "Dump the boiling oil!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:934
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:944
 msgid "ARRRRGH!"
 msgstr ""
 
 #. [message]: speaker=w_leader
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:971
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:981
 msgid "Drakes! You must hold the walls! My death will not be in vain."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:985
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:995
 msgid "No! Mogradesh has fallen!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1002
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1012
 msgid "Mogradesh is secure and its walls undamaged."
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1008
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1018
 msgid "Finally, Mogradesh is secure."
 msgstr ""
 
 #. [message]: speaker=Tenbakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1014
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1024
 msgid "Northern warriors, thank you for saving us today from the spears and swords of the humans. Although my soldiers and I must remain and defend this fortress, I pledge what treasure we have to you and your cause."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1027
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1037
 msgid "You receive $reward_amt pieces of gold!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1034
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1044
 msgid "Thank you. Drakes! For now, we rest and reprovision, but tomorrow, we fly at dawn!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1062
+#: Flight_Freedom/scenarios/05b_Mogradesh.cfg:1072
 msgid "The humans have sent reinforcements and Mogradesh is still not secure! We are doomed!"
 msgstr ""
 
@@ -3973,9 +4018,9 @@ msgstr ""
 #. [scenario]: id=Blockade, race=ship
 #: Flight_Freedom/scenarios/06a_Southern_Shore.cfg:55
 #: Flight_Freedom/scenarios/07a_The_Open_Ocean.cfg:56
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:272
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:280
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:720
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:282
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:290
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:732
 #: Flight_Freedom/scenarios/08a_Landfall.cfg:121
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:282
 #: Flight_Freedom/scenarios/17a_Blockade.cfg:121
@@ -4138,7 +4183,7 @@ msgstr ""
 #. [event]: id=Quemar
 #. [then]: type=Fire Dragon, id=Quemar
 #: Flight_Freedom/scenarios/06b_The_Crypt_of_the_Mountains.cfg:161
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:654
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:680
 msgid "Quemar"
 msgstr ""
 
@@ -4258,7 +4303,7 @@ msgid "We will, Quemar, we will. May Gar-Alagar be with us."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/06b_The_Crypt_of_the_Mountains.cfg:619
+#: Flight_Freedom/scenarios/06b_The_Crypt_of_the_Mountains.cfg:612
 msgid "We have tarried too long... we cannot reach the citadel in time!"
 msgstr ""
 
@@ -4589,7 +4634,7 @@ msgstr ""
 #: Flight_Freedom/scenarios/11a_River_of_Skulls.cfg:196
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:101
 #: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:87
-#: Flight_Freedom/scenarios/19_Liberation.cfg:260
+#: Flight_Freedom/scenarios/19_Liberation.cfg:261
 msgid "Monsters"
 msgstr ""
 
@@ -4601,228 +4646,228 @@ msgstr ""
 #. [then]
 #. [event]
 #. [scenario]: id=Hordes_Undead
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:271
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:719
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:281
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:731
 #: Flight_Freedom/scenarios/14_Hordes_of_the_Foul_Undead.cfg:231
 #: Flight_Freedom/scenarios/14_Hordes_of_the_Foul_Undead.cfg:72
 msgid "Defeat both enemy leaders"
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:279
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:289
 msgid "Defeat enemy leader"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:322
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:332
 msgid "Ieeeeee!"
 msgstr ""
 
 #. [message]: speaker=Malakar
 #. [message]
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:371
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:377
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:381
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:387
 msgid "The bridge collapsed!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:396
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:406
 msgid "Phew, good thing I wasn't standing on that rickety thing!"
 msgstr ""
 
 #. [wml_message]
 #. debug message; ok to skip translating:
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:417
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:427
 msgid "The Unforgiver survived the bridge collapse!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:425
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:435
 msgid "Oh no, my ship!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:455
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:465
 msgid "I do not trust this bridge!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:462
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:472
 msgid "This bridge be rickety!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:468
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:478
 msgid "I don't trust this bridge."
 msgstr ""
 
 #. [unit]: id=Passing Wind, type=Dreadnought
 #. This name is a pun:
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:497
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:507
 msgid "Passing Wind"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:555
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:565
 msgid "(Malakar) Fie! The humans pursue us!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:560
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:570
 msgid "(Kogw) Blast! There's low wind and we're in the island's tide. Our best bet is to land and hope they hesitate long enough for us to ready our defense."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:565
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:575
 msgid "(Malakar) There is an old fortress on the eastern horizon. We can make our stand there."
 msgstr ""
 
 #. [unit]: id=Jako, type=General
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:596
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:606
 msgid "Jako"
 msgstr ""
 
 #. [message]: speaker=Skula-Teroa
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:660
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:670
 msgid "Intruders! Die!"
 msgstr ""
 
 #. [message]: speaker=Jako
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:687
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:696
 msgid "Men, be prepared for attacks from the South, but the Drakes remain our primary objective. Move out!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:771
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:800
 msgid "They broke through our blockade!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:778
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:807
 msgid "(Kogw) They broke through our blockade!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:881
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:747
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:911
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:770
 #: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:856
 msgid "A spirit has attacked!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:888
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:918
 msgid "(Kogw) A spirit has attacked!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:905
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:935
 msgid "By the smoke of Gar-Alagar... a spirit!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:917
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:947
 msgid "It... it did not attack. It just appeared."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:929
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:781
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:959
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:804
 msgid "Are you going to say that EVERY time?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:948
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:978
 msgid "(Malakar) By the smoke of Gar-Alagar... a spirit!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:961
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:991
 msgid "(Malakar) It... it did not attack. It just appeared."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:968
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:998
 msgid "(Malakar) Are you going to say that EVERY time?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1088
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1118
 msgid "What is this? Why have we landed here?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1093
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1123
 msgid "(Kogw) I'm truly sorry, Mal, but I can't keep doing this. The drake is all yours, boyos."
 msgstr ""
 
 #. [message]: speaker=slayer
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1122
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1152
 msgid "RUARRAGH!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1127
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1157
 msgid "(Kogw) Back on the boat!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1158
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1188
 msgid "They have summoned reinforcements! Burn down their ships!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1162
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1192
 msgid "By the Eyes... it's hopeless, Malakar! That's a whole fleet of their finest. We must retreat!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1173
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1203
 msgid "Cowardly thinskin. We are drakes! We shall take to the skies at once and make pyres of their worthless boats!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1177
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1207
 msgid "No, Theracar, I fear the pirate has the way of it. Our tribe has spent much of our strength on our journey, and we would not survive a mad charge into their arrows and ballista bolts. We must regroup farther inland."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1183
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1213
 msgid "Hmm. So be it. Regroup farther inland!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1189
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1219
 msgid "Forgive me, darling. I've never had the honor of captaining a finer ship."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1194
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1203
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1224
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1233
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:875
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:586
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:603
 #: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:353
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:742
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:666
 msgid "..."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1198
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1228
 msgid "Haaarh. You must see, I have no choice. My hands are tied."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1207
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1237
 msgid "Let us go!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1305
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1335
 msgid "They have summoned reinforcements!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/08a_Landfall.cfg:1309
+#: Flight_Freedom/scenarios/08a_Landfall.cfg:1339
 msgid "It's hopeless, Malakar. That's a whole fleet of their finest, and we can't escape!"
 msgstr ""
 
@@ -5134,32 +5179,32 @@ msgid "No. Bind them in iron fetters and muzzle their snouts. I intend to make a
 msgstr ""
 
 #. [message]: speaker=messenger_08b
-#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:1934
+#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2041
 msgid "Mount Morogor... it calls me..."
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:1945
+#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2052
 msgid "No! We cannot complete the ritual!"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:1966
+#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2073
 msgid "We must protect the apprentices at all cost! Only with their combined will can we contain the energies we hope to let forth!"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:1984
+#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2091
 msgid "No! Without our apprentices we cannot complete the ritual!"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2006
+#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2113
 msgid "The spirits are growing restless! We must begin the ritual swiftly!"
 msgstr ""
 
 #. [message]: speaker=Quahgakar
-#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2015
+#: Flight_Freedom/scenarios/08b_Apocalypse.cfg:2122
 msgid "No! The magic in the air is fading. We cannot complete the ritual!"
 msgstr ""
 
@@ -5181,13 +5226,13 @@ msgstr ""
 #. [side]: type=Elvish Captain, id=Einelen
 #. [then]: type=Elvish Captain, id=Einelen
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:106
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:460
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:477
 msgid "Einelen"
 msgstr ""
 
 #. [scenario]: id=Drake_Escape
 #: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:159
-msgid "Move Malakar to the cave entrance"
+msgid "Move Malakar and Kogw to the cave"
 msgstr ""
 
 #. [message]: speaker=Kogw
@@ -5282,147 +5327,147 @@ msgid "Einelen vanishes with a magical word!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:437
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:454
 msgid "Underground!"
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:467
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:484
 msgid "The caves... Drake leader! Halt!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:477
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:494
 msgid "There has been too much death here today. We must leave."
 msgstr ""
 
 #. [message]: speaker=Dredgno
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:483
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:500
 msgid "Heungah! You cannot run from our forces!"
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:487
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:504
 msgid "Halt! Please!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:491
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:508
 msgid "We have no reason to speak with you."
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:495
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:512
 msgid "We do not need to be your enemies. I propose a peace offering."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:550
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:567
 msgid "I see. You have my complete attention, elf."
 msgstr ""
 
 #. [message]: role=wimporc
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:564
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:581
 msgid "Dredgno? Boss?"
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:570
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:587
 msgid "Our quarrel is not with you. Give us Kogw, and we will leave you be."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:588
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:605
 msgid "Kogw has fought by our side even against other thinskins. Honor demands that I stand with him now!"
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:593
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:610
 msgid "Our lives are long but our memories are longer! The forests shall forevermore be your foe!"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:603
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:620
 msgid "My first duty must be to my fellow drakes. We cannot afford more enemies, and if this means that Kogw must die then so be it."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:623
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:640
 msgid "I understand. Farewell, Malakar. Time for me to dance the hempen jig..."
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:631
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:648
 msgid "Hear, hear! For his crimes against the Woses and my people, I hereby condemn the pirate to death. He is to be bound in living fetters of vine over a sapling, which shall slowly impale him as it grows while the faerie magic of the forest sustains his loathsome existence until a branch pierces his black heart!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:635
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:652
 msgid "No! Mercy, I beg of you! NO!!!"
 msgstr ""
 
 #. [message]: speaker=Einelen
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:663
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:680
 msgid "All interlopers must leave the forest at once! Drakes, for your cooperation you may cross through the forest just this once to the southern edge while your pursuers must travel along the coast; do not tarry or you shall join the pirate in death."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:757
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:780
 msgid "Do these spirits pursue us, too?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:769
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:792
 msgid "It did not attack! It just appeared!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:811
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:834
 msgid "They pursue us! We must hurry!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:824
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:847
 msgid "They murdered those people in cold blood! Those bloodthirsty monsters..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:828
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:851
 msgid "You are shocked only because the orcs are disorganized. The thinskins plan their killings; they are the ones that we must be wary of."
 msgstr ""
 
 #. [message]: speaker=wolf_squad_leader
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:893
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:916
 msgid "Hup hup! At them!!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:897
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:920
 msgid "To the caves! Quickly!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:923
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:946
 msgid "Wose-slayer! The spirits of the forest thirst for vengeance!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:927
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:950
 msgid "Oh, shut up, forest rat."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:939
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:962
 msgid "Forgive me, Malakar, but there is no time. Drakes! Seal the cave before the human reinforcements arrive!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:943
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:966
 msgid "No, I beg you! I can make it!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:961
+#: Flight_Freedom/scenarios/09_The_Drake_Escape.cfg:984
 msgid "Theracar!"
 msgstr ""
 
@@ -5664,115 +5709,105 @@ msgid "Ugho"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:207
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:217
 msgid "True to their word, the elves did not attack the drakes. Nonetheless, their warriors relentlessly drove the drakes onward. Meanwhile the forest itself seemed to hinder the drakes; vines would seemingly grow from nowhere to ensnare those who took flight, drakes would frequently find themselves stumbling into dead ends, and every drake in the tribe felt they were being watched by the wind and the trees."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:214
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:224
 msgid "Disorganized and tired, the drakes finally began to emerge from the forest after several days of hard travel."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:220
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:230
 msgid "Finally, we have reached the edge of the forest! We will make camp and regroup as a tribe."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:231
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:241
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:215
 msgid "I feel well enough to fight again, Malakar."
 msgstr ""
 
 #. [message]: speaker=Ugho
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:241
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:251
 msgid "These are our lands, lizards. For your trespass you shall die!"
 msgstr ""
 
 #. [message]: speaker=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:245
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:255
 msgid "NEW FLAVORS FOR THE COOK-POT! WE FEAST TONIGHT!!!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:250
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:260
 msgid "We cannot go back into the forest, the elves will slaughter us at their leisure. Drakes! Clear the area! We must earn our rest."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:255
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:265
 msgid "NOTE: You will not be able to recall during this scenario; rather your veterans will slowly emerge from the forest."
 msgstr ""
 
 #. [message]: speaker=elf_messenger
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:550
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:461
 msgid "Drakes! Your safe passage has ended; any who return to this forest will be killed!"
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:630
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:541
 msgid "We are traveling as fast as we can, however the forest is slowing us. It may be some time before the whole tribe can arrive."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:646
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:557
 msgid "This land is becoming colder by the hour!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:665
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:576
 msgid "The cold is seeping through my scales and chilling my breath!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:670
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:581
 msgid "NOTE: Your drakes' fire breath attacks will gradually weaken throughout the course of this scenario."
 msgstr ""
 
-#. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:786
-msgid "<span color='red'>CHILL: -$value%</span>"
-msgstr ""
-
-#. [lua]: wesnoth.interface.game_display.unit_weapons
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:787
-msgid "The freezing cold is chilling your drakes' fire breath! Fire attacks do $value% less damage."
-msgstr ""
-
 #. [message]: speaker=Buk Shuurb
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:836
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:716
 msgid "Lizard! GET! IN! MY! BELLY! NOW!!!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:845
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:725
 msgid "We have defeated the orcs and their pet trolls! The stragglers flee already, I doubt they will find refuge in the forest or the chill."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:855
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:735
 msgid "Drakes! We shall gather around the camp and await the rest of our tribe. Then we warm ourselves, make good our wounds and leave these lands!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:862
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:742
 msgid "Drakes! We are together again as a tribe. Today we rest, warm ourselves, and make good our wounds. Tomorrow we leave these lands!"
 msgstr ""
 
 #. [message]: role=freezing_drake
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:886
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:892
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:766
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:772
 msgid "So cold... my internal fire is fading..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:898
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:778
 msgid "We must clear the area and return to shelter quickly lest we freeze to death!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:907
+#: Flight_Freedom/scenarios/10b_Freezing_Foothills.cfg:787
 msgid "Already the last of my fire is flickering. We cannot press on through the cold. We're doomed!"
 msgstr ""
 
@@ -6357,42 +6392,42 @@ msgid "I will salve your wounds. But I will not join you in dishonor. I shall no
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:335
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:336
 msgid "I bring you justice!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:348
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:349
 msgid "Lay down your weapons! The traitor has fallen!"
 msgstr ""
 
 #. [message]: role=remorse
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:359
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:360
 msgid "Malakar, chief..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:363
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:364
 msgid "What has happened here today will forever be a black mark upon our tribe. Those who will swear allegiance to me and to the tribe are hereby pardoned. Those who will not must leave behind their weapons and go their separate ways."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:367
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:368
 msgid "Theracar's complaints were just, but his methods were unforgivable. There have been hard times for us all, and we have all suffered much. Tonight we will hold a forum to discuss the future of our tribe, but for now we must put as much distance as we can between ourselves and the ruins of the cave mouth."
 msgstr ""
 
 #. [message]: role=maddrake
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:379
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:380
 msgid "Malakar, with respect, these drakes have spilled our tribe's blood. Surely you cannot..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:383
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:384
 msgid "All are pardoned. None of you will ever forget the sides that were chosen here today, but any who are found telling the hatchlings, or accusing your neighbors of old treasons, will face the harshest penalties. We must live again as a tribe if we are to survive. MOVE OUT!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/13a_Betrayal.cfg:428
+#: Flight_Freedom/scenarios/13a_Betrayal.cfg:429
 msgid "We have lost too many! Even if I win this fight, the tribe cannot continue!"
 msgstr ""
 
@@ -6874,52 +6909,52 @@ msgid "Focus on the gate!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:944
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:977
 msgid "The Gate... it's glowing..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1006
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1039
 msgid "Get... out... of... my... HEAD!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1014
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1047
 msgid "No... these voices compel me... must obey... no... no... NO!"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1018
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1051
 msgid "Malakar, hold fast! You must not let this evil overtake you!"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1035
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1068
 msgid "doom to all turn back TURN BACK nightmare of ending doom destruction desolation death DEATH to the world"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1036
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1069
 msgid "darkness awaits all YOU CANNOT PREVAIL failure despair empty death void hatred misery enmity black HATE"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1037
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1070
 msgid "evil will NOT BE DENIED all must die ALL MUST END torture PAIN agony terror suffering why fight the inevitable"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1038
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1071
 msgid "all must die YOU WILL DIE DARKNESS OBLIVION give up GIVE UP ALL IS DEATH death awaits you DIE DIE DIE"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1057
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1090
 msgid "Some sort of barrier is keeping me from approaching the lich!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1146
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1179
 msgid "We must destroy the Gate!"
 msgstr ""
 
@@ -7262,107 +7297,107 @@ msgid "Move the Unforgiver to the East"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:303
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:313
 msgid "(Kogw) Rhys, here, says that he's got a map."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:308
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:318
 msgid "(Davies) It was mostly my work."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:313
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:323
 msgid "(Kogw) And if we go East here until the reefs, we can drop South and catch a strong current that should sweep us all the way back to Morogor, no problem."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:318
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:328
 msgid "(Davies) Did you tell him about..."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:323
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:333
 msgid "(Kogw) The only, uh, hitch is that the slightest disturbance is likely to start the Mermen and Nagas fighting again. They've both claimed this stretch for as long as anyone can remember, and they've sunk many ships in these waters."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:328
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:338
 msgid "(Malakar) We tread lightly, then. Just get us home."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:343
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:353
 msgid "(Kogw) All hands! Watch the depths!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:365
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:375
 msgid "(Davies) Rhys, you idiot! You've navigated us straight into a naga attack!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:369
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:379
 msgid "(Rhys) Someday we'll look back on this and laugh. For now, it gets even better: the mermen are massing for an attack, too."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:375
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:385
 msgid "(Davies) Rhys, you idiot! You've navigated us straight into the mermen!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:379
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:389
 msgid "(Rhys) Someday we'll look back on this and laugh. For now, it gets even better: the nagas are massing for an attack, too."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:386
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:396
 msgid "(Kogw) Aye, I don't know why they're after us. Perhaps they hate all outsiders?"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:391
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:401
 msgid "(Malakar) Regardless, we will not be stopped. See that we make it, Kogw."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:407
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:417
 msgid "(Kogw) On to Morogor!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:538
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:548
 msgid "(Malakar) The merman leader has fallen!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:543
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:553
 msgid "(Kogw) Great. Mal, the nagas will want a chunk of our hulls now. It's certainly hard to find good wood anywhere else out here."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:550
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:560
 msgid "(Malakar) The naga leader has fallen!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:555
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:565
 msgid "(Kogw) Great. Mal, the mermen will want a chunk of our hulls now. It's certainly hard to find good wood anywhere else out here."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:566
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:576
 msgid "(Malakar) The sea dwellers have been defeated!"
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:571
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:581
 msgid "(Kogw) They've only been driven back. Quickly, we need to leave these waters! And be wary for any stragglers."
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/17a_Blockade.cfg:613
+#: Flight_Freedom/scenarios/17a_Blockade.cfg:623
 msgid "(Kogw) No! The winds have subsided! We cannot sail further!"
 msgstr ""
 
@@ -7393,192 +7428,167 @@ msgstr ""
 msgid "Birds"
 msgstr ""
 
-#. [lua]: pre_show
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:158
-msgid "Food acquired: <b><span color='green'>$value</span></b>"
-msgstr ""
-
-#. [lua]: pre_show
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:160
-msgid "Food acquired: <b><span color='red'>$value</span></b>"
-msgstr ""
-
-#. [lua]: pre_show
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:163
-msgid "Food needed: <b>$value</b>"
-msgstr ""
-
-#. [lua]: pre_show
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:179
-msgid "Human"
-msgstr ""
-
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:467
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:391
 msgid "Finally, dry land. We cannot tarry here. Drakes! Spread out and hunt - fill our bellies today and our rucksacks and waterskins for tomorrow!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:472
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:396
 msgid "Scaled ones. You speak with Muqaddam Nibir al-Nassim, master of this island. If you have come to trade, you must register at the southeast docks. Otherwise you must leave at once!"
 msgstr ""
 
 #. [message]: speaker=Zakara
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:476
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:400
 msgid "The markets of Al-Zaiybah are open to all. Registration forms must be completed in triplicate. Tribute equivalent to one part of every three parts of precious metals in your possession is due at time of registration. My, my, your weapons and armor are truly fine in quality..."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:481
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:405
 msgid "Chief, we do not have the time or the resources to pander to the thinskins' greed! If we trade we will have nothing left for the fight to reclaim our homeland."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:485
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:409
 msgid "Muqaddam, we seek food and water. Give us supplies and we will be on our way."
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:489
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:413
 msgid "This is your last warning. I, Nibir al-Nassim, command you to pay tribute and trade or begone!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:494
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:418
 msgid "Then we will take what we need. Kakatars! To arms!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:499
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:423
 msgid "<span color='green'>In this scenario your objective is to hunt sufficient food to sustain the tribe to finish your journey to Morogor. Hunting animals and monsters grants food; $food_needed food is necessary to win.</span>"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:505
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:429
 msgid "<span color='green'>You may view how much food you have acquired at any time during your turn by right-clicking and selecting “Food...”</span>"
 msgstr ""
 
 #. [set_menu_item]: id=show_food_table
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:511
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:435
 msgid "Food..."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:519
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:443
 msgid "Hunt animals and monsters for food"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:565
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:489
 msgid "My palace is under attack! I, Nibir al-Nassim, command all who are able to take up arms and fight!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:583
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:507
 msgid "Look into my face, drake, and know that I, Nibir al-Nassim, shall be the one to end your life!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:599
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:523
 msgid "All hail I, Nibir al-Nassim, the Drakeslayer!"
 msgstr ""
 
 #. [message]: speaker=Zakara
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:617
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:541
 msgid "Such precious metals this lizard was wearing! These should fetch a princely sum indeed at the markets."
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:628
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:552
 msgid "I, Nibir al-Nassim, am the strongest! I am the greatest! I am... I am..."
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:648
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:572
 msgid "Food."
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:654
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:578
 msgid "Dead."
 msgstr ""
 
 #. [message]: speaker=Zakara
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:667
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:591
 msgid "No! My trading contracts, my riches, my fancy goods, all for naught!"
 msgstr ""
 
 #. [message]: speaker=second_unit
 #. [message]: role=hungry_drake
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:699
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:718
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:725
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:623
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:642
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:649
 msgid "So hungry... I could even eat this thinskin..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:733
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:657
 msgid "Check yourself! We will not sully ourselves with the meat of thinskins!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:738
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:662
 msgid "But Malakar, my chief, our tribe is starving! We need all the food we can carry, even long pig."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:744
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:668
 msgid "We are better than the humans, and we always will be! We shall not defile their dead."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:749
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:673
 msgid "Very well, chief. Just let us hope we find enough to eat in this sandy wasteland."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:754
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:678
 msgid "The health of my tribe must come before propriety. We shall feast on the flesh of our enemies this day!"
 msgstr ""
 
 #. [message]: role=angry_dune
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:768
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:692
 msgid "The monsters are eating our dead!"
 msgstr ""
 
 #. [message]: speaker=Nibir_alNassim
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:772
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:696
 msgid "Men of the dunes! The drakes have brought unspeakable evil to our island. Slaughter them all! Do not rest until every fiend is dead! I, Nibir al-Nassim, shall lead you to victory!"
 msgstr ""
 
 #. [command]
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:778
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:702
 msgid "Hunt enemies for food"
 msgstr ""
 
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:815
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:831
-msgid "<span color='green'>+$value food</span>"
-msgstr ""
-
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:905
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:788
 msgid "We barely have scraps left to eat. We need to find more food quickly or we'll never make it to Morogor!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:913
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:796
 msgid "Our strength is spent here... we cannot go on."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:922
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:805
 msgid "We have the food we need. Malakar, let's plunder this island for ourselves!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:926
+#: Flight_Freedom/scenarios/17b_Parched_Sands.cfg:809
 msgid "No. Every day we spend on this island is another day Morogor remains unguarded. We fly onwards immediately!"
 msgstr ""
 
@@ -7588,7 +7598,7 @@ msgid "Return to Morogor"
 msgstr ""
 
 #. [side]: type=Lieutenant, id=Yraec
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:42
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:49
 msgid "Yraec"
 msgstr ""
 
@@ -7602,9 +7612,9 @@ msgstr ""
 #. [side]: type=Grand Marshal, id=Yrynyc
 #. [side]: type=General, id=Rhyrraent
 #. [side]: type=General, id=Lenvan
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:84
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:131
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:178
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:91
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:138
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:185
 #: Flight_Freedom/scenarios/19_Liberation.cfg:77
 #: Flight_Freedom/scenarios/19_Liberation.cfg:112
 #: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:115
@@ -7616,155 +7626,155 @@ msgid "Wesnoth Occupation Force"
 msgstr ""
 
 #. [side]: type=General, id=Careorra
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:89
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:96
 msgid "Careorra"
 msgstr ""
 
 #. [side]: type=Lieutenant, id=Lunnyn
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:136
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:143
 msgid "Lunnyn"
 msgstr ""
 
 #. [side]
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:189
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:196
 msgid "Drakish Rebels"
 msgstr ""
 
 #. [side]
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:217
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:224
 msgid "Dunefolk Hunters"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:301
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:309
 msgid "This is grim news, indeed. How is it that you are here to tell me of this?"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:305
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:313
 msgid "A small handful of rebels have been in hiding ever since the attack. We've fought our battles when and where we can, but our hopes are low and our numbers are dwindling. Your arrival will mean a great deal."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:309
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:317
 msgid "I will gather our leaders and meet you here at this beach as soon as I can."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:313
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:321
 msgid "Godspeed."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:332
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:340
 msgid "Mal, if they bring their leaders out in the open, they'll be slaughtered!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:337
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:345
 msgid "Malakar, we are too exposed here, we cannot protect their leaders!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:341
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:349
 msgid "I know. We will have the beaches cleared before they arrive."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:352
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:360
 msgid "NOTE: From now on, since the Unforgiver is no longer critical to your cause, the game will not end if it is lost."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:370
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:378
 msgid "No! My flagship!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:374
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:382
 msgid "You can mourn the boat another day. For now we are trapped on this beach. We prevail together this day or we both die."
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:391
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:399
 msgid "Word is being passed to the resistance, and I have come back to help you claim the beach."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:441
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:455
 msgid "It's true! The Kakatars have returned!"
 msgstr ""
 
 #. [message]: speaker=scout
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:596
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:602
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:622
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:628
 msgid "What is this?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:691
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:717
 msgid "<span color='#ccff00' size='large'>I HAVE RETURNED. I AM QUEMAR. HUMANS, I AM YOUR DOOM.</span>"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:701
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:727
 msgid "Surely that big dragon fellow isn't talking about me? Right?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:705
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:731
 msgid "Quemar... is that you? The ritual, it was a success?"
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:709
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:735
 msgid "MALAKAR OF THE KAKATAR TRIBE. YOU STILL LIVE. TOGETHER WE SHALL CLEANSE MOROGOR OF THE PUNY THINSKINS."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:719
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:745
 msgid "Indeed, Quemar. Except for the pirate - he is an ally, a Kakatar, and under my protection."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:723
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:749
 msgid "VERY WELL. YOUR PET THINSKIN MAY LIVE. I WILL BE WATCHING YOU, HUMAN."
 msgstr ""
 
 #. [message]: speaker=Quemar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:779
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:805
 msgid "THUS SHALL BE THE FATE OF ALL HUMANS."
 msgstr ""
 
 #. [message]: speaker=dune_harrier
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:834
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:860
 msgid "Kal, we have tracked down the drakes who ransacked Al-Zaiybah!"
 msgstr ""
 
 #. [message]: speaker=dune_leader
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:844
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:870
 msgid "These monsters have eaten our kinsmen! They are worse than wild beasts. Put them down like the animals they are!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:859
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:885
 msgid "The rebel leaders are walking into enemy territory! We have failed them!"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:874
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:900
 msgid "For a free Morogor!"
 msgstr ""
 
 #. [message]: speaker=scout
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:889
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:915
 msgid "Your rule is ending! Morogor belongs to us drakes!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:907
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1375
+#: Flight_Freedom/scenarios/18_Return_to_Morogor.cfg:933
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1377
 msgid "We continue!"
 msgstr ""
 
@@ -7796,458 +7806,458 @@ msgstr ""
 #. [side]: type=Drake Priest, id=Kamalar
 #. [modify_side]
 #. [side]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:165
-#: Flight_Freedom/scenarios/19_Liberation.cfg:900
-#: Flight_Freedom/scenarios/19_Liberation.cfg:966
+#: Flight_Freedom/scenarios/19_Liberation.cfg:166
+#: Flight_Freedom/scenarios/19_Liberation.cfg:901
+#: Flight_Freedom/scenarios/19_Liberation.cfg:968
 #: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:69
 msgid "Kamalar's Guard"
 msgstr ""
 
 #. [side]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:225
+#: Flight_Freedom/scenarios/19_Liberation.cfg:226
 msgid "Drake Rebels"
 msgstr ""
 
 #. [scenario]: id=Liberation
-#: Flight_Freedom/scenarios/19_Liberation.cfg:275
+#: Flight_Freedom/scenarios/19_Liberation.cfg:276
 msgid "Liberate the mine"
 msgstr ""
 
 #. [set_menu_item]: id=control_slaves
-#: Flight_Freedom/scenarios/19_Liberation.cfg:406
+#: Flight_Freedom/scenarios/19_Liberation.cfg:407
 msgid "Manual control"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:472
+#: Flight_Freedom/scenarios/19_Liberation.cfg:473
 msgid "<span color='green'>Kamalar can take command of rebelling mine slaves during his turn. To do so, right-click on the slave and select “Manual control”.</span>"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:564
+#: Flight_Freedom/scenarios/19_Liberation.cfg:565
 msgid "We're free! The oppressors must die!"
 msgstr ""
 
 #. [scenario]: id=Liberation
-#: Flight_Freedom/scenarios/19_Liberation.cfg:620
+#: Flight_Freedom/scenarios/19_Liberation.cfg:621
 msgid "This mine is infested with monsters!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:679
+#: Flight_Freedom/scenarios/19_Liberation.cfg:680
 msgid "The drakes split into three forces. Malakar led the smallest, a hand-picked team tasked with liberating the former Drakkar Quarry, now known as Bosun's Mine."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:690
+#: Flight_Freedom/scenarios/19_Liberation.cfg:691
 msgid "Couldn't we have led the scouting? I mean, do you really want us in more caves, Mal? Don't you remember the last ones?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:694
+#: Flight_Freedom/scenarios/19_Liberation.cfg:695
 msgid "I do remember them. Of all the drakes, we are the most experienced fighting below ground. An inexperienced fighter tripping over his own wings in the dark might be enough to destroy us all."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:704
+#: Flight_Freedom/scenarios/19_Liberation.cfg:705
 msgid "Not to be insensitive, but couldn't we have still used a few of the wing-tripping ones? Come to think of it, it's a pity your dragon friend couldn't fit down here. There's not many of us left, Mal."
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:710
+#: Flight_Freedom/scenarios/19_Liberation.cfg:711
 msgid "Not to be insensitive, but couldn't we have still used a few of the wing-tripping ones? There's not many of us left, Mal."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:716
+#: Flight_Freedom/scenarios/19_Liberation.cfg:717
 msgid "Indeed, we have lost a great many. So many that we cannot hope to retake this island by ourselves. Here, we can liberate others, to join our cause."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:723
+#: Flight_Freedom/scenarios/19_Liberation.cfg:724
 msgid "Chief, I must again inquire: why must we be the drakes to delve into these caves? We were fortunate to have avoided the caves of the Isle of Storms."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:727
+#: Flight_Freedom/scenarios/19_Liberation.cfg:728
 msgid "We have lost a great many drakes. So many that we cannot hope to retake this island by ourselves. The humans have enslaved drakes of every tribe, many forced to toil in mines such as these. They but require the direction of a Chief to rise up against the thinskins and help us drive them away for good!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:738
+#: Flight_Freedom/scenarios/19_Liberation.cfg:739
 msgid "I am only concerned as a strategist that we are needlessly endangering ourselves, especially since Quemar cannot fit down here. Should we fall our uprising falls with us."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:745
+#: Flight_Freedom/scenarios/19_Liberation.cfg:746
 msgid "I am only concerned as a strategist that we are needlessly endangering ourselves. Should we fall our uprising falls with us."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:751
+#: Flight_Freedom/scenarios/19_Liberation.cfg:752
 msgid "Then we cannot afford to fall. I have decided. Drakes, move out!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:758
+#: Flight_Freedom/scenarios/19_Liberation.cfg:759
 msgid "NOTE: Your encampment will disappear on turn 2, and your recall list will cease to be available for this scenario."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:803
+#: Flight_Freedom/scenarios/19_Liberation.cfg:804
 msgid "The invaders must have dug this tunnel very hastily; it falls apart already."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:806
+#: Flight_Freedom/scenarios/19_Liberation.cfg:807
 msgid "It seems that the humans have expanded this mine. They even pillage the very foundations of Morogor itself."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:818
+#: Flight_Freedom/scenarios/19_Liberation.cfg:819
 msgid "This bridge is shattered."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:829
+#: Flight_Freedom/scenarios/19_Liberation.cfg:830
 msgid "There is a gate here. Although it may be unwise to open it, I can look through it if I get closer."
 msgstr ""
 
 #. [then]
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:846
-#: Flight_Freedom/scenarios/19_Liberation.cfg:851
+#: Flight_Freedom/scenarios/19_Liberation.cfg:847
+#: Flight_Freedom/scenarios/19_Liberation.cfg:852
 msgid "The thinskins defile even our dead. This is no place for bones!"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:863
+#: Flight_Freedom/scenarios/19_Liberation.cfg:864
 msgid "Bones? I thought you guys, you know, went up in smoke."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:867
+#: Flight_Freedom/scenarios/19_Liberation.cfg:868
 msgid "Only those who die in battle. These drakes have been starved, or worked to death. As well to spit on our ashes as to keep bones on display."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:878
+#: Flight_Freedom/scenarios/19_Liberation.cfg:879
 msgid "These appear to be living quarters for the slaves. They must all be at work now."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:892
+#: Flight_Freedom/scenarios/19_Liberation.cfg:893
 msgid "There is a human garrison in the lower tunnels!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:907
+#: Flight_Freedom/scenarios/19_Liberation.cfg:909
 msgid "Hello, my brothers."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:911
+#: Flight_Freedom/scenarios/19_Liberation.cfg:913
 msgid "Kamalar, is it you?"
 msgstr ""
 
 #. [message]: speaker=Kogw
-#: Flight_Freedom/scenarios/19_Liberation.cfg:921
+#: Flight_Freedom/scenarios/19_Liberation.cfg:923
 msgid "Who's this, now?"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:926
+#: Flight_Freedom/scenarios/19_Liberation.cfg:928
 msgid "I am the high priest of Dalgar-El, the Murderer. I led a small band of warriors into this mine, but we were outnumbered and forced into this cavern. We are safe here, beyond the chasm, and there are sufficient mushrooms here to live on, but the humans have been repairing the bridge we broke, and it seems to come closer with each hour."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:934
+#: Flight_Freedom/scenarios/19_Liberation.cfg:936
 msgid "Hail, Kamalar, high-priest of Dalgar-El the Murderer!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:938
+#: Flight_Freedom/scenarios/19_Liberation.cfg:940
 msgid "I am heartened to learn that the Kakatars yet live. I led a small band of warriors into this mine, but we were outnumbered and forced into this cavern. We are safe here, beyond the chasm, and there are sufficient mushrooms here to live on, but the humans have been repairing the bridge we broke, and it seems to come closer with each hour."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:944
+#: Flight_Freedom/scenarios/19_Liberation.cfg:946
 msgid "I request your assistance, brother, in driving the humans from our island."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:948
+#: Flight_Freedom/scenarios/19_Liberation.cfg:950
 msgid "Very well. We too have borne their yoke, and your arrival brings hope. Malakar, if you can kill my besiegers, the slaves can revolt and my force can aid them."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:979
+#: Flight_Freedom/scenarios/19_Liberation.cfg:981
 msgid "You now control Kamalar's team as well as your own."
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:984
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1011
+#: Flight_Freedom/scenarios/19_Liberation.cfg:986
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1013
 msgid "Defeat all human leaders"
 msgstr ""
 
 #. [objectives]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1006
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1033
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1008
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1035
 msgid "Death of Kamalar"
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1097
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1099
 msgid "This... uh... skeleton had 180 pieces of gold!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1106
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1108
 msgid "Malakar, you need this gold more than I do. You are a chieftain, and I am a priest."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1126
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1128
 msgid "He was guarding a gate!"
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1142
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1144
 msgid "He dropped a book!"
 msgstr ""
 
 #. [then]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1163
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1165
 msgid "It is a collection of orders and messages. They all appear to have been written by the same hand."
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1166
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1168
 msgid "It's a collection of orders and messages. They look like they've been written by the same hand."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1178
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1180
 msgid "First, gentlemen, I would like to congratulate you on your ingenuity in sparing our citizens. If Prax did not pay for drakes, he no doubt would not have paid what he promised for humans, either. In light of his breach of contract, I am transferring an additional squad of archers to your control. Your orders are to kill Prax and bring back any gold he possesses. Be wary of his magics, but let nothing stop you."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1183
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1185
 msgid "General Omandro, I received your message that little remained of value in the Baron's estate. We were lucky that the drakes finished him off, but we will be ruined without immediate funds in the royal coffers. Your orders are to find the drakes and see if they took anything of value in their escape. Avoid engaging them unless they cause trouble."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1194
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1196
 msgid "Your Highness, reports from the field indicate that our dealings with Prax were a dead end. He does not have, and perhaps never had, enough gold to save the kingdom. It pleases me to report that he is now dead and his lands placed under our control. Our only financial hope is our new colony in Morogor. We have our hands on a fortune's worth of their unique stone, yet the first shipments are still months away. We were only able to take Morogor because the natives were divided against each other. We cannot risk Prax's escaped slaves rallying our new Drakish subjects."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1202
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1204
 msgid "Your Highness, reports from the field indicate that our dealings with Prax were a dead end. He does not have, and perhaps never had, enough gold to save the kingdom. It pleases me to report that he is now dead and his lands placed under our control. Although things look bad, I propose a bold new plan: Grand Marshal Oddryn revealed that it is possible to assault Morogor when the local drakes are taken by surprise. If we claim the island for our own, then we put our hands on a fortune's worth of their unique stone. Wizards and mages from across the land have always paid dearly for even pebbles from Morogor. If we move quickly, the only real obstacle in our way is the danger of Prax's escaped slaves returning home and raising a warning. We could never take Morogor after their defenses have been raised."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1209
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1211
 msgid "Attention - Omandro and all coastal forces. Your new top priority is to find the escaped Drakish slaves and destroy them. They must not return to Morogor. Pursue over the ocean, if need be. Further instruction will be coming."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1219
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1221
 msgid "This message is merely an expression of the King's gratitude for your efforts. The kingdom, so long poised on the brink of fiscal collapse, is saved. A few more months' worth of shipments, and we'll not only be financially secure for generations, but we will have the resources to conquer the Northlands and claim the bulk of the continent for ourselves. You have done well, and the King himself thanks you all."
 msgstr ""
 
 #. [then]
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1239
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1244
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1241
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1246
 msgid "By Gar-Alagar... this is a torture chamber! The humans shall pay tenfold for this!"
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1256
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1258
 msgid "An axe... used to dismember drakes. How could anyone do this?"
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1265
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1267
 msgid "This is some type of wicked poison, forced down captives' throats."
 msgstr ""
 
 #. [event]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1274
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1276
 msgid "Gallows, to kill drakes after their ordeals."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1304
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1306
 #: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1003
 msgid "Brother!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1308
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1310
 msgid "I am gone!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1319
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1321
 msgid "Without him, we will be unable to continue. All is lost!"
 msgstr ""
 
 #. [message]: speaker=starting_cave_drake
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1337
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1339
 msgid "Your rule ends today, softskin!"
 msgstr ""
 
 #. [message]: speaker=starting_cave_drake
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1348
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1350
 msgid "No! I shall never see the sun again..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1369
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1371
 msgid "We have done so. Quickly, we must leave for the Temple at once, before the humans learn of their defeat today!"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1381
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1383
 msgid "Don't be so hasty, brother. I bring friends."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1385
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1387
 msgid "Kzzklk, show yourself!"
 msgstr ""
 
 #. [unit]: type=Saurian Margrave, id=Kzzklk
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1392
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1394
 #: Flight_Freedom/scenarios/20_Battle_of_the_Temple.cfg:1077
 msgid "Kzzklk"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1421
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1423
 msgid "Saurians? In a cave?"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1425
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1427
 msgid "I found a small group of them. Refugees from the humans, just like us. They have allied with me against our enslavers."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1429
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1431
 msgid "However, once the humans came to Morogor, we had to take refuge here. With their help, I was able to avoid their patrols, and I sustained them with my flame."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1433
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1435
 msgid "Now, with your arrival, we can emerge from these caverns, and they can thaw in the open sun. Kzzklk, will you assist us once again, in the liberation of our capital?"
 msgstr ""
 
 #. [message]: speaker=Kzzklk
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1437
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1439
 msgid "Yesss! My axxxxe iss reaaaddy!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1441
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1443
 msgid "How should the saurians be fielded in battle?"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1445
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1447
 msgid "The saurians are elusive and deft of foot, but weak at arms. I propose that while we attack the humans head-on, the saurians sneak behind the enemy lines and kill their leaders."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1449
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1451
 msgid "Or, I can place the saurians under your command, to add to your army."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1453
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1455
 msgid "How many do you have?"
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1457
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1459
 msgid "That will be ready for battle? I have around ten. Fifteen at most."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1465
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1467
 msgid "Then there will be a tough fight ahead of us. I must decide what I will do with the saurians."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1467
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1469
 msgid "I will take command of the saurians."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1471
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1473
 msgid "Use them well."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1480
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1482
 msgid "The saurians will try to outflank the humans."
 msgstr ""
 
 #. [message]: speaker=Kamalar
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1484
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1486
 msgid "Very well. They will arrive at the third dawn."
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1723
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1725
 msgid "Slaves! By order of Grand Marshal Yrynyc, you are to be executed for your treason, to the last drake!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1763
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1765
 msgid "There was a key in this box!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1782
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1784
 msgid "There is enough wood here to finish the bridge."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1788
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1790
 msgid "There's enough wood here to finish the bridge."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1792
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1794
 msgid "It's awkward to carry, but surprisingly light."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1814
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1816
 msgid "The bridge is almost finished -- one could almost jump across."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1820
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1822
 msgid "The bridge is almost finished -- I could almost jump across."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1858
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1860
 msgid "The bridge is complete!"
 msgstr ""
 
 #. [message]: speaker=Cicyn
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1918
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1920
 msgid "Wake up! Wake up, you fools! The slaves have rebelled!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/19_Liberation.cfg:1944
+#: Flight_Freedom/scenarios/19_Liberation.cfg:1946
 msgid "There is a large human garrison sleeping here. We could attack them in their sleep, but the door is locked from the inside."
 msgstr ""
 
