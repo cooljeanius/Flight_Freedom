@@ -34,8 +34,6 @@ function conceal_sides_sidebar(side_list)
 				new_side_num = new_side_num - 1
 			end
 		end
-		print(side.side)
-		print(new_side_num)
 		side_num_map[side.side] = new_side_num
 	end
 	local old_unit_side_ui = wesnoth.interface.game_display.unit_side
