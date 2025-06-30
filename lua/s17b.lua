@@ -41,11 +41,6 @@ local function get_total_food()
 	return total_food
 end
 
-function wesnoth.wml_actions.get_total_food(cfg)
-	local varname = cfg.variable or "total_food"
-	wml.variables[varname] = get_total_food()
-end
-
 function wesnoth.wml_actions.show_food_table(cfg)
 	function pre_show(self)
 		local total_food = get_total_food()
@@ -103,4 +98,5 @@ function wesnoth.wml_actions.add_food(cfg)
 			float_food_label(cfg.x, cfg.y, food_value_by_type[raw_unit_type])
 		end
 	end
+	wml.variables["total_food"] = get_total_food()
 end
