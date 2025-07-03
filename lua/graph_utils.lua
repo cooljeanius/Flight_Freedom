@@ -14,6 +14,16 @@ function Graph:init_adjacency_mat(adjacency_mat)
 	self.adjacency_mat = adjacency_mat
 end
 
+function Graph:init_unconnected(num_nodes)
+	self.adjacency_mat = {}
+	for x = 1, num_nodes do
+		self.adjacency_mat[x] = {}
+		for y = 1, num_nodes do
+			self.adjacency_mat[x][y] = 0
+		end
+	end
+end
+
 function Graph:set_edge(node1, node2, value)
 	self.adjacency_mat[node1][node2] = value
 end

@@ -47,14 +47,21 @@ Example:
 [/find_offset_hex_polar]
 ]=]
 
-function wesnoth.wml_actions.find_offset_hex_polar(cfg)
-	local origin_hex_x = tonumber(cfg.origin_x)
-	local origin_hex_y = tonumber(cfg.origin_y)
-	local radius = tonumber(cfg.radius) * 72.0
-	local theta = tonumber(cfg.theta) * -1
+function find_offset_hex_polar(origin_x, origin_y, radius, theta)
+	local radius = radius * 72.0
+	local theta = theta * -1
 	local offset_x = math.cos(theta) * radius
 	local offset_y = math.sin(theta) * radius
-	local new_x,new_y = calc_image_hex_offset(origin_hex_x, origin_hex_y, offset_x, offset_y)
+	local new_x,new_y = calc_image_hex_offset(origin_x, origin_y, offset_x, offset_y)
+	return new_x, new_y
+end
+
+function wesnoth.wml_actions.find_offset_hex_polar(cfg)
+	local origin_x = tonumber(cfg.origin_x)
+	local origin_y = tonumber(cfg.origin_y)
+	local radius = tonumber(cfg.radius)
+	local theta = tonumber(cfg.theta)
+	local new_x, new_y = find_offset_hex_polar(origin_x, origin_y, radius, theta)
 	local new_x_varname = cfg.new_x_variable or "new_x"
 	local new_y_varname = cfg.new_y_variable or "new_y"
 	wml.variables[new_x_varname] = new_x
