@@ -358,10 +358,19 @@ control_room:set_inner_terrain("Isr")
 control_room:set_wall_terrain("Xoi")
 table.insert(all_rooms, control_room)
 
+-- todo: four rooms with glyphs to lower barrier in control room
+
+-- library room in top left of map
+local library_room = find_room(12, 7, 1, 10, 1, 15, true)
+library_room.id = "library_room"
+library_room:set_inner_terrain("Iwr")
+library_room:set_wall_terrain("Xoc")
+table.insert(all_rooms, library_room)
+
 -- now make and position some random rooms (not involved in objectives)
 random_rooms = {}
 
-local num_random_rooms = 12
+local num_random_rooms = 10
 -- this includes walls
 local random_room_dim_mean = 12
 local random_room_dim_sd = 5
@@ -423,6 +432,9 @@ for i = 1, rand_rooms_generated do
 			end
 		end
 	end
+	-- todo: rooms with healing glyphs
+	-- todo: other monster room
+	-- todo: maybe a treasure room?
 end
 
 -- build graph of all rooms
