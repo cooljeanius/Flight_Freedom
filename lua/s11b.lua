@@ -323,6 +323,12 @@ local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, essenti
 	return room
 end
 
+local function add_terrain_overlay(x, y, overlay_code)
+	local terrain_code = wesnoth.current.map[{x, y}]
+	local base, overlay = wesnoth.map.split_terrain_code(terrain_code)
+	wesnoth.current.map[{x, y}] = base .. "^" .. overlay_code
+end
+
 -- start out by placing story-important rooms
 
 -- start room in bottom left of the map
@@ -348,7 +354,7 @@ wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
 -- control room in top right of the map
 local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), true)
 control_room.id = "control_room"
-control_room:set_inner_terrain("Isa")
+control_room:set_inner_terrain("Isr")
 control_room:set_wall_terrain("Xoi")
 table.insert(all_rooms, control_room)
 
@@ -383,9 +389,39 @@ end
 
 -- populate random rooms
 for i = 1, rand_rooms_generated do
-	-- undead
+	-- undead nests
 	if i >= 1 and i <= 4 then
-		random_rooms[i]:set_wall_terrain("Xot") -- catacombs
+		random_rooms[i]:set_wall_terrain("Xot") -- catacomb wall
+		random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
+		local room_wall_hexes = random_rooms[i]:get_edge_hexes()
+		for i, hex in ipairs(room_wall_hexes) do
+			local rand_decor = mathx.random(1, 5)
+			if rand_decor == 1 then
+				add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
+			elseif rand_decor == 2 then
+				add_terrain_overlay(hex[1], hex[2], "Efs") -- brazier
+			end
+		end
+		local room_inner_hexes = random_rooms[i]:get_inner_hexes()
+		for i, hex in ipairs(room_inner_hexes) do
+			local rand_decor = mathx.random(1, 4)
+			if rand_decor == 1 then
+				add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
+			end
+			local rand_monster = mathx.random(1, 30)
+			if rand_monster == 27 then
+				wesnoth.units.to_map({type="Spectre", side=2}, hex[1], hex[2])
+			end
+			if rand_monster == 28 then
+				wesnoth.units.to_map({type="Nightgaunt", side=2}, hex[1], hex[2])
+			end
+			if rand_monster == 29 then
+				wesnoth.units.to_map({type="Draug", side=2}, hex[1], hex[2])
+			end
+			if rand_monster == 30 then
+				wesnoth.units.to_map({type="Banebow", side=2}, hex[1], hex[2])
+			end
+		end
 	end
 end
 
@@ -610,7 +646,10 @@ while not graph:is_connected() do
 										end
 									end
 								end
-								wesnoth.current.map[{hex_x, hex_y}] = "Isa" -- "Gg"
+								-- only overwrite wall terrains
+								if string.sub(wesnoth.current.map[{hex_x, hex_y}], 1, 1) == "X" then
+									wesnoth.current.map[{hex_x, hex_y}] = "Isa" -- "Gg"
+								end
 								connect_attempts = 0
 							end
 						end
