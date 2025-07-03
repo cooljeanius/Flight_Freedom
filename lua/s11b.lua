@@ -618,23 +618,3 @@ while not graph:is_connected() do
 		end
 	end
 end
-
-if false then
-	r = Room:new()
-	r.x1 = 5
-	r.y1 = 12
-	r.r_height = 4
-	r.s_height = 6
-
-	r2 = Room:new()
-	r2.x1 = 2
-	r2.y1 = 2
-	r2.r_height = 7
-	r2.s_height = 7
-
-	r3 = Room:new()
-	r3.x1 = 2
-	r3.y1 = 11
-	r3.r_height = 7
-	r3.s_height = 10
-end
