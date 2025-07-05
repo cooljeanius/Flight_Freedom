@@ -462,6 +462,9 @@ local function place_story_rooms(current_rooms)
 	library_room:set_inner_terrain("Iwr")
 	library_room:set_wall_terrain("Xoc")
 	table.insert(current_rooms, library_room)
+
+	-- todo: Sol'kan's living quarters
+
 	return current_rooms
 end
 
@@ -532,7 +535,10 @@ local function place_random_rooms(current_rooms)
 		end
 		-- todo: rooms with healing glyphs
 		-- todo: other monster room
-		-- todo: maybe a treasure room?
+		-- todo: kitchen room
+		-- todo: servant or guard quarters
+		-- todo: creepy lab room
+		-- todo: maybe a treasure room? either gold or supplies (extends turn limit)
 	end
 	return current_rooms
 end
@@ -549,7 +555,7 @@ local function place_corridors(current_rooms)
 	local max_connect_attempts = 1000 -- avoid infinte loop in case there's a room that can't be connected anywhere
 	local connect_attempts = 0 -- tracks number of failed connections (resets if successful connection made)
 	local rays_failed = 0
-	local starting_max_ray_length = 15 -- limit maximun distance algorithm will try to connect rooms
+	local starting_max_ray_length = 15 -- restrict maximum distance algorithm will try to connect rooms
 	--local corridor_created = false
 	--while not corridor_created do
 	while not graph:is_connected() do
@@ -561,7 +567,8 @@ local function place_corridors(current_rooms)
 		--print("Theta: " .. (theta * 180.0 / math.pi))
 		local radius = 1
 		local casting_ray = true
-		--start with trying to make shorter connections, but gradually extend the reach
+		-- start with trying to make shorter connections, but gradually extend the reach
+		-- so that far-away rooms eventually do get connected
 		local max_ray_length = starting_max_ray_length + math.floor(rays_failed / 100)
 		while casting_ray do
 			local test_x, test_y = find_offset_hex_polar(center_x, center_y, radius, theta)
@@ -733,16 +740,21 @@ local function place_corridors(current_rooms)
 									connect_attempts = connect_attempts + 1
 									corridor_created = true
 								end
+								local current_origin_room_num = origin_room_num
 								for t = 1, #corridor_tiles do
 									local hex_x = corridor_tiles[t][1]
 									local hex_y = corridor_tiles[t][2]
-									-- check if we've made any additional connections along the way
+									-- check what connections we've made along the way (including but not limited to dest_room)
 									for k = 1, num_rooms do
-										if k ~= origin_room_num then
-											if current_rooms[k]:contains_hex(hex_x, hex_y) and graph:get_edge(origin_room_num, k) == 0 then
-												--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
-												graph:set_edge(origin_room_num, k, 1)
-												graph:set_edge(k, origin_room_num, 1)
+										if k ~= current_origin_room_num then
+											if current_rooms[k]:contains_hex(hex_x, hex_y) then
+												if graph:get_edge(current_origin_room_num, k) == 0 then
+													--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
+													graph:set_edge(current_origin_room_num, k, 1)
+													graph:set_edge(k, current_origin_room_num, 1)
+												end
+												-- if corridor from A -> C goes through B, then link A:B and B:C (but not A:C) in graph
+												current_origin_room_num = k
 											end
 										end
 									end
@@ -785,4 +797,6 @@ function randomize_map()
 	end
 
 	place_corridors(all_rooms)
+
+	-- scatter healing and damage glyphs
 end
