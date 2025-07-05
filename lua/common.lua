@@ -23,6 +23,22 @@ function random_norm(mean, sd)
 	return r
 end
 
+function trunc(n)
+	if n >= 0.0 then
+		return math.floor(n)
+	else
+		return math.ceil(n)
+	end
+end
+
+-- since mainline wesnoth.map.from_cubic is broken as of 1.19.13, reimplement it here
+-- (c++ backend expects a cubic_location struct which isn't accessble to lua)
+function from_cubic(q, r, s)
+	local x = q
+	local y = r + trunc((q + (math.abs(q) % 2)) / 2)
+	return({x, y})
+end
+
 --- adjusts side numbers in the sidebar to 'skip over' listed sides
 --- used in 17A (Blockade) so that depthstalkers appear the same side as the main naga force
 function conceal_sides_sidebar(side_list)

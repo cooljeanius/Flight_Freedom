@@ -1,5 +1,5 @@
 -- implements a graph class and functions
--- so far used in S11A
+-- so far used in S11A and S11B
 
 Graph = {adjacency_mat = {}}
 

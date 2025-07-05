@@ -1,22 +1,6 @@
--- Lua code used by scenario 11B (Sol'Kan's Lair)
+-- Lua code used by scenario 11B (Sol'kan's Lair)
 
 wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
-
-local function trunc(n)
-	if n >= 0.0 then
-		return math.floor(n)
-	else
-		return math.ceil(n)
-	end
-end
-
--- since mainline wesnoth.map.from_cubic is broken as of 1.19.13, reimplement it here
--- (c++ backend expects a cubic_location struct which isn't accessble to lua)
-local function from_cubic(q, r, s)
-	local x = q
-	local y = r + trunc((q + (math.abs(q) % 2)) / 2)
-	return({x, y})
-end
 
 ------------------------
 ----- Room class to handle creation, initial terrain painting, and collision checking
@@ -101,6 +85,7 @@ function Room:fits_in_map()
 	return fits
 end
 
+-- includes walls
 function Room:contains_hex(x, y)
 -- start at left corner, iterate across width of room (in x-coordinate), and check y coordinates
 	local in_room = false
@@ -279,6 +264,52 @@ function Room:intersects_with(r2)
 	return (Room.half_intersect(self, r2) or Room.half_intersect(r2, self))
 end
 
+function Room:presenting_side_to(r2)
+	-- find sides closest to each other
+	local center_x, center_y = table.unpack(self:get_approx_center())
+	local r2_center_x, r2_center_y = table.unpack(r2:get_approx_center())
+	local side = ""
+	if center_x < r2_center_x and center_y < r2_center_y then
+		side = "se"
+	elseif center_x >= r2_center_x and center_y < r2_center_y then
+		side = "sw"
+	elseif center_x < r2_center_x and center_y >= r2_center_y then
+		side = "ne"
+	elseif center_x >= r2_center_x and center_y >= r2_center_y then
+		side = "nw"
+	end
+	return side
+end
+
+function Room:minimum_wall_distance(r2)
+	local presenting_side = self:presenting_side_to(r2)
+	local source_hex_list = nil
+	local dest_hex_list = nil
+	if presenting_side == "se" then
+		source_hex_list = self:get_specific_edge_hexes()[4] -- SE wall
+		dest_hex_list = r2:get_specific_edge_hexes()[1] -- NW wall
+	elseif presenting_side == "sw" then
+		source_hex_list = self:get_specific_edge_hexes()[3] -- SW wall
+		dest_hex_list = r2:get_specific_edge_hexes()[2] -- NE wall
+	elseif presenting_side == "ne" then
+		source_hex_list = self:get_specific_edge_hexes()[2] -- NE wall
+		dest_hex_list = r2:get_specific_edge_hexes()[3] -- SW wall
+	elseif presenting_side == "nw" then
+		source_hex_list = self:get_specific_edge_hexes()[1] -- NW wall
+		dest_hex_list = r2:get_specific_edge_hexes()[4] -- SE wall
+	end
+	local min_dist = nil
+	for i, hex1 in ipairs(source_hex_list) do
+		for j, hex2 in ipairs(dest_hex_list) do
+			local dist = wesnoth.map.distance_between(hex1, hex2)
+			if min_dist == nil or dist < min_dist then
+				min_dist = dist
+			end
+		end
+	end
+	return min_dist
+end
+
 ------------------------
 ----- now set up the map
 ------------------------
@@ -328,119 +359,6 @@ local function add_terrain_overlay(x, y, overlay_code)
 	local base, overlay = wesnoth.map.split_terrain_code(terrain_code)
 	wesnoth.current.map[{x, y}] = base .. "^" .. overlay_code
 end
-
--- start out by placing story-important rooms
-
--- start room in bottom left of the map
-local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, true)
-start_room.id = "start_room"
-start_room:set_inner_terrain("Isa")
-start_room:set_wall_terrain("Xor")
-table.insert(all_rooms, start_room)
-
--- cave passage in
-local start_room_x, start_room_y = table.unpack(start_room:left_corner())
-wesnoth.wml_actions.terrain_mask({
-	mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/13b_cave_entrance.mask"),
-	x = start_room_x,
-	y = start_room_y + 1,
-	border = true,
-})
-
-local malakar_start_x = start_room_x + 6
-local malakar_start_y = start_room_y
-wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
-
--- control room in top right of the map
-local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), true)
-control_room.id = "control_room"
-control_room:set_inner_terrain("Isr")
-control_room:set_wall_terrain("Xoi")
-table.insert(all_rooms, control_room)
-
--- todo: four rooms with glyphs to lower barrier in control room
-
--- library room in top left of map
-local library_room = find_room(12, 7, 1, 10, 1, 15, true)
-library_room.id = "library_room"
-library_room:set_inner_terrain("Iwr")
-library_room:set_wall_terrain("Xoc")
-table.insert(all_rooms, library_room)
-
--- now make and position some random rooms (not involved in objectives)
-random_rooms = {}
-
-local num_random_rooms = 10
--- this includes walls
-local random_room_dim_mean = 12
-local random_room_dim_sd = 5
-local random_room_dim_min = 5
-local random_room_dim_max = 12
-
-local rand_rooms_generated = 0
-
-while rand_rooms_generated < num_random_rooms do
-	local r_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
-	r_height = math.max(r_height, random_room_dim_min)
-	r_height = math.min(r_height, random_room_dim_max)
-	local s_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
-	s_height = math.max(s_height, random_room_dim_min)
-	s_height = math.min(s_height, random_room_dim_max)
-	local r = find_room(r_height, s_height, 1, map_size_x, 1, map_size_y, false)
-	if r ~= nil then
-		r.id = "random_" .. tostring(rand_rooms_generated)
-		r:set_inner_terrain("Isa")
-		rand_rooms_generated = rand_rooms_generated + 1
-		table.insert(all_rooms, r)
-		table.insert(random_rooms, r)
-	end
-end
-
--- populate random rooms
-for i = 1, rand_rooms_generated do
-	-- undead nests
-	if i >= 1 and i <= 4 then
-		random_rooms[i]:set_wall_terrain("Xot") -- catacomb wall
-		random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
-		local room_wall_hexes = random_rooms[i]:get_edge_hexes()
-		for i, hex in ipairs(room_wall_hexes) do
-			local rand_decor = mathx.random(1, 5)
-			if rand_decor == 1 then
-				add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
-			elseif rand_decor == 2 then
-				add_terrain_overlay(hex[1], hex[2], "Efs") -- brazier
-			end
-		end
-		local room_inner_hexes = random_rooms[i]:get_inner_hexes()
-		for i, hex in ipairs(room_inner_hexes) do
-			local rand_decor = mathx.random(1, 4)
-			if rand_decor == 1 then
-				add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
-			end
-			local rand_monster = mathx.random(1, 30)
-			if rand_monster == 27 then
-				wesnoth.units.to_map({type="Spectre", side=2}, hex[1], hex[2])
-			end
-			if rand_monster == 28 then
-				wesnoth.units.to_map({type="Nightgaunt", side=2}, hex[1], hex[2])
-			end
-			if rand_monster == 29 then
-				wesnoth.units.to_map({type="Draug", side=2}, hex[1], hex[2])
-			end
-			if rand_monster == 30 then
-				wesnoth.units.to_map({type="Banebow", side=2}, hex[1], hex[2])
-			end
-		end
-	end
-	-- todo: rooms with healing glyphs
-	-- todo: other monster room
-	-- todo: maybe a treasure room?
-end
-
--- build graph of all rooms
-local num_rooms = #all_rooms
-graph = Graph:new()
-graph:init_unconnected(num_rooms)
 
 -- q, r, s: starting cubic coordinates
 -- inst: list of instructions ("nw", "ne", "sw", "se") to extend the tunnel
@@ -510,172 +428,350 @@ local function plot_corridor(q, r, s, corridor_width, inst_list)
 	return corridor_tiles
 end
 
--- until graph is fully connected, i.e. all rooms are accessible:
----- pick random room
----- cast a ray at random angle
----- first room that we hit (if any), if no edge between source and destination connect them (both in graph and on map)
-local max_connect_attempts = 1000 -- avoid infinte loop in case there's a room that can't be connected anywhere
-local connect_attempts = 0 -- tracks number of failed connections (resets if successful connection made)
---local corridor_created = false
---while not corridor_created do
-while not graph:is_connected() do
-	local origin_room_num = mathx.random(1, num_rooms)
-	local origin_room = all_rooms[origin_room_num]
-	local center_x, center_y = table.unpack(origin_room:get_approx_center())
-	local theta = mathx.random() * math.pi * 2.0
-	local radius = 1
-	local casting_ray = true
-	while casting_ray do
-		local test_x, test_y = find_offset_hex_polar(center_x, center_y, radius, theta)
-		if test_x >= 1 and test_x <= map_size_x and test_y >= 1 and test_y <= map_size_y then
-			for i = 1, num_rooms do
-				if i ~= origin_room_num then
-					if all_rooms[i]:contains_hex(test_x, test_y) then
-						local dest_room = all_rooms[i]
-						-- don't make duplicate tunnels between rooms
-						if graph:get_edge(origin_room_num, i) == 0 then
-							-- update connection in rooms graph
-							graph:set_edge(origin_room_num, i, 1)
-							graph:set_edge(i, origin_room_num, 1)
-							-- create corridor on map
-							local corridor_created = false
-							local corridor_tiles = {}
-							local max_corridor_attempts = 200
-							local corridor_attempts = 0
-							while not corridor_created do
-								corridor_created = true
-								local corridor_width = 2 -- mathx.random(2, 3)
-								local half_corridor_width = math.floor(corridor_width / 2)
-								local dest_center_x, dest_center_y = table.unpack(dest_room:get_approx_center())
-								local source_hex_list = nil
-								local dest_hex_list = nil
-								if center_x < dest_center_x and center_y < dest_center_y then
-									-- SE of origin to NW of destination
-									source_hex_list = origin_room:get_specific_edge_hexes()[4]
-									dest_hex_list = dest_room:get_specific_edge_hexes()[1]
-								elseif center_x >= dest_center_x and center_y < dest_center_y then
-									-- SW of origin to NE of destination
-									source_hex_list = origin_room:get_specific_edge_hexes()[3]
-									dest_hex_list = dest_room:get_specific_edge_hexes()[2]
-								elseif center_x < dest_center_x and center_y >= dest_center_y then
-									-- NE of origin to SW of destination
-									source_hex_list = origin_room:get_specific_edge_hexes()[2]
-									dest_hex_list = dest_room:get_specific_edge_hexes()[3]
-								elseif center_x >= dest_center_x and center_y >= dest_center_y then
-									-- NW of origin to SE of destination
-									source_hex_list = origin_room:get_specific_edge_hexes()[1]
-									dest_hex_list = dest_room:get_specific_edge_hexes()[4]
-								end
-								-- exclude left and right corners as possible connection points
-								local source_hex = source_hex_list[mathx.random(2, (#source_hex_list - 1))]
-								local dest_hex = dest_hex_list[mathx.random(2, (#dest_hex_list - 1))]
-								local q1, r1, s1 = table.unpack(wesnoth.map.get_cubic(source_hex))
-								local q2, r2, s2 = table.unpack(wesnoth.map.get_cubic(dest_hex))
-								local r_dist = r2 - r1
-								local s_dist = s2 - s1
-								local inst = {}
-								-- middle direction occurs anywhere from 25% to 75% of the way down corridor
-								local first_prop = mathx.random() * 0.5 + 0.25
-								if (center_x < dest_center_x and center_y >= dest_center_y) or (center_x >= dest_center_x and center_y < dest_center_y) then
-									-- connecting SW:NE, so move in r, then s, then r
-									local r1 = math.floor(r_dist * first_prop)
-									local r2 = r_dist - r1
-									for k = 1, math.abs(r1) do
-										if r_dist < 0 then
-											table.insert(inst, "ne")
-										else
-											table.insert(inst, "sw")
+function randomize_map()
+	-- start out by placing story-important rooms
+
+	-- start room in bottom left of the map
+	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, true)
+	start_room.id = "start_room"
+	start_room:set_inner_terrain("Isa")
+	start_room:set_wall_terrain("Xor")
+	table.insert(all_rooms, start_room)
+
+	-- cave passage in
+	local start_room_x, start_room_y = table.unpack(start_room:left_corner())
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/13b_cave_entrance.mask"),
+		x = start_room_x,
+		y = start_room_y + 1,
+		border = true,
+	})
+
+	local malakar_start_x = start_room_x + 6
+	local malakar_start_y = start_room_y
+	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
+
+	-- control room in top right of the map
+	local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), true)
+	control_room.id = "control_room"
+	control_room:set_inner_terrain("Isr")
+	control_room:set_wall_terrain("Xoi")
+	table.insert(all_rooms, control_room)
+
+	-- todo: four rooms with glyphs to lower barrier in control room
+
+	-- library room in top left of map
+	local library_room = find_room(12, 7, 1, 10, 1, 15, true)
+	library_room.id = "library_room"
+	library_room:set_inner_terrain("Iwr")
+	library_room:set_wall_terrain("Xoc")
+	table.insert(all_rooms, library_room)
+
+	-- now make and position some random rooms (not involved in objectives)
+	random_rooms = {}
+
+	local num_random_rooms = 10
+	-- this includes walls
+	local random_room_dim_mean = 12
+	local random_room_dim_sd = 5
+	local random_room_dim_min = 5
+	local random_room_dim_max = 12
+
+	local rand_rooms_generated = 0
+
+	while rand_rooms_generated < num_random_rooms do
+		local r_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
+		r_height = math.max(r_height, random_room_dim_min)
+		r_height = math.min(r_height, random_room_dim_max)
+		local s_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
+		s_height = math.max(s_height, random_room_dim_min)
+		s_height = math.min(s_height, random_room_dim_max)
+		local r = find_room(r_height, s_height, 1, map_size_x, 1, map_size_y, false)
+		if r ~= nil then
+			rand_rooms_generated = rand_rooms_generated + 1
+			r.id = "random_" .. tostring(rand_rooms_generated)
+			r:set_inner_terrain("Isa")
+			table.insert(all_rooms, r)
+			table.insert(random_rooms, r)
+		end
+	end
+
+	-- populate random rooms
+	for i = 1, rand_rooms_generated do
+		-- undead nests
+		if i >= 1 and i <= 4 then
+			random_rooms[i]:set_wall_terrain("Xot") -- catacomb wall
+			random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
+			local room_wall_hexes = random_rooms[i]:get_edge_hexes()
+			for i, hex in ipairs(room_wall_hexes) do
+				local rand_decor = mathx.random(1, 5)
+				if rand_decor == 1 then
+					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
+				elseif rand_decor == 2 then
+					add_terrain_overlay(hex[1], hex[2], "Efs") -- brazier
+				end
+			end
+			local room_inner_hexes = random_rooms[i]:get_inner_hexes()
+			for i, hex in ipairs(room_inner_hexes) do
+				local rand_decor = mathx.random(1, 4)
+				if rand_decor == 1 then
+					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
+				end
+				local rand_monster = mathx.random(1, 40)
+				if rand_monster == 37 then
+					wesnoth.units.to_map({type="Spectre", side=2}, hex[1], hex[2])
+				end
+				if rand_monster == 38 then
+					wesnoth.units.to_map({type="Nightgaunt", side=2}, hex[1], hex[2])
+				end
+				if rand_monster == 39 then
+					wesnoth.units.to_map({type="Draug", side=2}, hex[1], hex[2])
+				end
+				if rand_monster == 40 then
+					wesnoth.units.to_map({type="Banebow", side=2}, hex[1], hex[2])
+				end
+			end
+		end
+		-- todo: rooms with healing glyphs
+		-- todo: other monster room
+		-- todo: maybe a treasure room?
+	end
+
+	-- for debug purposes, label all rooms in map
+	for i, room in ipairs(all_rooms) do
+		local center_x, center_y = table.unpack(room:get_approx_center())
+		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
+	end
+
+	-- build graph of all rooms
+	local num_rooms = #all_rooms
+	graph = Graph:new()
+	graph:init_unconnected(num_rooms)
+
+	-- until graph is fully connected, i.e. all rooms are accessible:
+	---- pick random room
+	---- cast a ray at random angle
+	---- first room that we hit (if any), if no edge between source and destination connect them (both in graph and on map)
+	local max_connect_attempts = 1000 -- avoid infinte loop in case there's a room that can't be connected anywhere
+	local connect_attempts = 0 -- tracks number of failed connections (resets if successful connection made)
+	local rays_failed = 0
+	local starting_max_ray_length = 15 -- limit maximun distance algorithm will try to connect rooms
+	--local corridor_created = false
+	--while not corridor_created do
+	while not graph:is_connected() do
+		local origin_room_num = mathx.random(1, num_rooms)
+		local origin_room = all_rooms[origin_room_num]
+		local center_x, center_y = table.unpack(origin_room:get_approx_center())
+		--print("Source hex: " .. tostring(center_x) .. ", " .. tostring(center_y))
+		local theta = mathx.random() * math.pi * 2.0
+		--print("Theta: " .. (theta * 180.0 / math.pi))
+		local radius = 1
+		local casting_ray = true
+		--start with trying to make shorter connections, but gradually extend the reach
+		local max_ray_length = starting_max_ray_length + math.floor(rays_failed / 100)
+		while casting_ray do
+			local test_x, test_y = find_offset_hex_polar(center_x, center_y, radius, theta)
+			if test_x >= 1 and test_x <= map_size_x and test_y >= 1 and test_y <= map_size_y and radius <= max_ray_length then
+				--print("Eval hex: " .. tostring(test_x) .. ", " .. tostring(test_y))
+				for i = 1, num_rooms do
+					if i ~= origin_room_num then
+						if all_rooms[i]:contains_hex(test_x, test_y) then
+							--print("Found target: " .. tostring(test_x) .. ", " .. tostring(test_y))
+							local dest_room = all_rooms[i]
+							-- don't make duplicate tunnels between rooms
+							if graph:get_edge(origin_room_num, i) == 0 then
+								-- create corridor on map
+								local corridor_created = false
+								local corridor_tiles = {}
+								local max_corridor_attempts = 200
+								local corridor_attempts = 0
+								while not corridor_created do
+									corridor_created = true
+									local corridor_width = 2 -- mathx.random(2, 3)
+									local half_corridor_width = math.floor(corridor_width / 2)
+									local presenting_side = origin_room:presenting_side_to(dest_room)
+									local source_hex_list = nil
+									local dest_hex_list = nil
+									if presenting_side == "se" then
+										-- SE of origin to NW of destination
+										source_hex_list = origin_room:get_specific_edge_hexes()[4]
+										dest_hex_list = dest_room:get_specific_edge_hexes()[1]
+									elseif presenting_side == "sw" then
+										-- SW of origin to NE of destination
+										source_hex_list = origin_room:get_specific_edge_hexes()[3]
+										dest_hex_list = dest_room:get_specific_edge_hexes()[2]
+									elseif presenting_side == "ne" then
+										-- NE of origin to SW of destination
+										source_hex_list = origin_room:get_specific_edge_hexes()[2]
+										dest_hex_list = dest_room:get_specific_edge_hexes()[3]
+									elseif presenting_side == "nw" then
+										-- NW of origin to SE of destination
+										source_hex_list = origin_room:get_specific_edge_hexes()[1]
+										dest_hex_list = dest_room:get_specific_edge_hexes()[4]
+									end
+									-- exclude left and right corners as possible connection points
+									table.remove(source_hex_list)
+									table.remove(source_hex_list, 1)
+									table.remove(dest_hex_list)
+									table.remove(dest_hex_list, 1)
+									mathx.shuffle(source_hex_list)
+									mathx.shuffle(dest_hex_list)
+									local source_hex = nil
+									local dest_hex = nil
+									-- try to find a straight path
+									local min_wall_dist = origin_room:minimum_wall_distance(dest_room)
+									if min_wall_dist <= 4 then
+										for j, hex1 in ipairs(source_hex_list) do
+											local q1, r1, s1 = table.unpack(wesnoth.map.get_cubic(hex1))
+											for k = 1, min_wall_dist do
+												if source_hex == nil then
+													if presenting_side == "se" then
+														q1 = q1 + 1
+														s1 = s1 - 1
+													elseif presenting_side == "sw" then
+														q1 = q1 - 1
+														r1 = r1 + 1
+													elseif presenting_side == "ne" then
+														q1 = q1 + 1
+														r1 = r1 - 1
+													elseif presenting_side == "nw" then
+														q1 = q1 - 1
+														s1 = s1 + 1
+													end
+													local hex2 = from_cubic(q1, r1, s1)
+													for l, poss_dest_hex in ipairs(dest_hex_list) do
+														if hex2[1] == poss_dest_hex[1] and hex2[2] == poss_dest_hex[2] then
+															source_hex = hex1
+															dest_hex = hex2
+														end
+													end
+												end
+											end
+											if source_hex ~= nil then
+												break
+											end
 										end
 									end
-									for k = 1, math.abs(s_dist) do
-										if s_dist < 0 then
-											table.insert(inst, "se")
-										else
-											table.insert(inst, "nw")
+									if source_hex == nil then
+										source_hex = source_hex_list[1]
+										dest_hex = dest_hex_list[1]
+									end
+									local q1, r1, s1 = table.unpack(wesnoth.map.get_cubic(source_hex))
+									local q2, r2, s2 = table.unpack(wesnoth.map.get_cubic(dest_hex))
+									local r_dist = r2 - r1
+									local s_dist = s2 - s1
+									local inst = {}
+									-- middle direction occurs anywhere from 25% to 75% of the way down corridor
+									local first_prop = mathx.random() * 0.5 + 0.25
+									if presenting_side == "sw" or presenting_side == "ne" then
+										-- connecting SW:NE, so move in r, then s, then r
+										local r1 = math.floor(r_dist * first_prop)
+										local r2 = r_dist - r1
+										for k = 1, math.abs(r1) do
+											if r_dist < 0 then
+												table.insert(inst, "ne")
+											else
+												table.insert(inst, "sw")
+											end
+										end
+										for k = 1, math.abs(s_dist) do
+											if s_dist < 0 then
+												table.insert(inst, "se")
+											else
+												table.insert(inst, "nw")
+											end
+										end
+										for k = 1, math.abs(r2) + 1 do
+											if r_dist < 0 then
+												table.insert(inst, "ne")
+											else
+												table.insert(inst, "sw")
+											end
+										end
+									else
+										-- connecting SE:NW, so move in s, then r, then s
+										local s1 = math.floor(s_dist * first_prop)
+										local s2 = s_dist - s1
+										for k = 1, math.abs(s1) do
+											if s_dist < 0 then
+												table.insert(inst, "se")
+											else
+												table.insert(inst, "nw")
+											end
+										end
+										for k = 1, math.abs(r_dist) do
+											if r_dist < 0 then
+												table.insert(inst, "ne")
+											else
+												table.insert(inst, "sw")
+											end
+										end
+										for k = 1, math.abs(s2) + 1 do
+											if s_dist < 0 then
+												table.insert(inst, "se")
+											else
+												table.insert(inst, "nw")
+											end
 										end
 									end
-									for k = 1, math.abs(r2) + 1 do
-										if r_dist < 0 then
-											table.insert(inst, "ne")
-										else
-											table.insert(inst, "sw")
-										end
-									end
-								else
-									-- connecting SE:NW, so move in s, then r, then s
-									local s1 = math.floor(s_dist * first_prop)
-									local s2 = s_dist - s1
-									for k = 1, math.abs(s1) do
-										if s_dist < 0 then
-											table.insert(inst, "se")
-										else
-											table.insert(inst, "nw")
-										end
-									end
-									for k = 1, math.abs(r_dist) do
-										if r_dist < 0 then
-											table.insert(inst, "ne")
-										else
-											table.insert(inst, "sw")
-										end
-									end
-									for k = 1, math.abs(s2) + 1 do
-										if s_dist < 0 then
-											table.insert(inst, "se")
-										else
-											table.insert(inst, "nw")
-										end
-									end
-								end
-								corridor_tiles = plot_corridor(q1, r1, s1, corridor_width, inst)
-								for t = 1, #corridor_tiles do
-									local hex_x = corridor_tiles[t][1]
-									local hex_y = corridor_tiles[t][2]
-									if not (hex_x >= 1 and hex_x <= map_size_x and hex_y >=1 and hex_y <= map_size_y) then
+									-- make sure that side direction is at least slightly offset from room wall
+									if #inst > 1 and (inst[1] ~= inst[2] or inst[#inst] ~= inst[#inst - 1]) then
 										corridor_created = false
 										corridor_tiles = {}
 										corridor_attempts = corridor_attempts + 1
-										if corridor_attempts > max_corridor_attempts then
-											-- give up on connecting these rooms
-											graph:set_edge(origin_room_num, i, 0)
-											graph:set_edge(i, origin_room_num, 0)
-											connect_attempts = connect_attempts + 1
-											corridor_created = true
-										end
 										break
 									end
-								end
-							end
-							for t = 1, #corridor_tiles do
-								local hex_x = corridor_tiles[t][1]
-								local hex_y = corridor_tiles[t][2]
-								-- check if we've made any additional connections along the way
-								for k = 1, num_rooms do
-									if k ~= origin_room_num then
-										if all_rooms[k]:contains_hex(hex_x, hex_y) then
-											graph:set_edge(origin_room_num, k, 1)
-											graph:set_edge(k, origin_room_num, 1)
+									corridor_tiles = plot_corridor(q1, r1, s1, corridor_width, inst)
+									-- make sure corridor doesn't go off edge of map
+									for t = 1, #corridor_tiles do
+										local hex_x = corridor_tiles[t][1]
+										local hex_y = corridor_tiles[t][2]
+										if not (hex_x >= 1 and hex_x <= map_size_x and hex_y >=1 and hex_y <= map_size_y) then
+											corridor_created = false
+											corridor_tiles = {}
+											corridor_attempts = corridor_attempts + 1
+											break
 										end
 									end
 								end
-								-- only overwrite wall terrains
-								if string.sub(wesnoth.current.map[{hex_x, hex_y}], 1, 1) == "X" then
-									wesnoth.current.map[{hex_x, hex_y}] = "Isa" -- "Gg"
+								if corridor_attempts > max_corridor_attempts then
+									-- give up on connecting these rooms
+									connect_attempts = connect_attempts + 1
+									corridor_created = true
 								end
-								connect_attempts = 0
+								for t = 1, #corridor_tiles do
+									local hex_x = corridor_tiles[t][1]
+									local hex_y = corridor_tiles[t][2]
+									-- check if we've made any additional connections along the way
+									for k = 1, num_rooms do
+										if k ~= origin_room_num then
+											if all_rooms[k]:contains_hex(hex_x, hex_y) and graph:get_edge(origin_room_num, k) == 0 then
+												--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
+												graph:set_edge(origin_room_num, k, 1)
+												graph:set_edge(k, origin_room_num, 1)
+											end
+										end
+									end
+									-- only overwrite wall terrains
+									if string.sub(wesnoth.current.map[{hex_x, hex_y}], 1, 1) == "X" then
+										wesnoth.current.map[{hex_x, hex_y}] = "Isa" -- "Gg"
+									end
+									connect_attempts = 0
+								end
 							end
+							casting_ray = false
+							break
 						end
-						casting_ray = false
-						break
 					end
 				end
+				radius = radius + 1
+			else
+				casting_ray = false
+				rays_failed = rays_failed + 1
 			end
-			radius = radius + 1
-		else
-			casting_ray = false
 		end
+	--	if connect_attempts > max_connect_attempts then
+	--		break
+	--	end
 	end
---	if connect_attempts > max_connect_attempts then
---		break
---	end
 end
