@@ -74,11 +74,11 @@ function Room:fits_in_map()
 	if (x2 < 1) or (y2 < 1) or (x2 > map_size_x) or (y2 > map_size_y) then
 		fits = false
 	end
-	local x2, y2 = table.unpack(self:bottom_corner())
+	x2, y2 = table.unpack(self:bottom_corner())
 	if (x2 < 1) or (y2 < 1) or (x2 > map_size_x) or (y2 > map_size_y) then
 		fits = false
 	end
-	local x2, y2 = table.unpack(self:right_corner())
+	x2, y2 = table.unpack(self:right_corner())
 	if (x2 < 1) or (y2 < 1) or (x2 > map_size_x) or (y2 > map_size_y) then
 		fits = false
 	end
@@ -317,10 +317,8 @@ end
 local map_size_x = wesnoth.current.map.playable_width
 local map_size_y = wesnoth.current.map.playable_height
 
-all_rooms = {}
-
 -- essential=true used for story rooms
-local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, essential)
+local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, existing_rooms, essential)
 	local attempts = 0
 	local max_attempts = 200
 	local placed = false
@@ -334,7 +332,7 @@ local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, essenti
 		if room:fits_in_map() then
 			if room:fits_in_map() then
 				local intersects = false
-				for i, r2 in ipairs(all_rooms) do
+				for i, r2 in ipairs(existing_rooms) do
 					if room:intersects_with(r2) then
 						intersects = true
 						break
@@ -428,15 +426,13 @@ local function plot_corridor(q, r, s, corridor_width, inst_list)
 	return corridor_tiles
 end
 
-function randomize_map()
-	-- start out by placing story-important rooms
-
+local function place_story_rooms(current_rooms)
 	-- start room in bottom left of the map
-	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, true)
+	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	start_room.id = "start_room"
 	start_room:set_inner_terrain("Isa")
 	start_room:set_wall_terrain("Xor")
-	table.insert(all_rooms, start_room)
+	table.insert(current_rooms, start_room)
 
 	-- cave passage in
 	local start_room_x, start_room_y = table.unpack(start_room:left_corner())
@@ -452,23 +448,25 @@ function randomize_map()
 	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
 
 	-- control room in top right of the map
-	local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), true)
+	local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
 	control_room.id = "control_room"
 	control_room:set_inner_terrain("Isr")
 	control_room:set_wall_terrain("Xoi")
-	table.insert(all_rooms, control_room)
+	table.insert(current_rooms, control_room)
 
 	-- todo: four rooms with glyphs to lower barrier in control room
 
 	-- library room in top left of map
-	local library_room = find_room(12, 7, 1, 10, 1, 15, true)
+	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
 	library_room.id = "library_room"
 	library_room:set_inner_terrain("Iwr")
 	library_room:set_wall_terrain("Xoc")
-	table.insert(all_rooms, library_room)
+	table.insert(current_rooms, library_room)
+	return current_rooms
+end
 
-	-- now make and position some random rooms (not involved in objectives)
-	random_rooms = {}
+local function place_random_rooms(current_rooms)
+	local random_rooms = {}
 
 	local num_random_rooms = 10
 	-- this includes walls
@@ -486,12 +484,12 @@ function randomize_map()
 		local s_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
 		s_height = math.max(s_height, random_room_dim_min)
 		s_height = math.min(s_height, random_room_dim_max)
-		local r = find_room(r_height, s_height, 1, map_size_x, 1, map_size_y, false)
+		local r = find_room(r_height, s_height, 1, map_size_x, 1, map_size_y, current_rooms, false)
 		if r ~= nil then
 			rand_rooms_generated = rand_rooms_generated + 1
 			r.id = "random_" .. tostring(rand_rooms_generated)
 			r:set_inner_terrain("Isa")
-			table.insert(all_rooms, r)
+			table.insert(current_rooms, r)
 			table.insert(random_rooms, r)
 		end
 	end
@@ -536,18 +534,14 @@ function randomize_map()
 		-- todo: other monster room
 		-- todo: maybe a treasure room?
 	end
+	return current_rooms
+end
 
-	-- for debug purposes, label all rooms in map
-	for i, room in ipairs(all_rooms) do
-		local center_x, center_y = table.unpack(room:get_approx_center())
-		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
-	end
-
+local function place_corridors(current_rooms)
 	-- build graph of all rooms
 	local num_rooms = #all_rooms
 	graph = Graph:new()
 	graph:init_unconnected(num_rooms)
-
 	-- until graph is fully connected, i.e. all rooms are accessible:
 	---- pick random room
 	---- cast a ray at random angle
@@ -560,7 +554,7 @@ function randomize_map()
 	--while not corridor_created do
 	while not graph:is_connected() do
 		local origin_room_num = mathx.random(1, num_rooms)
-		local origin_room = all_rooms[origin_room_num]
+		local origin_room = current_rooms[origin_room_num]
 		local center_x, center_y = table.unpack(origin_room:get_approx_center())
 		--print("Source hex: " .. tostring(center_x) .. ", " .. tostring(center_y))
 		local theta = mathx.random() * math.pi * 2.0
@@ -575,9 +569,9 @@ function randomize_map()
 				--print("Eval hex: " .. tostring(test_x) .. ", " .. tostring(test_y))
 				for i = 1, num_rooms do
 					if i ~= origin_room_num then
-						if all_rooms[i]:contains_hex(test_x, test_y) then
+						if current_rooms[i]:contains_hex(test_x, test_y) then
 							--print("Found target: " .. tostring(test_x) .. ", " .. tostring(test_y))
-							local dest_room = all_rooms[i]
+							local dest_room = current_rooms[i]
 							-- don't make duplicate tunnels between rooms
 							if graph:get_edge(origin_room_num, i) == 0 then
 								-- create corridor on map
@@ -745,7 +739,7 @@ function randomize_map()
 									-- check if we've made any additional connections along the way
 									for k = 1, num_rooms do
 										if k ~= origin_room_num then
-											if all_rooms[k]:contains_hex(hex_x, hex_y) and graph:get_edge(origin_room_num, k) == 0 then
+											if current_rooms[k]:contains_hex(hex_x, hex_y) and graph:get_edge(origin_room_num, k) == 0 then
 												--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
 												graph:set_edge(origin_room_num, k, 1)
 												graph:set_edge(k, origin_room_num, 1)
@@ -774,4 +768,21 @@ function randomize_map()
 	--		break
 	--	end
 	end
+end
+
+function randomize_map()
+	all_rooms = {}
+	-- start out by placing story-important rooms
+	all_rooms = place_story_rooms(all_rooms)
+
+	-- now make and position some random rooms (not involved in objectives)
+	all_rooms = place_random_rooms(all_rooms)
+
+	-- for debug purposes, label all rooms in map
+	for i, room in ipairs(all_rooms) do
+		local center_x, center_y = table.unpack(room:get_approx_center())
+		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
+	end
+
+	place_corridors(all_rooms)
 end
