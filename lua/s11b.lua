@@ -32,21 +32,21 @@ function Room:left_corner()
 end
 
 function Room:top_corner()
-	local q, r, s = table.unpack(wesnoth.map.get_cubic({self.x1, self.y1}))
+	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
 	q = q + (self.r_height - 1)
 	r = r - (self.r_height - 1)
 	return from_cubic(q, r, s)
 end
 
 function Room:bottom_corner()
-	local q, r, s = table.unpack(wesnoth.map.get_cubic({self.x1, self.y1}))
+	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
 	q = q + (self.s_height - 1)
 	s = s - (self.s_height - 1)
 	return from_cubic(q, r, s)
 end
 
 function Room:right_corner()
-	local q, r, s = table.unpack(wesnoth.map.get_cubic({self.x1, self.y1}))
+	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
 	q = q + (self.r_height - 1) + (self.s_height - 1)
 	r = r - (self.r_height - 1)
 	s = s - (self.s_height - 1)
@@ -54,7 +54,7 @@ function Room:right_corner()
 end
 
 function Room:get_approx_center()
-	local q, r, s = table.unpack(wesnoth.map.get_cubic({self.x1, self.y1}))
+	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
 	local half_r_height = math.floor(self.r_height / 2)
 	local half_s_height = math.floor(self.s_height / 2)
 	q = q + (half_r_height - 1) + (half_s_height - 1)
@@ -623,7 +623,7 @@ local function place_corridors(current_rooms)
 									local min_wall_dist = origin_room:minimum_wall_distance(dest_room)
 									if min_wall_dist <= 4 then
 										for j, hex1 in ipairs(source_hex_list) do
-											local q1, r1, s1 = table.unpack(wesnoth.map.get_cubic(hex1))
+											local q1, r1, s1 = table.unpack(get_cubic(hex1))
 											for k = 1, min_wall_dist do
 												if source_hex == nil then
 													if presenting_side == "se" then
@@ -657,8 +657,8 @@ local function place_corridors(current_rooms)
 										source_hex = source_hex_list[1]
 										dest_hex = dest_hex_list[1]
 									end
-									local q1, r1, s1 = table.unpack(wesnoth.map.get_cubic(source_hex))
-									local q2, r2, s2 = table.unpack(wesnoth.map.get_cubic(dest_hex))
+									local q1, r1, s1 = table.unpack(get_cubic(source_hex))
+									local q2, r2, s2 = table.unpack(get_cubic(dest_hex))
 									local r_dist = r2 - r1
 									local s_dist = s2 - s1
 									local inst = {}

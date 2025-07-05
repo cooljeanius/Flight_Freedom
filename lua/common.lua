@@ -32,11 +32,25 @@ function trunc(n)
 end
 
 -- since mainline wesnoth.map.from_cubic is broken as of 1.19.13, reimplement it here
--- (c++ backend expects a cubic_location struct which isn't accessble to lua)
+-- (c++ backend expects a cubic_location struct which isn't accessible to lua)
 function from_cubic(q, r, s)
 	local x = q
 	local y = r + trunc((q + (math.abs(q) % 2)) / 2)
 	return({x, y})
+end
+
+get_cubic = nil
+if wesnoth.current_version() >= wesnoth.version("1.19.4") then
+	get_cubic = wesnoth.map.get_cubic
+else
+	-- even-q -> cubic conversion prior to 1.19.4
+	get_cubic = function(loc)
+		local parity = math.abs(loc[1]) % 2
+		local q = loc[1]
+		local r = loc[2] - trunc((loc[1] + parity) / 2)
+		local s = -1 * (q+r)
+		return({q, r, s})
+	end
 end
 
 --- adjusts side numbers in the sidebar to 'skip over' listed sides
