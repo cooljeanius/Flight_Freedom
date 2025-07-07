@@ -499,36 +499,40 @@ local function place_random_rooms(current_rooms)
 
 	-- populate random rooms
 	for i = 1, rand_rooms_generated do
-		-- undead nests
+		-- undead catacombs
 		if i >= 1 and i <= 4 then
 			random_rooms[i]:set_wall_terrain("Xot") -- catacomb wall
-			random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
+			--random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
 			local room_wall_hexes = random_rooms[i]:get_edge_hexes()
-			for i, hex in ipairs(room_wall_hexes) do
-				local rand_decor = mathx.random(1, 5)
-				if rand_decor == 1 then
+			for j, hex in ipairs(room_wall_hexes) do
+				local rand_decor = mathx.random(1, 6)
+				if rand_decor <= 2 then
 					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
-				elseif rand_decor == 2 then
+				elseif rand_decor == 3 then
 					add_terrain_overlay(hex[1], hex[2], "Efs") -- brazier
 				end
 			end
 			local room_inner_hexes = random_rooms[i]:get_inner_hexes()
-			for i, hex in ipairs(room_inner_hexes) do
+			for j, hex in ipairs(room_inner_hexes) do
 				local rand_decor = mathx.random(1, 4)
-				if rand_decor == 1 then
+				if rand_decor <= 3 then
 					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
 				end
-				local rand_monster = mathx.random(1, 40)
-				if rand_monster == 37 then
+			end
+			local num_undead_per_catacomb = 3
+			for j = 1, num_undead_per_catacomb do
+				local hex = room_inner_hexes[mathx.random(1, #room_inner_hexes)]
+				local rand_monster = mathx.random(1, 4)
+				if rand_monster == 1 then
 					wesnoth.units.to_map({type="Spectre", side=2}, hex[1], hex[2])
 				end
-				if rand_monster == 38 then
+				if rand_monster == 2 then
 					wesnoth.units.to_map({type="Nightgaunt", side=2}, hex[1], hex[2])
 				end
-				if rand_monster == 39 then
+				if rand_monster == 3 then
 					wesnoth.units.to_map({type="Draug", side=2}, hex[1], hex[2])
 				end
-				if rand_monster == 40 then
+				if rand_monster == 4 then
 					wesnoth.units.to_map({type="Banebow", side=2}, hex[1], hex[2])
 				end
 			end
