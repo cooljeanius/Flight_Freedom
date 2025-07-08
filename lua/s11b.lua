@@ -367,6 +367,11 @@ local function hex_list_to_wml_var(hex_list, x_var, y_var)
 	wml.variables[y_var] = y_string
 end
 
+local function hex_to_wml_var(hex, x_var, y_var)
+	wml.variables[x_var] = hex[1]
+	wml.variables[y_var] = hex[2]
+end
+
 -- q, r, s: starting cubic coordinates
 -- inst: list of instructions ("nw", "ne", "sw", "se") to extend the tunnel
 local function plot_corridor(q, r, s, corridor_width, inst_list)
@@ -435,7 +440,7 @@ local function plot_corridor(q, r, s, corridor_width, inst_list)
 	return corridor_tiles
 end
 
-local function place_story_rooms(current_rooms)
+local function place_story_rooms(current_rooms, num_orb_rooms)
 	-- start room in bottom left of the map
 	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	start_room.id = "start_room"
@@ -463,7 +468,13 @@ local function place_story_rooms(current_rooms)
 	control_room:set_wall_terrain("Xoi")
 	table.insert(current_rooms, control_room)
 
-	-- todo: four rooms with glyphs to lower barrier in control room
+	-- orb rooms
+	for i = 1, num_orb_rooms do
+		local orb_room = find_room(5, 5, 1, map_size_x, 1, map_size_y, current_rooms, true)
+		orb_room.id = "orb_" .. tostring(i)
+		orb_room:set_inner_terrain("Isa")
+		table.insert(current_rooms, orb_room)
+	end
 
 	-- library room in top left of map
 	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
@@ -522,6 +533,7 @@ local function place_random_rooms(current_rooms)
 				end
 			end
 			local room_inner_hexes = random_rooms[i]:get_inner_hexes()
+			mathx.shuffle(room_inner_hexes)
 			for j, hex in ipairs(room_inner_hexes) do
 				local rand_decor = mathx.random(1, 4)
 				if rand_decor <= 3 then
@@ -530,7 +542,7 @@ local function place_random_rooms(current_rooms)
 			end
 			local num_undead_per_catacomb = 3
 			for j = 1, num_undead_per_catacomb do
-				local hex = room_inner_hexes[mathx.random(1, #room_inner_hexes)]
+				local hex = room_inner_hexes[j]
 				local rand_monster = mathx.random(1, 4)
 				if rand_monster == 1 then
 					wesnoth.units.to_map({type="Spectre", side=2}, hex[1], hex[2])
@@ -762,7 +774,7 @@ local function place_corridors(current_rooms)
 										if k ~= current_origin_room_num then
 											if current_rooms[k]:contains_hex(hex_x, hex_y) then
 												if graph:get_edge(current_origin_room_num, k) == 0 then
-													--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
+													print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
 													graph:set_edge(current_origin_room_num, k, 1)
 													graph:set_edge(k, current_origin_room_num, 1)
 												end
@@ -832,8 +844,15 @@ end
 
 function randomize_map()
 	local all_rooms = {}
+
+	local num_orb_rooms = 5
+	if wesnoth.scenario.difficulty == "EASY" then
+		num_orb_rooms = 4
+	elseif wesnoth.scenario.difficulty == "HARD" then
+		num_orb_rooms = 6
+	end
 	-- start out by placing story-important rooms
-	all_rooms = place_story_rooms(all_rooms)
+	all_rooms = place_story_rooms(all_rooms, num_orb_rooms)
 
 	-- now make and position some random rooms (not involved in objectives)
 	all_rooms = place_random_rooms(all_rooms)
