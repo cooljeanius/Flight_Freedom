@@ -1,5 +1,6 @@
 -- Lua code used by scenario 11B (Sol'kan's Lair)
 
+local functional = wesnoth.require("functional")
 wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
 
 ------------------------
@@ -358,6 +359,14 @@ local function add_terrain_overlay(x, y, overlay_code)
 	wesnoth.current.map[{x, y}] = base .. "^" .. overlay_code
 end
 
+-- facilitate persistent location-based events in savegame which can be triggered from wml space
+local function hex_list_to_wml_var(hex_list, x_var, y_var)
+	local x_string = table.concat(functional.map(hex_list, function(i) return i[1] end), ",")
+	local y_string = table.concat(functional.map(hex_list, function(i) return i[2] end), ",")
+	wml.variables[x_var] = x_string
+	wml.variables[y_var] = y_string
+end
+
 -- q, r, s: starting cubic coordinates
 -- inst: list of instructions ("nw", "ne", "sw", "se") to extend the tunnel
 local function plot_corridor(q, r, s, corridor_width, inst_list)
@@ -549,7 +558,7 @@ end
 
 local function place_corridors(current_rooms)
 	-- build graph of all rooms
-	local num_rooms = #all_rooms
+	local num_rooms = #current_rooms
 	graph = Graph:new()
 	graph:init_unconnected(num_rooms)
 	-- until graph is fully connected, i.e. all rooms are accessible:
@@ -786,8 +795,43 @@ local function place_corridors(current_rooms)
 	end
 end
 
+local function place_healing_glyphs(rooms)
+	local healing_glyph_locs = {}
+	for i, room in ipairs(rooms) do
+		if string.sub(room.id, 1, 6) == "random" then
+			-- 50% of random rooms get a healing glyph
+			if (i % 2) == 0 then
+				local room_inner_hexes = room:get_inner_hexes()
+				local hex = room_inner_hexes[mathx.random(1, #room_inner_hexes)]
+				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/rune5.png")
+				table.insert(healing_glyph_locs, hex)
+			end
+		end
+	end
+	return healing_glyph_locs
+end
+
+-- scattered randomly, can occur in corridors or rooms
+local function place_damage_glyphs(num_glyphs)
+	local damage_glyph_locs = {}
+	local possible_locs = wesnoth.map.find({terrain="Isa"})
+	mathx.shuffle(possible_locs)
+	local num_glyphs_placed = 0
+	for i, hex in ipairs(possible_locs) do
+		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/rune4-burning.png")
+			table.insert(damage_glyph_locs, hex)
+			num_glyphs_placed = num_glyphs_placed + 1
+			if num_glyphs_placed == num_glyphs then
+				break
+			end
+		end
+	end
+	return damage_glyph_locs
+end
+
 function randomize_map()
-	all_rooms = {}
+	local all_rooms = {}
 	-- start out by placing story-important rooms
 	all_rooms = place_story_rooms(all_rooms)
 
@@ -803,4 +847,26 @@ function randomize_map()
 	place_corridors(all_rooms)
 
 	-- scatter healing and damage glyphs
+	local healing_glyphs = place_healing_glyphs(all_rooms)
+	hex_list_to_wml_var(healing_glyphs, "healing_glyph_x", "healing_glyph_y")
+
+	local damage_glyphs = place_damage_glyphs(15)
+	hex_list_to_wml_var(damage_glyphs, "damage_glyph_x", "damage_glyph_y")
+end
+
+function hide_ui_elements()
+	local function null_theme_func()
+		return {}
+	end
+
+	local old_gold_theme = wesnoth.interface.game_display.gold
+	local old_villages_theme = wesnoth.interface.game_display.villages
+	local old_num_units_theme = wesnoth.interface.game_display.num_units
+	local old_upkeep_theme = wesnoth.interface.game_display.upkeep
+	local old_income_theme = wesnoth.interface.game_display.income
+	wesnoth.interface.game_display.gold = null_theme_func
+	wesnoth.interface.game_display.villages = null_theme_func
+	wesnoth.interface.game_display.num_units = null_theme_func
+	wesnoth.interface.game_display.upkeep = null_theme_func
+	wesnoth.interface.game_display.income = null_theme_func
 end

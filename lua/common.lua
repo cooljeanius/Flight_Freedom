@@ -152,6 +152,42 @@ function wesnoth.wml_conditionals.debug_mode(cfg)
 end
 
 --[=[
+[has_item]
+Author: MadMax (username on the Battle for Wesnoth forum)
+
+Test for existence of specific [item]s.
+
+Required keys:
+image: string to search for in item's image, halo, or name attribute
+
+Optional keys:
+StandardLocationFilter for locations to search for item
+]=]
+function wesnoth.wml_conditionals.has_item(cfg)
+	local found = false
+	local image = cfg.image
+	cfg = wml.parsed(cfg)
+	cfg.image = nil
+	local locs = wesnoth.map.find(cfg)
+	for i, hex in ipairs(locs) do
+		local items_list = wesnoth.interface.get_items(hex[1], hex[2])
+		for j, item in ipairs(items_list) do
+			if item.name ~= nil and item.name == image then
+				found = true
+			elseif item.halo ~= nil and item.halo == image then
+				found = true
+			elseif item.image ~= nil and item.image == image then
+				found = true
+			end
+			if found then
+				break
+			end
+		end
+	end
+	return found
+end
+
+--[=[
 [shuffle_list]
 Author: MadMax (username on the Battle for Wesnoth forum)
 
