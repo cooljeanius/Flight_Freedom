@@ -442,6 +442,30 @@ local function plot_corridor(q, r, s, corridor_width, inst_list)
 	return corridor_tiles
 end
 
+local orb_colors_tr = {
+	["red"] = _"red",
+	["blue"] = _"blue",
+	["green"] = _"green",
+	["white"] = _"white",
+	["black"] = _"black",
+	["yellow"] = _"yellow",
+}
+local orb_colors_desc = {
+	["red"] = _"Red Orb",
+	["blue"] = _"Blue Orb",
+	["green"] = _"Green Orb",
+	["white"] = _"White Orb",
+	["black"] = _"Black Orb",
+	["yellow"] = _"Yellow Orb",
+}
+local orb_colors = {}
+for name, tr_name in pairs(orb_colors_tr) do
+	print(name)
+	print(tr_name)
+	table.insert(orb_colors, name)
+end
+mathx.shuffle(orb_colors)
+
 local function place_story_rooms(current_rooms, num_orb_rooms)
 	-- all rooms made by this function should be "ready to go"
 	-- including item graphics, units, and WML variables for events
@@ -467,14 +491,25 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
 
 	-- control room in top right of the map
-	local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
+	local control_room = find_room(11, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
 	control_room.id = "control_room"
 	control_room:set_inner_terrain("Isr")
 	control_room:set_wall_terrain("Xoi") -- white wall
+	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
+	wml.variables["machine_x"] = machine_x
+	wml.variables["machine_y"] = machine_y
+	-- todo: place shield image
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_machine_blocker.mask"),
+		x = machine_x - 2,
+		y = machine_y - 2,
+		border = true,
+		wml.tag.rule {
+			layer = "overlay",
+		},
+	})
 	table.insert(current_rooms, control_room)
 
-	local orb_colors = {"red", "blue", "green", "white", "black", "yellow"}
-	mathx.shuffle(orb_colors)
 	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
 	local orb_hexes = {}
 	-- orb rooms
@@ -493,7 +528,6 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	end
 	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
 	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
-	wml.variables["num_orbs"] = num_orb_rooms
 
 	-- library room in top left of map
 	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
@@ -904,30 +938,6 @@ local function place_damage_glyphs(num_glyphs)
 	return damage_glyph_locs
 end
 
--- since it's just Malakar and his loadout's quite variable
--- overall difficulty scales based on Malakar and set difficulty
-function calc_difficulty_score()
-	local score = 1
-	if wesnoth.scenario.difficulty == "NORMAL" then
-		score = score + 2
-	end
-	if wesnoth.scenario.difficulty == "HARD" then
-		score = score + 2
-	end
-	local malakar = wesnoth.units.get("Malakar")
-	score = score + malakar.level
-	-- from S7B
-	if malakar.variables["has_elemental_powerup"] then
-		score = score + 1
-	end
-	-- from S3A
-	if malakar.variation ~= nil and malakar.variation == "weapon" then
-		score = score + 1
-	end
-	wml.variables["difficulty_score"] = score
-	return score
-end
-
 function randomize_map()
 	local all_rooms = {}
 
@@ -959,6 +969,34 @@ function randomize_map()
 	hex_list_to_wml_var(damage_glyphs, "damage_glyph_x", "damage_glyph_y")
 end
 
+-------------------------------
+----- other scenario setup code
+-------------------------------
+
+-- since it's just Malakar and his loadout's quite variable
+-- overall difficulty scales based on Malakar and set difficulty
+function calc_difficulty_score()
+	local score = 1
+	if wesnoth.scenario.difficulty == "NORMAL" then
+		score = score + 2
+	end
+	if wesnoth.scenario.difficulty == "HARD" then
+		score = score + 2
+	end
+	local malakar = wesnoth.units.get("Malakar")
+	score = score + malakar.level
+	-- from S7B
+	if malakar.variables["has_elemental_powerup"] then
+		score = score + 1
+	end
+	-- from S3A
+	if malakar.variation ~= nil and malakar.variation == "weapon" then
+		score = score + 1
+	end
+	wml.variables["difficulty_score"] = score
+	return score
+end
+
 function hide_ui_elements()
 	local function null_theme_func()
 		return {}
@@ -976,42 +1014,85 @@ function hide_ui_elements()
 	wesnoth.interface.game_display.income = null_theme_func
 end
 
-function wesnoth.wml_actions.handle_orb(cfg)
-	local orb_destroyed = false
-	local x = cfg.x
-	local y = cfg.y
+------------------------------------
+----- handle various scenario events
+------------------------------------
+
+local function get_orb_color(x, y)
+	local orb_color = nil
 	local items_list = wesnoth.interface.get_items(x, y)
 	for i, item in ipairs(items_list) do
 		local image_path = item.image
 		if string.len(image_path) >= 31 and string.sub(image_path, 1, 31) == "items/magic-orb.png~RC(magenta>" then
-			-- todo: give player choice whether or not to destroy orb
-			-- todo: some sort of animation with orb destruction
-			orb_destroyed = true
-			local base, orb_color = table.unpack(stringx.split(image_path, ">"))
-			orb_color = string.sub(orb_color, 1, #orb_color - 1)
-			wesnoth.interface.remove_item(x, y, image_path)
-			local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
-			local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
-			local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
-			-- if orb_colors[1] ~= orb_color then
-				-- player smashed orb out of sequence, do something bad
-			-- end
-			for j, color in ipairs(orb_colors) do
-				if color == orb_color then
-					table.remove(orb_colors, j)
-					table.remove(orbs_x, j)
-					table.remove(orbs_y, j)
-					break
-				end
-			end
-			wml.variables["orb_colors"] = table.concat(orb_colors, ",")
-			wml.variables["orbs_x"] = table.concat(orbs_x, ",")
-			wml.variables["orbs_y"] = table.concat(orbs_y, ",")
-			wml.variables["num_orbs"] = #orb_colors
-			-- todo: use up Malakar's attacks and moves
+			local base = nil
+			base, orb_color = table.unpack(stringx.split(image_path, ">"))
+			orb_color = string.sub(orb_color, 1, #orb_color - 1) -- remove trailing parenthesis
 		end
 	end
-	if not orb_destroyed then
-		wesnoth.wml_actions.allow_undo()
+	return orb_color
+end
+
+function wesnoth.wml_actions.get_orb_color(cfg)
+	local x = cfg.x
+	local y = cfg.y
+	local orb_color = get_orb_color(x, y)
+	local variable = cfg.variable or "orb_color"
+	local variable_tr = cfg.variable_tr or "orb_color_tr" -- translatable
+	wml.variables[variable] = orb_color
+	wml.variables[variable_tr] = orb_colors_tr[orb_color]
+end
+
+function wesnoth.wml_actions.handle_orb(cfg)
+	local x = cfg.x
+	local y = cfg.y
+	local items_list = wesnoth.interface.get_items(x, y)
+	local orb_color = get_orb_color(x, y)
+	local image_path = "items/magic-orb.png~RC(magenta>" .. orb_color .. ")"
+	wesnoth.interface.remove_item(x, y, image_path)
+	wesnoth.map.remove_label({x=x, y=y})
+	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
+	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
+	-- if orb_colors[1] ~= orb_color then
+		-- player smashed orb out of sequence, do something bad
+	-- end
+	for j, color in ipairs(orb_colors) do
+		if color == orb_color then
+			table.remove(orb_colors, j)
+			table.remove(orbs_x, j)
+			table.remove(orbs_y, j)
+			break
+		end
+	end
+	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
+	wml.variables["orbs_x"] = table.concat(orbs_x, ",")
+	wml.variables["orbs_y"] = table.concat(orbs_y, ",")
+	local malakar = wesnoth.units.get("Malakar")
+	malakar.moves = 0
+	malakar.attacks_left = 0
+	if #orb_colors == 0 then
+		-- todo: effects, graphics, maybe boss unit, etc.
+		wesnoth.wml_actions.terrain_mask({
+			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_machine_unblocker.mask"),
+			x = wml.variables["machine_x"] - 2,
+			y = wml.variables["machine_y"] - 2,
+			border = true,
+			wml.tag.rule {
+				layer = "overlay",
+			},
+		})
+	end
+end
+
+-- for color-blind accessibility
+-- todo: give player the option at scenario start
+function wesnoth.wml_actions.label_orb_colors(cfg)
+	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
+	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
+	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+	for i, color in ipairs(orb_colors) do
+		local x = orbs_x[i]
+		local y = orbs_y[i]
+		wesnoth.map.add_label({x=x, y=y, text=orb_colors_desc[color]})
 	end
 end
