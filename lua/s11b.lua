@@ -493,6 +493,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	end
 	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
 	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
+	wml.variables["num_orbs"] = num_orb_rooms
 
 	-- library room in top left of map
 	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
@@ -600,12 +601,12 @@ local function place_random_rooms(current_rooms)
 				end
 			end
 		end
-		-- todo: rooms with healing glyphs
 		-- todo: other monster room
+		-- todo: prison room (use window wall terrain)
 		-- todo: kitchen room
 		-- todo: servant or guard quarters
 		-- todo: creepy lab room
-		-- todo: maybe a treasure room? either gold or supplies (extends turn limit)
+		-- todo: maybe a treasure room?
 	end
 	return current_rooms
 end
@@ -973,4 +974,44 @@ function hide_ui_elements()
 	wesnoth.interface.game_display.num_units = null_theme_func
 	wesnoth.interface.game_display.upkeep = null_theme_func
 	wesnoth.interface.game_display.income = null_theme_func
+end
+
+function wesnoth.wml_actions.handle_orb(cfg)
+	local orb_destroyed = false
+	local x = cfg.x
+	local y = cfg.y
+	local items_list = wesnoth.interface.get_items(x, y)
+	for i, item in ipairs(items_list) do
+		local image_path = item.image
+		if string.len(image_path) >= 31 and string.sub(image_path, 1, 31) == "items/magic-orb.png~RC(magenta>" then
+			-- todo: give player choice whether or not to destroy orb
+			-- todo: some sort of animation with orb destruction
+			orb_destroyed = true
+			local base, orb_color = table.unpack(stringx.split(image_path, ">"))
+			orb_color = string.sub(orb_color, 1, #orb_color - 1)
+			wesnoth.interface.remove_item(x, y, image_path)
+			local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+			local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
+			local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
+			-- if orb_colors[1] ~= orb_color then
+				-- player smashed orb out of sequence, do something bad
+			-- end
+			for j, color in ipairs(orb_colors) do
+				if color == orb_color then
+					table.remove(orb_colors, j)
+					table.remove(orbs_x, j)
+					table.remove(orbs_y, j)
+					break
+				end
+			end
+			wml.variables["orb_colors"] = table.concat(orb_colors, ",")
+			wml.variables["orbs_x"] = table.concat(orbs_x, ",")
+			wml.variables["orbs_y"] = table.concat(orbs_y, ",")
+			wml.variables["num_orbs"] = #orb_colors
+			-- todo: use up Malakar's attacks and moves
+		end
+	end
+	if not orb_destroyed then
+		wesnoth.wml_actions.allow_undo()
+	end
 end
