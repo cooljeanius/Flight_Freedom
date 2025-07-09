@@ -127,3 +127,14 @@ function Graph:is_connected()
 	end
 	return result
 end
+
+function Graph:degree(node)
+	local connections = 0
+	local row = self.adjacency_mat[node]
+	for x = 1, #row do
+		if row[x] > 0 then
+			connections = connections + 1
+		end
+	end
+	return connections
+end

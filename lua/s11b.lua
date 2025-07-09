@@ -451,7 +451,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	-- cave passage in
 	local start_room_x, start_room_y = table.unpack(start_room:left_corner())
 	wesnoth.wml_actions.terrain_mask({
-		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/13b_cave_entrance.mask"),
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_cave_entrance.mask"),
 		x = start_room_x,
 		y = start_room_y + 1,
 		border = true,
@@ -484,6 +484,19 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	table.insert(current_rooms, library_room)
 
 	-- todo: Sol'kan's living quarters
+	local bedroom = find_room(7, 5, math.floor(map_size_x * 0.75), map_size_x, math.floor(map_size_y * 0.25), math.floor(map_size_y * 0.75), current_rooms, true)
+	bedroom.id = "bedroom"
+	bedroom:set_inner_terrain("Iwr")
+	local bedroom_x, bedroom_y = table.unpack(bedroom:left_corner())
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_bedroom.mask"),
+		x = bedroom_x,
+		y = bedroom_y - 2,
+		border = true,
+	})
+	wesnoth.interface.add_item_image(bedroom_x + 6, bedroom_y - 1, "scenery/bed-fancy-sw.png")
+	bedroom.max_degree = 1
+	table.insert(current_rooms, bedroom)
 
 	return current_rooms
 end
@@ -584,8 +597,16 @@ local function place_corridors(current_rooms)
 	--local corridor_created = false
 	--while not corridor_created do
 	while not graph:is_connected() do
-		local origin_room_num = mathx.random(1, num_rooms)
-		local origin_room = current_rooms[origin_room_num]
+		local origin_room_selected = false
+		local origin_room_num = nil
+		local oriign_room = nil
+		while not origin_room_selected do
+			origin_room_num = mathx.random(1, num_rooms)
+			origin_room = current_rooms[origin_room_num]
+			if origin_room.max_degree == nil or graph:degree(origin_room_num) < origin_room.max_degree then
+				origin_room_selected = true
+			end
+		end
 		local center_x, center_y = table.unpack(origin_room:get_approx_center())
 		--print("Source hex: " .. tostring(center_x) .. ", " .. tostring(center_y))
 		local theta = mathx.random() * math.pi * 2.0
@@ -605,7 +626,8 @@ local function place_corridors(current_rooms)
 							--print("Found target: " .. tostring(test_x) .. ", " .. tostring(test_y))
 							local dest_room = current_rooms[i]
 							-- don't make duplicate tunnels between rooms
-							if graph:get_edge(origin_room_num, i) == 0 then
+							-- also fail corridor if it would exceed a room's max_degree
+							if graph:get_edge(origin_room_num, i) == 0 and (dest_room.max_degree == nil or graph:degree(i) < dest_room.max_degree) then
 								-- create corridor on map
 								local corridor_created = false
 								local corridor_tiles = {}
@@ -644,9 +666,9 @@ local function place_corridors(current_rooms)
 									mathx.shuffle(dest_hex_list)
 									local source_hex = nil
 									local dest_hex = nil
-									-- try to find a straight path
+									-- if rooms are sufficiently close try to find a straight path
 									local min_wall_dist = origin_room:minimum_wall_distance(dest_room)
-									if min_wall_dist <= 4 then
+									if min_wall_dist <= 6 then
 										for j, hex1 in ipairs(source_hex_list) do
 											local q1, r1, s1 = table.unpack(get_cubic(hex1))
 											for k = 1, min_wall_dist do
@@ -748,22 +770,33 @@ local function place_corridors(current_rooms)
 										break
 									end
 									corridor_tiles = plot_corridor(q1, r1, s1, corridor_width, inst)
-									-- make sure corridor doesn't go off edge of map
 									for t = 1, #corridor_tiles do
 										local hex_x = corridor_tiles[t][1]
 										local hex_y = corridor_tiles[t][2]
+										-- make sure corridor doesn't go off edge of map
 										if not (hex_x >= 1 and hex_x <= map_size_x and hex_y >=1 and hex_y <= map_size_y) then
-											corridor_created = false
-											corridor_tiles = {}
-											corridor_attempts = corridor_attempts + 1
-											break
+												corridor_created = false
+												break
+										end
+										-- make sure we won't exceed max_degree of a room
+										for k = 1, num_rooms do
+											if current_rooms[k]:contains_hex(hex_x, hex_y) and current_rooms[k].max_degree ~= nil and graph:degree(k) >= current_rooms[k].max_degree then
+												print(current_rooms[k].id)
+												corridor_created = false
+												break
+											end
 										end
 									end
-								end
-								if corridor_attempts > max_corridor_attempts then
-									-- give up on connecting these rooms
-									connect_attempts = connect_attempts + 1
-									corridor_created = true
+									if not corridor_created then
+										corridor_tiles = {}
+										corridor_attempts = corridor_attempts + 1
+										if corridor_attempts > max_corridor_attempts then
+											-- give up on connecting these rooms
+											connect_attempts = connect_attempts + 1
+											corridor_created = true
+										end
+										break
+									end
 								end
 								local current_origin_room_num = origin_room_num
 								for t = 1, #corridor_tiles do
@@ -842,6 +875,30 @@ local function place_damage_glyphs(num_glyphs)
 	return damage_glyph_locs
 end
 
+-- since it's just Malakar and his loadout's quite variable
+-- overall difficulty scales based on Malakar and set difficulty
+function calc_difficulty_score()
+	local score = 1
+	if wesnoth.scenario.difficulty == "NORMAL" then
+		score = score + 2
+	end
+	if wesnoth.scenario.difficulty == "HARD" then
+		score = score + 2
+	end
+	local malakar = wesnoth.units.get("Malakar")
+	score = score + malakar.level
+	-- from S7B
+	if malakar.variables["has_elemental_powerup"] then
+		score = score + 1
+	end
+	-- from S3A
+	if malakar.variation ~= nil and malakar.variation == "weapon" then
+		score = score + 1
+	end
+	wml.variables["difficulty_score"] = score
+	return score
+end
+
 function randomize_map()
 	local all_rooms = {}
 
@@ -851,7 +908,7 @@ function randomize_map()
 	elseif wesnoth.scenario.difficulty == "HARD" then
 		num_orb_rooms = 6
 	end
-	-- start out by placing story-important rooms
+	-- start out by placing and setting up story-important rooms
 	all_rooms = place_story_rooms(all_rooms, num_orb_rooms)
 
 	-- now make and position some random rooms (not involved in objectives)
