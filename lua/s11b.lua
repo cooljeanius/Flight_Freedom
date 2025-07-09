@@ -1,5 +1,7 @@
 -- Lua code used by scenario 11B (Sol'kan's Lair)
 
+local _ = wesnoth.textdomain "wesnoth-Flight_Freedom"
+
 local functional = wesnoth.require("functional")
 wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
 
@@ -56,8 +58,8 @@ end
 
 function Room:get_approx_center()
 	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
-	local half_r_height = math.floor(self.r_height / 2)
-	local half_s_height = math.floor(self.s_height / 2)
+	local half_r_height = math.ceil(self.r_height / 2)
+	local half_s_height = math.ceil(self.s_height / 2)
 	q = q + (half_r_height - 1) + (half_s_height - 1)
 	r = r - (half_r_height - 1)
 	s = s - (half_s_height - 1)
@@ -441,6 +443,9 @@ local function plot_corridor(q, r, s, corridor_width, inst_list)
 end
 
 local function place_story_rooms(current_rooms, num_orb_rooms)
+	-- all rooms made by this function should be "ready to go"
+	-- including item graphics, units, and WML variables for events
+
 	-- start room in bottom left of the map
 	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	start_room.id = "start_room"
@@ -465,22 +470,35 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local control_room = find_room(12, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
 	control_room.id = "control_room"
 	control_room:set_inner_terrain("Isr")
-	control_room:set_wall_terrain("Xoi")
+	control_room:set_wall_terrain("Xoi") -- white wall
 	table.insert(current_rooms, control_room)
 
+	local orb_colors = {"red", "blue", "green", "white", "black", "yellow"}
+	mathx.shuffle(orb_colors)
+	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
+	local orb_hexes = {}
 	-- orb rooms
 	for i = 1, num_orb_rooms do
 		local orb_room = find_room(5, 5, 1, map_size_x, 1, map_size_y, current_rooms, true)
 		orb_room.id = "orb_" .. tostring(i)
 		orb_room:set_inner_terrain("Isa")
+		local orb_room_x, orb_room_y = table.unpack(orb_room:left_corner())
+		local orb_x = orb_room_x + 4
+		local orb_y = orb_room_y
+		wesnoth.interface.add_item_image(orb_x, orb_y, "items/altar.png")
+		local orb_image_path = "items/magic-orb.png~RC(magenta>" .. orb_colors[i] .. ")"
+		wesnoth.interface.add_item_image(orb_x, orb_y, orb_image_path)
+		table.insert(orb_hexes, {orb_x, orb_y})
 		table.insert(current_rooms, orb_room)
 	end
+	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
+	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
 
 	-- library room in top left of map
 	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
 	library_room.id = "library_room"
-	library_room:set_inner_terrain("Iwr")
-	library_room:set_wall_terrain("Xoc")
+	library_room:set_inner_terrain("Iwr") -- wood floor
+	library_room:set_wall_terrain("Xoc") -- clean stone wall
 	table.insert(current_rooms, library_room)
 
 	-- todo: Sol'kan's living quarters
@@ -494,7 +512,18 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		y = bedroom_y - 2,
 		border = true,
 	})
+	local inner_hexes = bedroom:get_inner_hexes()
+	for i, hex in ipairs(inner_hexes) do
+		if wesnoth.current.map[{hex[1], hex[2]}] == "Iwr" and mathx.random(1, 2) == 1 then
+			wesnoth.current.map[{hex[1], hex[2]}] = "Iwo" -- old wood floor
+		end
+	end
 	wesnoth.interface.add_item_image(bedroom_x + 6, bedroom_y - 1, "scenery/bed-fancy-sw.png")
+	local journal_x = bedroom_x + 7
+	local journal_y = bedroom_y - (bedroom_x % 2)
+	wml.variables["journal_x"] = journal_x
+	wml.variables["journal_y"] = journal_y
+	wesnoth.interface.add_item_image(journal_x, journal_y, "items/book2.png")
 	bedroom.max_degree = 1
 	table.insert(current_rooms, bedroom)
 
@@ -781,7 +810,6 @@ local function place_corridors(current_rooms)
 										-- make sure we won't exceed max_degree of a room
 										for k = 1, num_rooms do
 											if current_rooms[k]:contains_hex(hex_x, hex_y) and current_rooms[k].max_degree ~= nil and graph:degree(k) >= current_rooms[k].max_degree then
-												print(current_rooms[k].id)
 												corridor_created = false
 												break
 											end
