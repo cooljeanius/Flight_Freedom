@@ -1043,9 +1043,7 @@ function wesnoth.wml_actions.get_orb_color(cfg)
 	local y = cfg.y
 	local orb_color = get_orb_color(x, y)
 	local variable = cfg.variable or "orb_color"
-	local variable_tr = cfg.variable_tr or "orb_color_tr" -- translatable
 	wml.variables[variable] = orb_color
-	wml.variables[variable_tr] = orb_colors_tr[orb_color]
 end
 
 function wesnoth.wml_actions.handle_orb(cfg)
@@ -1158,17 +1156,17 @@ function generate_journal()
 		journal_entries_by_day[journal_days[i]] = orb_colors_journal_entries[orb_colors[i]]
 	end
 	local num_distractors = #orb_colors + 1
-	local distrator_journal_entries = {
+	local distractor_journal_entries = {
 		_"Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek.",
 		_"In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always.",
-		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed time loop to precisely time the automatic redirection of life force. Her life force will do.",
+		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do.",
 		_"As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!",
 		_"I slipped on a loose flagstone today. My knee will be sore for a while.",
 		_"Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!",
 		_"The next phase of the Engine demands much. Eldritch, timeless bindings of pure, youthful vigor, a fusion of life and unlife, a magical contradiction to apply pressure on the local metric tensor. Perhaps the application of a necromantic binding glyph to the beating heart of a virgin will generate the requisite combination of energies.",
 		_"At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all.",
 	}
-	mathx.shuffle(distrator_journal_entries)
+	mathx.shuffle(distractor_journal_entries)
 	for i = 1, num_distractors do
 		local unique_day = false
 		local day = nil
@@ -1183,7 +1181,7 @@ function generate_journal()
 			end
 		end
 		table.insert(journal_days, day)
-		journal_entries_by_day[day] = distrator_journal_entries[i]
+		journal_entries_by_day[day] = distractor_journal_entries[i]
 	end
 
 	table.sort(journal_days)
