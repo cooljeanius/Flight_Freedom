@@ -458,10 +458,16 @@ local orb_colors_desc = {
 	["black"] = _"Black Orb",
 	["yellow"] = _"Yellow Orb",
 }
+local orb_colors_journal_entries = {
+	["red"] = _"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Where, oh where to find it?",
+	["blue"] = _"My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes.", -- describing a Leyden jar
+	["green"] = _"Sometimes I consider the toll of my research. I have given so much to the Engine. Funds, the rarest of resources, the lives of my apprentices, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
+	["white"] = _"So many discordant energies suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
+	["black"] = _"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nothingness. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
+	["yellow"] = _"I lost my best assistant, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the assistant who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
+}
 local orb_colors = {}
 for name, tr_name in pairs(orb_colors_tr) do
-	print(name)
-	print(tr_name)
 	table.insert(orb_colors, name)
 end
 mathx.shuffle(orb_colors)
@@ -653,7 +659,7 @@ local function place_corridors(current_rooms)
 	-- until graph is fully connected, i.e. all rooms are accessible:
 	---- pick random room
 	---- cast a ray at random angle
-	---- first room that we hit (if any), if no edge between source and destination connect them (both in graph and on map)
+	---- first room that we hit (if any), if no edge between source and destination try to connect them (both in graph and on map)
 	local max_connect_attempts = 1000 -- avoid infinte loop in case there's a room that can't be connected anywhere
 	local connect_attempts = 0 -- tracks number of failed connections (resets if successful connection made)
 	local rays_failed = 0
@@ -870,7 +876,7 @@ local function place_corridors(current_rooms)
 										if k ~= current_origin_room_num then
 											if current_rooms[k]:contains_hex(hex_x, hex_y) then
 												if graph:get_edge(current_origin_room_num, k) == 0 then
-													print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
+													--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
 													graph:set_edge(current_origin_room_num, k, 1)
 													graph:set_edge(k, current_origin_room_num, 1)
 												end
@@ -1095,4 +1101,71 @@ function wesnoth.wml_actions.label_orb_colors(cfg)
 		local y = orbs_y[i]
 		wesnoth.map.add_label({x=x, y=y, text=orb_colors_desc[color]})
 	end
+end
+
+function generate_journal()
+	local months_list = {}
+	_ = wesnoth.textdomain "wesnoth"
+	table.insert(months_list, _"Whitefire")
+	table.insert(months_list, _"Bleeding Moon")
+	table.insert(months_list, _"Scatterseed")
+	table.insert(months_list, _"Deeproot")
+	table.insert(months_list, _"Scryer's Bloom")
+	table.insert(months_list, _"Thorntress")
+	table.insert(months_list, _"Summit Star")
+	table.insert(months_list, _"Kindlefire")
+	table.insert(months_list, _"Stillseed")
+	table.insert(months_list, _"Reaper's Moon")
+	table.insert(months_list, _"Verglas Bloom")
+	table.insert(months_list, _"Blackfire")
+	_ = wesnoth.textdomain "wesnoth-Flight_Freedom"
+
+	-- in case Irdya's months-per-year schedule is defined to be different from Earth's in the future
+	local days_per_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+	local days_per_year = 365
+
+	local function day_to_month_date(day)
+		local month_id = 1
+		local remaining_days = day
+		while remaining_days > days_per_month[month_id] do
+			remaining_days = remaining_days - days_per_month[month_id]
+			month_id = month_id + 1
+		end
+		local date_str = stringx.vformat(_"$month $day", {month=months_list[month_id], day=remaining_days})
+		return date_str
+	end
+
+	local journal_days = {}
+	for i = 1, #orb_colors do
+		local unique_day = false
+		local day = nil
+		while not unique_day do
+			unique_day = true
+			day = mathx.random(1, days_per_year)
+			for j = 1, #journal_days do
+				if journal_days[j] == day then
+					unique_day = false
+					break
+				end
+			end
+		end
+		table.insert(journal_days, day)
+	end
+	table.sort(journal_days)
+	local journal_str = ""
+	for i = 1, #orb_colors do
+		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i]) .. ":</span> " .. orb_colors_journal_entries[orb_colors[i]]
+		if i ~= #orb_colors then
+			journal_str = journal_str .. "\n\n"
+		end
+	end
+	wml.variables["journal_str"] = journal_str
+end
+
+function wesnoth.wml_actions.show_journal_dialog(cfg)
+	function pre_show(self)
+		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large'>" .. wml.variables["journal_str"] .. "</span>"
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
