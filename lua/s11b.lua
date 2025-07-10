@@ -459,11 +459,11 @@ local orb_colors_desc = {
 	["yellow"] = _"Yellow Orb",
 }
 local orb_colors_journal_entries = {
-	["red"] = _"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Where, oh where to find it?",
+	["red"] = _"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?",
 	["blue"] = _"My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes.", -- describing a Leyden jar
-	["green"] = _"Sometimes I consider the toll of my research. I have given so much to the Engine. Funds, the rarest of resources, the lives of my apprentices, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
-	["white"] = _"So many discordant energies suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
-	["black"] = _"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nothingness. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
+	["green"] = _"Sometimes I consider the toll of my research. I have given so much to the Engine. My fortune, the rarest of resources, the lives of my apprentices, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
+	["white"] = _"So many discordant forces suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
+	["black"] = _"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nonexistence. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
 	["yellow"] = _"I lost my best assistant, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the assistant who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
 }
 local orb_colors = {}
@@ -1136,6 +1136,8 @@ function generate_journal()
 	end
 
 	local journal_days = {}
+	local journal_entries_by_day = {}
+	-- place journal entries with clues first
 	for i = 1, #orb_colors do
 		local unique_day = false
 		local day = nil
@@ -1152,10 +1154,43 @@ function generate_journal()
 		table.insert(journal_days, day)
 	end
 	table.sort(journal_days)
-	local journal_str = ""
 	for i = 1, #orb_colors do
-		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i]) .. ":</span> " .. orb_colors_journal_entries[orb_colors[i]]
-		if i ~= #orb_colors then
+		journal_entries_by_day[journal_days[i]] = orb_colors_journal_entries[orb_colors[i]]
+	end
+	local num_distractors = #orb_colors + 1
+	local distrator_journal_entries = {
+		_"Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek.",
+		_"In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always.",
+		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed time loop to precisely time the automatic redirection of life force. Her life force will do.",
+		_"As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!",
+		_"I slipped on a loose flagstone today. My knee will be sore for a while.",
+		_"Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!",
+		_"The next phase of the Engine demands much. Eldritch, timeless bindings of pure, youthful vigor, a fusion of life and unlife, a magical contradiction to apply pressure on the local metric tensor. Perhaps the application of a necromantic binding glyph to the beating heart of a virgin will generate the requisite combination of energies.",
+		_"At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all.",
+	}
+	mathx.shuffle(distrator_journal_entries)
+	for i = 1, num_distractors do
+		local unique_day = false
+		local day = nil
+		while not unique_day do
+			unique_day = true
+			day = mathx.random(1, days_per_year)
+			for j = 1, #journal_days do
+				if journal_days[j] == day then
+					unique_day = false
+					break
+				end
+			end
+		end
+		table.insert(journal_days, day)
+		journal_entries_by_day[day] = distrator_journal_entries[i]
+	end
+
+	table.sort(journal_days)
+	local journal_str = ""
+	for i = 1, #journal_days do
+		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i]) .. ":</span> " .. journal_entries_by_day[journal_days[i]]
+		if i ~= #journal_days then
 			journal_str = journal_str .. "\n\n"
 		end
 	end
