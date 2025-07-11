@@ -82,6 +82,7 @@ function Graph:find_guaranteed_path(cur_node, cur_path, dest_node, max_guarantee
 				table.insert(new_cur_path, possible_connection)
 				if possible_connection == dest_node then
 					path = new_cur_path
+					break
 				else
 					path = self:find_guaranteed_path(possible_connection, new_cur_path, dest_node, max_guaranteed_path_length)
 					if path ~= nil then

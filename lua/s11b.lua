@@ -540,9 +540,59 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	library_room.id = "library_room"
 	library_room:set_inner_terrain("Iwr") -- wood floor
 	library_room:set_wall_terrain("Xoc") -- clean stone wall
+	-- place furniture
+	local library_x , library_y = table.unpack(library_room:left_corner())
+	local q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
+	for i = 1, 10 do
+		local hex = from_cubic(q, r, s)
+		if i <= 4 or i >= 7 then
+			local full_shelf = mathx.random(1, 2)
+			if full_shelf == 1 then
+				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf-full.png")
+			else
+				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf.png")
+			end
+		end
+		q = q + 1
+		r = r - 1
+	end
+	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	q = q - 1
+	r = r + 1
+	for i = 1, 8 do
+		local hex = from_cubic(q, r, s)
+		if i == 1 or i == 3 or i == 6 or i == 8 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/dinnertable.png")
+		end
+		q = q + 1
+		r = r - 1
+	end
+	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	q = q - 2
+	r = r + 1
+	s = s + 1
+	for i = 1, 8 do
+		local hex = from_cubic(q, r, s)
+		if i == 1 or i == 3 or i == 6 or i == 8 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/chairSE.png")
+		end
+		q = q + 1
+		r = r - 1
+	end
+	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	r = r + 1
+	s = s - 1
+	for i = 1, 8 do
+		local hex = from_cubic(q, r, s)
+		if i == 1 or i == 3 or i == 6 or i == 8 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/chairNW.png")
+		end
+		q = q + 1
+		r = r - 1
+	end
 	table.insert(current_rooms, library_room)
 
-	-- todo: Sol'kan's living quarters
+	-- Sol'kan's living quarters
 	local bedroom = find_room(7, 5, math.floor(map_size_x * 0.75), map_size_x, math.floor(map_size_y * 0.25), math.floor(map_size_y * 0.75), current_rooms, true)
 	bedroom.id = "bedroom"
 	bedroom:set_inner_terrain("Iwr")
@@ -568,13 +618,43 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	bedroom.max_degree = 1
 	table.insert(current_rooms, bedroom)
 
+	-- todo: put something in the prison cells
+	local prison_room = find_room(12, 9, 1, map_size_x, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
+	prison_room.id = "prison_room"
+	prison_room:set_inner_terrain("Ur")
+	prison_room.max_degree = 1
+	local room_x, room_y = table.unpack(prison_room:left_corner())
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_prison.mask"),
+		x = room_x + 2,
+		y = room_y - 5,
+		border = true,
+		wml.tag.rule {
+			layer = "overlay",
+		},
+	})
+	local prison_door_hexes = {}
+	q, r, s = table.unpack(get_cubic({room_x + 6, room_y}))
+	-- upper left door
+	q = q + 1
+	r = r - 1
+	table.insert(prison_door_hexes, from_cubic(q, r, s))
+	-- lower left door
+	table.insert(prison_door_hexes, from_cubic(q + 2, r, s - 2))
+	-- upper right left door
+	table.insert(prison_door_hexes, from_cubic(q + 3, r - 3, s))
+	-- lower right door
+	table.insert(prison_door_hexes, from_cubic(q + 5, r - 3, s - 2))
+	hex_list_to_wml_var(prison_door_hexes, "prison_doors_x", "prison_doors_y")
+	table.insert(current_rooms, prison_room)
+
 	return current_rooms
 end
 
 local function place_random_rooms(current_rooms)
 	local random_rooms = {}
 
-	local num_random_rooms = 10
+	local num_random_rooms = 9
 	-- this includes walls
 	local random_room_dim_mean = 12
 	local random_room_dim_sd = 5
@@ -642,7 +722,6 @@ local function place_random_rooms(current_rooms)
 			end
 		end
 		-- todo: other monster room
-		-- todo: prison room (use window wall terrain)
 		-- todo: kitchen room
 		-- todo: servant or guard quarters
 		-- todo: creepy lab room
@@ -907,6 +986,37 @@ local function place_corridors(current_rooms)
 	--		break
 	--	end
 	end
+	return graph
+end
+
+local function place_prison_lever(current_rooms, graph)
+	local start_room_num = nil
+	local prison_room_num = nil
+	for i, r in ipairs(current_rooms) do
+		if r.id == "start_room" then
+			start_room_num = i
+		elseif r.id == "prison_room" then
+			prison_room_num = i
+		end
+	end
+	local path = graph:find_guaranteed_path(start_room_num, {start_room_num}, prison_room_num, 999)
+	local lever_room_num = nil
+	for i = #path - 1, 1, -1 do
+		if current_rooms[path[i]].id ~= "library_room" and current_rooms[path[i]].id ~= "control_room" then
+			lever_room_num = path[i]
+			break
+		end
+	end
+	local possible_locs = current_rooms[lever_room_num]:get_inner_hexes()
+	mathx.shuffle(possible_locs)
+	for i, hex in ipairs(possible_locs) do
+		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "items/lever-off.png")
+			wml.variables["prison_lever_x"] = hex[1]
+			wml.variables["prison_lever_y"] = hex[2]
+			break
+		end
+	end
 end
 
 local function place_healing_glyphs(rooms)
@@ -965,7 +1075,9 @@ function randomize_map()
 		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
 	end
 
-	place_corridors(all_rooms)
+	local map_graph = place_corridors(all_rooms)
+
+	place_prison_lever(all_rooms, map_graph)
 
 	-- scatter healing and damage glyphs
 	local healing_glyphs = place_healing_glyphs(all_rooms)
@@ -1103,7 +1215,6 @@ end
 
 function generate_journal()
 	local months_list = {}
-	_ = wesnoth.textdomain "wesnoth"
 	table.insert(months_list, _"Whitefire")
 	table.insert(months_list, _"Bleeding Moon")
 	table.insert(months_list, _"Scatterseed")
@@ -1116,15 +1227,14 @@ function generate_journal()
 	table.insert(months_list, _"Reaper's Moon")
 	table.insert(months_list, _"Verglas Bloom")
 	table.insert(months_list, _"Blackfire")
-	_ = wesnoth.textdomain "wesnoth-Flight_Freedom"
 
 	-- in case Irdya's months-per-year schedule is defined to be different from Earth's in the future
 	local days_per_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-	local days_per_year = 365
+	local days_per_year = functional.reduce(days_per_month, function(a,b) return a+b end, 0)
 
 	local function day_to_month_date(day)
 		local month_id = 1
-		local remaining_days = day
+		local remaining_days = ((day - 1) % days_per_year) + 1
 		while remaining_days > days_per_month[month_id] do
 			remaining_days = remaining_days - days_per_month[month_id]
 			month_id = month_id + 1
@@ -1185,9 +1295,10 @@ function generate_journal()
 	end
 
 	table.sort(journal_days)
+	local day_offset = mathx.random(1, days_per_year)
 	local journal_str = ""
 	for i = 1, #journal_days do
-		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i]) .. ":</span> " .. journal_entries_by_day[journal_days[i]]
+		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i] + day_offset) .. ":</span> " .. journal_entries_by_day[journal_days[i]]
 		if i ~= #journal_days then
 			journal_str = journal_str .. "\n\n"
 		end
