@@ -514,10 +514,12 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 			layer = "overlay",
 		},
 	})
+	hex_list_to_wml_var(control_room:get_inner_hexes(), "control_room_x", "control_room_y")
 	table.insert(current_rooms, control_room)
 
 	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
 	local orb_hexes = {}
+	local orb_guard_hexes = {}
 	-- orb rooms
 	for i = 1, num_orb_rooms do
 		local orb_room = find_room(5, 5, 1, map_size_x, 1, map_size_y, current_rooms, true)
@@ -530,10 +532,12 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		local orb_image_path = "items/magic-orb.png~RC(magenta>" .. orb_colors[i] .. ")"
 		wesnoth.interface.add_item_image(orb_x, orb_y, orb_image_path)
 		table.insert(orb_hexes, {orb_x, orb_y})
-		wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>blue)")
+		wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)")
+		table.insert(orb_guard_hexes, {orb_x, orb_y - 1})
 		table.insert(current_rooms, orb_room)
 	end
 	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
+	hex_list_to_wml_var(orb_guard_hexes, "orb_guards_x", "orb_guards_y")
 	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
 
 	-- library room in top left of map
@@ -1057,6 +1061,14 @@ local function place_damage_glyphs(num_glyphs)
 	return damage_glyph_locs
 end
 
+-- for debug purposes, label rooms in map
+local function label_rooms(rooms)
+	for i, room in ipairs(rooms) do
+		local center_x, center_y = table.unpack(room:get_approx_center())
+		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
+	end
+end
+
 function randomize_map()
 	local all_rooms = {}
 
@@ -1072,11 +1084,7 @@ function randomize_map()
 	-- now make and position some random rooms (not involved in objectives)
 	all_rooms = place_random_rooms(all_rooms)
 
-	-- for debug purposes, label all rooms in map
-	for i, room in ipairs(all_rooms) do
-		local center_x, center_y = table.unpack(room:get_approx_center())
-		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
-	end
+	label_rooms(all_rooms)
 
 	local map_graph = place_corridors(all_rooms)
 
@@ -1175,8 +1183,9 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	if orb_colors[1] ~= orb_color then
 		-- player smashed orb out of sequence
 		wesnoth.audio.play("bells-golden.ogg")
-		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>blue)")
+		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)")
 		wesnoth.units.to_map({type="Automaton Defender", side=3, facing="se"}, x, y - 1)
+		wesnoth.game_events.remove("guard_description")
 	end
 	for j, color in ipairs(orb_colors) do
 		if color == orb_color then
@@ -1207,7 +1216,6 @@ function wesnoth.wml_actions.handle_orb(cfg)
 end
 
 -- for color-blind accessibility
--- todo: give player the option at scenario start
 function wesnoth.wml_actions.label_orb_colors(cfg)
 	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
 	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
