@@ -590,6 +590,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		q = q + 1
 		r = r - 1
 	end
+	-- todo: books/documents in the library
 	table.insert(current_rooms, library_room)
 
 	-- Sol'kan's living quarters
@@ -955,7 +956,7 @@ local function place_corridors(current_rooms)
 										if k ~= current_origin_room_num then
 											if current_rooms[k]:contains_hex(hex_x, hex_y) then
 												if graph:get_edge(current_origin_room_num, k) == 0 then
-													--print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
+													print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
 													graph:set_edge(current_origin_room_num, k, 1)
 													graph:set_edge(k, current_origin_room_num, 1)
 												end
@@ -982,9 +983,10 @@ local function place_corridors(current_rooms)
 				rays_failed = rays_failed + 1
 			end
 		end
-	--	if connect_attempts > max_connect_attempts then
-	--		break
-	--	end
+		if connect_attempts > max_connect_attempts then
+			-- todo: if mapgen fails, potentially endlevel back to itself?
+			break
+		end
 	end
 	return graph
 end
@@ -1169,9 +1171,11 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
 	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
 	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
-	-- if orb_colors[1] ~= orb_color then
-		-- player smashed orb out of sequence, do something bad
-	-- end
+	if orb_colors[1] ~= orb_color then
+		-- player smashed orb out of sequence
+		wesnoth.audio.play("bells-golden.ogg")
+		-- todo: wake up golem
+	end
 	for j, color in ipairs(orb_colors) do
 		if color == orb_color then
 			table.remove(orb_colors, j)
@@ -1306,9 +1310,12 @@ function generate_journal()
 	wml.variables["journal_str"] = journal_str
 end
 
+local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
+gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
+
 function wesnoth.wml_actions.show_journal_dialog(cfg)
 	function pre_show(self)
-		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large'>" .. wml.variables["journal_str"] .. "</span>"
+		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. wml.variables["journal_str"] .. "</span>"
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
