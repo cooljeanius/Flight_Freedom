@@ -530,6 +530,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		local orb_image_path = "items/magic-orb.png~RC(magenta>" .. orb_colors[i] .. ")"
 		wesnoth.interface.add_item_image(orb_x, orb_y, orb_image_path)
 		table.insert(orb_hexes, {orb_x, orb_y})
+		wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>blue)")
 		table.insert(current_rooms, orb_room)
 	end
 	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
@@ -1174,7 +1175,8 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	if orb_colors[1] ~= orb_color then
 		-- player smashed orb out of sequence
 		wesnoth.audio.play("bells-golden.ogg")
-		-- todo: wake up golem
+		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>blue)")
+		wesnoth.units.to_map({type="Automaton Defender", side=3, facing="se"}, x, y - 1)
 	end
 	for j, color in ipairs(orb_colors) do
 		if color == orb_color then
