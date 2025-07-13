@@ -595,6 +595,10 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		q = q + 1
 		r = r - 1
 	end
+	local blueprint_x, blueprint_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(blueprint_x, blueprint_y, "items/book2.png")
+	wml.variables["blueprint_x"] = blueprint_x
+	wml.variables["blueprint_y"] = blueprint_y
 	-- todo: books/documents in the library
 	table.insert(current_rooms, library_room)
 
@@ -1183,9 +1187,29 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	if orb_colors[1] ~= orb_color then
 		-- player smashed orb out of sequence
 		wesnoth.audio.play("bells-golden.ogg")
+		for i = 1, 3 do
+			for j = 1, 5 do
+				wesnoth.interface.color_adjust(36 * j,-8 * j,-8 * j)
+				wesnoth.interface.delay(100)
+			end
+			for j = 4, 0, -1 do
+				wesnoth.interface.color_adjust(36 * j,-8 * j,-8 * j)
+				wesnoth.interface.delay(100)
+			end
+			wesnoth.interface.delay(1700)
+		end
 		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)")
 		wesnoth.units.to_map({type="Automaton Defender", side=3, facing="se"}, x, y - 1)
 		wesnoth.game_events.remove("guard_description")
+	else
+		for j = 1, 4 do
+			wesnoth.interface.color_adjust(-10 * j,45 * j,-10 * j)
+			wesnoth.interface.delay(125)
+		end
+		for j = 3, 0, -1 do
+			wesnoth.interface.color_adjust(-10 * j,45 * j,-10 * j)
+			wesnoth.interface.delay(125)
+		end
 	end
 	for j, color in ipairs(orb_colors) do
 		if color == orb_color then
@@ -1324,8 +1348,9 @@ local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.
 gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
 
 function wesnoth.wml_actions.show_journal_dialog(cfg)
+	local text = cfg.text
 	function pre_show(self)
-		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. wml.variables["journal_str"] .. "</span>"
+		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. text .. "</span>"
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
