@@ -512,6 +512,10 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/sentinel-glo.png")
 	wml.variables["objective_x"] = objective_x
 	wml.variables["objective_y"] = objective_y
+	local engine_inst_x, engine_inst_y = table.unpack(from_cubic(q - 1, r - 2, s + 3))
+	wesnoth.interface.add_item_image(engine_inst_x, engine_inst_y, "items/book1.png")
+	wml.variables["engine_inst_x"] = engine_inst_x
+	wml.variables["engine_inst_y"] = engine_inst_y
 	-- todo: place shield image
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_blocker.mask"),
@@ -590,10 +594,10 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		r = r - 1
 	end
 	local blueprint_x, blueprint_y = table.unpack(from_cubic(q, r, s))
-	wesnoth.interface.add_item_image(blueprint_x, blueprint_y, "items/book2.png")
+	wesnoth.interface.add_item_image(blueprint_x, blueprint_y, "items/book4.png")
 	wml.variables["blueprint_x"] = blueprint_x
 	wml.variables["blueprint_y"] = blueprint_y
-	-- todo: books/documents in the library
+	-- todo: more books/documents in the library
 	table.insert(current_rooms, library_room)
 
 	-- Sol'kan's living quarters
@@ -1246,7 +1250,6 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	wml.variables["orbs_x"] = table.concat(orbs_x, ",")
 	wml.variables["orbs_y"] = table.concat(orbs_y, ",")
 	if #orb_colors == 0 then
-		-- todo: effects, graphics, maybe boss unit, etc.
 		wesnoth.wml_actions.terrain_mask({
 			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_unblocker.mask"),
 			x = wml.variables["machine_x"] - 2,
