@@ -504,9 +504,17 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
+	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+	--q = q - 1
+	--r = r + 1
+	local objective_x, objective_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/sentinel.png")
+	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/sentinel-glo.png")
+	wml.variables["objective_x"] = objective_x
+	wml.variables["objective_y"] = objective_y
 	-- todo: place shield image
 	wesnoth.wml_actions.terrain_mask({
-		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_machine_blocker.mask"),
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_blocker.mask"),
 		x = machine_x - 2,
 		y = machine_y - 2,
 		border = true,
@@ -547,20 +555,6 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	library_room:set_wall_terrain("Xoc") -- clean stone wall
 	-- place furniture
 	local library_x , library_y = table.unpack(library_room:left_corner())
-	local q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
-	for i = 1, 10 do
-		local hex = from_cubic(q, r, s)
-		if i <= 4 or i >= 7 then
-			local full_shelf = mathx.random(1, 2)
-			if full_shelf == 1 then
-				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf-full.png")
-			else
-				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf.png")
-			end
-		end
-		q = q + 1
-		r = r - 1
-	end
 	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
 	q = q - 1
 	r = r + 1
@@ -1000,6 +994,26 @@ local function place_corridors(current_rooms)
 	return graph
 end
 
+-- needs to be done after corridor placement so no corridors are visually blocked off
+local function place_library_bookshelves(library_room)
+	local library_x , library_y = table.unpack(library_room:left_corner())
+	q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
+	for i = 1, 10 do
+		local hex = from_cubic(q, r, s)
+		local hex_to_check = from_cubic(q - 1, r, s + 1)
+		if string.sub(wesnoth.current.map[hex_to_check], 1, 1) == "X" then
+			local full_shelf = mathx.random(1, 2)
+			if full_shelf == 1 then
+				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf-full.png")
+			else
+				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf.png")
+			end
+		end
+		q = q + 1
+		r = r - 1
+	end
+end
+
 local function place_prison_lever(current_rooms, graph)
 	local start_room_num = nil
 	local prison_room_num = nil
@@ -1092,6 +1106,12 @@ function randomize_map()
 
 	local map_graph = place_corridors(all_rooms)
 
+	for i, room in ipairs(all_rooms) do
+		if room.id == "library_room" then
+			place_library_bookshelves(room)
+		end
+	end
+
 	place_prison_lever(all_rooms, map_graph)
 
 	-- scatter healing and damage glyphs
@@ -1181,6 +1201,9 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	local image_path = "items/magic-orb.png~RC(magenta>" .. orb_color .. ")"
 	wesnoth.interface.remove_item(x, y, image_path)
 	wesnoth.map.remove_label({x=x, y=y})
+	local malakar = wesnoth.units.get("Malakar")
+	malakar.moves = 0
+	malakar.attacks_left = 0
 	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
 	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
 	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
@@ -1222,13 +1245,10 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
 	wml.variables["orbs_x"] = table.concat(orbs_x, ",")
 	wml.variables["orbs_y"] = table.concat(orbs_y, ",")
-	local malakar = wesnoth.units.get("Malakar")
-	malakar.moves = 0
-	malakar.attacks_left = 0
 	if #orb_colors == 0 then
 		-- todo: effects, graphics, maybe boss unit, etc.
 		wesnoth.wml_actions.terrain_mask({
-			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_machine_unblocker.mask"),
+			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_unblocker.mask"),
 			x = wml.variables["machine_x"] - 2,
 			y = wml.variables["machine_y"] - 2,
 			border = true,
