@@ -305,6 +305,16 @@ function wesnoth.wml_actions.show_image_dialog(cfg)
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
 
+function wesnoth.wml_actions.show_text_box_dialog(cfg)
+	local text = cfg.text
+	function pre_show(self)
+		self.text.label = text
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/text_box_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+
 function wesnoth.wml_actions.skip_messages(cfg)
 	wesnoth.interface.skip_messages(true)
 end

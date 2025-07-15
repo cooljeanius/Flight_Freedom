@@ -6,7 +6,7 @@ local functional = wesnoth.require("functional")
 wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
 
 ------------------------
------ Room class to handle creation, initial terrain painting, and collision checking
+----- Room class for room creation, initial terrain painting, and collision checking
 ------------------------
 
 -- x1 and y1 refer to left corner on Wesnoth map
@@ -314,7 +314,7 @@ function Room:minimum_wall_distance(r2)
 end
 
 ------------------------
------ now set up the map
+----- map setup functions
 ------------------------
 
 local map_size_x = wesnoth.current.map.playable_width
@@ -458,14 +458,6 @@ local orb_colors_desc = {
 	["black"] = _"Black Orb",
 	["yellow"] = _"Yellow Orb",
 }
-local orb_colors_journal_entries = {
-	["red"] = _"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?",
-	["blue"] = _"My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes.", -- describing a Leyden jar
-	["green"] = _"Sometimes I consider the toll of my research. I have given so much to the Engine. My fortune, the rarest of resources, the lives of my assistants, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
-	["white"] = _"So many discordant forces suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
-	["black"] = _"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nonexistence. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
-	["yellow"] = _"I lost my best assistant, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the assistant who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
-}
 local orb_colors = {}
 for name, tr_name in pairs(orb_colors_tr) do
 	table.insert(orb_colors, name)
@@ -495,6 +487,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local malakar_start_x = start_room_x + 6
 	local malakar_start_y = start_room_y
 	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
+	wesnoth.interface.add_item_image(malakar_start_x, malakar_start_y, "scenery/castle-ruins3.png")
 
 	-- control room in top right of the map
 	local control_room = find_room(11, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
@@ -597,6 +590,11 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wesnoth.interface.add_item_image(blueprint_x, blueprint_y, "items/book4.png")
 	wml.variables["blueprint_x"] = blueprint_x
 	wml.variables["blueprint_y"] = blueprint_y
+	local isle_book_x = blueprint_x - 4
+	local isle_book_y = blueprint_y
+	wesnoth.interface.add_item_image(isle_book_x, isle_book_y, "items/book3.png")
+	wml.variables["isle_book_x"] = isle_book_x
+	wml.variables["isle_book_y"] = isle_book_y
 	-- todo: more books/documents in the library
 	table.insert(current_rooms, library_room)
 
@@ -630,7 +628,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local prison_room = find_room(12, 9, 1, map_size_x, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	prison_room.id = "prison_room"
 	prison_room:set_inner_terrain("Ur")
-	prison_room.max_degree = 1
+	prison_room.max_degree = 2
 	local room_x, room_y = table.unpack(prison_room:left_corner())
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_prison.mask"),
@@ -1091,44 +1089,9 @@ local function label_rooms(rooms)
 	end
 end
 
-function randomize_map()
-	local all_rooms = {}
-
-	local num_orb_rooms = 5
-	if wesnoth.scenario.difficulty == "EASY" then
-		num_orb_rooms = 4
-	elseif wesnoth.scenario.difficulty == "HARD" then
-		num_orb_rooms = 6
-	end
-	-- start out by placing and setting up story-important rooms
-	all_rooms = place_story_rooms(all_rooms, num_orb_rooms)
-
-	-- now make and position some random rooms (not involved in objectives)
-	all_rooms = place_random_rooms(all_rooms)
-
-	label_rooms(all_rooms)
-
-	local map_graph = place_corridors(all_rooms)
-
-	for i, room in ipairs(all_rooms) do
-		if room.id == "library_room" then
-			place_library_bookshelves(room)
-		end
-	end
-
-	place_prison_lever(all_rooms, map_graph)
-
-	-- scatter healing and damage glyphs
-	local healing_glyphs = place_healing_glyphs(all_rooms)
-	hex_list_to_wml_var(healing_glyphs, "healing_glyph_x", "healing_glyph_y")
-
-	local damage_glyphs = place_damage_glyphs(15)
-	hex_list_to_wml_var(damage_glyphs, "damage_glyph_x", "damage_glyph_y")
-end
-
--------------------------------
+------------------------
 ----- other scenario setup code
--------------------------------
+------------------------
 
 -- since it's just Malakar and his loadout's quite variable
 -- overall difficulty scales based on Malakar and set difficulty
@@ -1171,9 +1134,163 @@ function hide_ui_elements()
 	wesnoth.interface.game_display.income = null_theme_func
 end
 
-------------------------------------
+------------------------
+----- generate various narrative text
+------------------------
+
+local orb_colors_journal_entries = {
+	["red"] = _"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?",
+	["blue"] = _"My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes.", -- describing a Leyden jar
+	["green"] = _"Sometimes I consider the toll of my research. I have given so much to the Engine. My fortune, the rarest of resources, the lives of my assistants, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
+	["white"] = _"So many discordant forces suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting, then, that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
+	["black"] = _"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nonexistence. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
+	["yellow"] = _"I lost my best apprentice, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the apprentice who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
+}
+
+local months_list = {}
+table.insert(months_list, _"Whitefire")
+table.insert(months_list, _"Bleeding Moon")
+table.insert(months_list, _"Scatterseed")
+table.insert(months_list, _"Deeproot")
+table.insert(months_list, _"Scryer's Bloom")
+table.insert(months_list, _"Thorntress")
+table.insert(months_list, _"Summit Star")
+table.insert(months_list, _"Kindlefire")
+table.insert(months_list, _"Stillseed")
+table.insert(months_list, _"Reaper's Moon")
+table.insert(months_list, _"Verglas Bloom")
+table.insert(months_list, _"Blackfire")
+
+-- in case Irdya's months-per-year schedule is defined to be different from Earth's in the future
+local days_per_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+local days_per_year = functional.reduce(days_per_month, function(a,b) return a+b end, 0)
+
+local function day_to_month_date(day)
+	local month_id = 1
+	local remaining_days = ((day - 1) % days_per_year) + 1
+	while remaining_days > days_per_month[month_id] do
+		remaining_days = remaining_days - days_per_month[month_id]
+		month_id = month_id + 1
+	end
+	local date_str = stringx.vformat(_"$month $day", {month=months_list[month_id], day=remaining_days})
+	return date_str
+end
+
+-- sets $journal_str to the generated journal string
+-- returns the last day in the journal (as some of the assistants' writings must be dated after the last journal entry)
+local function generate_journal()
+	local journal_days = {}
+	local journal_entries_by_day = {}
+	-- place journal entries with clues first
+	for i = 1, #orb_colors do
+		local unique_day = false
+		local day = nil
+		while not unique_day do
+			unique_day = true
+			day = mathx.random(1, days_per_year)
+			for j = 1, #journal_days do
+				if journal_days[j] == day then
+					unique_day = false
+					break
+				end
+			end
+		end
+		table.insert(journal_days, day)
+	end
+	table.sort(journal_days)
+	for i = 1, #orb_colors do
+		journal_entries_by_day[journal_days[i]] = orb_colors_journal_entries[orb_colors[i]]
+	end
+	local num_distractors = #orb_colors + 1
+	-- none of these can have any names of a color in them
+	local distractor_journal_entries = {
+		_"Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek.",
+		_"In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always.",
+		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do.",
+		_"As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!",
+		_"I slipped on a loose flagstone today. My knee will be sore for a while.",
+		_"Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!",
+		_"The next phase of the Engine demands much. Eldritch, timeless bindings of pure, youthful vigor, a fusion of life and unlife, a magical contradiction to apply pressure on the local metric tensor. Perhaps the application of a necromantic binding glyph to the beating heart of a virgin will generate the requisite combination of energies.",
+		_"At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all.",
+		_"I once again find myself in need of apprentices. The locals are strong in body, hardened from lives of toil on this hostile isle. When approached in secret many of them are eager to join my cause as assistants, if none else but for an escape from the oppression of the orcs. They have proved useful for manual labor and the occasional sacrifice, yet they are weak in mind and ill-served as apprentices. My agents in Wesnoth must redouble their efforts in recruitment. But they report that rogue mages and other magical cast-offs grow ever more difficult to find.",
+		_"My agents in Wesnoth report that word has spread about me among the wizarding underworld. 'Bringer of the Void', I have been rather derisively rumored. Short-sighted fools! They comprehend not the scope of my genius! At least this Laboratory and the Engine remain unknown to the wider world. The local orcs have learned to avoid us, though they know not the cause of their fear. But I have no doubt that the Royal Army would hasten to destroy us should they learn of the Engine."
+	}
+	mathx.shuffle(distractor_journal_entries)
+	for i = 1, num_distractors do
+		local unique_day = false
+		local day = nil
+		while not unique_day do
+			unique_day = true
+			day = mathx.random(1, days_per_year)
+			for j = 1, #journal_days do
+				if journal_days[j] == day then
+					unique_day = false
+					break
+				end
+			end
+		end
+		table.insert(journal_days, day)
+		journal_entries_by_day[day] = distractor_journal_entries[i]
+	end
+
+	table.sort(journal_days)
+	local day_offset = mathx.random(1, days_per_year)
+	local journal_str = ""
+	for i = 1, #journal_days do
+		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i] + day_offset) .. ":</span> " .. journal_entries_by_day[journal_days[i]]
+		if i ~= #journal_days then
+			journal_str = journal_str .. "\n\n"
+		end
+	end
+	wml.variables["journal_str"] = journal_str
+	return journal_days[#journal_days]
+end
+
+------------------------
+----- master function for initial scenario setup
+------------------------
+
+function randomize_scenario()
+	local all_rooms = {}
+
+	local num_orb_rooms = 5
+	if wesnoth.scenario.difficulty == "EASY" then
+		num_orb_rooms = 4
+	elseif wesnoth.scenario.difficulty == "HARD" then
+		num_orb_rooms = 6
+	end
+	-- start out by placing and setting up story-important rooms
+	all_rooms = place_story_rooms(all_rooms, num_orb_rooms)
+
+	-- now make and position some random rooms (not involved in objectives)
+	all_rooms = place_random_rooms(all_rooms)
+
+	label_rooms(all_rooms)
+
+	local map_graph = place_corridors(all_rooms)
+
+	for i, room in ipairs(all_rooms) do
+		if room.id == "library_room" then
+			place_library_bookshelves(room)
+		end
+	end
+
+	place_prison_lever(all_rooms, map_graph)
+
+	-- scatter healing and damage glyphs
+	local healing_glyphs = place_healing_glyphs(all_rooms)
+	hex_list_to_wml_var(healing_glyphs, "healing_glyph_x", "healing_glyph_y")
+
+	local damage_glyphs = place_damage_glyphs(15)
+	hex_list_to_wml_var(damage_glyphs, "damage_glyph_x", "damage_glyph_y")
+
+	-- generate Sol'kan's journal
+	local last_journal_date = generate_journal()
+end
+
+------------------------
 ----- handle various scenario events
-------------------------------------
+------------------------
 
 local function get_orb_color(x, y)
 	local orb_color = nil
@@ -1262,114 +1379,6 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	end
 end
 
--- for color-blind accessibility
-function wesnoth.wml_actions.label_orb_colors(cfg)
-	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
-	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
-	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
-	for i, color in ipairs(orb_colors) do
-		local x = orbs_x[i]
-		local y = orbs_y[i]
-		wesnoth.map.add_label({x=x, y=y, text=orb_colors_desc[color]})
-	end
-end
-
-function generate_journal()
-	local months_list = {}
-	table.insert(months_list, _"Whitefire")
-	table.insert(months_list, _"Bleeding Moon")
-	table.insert(months_list, _"Scatterseed")
-	table.insert(months_list, _"Deeproot")
-	table.insert(months_list, _"Scryer's Bloom")
-	table.insert(months_list, _"Thorntress")
-	table.insert(months_list, _"Summit Star")
-	table.insert(months_list, _"Kindlefire")
-	table.insert(months_list, _"Stillseed")
-	table.insert(months_list, _"Reaper's Moon")
-	table.insert(months_list, _"Verglas Bloom")
-	table.insert(months_list, _"Blackfire")
-
-	-- in case Irdya's months-per-year schedule is defined to be different from Earth's in the future
-	local days_per_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-	local days_per_year = functional.reduce(days_per_month, function(a,b) return a+b end, 0)
-
-	local function day_to_month_date(day)
-		local month_id = 1
-		local remaining_days = ((day - 1) % days_per_year) + 1
-		while remaining_days > days_per_month[month_id] do
-			remaining_days = remaining_days - days_per_month[month_id]
-			month_id = month_id + 1
-		end
-		local date_str = stringx.vformat(_"$month $day", {month=months_list[month_id], day=remaining_days})
-		return date_str
-	end
-
-	local journal_days = {}
-	local journal_entries_by_day = {}
-	-- place journal entries with clues first
-	for i = 1, #orb_colors do
-		local unique_day = false
-		local day = nil
-		while not unique_day do
-			unique_day = true
-			day = mathx.random(1, days_per_year)
-			for j = 1, #journal_days do
-				if journal_days[j] == day then
-					unique_day = false
-					break
-				end
-			end
-		end
-		table.insert(journal_days, day)
-	end
-	table.sort(journal_days)
-	for i = 1, #orb_colors do
-		journal_entries_by_day[journal_days[i]] = orb_colors_journal_entries[orb_colors[i]]
-	end
-	local num_distractors = #orb_colors + 1
-	-- none of these can have any names of a color in them
-	local distractor_journal_entries = {
-		_"Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek.",
-		_"In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always.",
-		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do.",
-		_"As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!",
-		_"I slipped on a loose flagstone today. My knee will be sore for a while.",
-		_"Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!",
-		_"The next phase of the Engine demands much. Eldritch, timeless bindings of pure, youthful vigor, a fusion of life and unlife, a magical contradiction to apply pressure on the local metric tensor. Perhaps the application of a necromantic binding glyph to the beating heart of a virgin will generate the requisite combination of energies.",
-		_"At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all.",
-		_"I once again find myself in need of apprentices. The locals are strong in body, hardened from lives of toil on this hostile isle. When approached in secret many of them are eager to join my cause as assistants, if none else but for an escape from the oppression of the orcs. They have proved useful for manual labor and the occasional sacrifice, yet they are weak in mind and ill-served as apprentices. My agents in Wesnoth must redouble their efforts in recruitment. But they report that rogue mages and other magical cast-offs grow ever difficult to find.",
-		_"My agents in Wesnoth report that word has spread about me among the wizarding underworld. 'Bringer of the Void', I have been rather derisively rumored. Short-sighted fools! They comprehend not the scope of my genius! At least this Laboratory and the Engine remain unknown to the wider world. The local orcs have learned to avoid us, though they know not the cause of their fear. But I have no doubt that the Royal Army would hasten to destroy us should they learn of the Engine."
-	}
-	mathx.shuffle(distractor_journal_entries)
-	for i = 1, num_distractors do
-		local unique_day = false
-		local day = nil
-		while not unique_day do
-			unique_day = true
-			day = mathx.random(1, days_per_year)
-			for j = 1, #journal_days do
-				if journal_days[j] == day then
-					unique_day = false
-					break
-				end
-			end
-		end
-		table.insert(journal_days, day)
-		journal_entries_by_day[day] = distractor_journal_entries[i]
-	end
-
-	table.sort(journal_days)
-	local day_offset = mathx.random(1, days_per_year)
-	local journal_str = ""
-	for i = 1, #journal_days do
-		journal_str = journal_str .. "<span underline='single'>" .. day_to_month_date(journal_days[i] + day_offset) .. ":</span> " .. journal_entries_by_day[journal_days[i]]
-		if i ~= #journal_days then
-			journal_str = journal_str .. "\n\n"
-		end
-	end
-	wml.variables["journal_str"] = journal_str
-end
-
 local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
 gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
 
@@ -1380,4 +1389,16 @@ function wesnoth.wml_actions.show_journal_dialog(cfg)
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+-- for color-blind accessibility
+function wesnoth.wml_actions.label_orb_colors(cfg)
+	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
+	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
+	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+	for i, color in ipairs(orb_colors) do
+		local x = orbs_x[i]
+		local y = orbs_y[i]
+		wesnoth.map.add_label({x=x, y=y, text=orb_colors_desc[color]})
+	end
 end
