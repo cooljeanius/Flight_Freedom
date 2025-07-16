@@ -1081,6 +1081,25 @@ local function place_damage_glyphs(num_glyphs)
 	return damage_glyph_locs
 end
 
+-- scattered randomly, but not near Malakar
+local function place_apprentice_notes(num_notes)
+	local apprentice_note_locs = {}
+	local possible_locs = wesnoth.map.find({terrain="Isa,Isa^Edb", wml.tag["not"]{radius=10, wml.tag.filter{id="Malakar"}}})
+	mathx.shuffle(possible_locs)
+	local num_notes_placed = 0
+	for i, hex in ipairs(possible_locs) do
+		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "help/topic.png")
+			table.insert(apprentice_note_locs, hex)
+			num_notes_placed = num_notes_placed + 1
+			if num_notes_placed == num_notes then
+				break
+			end
+		end
+	end
+	return apprentice_note_locs
+end
+
 -- for debug purposes, label rooms in map
 local function label_rooms(rooms)
 	for i, room in ipairs(rooms) do
@@ -1243,7 +1262,7 @@ local function generate_journal()
 		end
 	end
 	wml.variables["journal_str"] = journal_str
-	return journal_days[#journal_days]
+	return journal_days[#journal_days] + day_offset
 end
 
 ------------------------
@@ -1286,6 +1305,10 @@ function randomize_scenario()
 
 	-- generate Sol'kan's journal
 	local last_journal_date = generate_journal()
+	wml.variables["last_journal_date"] = last_journal_date
+
+	local apprentice_notes = place_apprentice_notes(4)
+	hex_list_to_wml_var(apprentice_notes, "apprentice_note_x", "apprentice_note_y")
 end
 
 ------------------------
@@ -1382,13 +1405,46 @@ end
 local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
 gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
 
-function wesnoth.wml_actions.show_journal_dialog(cfg)
-	local text = cfg.text
+local function show_journal_dialog(text)
 	function pre_show(self)
 		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. text .. "</span>"
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+function wesnoth.wml_actions.show_journal_dialog(cfg)
+	local text = cfg.text
+	show_journal_dialog(text)
+end
+
+function wesnoth.wml_actions.display_apprentice_note(cfg)
+	local x = cfg.x
+	local y = cfg.y
+	local apprentice_note_x = functional.map(stringx.split(wml.variables["apprentice_note_x"], ","), function(s) return tonumber(s) end)
+	local apprentice_note_y = functional.map(stringx.split(wml.variables["apprentice_note_y"], ","), function(s) return tonumber(s) end)
+	local notes = {
+_"I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about taking him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it.",
+_"That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here.",
+_"Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I strangled him with my bare hands. But the containment fields are still up. We hoped that they would fall with his death. We've pored over every book in the library but his magic is far too advanced for us. The apprentices threw every spell they had at the barriers with no luck. We even tried digging under the containment fields but we found the dirt to be as hard as stone.\n\nTempers are running high. Nobody knows how we're going to find more food when the supplies down here run out. Already fights are breaking out, old grudges and spite boiling over. And lots of us have lost hope.",
+_"I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here...",
+	}
+	local note_date = wml.variables["last_journal_date"]
+	for i = 1, #apprentice_note_x do
+		local cur_x = apprentice_note_x[i]
+		local cur_y = apprentice_note_y[i]
+		if i == 1 then
+			note_date = note_date + 30 + ((cur_x + cur_y) % 30) -- 1-2 months after Sol'kan's last journal entry
+		elseif i < 4 then
+			note_date = note_date + 2 + ((cur_x + cur_y) % 3) -- engine's finished so things are moving quickly
+		else
+			note_date = note_date + 90  + ((cur_x + cur_y) % 28) -- a few months after Sol'kan's death
+		end
+		if x == cur_x and y == cur_y then
+			local note_str = "<span underline='single'>" .. day_to_month_date(note_date) .. "</span>\n" .. notes[i]
+			show_journal_dialog(note_str)
+		end
+	end
 end
 
 -- for color-blind accessibility
