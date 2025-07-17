@@ -1091,22 +1091,22 @@ local function place_damage_glyphs(num_glyphs)
 end
 
 -- scattered randomly, but not near Malakar
-local function place_apprentice_notes(num_notes)
-	local apprentice_note_locs = {}
+local function place_assistant_notes(num_notes)
+	local assistant_note_locs = {}
 	local possible_locs = wesnoth.map.find({terrain="Isa,Isa^Edb", wml.tag["not"]{radius=10, wml.tag.filter{id="Malakar"}}})
 	mathx.shuffle(possible_locs)
 	local num_notes_placed = 0
 	for i, hex in ipairs(possible_locs) do
 		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
 			wesnoth.interface.add_item_image(hex[1], hex[2], "help/topic.png")
-			table.insert(apprentice_note_locs, hex)
+			table.insert(assistant_note_locs, hex)
 			num_notes_placed = num_notes_placed + 1
 			if num_notes_placed == num_notes then
 				break
 			end
 		end
 	end
-	return apprentice_note_locs
+	return assistant_note_locs
 end
 
 -- for debug purposes, label rooms in map
@@ -1316,8 +1316,8 @@ function randomize_scenario()
 	local last_journal_date = generate_journal()
 	wml.variables["last_journal_date"] = last_journal_date
 
-	local apprentice_notes = place_apprentice_notes(4)
-	hex_list_to_wml_var(apprentice_notes, "apprentice_note_x", "apprentice_note_y")
+	local assistant_notes = place_assistant_notes(4)
+	hex_list_to_wml_var(assistant_notes, "assistant_note_x", "assistant_note_y")
 end
 
 ------------------------
@@ -1362,6 +1362,7 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
 	if orb_colors[1] ~= orb_color then
 		-- player smashed orb out of sequence
+		wml.variables["orb_out_of_order"] = true
 		wesnoth.audio.play("bells-golden.ogg")
 		for i = 1, 3 do
 			for j = 1, 5 do
@@ -1427,11 +1428,11 @@ function wesnoth.wml_actions.show_journal_dialog(cfg)
 	show_journal_dialog(text)
 end
 
-function wesnoth.wml_actions.display_apprentice_note(cfg)
+function wesnoth.wml_actions.display_assistant_note(cfg)
 	local x = cfg.x
 	local y = cfg.y
-	local apprentice_note_x = functional.map(stringx.split(wml.variables["apprentice_note_x"], ","), function(s) return tonumber(s) end)
-	local apprentice_note_y = functional.map(stringx.split(wml.variables["apprentice_note_y"], ","), function(s) return tonumber(s) end)
+	local assistant_note_x = functional.map(stringx.split(wml.variables["assistant_note_x"], ","), function(s) return tonumber(s) end)
+	local assistant_note_y = functional.map(stringx.split(wml.variables["assistant_note_y"], ","), function(s) return tonumber(s) end)
 	local notes = {
 _"I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about taking him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it.",
 _"That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here.",
@@ -1439,9 +1440,9 @@ _"Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I 
 _"I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here...",
 	}
 	local note_date = wml.variables["last_journal_date"]
-	for i = 1, #apprentice_note_x do
-		local cur_x = apprentice_note_x[i]
-		local cur_y = apprentice_note_y[i]
+	for i = 1, #assistant_note_x do
+		local cur_x = assistant_note_x[i]
+		local cur_y = assistant_note_y[i]
 		if i == 1 then
 			note_date = note_date + 30 + ((cur_x + cur_y) % 30) -- 1-2 months after Sol'kan's last journal entry
 		elseif i < 4 then
