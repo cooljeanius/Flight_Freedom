@@ -317,9 +317,6 @@ end
 ----- map setup functions
 ------------------------
 
-local map_size_x = wesnoth.current.map.playable_width
-local map_size_y = wesnoth.current.map.playable_height
-
 -- essential=true used for story rooms
 local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, existing_rooms, essential)
 	local attempts = 0
@@ -468,6 +465,8 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	-- all rooms made by this function should be "ready to go"
 	-- including item graphics, units, and WML variables for events
 
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	-- start room in bottom left of the map
 	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	start_room.id = "start_room"
@@ -487,6 +486,12 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local malakar_start_x = start_room_x + 6
 	local malakar_start_y = start_room_y
 	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
+	local q, r, s = table.unpack(get_cubic({malakar_start_x, malakar_start_y}))
+	local malakar_run_x, malakar_run_y = table.unpack(from_cubic(q-6, r+6, s))
+	wml.variables["malakar_run_x"] = malakar_run_x
+	wml.variables["malakar_run_y"] = malakar_run_y
+	wml.variables["malakar_start_x"] = malakar_start_x
+	wml.variables["malakar_start_y"] = malakar_start_y
 	wesnoth.interface.add_item_image(malakar_start_x, malakar_start_y, "scenery/castle-ruins3.png")
 
 	-- control room in top right of the map
@@ -497,7 +502,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
-	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+	q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
 	--q = q - 1
 	--r = r + 1
 	local objective_x, objective_y = table.unpack(from_cubic(q, r, s))
@@ -658,6 +663,8 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 end
 
 local function place_random_rooms(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	local random_rooms = {}
 
 	local num_random_rooms = 9
@@ -737,6 +744,8 @@ local function place_random_rooms(current_rooms)
 end
 
 local function place_corridors(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	-- build graph of all rooms
 	local num_rooms = #current_rooms
 	graph = Graph:new()
@@ -1284,7 +1293,7 @@ function randomize_scenario()
 	-- now make and position some random rooms (not involved in objectives)
 	all_rooms = place_random_rooms(all_rooms)
 
-	label_rooms(all_rooms)
+	--label_rooms(all_rooms)
 
 	local map_graph = place_corridors(all_rooms)
 
