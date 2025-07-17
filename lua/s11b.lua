@@ -542,7 +542,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		local orb_image_path = "items/magic-orb.png~RC(magenta>" .. orb_colors[i] .. ")"
 		wesnoth.interface.add_item_image(orb_x, orb_y, orb_image_path)
 		table.insert(orb_hexes, {orb_x, orb_y})
-		wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)")
+		wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)~NO_TOD_SHIFT()")
 		table.insert(orb_guard_hexes, {orb_x, orb_y - 1})
 		table.insert(current_rooms, orb_room)
 	end
@@ -1374,7 +1374,7 @@ function wesnoth.wml_actions.handle_orb(cfg)
 			end
 			wesnoth.interface.delay(1700)
 		end
-		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)")
+		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)~NO_TOD_SHIFT()")
 		wesnoth.units.to_map({type="Automaton Defender", side=3, facing="se"}, x, y - 1)
 		wesnoth.game_events.remove("guard_description")
 	else
