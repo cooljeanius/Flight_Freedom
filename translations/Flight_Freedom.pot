@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-07-18 02:53 UTC\n"
+"POT-Creation-Date: 2025-07-18 04:36 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -463,6 +463,7 @@ msgstr ""
 #: Flight_Freedom/gui/image_dialog.cfg:50
 #: Flight_Freedom/gui/journal_dialog.cfg:52
 #: Flight_Freedom/gui/text_box_dialog.cfg:52
+#: Flight_Freedom/gui/text_box_dialog_borderless.cfg:52
 msgid "Close"
 msgstr ""
 
@@ -477,137 +478,137 @@ msgid "The freezing cold is chilling your drakes' fire breath! Fire attacks do $
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1179
+#: Flight_Freedom/lua/s11b.lua:1185
 msgid "Whitefire"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1180
+#: Flight_Freedom/lua/s11b.lua:1186
 msgid "Bleeding Moon"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1181
+#: Flight_Freedom/lua/s11b.lua:1187
 msgid "Scatterseed"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1182
+#: Flight_Freedom/lua/s11b.lua:1188
 msgid "Deeproot"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1183
+#: Flight_Freedom/lua/s11b.lua:1189
 msgid "Scryer's Bloom"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1184
+#: Flight_Freedom/lua/s11b.lua:1190
 msgid "Thorntress"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1185
+#: Flight_Freedom/lua/s11b.lua:1191
 msgid "Summit Star"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1186
+#: Flight_Freedom/lua/s11b.lua:1192
 msgid "Kindlefire"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1187
+#: Flight_Freedom/lua/s11b.lua:1193
 msgid "Stillseed"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1188
+#: Flight_Freedom/lua/s11b.lua:1194
 msgid "Reaper's Moon"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1189
+#: Flight_Freedom/lua/s11b.lua:1195
 msgid "Verglas Bloom"
 msgstr ""
 
 #. [lua]: null_theme_func
-#: Flight_Freedom/lua/s11b.lua:1190
+#: Flight_Freedom/lua/s11b.lua:1196
 msgid "Blackfire"
 msgstr ""
 
 #. [lua]: day_to_month_date
-#: Flight_Freedom/lua/s11b.lua:1203
+#: Flight_Freedom/lua/s11b.lua:1209
 msgid "$month $day"
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1235
+#: Flight_Freedom/lua/s11b.lua:1241
 msgid "Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1236
+#: Flight_Freedom/lua/s11b.lua:1242
 msgid "In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1237
+#: Flight_Freedom/lua/s11b.lua:1243
 msgid "I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1238
+#: Flight_Freedom/lua/s11b.lua:1244
 msgid "As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!"
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1239
+#: Flight_Freedom/lua/s11b.lua:1245
 msgid "I slipped on a loose flagstone today. My knee will be sore for a while."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1240
+#: Flight_Freedom/lua/s11b.lua:1246
 msgid "Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!"
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1241
+#: Flight_Freedom/lua/s11b.lua:1247
 msgid "The next phase of the Engine demands much. Eldritch, timeless bindings of pure, youthful vigor, a fusion of life and unlife, a magical contradiction to apply pressure on the local metric tensor. Perhaps the application of a necromantic binding glyph to the beating heart of a virgin will generate the requisite combination of energies."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1242
+#: Flight_Freedom/lua/s11b.lua:1248
 msgid "At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1243
+#: Flight_Freedom/lua/s11b.lua:1249
 msgid "I once again find myself in need of apprentices. The locals are strong in body, hardened from lives of toil on this hostile isle. When approached in secret many of them are eager to join my cause as assistants, if none else but for an escape from the oppression of the orcs. They have proved useful for manual labor and the occasional sacrifice, yet they are weak in mind and ill-served as apprentices. My agents in Wesnoth must redouble their efforts in recruitment. But they report that rogue mages and other magical cast-offs grow ever more difficult to find."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1244
+#: Flight_Freedom/lua/s11b.lua:1250
 msgid "My agents in Wesnoth report that word has spread about me among the wizarding underworld. 'Bringer of the Void', I have been rather derisively rumored. Short-sighted fools! They comprehend not the scope of my genius! At least this Laboratory and the Engine remain unknown to the wider world. The local orcs have learned to avoid us, though they know not the cause of their fear. But I have no doubt that the Royal Army would hasten to destroy us should they learn of the Engine."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:1437
+#: Flight_Freedom/lua/s11b.lua:1443
 msgid "I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about taking him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:1438
+#: Flight_Freedom/lua/s11b.lua:1444
 msgid "That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:1439
+#: Flight_Freedom/lua/s11b.lua:1445
 msgid "Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I strangled him with my bare hands. But the containment fields are still up. We hoped that they would fall with his death. We've pored over every book in the library but his magic is far too advanced for us. The apprentices threw every spell they had at the barriers with no luck. We even tried digging under the containment fields but we found the dirt to be as hard as stone.\n\nTempers are running high. Nobody knows how we're going to find more food when the supplies down here run out. Already fights are breaking out, old grudges and spite boiling over. And lots of us have lost hope."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:1440
+#: Flight_Freedom/lua/s11b.lua:1446
 msgid "I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here..."
 msgstr ""
 
@@ -948,9 +949,9 @@ msgstr ""
 #: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:67
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:350
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:741
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:951
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:962
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:975
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:986
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:997
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1010
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:253
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:351
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:413
@@ -5036,7 +5037,7 @@ msgstr ""
 
 #. [option]
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:182
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:441
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:442
 msgid "Continue normally"
 msgstr ""
 
@@ -6296,114 +6297,114 @@ msgid "Automata"
 msgstr ""
 
 #. [message]: speaker=s11b_scout
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:197
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:198
 msgid "Chief, there is a hidden entrance in the mountain!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:257
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:258
 msgid "An avalanche! Drakes! Clear the area. NOW!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:319
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:320
 msgid "What... what is this? All the tribe, frozen in place... even the leaves of the trees no longer sway to the wind. This door, maybe therein lie the answers to this curse that has befallen my tribe."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:433
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:434
 msgid "This appears to be some sort of hidden base. I must find a way to lift the curse!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:438
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:439
 msgid "NOTE: This scenario uses color-coded graphics. Those colors that are essential for scenario completion can be labeled for color-deficient players."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:446
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:447
 msgid "Continue with labeled colors"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:459
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:460
 msgid "NOTE: As each turn represents a short amount of time, rest healing is disabled. Additionally, your gold stockpile is frozen, and Malakar will not gain experience."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:484
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:485
 msgid "This seems to be a machine fashioned into a statue."
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:504
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:505
 msgid "A red orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:508
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:509
 msgid "A blue orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:512
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:513
 msgid "A green orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:516
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:517
 msgid "A white orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:520
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:521
 msgid "A black orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:524
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:525
 msgid "A yellow orb! Should I break it?"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:531
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:892
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:532
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:927
 msgid "Yes."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:551
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:552
 msgid "I believe that this is the last of the orbs. I can only hope that the curse on my tribe is now lifted. Now I must destroy this so-called Engine quickly before it can accomplish its evil task!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:557
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:558
 msgid "I believe that this is the last of the orbs. I can only hope that the curse on my tribe is now lifted. Now I must find a way out of here."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:569
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:916
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:570
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:951
 msgid "No."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:674
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:675
 msgid "These glyphs are a trap!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:708
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:709
 msgid "Some sort of strange contraption! Could this be the source of the curse?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:750
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:751
 msgid "This appears to be a page torn out of another book."
 msgstr ""
 
 #. [show_journal_dialog]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:753
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:754
 msgid ""
 "At last! At last the Engine approaches completion! I stand at the precipice of the power of the void! As I have pursued the void, I now see that the void has pursued me. Whispering delightful and terrible secrets into my mind. Secrets which have helped to make the Engine a reality. Soon I shall activate the inner and outer containment fields and set the Engine to work!\n"
 "\n"
@@ -6412,28 +6413,33 @@ msgid ""
 "But my assistants are a jealous lot. They know not that I can sense their covetous eyes at my back, that the stench of their avarice billows from them like a cloak. Therefore I have set my Automata to guard the orbs. They have been programmed with a specific order in which the orbs are to be broken, known to myself and myself alone. If any of my assistants deign to initiate the activation sequence without my command, the Automata will reward their faithlessness with death."
 msgstr ""
 
+#. [message]: speaker=unit
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:790
+msgid "This metal box has some sort of glass window with glowing words!"
+msgstr ""
+
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:798
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:833
 msgid "This appears to be a journal. Perhaps it can tell me more about whoever built this place."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:809
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:844
 msgid "<span color='green'>You can view the journal at any time by right-clicking and selecting “Journal...”</span>"
 msgstr ""
 
 #. [set_menu_item]: id=show_journal
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:815
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:850
 msgid "Journal..."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:839
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:874
 msgid "These appear to be some sort of plans."
 msgstr ""
 
 #. [show_text_box_dialog]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:859
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:894
 msgid ""
 "<span size='x-large' stretch='semiexpanded'><u>The Isle of Storms</u></span>\n"
 "<i>Mage Vonden of Aldril</i>\n"
@@ -6450,73 +6456,73 @@ msgid ""
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:890
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:925
 msgid "A lever! Should I pull it?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:929
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:964
 msgid "Whoever wrote this is obsessed with some sort of 'void'. Whatever it is, this cannot be good."
 msgstr ""
 
 #. [then]
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:949
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:960
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:973
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:984
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:995
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1008
 msgid "Find a way to free the tribe"
 msgstr ""
 
 #. [then]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:950
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:985
 msgid "Destroy the Engine!"
 msgstr ""
 
 #. [note]: description=<b>
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:954
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:965
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:978
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:989
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1000
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1013
 msgid "Your gold stockpile is frozen during this scenario."
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:961
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:996
 msgid "Destroy the colored orbs"
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:974
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1009
 msgid "Explore the underground complex"
 msgstr ""
 
 #. [message]: id=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:999
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1034
 msgid "I must find a way to free the tribe before I leave!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1033
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1068
 msgid "Malakar! Thank the flame you are alive! You disappeared... what happened?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1037
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1072
 msgid "We triggered some sort of machine. I saw all of you frozen in place. It appears disrupting the machine has restored the flow of time. How fares the tribe?"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1042
-msgid "We are yet hale. To us, it was as if you suddenly disappeared and the sun advanced in the sky. For a few moments we thought we were disoriented by the avalanche, but soon we realized that every drake in the valley was affected. Our scouts found this entrance so I took a war party to investigate."
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1077
+msgid "We are yet hale. To us, it was as if you suddenly vanished and the sun advanced in the sky. For a few moments we thought we were disoriented by the avalanche, but soon we realized that every drake in the valley was affected. Our scouts found this entrance so I took a war party to investigate."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1052
-msgid "I am heartened to hear of your survival. This evil machine can never be rebuilt! Burn the library to ashes and all other writings you come across, and bury the entrance. Then we shall resume our journey."
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1087
+msgid "I am heartened to hear of your survival. This evil machine must never be rebuilt! Burn the library to ashes and all other writings you come across, and bury the entrance. Then we shall resume our journey."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1059
-msgid "I am heartened to hear of your survival. This evil machine can never be rebuilt! Burn the library to ashes and all other writings you come across, but beware the moving statues. Then bury the entrance. Afterwards we must resume our journey."
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1094
+msgid "I am heartened to hear of your survival. This evil machine must never be rebuilt! Burn the library to ashes and all other writings you come across, but beware the moving statues. Then bury the entrance. Afterwards we shall resume our journey."
 msgstr ""
 
 #. [scenario]: id=Rockfall
