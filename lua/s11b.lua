@@ -510,6 +510,11 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/sentinel-glo.png")
 	wml.variables["objective_x"] = objective_x
 	wml.variables["objective_y"] = objective_y
+	local console_x = objective_x
+	local console_y = objective_y - 3
+	add_terrain_overlay(console_x, console_y, "Skyc")
+	wml.variables["console_x"] = console_x
+	wml.variables["console_y"] = console_y
 	local engine_inst_x, engine_inst_y = table.unpack(from_cubic(q - 1, r - 2, s + 3))
 	wesnoth.interface.add_item_image(engine_inst_x, engine_inst_y, "items/book1.png")
 	wml.variables["engine_inst_x"] = engine_inst_x
@@ -549,6 +554,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
 	hex_list_to_wml_var(orb_guard_hexes, "orb_guards_x", "orb_guards_y")
 	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
+	wml.variables["orig_orb_colors"] = wml.variables["orb_colors"]
 
 	-- library room in top left of map
 	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
@@ -1362,7 +1368,7 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
 	if orb_colors[1] ~= orb_color then
 		-- player smashed orb out of sequence
-		wml.variables["orb_out_of_order"] = true
+		wml.variables["alarms_triggered"] = wml.variables["alarms_triggered"] + 1
 		wesnoth.audio.play("bells-golden.ogg")
 		for i = 1, 3 do
 			for j = 1, 5 do
@@ -1455,6 +1461,51 @@ _"I'm the last one left. We ran out food a month ago. Everyone else has either s
 			show_journal_dialog(note_str)
 		end
 	end
+end
+
+function wesnoth.wml_actions.display_console_screen(cfg)
+	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+	local orig_orb_colors = stringx.split(wml.variables["orig_orb_colors"], ",")
+	local alarms_triggered = wml.variables["alarms_triggered"]
+	local console_str = "<span font_family='DejaVuSansMono' size='large'>"
+	if #orb_colors > 0 then
+		console_str = console_str .. _"VOID ENGINE STATUS............<span color='yellow'>INITIALIZING</span>" .. "\n\n"
+		console_str = console_str .. _"INNER CONTAINMENT FIELD.......<span color='yellow'>ENABLED</span>"
+	else
+		console_str = console_str .. _"VOID ENGINE STATUS............<span color='green'>READY</span>" .. "\n\n"
+		console_str = console_str .. _"INNER CONTAINMENT FIELD.......DISABLED"
+	end
+	console_str = console_str .. "\n"
+	console_str = console_str .. _"OUTER CONTAINMENT FIELD.......<span color='red'>OFFLINE</span>"
+	console_str = console_str .. "\n\n"
+	local function list_contains(list, element)
+		local result = false
+		for i, list_element in ipairs(list) do
+			if list_element == element then
+				result = true
+				break
+			end
+		end
+		return result
+	end
+	for i, color in ipairs(orig_orb_colors) do
+		if list_contains(orb_colors, color) then
+			console_str = console_str .. stringx.vformat(_"ENERGY SOURCE $i:", {i=i}) .. "\n"
+			console_str = console_str .. _"   CHARGE.....................<span color='green'>100%</span>" .. "\n"
+			console_str = console_str .. _"   TRANSFER...................<span color='yellow'>STANDBY</span>" .. "\n\n"
+		else
+			console_str = console_str .. stringx.vformat(_"ENERGY SOURCE $i:", {i=i}) .. "\n"
+			console_str = console_str .. _"   CHARGE.....................<span color='red'>0%</span>" .. "\n"
+			console_str = console_str .. _"   TRANSFER...................<span color='green'>COMPLETED</span>" .. "\n\n"
+		end
+	end
+	if alarms_triggered > 0 then
+		console_str = console_str .. stringx.vformat(_"ALARMS TRIGGERED..............<span color='red'>$i</span>", {i=alarms_triggered}) .. "\n"
+	else
+		console_str = console_str .. _"ALARMS TRIGGERED..............<span color='green'>0</span>" .. "\n"
+	end
+	console_str = console_str .. "</span>"
+	show_text_box_borderless_dialog(console_str)
 end
 
 -- for color-blind accessibility

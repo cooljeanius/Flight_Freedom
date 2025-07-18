@@ -289,6 +289,14 @@ function wesnoth.wml_actions.fading_message(cfg)
 	end
 end
 
+function show_image_dialog(image_path)
+	function pre_show(self)
+		self.image.label = image_path
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
 ---
 -- Shows a simple dialog with a scrollable image.
 --
@@ -297,16 +305,10 @@ end
 -- [/show_image_dialog]
 ---
 function wesnoth.wml_actions.show_image_dialog(cfg)
-	local image_path = cfg.image
-	function pre_show(self)
-		self.image.label = image_path
-	end
-	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
-	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+	show_image_dialog(cfg.image)
 end
 
-function wesnoth.wml_actions.show_text_box_dialog(cfg)
-	local text = cfg.text
+function show_text_box_dialog(text)
 	function pre_show(self)
 		self.text.label = text
 	end
@@ -314,6 +316,29 @@ function wesnoth.wml_actions.show_text_box_dialog(cfg)
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
 
+function show_text_box_borderless_dialog(text)
+	function pre_show(self)
+		self.text.label = text
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/text_box_dialog_borderless.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+---
+-- Shows a simple dialog with a scrollable text box.
+--
+-- [show_text_box_dialog]
+--     text= ...
+-- [/show_text_box_dialog]
+---
+function wesnoth.wml_actions.show_text_box_dialog(cfg)
+	local borderless = cfg.borderless or false
+	if borderless then
+		show_text_box_borderless_dialog(cfg.text)
+	else
+		show_text_box_dialog(cfg.text)
+	end
+end
 
 function wesnoth.wml_actions.skip_messages(cfg)
 	wesnoth.interface.skip_messages(true)
