@@ -439,6 +439,10 @@ local function plot_corridor(q, r, s, corridor_width, inst_list)
 	return corridor_tiles
 end
 
+------------------------
+----- room setup functions
+------------------------
+
 local orb_colors_tr = {
 	["red"] = _"red",
 	["blue"] = _"blue",
@@ -461,10 +465,9 @@ for name, tr_name in pairs(orb_colors_tr) do
 end
 mathx.shuffle(orb_colors)
 
-local function place_story_rooms(current_rooms, num_orb_rooms)
-	-- all rooms made by this function should be "ready to go"
-	-- including item graphics, units, and WML variables for events
-
+-- all rooms made by these functions should have all pre-corridor things "ready to go"
+-- including item graphics, units, and WML variables for events
+local function place_start_room(current_rooms)
 	local map_size_x = wesnoth.current.map.playable_width
 	local map_size_y = wesnoth.current.map.playable_height
 	-- start room in bottom left of the map
@@ -473,7 +476,6 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	start_room:set_inner_terrain("Isa")
 	start_room:set_wall_terrain("Xor")
 	table.insert(current_rooms, start_room)
-
 	-- cave passage in
 	local start_room_x, start_room_y = table.unpack(start_room:left_corner())
 	wesnoth.wml_actions.terrain_mask({
@@ -482,7 +484,6 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		y = start_room_y + 1,
 		border = true,
 	})
-
 	local malakar_start_x = start_room_x + 6
 	local malakar_start_y = start_room_y
 	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
@@ -493,7 +494,12 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wml.variables["malakar_start_x"] = malakar_start_x
 	wml.variables["malakar_start_y"] = malakar_start_y
 	wesnoth.interface.add_item_image(malakar_start_x, malakar_start_y, "scenery/castle-ruins3.png")
+	return current_rooms
+end
 
+local function place_control_room(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	-- control room in top right of the map
 	local control_room = find_room(11, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
 	control_room.id = "control_room"
@@ -502,7 +508,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
-	q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
 	--q = q - 1
 	--r = r + 1
 	local objective_x, objective_y = table.unpack(from_cubic(q, r, s))
@@ -519,7 +525,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wesnoth.interface.add_item_image(engine_inst_x, engine_inst_y, "items/book1.png")
 	wml.variables["engine_inst_x"] = engine_inst_x
 	wml.variables["engine_inst_y"] = engine_inst_y
-	-- todo: place shield image
+	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/engine-shield.png")
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_blocker.mask"),
 		x = machine_x - 2,
@@ -531,7 +537,12 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	})
 	hex_list_to_wml_var(control_room:get_inner_hexes(), "control_room_x", "control_room_y")
 	table.insert(current_rooms, control_room)
+	return current_rooms
+end
 
+local function place_orb_rooms(current_rooms, num_orb_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
 	local orb_hexes = {}
 	local orb_guard_hexes = {}
@@ -556,6 +567,10 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
 	wml.variables["orig_orb_colors"] = wml.variables["orb_colors"]
 
+	return current_rooms
+end
+
+local function place_library_room(current_rooms)
 	-- library room in top left of map
 	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
 	library_room.id = "library_room"
@@ -563,7 +578,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	library_room:set_wall_terrain("Xoc") -- clean stone wall
 	-- place furniture
 	local library_x , library_y = table.unpack(library_room:left_corner())
-	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	local q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
 	q = q - 1
 	r = r + 1
 	for i = 1, 8 do
@@ -608,8 +623,13 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wml.variables["isle_book_y"] = isle_book_y
 	-- todo: more books/documents in the library
 	table.insert(current_rooms, library_room)
+	return current_rooms
+end
 
-	-- Sol'kan's living quarters
+-- Sol'kan's living quarters
+local function place_bedroom(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	local bedroom = find_room(7, 5, math.floor(map_size_x * 0.75), map_size_x, math.floor(map_size_y * 0.25), math.floor(map_size_y * 0.75), current_rooms, true)
 	bedroom.id = "bedroom"
 	bedroom:set_inner_terrain("Iwr")
@@ -634,7 +654,12 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	wesnoth.interface.add_item_image(journal_x, journal_y, "items/book2.png")
 	bedroom.max_degree = 1
 	table.insert(current_rooms, bedroom)
+	return current_rooms
+end
 
+local function place_prison_room(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
 	-- todo: put something in the prison cells
 	local prison_room = find_room(12, 9, 1, map_size_x, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	prison_room.id = "prison_room"
@@ -651,7 +676,7 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 		},
 	})
 	local prison_door_hexes = {}
-	q, r, s = table.unpack(get_cubic({room_x + 6, room_y}))
+	local q, r, s = table.unpack(get_cubic({room_x + 6, room_y}))
 	-- upper left door
 	q = q + 1
 	r = r - 1
@@ -664,16 +689,15 @@ local function place_story_rooms(current_rooms, num_orb_rooms)
 	table.insert(prison_door_hexes, from_cubic(q + 5, r - 3, s - 2))
 	hex_list_to_wml_var(prison_door_hexes, "prison_doors_x", "prison_doors_y")
 	table.insert(current_rooms, prison_room)
-
 	return current_rooms
 end
 
-local function place_random_rooms(current_rooms)
+-- random rooms include empty rooms, non-unique monsters, etc.
+local function place_random_rooms(current_rooms, num_random_rooms)
 	local map_size_x = wesnoth.current.map.playable_width
 	local map_size_y = wesnoth.current.map.playable_height
 	local random_rooms = {}
 
-	local num_random_rooms = 9
 	-- this includes walls
 	local random_room_dim_mean = 12
 	local random_room_dim_sd = 5
@@ -740,11 +764,14 @@ local function place_random_rooms(current_rooms)
 				end
 			end
 		end
-		-- todo: other monster room
-		-- todo: kitchen room
-		-- todo: servant or guard quarters
-		-- todo: creepy lab room
-		-- todo: maybe a treasure room?
+		-- todo: some room ideas
+		--   other monster room
+		--   kitchen room
+		--   servant or guard quarters
+		--   creepy lab room
+		--   operating room (Trinity has some vaguely suitable graphics)
+		--   treasure room
+		-- if gets to be too many unique rooms (which would probably be a good problem), could always increase map size
 	end
 	return current_rooms
 end
@@ -1294,15 +1321,22 @@ function randomize_scenario()
 		num_orb_rooms = 6
 	end
 	-- start out by placing and setting up story-important rooms
-	all_rooms = place_story_rooms(all_rooms, num_orb_rooms)
+	all_rooms = place_start_room(all_rooms)
+	all_rooms = place_control_room(all_rooms)
+	all_rooms = place_orb_rooms(all_rooms, num_orb_rooms)
+	all_rooms = place_library_room(all_rooms)
+	all_rooms = place_bedroom(all_rooms)
+	all_rooms = place_prison_room(all_rooms)
 
 	-- now make and position some random rooms (not involved in objectives)
-	all_rooms = place_random_rooms(all_rooms)
+	local num_random_rooms = 9
+	all_rooms = place_random_rooms(all_rooms, num_random_rooms)
 
 	--label_rooms(all_rooms)
 
 	local map_graph = place_corridors(all_rooms)
 
+	-- now place post-corridor features
 	for i, room in ipairs(all_rooms) do
 		if room.id == "library_room" then
 			place_library_bookshelves(room)
@@ -1322,6 +1356,7 @@ function randomize_scenario()
 	local last_journal_date = generate_journal()
 	wml.variables["last_journal_date"] = last_journal_date
 
+	-- notes from his assistants that describe his fall
 	local assistant_notes = place_assistant_notes(4)
 	hex_list_to_wml_var(assistant_notes, "assistant_note_x", "assistant_note_y")
 end
