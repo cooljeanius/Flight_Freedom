@@ -1,0 +1,10 @@
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, Isa, Isa, Isa, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, Isa, Isa, Xos^Exw, Xos, Xos^Exw, Isa, Isa, _f, _f, _f, _f, _f
+_f, _f, Isa, Isa, Xos^Exw, Xos^Exw, Isr, Isr, Isr, Xos^Exw, Xos, Isa, Isa, _f, _f, _f
+_f, Isa, Isa, Xos, Xos^Exw, Isr, Isr, Isr, Isr, Isr, Xos, Xos, Isa, Isa, Isa, _f
+_f, _f, _f, Isa, Isa, Xos^Exw, Xos, Isr, Xos, Isr^Pw/o, Isa, Isa, Isa, Isa, _f, _f
+_f, _f, _f, _f, _f, Isa, Isa, Xos, Isa, Isa, Isa, Isa, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, Isa, Isa, Isa, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f

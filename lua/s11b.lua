@@ -692,6 +692,16 @@ local function place_prison_room(current_rooms)
 	return current_rooms
 end
 
+local function place_operating_room(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	-- it can go anywhere
+	local operating_room = find_room(9, 10, 1, map_size_x, 1, map_size_y, current_rooms, true)
+	operating_room.id = "operating_room"
+	table.insert(current_rooms, operating_room)
+	return current_rooms
+end
+
 -- random rooms include empty rooms, non-unique monsters, etc.
 local function place_random_rooms(current_rooms, num_random_rooms)
 	local map_size_x = wesnoth.current.map.playable_width
@@ -1071,7 +1081,7 @@ local function place_prison_lever(current_rooms, graph)
 	local path = graph:find_guaranteed_path(start_room_num, {start_room_num}, prison_room_num, 999)
 	local lever_room_num = nil
 	for i = #path - 1, 1, -1 do
-		if current_rooms[path[i]].id ~= "library_room" and current_rooms[path[i]].id ~= "control_room" then
+		if current_rooms[path[i]].id ~= "library_room" and current_rooms[path[i]].id ~= "control_room" and current_rooms[path[i]].id ~= "operating_room" then
 			lever_room_num = path[i]
 			break
 		end
@@ -1086,6 +1096,41 @@ local function place_prison_lever(current_rooms, graph)
 			break
 		end
 	end
+end
+
+local function place_or_contents(operating_room)
+	local room_x, room_y = table.unpack(operating_room:left_corner())
+	print(room_x)
+	print(room_y)
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_operating_room.mask"),
+		x = room_x + 2,
+		y = room_y - 4,
+		border = true,
+	})
+	local q, r, s = table.unpack(get_cubic({room_x, room_y}))
+	q = q + 10
+	r = r - 3
+	s = s - 7
+	local item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table2.png")
+	q = q + 2
+	r = r - 2
+	item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table2.png")
+	q = q - 4
+	s = s + 4
+	item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/cabinet-metal.png")
+	q = q - 2
+	r = r + 2
+	item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/cabinet-metal.png")
+	q = q + 2
+	r = r - 1
+	s = s - 1
+	item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table.png")
 end
 
 local function place_healing_glyphs(rooms)
@@ -1326,10 +1371,12 @@ function randomize_scenario()
 	all_rooms = place_orb_rooms(all_rooms, num_orb_rooms)
 	all_rooms = place_library_room(all_rooms)
 	all_rooms = place_bedroom(all_rooms)
+	-- now one-off unique rooms
 	all_rooms = place_prison_room(all_rooms)
+	all_rooms = place_operating_room(all_rooms)
 
 	-- now make and position some random rooms (not involved in objectives)
-	local num_random_rooms = 9
+	local num_random_rooms = 8
 	all_rooms = place_random_rooms(all_rooms, num_random_rooms)
 
 	--label_rooms(all_rooms)
@@ -1340,6 +1387,8 @@ function randomize_scenario()
 	for i, room in ipairs(all_rooms) do
 		if room.id == "library_room" then
 			place_library_bookshelves(room)
+		elseif room.id == "operating_room" then
+			place_or_contents(room)
 		end
 	end
 
