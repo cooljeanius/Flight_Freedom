@@ -330,17 +330,15 @@ local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, existin
 		room:set_left_corner(x1, y1)
 		room:set_dimensions(r_height, s_height)
 		if room:fits_in_map() then
-			if room:fits_in_map() then
-				local intersects = false
-				for i, r2 in ipairs(existing_rooms) do
-					if room:intersects_with(r2) then
-						intersects = true
-						break
-					end
+			local intersects = false
+			for i, r2 in ipairs(existing_rooms) do
+				if room:intersects_with(r2) then
+					intersects = true
+					break
 				end
-				if not intersects then
-					placed = true
-				end
+			end
+			if not intersects then
+				placed = true
 			end
 		end
 		attempts = attempts + 1
