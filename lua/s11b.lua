@@ -1111,11 +1111,11 @@ local function place_or_contents(operating_room)
 	r = r - 3
 	s = s - 7
 	local item_x, item_y = table.unpack(from_cubic(q, r, s))
-	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table2.png")
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/sink-metal.png")
 	q = q + 2
 	r = r - 2
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
-	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table2.png")
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/sink-metal.png")
 	q = q - 4
 	s = s + 4
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
@@ -1128,7 +1128,7 @@ local function place_or_contents(operating_room)
 	r = r - 1
 	s = s - 1
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
-	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table.png")
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table-metal-1.png")
 end
 
 local function place_healing_glyphs(rooms)
