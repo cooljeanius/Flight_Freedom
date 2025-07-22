@@ -700,6 +700,30 @@ local function place_operating_room(current_rooms)
 	return current_rooms
 end
 
+local function place_workshop_room(current_rooms)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	-- it can go anywhere, and it's not essential
+	local workshop_room = find_room(9, 9, 1, map_size_x, 1, map_size_y, current_rooms, false)
+	if workshop_room ~= nil then
+		workshop_room.id = "workshop_room"
+		workshop_room:set_inner_terrain("Isa")
+		local q, r, s = table.unpack(get_cubic(workshop_room:left_corner()))
+		q = q + 4
+		r = r - 2
+		s = s - 2
+		for i = 0, 2 do
+			for j = 0, 2 do
+				local hex_x, hex_y = table.unpack(from_cubic(q + (i * 2) + (j * 2), r - (i * 2), s - (j * 2)))
+				local table_variant = mathx.random(2, 4)
+				wesnoth.interface.add_item_image(hex_x, hex_y, "scenery/table-metal-" .. tostring(table_variant) .. ".png")
+			end
+		end
+		table.insert(current_rooms, workshop_room)
+	end
+	return current_rooms
+end
+
 -- random rooms include empty rooms, non-unique monsters, etc.
 local function place_random_rooms(current_rooms, num_random_rooms)
 	local map_size_x = wesnoth.current.map.playable_width
@@ -1372,9 +1396,10 @@ function randomize_scenario()
 	-- now one-off unique rooms
 	all_rooms = place_prison_room(all_rooms)
 	all_rooms = place_operating_room(all_rooms)
+	all_rooms = place_workshop_room(all_rooms)
 
 	-- now make and position some random rooms (not involved in objectives)
-	local num_random_rooms = 8
+	local num_random_rooms = 7
 	all_rooms = place_random_rooms(all_rooms, num_random_rooms)
 
 	--label_rooms(all_rooms)

@@ -31,6 +31,8 @@ function trunc(n)
 	end
 end
 
+-- useful reference for cubic grid math: https://www.redblobgames.com/grids/hexagons/
+
 -- since mainline wesnoth.map.from_cubic is broken as of 1.19.13, reimplement it here
 -- (c++ backend expects a cubic_location struct which isn't accessible to lua)
 function from_cubic(q, r, s)
