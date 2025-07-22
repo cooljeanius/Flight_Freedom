@@ -113,27 +113,6 @@ terrains_to_close[21] =
 	[22] = {{37, 43}},
 }
 
--- adjacency matrix of areas in the map
--- 1: open edge
--- 2: protected edge
--- 0: closed edge
-local initial_adjacency_mat = {}
-for x = 1, num_nodes do
-	initial_adjacency_mat[x] = {}
-	for y = 1, num_nodes do
-		local edge_x = math.min(x, y)
-		local edge_y = math.max(x, y)
-		if terrains_to_close[edge_x] == nil or terrains_to_close[edge_x][edge_y] == nil then
-			initial_adjacency_mat[x][y] = 0
-		else
-			initial_adjacency_mat[x][y] = 1
-		end
-	end
-end
-
-graph = Graph:new()
-graph:init_adjacency_mat(initial_adjacency_mat)
-
 local function get_image_coords_from_hex(hex_x, hex_y)
 	-- obtained from measurements of the map jpg (pixels / map tiles) after borders cropped
 	local hex_size_x = 37.35
@@ -168,6 +147,27 @@ function hide_map_coords_ui()
 end
 
 function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
+	-- adjacency matrix of areas in the map
+	-- 1: open edge
+	-- 2: protected edge
+	-- 0: closed edge
+	local initial_adjacency_mat = {}
+	for x = 1, num_nodes do
+		initial_adjacency_mat[x] = {}
+		for y = 1, num_nodes do
+			local edge_x = math.min(x, y)
+			local edge_y = math.max(x, y)
+			if terrains_to_close[edge_x] == nil or terrains_to_close[edge_x][edge_y] == nil then
+				initial_adjacency_mat[x][y] = 0
+			else
+				initial_adjacency_mat[x][y] = 1
+			end
+		end
+	end
+
+	graph = Graph:new()
+	graph:init_adjacency_mat(initial_adjacency_mat)
+
 	local map_image_overlay = ""
 	local guaranteed_path = graph:find_guaranteed_path(start_node, {start_node}, dest_node, max_guaranteed_path_length)
 	-- now protect these edges
