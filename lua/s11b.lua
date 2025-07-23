@@ -501,7 +501,7 @@ local function place_control_room(current_rooms)
 	-- control room in top right of the map
 	local control_room = find_room(11, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
 	control_room.id = "control_room"
-	control_room:set_inner_terrain("Isr")
+	control_room:set_inner_terrain("Fypd")
 	control_room:set_wall_terrain("Xoi") -- white wall
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
@@ -610,15 +610,42 @@ local function place_library_room(current_rooms)
 		q = q + 1
 		r = r - 1
 	end
-	local blueprint_x, blueprint_y = table.unpack(from_cubic(q, r, s))
-	wesnoth.interface.add_item_image(blueprint_x, blueprint_y, "items/book4.png")
-	wml.variables["blueprint_x"] = blueprint_x
-	wml.variables["blueprint_y"] = blueprint_y
-	local isle_book_x = blueprint_x - 4
-	local isle_book_y = blueprint_y
-	wesnoth.interface.add_item_image(isle_book_x, isle_book_y, "items/book3.png")
-	wml.variables["isle_book_x"] = isle_book_x
-	wml.variables["isle_book_y"] = isle_book_y
+	q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
+	for i = 1, 10 do
+		local hex = from_cubic(q, r, s)
+		local hex_to_check = from_cubic(q - 1, r, s + 1)
+		local full_shelf = mathx.random(1, 2)
+		if full_shelf == 1 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf-full.png")
+		else
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf.png")
+		end
+		q = q + 1
+		r = r - 1
+	end
+	-- randomly place lore/flavor books
+	local possible_book_hexes = library_room:get_inner_hexes()
+	mathx.shuffle(possible_book_hexes)
+	local num_books_placed = 0
+	for i, hex in ipairs(possible_book_hexes) do
+		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
+			if num_books_placed == 0 then
+				wesnoth.interface.add_item_image(hex[1], hex[2], "items/blueprints.png")
+				wml.variables["blueprint_x"] = hex[1]
+				wml.variables["blueprint_y"] = hex[2]
+			elseif num_books_placed == 1 then
+				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book3.png")
+				wml.variables["isle_book_x"] = hex[1]
+				wml.variables["isle_book_y"] = hex[2]
+			elseif num_books_placed == 2 then
+				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book4.png")
+				wml.variables["lab_book_x"] = hex[1]
+				wml.variables["lab_book_y"] = hex[2]
+				break
+			end
+			num_books_placed = num_books_placed + 1
+		end
+	end
 	-- todo: more books/documents in the library
 	table.insert(current_rooms, library_room)
 	return current_rooms
@@ -1070,20 +1097,16 @@ local function place_corridors(current_rooms)
 	return graph
 end
 
--- needs to be done after corridor placement so no corridors are visually blocked off
-local function place_library_bookshelves(library_room)
+-- remove any bookshelves that would visually block off a corridor
+local function remove_library_bookshelves(library_room)
 	local library_x , library_y = table.unpack(library_room:left_corner())
 	q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
 	for i = 1, 10 do
 		local hex = from_cubic(q, r, s)
 		local hex_to_check = from_cubic(q - 1, r, s + 1)
-		if string.sub(wesnoth.current.map[hex_to_check], 1, 1) == "X" then
-			local full_shelf = mathx.random(1, 2)
-			if full_shelf == 1 then
-				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf-full.png")
-			else
-				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf.png")
-			end
+		if string.sub(wesnoth.current.map[hex_to_check], 1, 1) ~= "X" then
+			wesnoth.interface.remove_item(hex[1], hex[2], "scenery/bookshelf-full.png")
+			wesnoth.interface.remove_item(hex[1], hex[2], "scenery/bookshelf.png")
 		end
 		q = q + 1
 		r = r - 1
@@ -1122,8 +1145,6 @@ end
 
 local function place_or_contents(operating_room)
 	local room_x, room_y = table.unpack(operating_room:left_corner())
-	print(room_x)
-	print(room_y)
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_operating_room.mask"),
 		x = room_x + 2,
@@ -1409,7 +1430,7 @@ function randomize_scenario()
 	-- now place post-corridor features
 	for i, room in ipairs(all_rooms) do
 		if room.id == "library_room" then
-			place_library_bookshelves(room)
+			remove_library_bookshelves(room)
 		elseif room.id == "operating_room" then
 			place_or_contents(room)
 		end
