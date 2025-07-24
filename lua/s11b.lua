@@ -646,7 +646,6 @@ local function place_library_room(current_rooms)
 			num_books_placed = num_books_placed + 1
 		end
 	end
-	-- todo: more books/documents in the library
 	table.insert(current_rooms, library_room)
 	return current_rooms
 end
@@ -828,7 +827,6 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 		--   kitchen room
 		--   servant or guard quarters
 		--   creepy lab room
-		--   operating room (Trinity has some vaguely suitable graphics)
 		--   treasure room
 		-- if gets to be too many unique rooms (which would probably be a good problem), could always increase map size
 	end
