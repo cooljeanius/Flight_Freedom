@@ -641,6 +641,12 @@ local function place_library_room(current_rooms)
 				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book4.png")
 				wml.variables["lab_book_x"] = hex[1]
 				wml.variables["lab_book_y"] = hex[2]
+			elseif num_books_placed == 3 then
+				-- would like to have a factory room if there's suitable graphics
+				-- if so, this would be more appropriate going there
+				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book4.png")
+				wml.variables["automata_book_x"] = hex[1]
+				wml.variables["automata_book_y"] = hex[2]
 				break
 			end
 			num_books_placed = num_books_placed + 1
@@ -853,7 +859,7 @@ local function place_corridors(current_rooms)
 	while not graph:is_connected() do
 		local origin_room_selected = false
 		local origin_room_num = nil
-		local oriign_room = nil
+		local origin_room = nil
 		while not origin_room_selected do
 			origin_room_num = mathx.random(1, num_rooms)
 			origin_room = current_rooms[origin_room_num]
