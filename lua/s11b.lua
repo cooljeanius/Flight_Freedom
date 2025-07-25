@@ -506,6 +506,8 @@ local function place_control_room(current_rooms)
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
+	wesnoth.interface.add_item_halo(machine_x - 2, machine_y, "terrain/electrode-thingy-[1,2~9,8,9,8,9,1].png:[2000,100*8,50*5]")
+	wesnoth.interface.add_item_halo(machine_x + 2, machine_y, "terrain/pump-thingy-[1,2~15,1].png:[2000,100*15]")
 	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
 	--q = q - 1
 	--r = r + 1
@@ -1538,10 +1540,15 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	wml.variables["orbs_x"] = table.concat(orbs_x, ",")
 	wml.variables["orbs_y"] = table.concat(orbs_y, ",")
 	if #orb_colors == 0 then
+		local machine_x = wml.variables["machine_x"]
+		local machine_y = wml.variables["machine_y"]
+		-- remove their halos since they'll be replaced by terrain overlay
+		wesnoth.interface.remove_item(machine_x - 2, machine_y)
+		wesnoth.interface.remove_item(machine_x + 2, machine_y)
 		wesnoth.wml_actions.terrain_mask({
 			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_unblocker.mask"),
-			x = wml.variables["machine_x"] - 2,
-			y = wml.variables["machine_y"] - 2,
+			x = machine_x - 2,
+			y = machine_y - 2,
 			border = true,
 			wml.tag.rule {
 				layer = "overlay",
