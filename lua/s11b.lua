@@ -506,8 +506,10 @@ local function place_control_room(current_rooms)
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
-	wesnoth.interface.add_item_halo(machine_x - 2, machine_y, "terrain/electrode-thingy-[1,2~9,8,9,8,9,1].png:[2000,100*8,50*5]")
-	wesnoth.interface.add_item_halo(machine_x + 2, machine_y, "terrain/pump-thingy-[1,2~15,1].png:[2000,100*15]")
+	wesnoth.interface.add_item_halo(machine_x - 2, machine_y, "terrain/electrode-thingy-[1,2~9,8,9,8,9,1].png:[2000,100*8,50*5]~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_halo(machine_x + 2, machine_y, "terrain/pump-thingy-[1,2~15,1].png:[2000,100*15]~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_halo(machine_x, machine_y - 1, "terrain/reactor-thingy-[1~4,3~1,1,1~4,3~1,1,5~11,10~5,1,1].png:[250*4,250*3,1000,250*4,250*3,2000,50*7,50*6,50,2000]~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_halo(machine_x, machine_y + 1, "terrain/reactor-thingy-[1~4,3~1,1,1~4,3~1,1,5~11,10~5,1,1].png:[250*4,250*3,1000,250*4,250*3,2000,50*7,50*6,50,2000]~NO_TOD_SHIFT()")
 	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
 	--q = q - 1
 	--r = r + 1
@@ -1545,6 +1547,8 @@ function wesnoth.wml_actions.handle_orb(cfg)
 		-- remove their halos since they'll be replaced by terrain overlay
 		wesnoth.interface.remove_item(machine_x - 2, machine_y)
 		wesnoth.interface.remove_item(machine_x + 2, machine_y)
+		wesnoth.interface.remove_item(machine_x, machine_y - 1)
+		wesnoth.interface.remove_item(machine_x, machine_y + 1)
 		wesnoth.wml_actions.terrain_mask({
 			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_unblocker.mask"),
 			x = machine_x - 2,
