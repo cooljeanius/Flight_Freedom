@@ -506,11 +506,17 @@ local function place_control_room(current_rooms)
 	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
-	wesnoth.interface.add_item_halo(machine_x - 2, machine_y, "terrain/electrode-thingy-[1,2~9,8,9,8,9,1].png:[2000,100*8,50*5]~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_halo(machine_x + 2, machine_y, "terrain/pump-thingy-[1,2~15,1].png:[2000,100*15]~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_halo(machine_x, machine_y - 1, "terrain/reactor-thingy-[1~4,3~1,1,1~4,3~1,1,5~11,10~5,1,1].png:[250*4,250*3,1000,250*4,250*3,2000,50*7,50*6,50,2000]~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_halo(machine_x, machine_y + 1, "terrain/reactor-thingy-[1~4,3~1,1,1~4,3~1,1,5~11,10~5,1,1].png:[250*4,250*3,1000,250*4,250*3,2000,50*7,50*6,50,2000]~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_halo(machine_x - 2, machine_y, "terrain/electrode-thingy-[1,2~9,8,9,8,9,1].png~NO_TOD_SHIFT():[2000,100*8,50*5]")
+	wesnoth.interface.add_item_halo(machine_x + 2, machine_y, "terrain/pump-thingy-[1,2~15,1].png~NO_TOD_SHIFT():[2000,100*15]")
+	wesnoth.interface.add_item_halo(machine_x, machine_y - 1, "terrain/reactor-thingy-[1~4,3~1,1,1~4,3~1,1,5~11,10~5,1,1].png~NO_TOD_SHIFT():[250*4,250*3,1000,250*4,250*3,2000,50*7,50*6,50,2000]")
+	wesnoth.interface.add_item_halo(machine_x, machine_y + 1, "terrain/reactor-thingy-[1~4,3~1,1,1~4,3~1,1,5~11,10~5,1,1].png~NO_TOD_SHIFT():[250*4,250*3,1000,250*4,250*3,2000,50*7,50*6,50,2000]")
 	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+	local thingy_x, thingy_y = table.unpack(from_cubic(q-1, r+1, s))
+	wesnoth.interface.add_item_halo(thingy_x, thingy_y, "terrain/popup-thingy-[1,2~18,18,19,20,19,18,19,20,19,18,19,20,19,18,17~1,1].png~NO_TOD_SHIFT():[2000,100*17,500,250*11,500,75*17,75]")
+	wesnoth.interface.add_item_halo(thingy_x, thingy_y - 1, "terrain/popup-thingy-[1,2~18,18,19,20,19,18,19,20,19,18,19,20,19,18,17~1,1].png~NO_TOD_SHIFT():[2000,100*17,500,250*11,500,75*17,75]")
+	thingy_x, thingy_y = table.unpack(from_cubic(q+1, r, s-1))
+	wesnoth.interface.add_item_halo(thingy_x, thingy_y, "terrain/popup-thingy-[1,2~18,18,19,20,19,18,19,20,19,18,19,20,19,18,17~1,1].png~NO_TOD_SHIFT():[2000,100*17,500,250*11,500,75*17,75]")
+	wesnoth.interface.add_item_halo(thingy_x, thingy_y - 1, "terrain/popup-thingy-[1,2~18,18,19,20,19,18,19,20,19,18,19,20,19,18,17~1,1].png~NO_TOD_SHIFT():[2000,100*17,500,250*11,500,75*17,75]")
 	--q = q - 1
 	--r = r + 1
 	local objective_x, objective_y = table.unpack(from_cubic(q, r, s))
@@ -1549,6 +1555,13 @@ function wesnoth.wml_actions.handle_orb(cfg)
 		wesnoth.interface.remove_item(machine_x + 2, machine_y)
 		wesnoth.interface.remove_item(machine_x, machine_y - 1)
 		wesnoth.interface.remove_item(machine_x, machine_y + 1)
+		local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+		local thingy_x, thingy_y = table.unpack(from_cubic(q-1, r+1, s))
+		wesnoth.interface.remove_item(thingy_x, thingy_y)
+		wesnoth.interface.remove_item(thingy_x, thingy_y - 1)
+		thingy_x, thingy_y = table.unpack(from_cubic(q+1, r, s-1))
+		wesnoth.interface.remove_item(thingy_x, thingy_y)
+		wesnoth.interface.remove_item(thingy_x, thingy_y - 1)
 		wesnoth.wml_actions.terrain_mask({
 			mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_unblocker.mask"),
 			x = machine_x - 2,
@@ -1649,6 +1662,28 @@ function wesnoth.wml_actions.display_console_screen(cfg)
 	end
 	console_str = console_str .. "</span>"
 	show_text_box_borderless_dialog(console_str)
+end
+
+function wesnoth.wml_actions.display_ruined_thingies(cfg)
+	local machine_x = wml.variables["machine_x"]
+	local machine_y = wml.variables["machine_y"]
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_blank.mask"),
+		x = machine_x - 2,
+		y = machine_y - 2,
+		border = true,
+	})
+	wesnoth.interface.add_item_image(machine_x - 2, machine_y, "scenery/electrode-thingy-ruined.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(machine_x + 2, machine_y, "scenery/pump-thingy-ruined.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(machine_x, machine_y - 1, "scenery/reactor-thingy-ruined.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(machine_x, machine_y + 1, "scenery/reactor-thingy-ruined.png~NO_TOD_SHIFT()")
+	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+	local thingy_x, thingy_y = table.unpack(from_cubic(q-1, r+1, s))
+	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
+	thingy_x, thingy_y = table.unpack(from_cubic(q+1, r, s-1))
+	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
 end
 
 -- for color-blind accessibility

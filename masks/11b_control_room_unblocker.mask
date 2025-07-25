@@ -1,7 +1,7 @@
 _f, _f, _f, _f, _f, _f, _f
 _f, _f, Fypd, Fypd, Fypd, _f, _f
-_f, Fypd, Fypd, Fypd^Skyr, Fypd, Fypd, _f
-_f, Fypd^Skye, Fypd, Fypd, Fypd, Fypd^Skyp, _f
+_f, Fypd, Fypd^Skyo, Fypd^Skyr, Fypd^Skyo, Fypd, _f
+_f, Fypd^Skye, Fypd^Skyo, Fypd, Fypd^Skyo, Fypd^Skyp, _f
 _f, Fypd, Fypd, Fypd^Skyr, Fypd, Fypd, _f
 _f, _f, _f, Fypd, _f, _f, _f
 _f, _f, _f, _f, _f, _f, _f
