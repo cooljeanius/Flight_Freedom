@@ -519,13 +519,10 @@ local function place_control_room(current_rooms)
 	wesnoth.interface.add_item_halo(thingy_x, thingy_y - 1, "terrain/popup-thingy-[1,2~18,18,19,20,19,18,19,20,19,18,19,20,19,18,17~1,1].png~NO_TOD_SHIFT():[2000,100*17,500,250*11,500,75*17,75]")
 	--q = q - 1
 	--r = r + 1
-	local objective_x, objective_y = table.unpack(from_cubic(q, r, s))
-	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/sentinel.png")
-	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/sentinel-glo.png")
-	wml.variables["objective_x"] = objective_x
-	wml.variables["objective_y"] = objective_y
-	local console_x = objective_x
-	local console_y = objective_y - 3
+	wesnoth.interface.add_item_halo(machine_x, machine_y, "scenery/sentinel.png")
+	wesnoth.interface.add_item_halo(machine_x, machine_y, "scenery/sentinel-glo.png")
+	local console_x = machine_x
+	local console_y = machine_y - 3
 	add_terrain_overlay(console_x, console_y, "Skyc")
 	wml.variables["console_x"] = console_x
 	wml.variables["console_y"] = console_y
@@ -533,7 +530,7 @@ local function place_control_room(current_rooms)
 	wesnoth.interface.add_item_image(engine_inst_x, engine_inst_y, "items/book1.png")
 	wml.variables["engine_inst_x"] = engine_inst_x
 	wml.variables["engine_inst_y"] = engine_inst_y
-	wesnoth.interface.add_item_halo(objective_x, objective_y, "scenery/engine-shield.png")
+	wesnoth.interface.add_item_halo(machine_x, machine_y, "scenery/engine-shield.png")
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_blocker.mask"),
 		x = machine_x - 2,
@@ -1075,13 +1072,18 @@ local function place_corridors(current_rooms)
 									for k = 1, num_rooms do
 										if k ~= current_origin_room_num then
 											if current_rooms[k]:contains_hex(hex_x, hex_y) then
-												if graph:get_edge(current_origin_room_num, k) == 0 then
-													print("Connecting room " .. origin_room.id .. " to room " .. dest_room.id)
-													graph:set_edge(current_origin_room_num, k, 1)
-													graph:set_edge(k, current_origin_room_num, 1)
+												-- left and right corners don't permit unit movement into rooms so don't count them as graph connections
+												local k_left_corner_x, k_left_corner_y = table.unpack(current_rooms[k]:left_corner())
+												local k_right_corner_x, k_right_corner_y = table.unpack(current_rooms[k]:right_corner())
+												if (k_left_corner_x ~= hex_x or k_left_corner_y ~= hex_y) and (k_right_corner_x ~= hex_x or k_right_corner_y ~= hex_y) then
+													if graph:get_edge(current_origin_room_num, k) == 0 then
+														print("Connecting room " .. current_rooms[current_origin_room_num].id .. " to room " .. current_rooms[k].id)
+														graph:set_edge(current_origin_room_num, k, 1)
+														graph:set_edge(k, current_origin_room_num, 1)
+													end
+													-- if corridor from A -> C goes through B, then link A:B and B:C (but not A:C) in graph
+													current_origin_room_num = k
 												end
-												-- if corridor from A -> C goes through B, then link A:B and B:C (but not A:C) in graph
-												current_origin_room_num = k
 											end
 										end
 									end
@@ -1664,26 +1666,217 @@ function wesnoth.wml_actions.display_console_screen(cfg)
 	show_text_box_borderless_dialog(console_str)
 end
 
-function wesnoth.wml_actions.display_ruined_thingies(cfg)
+function wesnoth.wml_actions.engine_activation_sequence(cfg)
+	local unit_x = cfg.x
+	local unit_y = cfg.y
 	local machine_x = wml.variables["machine_x"]
 	local machine_y = wml.variables["machine_y"]
+	local function tremor(mult)
+		mult = mult or 1
+		local tremor_coordinates = { {5,0},{-10,0},{-5,5},{0,-10},{0,5} } -- adapted from Wesnoth Lua Pack
+		for i, c in ipairs(tremor_coordinates) do
+			wesnoth.interface.scroll(c[1] * mult, c[2] * mult)
+			wesnoth.interface.delay(50)
+		end
+	end
+	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
+	wesnoth.interface.lock(true)
+	wesnoth.interface.scroll_to_hex(machine_x, machine_y)
+	wesnoth.interface.remove_item(machine_x, machine_y, "scenery/sentinel-glo.png")
+	-- central orb
+	for i = 1, 7 do
+		local img_path = "halo/evil-star/evil-star-preparation-halo" .. tostring(i) .. ".png"
+		wesnoth.interface.add_item_halo(machine_x, machine_y, img_path)
+		wesnoth.interface.delay(100)
+		wesnoth.wml_actions.redraw{}
+		wesnoth.interface.remove_item(machine_x, machine_y, img_path)
+	end
+	wesnoth.interface.add_item_halo(machine_x, machine_y, "halo/evil-star/evil-star-halo[1~3].png:[100*3]")
+	wesnoth.audio.sources["engine_start"] = {id="engine_start", sounds="dark-2.ogg", delay=0, chance=100, loop=-1, range=999, locations={machine_x, machine_y}}
+	wesnoth.wml_actions.redraw{}
+	wesnoth.interface.delay(1000)
+	wesnoth.wml_actions.message({id="Malakar",message=_"The Engine... it stirs..."})
+	wesnoth.interface.delay(500)
+	-- central orb enlarges
+	for i = 1, 5 do
+		wesnoth.interface.color_adjust(18 * i, 18 * i, 36 * i)
+		wesnoth.interface.delay(100)
+	end
+	for i = 4, 0, -1 do
+		wesnoth.interface.color_adjust(18 * i, 18 * i, 36 * i)
+		wesnoth.interface.delay(100)
+	end
+	wesnoth.interface.remove_item(machine_x, machine_y, "halo/evil-star/evil-star-halo[1~3].png:[100*3]")
+	wesnoth.interface.add_item_halo(machine_x, machine_y, "halo/evil-star/evil-star-halo[1~3].png~XBRZ(2):[100*3]")
+	-- lightning bolts
+	local effect_x, effect_y = table.unpack(from_cubic(q-1, r, s+1)) -- NW
+	wesnoth.interface.add_item_halo(effect_x, effect_y, "halo/circuit-ne[1~3].png~FL(horiz):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q-1, r+1, s)) -- SW
+	wesnoth.interface.add_item_halo(effect_x, effect_y, "halo/circuit-ne[1~3].png~FL(horiz)~FL(vert):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q+1, r-1, s)) -- NE
+	wesnoth.interface.add_item_halo(effect_x, effect_y, "halo/circuit-ne[1~3].png:[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q+1, r, s-1)) -- SE
+	wesnoth.interface.add_item_halo(effect_x, effect_y, "halo/circuit-ne[1~3].png~FL(vert):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q, r-1, s+1)) -- N
+	wesnoth.interface.add_item_halo(effect_x, effect_y, "halo/circuit-n[1~3].png~FL(vert):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q, r+1, s-1)) -- S
+	wesnoth.interface.add_item_halo(effect_x, effect_y, "halo/circuit-n[1~3].png:[50*3]")
+	wesnoth.wml_actions.redraw{}
+	wesnoth.interface.delay(1000)
+	wesnoth.audio.sources["engine_start"] = nil
+	wesnoth.audio.play("121942__klerrp__implosion_near_cut.wav")
+	for i = 1, 10 do
+		wesnoth.interface.color_adjust(-18 * i, -18 * i, -18 * i)
+		wesnoth.interface.delay(200)
+		wesnoth.wml_actions.redraw{}
+	end
+	wesnoth.interface.delay(500)
+	tremor()
+	wesnoth.interface.delay(500)
+	-- implosion effect
+	effect_x, effect_y = table.unpack(from_cubic(q-1, r, s+1)) -- NW
+	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-ne[1~3].png~FL(horiz):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q-1, r+1, s)) -- SW
+	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-ne[1~3].png~FL(horiz)~FL(vert):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q+1, r-1, s)) -- NE
+	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-ne[1~3].png:[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q+1, r, s-1)) -- SE
+	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-ne[1~3].png~FL(vert):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q, r-1, s+1)) -- N
+	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-n[1~3].png~FL(vert):[50*3]")
+	effect_x, effect_y = table.unpack(from_cubic(q, r+1, s-1)) -- S
+	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-n[1~3].png:[50*3]")
+	wesnoth.interface.remove_item(machine_x, machine_y, "halo/evil-star/evil-star-halo[1~3].png~XBRZ(2):[100*3]")
+	wesnoth.audio.play("490253__anomaex__sci-fi_explosion_cut.wav")
+	for i = 1, 10 do
+		local img_path = "halo/implosion/implosion-1-" .. tostring(i) .. ".png"
+		wesnoth.interface.add_item_halo(machine_x, machine_y, img_path)
+		wesnoth.interface.delay(200)
+		wesnoth.wml_actions.redraw{}
+		wesnoth.interface.remove_item(machine_x, machine_y, img_path)
+	end
+	for i = 9, 0, -1 do
+		wesnoth.interface.color_adjust(-18 * i, -18 * i, -18 * i)
+		wesnoth.interface.delay(200)
+		wesnoth.wml_actions.redraw{}
+	end
+	local theta = find_angle_between_hexes(machine_x, machine_y, unit_x, unit_y)
+	local retreat_x = nil
+	local retreat_y = nil
+	for i = 1,10 do
+		local test_x, test_y = find_offset_hex_polar(machine_x, machine_y, i, theta)
+		local terrain_code = wesnoth.current.map[{test_x, test_y}]
+		if retreat_x == nil and terrain_code == "Fypd" then
+			-- first hex outside machine along a line from machine center to unit's position
+			retreat_x = test_x
+			retreat_y = test_y
+			break
+		end
+	end
+	-- small explosion to scare unit back
+	local function small_explosion_gfx(x, y)
+		wesnoth.audio.play("explosion.ogg")
+		for i = 1, 8 do
+			local img_path = "halo/flame-burst-" .. tostring(i) .. ".png"
+			wesnoth.interface.add_item_halo(x, y, img_path)
+			wesnoth.interface.delay(100)
+			wesnoth.wml_actions.redraw{}
+			wesnoth.interface.remove_item(x, y, img_path)
+		end
+	end
+	small_explosion_gfx(machine_x, machine_y)
+	tremor()
+	wesnoth.interface.delay(500)
+	-- jump back
+	wesnoth.wml_actions.move_unit({x=unit_x, y=unit_y, to_x=retreat_x, to_y=retreat_y, check_passability=false, force_scroll=false, fire_event=false})
+	local unit = wesnoth.units.get(retreat_x, retreat_y)
+	unit.facing = wesnoth.map.get_relative_dir({retreat_x, retreat_y}, {machine_x, machine_y})
+	wesnoth.units.to_map(unit)
+	wesnoth.interface.delay(500)
+	-- some more small explosions
+	tremor()
+	local machine_hexes = wesnoth.map.get_hexes_in_radius({machine_x, machine_y}, 2)
+	mathx.shuffle(machine_hexes)
+	for i = 1, 5 do
+		local explosion_hex = machine_hexes[i]
+		small_explosion_gfx(explosion_hex[1], explosion_hex[2])
+	end
+	-- then the big explosion
+	tremor(5)
+	wesnoth.interface.color_adjust(100, 0, 0)
+	wesnoth.audio.play("explosion-big.ogg")
+	for i = 1, 8 do
+		local img_path = "halo/explosion-big-" .. tostring(i) .. ".png"
+		wesnoth.interface.add_item_halo(machine_x, machine_y, img_path)
+		wesnoth.interface.delay(100)
+		wesnoth.wml_actions.redraw{}
+		wesnoth.interface.remove_item(machine_x, machine_y, img_path)
+	end
+	-- throw unit back
+	local unit_img = wesnoth.unit_types[unit.type].image
+	if retreat_x > machine_x then
+		unit_img = unit_img .. "~FL(horiz)"
+	end
+	local throw_x = nil
+	local throw_y = nil
+	local throw_frames = nil
+	theta = find_angle_between_hexes(machine_x, machine_y, retreat_x, retreat_y)
+	for i = 1,10 do
+		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, i, theta)
+		local terrain_code = wesnoth.current.map[{test_x, test_y}]
+		if string.sub(terrain_code, 1, 1) == "X" then
+			break
+		else
+			-- we want the last hex before the wall
+			throw_x = test_x
+			throw_y = test_y
+			throw_frames = i
+		end
+	end
+	unit.hidden = true
+	wesnoth.wml_actions.animate_path({
+		hex_x = string.format("%i,%i", retreat_x, throw_x),
+		hex_y = string.format("%i,%i", retreat_y, throw_y),
+		image=unit_img,
+		frames=throw_frames * 4,
+		frame_length = 10
+	})
+	unit.x = throw_x
+	unit.y = throw_y
+	unit.hitpoints = 1
+	unit.hidden = false
+	for i = 1, 6 do
+		wesnoth.interface.color_adjust(-40 * i, -40 * i, -40 * i)
+		wesnoth.interface.delay(200)
+		wesnoth.wml_actions.redraw{}
+	end
+	-- destroyed engine room
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_control_room_blank.mask"),
 		x = machine_x - 2,
 		y = machine_y - 2,
 		border = true,
 	})
+	local console_x = wml.variables["console_x"]
+	local console_y = wml.variables["console_y"]
+	wesnoth.interface.delay(5000)
+	wesnoth.interface.add_item_image(console_x, console_y, "scenery/sky-console-off.png")
 	wesnoth.interface.add_item_image(machine_x - 2, machine_y, "scenery/electrode-thingy-ruined.png~NO_TOD_SHIFT()")
 	wesnoth.interface.add_item_image(machine_x + 2, machine_y, "scenery/pump-thingy-ruined.png~NO_TOD_SHIFT()")
 	wesnoth.interface.add_item_image(machine_x, machine_y - 1, "scenery/reactor-thingy-ruined.png~NO_TOD_SHIFT()")
 	wesnoth.interface.add_item_image(machine_x, machine_y + 1, "scenery/reactor-thingy-ruined.png~NO_TOD_SHIFT()")
-	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
 	local thingy_x, thingy_y = table.unpack(from_cubic(q-1, r+1, s))
 	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
 	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
 	thingy_x, thingy_y = table.unpack(from_cubic(q+1, r, s-1))
 	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
 	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
+	for i = 5, 0, -1 do
+		wesnoth.interface.color_adjust(-40 * i, -40 * i, -40 * i)
+		wesnoth.interface.delay(200)
+		wesnoth.wml_actions.redraw{}
+	end
+	wesnoth.interface.lock(false)
 end
 
 -- for color-blind accessibility

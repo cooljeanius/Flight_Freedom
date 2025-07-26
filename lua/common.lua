@@ -55,6 +55,29 @@ else
 	end
 end
 
+function find_angle_between_hexes(x1, y1, x2, y2)
+	local q1, r1, s1 = table.unpack(get_cubic({x1, y1}))
+	local q2, r2, s2 = table.unpack(get_cubic({x2, y2}))
+	local x1_pixel = (3.0 / 2) * q1
+	local y1_pixel = ((math.sqrt(3.0) / 2) * q1) + (math.sqrt(3.0) * r1)
+	local x2_pixel = (3.0 / 2) * q2
+	local y2_pixel = ((math.sqrt(3.0) / 2) * q2) + (math.sqrt(3.0) * r2)
+	print(x1_pixel)
+	print(y1_pixel)
+	print(x2_pixel)
+	print(y2_pixel)
+	local theta = math.atan(math.abs(y2_pixel - y1_pixel) / math.abs(x2_pixel - x1_pixel))
+	-- y2 reversed here to account for flipped Y axis
+	if x1_pixel >= x2_pixel and y2_pixel <= y1_pixel then -- quadrant II
+		theta = math.pi - theta
+	elseif x1_pixel >= x2_pixel and y2_pixel > y1_pixel then -- quadrant III
+		theta = math.pi + theta
+	elseif x1_pixel < x2_pixel and y2_pixel > y1_pixel then -- quadrant IV
+		theta = (math.pi * 2) - theta
+	end
+	return theta
+end
+
 --- adjusts side numbers in the sidebar to 'skip over' listed sides
 --- used in 17A (Blockade) so that depthstalkers appear the same side as the main naga force
 function conceal_sides_sidebar(side_list)
