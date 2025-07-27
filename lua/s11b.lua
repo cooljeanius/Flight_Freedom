@@ -1682,6 +1682,8 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local q, r, s = table.unpack(get_cubic({machine_x, machine_y}))
 	wesnoth.interface.lock(true)
 	wesnoth.interface.scroll_to_hex(machine_x, machine_y)
+	wesnoth.audio.music_list.clear()
+	wesnoth.audio.music_list.add("silence.ogg", true)
 	wesnoth.interface.remove_item(machine_x, machine_y, "scenery/sentinel-glo.png")
 	-- central orb
 	for i = 1, 7 do
@@ -1695,7 +1697,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	wesnoth.audio.sources["engine_start"] = {id="engine_start", sounds="dark-2.ogg", delay=0, chance=100, loop=-1, range=999, locations={machine_x, machine_y}}
 	wesnoth.wml_actions.redraw{}
 	wesnoth.interface.delay(1000)
-	wesnoth.wml_actions.message({id="Malakar",message=_"The Engine... it stirs..."})
+	wesnoth.wml_actions.message({id="Malakar",message=_"The machine is active! By Gar-Alagar... no..."})
 	wesnoth.interface.delay(500)
 	-- central orb enlarges
 	for i = 1, 5 do
@@ -1763,7 +1765,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local theta = find_angle_between_hexes(machine_x, machine_y, unit_x, unit_y)
 	local retreat_x = nil
 	local retreat_y = nil
-	for i = 1,10 do
+	for i = 1, 10 do
 		local test_x, test_y = find_offset_hex_polar(machine_x, machine_y, i, theta)
 		local terrain_code = wesnoth.current.map[{test_x, test_y}]
 		if retreat_x == nil and terrain_code == "Fypd" then
@@ -1815,7 +1817,9 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	-- throw unit back
 	local unit_img = wesnoth.unit_types[unit.type].image
 	if retreat_x > machine_x then
-		unit_img = unit_img .. "~FL(horiz)"
+		unit_img = unit_img .. "~FL(horiz)~ROTATE(45)"
+	else
+		unit_img = unit_img .. "~ROTATE(-45)"
 	end
 	local throw_x = nil
 	local throw_y = nil
@@ -1838,7 +1842,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		hex_x = string.format("%i,%i", retreat_x, throw_x),
 		hex_y = string.format("%i,%i", retreat_y, throw_y),
 		image=unit_img,
-		frames=throw_frames * 4,
+		frames=throw_frames * 5,
 		frame_length = 10
 	})
 	unit.x = throw_x

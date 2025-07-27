@@ -62,10 +62,6 @@ function find_angle_between_hexes(x1, y1, x2, y2)
 	local y1_pixel = ((math.sqrt(3.0) / 2) * q1) + (math.sqrt(3.0) * r1)
 	local x2_pixel = (3.0 / 2) * q2
 	local y2_pixel = ((math.sqrt(3.0) / 2) * q2) + (math.sqrt(3.0) * r2)
-	print(x1_pixel)
-	print(y1_pixel)
-	print(x2_pixel)
-	print(y2_pixel)
 	local theta = math.atan(math.abs(y2_pixel - y1_pixel) / math.abs(x2_pixel - x1_pixel))
 	-- y2 reversed here to account for flipped Y axis
 	if x1_pixel >= x2_pixel and y2_pixel <= y1_pixel then -- quadrant II
