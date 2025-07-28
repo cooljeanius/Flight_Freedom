@@ -1785,18 +1785,24 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local theta = find_angle_between_hexes(machine_x, machine_y, unit_x, unit_y)
 	local retreat_x = nil
 	local retreat_y = nil
-	for i = 1, 10 do
-		local test_x, test_y = find_offset_hex_polar(machine_x, machine_y, i, theta)
-		local terrain_code = wesnoth.current.map[{test_x, test_y}]
-		if retreat_x == nil and terrain_code == "Fypd" then
-			-- first hex outside machine along a line from machine center to unit's position
-			retreat_x = test_x
-			retreat_y = test_y
-			break
+	-- in case player debug-teleports to the machine
+	if unit_x ~= machine_x or unit_y ~= machine_y then
+		for i = 1, 10 do
+			local test_x, test_y = find_offset_hex_polar(machine_x, machine_y, i, theta)
+			local terrain_code = wesnoth.current.map[{test_x, test_y}]
+			if retreat_x == nil and terrain_code == "Fypd" then
+				-- first hex outside machine along a line from machine center to unit's position
+				retreat_x = test_x
+				retreat_y = test_y
+				break
+			end
 		end
+	else
+		retreat_x = machine_x
+		retreat_y = machine_y + 1
 	end
 	-- small explosion to scare unit back
-	local function small_explosion_gfx(x, y)
+	local function small_explosion_fx(x, y)
 		wesnoth.audio.play("explosion.ogg")
 		for i = 1, 8 do
 			local img_path = "halo/flame-burst-" .. tostring(i) .. ".png"
@@ -1806,14 +1812,14 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 			wesnoth.interface.remove_item(x, y, img_path)
 		end
 	end
-	small_explosion_gfx(machine_x, machine_y)
+	small_explosion_fx(machine_x, machine_y)
 	tremor()
 	wesnoth.interface.delay(500)
 	-- jump back
 	wesnoth.wml_actions.move_unit({x=unit_x, y=unit_y, to_x=retreat_x, to_y=retreat_y, check_passability=false, force_scroll=false, fire_event=false})
 	local unit = wesnoth.units.get(retreat_x, retreat_y)
 	unit.facing = wesnoth.map.get_relative_dir({retreat_x, retreat_y}, {machine_x, machine_y})
-	wesnoth.units.to_map(unit)
+	unit:to_map()
 	wesnoth.interface.delay(500)
 	-- some more small explosions
 	tremor()
@@ -1821,7 +1827,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	mathx.shuffle(machine_hexes)
 	for i = 1, 5 do
 		local explosion_hex = machine_hexes[i]
-		small_explosion_gfx(explosion_hex[1], explosion_hex[2])
+		small_explosion_fx(explosion_hex[1], explosion_hex[2])
 	end
 	-- then the big explosion
 	tremor(5)
@@ -1835,17 +1841,18 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		wesnoth.interface.remove_item(machine_x, machine_y, img_path)
 	end
 	-- throw unit back
-	local unit_img = wesnoth.unit_types[unit.type].image
+	local unit_img_base = wesnoth.unit_types[unit.type].image
+	local unit_img = nil
 	if retreat_x > machine_x then
-		unit_img = unit_img .. "~FL(horiz)~ROTATE(45)"
+		unit_img = unit_img_base .. "~FL(horiz)~ROTATE(45)"
 	else
-		unit_img = unit_img .. "~ROTATE(-45)"
+		unit_img = unit_img_base .. "~ROTATE(-45)"
 	end
 	local throw_x = nil
 	local throw_y = nil
 	local throw_frames = nil
 	theta = find_angle_between_hexes(machine_x, machine_y, retreat_x, retreat_y)
-	for i = 1, 10 do
+	for i = 1, 8 do
 		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, i, theta)
 		local terrain_code = wesnoth.current.map[{test_x, test_y}]
 		if string.sub(terrain_code, 1, 1) == "X" then
@@ -1865,10 +1872,27 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		frames=throw_frames * 5,
 		frame_length = 10
 	})
+	-- in case there's another unit where we're going to throw the player unit to
+	local current_unit = nil
+	if wesnoth.units.get(throw_x, throw_y) ~= nil then
+		if wesnoth.units.get(throw_x, throw_y).id ~= unit.id then
+			current_unit = wesnoth.units.get(throw_x, throw_y)
+			wesnoth.units.extract(current_unit)
+		end
+	end
 	unit.x = throw_x
 	unit.y = throw_y
 	unit.hitpoints = 1
-	unit.hidden = false
+	if current_unit ~= nil then
+		local current_unit_x, current_unit_y = wesnoth.paths.find_vacant_hex(throw_x, throw_y, current_unit)
+		current_unit:to_map(current_unit_x, current_unit_y)
+	end
+	if retreat_x > machine_x then
+		unit_img = unit_img_base .. "~FL(horiz)~ROTATE(90)~NO_TOD_SHIFT()"
+	else
+		unit_img = unit_img_base .. "~ROTATE(-90)~NO_TOD_SHIFT()"
+	end
+	wesnoth.interface.add_item_image(throw_x, throw_y, unit_img)
 	for i = 1, 6 do
 		wesnoth.interface.color_adjust(-40 * i, -40 * i, -40 * i)
 		wesnoth.interface.delay(200)
@@ -1885,21 +1909,32 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local console_y = wml.variables["console_y"]
 	wesnoth.interface.delay(5000)
 	wesnoth.interface.add_item_image(console_x, console_y, "scenery/sky-console-off.png")
-	wesnoth.interface.add_item_image(machine_x - 2, machine_y, "scenery/electrode-thingy-ruined.png~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_image(machine_x + 2, machine_y, "scenery/pump-thingy-ruined.png~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_image(machine_x, machine_y - 1, "scenery/reactor-thingy-ruined.png~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_image(machine_x, machine_y + 1, "scenery/reactor-thingy-ruined.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(machine_x - 2, machine_y, "scenery/electrode-thingy-ruined.png")
+	wesnoth.interface.add_item_image(machine_x + 2, machine_y, "scenery/pump-thingy-ruined.png")
+	wesnoth.interface.add_item_image(machine_x, machine_y - 1, "scenery/reactor-thingy-ruined.png")
+	wesnoth.interface.add_item_image(machine_x, machine_y + 1, "scenery/reactor-thingy-ruined.png")
 	local thingy_x, thingy_y = table.unpack(from_cubic(q-1, r+1, s))
-	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png")
+	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png")
 	thingy_x, thingy_y = table.unpack(from_cubic(q+1, r, s-1))
-	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
-	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png~NO_TOD_SHIFT()")
+	wesnoth.interface.add_item_image(thingy_x, thingy_y, "terrain/popup-thingy-3.png")
+	wesnoth.interface.add_item_image(thingy_x, thingy_y - 1, "terrain/popup-thingy-3.png")
 	for i = 5, 0, -1 do
 		wesnoth.interface.color_adjust(-40 * i, -40 * i, -40 * i)
 		wesnoth.interface.delay(200)
 		wesnoth.wml_actions.redraw{}
 	end
+	wesnoth.interface.remove_item(throw_x, throw_y, unit_img)
+	if retreat_x > machine_x then
+		unit_img = unit_img_base .. "~FL(horiz)~ROTATE(45)~NO_TOD_SHIFT()"
+	else
+		unit_img = unit_img_base .. "~ROTATE(-45)~NO_TOD_SHIFT()"
+	end
+	wesnoth.interface.add_item_image(throw_x, throw_y, unit_img)
+	wesnoth.interface.delay(500)
+	wesnoth.wml_actions.redraw{}
+	wesnoth.interface.remove_item(throw_x, throw_y, unit_img)
+	unit.hidden = false
 	wesnoth.interface.lock(false)
 end
 
