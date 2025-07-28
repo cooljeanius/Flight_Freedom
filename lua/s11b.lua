@@ -1192,16 +1192,34 @@ local function place_or_contents(operating_room)
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table-metal-1.png")
 end
 
-local function place_healing_glyphs(rooms)
+local function place_healing_glyphs(rooms, num_glyphs)
 	local healing_glyph_locs = {}
-	for i, room in ipairs(rooms) do
-		if string.sub(room.id, 1, 6) == "random" then
-			-- 50% of random rooms get a healing glyph
-			if (i % 2) == 0 then
-				local room_inner_hexes = room:get_inner_hexes()
-				local hex = room_inner_hexes[mathx.random(1, #room_inner_hexes)]
-				wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/rune5.png")
-				table.insert(healing_glyph_locs, hex)
+	local glyphs_placed = 0
+	local room_iterate_order = {}
+	for i = 1, #rooms do
+		table.insert(room_iterate_order, i)
+	end
+	mathx.shuffle(room_iterate_order)
+	while glyphs_placed < num_glyphs do
+		for i, k in ipairs(room_iterate_order) do
+			local room = rooms[k]
+			if string.sub(room.id, 1, 6) == "random" then
+				-- 50% chance this room gets a glyph somewhere
+				if mathx.random(1, 2) == 1 then
+					local room_inner_hexes = room:get_inner_hexes()
+					mathx.shuffle(room_inner_hexes)
+					for j, hex in ipairs(room_inner_hexes) do
+						if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
+							wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/rune5.png")
+							table.insert(healing_glyph_locs, hex)
+							glyphs_placed = glyphs_placed + 1
+							break
+						end
+					end
+				end
+			end
+			if glyphs_placed >= num_glyphs then
+				break
 			end
 		end
 	end
@@ -1424,6 +1442,8 @@ function randomize_scenario()
 	elseif wesnoth.scenario.difficulty == "HARD" then
 		num_orb_rooms = 6
 	end
+	local num_healing_glyphs = 6
+
 	-- start out by placing and setting up story-important rooms
 	all_rooms = place_start_room(all_rooms)
 	all_rooms = place_control_room(all_rooms)
@@ -1455,7 +1475,7 @@ function randomize_scenario()
 	place_prison_lever(all_rooms, map_graph)
 
 	-- scatter healing and damage glyphs
-	local healing_glyphs = place_healing_glyphs(all_rooms)
+	local healing_glyphs = place_healing_glyphs(all_rooms, num_healing_glyphs)
 	hex_list_to_wml_var(healing_glyphs, "healing_glyph_x", "healing_glyph_y")
 
 	local damage_glyphs = place_damage_glyphs(15)
@@ -1825,7 +1845,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local throw_y = nil
 	local throw_frames = nil
 	theta = find_angle_between_hexes(machine_x, machine_y, retreat_x, retreat_y)
-	for i = 1,10 do
+	for i = 1, 10 do
 		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, i, theta)
 		local terrain_code = wesnoth.current.map[{test_x, test_y}]
 		if string.sub(terrain_code, 1, 1) == "X" then
