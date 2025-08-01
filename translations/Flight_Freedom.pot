@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-07-31 03:55 UTC\n"
+"POT-Creation-Date: 2025-08-01 03:01 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -949,9 +949,9 @@ msgstr ""
 #: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:67
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:351
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:742
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1126
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1137
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1150
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1164
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1175
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1188
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:253
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:351
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:413
@@ -5072,7 +5072,7 @@ msgstr ""
 
 #. [option]
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:182
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:460
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:461
 msgid "Continue normally"
 msgstr ""
 
@@ -6332,114 +6332,129 @@ msgid "Automata"
 msgstr ""
 
 #. [message]: speaker=s11b_scout
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:198
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:199
 msgid "Chief, there is a hidden entrance in the mountain!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:258
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:259
 msgid "An avalanche! Drakes! Clear the area. NOW!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:338
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:339
 msgid "What... what is this? All the tribe, frozen in place... even the leaves of the trees no longer sway to the wind. This door, maybe therein lie the answers to this curse that has befallen my tribe."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:452
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:453
 msgid "This appears to be some sort of hidden base. I must find a way to lift the curse!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:457
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:458
 msgid "NOTE: This scenario uses color-coded graphics. Those colors that are essential for scenario completion can be labeled for color-deficient players."
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:466
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:467
 msgid "Continue with labeled colors"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:479
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:480
 msgid "NOTE: As each turn represents a short amount of time, rest healing is disabled. Additionally, your gold stockpile is frozen, and Malakar will not gain experience."
 msgstr ""
 
+#. [set_menu_item]: id=enable_auto_end_turn
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:485
+msgid "Enable automatic end turn"
+msgstr ""
+
+#. [set_menu_item]: id=disable_auto_end_turn
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:499
+msgid "Disable automatic end turn"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:527
+msgid "If you wish for your turn to automatically end after Malakar is out of moves and attacks, right-click on the map and select \"Enable automatic end turn\". This can be toggled on or off at any time."
+msgstr ""
+
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:504
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:542
 msgid "This seems to be a machine fashioned into a statue."
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:524
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:562
 msgid "A red orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:528
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:566
 msgid "A blue orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:532
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:570
 msgid "A green orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:536
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:574
 msgid "A white orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:540
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:578
 msgid "A black orb! Should I break it?"
 msgstr ""
 
 #. [case]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:544
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:582
 msgid "A yellow orb! Should I break it?"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:551
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1066
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:589
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1104
 msgid "Yes."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:576
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:614
 msgid "I believe that this is the last of the orbs. I can only hope that the curse on my tribe is now lifted. Now I must destroy this so-called Engine quickly before it can accomplish its evil task!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:585
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:623
 msgid "I believe that this is the last of the orbs. I can only hope that the curse on my tribe is now lifted. Now I must find the source of this evil and destroy it!"
 msgstr ""
 
 #. [option]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:594
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1091
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:632
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1129
 msgid "No."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:699
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:737
 msgid "These glyphs are a trap!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:733
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:771
 msgid "Some sort of strange contraption! Could this be the source of the curse?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:775
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:813
 msgid "This appears to be a page torn out of another book."
 msgstr ""
 
 #. [show_journal_dialog]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:778
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:816
 msgid ""
 "At last! At last the Engine approaches completion! I stand at the precipice of the power of the void! As I have pursued the void, I now see that the void has pursued me. Whispering delightful and terrible secrets into my mind. Secrets which have helped to make the Engine a reality. Soon I shall activate the inner and outer containment fields and set the Engine to work!\n"
 "\n"
@@ -6449,67 +6464,67 @@ msgid ""
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:814
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:852
 msgid "This metal box has some sort of glass window with glowing words!"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:868
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:906
 msgid "Chief! Malakar! Are you there? Malakar!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:872
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:910
 msgid "...Theracar... is that you..."
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:877
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:915
 msgid "Malakar! Thank the flame you are alive! You disappeared... what happened?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:881
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:919
 msgid "We triggered some sort of... machine. I saw all of you frozen in place. It appears disrupting the machine has restored the flow of time. How fares the tribe?"
 msgstr ""
 
 #. [message]: speaker=Theracar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:886
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:924
 msgid "We are yet hale. To us, it was as if you suddenly vanished and the sun advanced in the sky. For a few moments we thought we were disoriented by the avalanche, but soon we realized that every drake in the valley was affected. Our scouts found this entrance so I took a war party to investigate."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:896
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:934
 msgid "I am heartened to hear of your survival. This evil machine must never be rebuilt! Burn the library to ashes and all other writings you come across. Then bury the entrance. Afterwards we shall resume our journey."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:903
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:941
 msgid "I am heartened to hear of your survival. This evil machine must never be rebuilt! Burn the library to ashes and all other writings you come across, but beware the moving statues. Then bury the entrance. Afterwards we shall resume our journey."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:924
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:962
 msgid "This appears to be a journal. Perhaps it can tell me more about whoever built this place."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:935
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:973
 msgid "<span color='green'>You can view the journal at any time by right-clicking and selecting “Journal...”</span>"
 msgstr ""
 
 #. [set_menu_item]: id=show_journal
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:941
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:979
 msgid "Journal..."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:965
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1003
 msgid "These appear to be some sort of plans."
 msgstr ""
 
 #. [show_text_box_dialog]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:985
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1023
 msgid ""
 "<span size='xx-large' stretch='semiexpanded'><u>The Isle of Storms</u></span>\n"
 "<span size='large'><i>Mage Vonden of Aldril</i>\n"
@@ -6526,7 +6541,7 @@ msgid ""
 msgstr ""
 
 #. [show_text_box_dialog]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1013
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1051
 msgid ""
 "<span size='xx-large' stretch='semiexpanded'><u>On this Laboratory</u></span>\n"
 "<span size='large'>Apprentices, many of you wonder why my acquaintances have called you to venture to this remote and perilous island. To leave behind your former lives, your friends, even your families. As you will learn, there is no growth, no knowledge, without sacrifice. But to the point of this island and my grand Laboratory.\n"
@@ -6539,7 +6554,7 @@ msgid ""
 msgstr ""
 
 #. [show_text_box_dialog]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1037
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1075
 msgid ""
 "<span size='xx-large' stretch='semiexpanded'><u>Automata: Theory and Construction</u></span>\n"
 "<span size='large'>The Engine shall forever be known throughout all of history. Not only as my greatest work, but as the apex of what can be accomplished by the human mind and hands. MY mind and MY hands. Yet I have produced an enormous variety of lesser wonders as well. Most awesome among these are the Automata. These serve in many ways. As manual laborers which never tire, never sleep, never cease in their labors. Laborers that can survive conditions that would break even the hardiest of my mortal servants. Also as sentinels, both to maintain security in the Laboratory and as an army should others dare to interfere with my plans.\n"
@@ -6552,47 +6567,47 @@ msgid ""
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1064
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1102
 msgid "A lever! Should I pull it?"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1104
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1142
 msgid "Whoever wrote this is obsessed with some sort of 'void'. Whatever it is, this cannot be good."
 msgstr ""
 
 #. [then]
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1124
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1135
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1148
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1162
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1173
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1186
 msgid "Find a way to free the tribe"
 msgstr ""
 
 #. [then]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1125
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1163
 msgid "Destroy the Engine!"
 msgstr ""
 
 #. [note]: description=<b>
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1129
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1140
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1153
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1167
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1178
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1191
 msgid "Your gold stockpile is frozen during this scenario."
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1136
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1174
 msgid "Destroy the colored orbs"
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1149
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1187
 msgid "Explore the underground complex"
 msgstr ""
 
 #. [message]: id=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1174
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1212
 msgid "I must find a way to free the tribe before I leave!"
 msgstr ""
 
@@ -9196,7 +9211,7 @@ msgid "Metal Floor"
 msgstr ""
 
 #. [terrain_type]: id=medium_shallow_water_nowaves
-#: Flight_Freedom/terrain/terrain.cfg:155
+#: Flight_Freedom/terrain/terrain.cfg:152
 msgid "Medium Shallow Water No Waves"
 msgstr ""
 

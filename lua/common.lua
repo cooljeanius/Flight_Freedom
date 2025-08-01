@@ -173,6 +173,36 @@ function wesnoth.wml_conditionals.debug_mode(cfg)
 end
 
 --[=[
+[has_possible_actions]
+Author: MadMax (username on the Battle for Wesnoth forum)
+
+Returns true if all units on a side have both 0 mp and, if next to an enemy, 0 attacks
+
+Required keys:
+side: side to check (defaults to 1)
+]=]
+function wesnoth.wml_conditionals.has_possible_actions(cfg)
+	local side = cfg.side or 1
+	local result = false
+	local units = wesnoth.units.find_on_map{side=side}
+	for i, u in ipairs(units) do
+		if u.moves > 0 then
+			result = true
+			break
+		end
+		if u.attacks_left > 0 then
+			local adjacent_units = wesnoth.units.find_on_map{x=u.x, y=u.y, wml.tag.filter_adjacent{is_enemy=true}}
+			if #adjacent_units > 0 then
+				result = true
+				break
+			end
+		end
+	end
+	return result
+end
+
+
+--[=[
 [has_item]
 Author: MadMax (username on the Battle for Wesnoth forum)
 
