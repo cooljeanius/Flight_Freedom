@@ -23,6 +23,25 @@ function random_norm(mean, sd)
 	return r
 end
 
+--- randomly generate k integers from 1 to n without replacement
+function random_sample_wor(k, n)
+	local reservoir = {}
+	for i = 1, k do
+		table.insert(reservoir, i)
+	end
+	local w = math.exp(math.log(mathx.random()) / k)
+	local i = k
+	while i <= n do
+		i = i + math.floor(math.log(mathx.random()) / math.log(1 - w)) + 1
+		if i <= n then
+			reservoir[mathx.random(1, k)] = i
+			w = w * math.exp(math.log(mathx.random()) / k)
+		end
+	end
+	table.sort(reservoir)
+	return reservoir
+end
+
 function trunc(n)
 	if n >= 0.0 then
 		return math.floor(n)
@@ -200,7 +219,6 @@ function wesnoth.wml_conditionals.has_possible_actions(cfg)
 	end
 	return result
 end
-
 
 --[=[
 [has_item]

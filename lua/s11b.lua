@@ -6,6 +6,98 @@ local functional = wesnoth.require("functional")
 wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
 
 ------------------------
+----- dynamic difficulty handling functions
+------------------------
+
+-- since it's just Malakar and his loadout's quite variable
+-- overall difficulty scales based on Malakar and set difficulty
+function calc_difficulty_score()
+	local score = 1
+	if wesnoth.scenario.difficulty == "NORMAL" then
+		score = score + 2
+	end
+	if wesnoth.scenario.difficulty == "HARD" then
+		score = score + 4
+	end
+	local malakar = wesnoth.units.get("Malakar")
+	score = score + malakar.level
+	-- from S7B
+	if malakar.variables["has_elemental_powerup"] then
+		score = score + 1
+	end
+	-- from S3A
+	if malakar.variation ~= nil and malakar.variation == "weapon" then
+		score = score + 1
+	end
+	wml.variables["difficulty_score"] = score
+	return score
+end
+
+-- generate a list of numbers of length list_length, summing to level_sum, with no number > max_level
+local function get_random_level_list(list_length, level_sum, max_level)
+	local levels = {}
+	local breakpoints = random_sample_wor(list_length, level_sum)
+	local current_floor = 0
+	local total_levels = 0
+	for i, j in ipairs(breakpoints) do
+		local level = j - current_floor
+		current_floor = current_floor + level
+		if level > max_level then
+			level = max_level
+		end
+		table.insert(levels, level)
+		total_levels = total_levels + level
+	end
+	local extra_levels = level_sum - total_levels
+	-- distribute extra levels randomly
+	while extra_levels > 0 do
+		local random_idx = mathx.random(1, list_length)
+		if levels[random_idx] < max_level then
+			levels[random_idx] = levels[random_idx] + 1
+			extra_levels = extra_levels - 1
+		end
+	end
+	return levels
+end
+
+------------------------
+----- ui functions
+------------------------
+
+function hide_ui_elements()
+	local function null_theme_func()
+		return {}
+	end
+
+	local old_gold_theme = wesnoth.interface.game_display.gold
+	local old_villages_theme = wesnoth.interface.game_display.villages
+	local old_num_units_theme = wesnoth.interface.game_display.num_units
+	local old_upkeep_theme = wesnoth.interface.game_display.upkeep
+	local old_income_theme = wesnoth.interface.game_display.income
+	wesnoth.interface.game_display.gold = null_theme_func
+	wesnoth.interface.game_display.villages = null_theme_func
+	wesnoth.interface.game_display.num_units = null_theme_func
+	wesnoth.interface.game_display.upkeep = null_theme_func
+	wesnoth.interface.game_display.income = null_theme_func
+end
+
+local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
+gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
+
+local function show_journal_dialog(text)
+	function pre_show(self)
+		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. text .. "</span>"
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+function wesnoth.wml_actions.show_journal_dialog(cfg)
+	local text = cfg.text
+	show_journal_dialog(text)
+end
+
+------------------------
 ----- Room class for room creation, initial terrain painting, and collision checking
 ------------------------
 
@@ -795,9 +887,18 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 	end
 
 	-- populate random rooms
+	local num_undead_per_catacomb = 3
+	local num_catacombs = 4
+	-- difficulty scores range from 3 to 11 (range is 8)
+	-- if easiest, all units will be level 2
+	-- if hardest, all units will be level 3
+	-- otherwise, random combination of them
+	local undead_level_sum = (num_undead_per_catacomb * num_catacombs * 2) + math.ceil(((num_undead_per_catacomb * num_catacombs) / 8.0) * (wml.variables["difficulty_score"] - 3))
+	local undead_levels = get_random_level_list(num_undead_per_catacomb * num_catacombs, undead_level_sum, 3)
+	local total_undead_placed = 0
 	for i = 1, rand_rooms_generated do
 		-- undead catacombs
-		if i >= 1 and i <= 4 then
+		if i >= 1 and i <= num_catacombs then
 			random_rooms[i]:set_wall_terrain("Xot") -- catacomb wall
 			--random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
 			local room_wall_hexes = random_rooms[i]:get_edge_hexes()
@@ -817,22 +918,19 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
 				end
 			end
-			local num_undead_per_catacomb = 3
 			for j = 1, num_undead_per_catacomb do
 				local hex = room_inner_hexes[j]
-				local rand_monster = mathx.random(1, 4)
-				if rand_monster == 1 then
-					wesnoth.units.to_map({type="Spectre", side=2}, hex[1], hex[2])
+				total_undead_placed = total_undead_placed + 1
+				local level = undead_levels[total_undead_placed]
+				local monster_type = nil
+				if level == 1 then
+					monster_type = mathx.random_choice{"Ghost", "Skeleton", "Skeleton Archer", "Soulless"}
+				elseif level == 2 then
+					monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Deathblade", "Bone Shooter"}
+				else
+					monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Banebow"}
 				end
-				if rand_monster == 2 then
-					wesnoth.units.to_map({type="Nightgaunt", side=2}, hex[1], hex[2])
-				end
-				if rand_monster == 3 then
-					wesnoth.units.to_map({type="Draug", side=2}, hex[1], hex[2])
-				end
-				if rand_monster == 4 then
-					wesnoth.units.to_map({type="Banebow", side=2}, hex[1], hex[2])
-				end
+				wesnoth.units.to_map({type=monster_type, side=2}, hex[1], hex[2])
 			end
 		end
 		-- todo: some room ideas
@@ -1273,51 +1371,6 @@ local function label_rooms(rooms)
 end
 
 ------------------------
------ other scenario setup code
-------------------------
-
--- since it's just Malakar and his loadout's quite variable
--- overall difficulty scales based on Malakar and set difficulty
-function calc_difficulty_score()
-	local score = 1
-	if wesnoth.scenario.difficulty == "NORMAL" then
-		score = score + 2
-	end
-	if wesnoth.scenario.difficulty == "HARD" then
-		score = score + 2
-	end
-	local malakar = wesnoth.units.get("Malakar")
-	score = score + malakar.level
-	-- from S7B
-	if malakar.variables["has_elemental_powerup"] then
-		score = score + 1
-	end
-	-- from S3A
-	if malakar.variation ~= nil and malakar.variation == "weapon" then
-		score = score + 1
-	end
-	wml.variables["difficulty_score"] = score
-	return score
-end
-
-function hide_ui_elements()
-	local function null_theme_func()
-		return {}
-	end
-
-	local old_gold_theme = wesnoth.interface.game_display.gold
-	local old_villages_theme = wesnoth.interface.game_display.villages
-	local old_num_units_theme = wesnoth.interface.game_display.num_units
-	local old_upkeep_theme = wesnoth.interface.game_display.upkeep
-	local old_income_theme = wesnoth.interface.game_display.income
-	wesnoth.interface.game_display.gold = null_theme_func
-	wesnoth.interface.game_display.villages = null_theme_func
-	wesnoth.interface.game_display.num_units = null_theme_func
-	wesnoth.interface.game_display.upkeep = null_theme_func
-	wesnoth.interface.game_display.income = null_theme_func
-end
-
-------------------------
 ----- generate various narrative text
 ------------------------
 
@@ -1594,22 +1647,6 @@ function wesnoth.wml_actions.handle_orb(cfg)
 			},
 		})
 	end
-end
-
-local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
-gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
-
-local function show_journal_dialog(text)
-	function pre_show(self)
-		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. text .. "</span>"
-	end
-	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
-	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
-end
-
-function wesnoth.wml_actions.show_journal_dialog(cfg)
-	local text = cfg.text
-	show_journal_dialog(text)
 end
 
 function wesnoth.wml_actions.display_assistant_note(cfg)
