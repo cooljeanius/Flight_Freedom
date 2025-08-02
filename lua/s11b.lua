@@ -533,25 +533,21 @@ end
 ----- room setup functions
 ------------------------
 
-local orb_colors_tr = {
-	["red"] = _"red",
-	["blue"] = _"blue",
-	["green"] = _"green",
-	["white"] = _"white",
-	["black"] = _"black",
-	["yellow"] = _"yellow",
-}
-local orb_colors_desc = {
-	["red"] = _"Red Orb",
-	["blue"] = _"Blue Orb",
-	["green"] = _"Green Orb",
-	["white"] = _"White Orb",
-	["black"] = _"Black Orb",
-	["yellow"] = _"Yellow Orb",
+-- keep this separate for name-indexed dictionaries (making them upfront causes wmlxgettext to choke)
+local colors_list = {"red", "blue", "green", "white", "black", "yellow"}
+local orb_colors_desc_tr = {
+	_"Red Orb",
+	_"Blue Orb",
+	_"Green Orb",
+	_"White Orb",
+	_"Black Orb",
+	_"Yellow Orb",
 }
 local orb_colors = {}
-for name, tr_name in pairs(orb_colors_tr) do
-	table.insert(orb_colors, name)
+local orb_colors_desc = {}
+for i, s in pairs(colors_list) do
+	table.insert(orb_colors, s)
+	orb_colors_desc[s] = orb_colors_desc_tr[i]
 end
 mathx.shuffle(orb_colors)
 
@@ -1380,7 +1376,6 @@ end
 ----- generate various narrative text
 ------------------------
 
--- ugly hack so that wmlxgettext doesn't choke
 -- po: all of these entries must have the name of each entry's color in them
 local orb_colors_journal_entries_tr = {
 	_"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?",
@@ -1391,7 +1386,7 @@ local orb_colors_journal_entries_tr = {
 	_"I lost my best apprentice, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the apprentice who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
 }
 local orb_colors_journal_entries = {}
-for i, s in ipairs({"red", "blue", "green", "white", "black", "yellow"}) do
+for i, s in ipairs(colors_list) do
 	orb_colors_journal_entries[s] = orb_colors_journal_entries_tr[i]
 end
 
@@ -1658,35 +1653,6 @@ function wesnoth.wml_actions.handle_orb(cfg)
 				layer = "overlay",
 			},
 		})
-	end
-end
-
-function wesnoth.wml_actions.display_assistant_note(cfg)
-	local x = cfg.x
-	local y = cfg.y
-	local assistant_note_x = functional.map(stringx.split(wml.variables["assistant_note_x"], ","), function(s) return tonumber(s) end)
-	local assistant_note_y = functional.map(stringx.split(wml.variables["assistant_note_y"], ","), function(s) return tonumber(s) end)
-	local notes = {
-_"I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about gutting him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it.",
-_"That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here.",
-_"Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I strangled him with my bare hands. Then we cut his ugly head off to make sure he can't come back. But the containment fields are still up. We hoped that they would fall with his death. We've pored over every book in the library but his magic is far too advanced for us. The apprentices threw every spell they had at the barriers with no luck. We even tried digging under the containment fields but we found the dirt to be as hard as stone.\n\nTempers are running high. Nobody knows how we're going to find more food when the supplies down here run out. Already fights are breaking out, old grudges and spite boiling over. And lots of us have lost hope.",
-_"I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here..."
-	}
-	local note_date = wml.variables["last_journal_date"]
-	for i = 1, #assistant_note_x do
-		local cur_x = assistant_note_x[i]
-		local cur_y = assistant_note_y[i]
-		if i == 1 then
-			note_date = note_date + 30 + ((cur_x + cur_y) % 30) -- 1-2 months after Sol'kan's last journal entry
-		elseif i < 4 then
-			note_date = note_date + 2 + ((cur_x + cur_y) % 3) -- engine's finished so things are moving quickly
-		else
-			note_date = note_date + 90  + ((cur_x + cur_y) % 28) -- a few months after Sol'kan's death
-		end
-		if x == cur_x and y == cur_y then
-			local note_str = "<span underline='single'>" .. day_to_month_date(note_date) .. "</span>\n" .. notes[i]
-			show_journal_dialog(note_str)
-		end
 	end
 end
 
@@ -1985,6 +1951,35 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	wesnoth.interface.remove_item(throw_x, throw_y, unit_img)
 	unit.hidden = false
 	wesnoth.interface.lock(false)
+end
+
+function wesnoth.wml_actions.display_assistant_note(cfg)
+	local x = cfg.x
+	local y = cfg.y
+	local assistant_note_x = functional.map(stringx.split(wml.variables["assistant_note_x"], ","), function(s) return tonumber(s) end)
+	local assistant_note_y = functional.map(stringx.split(wml.variables["assistant_note_y"], ","), function(s) return tonumber(s) end)
+	local notes = {
+_"I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about gutting him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it.",
+_"That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here.",
+_"Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I strangled him with my bare hands. Then we cut his ugly head off to make sure he can't come back. But the containment fields are still up. We hoped that they would fall with his death. We've pored over every book in the library but his magic is far too advanced for us. The apprentices threw every spell they had at the barriers with no luck. We even tried digging under the containment fields but we found the dirt to be as hard as stone.\n\nTempers are running high. Nobody knows how we're going to find more food when the supplies down here run out. Already fights are breaking out, old grudges and spite boiling over. And lots of us have lost hope.",
+_"I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here..."
+	}
+	local note_date = wml.variables["last_journal_date"]
+	for i = 1, #assistant_note_x do
+		local cur_x = assistant_note_x[i]
+		local cur_y = assistant_note_y[i]
+		if i == 1 then
+			note_date = note_date + 30 + ((cur_x + cur_y) % 30) -- 1-2 months after Sol'kan's last journal entry
+		elseif i < 4 then
+			note_date = note_date + 2 + ((cur_x + cur_y) % 3) -- engine's finished so things are moving quickly
+		else
+			note_date = note_date + 90  + ((cur_x + cur_y) % 28) -- a few months after Sol'kan's death
+		end
+		if x == cur_x and y == cur_y then
+			local note_str = "<span underline='single'>" .. day_to_month_date(note_date) .. "</span>\n" .. notes[i]
+			show_journal_dialog(note_str)
+		end
+	end
 end
 
 -- for color-blind accessibility
