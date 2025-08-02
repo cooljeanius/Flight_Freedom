@@ -743,7 +743,7 @@ local function place_library_room(current_rooms)
 			elseif num_books_placed == 3 then
 				-- would like to have a factory room if there's suitable graphics
 				-- if so, this would be more appropriate going there
-				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book4.png")
+				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book6.png")
 				wml.variables["automata_book_x"] = hex[1]
 				wml.variables["automata_book_y"] = hex[2]
 				break
@@ -776,11 +776,17 @@ local function place_bedroom(current_rooms)
 		end
 	end
 	wesnoth.interface.add_item_image(bedroom_x + 6, bedroom_y - 1, "scenery/bed-fancy-sw.png")
-	local journal_x = bedroom_x + 7
-	local journal_y = bedroom_y - (bedroom_x % 2)
+	local q, r, s = table.unpack(get_cubic({bedroom_x + 6, bedroom_y - 1}))
+	local journal_x, journal_y = table.unpack(from_cubic(q+1, r, s-1))
 	wml.variables["journal_x"] = journal_x
 	wml.variables["journal_y"] = journal_y
 	wesnoth.interface.add_item_image(journal_x, journal_y, "items/book2.png")
+	local chair_x, chair_y = table.unpack(from_cubic(q-2, r+2, s))
+	wesnoth.interface.add_item_image(chair_x, chair_y, "scenery/chair-2-nw.png~SCALE(100,100)")
+	local desk_x, desk_y = table.unpack(from_cubic(q-3, r+2, s-1))
+	wesnoth.interface.add_item_image(desk_x, desk_y, "scenery/desk-se.png")
+	local wardrobe_x, wardrobe_y = table.unpack(from_cubic(q+1, r-1, s))
+	wesnoth.interface.add_item_image(wardrobe_x, wardrobe_y, "scenery/wardrobe-drawer-open.png")
 	bedroom.max_degree = 1
 	table.insert(current_rooms, bedroom)
 	return current_rooms
@@ -890,7 +896,7 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 	local num_undead_per_catacomb = 3
 	local num_catacombs = 4
 	-- difficulty scores range from 3 to 11 (range is 8)
-	-- if easiest, all units will be level 2
+	-- if easiest, all units will be level 2 (average)
 	-- if hardest, all units will be level 3
 	-- otherwise, random combination of them
 	local undead_level_sum = (num_undead_per_catacomb * num_catacombs * 2) + math.ceil(((num_undead_per_catacomb * num_catacombs) / 8.0) * (wml.variables["difficulty_score"] - 3))
@@ -1374,14 +1380,20 @@ end
 ----- generate various narrative text
 ------------------------
 
-local orb_colors_journal_entries = {
-	["red"] = _"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?",
-	["blue"] = _"My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes.", -- describing a Leyden jar
-	["green"] = _"Sometimes I consider the toll of my research. I have given so much to the Engine. My fortune, the rarest of resources, the lives of my assistants, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
-	["white"] = _"So many discordant forces suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting, then, that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
-	["black"] = _"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nonexistence. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
-	["yellow"] = _"I lost my best apprentice, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the apprentice who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
+-- ugly hack so that wmlxgettext doesn't choke
+-- po: all of these entries must have the name of each entry's color in them
+local orb_colors_journal_entries_tr = {
+	_"Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?",
+	_"My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes.", -- describing a Leyden jar
+	_"Sometimes I consider the toll of my research. I have given so much to the Engine. My fortune, the rarest of resources, the lives of my assistants, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the mountains. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder.",
+	_"So many discordant forces suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting, then, that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself.",
+	_"The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nonexistence. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath.",
+	_"I lost my best apprentice, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the apprentice who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension.",
 }
+local orb_colors_journal_entries = {}
+for i, s in ipairs({"red", "blue", "green", "white", "black", "yellow"}) do
+	orb_colors_journal_entries[s] = orb_colors_journal_entries_tr[i]
+end
 
 local months_list = {}
 table.insert(months_list, _"Whitefire")
@@ -1438,7 +1450,7 @@ local function generate_journal()
 		journal_entries_by_day[journal_days[i]] = orb_colors_journal_entries[orb_colors[i]]
 	end
 	local num_distractors = #orb_colors + 1
-	-- none of these can have any names of a color in them
+	-- po: none of these can have any names of a color in them
 	local distractor_journal_entries = {
 		_"Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek.",
 		_"In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always.",
@@ -1658,7 +1670,7 @@ function wesnoth.wml_actions.display_assistant_note(cfg)
 _"I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about gutting him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it.",
 _"That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here.",
 _"Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I strangled him with my bare hands. Then we cut his ugly head off to make sure he can't come back. But the containment fields are still up. We hoped that they would fall with his death. We've pored over every book in the library but his magic is far too advanced for us. The apprentices threw every spell they had at the barriers with no luck. We even tried digging under the containment fields but we found the dirt to be as hard as stone.\n\nTempers are running high. Nobody knows how we're going to find more food when the supplies down here run out. Already fights are breaking out, old grudges and spite boiling over. And lots of us have lost hope.",
-_"I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here...",
+_"I'm the last one left. We ran out food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here..."
 	}
 	local note_date = wml.variables["last_journal_date"]
 	for i = 1, #assistant_note_x do
@@ -1683,6 +1695,7 @@ function wesnoth.wml_actions.display_console_screen(cfg)
 	local orig_orb_colors = stringx.split(wml.variables["orig_orb_colors"], ",")
 	local alarms_triggered = wml.variables["alarms_triggered"]
 	local console_str = "<span font_family='DejaVuSansMono' size='large'>"
+	-- po: number of periods should vary so that status entries are aligned
 	if #orb_colors > 0 then
 		console_str = console_str .. _"VOID ENGINE STATUS............<span color='yellow'>INITIALIZING</span>" .. "\n\n"
 		console_str = console_str .. _"INNER CONTAINMENT FIELD.......<span color='yellow'>ENABLED</span>"
@@ -1704,12 +1717,11 @@ function wesnoth.wml_actions.display_console_screen(cfg)
 		return result
 	end
 	for i, color in ipairs(orig_orb_colors) do
+		console_str = console_str .. stringx.vformat(_"ENERGY SOURCE $i:", {i=i}) .. "\n"
 		if list_contains(orb_colors, color) then
-			console_str = console_str .. stringx.vformat(_"ENERGY SOURCE $i:", {i=i}) .. "\n"
 			console_str = console_str .. _"   CHARGE.....................<span color='green'>100%</span>" .. "\n"
 			console_str = console_str .. _"   TRANSFER...................<span color='yellow'>STANDBY</span>" .. "\n\n"
 		else
-			console_str = console_str .. stringx.vformat(_"ENERGY SOURCE $i:", {i=i}) .. "\n"
 			console_str = console_str .. _"   CHARGE.....................<span color='red'>0%</span>" .. "\n"
 			console_str = console_str .. _"   TRANSFER...................<span color='green'>COMPLETED</span>" .. "\n\n"
 		end
