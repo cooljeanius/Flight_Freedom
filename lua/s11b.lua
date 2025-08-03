@@ -1290,6 +1290,10 @@ local function place_or_contents(operating_room)
 	s = s - 1
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/table-metal-1.png")
+	q = q - 1
+	s = s + 1
+	item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/surgical.png")
 end
 
 local function place_healing_glyphs(rooms, num_glyphs)
@@ -1785,10 +1789,13 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	wesnoth.interface.remove_item(effect_x, effect_y, "halo/circuit-n[1~3].png:[50*3]")
 	wesnoth.interface.remove_item(machine_x, machine_y, "halo/evil-star/evil-star-halo[1~3].png~XBRZ(2):[100*3]")
 	wesnoth.audio.play("490253__anomaex__sci-fi_explosion_cut.wav")
-	for i = 1, 10 do
-		local img_path = "halo/implosion/implosion-1-" .. tostring(i) .. ".png"
+	for i = 1, (10 * 3) do
+		local idx = math.ceil(i / 3)
+		-- adding on idx * 30 degrees to the rotation accounts for the original frames being 30 degrees rotated in sequence
+		local rotation = -1 * (((i % 3) * 120) + (idx * 30) % 360)
+		local img_path = "halo/implosion/implosion-1-" .. tostring(idx) .. ".png~ROTATE(" .. tostring(rotation) .. ")"
 		wesnoth.interface.add_item_halo(machine_x, machine_y, img_path)
-		wesnoth.interface.delay(200)
+		wesnoth.interface.delay(70)
 		wesnoth.wml_actions.redraw{}
 		wesnoth.interface.remove_item(machine_x, machine_y, img_path)
 	end
