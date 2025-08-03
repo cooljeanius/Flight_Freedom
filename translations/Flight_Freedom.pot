@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-08-03 20:13 UTC\n"
+"POT-Creation-Date: 2025-08-03 20:53 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3583,7 +3583,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:599
-msgid "Remember, everyone, we plunder the caravan! We have no quarrel with the elves."
+msgid "Remember, everyone, we take the caravan! We have no quarrel with the elves."
 msgstr ""
 
 #. [message]: speaker=Theracar
@@ -3715,7 +3715,7 @@ msgstr ""
 
 #. [message]: speaker=Malakar
 #: Flight_Freedom/scenarios/04a_Caravan.cfg:999
-msgid "The caravan guards are slain! Take the caravan quickly so we may make our escape!"
+msgid "The caravan guards are slain! Plunder the caravan quickly so we may make our escape!"
 msgstr ""
 
 #. [message]: speaker=Malakar
@@ -7937,7 +7937,7 @@ msgstr ""
 
 #. [message]: speaker=Theracar
 #: Flight_Freedom/scenarios/16_The_Exodus.cfg:1064
-msgid "We still have not found the map! Doubtless the pirates have escaped. We are stranded!"
+msgid "We still have not found the map! Doubtlessly the pirates have escaped. We are stranded!"
 msgstr ""
 
 #. [message]: speaker=Malakar
