@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-08-03 20:53 UTC\n"
+"POT-Creation-Date: 2025-08-04 02:44 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3253,234 +3253,234 @@ msgid "Storeroom"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:429
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:428
 msgid "Although the hatchlings were now safe, they had suffered grievous wounds, rendering most of them unable to fight. Many died from their wounds, rousing Malakar and the drakes into a ferocious bloodlust."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:434
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:433
 msgid "Soldiers! Attack! I expect each of you to bring back the scalp of a human!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:451
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:450
 msgid "I shall have my revenge today!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:464
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:463
 msgid "$unit.name became loyal!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:473
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:472
 msgid "$unit.name became loyal! Further recalled units will also become loyal."
 msgstr ""
 
 #. [object]: id=drake_slave_spear_at_{X}_{Y}
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:516
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:515
 msgid "Drake Spear"
 msgstr ""
 
 #. [object]: id=drake_slave_spear_at_{X}_{Y}
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:517
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:516
 msgid "This weapon is excellent for a drake rising against its masters."
 msgstr ""
 
 #. [object]: id=drake_slave_spear_at_{X}_{Y}
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:518
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:517
 msgid "This weapon is only fit for adult drakes."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:567
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:566
 msgid "I wish this armor were drake-sized."
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:620
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:619
 msgid "So, this is why the mansion is haunted."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:645
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:644
 msgid "The circle is crackling with magical energy! This is the work of a powerful necromancer."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:651
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:650
 msgid "The circle has darkened, but it reeks of decay. This is the work of a powerful necromancer."
 msgstr ""
 
 #. [unit]: type=Spectre, id=necromancy_spectre
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:669
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:668
 msgid "Ensorcelled Soul"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:675
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:674
 msgid "AAAAH! I'm doomed!"
 msgstr ""
 
 #. [message]: id=necromancy_spectre
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:679
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:678
 msgid "Noble warriors, thank you for freeing me from this magical prison. I must now travel to my rightful place in the underworld. You may rest assured that my brethren will harm you no more."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:719
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:718
 msgid "Ahh... tasty!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:735
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:734
 msgid "No, this isn't... why am I drinking this? I don't feel well."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:757
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:756
 msgid "It's just some nonsense about talking to skeletons..."
 msgstr ""
 
 #. [unit]: type=Skeleton
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:769
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:768
 msgid "Skeleton"
 msgstr ""
 
 #. [message]
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:773
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:772
 msgid "Like me?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:777
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:776
 msgid "Hm? Yes, like... AAAAH! A living skeleton!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:795
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:794
 msgid "...who seems to be missing a few bones."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:811
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:810
 msgid "Rotten grape juice! Yuck!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:830
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:829
 msgid "It's just a box."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:846
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:845
 msgid "It's another box."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:862
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:861
 msgid "Yet another box. <i>*mumbles*</i> This is getting old..."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:879
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:878
 msgid "Wow, a wooden cube."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:902
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:901
 msgid "There is a fresh corpse here. It appears to have been stitched together... it moves!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:908
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:907
 msgid "There's a fresh corpse here! It's been stitched together... it's moving!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:925
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:924
 msgid "An abomination! Help!"
 msgstr ""
 
 #. [scenario]: id=Manor, id=A key
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1031
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1030
 msgid "Key"
 msgstr ""
 
 #. [message]: speaker=second_unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1052
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1051
 msgid "It seems he dropped a potion!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1078
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1077
 msgid "Could this key fit that trapdoor?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1084
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1083
 msgid "I seem to have found a key. What it unlocks, I do not know."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1149
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1148
 msgid "Perfect!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1159
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1158
 msgid "Except I am standing on the trapdoor."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1165
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1164
 msgid "Except... that I'm standing on the trapdoor."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1179
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1178
 msgid "The trapdoor is locked! Could that key fit?"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1185
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1184
 msgid "The trapdoor is locked!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1207
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1206
 msgid "To think that our wretched 'master' could have bought us like cattle at this very desk..."
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1222
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1221
 msgid "It looks like the baron kept a few coins here!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1297
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1296
 msgid "This mansion is haunted!"
 msgstr ""
 
 #. [unit]: type=Lieutenant, type=General, id=Omandro
 #. [side]: type=Lieutenant, type=General, id=Omandro
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1381
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1386
 #: Flight_Freedom/scenarios/05a_Blue_River.cfg:62
 msgid "Omandro"
 msgstr ""
 
 #. [message]: speaker=Omandro
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1400
-msgid "Baron Prax III, you are sentenced to death for treason against the Crown!"
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1410
+msgid "Baron Prax III, you are hereby sentenced to death for treason against the Crown!"
 msgstr ""
 
 #. [message]: speaker=mauler
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1410
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1426
 msgid "General, the drakes on the plantation have been dispatched."
 msgstr ""
 
 #. [message]: speaker=Omandro
-#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1414
+#: Flight_Freedom/scenarios/03a_The_Manor.cfg:1430
 msgid "Hunt down every drake in the manor as well. None must remain to reach Morogor."
 msgstr ""
 
