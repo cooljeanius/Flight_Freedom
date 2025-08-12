@@ -543,13 +543,10 @@ local orb_colors_desc_tr = {
 	_"Black Orb",
 	_"Yellow Orb",
 }
-local orb_colors = {}
 local orb_colors_desc = {}
 for i, s in pairs(colors_list) do
-	table.insert(orb_colors, s)
 	orb_colors_desc[s] = orb_colors_desc_tr[i]
 end
-mathx.shuffle(orb_colors)
 
 -- all rooms made by these functions should have all pre-corridor things "ready to go"
 -- including item graphics, units, and WML variables for events
@@ -636,6 +633,13 @@ end
 local function place_orb_rooms(current_rooms, num_orb_rooms)
 	local map_size_x = wesnoth.current.map.playable_width
 	local map_size_y = wesnoth.current.map.playable_height
+	local orb_colors = {}
+	local orb_colors_desc = {}
+	for i, s in pairs(colors_list) do
+		table.insert(orb_colors, s)
+		orb_colors_desc[s] = orb_colors_desc_tr[i]
+	end
+	mathx.shuffle(orb_colors)
 	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
 	local orb_hexes = {}
 	local orb_guard_hexes = {}
@@ -928,9 +932,9 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 				if level == 1 then
 					monster_type = mathx.random_choice{"Ghost", "Skeleton", "Skeleton Archer", "Soulless"}
 				elseif level == 2 then
-					monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Deathblade", "Bone Shooter"}
+					monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
 				else
-					monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Banebow"}
+					monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Draug", "Banebow"}
 				end
 				wesnoth.units.to_map({type=monster_type, side=2}, hex[1], hex[2])
 			end
@@ -1428,6 +1432,7 @@ end
 local function generate_journal()
 	local journal_days = {}
 	local journal_entries_by_day = {}
+	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
 	-- place journal entries with clues first
 	for i = 1, #orb_colors do
 		local unique_day = false
@@ -1620,6 +1625,10 @@ function wesnoth.wml_actions.handle_orb(cfg)
 		for j = 3, 0, -1 do
 			wesnoth.interface.color_adjust(-10 * j,45 * j,-10 * j)
 			wesnoth.interface.delay(125)
+		end
+		if wml.variables["automata_notification_state"] == 1 and #orb_colors > 1 then
+			wesnoth.wml_actions.message({x=x,y=y,message=_"This time the machine did not activate. There must be a way to safely break the orbs!"})
+			wml.variables["automata_notification_state"] = 2
 		end
 	end
 	for j, color in ipairs(orb_colors) do
@@ -1874,8 +1883,8 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local throw_y = nil
 	local throw_frames = nil
 	theta = find_angle_between_hexes(machine_x, machine_y, retreat_x, retreat_y)
-	for i = 1, 8 do
-		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, i, theta)
+	for i = 1, 16 do
+		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, (i / 2.0), theta)
 		local terrain_code = wesnoth.current.map[{test_x, test_y}]
 		if string.sub(terrain_code, 1, 1) == "X" then
 			break
@@ -1883,7 +1892,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 			-- we want the last hex before the wall
 			throw_x = test_x
 			throw_y = test_y
-			throw_frames = i
+			throw_frames = i / 2
 		end
 	end
 	unit.hidden = true
