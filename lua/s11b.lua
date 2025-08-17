@@ -84,17 +84,24 @@ end
 local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
 gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
 
-local function show_journal_dialog(text)
+local function show_journal_dialog(text, font)
+	local text_font = font
+	if text_font == nil then
+		if wesnoth.current_version() >= wesnoth.version("1.19.15") then
+			text_font = "WesScript"
+		else
+			text_font = "Oldania ADF Std"
+		end
+	end
 	function pre_show(self)
-		self.text.label = "<span font_family='Oldania ADF Std' size='xx-large' color='#000000'>" .. text .. "</span>"
+		self.text.label = "<span font_family='" .. text_font .. "' size='xx-large' color='#000000'>" .. text .. "</span>"
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
 end
 
 function wesnoth.wml_actions.show_journal_dialog(cfg)
-	local text = cfg.text
-	show_journal_dialog(text)
+	show_journal_dialog(cfg.text, cfg.font)
 end
 
 ------------------------
@@ -1255,7 +1262,7 @@ local function place_prison_lever(current_rooms, graph)
 	mathx.shuffle(possible_locs)
 	for i, hex in ipairs(possible_locs) do
 		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
-			wesnoth.interface.add_item_image(hex[1], hex[2], "items/lever-off.png")
+			wesnoth.interface.add_item_image(hex[1], hex[2], "items/switch-left.png~XBRZ(2)")
 			wml.variables["prison_lever_x"] = hex[1]
 			wml.variables["prison_lever_y"] = hex[2]
 			break
