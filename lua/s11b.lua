@@ -817,19 +817,40 @@ local function place_prison_room(current_rooms)
 			layer = "overlay",
 		},
 	})
-	local prison_door_hexes = {}
+	local prison_lever_hexes = {}
+	local prison_cell_idx = {}
 	local q, r, s = table.unpack(get_cubic({room_x + 6, room_y}))
-	-- upper left door
-	q = q + 1
+	-- upper left door lever, cell #1
+	q = q - 1
 	r = r - 1
-	table.insert(prison_door_hexes, from_cubic(q, r, s))
-	-- lower left door
-	table.insert(prison_door_hexes, from_cubic(q + 2, r, s - 2))
-	-- upper right left door
-	table.insert(prison_door_hexes, from_cubic(q + 3, r - 3, s))
-	-- lower right door
-	table.insert(prison_door_hexes, from_cubic(q + 5, r - 3, s - 2))
-	hex_list_to_wml_var(prison_door_hexes, "prison_doors_x", "prison_doors_y")
+	s = s + 2
+	local lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 1)
+	-- lower left door, cell #2
+	q = q + 6
+	s = s - 6
+	lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 2)
+	-- lower right door, cell #4
+	q = q + 3
+	r = r - 3
+	lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 4)
+	-- upper right door, cell #3
+	q = q - 6
+	s = s + 6
+	lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 3)
+	hex_list_to_wml_var(prison_lever_hexes, "prison_levers_x", "prison_levers_y")
+	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
 	table.insert(current_rooms, prison_room)
 	return current_rooms
 end
@@ -1240,36 +1261,6 @@ local function remove_library_bookshelves(library_room)
 	end
 end
 
-local function place_prison_lever(current_rooms, graph)
-	local start_room_num = nil
-	local prison_room_num = nil
-	for i, r in ipairs(current_rooms) do
-		if r.id == "start_room" then
-			start_room_num = i
-		elseif r.id == "prison_room" then
-			prison_room_num = i
-		end
-	end
-	local path = graph:find_guaranteed_path(start_room_num, {start_room_num}, prison_room_num, 999)
-	local lever_room_num = nil
-	for i = #path - 1, 1, -1 do
-		if current_rooms[path[i]].id ~= "library_room" and current_rooms[path[i]].id ~= "control_room" and current_rooms[path[i]].id ~= "operating_room" then
-			lever_room_num = path[i]
-			break
-		end
-	end
-	local possible_locs = current_rooms[lever_room_num]:get_inner_hexes()
-	mathx.shuffle(possible_locs)
-	for i, hex in ipairs(possible_locs) do
-		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
-			wesnoth.interface.add_item_image(hex[1], hex[2], "items/switch-left.png~XBRZ(2)")
-			wml.variables["prison_lever_x"] = hex[1]
-			wml.variables["prison_lever_y"] = hex[2]
-			break
-		end
-	end
-end
-
 local function place_or_contents(operating_room)
 	local room_x, room_y = table.unpack(operating_room:left_corner())
 	wesnoth.wml_actions.terrain_mask({
@@ -1548,8 +1539,6 @@ function randomize_scenario()
 		end
 	end
 
-	place_prison_lever(all_rooms, map_graph)
-
 	-- scatter healing and damage glyphs
 	local healing_glyphs = place_healing_glyphs(all_rooms, num_healing_glyphs)
 	hex_list_to_wml_var(healing_glyphs, "healing_glyph_x", "healing_glyph_y")
@@ -1674,6 +1663,36 @@ function wesnoth.wml_actions.handle_orb(cfg)
 			},
 		})
 	end
+end
+
+function wesnoth.wml_actions.handle_prison_lever(cfg)
+	local x = cfg.x
+	local y = cfg.y
+	wesnoth.interface.remove_item(x, y, "items/switch-left.png~XBRZ(2)")
+	wesnoth.interface.add_item_image(x, y, "items/switch-right.png~XBRZ(2)")
+	local q, r, s = table.unpack(get_cubic({x, y}))
+	local prison_levers_x = functional.map(stringx.split(wml.variables["prison_levers_x"], ","), function(s) return tonumber(s) end)
+	local prison_levers_y = functional.map(stringx.split(wml.variables["prison_levers_y"], ","), function(s) return tonumber(s) end)
+	local prison_cell_idx = functional.map(stringx.split(wml.variables["prison_cell_idx"], ","), function(s) return tonumber(s) end)
+	local door_hex = nil
+	for j, idx in ipairs(prison_cell_idx) do
+		if prison_levers_x[j] == x and prison_levers_y[j] == y then
+			-- upper cells are odd-numbered, even cells are even-numbered
+			if idx % 2 == 0 then
+				door_hex = from_cubic(q - 2, r, s + 2)
+			else
+				door_hex = from_cubic(q + 2, r, s - 2)
+			end
+			table.remove(prison_levers_x, j)
+			table.remove(prison_levers_y, j)
+			table.remove(prison_cell_idx, j)
+		end
+	end
+	add_terrain_overlay(door_hex[1], door_hex[2], "Pr\\o")
+	wesnoth.wml_actions.redraw{clear_shroud=true}
+	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
+	wml.variables["prison_levers_x"] = table.concat(prison_levers_x, ",")
+	wml.variables["prison_levers_y"] = table.concat(prison_levers_y, ",")
 end
 
 function wesnoth.wml_actions.display_console_screen(cfg)
