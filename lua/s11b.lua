@@ -1686,6 +1686,7 @@ function wesnoth.wml_actions.handle_prison_lever(cfg)
 			table.remove(prison_levers_x, j)
 			table.remove(prison_levers_y, j)
 			table.remove(prison_cell_idx, j)
+			break
 		end
 	end
 	add_terrain_overlay(door_hex[1], door_hex[2], "Pr\\o")
