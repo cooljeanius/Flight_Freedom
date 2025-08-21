@@ -800,9 +800,26 @@ local function place_bedroom(current_rooms)
 end
 
 local function place_prison_room(current_rooms)
+	local function place_cell_content(hex, content_type)
+		if content_type == 1 then
+			-- just a skeleton
+			wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png")
+		elseif content_type == 2 then
+			-- magic resist amulet
+			wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png~FL(horiz)~BLIT(items/ankh-necklace.png, 0, 10)")
+			wml.variables["resist_amulet_x"] = hex[1]
+			wml.variables["resist_amulet_y"] = hex[2]
+		elseif content_type == 3 then
+			wesnoth.units.to_map({type="Automaton Reaper", side=3}, hex[1], hex[2])
+		elseif content_type == 4 then
+			-- empty
+		end
+	end
+
 	local map_size_x = wesnoth.current.map.playable_width
 	local map_size_y = wesnoth.current.map.playable_height
-	-- todo: put something in the prison cells
+	local room_content_ids = {1, 2, 3, 4}
+	mathx.shuffle(room_content_ids)
 	local prison_room = find_room(12, 9, 1, map_size_x, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
 	prison_room.id = "prison_room"
 	prison_room:set_inner_terrain("Ur")
@@ -820,7 +837,7 @@ local function place_prison_room(current_rooms)
 	local prison_lever_hexes = {}
 	local prison_cell_idx = {}
 	local q, r, s = table.unpack(get_cubic({room_x + 6, room_y}))
-	-- upper left door lever, cell #1
+	-- upper left door, cell #1
 	q = q - 1
 	r = r - 1
 	s = s + 2
@@ -828,6 +845,7 @@ local function place_prison_room(current_rooms)
 	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
 	table.insert(prison_lever_hexes, lever_hex)
 	table.insert(prison_cell_idx, 1)
+	place_cell_content(from_cubic(q+1, r+1, s-2), room_content_ids[1])
 	-- lower left door, cell #2
 	q = q + 6
 	s = s - 6
@@ -835,6 +853,7 @@ local function place_prison_room(current_rooms)
 	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
 	table.insert(prison_lever_hexes, lever_hex)
 	table.insert(prison_cell_idx, 2)
+	place_cell_content(from_cubic(q-3, r+1, s+2), room_content_ids[2])
 	-- lower right door, cell #4
 	q = q + 3
 	r = r - 3
@@ -842,6 +861,7 @@ local function place_prison_room(current_rooms)
 	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
 	table.insert(prison_lever_hexes, lever_hex)
 	table.insert(prison_cell_idx, 4)
+	place_cell_content(from_cubic(q-1, r-1, s+2), room_content_ids[3])
 	-- upper right door, cell #3
 	q = q - 6
 	s = s + 6
@@ -849,6 +869,8 @@ local function place_prison_room(current_rooms)
 	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
 	table.insert(prison_lever_hexes, lever_hex)
 	table.insert(prison_cell_idx, 3)
+	place_cell_content(from_cubic(q+3, r-1, s-2), room_content_ids[4])
+
 	hex_list_to_wml_var(prison_lever_hexes, "prison_levers_x", "prison_levers_y")
 	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
 	table.insert(current_rooms, prison_room)
