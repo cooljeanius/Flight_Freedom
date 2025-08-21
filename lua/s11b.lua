@@ -811,9 +811,8 @@ local function place_prison_room(current_rooms)
 			wml.variables["resist_amulet_y"] = hex[2]
 		elseif content_type == 3 then
 			wesnoth.units.to_map({type="Automaton Reaper", side=3}, hex[1], hex[2])
-		elseif content_type == 4 then
-			-- empty
 		end
+		-- room type 4 is empty
 	end
 
 	local map_size_x = wesnoth.current.map.playable_width
