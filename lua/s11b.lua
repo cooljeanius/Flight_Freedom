@@ -988,7 +988,7 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 				wesnoth.units.to_map({type=monster_type, side=2}, hex[1], hex[2])
 			end
 		end
-		-- todo: some room ideas
+		-- some other room ideas:
 		--   other monster room
 		--   kitchen room
 		--   servant or guard quarters

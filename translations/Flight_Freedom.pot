@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-08-21 01:06 UTC\n"
+"POT-Creation-Date: 2025-08-26 22:32 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1082,9 +1082,9 @@ msgstr ""
 #: Flight_Freedom/scenarios/07b_The_Obsidian_Citadel.cfg:67
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:351
 #: Flight_Freedom/scenarios/08b_Apocalypse.cfg:742
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1269
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1280
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1293
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1270
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1281
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1294
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:253
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:351
 #: Flight_Freedom/scenarios/12a_Rockfall.cfg:413
@@ -6772,52 +6772,52 @@ msgid "As I reach for this amulet I feel an odd sense of fortitude."
 msgstr ""
 
 #. [object]: id=resist_amulet
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1231
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1232
 msgid "Spellcrafter's Wardstone"
 msgstr ""
 
 #. [object]: id=resist_amulet
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1232
-msgid "This enchanted amulet provides 30% resistance to arcane attacks."
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1233
+msgid "This enchanted amulet provides 30% resistance to arcane and cold attacks."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1247
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1248
 msgid "Whoever wrote this is obsessed with some sort of 'void'. Whatever it is, this cannot be good."
 msgstr ""
 
 #. [then]
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1267
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1278
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1291
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1268
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1279
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1292
 msgid "Find a way to free the tribe"
 msgstr ""
 
 #. [then]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1268
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1269
 msgid "Destroy the Engine!"
 msgstr ""
 
 #. [note]: description=<b>
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1272
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1283
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1296
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1273
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1284
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1297
 msgid "Your gold stockpile is frozen during this scenario."
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1279
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1280
 msgid "Destroy the colored orbs"
 msgstr ""
 
 #. [else]
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1292
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1293
 msgid "Explore the underground complex"
 msgstr ""
 
 #. [message]: id=Malakar
-#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1317
+#: Flight_Freedom/scenarios/11b_Solkans_Lair.cfg:1318
 msgid "I must find a way to free the tribe before I leave!"
 msgstr ""
 
