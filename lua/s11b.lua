@@ -22,7 +22,8 @@ function calc_difficulty_score()
 	local malakar = wesnoth.units.get("Malakar")
 	score = score + malakar.level
 	-- from S7B
-	if malakar.variables["has_elemental_powerup"] then
+	-- ignore drain special since player faces undead and automatons
+	if malakar.variables["has_elemental_powerup"] and wml.variables["malakar_powerup"] ~= "earth" then
 		score = score + 1
 	end
 	-- from S3A
@@ -1319,29 +1320,42 @@ local function place_or_contents(operating_room)
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/surgical.png")
 end
 
+local function place_healing_glyph_in_room(room)
+	local glyph_hex = nil
+	local room_inner_hexes = room:get_inner_hexes()
+	mathx.shuffle(room_inner_hexes)
+	for j, hex in ipairs(room_inner_hexes) do
+		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
+			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/rune5.png")
+			glyph_hex = hex
+			break
+		end
+	end
+	return glyph_hex
+end
+
 local function place_healing_glyphs(rooms, num_glyphs)
 	local healing_glyph_locs = {}
-	local glyphs_placed = 0
 	local room_iterate_order = {}
 	for i = 1, #rooms do
 		table.insert(room_iterate_order, i)
+		-- one guaranteed healing glyph in start room
+		if rooms[i].id == "start_room" then
+			table.insert(healing_glyph_locs, place_healing_glyph_in_room(rooms[i]))
+		end
 	end
 	mathx.shuffle(room_iterate_order)
+	local glyphs_placed = 1
 	while glyphs_placed < num_glyphs do
 		for i, k in ipairs(room_iterate_order) do
 			local room = rooms[k]
 			if string.sub(room.id, 1, 6) == "random" then
 				-- 50% chance this room gets a glyph somewhere
 				if mathx.random(1, 2) == 1 then
-					local room_inner_hexes = room:get_inner_hexes()
-					mathx.shuffle(room_inner_hexes)
-					for j, hex in ipairs(room_inner_hexes) do
-						if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
-							wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/rune5.png")
-							table.insert(healing_glyph_locs, hex)
-							glyphs_placed = glyphs_placed + 1
-							break
-						end
+					local hex = place_healing_glyph_in_room(room)
+					if hex ~= nil then
+						table.insert(healing_glyph_locs, hex)
+						glyphs_placed = glyphs_placed + 1
 					end
 				end
 			end
