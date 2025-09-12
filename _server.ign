@@ -5,6 +5,8 @@
 .luacheckrc
 # The map-diff stuff doesn't need to go on the server:
 utils/
+# Neither does this:
+.vscode/
 
 # default values not already specified:
 .+
