@@ -1463,26 +1463,10 @@ end
 -- sets $journal_str to the generated journal string
 -- returns the last day in the journal (as some of the assistants' writings must be dated after the last journal entry)
 local function generate_journal()
-	local journal_days = {}
-	local journal_entries_by_day = {}
 	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+	local journal_days = random_sample_wor(#orb_colors, days_per_year)
+	local journal_entries_by_day = {}
 	-- place journal entries with clues first
-	for i = 1, #orb_colors do
-		local unique_day = false
-		local day = nil
-		while not unique_day do
-			unique_day = true
-			day = mathx.random(1, days_per_year)
-			for j = 1, #journal_days do
-				if journal_days[j] == day then
-					unique_day = false
-					break
-				end
-			end
-		end
-		table.insert(journal_days, day)
-	end
-	table.sort(journal_days)
 	for i = 1, #orb_colors do
 		journal_entries_by_day[journal_days[i]] = orb_colors_journal_entries[orb_colors[i]]
 	end
@@ -1491,7 +1475,7 @@ local function generate_journal()
 	local distractor_journal_entries = {
 		_"Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek.",
 		_"In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always.",
-		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating higher-order etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do.",
+		_"I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating self-perpetuating etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do.",
 		_"As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!",
 		_"I slipped on a loose flagstone today. My knee will be sore for a while.",
 		_"Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!",
@@ -1499,7 +1483,7 @@ local function generate_journal()
 		_"At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all.",
 		_"I once again find myself in need of apprentices. The locals are strong in body, hardened from lives of toil on this hostile isle. When approached in secret many of them are eager to join my cause as assistants, if none else but for an escape from the oppression of the orcs. They have proved useful for manual labor and the occasional sacrifice, yet they are weak in mind and ill-served as apprentices. My agents in Wesnoth must redouble their efforts in recruitment. But they report that rogue mages and other magical cast-offs grow ever more difficult to find.",
 		_"My agents in Wesnoth report that word has spread about me among the wizarding underworld. 'Bringer of the Void', I have been rather derisively rumored. Short-sighted fools! They comprehend not the scope of my genius! At least this Laboratory and the Engine remain unknown to the wider world. The local orcs have learned to avoid us, though they know not the cause of their fear. But I have no doubt that the Royal Army would hasten to destroy us should they learn of the Engine.",
-		_"I have noticed leaps of logic coming more quickly to my brain as of late. Solutions to higher-order partial differential equations revealing themselves almost as soon as I put quill to paper, new alchemical brews of just the exact properties needed for the Engine, early prototypes that not only function but exceed my expectations... it is almost as if something is helping me in my labors. Or perhaps this is my intellect continuing to expand, as my mind grows to embrace new heights of genius.",
+		_"I have noticed leaps of logic coming more quickly to my brain as of late. Solutions to higher-order nonlinear partial differential equations revealing themselves almost as soon as I put quill to paper, new alchemical brews of just the exact properties needed for the Engine, early prototypes that not only function but exceed my expectations... it is almost as if something is helping me in my labors. Or perhaps this is my intellect continuing to expand, as my mind grows to embrace new heights of genius.",
 		_"In my laboratory I have wrought superlative technologies beyond the wildest imagining of the known world. Oh, how even the best minds of the dwarves would envy my grand accomplishments! It has not escaped my reckoning that my artifice could conquer the Great Continent should I so choose. Mass-produced legions of indefatigable Automata that would sweep away even the bravest of warriors. Computing machines by which I could tabulate every hair on each of my subjects' heads should I so desire. Materials of immense strength that would serve as the foundation of the greatest cities to grace Irdya. But the Engine shall grant me power infinitely greater than any king or emperor could ever hope to wield."
 	}
 	mathx.shuffle(distractor_journal_entries)
