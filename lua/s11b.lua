@@ -1622,11 +1622,11 @@ function wesnoth.wml_actions.handle_orb(cfg)
 		wesnoth.audio.play("bells-golden.ogg")
 		for i = 1, 3 do
 			for j = 1, 5 do
-				wesnoth.interface.color_adjust(36 * j,-8 * j,-8 * j)
+				wesnoth.interface.color_adjust(36*j, -8*j, -8*j)
 				wesnoth.interface.delay(100)
 			end
 			for j = 4, 0, -1 do
-				wesnoth.interface.color_adjust(36 * j,-8 * j,-8 * j)
+				wesnoth.interface.color_adjust(36*j, -8*j, -8*j)
 				wesnoth.interface.delay(100)
 			end
 			wesnoth.interface.delay(1700)
@@ -1635,13 +1635,15 @@ function wesnoth.wml_actions.handle_orb(cfg)
 		wesnoth.units.to_map({type="Automaton Defender", side=3, facing="se"}, x, y - 1)
 		wesnoth.game_events.remove("guard_description")
 	else
-		for j = 1, 4 do
-			wesnoth.interface.color_adjust(-10 * j,45 * j,-10 * j)
-			wesnoth.interface.delay(125)
-		end
-		for j = 3, 0, -1 do
-			wesnoth.interface.color_adjust(-10 * j,45 * j,-10 * j)
-			wesnoth.interface.delay(125)
+		if #orb_colors > 1 then
+			for j = 1, 4 do
+				wesnoth.interface.color_adjust(-10*j, 45*j, -10*j)
+				wesnoth.interface.delay(125)
+			end
+			for j = 3, 0, -1 do
+				wesnoth.interface.color_adjust(-10*j, 45*j, -10*j)
+				wesnoth.interface.delay(125)
+			end
 		end
 		if wml.variables["automata_notification_state"] == 1 and #orb_colors > 1 then
 			wesnoth.wml_actions.message({x=x,y=y,message=_"This time the machine did not activate. There must be a way to safely break the orbs!"})
@@ -1683,6 +1685,18 @@ function wesnoth.wml_actions.handle_orb(cfg)
 				layer = "overlay",
 			},
 		})
+		wesnoth.interface.remove_item(machine_x, machine_y, "scenery/engine-shield.png")
+		for i = 1, 3 do
+			for j = 1, 5 do
+				wesnoth.interface.color_adjust(-2*j, -2*j, 20*j)
+				wesnoth.interface.delay(100)
+			end
+			for j = 4, 0, -1 do
+				wesnoth.interface.color_adjust(-2*j, -2*j, 20*j)
+				wesnoth.interface.delay(100)
+			end
+			wesnoth.interface.delay(1000)
+		end
 	end
 end
 
