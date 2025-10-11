@@ -1943,7 +1943,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	end
 	local throw_x = nil
 	local throw_y = nil
-	local throw_frames = nil
+	local throw_steps = nil
 	theta = find_angle_between_hexes(machine_x, machine_y, retreat_x, retreat_y)
 	for i = 1, 16 do
 		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, (i / 2.0), theta)
@@ -1954,7 +1954,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 			-- we want the last hex before the wall
 			throw_x = test_x
 			throw_y = test_y
-			throw_frames = i / 2
+			throw_steps = i
 		end
 	end
 	unit.hidden = true
@@ -1962,7 +1962,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		hex_x = string.format("%i,%i", retreat_x, throw_x),
 		hex_y = string.format("%i,%i", retreat_y, throw_y),
 		image=unit_img,
-		frames=throw_frames * 5,
+		frames=throw_steps * 3,
 		frame_length = 10
 	})
 	-- in case there's another unit where we're going to throw the player unit to
