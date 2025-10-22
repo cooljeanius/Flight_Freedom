@@ -156,25 +156,27 @@ function wesnoth.wml_actions.total_unit_cost(cfg)
 	end
 end
 
----
--- Clears the chat log.
---
--- [clear_chat]
--- [/clear_chat]
----
-function wesnoth.wml_actions.clear_chat(cfg)
-	wesnoth.interface.clear_chat_messages()
-end
+if wesnoth.current_version() < wesnoth.version("1.19.17") then
+	---
+	-- Clears the chat log.
+	--
+	-- [clear_chat]
+	-- [/clear_chat]
+	---
+	function wesnoth.wml_actions.clear_chat(cfg)
+		wesnoth.interface.clear_chat_messages()
+	end
 
----
--- Get current game zoom level.
---
--- [store_zoom]
---     variable=zoom
--- [/store_zoom]
----
-function wesnoth.wml_actions.store_zoom(cfg)
-	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
+	---
+	-- Get current game zoom level.
+	--
+	-- [store_zoom]
+	--     variable=zoom
+	-- [/store_zoom]
+	---
+	function wesnoth.wml_actions.store_zoom(cfg)
+		wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
+	end
 end
 
 --- Conditional tag if player has debug mode set
