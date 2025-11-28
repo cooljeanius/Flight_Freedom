@@ -61,6 +61,14 @@ local function get_random_level_list(list_length, level_sum, max_level)
 	return levels
 end
 
+function set_scenario_globals()
+	wesnoth.game_config.do_healing = false
+	wesnoth.game_config.rest_heal_amount = 0
+	wesnoth.game_config.base_income = 0
+	wesnoth.game_config.combat_experience = 0
+	wesnoth.game_config.kill_experience = 0
+end
+
 ------------------------
 ----- ui functions
 ------------------------
@@ -1685,7 +1693,6 @@ function wesnoth.wml_actions.handle_orb(cfg)
 				layer = "overlay",
 			},
 		})
-		wesnoth.interface.remove_item(machine_x, machine_y, "scenery/engine-shield.png")
 		for i = 1, 3 do
 			for j = 1, 5 do
 				wesnoth.interface.color_adjust(-2*j, -2*j, 20*j)
@@ -1696,6 +1703,21 @@ function wesnoth.wml_actions.handle_orb(cfg)
 				wesnoth.interface.delay(100)
 			end
 			wesnoth.interface.delay(1000)
+		end
+		if wml.variables["seen_engine"] then
+			wesnoth.interface.scroll_to_hex(machine_x, machine_y)
+			wesnoth.interface.delay(500)
+			for i = 1, 5 do
+				wesnoth.interface.remove_item(machine_x, machine_y, "scenery/engine-shield.png")
+				wesnoth.interface.delay(100 * i)
+				wesnoth.interface.add_item_halo(machine_x, machine_y, "scenery/engine-shield.png")
+				wesnoth.interface.delay(200)
+			end
+			wesnoth.interface.remove_item(machine_x, machine_y, "scenery/engine-shield.png")
+			wesnoth.interface.delay(1000)
+			wesnoth.interface.scroll_to_hex(x, y)
+		else
+			wesnoth.interface.remove_item(machine_x, machine_y, "scenery/engine-shield.png")
 		end
 	end
 end
