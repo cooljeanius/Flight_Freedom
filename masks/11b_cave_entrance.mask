@@ -1,0 +1,5 @@
+_f, _f, Xur, _f, _f
+Xur, Xur, Uu, Uu, Uu
+Uu, Uu, Uu, Uu, _f
+Uu, Uu, Xur, Xur, _f
+Xur, Xur, _f, _f, _f

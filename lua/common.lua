@@ -14,6 +14,109 @@ function safe_random(arg)
 	return r
 end
 
+--- return a replay-safe random number sampled from specified normal distribution
+function random_norm(mean, sd)
+	local u = mathx.random()
+	local v = mathx.random()
+	local n = math.sqrt(-2.0 * math.log(u)) * math.cos(2.0 * math.pi * v)
+	local r = (n * sd) + mean
+	return r
+end
+
+--- randomly generate k integers from 1 to n without replacement
+function random_sample_wor(k, n)
+	local reservoir = {}
+	for i = 1, k do
+		table.insert(reservoir, i)
+	end
+	local w = math.exp(math.log(mathx.random()) / k)
+	local i = k
+	while i <= n do
+		i = i + math.floor(math.log(mathx.random()) / math.log(1 - w)) + 1
+		if i <= n then
+			reservoir[mathx.random(1, k)] = i
+			w = w * math.exp(math.log(mathx.random()) / k)
+		end
+	end
+	table.sort(reservoir)
+	return reservoir
+end
+
+function trunc(n)
+	if n >= 0.0 then
+		return math.floor(n)
+	else
+		return math.ceil(n)
+	end
+end
+
+-- useful reference for cubic grid math: https://www.redblobgames.com/grids/hexagons/
+
+-- since mainline wesnoth.map.from_cubic is broken as of 1.19.13, reimplement it here
+-- (c++ backend expects a cubic_location struct which isn't accessible to lua)
+function from_cubic(q, r, s)
+	local x = q
+	local y = r + trunc((q + (math.abs(q) % 2)) / 2)
+	return({x, y})
+end
+
+get_cubic = nil
+if wesnoth.current_version() >= wesnoth.version("1.19.4") then
+	get_cubic = wesnoth.map.get_cubic
+else
+	-- even-q -> cubic conversion prior to 1.19.4
+	get_cubic = function(loc)
+		local parity = math.abs(loc[1]) % 2
+		local q = loc[1]
+		local r = loc[2] - trunc((loc[1] + parity) / 2)
+		local s = -1 * (q+r)
+		return({q, r, s})
+	end
+end
+
+function find_angle_between_hexes(x1, y1, x2, y2)
+	local q1, r1, s1 = table.unpack(get_cubic({x1, y1}))
+	local q2, r2, s2 = table.unpack(get_cubic({x2, y2}))
+	local x1_pixel = (3.0 / 2) * q1
+	local y1_pixel = ((math.sqrt(3.0) / 2) * q1) + (math.sqrt(3.0) * r1)
+	local x2_pixel = (3.0 / 2) * q2
+	local y2_pixel = ((math.sqrt(3.0) / 2) * q2) + (math.sqrt(3.0) * r2)
+	local theta = math.atan(math.abs(y2_pixel - y1_pixel) / math.abs(x2_pixel - x1_pixel))
+	-- y2 reversed here to account for flipped Y axis
+	if x1_pixel >= x2_pixel and y2_pixel <= y1_pixel then -- quadrant II
+		theta = math.pi - theta
+	elseif x1_pixel >= x2_pixel and y2_pixel > y1_pixel then -- quadrant III
+		theta = math.pi + theta
+	elseif x1_pixel < x2_pixel and y2_pixel > y1_pixel then -- quadrant IV
+		theta = (math.pi * 2) - theta
+	end
+	return theta
+end
+
+--- adjusts side numbers in the sidebar to 'skip over' listed sides
+--- used in 17A (Blockade) so that depthstalkers appear the same side as the main naga force
+function conceal_sides_sidebar(side_list)
+	local side_num_map = {}
+	for side in wesnoth.sides.iter() do
+		local new_side_num = side.side
+		for i, v in ipairs(side_list) do
+			if side.side >= v then
+				new_side_num = new_side_num - 1
+			end
+		end
+		side_num_map[side.side] = new_side_num
+	end
+	local old_unit_side_ui = wesnoth.interface.game_display.unit_side
+	function wesnoth.interface.game_display.unit_side()
+		local info = old_unit_side_ui()
+		if #info >= 2 then
+			local orig_side_num = info[2][2]["text"]
+			info[2][2]["text"] = side_num_map[tonumber(orig_side_num)]
+		end
+		return info
+	end
+end
+
 ---
 -- Counts the amount of matching units.
 --
@@ -53,25 +156,106 @@ function wesnoth.wml_actions.total_unit_cost(cfg)
 	end
 end
 
----
--- Clears the chat log.
---
--- [clear_chat]
--- [/clear_chat]
----
-function wesnoth.wml_actions.clear_chat(cfg)
-	wesnoth.interface.clear_chat_messages()
+if wesnoth.current_version() < wesnoth.version("1.19.17") then
+	---
+	-- Clears the chat log.
+	--
+	-- [clear_chat]
+	-- [/clear_chat]
+	---
+	function wesnoth.wml_actions.clear_chat(cfg)
+		wesnoth.interface.clear_chat_messages()
+	end
+
+	---
+	-- Get current game zoom level.
+	--
+	-- [store_zoom]
+	--     variable=zoom
+	-- [/store_zoom]
+	---
+	function wesnoth.wml_actions.store_zoom(cfg)
+		wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
+	end
 end
 
----
--- Get current game zoom level.
+--- Conditional tag if player has debug mode set
 --
--- [store_zoom]
---     variable=zoom
--- [/store_zoom]
+-- [if]
+--     [debug_mode]
+--     [/debug_mode]
+--     [then]
+--         ...
+--     [/then]
+-- [/if]
 ---
-function wesnoth.wml_actions.store_zoom(cfg)
-	wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
+function wesnoth.wml_conditionals.debug_mode(cfg)
+	return (wesnoth.game_config.debug or wesnoth.game_config.debug_lua or wesnoth.game_config.mp_debug)
+end
+
+--[=[
+[has_possible_actions]
+Author: MadMax (username on the Battle for Wesnoth forum)
+
+Returns true if all units on a side have both 0 mp and, if next to an enemy, 0 attacks
+
+Required keys:
+side: side to check (defaults to 1)
+]=]
+function wesnoth.wml_conditionals.has_possible_actions(cfg)
+	local side = cfg.side or 1
+	local result = false
+	local units = wesnoth.units.find_on_map{side=side}
+	for i, u in ipairs(units) do
+		if u.moves > 0 then
+			result = true
+			break
+		end
+		if u.attacks_left > 0 then
+			local adjacent_units = wesnoth.units.find_on_map{x=u.x, y=u.y, wml.tag.filter_adjacent{is_enemy=true}}
+			if #adjacent_units > 0 then
+				result = true
+				break
+			end
+		end
+	end
+	return result
+end
+
+--[=[
+[has_item]
+Author: MadMax (username on the Battle for Wesnoth forum)
+
+Test for existence of specific [item]s.
+
+Required keys:
+image: string to search for in item's image, halo, or name attribute
+
+Optional keys:
+StandardLocationFilter for locations to search for item
+]=]
+function wesnoth.wml_conditionals.has_item(cfg)
+	local found = false
+	local image = cfg.image
+	cfg = wml.parsed(cfg)
+	cfg.image = nil
+	local locs = wesnoth.map.find(cfg)
+	for i, hex in ipairs(locs) do
+		local items_list = wesnoth.interface.get_items(hex[1], hex[2])
+		for j, item in ipairs(items_list) do
+			if item.name ~= nil and item.name == image then
+				found = true
+			elseif item.halo ~= nil and item.halo == image then
+				found = true
+			elseif item.image ~= nil and item.image == image then
+				found = true
+			end
+			if found then
+				break
+			end
+		end
+	end
+	return found
 end
 
 --[=[
@@ -176,6 +360,14 @@ function wesnoth.wml_actions.fading_message(cfg)
 	end
 end
 
+function show_image_dialog(image_path)
+	function pre_show(self)
+		self.image.label = image_path
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
 ---
 -- Shows a simple dialog with a scrollable image.
 --
@@ -184,12 +376,47 @@ end
 -- [/show_image_dialog]
 ---
 function wesnoth.wml_actions.show_image_dialog(cfg)
-	local image_path = cfg.image
+	show_image_dialog(cfg.image)
+end
+
+function show_text_box_dialog(text)
 	function pre_show(self)
-		self.image.label = image_path
+		self.text.label = text
 	end
-	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/text_box_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+function show_text_box_borderless_dialog(text)
+	function pre_show(self)
+		self.text.label = text
+	end
+	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/text_box_dialog_borderless.cfg")
+	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
+end
+
+---
+-- Shows a simple dialog with a scrollable text box.
+--
+-- [show_text_box_dialog]
+--     text= ...
+-- [/show_text_box_dialog]
+---
+function wesnoth.wml_actions.show_text_box_dialog(cfg)
+	local borderless = cfg.borderless or false
+	if borderless then
+		show_text_box_borderless_dialog(cfg.text)
+	else
+		show_text_box_dialog(cfg.text)
+	end
+end
+
+function wesnoth.wml_actions.skip_messages(cfg)
+	wesnoth.interface.skip_messages(true)
+end
+
+function wesnoth.wml_actions.unskip_messages(cfg)
+	wesnoth.interface.skip_messages(false)
 end
 
 -- CAUTION: This disables end turn during unit selection and afterwards enables it.

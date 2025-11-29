@@ -1,0 +1,11 @@
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f^EqfY, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f^EqfY, _f^EqfY, _f, _f^EqfY, _f^EqfY, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f^Pr\, _f^EqfY, _f^EqfY, _f, _f^EqfY, _f^EqfY, _f, _f, _f
+_f, _f, _f, _f, _f^EqfY, _f^EqfY, _f^Pr\, _f, _f, _f, _f, _f^Pr\, _f^EqfY, _f^EqfY, _f, _f, _f, _f
+_f, _f, _f, _f^EqfY, _f^EqfY, _f, _f^EqfY, _f^EqfY, _f^Pr\, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f^EqfY, _f^EqfY, _f, _f^EqfY, _f^EqfY, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f^EqfY, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f
+_f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f, _f

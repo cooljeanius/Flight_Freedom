@@ -1,5 +1,7 @@
 -- Lua code used by scenario 11A (River of Skulls)
 
+wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
+
 local start_node = 1
 local dest_node = 23
 local num_nodes = 23
@@ -111,119 +113,6 @@ terrains_to_close[21] =
 	[22] = {{37, 43}},
 }
 
--- adjacency matrix of areas in the map
--- 1: open edge
--- 2: protected edge
--- 0: closed edge
-local adjacency_mat = {}
-for x = 1, num_nodes do
-	adjacency_mat[x] = {}
-	for y = 1, num_nodes do
-		local edge_x = math.min(x, y)
-		local edge_y = math.max(x, y)
-		if terrains_to_close[edge_x] == nil or terrains_to_close[edge_x][edge_y] == nil then
-			adjacency_mat[x][y] = 0
-		else
-			adjacency_mat[x][y] = 1
-		end
-	end
-end
-
-local function is_in_list(e, list1)
-	local result = false
-	for x = 1, #list1 do
-		if list1[x] == e then
-			result = true
-			break
-		end
-	end
-	return result
-end
-
-local function concat_list(list1, list2)
-	for x = 1, #list2 do
-		table.insert(list1, list2[x])
-	end
-	return list1
-end
-
-local function list_shallow_copy(list1)
-	local new_list = {}
-	for x = 1, #list1 do
-		table.insert(new_list, list1[x])
-	end
-	return new_list
-end
-
-local function get_connections(node)
-	local row = adjacency_mat[node]
-	local connections = {}
-	for x = 1, #row do
-		if row[x] > 0 then
-			table.insert(connections, x)
-		end
-	end
-	return connections
-end
-
--- randomly traverse graph to protect a guaranteed path from cur_node to dest_node
-local function find_guaranteed_path(cur_node, cur_path, dest_node, max_guaranteed_path_length)
-	local path = nil
-	if #cur_path < max_guaranteed_path_length then
-		local connections = get_connections(cur_node)
-		mathx.shuffle(connections)
-		for x = 1, #connections do
-			local possible_connection = connections[x]
-			if not is_in_list(possible_connection, cur_path) then
-				local new_cur_path = list_shallow_copy(cur_path)
-				table.insert(new_cur_path, possible_connection)
-				if possible_connection == dest_node then
-					path = new_cur_path
-				else
-					path = find_guaranteed_path(possible_connection, new_cur_path, dest_node, max_guaranteed_path_length)
-					if path ~= nil then
-						break
-					end
-				end
-			end
-		end
-	end
-	return path
-end
-
--- test if graph is connected
-local function enumerate_connected_nodes(cur_node, visited_nodes)
-	local connections = get_connections(cur_node)
-	local nodes_to_visit = {}
-	for x = 1, #connections do
-		local possible_connection = connections[x]
-		if visited_nodes[possible_connection] == nil then
-			visited_nodes[possible_connection] = true
-			table.insert(nodes_to_visit, possible_connection)
-		end
-	end
-	for x = 1, #nodes_to_visit do
-		enumerate_connected_nodes(nodes_to_visit[x], visited_nodes)
-	end
-	return visited_nodes
-end
-
-local function is_connected()
-	-- BFS from starting node
-	local connected_nodes = enumerate_connected_nodes(start_node, {})
-	local result = false
-	local num_nodes_connected = 0
-	for x = 1, num_nodes do
-		if connected_nodes[x] ~= nil then
-			num_nodes_connected = num_nodes_connected + 1
-		end
-	end
-	if num_nodes_connected == num_nodes then
-		result = true
-	end
-	return result
-end
-
 local function get_image_coords_from_hex(hex_x, hex_y)
 	-- obtained from measurements of the map jpg (pixels / map tiles) after borders cropped
 	local hex_size_x = 37.35
@@ -258,21 +147,42 @@ function hide_map_coords_ui()
 end
 
 function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
+	-- adjacency matrix of areas in the map
+	-- 1: open edge
+	-- 2: protected edge
+	-- 0: closed edge
+	local initial_adjacency_mat = {}
+	for x = 1, num_nodes do
+		initial_adjacency_mat[x] = {}
+		for y = 1, num_nodes do
+			local edge_x = math.min(x, y)
+			local edge_y = math.max(x, y)
+			if terrains_to_close[edge_x] == nil or terrains_to_close[edge_x][edge_y] == nil then
+				initial_adjacency_mat[x][y] = 0
+			else
+				initial_adjacency_mat[x][y] = 1
+			end
+		end
+	end
+
+	graph = Graph:new()
+	graph:init_adjacency_mat(initial_adjacency_mat)
+
 	local map_image_overlay = ""
-	local guaranteed_path = find_guaranteed_path(start_node, {start_node}, dest_node, max_guaranteed_path_length)
+	local guaranteed_path = graph:find_guaranteed_path(start_node, {start_node}, dest_node, max_guaranteed_path_length)
 	-- now protect these edges
 	for x = 1, (#guaranteed_path - 1) do
 		local node1 = guaranteed_path[x]
 		local node2 = guaranteed_path[x+1]
-		adjacency_mat[node1][node2] = 2
-		adjacency_mat[node2][node1] = 2
+		graph:set_edge(node1, node2, 2)
+		graph:set_edge(node2, node1, 2)
 	end
 
 	-- get edges not in guaranteed path
 	local candidate_closable_edges = {}
 	for x = 1, num_nodes do
 		for y = x, num_nodes do
-			if adjacency_mat[x][y] == 1 then
+			if graph:get_edge(x, y) == 1 then
 				table.insert(candidate_closable_edges, {x, y})
 			end
 		end
@@ -289,11 +199,11 @@ function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
 			node1 = node2
 			node2 = temp
 		end
-		adjacency_mat[node1][node2] = 0
-		adjacency_mat[node2][node1] = 0
+		graph:set_edge(node1, node2, 0)
+		graph:set_edge(node2, node1, 0)
 		-- only close edge if graph remains fully connected
 		-- i.e. closing this edge wouldn't lock any of the map away
-		if is_connected() then
+		if graph:is_connected() then
 			local terrain_list = terrains_to_close[node1][node2]
 			for i = 1, #terrain_list do
 				local terrain_x = terrain_list[i][1]
@@ -313,8 +223,8 @@ function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
 				break
 			end
 		else
-			adjacency_mat[node1][node2] = 1
-			adjacency_mat[node2][node1] = 1
+			graph:set_edge(node1, node2, 1)
+			graph:set_edge(node2, node1, 1)
 		end
 	end
 	return map_image_overlay
