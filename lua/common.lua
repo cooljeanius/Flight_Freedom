@@ -94,7 +94,7 @@ function find_angle_between_hexes(x1, y1, x2, y2)
 end
 
 --- adjusts side numbers in the sidebar to 'skip over' listed sides
---- used in 17A (Blockade) so that depthstalkers appear the same side as the main naga force
+--- e.g. in 17A (Blockade) used so that depthstalkers appear the same side as the main naga force
 function conceal_sides_sidebar(side_list)
 	local side_num_map = {}
 	for side in wesnoth.sides.iter() do
@@ -197,7 +197,8 @@ end
 [has_possible_actions]
 Author: MadMax (username on the Battle for Wesnoth forum)
 
-Returns true if all units on a side have both 0 mp and, if next to an enemy, 0 attacks
+Returns false if all units on a side have both 0 mp and, if next to an enemy, 0 attacks.
+Otherwise returns true.
 
 Required keys:
 side: side to check (defaults to 1)
