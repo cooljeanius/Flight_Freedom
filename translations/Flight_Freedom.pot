@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-11-29 23:27 UTC\n"
+"POT-Creation-Date: 2025-12-04 05:24 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -509,249 +509,249 @@ msgstr ""
 
 #. [lua]: label_rooms
 #. all of these entries must have the name of each entry's color in them
-#: Flight_Freedom/lua/s11b.lua:1430
+#: Flight_Freedom/lua/s11b.lua:1439
 msgid "Blood. How fascinating. Such a potent symbol of our life, the red ichor of our vitality. Dark wizards throughout Irdya know of its power and have learned to harness it. By the judicious addition of blood, I can increase by many-fold the potency of the runes and glyphs that shape the void in the heart of the Engine. But I need more blood. Fresh blood. Where, oh where to find it?"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1431
+#: Flight_Freedom/lua/s11b.lua:1440
 msgid "My experiments have borne fruit. After so many experiments and burned apprentices, I have done it! Such a wonderful blue glow, these jars of metal and glass that store lightning in a bottle. With these, the Engine can discharge in a flash the energy needed to breach the final veil between the planes."
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1432
+#: Flight_Freedom/lua/s11b.lua:1441
 msgid "Sometimes I consider the toll of my research. I have given so much to the Engine. My fortune, the rarest of resources, the lives of my assistants, and most importantly my own blood, sweat, and tears. Even the few who I once considered to be friends have left me. Oh, how at times I miss the world outside of my laboratory, the green grass, the tall trees, the wind over the rolling hills. But I have come so far. I cannot turn back. I will not turn back. With each passing day the call of the void grows louder."
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1433
+#: Flight_Freedom/lua/s11b.lua:1442
 msgid "So many discordant forces suffuse the Engine. Strands of magic as prolific as the rainbow itself. How fitting, then, that I have made an artificial rainbow. By carefully cutting the purest of crystals into exact shapes, white light can be split into a riot of colors. With the proper enchantments, these crystals can split magic itself."
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1434
+#: Flight_Freedom/lua/s11b.lua:1443
 msgid "The essence of the void. Of nothingness, of that which is not. The purest black, the emptiest nonexistence. Even as I plumb its secrets, I sometimes feel that the void is staring back. But I must press on. Infinity awaits! Through nothing, I shall gain the power of everything. And those Magisters who expelled me from Alduin... they shall be the first to feel my wrath."
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1435
+#: Flight_Freedom/lua/s11b.lua:1444
 msgid "I lost my best apprentice, Goryi, today. While we were concentrating a sphere of pure fire magic, a moment of distraction disrupted our containment charm. The resulting magical flash left Goryi as nothing but a pile of bones, bleached yellow by the fury of the element unchained. Goryi was the apprentice who believed the most in our cause, in the awesome potential of the Engine to be. Perhaps I even would have granted him part of the reward I once promised him. At least his death shall serve the cause of my ascension."
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1443
+#: Flight_Freedom/lua/s11b.lua:1452
 msgid "Whitefire"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1444
+#: Flight_Freedom/lua/s11b.lua:1453
 msgid "Bleeding Moon"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1445
+#: Flight_Freedom/lua/s11b.lua:1454
 msgid "Scatterseed"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1446
+#: Flight_Freedom/lua/s11b.lua:1455
 msgid "Deeproot"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1447
+#: Flight_Freedom/lua/s11b.lua:1456
 msgid "Scryer's Bloom"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1448
+#: Flight_Freedom/lua/s11b.lua:1457
 msgid "Thorntress"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1449
+#: Flight_Freedom/lua/s11b.lua:1458
 msgid "Summit Star"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1450
+#: Flight_Freedom/lua/s11b.lua:1459
 msgid "Kindlefire"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1451
+#: Flight_Freedom/lua/s11b.lua:1460
 msgid "Stillseed"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1452
+#: Flight_Freedom/lua/s11b.lua:1461
 msgid "Reaper's Moon"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1453
+#: Flight_Freedom/lua/s11b.lua:1462
 msgid "Verglas Bloom"
 msgstr ""
 
 #. [lua]: label_rooms
-#: Flight_Freedom/lua/s11b.lua:1454
+#: Flight_Freedom/lua/s11b.lua:1463
 msgid "Blackfire"
 msgstr ""
 
 #. [lua]: day_to_month_date
-#: Flight_Freedom/lua/s11b.lua:1467
+#: Flight_Freedom/lua/s11b.lua:1476
 msgid "$month $day"
 msgstr ""
 
 #. [lua]: generate_journal
 #. none of these can have any names of a color in them
-#: Flight_Freedom/lua/s11b.lua:1484
+#: Flight_Freedom/lua/s11b.lua:1493
 msgid "Oh, the wonderful, fabulous workings of the Engine! Countless paths and etchings of magic, to work in such harmony of discord as to sunder the fabric of our world itself! Night after fitful night, I find myself wandering its infinite labyrinth in the eye of my mind. Approaching the void that I so fervently seek."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1485
+#: Flight_Freedom/lua/s11b.lua:1494
 msgid "In my studies I have become increasingly convinced that the void has a presence. I have contemplated how this may be, how oblivion itself can be made tangible, in hopes that I may find yet more terrible insights for the Engine. Yet understanding eludes me. Always."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1486
+#: Flight_Freedom/lua/s11b.lua:1495
 msgid "I caught one of my assistants, Yadna, stealing from me. Somehow she had found a way to bypass the inner wards, sneaking precious metals under the cover of spell to a lover down in the valley. Such treachery cannot be tolerated. I am planning a grand experiment, in generating self-perpetuating etheric harmonics using a closed temporal loop to precisely synchronize the automatic redirection of life force. Her life force will do."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1487
+#: Flight_Freedom/lua/s11b.lua:1496
 msgid "As I seek to fashion new magics from the fundamental firmanent of the universe, I am reminded of my days in the Great Academy of Magic. Even in my youth I was eager to learn. How I would pore over the tomes of the library, in search of every last morsel of knowledge. But my curiosity was too much for those moribund Magisters. They could not stand my intelligence, my growing wisdom, my emerging greatness! Now I have acquired such secrets as to one day become the master of existence itself!"
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1488
+#: Flight_Freedom/lua/s11b.lua:1497
 msgid "I slipped on a loose flagstone today. My knee will be sore for a while."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1489
+#: Flight_Freedom/lua/s11b.lua:1498
 msgid "Throughout my life I have been deemed mad. At first by my own family, who termed me 'touched' after I manifested accidental magic as a toddler. By my classmates in the Academy, whom I could always hear mocking me behind my back. By the Professors and Magisters. By my various illicit patrons as I was forced to make my way in the world after leaving Alduin, criminals who sought to employ a rogue mage to defeat their enemies yet never dared to show their face to me. But it is they who are mad! It is they who deny the pursuit of greatness, the pursuit of all knowledge and power! Work on the Engine proceeds by the day. Soon I shall ascend to mastery of the void, and through nothing I shall attain everything!"
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1490
+#: Flight_Freedom/lua/s11b.lua:1499
 msgid "The next phase of the Engine demands much. Eldritch, timeless bindings of pure, youthful vigor, a fusion of life and unlife, a magical contradiction to apply pressure on the local metric tensor. Perhaps the application of a necromantic binding glyph to the beating heart of a virgin will generate the requisite combination of energies."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1491
+#: Flight_Freedom/lua/s11b.lua:1500
 msgid "At times I imagine how I shall reshape Irdya after the Engine is complete. Not only Irdya but the entire universe! All those who once laughed at me, the multitude of lesser men and women who have wronged me during my life. Oh, how they shall suffer! As for my laboratory assistants, perhaps I shall fulfill my promise of power beyond their imagination. Or perhaps not, their imagination was always limited after all."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1492
+#: Flight_Freedom/lua/s11b.lua:1501
 msgid "I once again find myself in need of apprentices. The locals are strong in body, hardened from lives of toil on this hostile isle. When approached in secret many of them are eager to join my cause as assistants, if none else but for an escape from the oppression of the orcs. They have proved useful for manual labor and the occasional sacrifice, yet they are weak in mind and ill-served as apprentices. My agents in Wesnoth must redouble their efforts in recruitment. But they report that rogue mages and other magical cast-offs grow ever more difficult to find."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1493
+#: Flight_Freedom/lua/s11b.lua:1502
 msgid "My agents in Wesnoth report that word has spread about me among the wizarding underworld. 'Bringer of the Void', I have been rather derisively rumored. Short-sighted fools! They comprehend not the scope of my genius! At least this Laboratory and the Engine remain unknown to the wider world. The local orcs have learned to avoid us, though they know not the cause of their fear. But I have no doubt that the Royal Army would hasten to destroy us should they learn of the Engine."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1494
+#: Flight_Freedom/lua/s11b.lua:1503
 msgid "I have noticed leaps of logic coming more quickly to my brain as of late. Solutions to higher-order nonlinear partial differential equations revealing themselves almost as soon as I put quill to paper, new alchemical brews of just the exact properties needed for the Engine, early prototypes that not only function but exceed my expectations... it is almost as if something is helping me in my labors. Or perhaps this is my intellect continuing to expand, as my mind grows to embrace new heights of genius."
 msgstr ""
 
 #. [lua]: generate_journal
-#: Flight_Freedom/lua/s11b.lua:1495
+#: Flight_Freedom/lua/s11b.lua:1504
 msgid "In my laboratory I have wrought superlative technologies beyond the wildest imagining of the known world. Oh, how even the best minds of the dwarves would envy my grand accomplishments! It has not escaped my reckoning that my artifice could conquer the Great Continent should I so choose. Mass-produced legions of indefatigable Automata that would sweep away even the bravest of warriors. Computing machines by which I could tabulate every hair on each of my subjects' heads should I so desire. Materials of immense strength that would serve as the foundation of the greatest cities to grace Irdya. But the Engine shall grant me power infinitely greater than any king or emperor could ever hope to wield."
 msgstr ""
 
 #. [lua]: orbs_y
-#: Flight_Freedom/lua/s11b.lua:1657
+#: Flight_Freedom/lua/s11b.lua:1666
 msgid "This time the machine did not activate. There must be a way to safely break the orbs!"
 msgstr ""
 
 #. [lua]: wesnoth.wml_actions.display_console_screen
 #. number of periods should vary so that status entries are aligned
-#: Flight_Freedom/lua/s11b.lua:1763
+#: Flight_Freedom/lua/s11b.lua:1772
 msgid "VOID ENGINE STATUS............<span color='yellow'>INITIALIZING</span>"
 msgstr ""
 
 #. [lua]: wesnoth.wml_actions.display_console_screen
-#: Flight_Freedom/lua/s11b.lua:1764
+#: Flight_Freedom/lua/s11b.lua:1773
 msgid "INNER CONTAINMENT FIELD.......<span color='yellow'>ENABLED</span>"
 msgstr ""
 
 #. [lua]: wesnoth.wml_actions.display_console_screen
-#: Flight_Freedom/lua/s11b.lua:1766
+#: Flight_Freedom/lua/s11b.lua:1775
 msgid "VOID ENGINE STATUS............<span color='green'>READY</span>"
 msgstr ""
 
 #. [lua]: wesnoth.wml_actions.display_console_screen
-#: Flight_Freedom/lua/s11b.lua:1767
+#: Flight_Freedom/lua/s11b.lua:1776
 msgid "INNER CONTAINMENT FIELD.......DISABLED"
 msgstr ""
 
 #. [lua]: wesnoth.wml_actions.display_console_screen
-#: Flight_Freedom/lua/s11b.lua:1770
+#: Flight_Freedom/lua/s11b.lua:1779
 msgid "OUTER CONTAINMENT FIELD.......<span color='red'>OFFLINE</span>"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1783
+#: Flight_Freedom/lua/s11b.lua:1792
 msgid "ENERGY SOURCE $i:"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1785
+#: Flight_Freedom/lua/s11b.lua:1794
 msgid "   CHARGE.....................<span color='green'>100%</span>"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1786
+#: Flight_Freedom/lua/s11b.lua:1795
 msgid "   TRANSFER...................<span color='yellow'>STANDBY</span>"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1788
+#: Flight_Freedom/lua/s11b.lua:1797
 msgid "   CHARGE.....................<span color='red'>0%</span>"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1789
+#: Flight_Freedom/lua/s11b.lua:1798
 msgid "   TRANSFER...................<span color='green'>COMPLETED</span>"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1793
+#: Flight_Freedom/lua/s11b.lua:1802
 msgid "ALARMS TRIGGERED..............<span color='red'>$i</span>"
 msgstr ""
 
 #. [lua]: list_contains
-#: Flight_Freedom/lua/s11b.lua:1795
+#: Flight_Freedom/lua/s11b.lua:1804
 msgid "ALARMS TRIGGERED..............<span color='green'>0</span>"
 msgstr ""
 
 #. [lua]: tremor
-#: Flight_Freedom/lua/s11b.lua:1832
+#: Flight_Freedom/lua/s11b.lua:1841
 msgid "The machine is active! By Gar-Alagar... no..."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:2062
+#: Flight_Freedom/lua/s11b.lua:2071
 msgid "I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about gutting him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:2063
+#: Flight_Freedom/lua/s11b.lua:2072
 msgid "That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:2064
+#: Flight_Freedom/lua/s11b.lua:2073
 msgid "Sol'kan lies dead. Me and my buddies jumped him on the way to the privy and I strangled him with my bare hands. Then we cut his ugly head off to make sure he can't come back. But the containment fields are still up. We hoped that they would fall with his death. We've pored over every book in the library but his magic is far too advanced for us. The apprentices threw every spell they had at the barriers with no luck. We even tried digging under the containment fields but we found the dirt to be as hard as stone.\n\nTempers are running high. Nobody knows how we're going to find more food when the supplies down here run out. Already fights are breaking out, old grudges and spite boiling over. And lots of us have lost hope."
 msgstr ""
 
 #. [lua]: assistant_note_y
-#: Flight_Freedom/lua/s11b.lua:2065
+#: Flight_Freedom/lua/s11b.lua:2074
 msgid "I'm the last one left. We ran out of food a month ago. Everyone else has either starved to death, taken their own life, or was eaten by their fellows. It's been three days since I've had a bite to eat, and I already feel my strength starting to fade. I know my death is coming soon. Gods, I should have never come down here..."
 msgstr ""
 

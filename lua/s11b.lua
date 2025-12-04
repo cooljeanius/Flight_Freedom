@@ -923,6 +923,8 @@ end
 local function place_random_rooms(current_rooms, num_random_rooms)
 	local map_size_x = wesnoth.current.map.playable_width
 	local map_size_y = wesnoth.current.map.playable_height
+	local malakar_start_x = wml.variables["malakar_start_x"]
+	local malakar_start_y = wml.variables["malakar_start_y"]
 	local random_rooms = {}
 
 	-- this includes walls
@@ -989,10 +991,17 @@ local function place_random_rooms(current_rooms, num_random_rooms)
 				local monster_type = nil
 				if level == 1 then
 					monster_type = mathx.random_choice{"Ghost", "Skeleton", "Skeleton Archer", "Soulless"}
+				-- prevent high-level spirits from spawning near start position
+				elseif wesnoth.map.distance_between({malakar_start_x, malakar_start_y}, hex) > math.floor(math.min(map_size_x, map_size_y) / 2) then
+					if level == 2 then
+						monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
+					else
+						monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Draug", "Banebow"}
+					end
 				elseif level == 2 then
-					monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
+					monster_type = mathx.random_choice{"Shadow", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
 				else
-					monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Draug", "Banebow"}
+					monster_type = mathx.random_choice{"Nightgaunt", "Draug", "Draug", "Banebow"}
 				end
 				wesnoth.units.to_map({type=monster_type, side=2}, hex[1], hex[2])
 			end
