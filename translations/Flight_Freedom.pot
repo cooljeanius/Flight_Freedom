@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-10-31 05:15 UTC\n"
+"POT-Creation-Date: 2025-12-13 19:51 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7268,88 +7268,88 @@ msgid "NOTE: The campaign will not end if Hartholar is killed."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:247
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:252
 msgid "Saurians! You have no part in this madness. The humans are our common enemy!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:251
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:256
 msgid "These saurians are sworn to my service! You cannot stand against them!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:259
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:264
 msgid "Hartholar! End these games! As we fight, the humans approach!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:264
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:269
 msgid "Hartholar does not respond."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:273
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:278
 msgid "Enough! Hartholar, surrender at once!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:311
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:316
 msgid "Stay your hand! We do not have the right of assassination!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:325
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:330
 msgid "Die, foul one!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:349
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:362
 msgid "I will kill Hartholar, for the good of my tribe! Malakar, do not try to stop me. Although I understand that you are bound by honor to spare your vile enemy, I will do what must be done!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:353
-msgid "Loyal drakes! Kill the traitor, before he reaches Hartholar!"
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:366
+msgid "Loyal drakes! Kill the traitor, before he kills Hartholar!"
 msgstr ""
 
-#. [message]: speaker=unit
+#. [message]: speaker=second_unit
 #. Note for translators: this is supposed to be sarcastic:
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:377
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:384
 msgid "For Malakar, the honorable! So honorable that he cannot even strike down his enemies!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:393
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:396
 msgid "The Jamolar tribe is shattered, and my honor blackened! Nobody will stand with me now!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:449
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:452
 msgid "Hartholar! There, to the north, are the humans' scouts! All hope is lost! As chief, I will face the hordes in single combat."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:453
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:456
 msgid "Hartholar, you are bound by this sacrifice to accept my people into your tribe. Perhaps your combined strength can succeed where ours has failed."
 msgstr ""
 
 #. [event]: type=Drake Priest, id=Morlin Ka
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:465
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:468
 msgid "Morlin Ka"
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:476
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:479
 msgid "The Kakatar chief speaks true! Our fighting in the face of a greater enemy is a dishonor to Gar-Alagar himself!"
 msgstr ""
 
 #. [message]: speaker=Hartholar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:480
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:483
 msgid "Stay, warrior-chief! This sacrifice... I see that you are free of Stakron's taint. Forgive me, Malakar, I have done you a great wrong. I pledge myself and my tribe to your service, upon my honor."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:484
+#: Flight_Freedom/scenarios_b/02b_Swamps_Jamolar.cfg:487
 msgid "Then we must plan our resistance!"
 msgstr ""
 
