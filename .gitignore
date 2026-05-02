@@ -6,3 +6,4 @@
 
 # has private things in it:
 _server.pbl
+.vscode/settings.json

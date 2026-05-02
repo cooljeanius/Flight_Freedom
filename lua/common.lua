@@ -1,19 +1,3 @@
----
--- from After the Storm, by shadowm
----
-
-function safe_random(arg)
-	wml.fire("set_variable", {
-		name = "temp_ats_lua_random",
-		rand = arg,
-	})
-
-	local r = wml.variables["temp_ats_lua_random"]
-	wml.variables["temp_ats_lua_random"] = nil
-
-	return r
-end
-
 --- return a replay-safe random number sampled from specified normal distribution
 function random_norm(mean, sd)
 	local u = mathx.random()
@@ -21,6 +5,10 @@ function random_norm(mean, sd)
 	local n = math.sqrt(-2.0 * math.log(u)) * math.cos(2.0 * math.pi * v)
 	local r = (n * sd) + mean
 	return r
+end
+
+function norm_pdf(x, mean, sd)
+	return math.exp(-1.0*((x-mean)^2)/(2.0*sd*sd)) / math.sqrt(2.0 * math.pi * sd * sd)
 end
 
 --- randomly generate k integers from 1 to n without replacement
@@ -91,6 +79,17 @@ function find_angle_between_hexes(x1, y1, x2, y2)
 		theta = (math.pi * 2) - theta
 	end
 	return theta
+end
+
+-- find the distance between two hexes in a straight line between them
+function cartesian_distance_between_hexes(x1, y1, x2, y2)
+	local q1, r1, s1 = table.unpack(get_cubic({x1, y1}))
+	local q2, r2, s2 = table.unpack(get_cubic({x2, y2}))
+	local x1_pixel = (3.0 / 2) * q1
+	local y1_pixel = ((math.sqrt(3.0) / 2) * q1) + (math.sqrt(3.0) * r1)
+	local x2_pixel = (3.0 / 2) * q2
+	local y2_pixel = ((math.sqrt(3.0) / 2) * q2) + (math.sqrt(3.0) * r2)
+	return math.sqrt(((x1_pixel - x2_pixel) ^ 2) + ((y1_pixel - y2_pixel) ^ 2)) / math.sqrt(3)
 end
 
 --- adjusts side numbers in the sidebar to 'skip over' listed sides
@@ -362,7 +361,7 @@ function wesnoth.wml_actions.fading_message(cfg)
 end
 
 function show_image_dialog(image_path)
-	function pre_show(self)
+	local function pre_show(self)
 		self.image.label = image_path
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/image_dialog.cfg")
@@ -381,7 +380,7 @@ function wesnoth.wml_actions.show_image_dialog(cfg)
 end
 
 function show_text_box_dialog(text)
-	function pre_show(self)
+	local function pre_show(self)
 		self.text.label = text
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/text_box_dialog.cfg")
@@ -389,7 +388,7 @@ function show_text_box_dialog(text)
 end
 
 function show_text_box_borderless_dialog(text)
-	function pre_show(self)
+	local function pre_show(self)
 		self.text.label = text
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/text_box_dialog_borderless.cfg")

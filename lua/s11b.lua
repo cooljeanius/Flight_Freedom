@@ -3,7 +3,7 @@
 local _ = wesnoth.textdomain "wesnoth-Flight_Freedom"
 
 local functional = wesnoth.require("functional")
-wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
+wesnoth.dofile('~add-ons/Flight_Freedom/lua/dungeonmapgen.lua')
 
 ------------------------
 ----- dynamic difficulty handling functions
@@ -102,7 +102,7 @@ local function show_journal_dialog(text, font)
 			text_font = "Oldania ADF Std"
 		end
 	end
-	function pre_show(self)
+	local function pre_show(self)
 		self.text.label = "<span font_family='" .. text_font .. "' size='xx-large' color='#000000'>" .. text .. "</span>"
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
@@ -111,351 +111,6 @@ end
 
 function wesnoth.wml_actions.show_journal_dialog(cfg)
 	show_journal_dialog(cfg.text, cfg.font)
-end
-
-------------------------
------ Room class for room creation, initial terrain painting, and collision checking
-------------------------
-
--- x1 and y1 refer to left corner on Wesnoth map
--- r and s refer to room size in cubic coordinates, inclusive of corners
-Room = {x1 = 0, y1 = 0, r_height = 0, s_height = 0}
-
-function Room:new(o)
-	o = o or {}
-	setmetatable(o, self)
-	self.__index = self
-	return o
-end
-
-function Room:set_dimensions(r_height, s_height)
-	self.r_height = r_height
-	self.s_height = s_height
-end
-
-function Room:set_left_corner(x1, y1)
-	self.x1 = x1
-	self.y1 = y1
-end
-
-function Room:left_corner()
-	return {self.x1, self.y1}
-end
-
-function Room:top_corner()
-	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
-	q = q + (self.r_height - 1)
-	r = r - (self.r_height - 1)
-	return from_cubic(q, r, s)
-end
-
-function Room:bottom_corner()
-	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
-	q = q + (self.s_height - 1)
-	s = s - (self.s_height - 1)
-	return from_cubic(q, r, s)
-end
-
-function Room:right_corner()
-	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
-	q = q + (self.r_height - 1) + (self.s_height - 1)
-	r = r - (self.r_height - 1)
-	s = s - (self.s_height - 1)
-	return from_cubic(q, r, s)
-end
-
-function Room:get_approx_center()
-	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
-	local half_r_height = math.ceil(self.r_height / 2)
-	local half_s_height = math.ceil(self.s_height / 2)
-	q = q + (half_r_height - 1) + (half_s_height - 1)
-	r = r - (half_r_height - 1)
-	s = s - (half_s_height - 1)
-	return from_cubic(q, r, s)
-end
-
-function Room:fits_in_map()
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	local fits = true
-	if (self.x1 < 1) or (self.y1 < 1) or (self.x1 > map_size_x) or (self.y1 > map_size_y) then
-		fits = false
-	end
-	local x2, y2 = table.unpack(self:top_corner())
-	if (x2 < 1) or (y2 < 1) or (x2 > map_size_x) or (y2 > map_size_y) then
-		fits = false
-	end
-	x2, y2 = table.unpack(self:bottom_corner())
-	if (x2 < 1) or (y2 < 1) or (x2 > map_size_x) or (y2 > map_size_y) then
-		fits = false
-	end
-	x2, y2 = table.unpack(self:right_corner())
-	if (x2 < 1) or (y2 < 1) or (x2 > map_size_x) or (y2 > map_size_y) then
-		fits = false
-	end
-	return fits
-end
-
--- includes walls
-function Room:contains_hex(x, y)
--- start at left corner, iterate across width of room (in x-coordinate), and check y coordinates
-	local in_room = false
-	local x1 = self.x1
-	local x2 = self.x1 + (self.r_height - 1) + (self.s_height - 1)
-	local y1 = self.y1
-	local y2 = self.y1
-	for x_cur = x1, x2 do
-		local x_dist = x_cur - x1 + 1
-		if x_cur == x and y >= y1 and y <= y2 then
-			in_room = true
-			break
-		end
-		if x_dist < self.r_height then
-			-- y1 moves up
-			y1 = y1 - (x_cur % 2)
-		else
-			-- y1 moves down
-			y1 = y1 + ((x_cur - 1) % 2)
-		end
-		if x_dist < self.s_height then
-			-- y2 moves down
-			y2 = y2 + ((x_cur - 1) % 2)
-		else
-			-- y2 moves up
-			y2 = y2 - (x_cur % 2)
-		end
-	end
-	return in_room
-end
-
-function Room:get_edge_hexes()
-	local edge_hexes = {}
-	local x1 = self.x1
-	local x2 = self.x1 + (self.r_height - 1) + (self.s_height - 1)
-	local y1 = self.y1
-	local y2 = self.y1
-	for x_cur = x1, x2 do
-		local x_dist = x_cur - x1 + 1
-		local hex1 = {x_cur, y1}
-		table.insert(edge_hexes, hex1)
-		if y1 ~= y2 then
-			local hex2 = {x_cur, y2}
-			table.insert(edge_hexes, hex2)
-		end
-		if x_dist < self.r_height then
-			-- y1 moves up
-			y1 = y1 - (x_cur % 2)
-		else
-			-- y1 moves down
-			y1 = y1 + ((x_cur - 1) % 2)
-		end
-		if x_dist < self.s_height then
-			-- y2 moves down
-			y2 = y2 + ((x_cur - 1) % 2)
-		else
-			-- y2 moves up
-			y2 = y2 - (x_cur % 2)
-		end
-	end
-	return edge_hexes
-end
-
-function Room:get_specific_edge_hexes()
-	local nw_edge_hexes = {}
-	local ne_edge_hexes = {}
-	local sw_edge_hexes = {}
-	local se_edge_hexes = {}
-	local x1 = self.x1
-	local x2 = self.x1 + (self.r_height - 1) + (self.s_height - 1)
-	local y1 = self.y1
-	local y2 = self.y1
-	for x_cur = x1, x2 do
-		local x_dist = x_cur - x1 + 1
-		local hex1 = {x_cur, y1}
-		local hex2 = {x_cur, y2}
-		if x_dist < self.r_height then
-			-- traversing NW edge; y1 moves up
-			y1 = y1 - (x_cur % 2)
-			table.insert(nw_edge_hexes, hex1)
-		else
-			-- traversing NE edge; y1 moves down
-			if x_dist == self.r_height then
-				-- top corner so it's part of NW and NE edges
-				table.insert(nw_edge_hexes, hex1)
-			end
-			table.insert(ne_edge_hexes, hex1)
-			y1 = y1 + ((x_cur - 1) % 2)
-		end
-		if x_dist < self.s_height then
-			-- traversing SW edge; y2 moves down
-			table.insert(sw_edge_hexes, hex2)
-			y2 = y2 + ((x_cur - 1) % 2)
-		else
-			-- traversing SE edge; y2 moves up
-			if x_dist == self.s_height then
-				-- bottom corner so it's part of SW and SE edges
-				table.insert(sw_edge_hexes, hex2)
-			end
-			table.insert(se_edge_hexes, hex2)
-			y2 = y2 - (x_cur % 2)
-		end
-	end
-	return {nw_edge_hexes, ne_edge_hexes, sw_edge_hexes, se_edge_hexes}
-end
-
-function Room:set_wall_terrain(terrain)
-	local edge_hexes = self:get_edge_hexes()
-	for i, hex in ipairs(edge_hexes) do
-		local x1 = hex[1]
-		local y1 = hex[2]
-		wesnoth.current.map[{x1, y1}] = terrain
-	end
-end
-
-function Room:get_inner_hexes()
-	local inner_hexes = {}
-	local x1 = self.x1
-	local x2 = self.x1 + (self.r_height - 1) + (self.s_height - 1)
-	local y1 = self.y1
-	local y2 = self.y1
-	for x_cur = x1, x2 do
-		local x_dist = x_cur - x1 + 1
-		if x_cur > x1 and x_cur < x2 then
-			for y_cur = y1, y2 do
-				if y_cur > y1 and y_cur < y2 then
-					local hex1 = {x_cur, y_cur}
-					table.insert(inner_hexes, hex1)
-				end
-			end
-		end
-		if x_dist < self.r_height then
-			-- y1 moves up
-			y1 = y1 - (x_cur % 2)
-		else
-			-- y1 moves down
-			y1 = y1 + ((x_cur - 1) % 2)
-		end
-		if x_dist < self.s_height then
-			-- y2 moves down
-			y2 = y2 + ((x_cur - 1) % 2)
-		else
-			-- y2 moves up
-			y2 = y2 - (x_cur % 2)
-		end
-	end
-	return inner_hexes
-end
-
-function Room:set_inner_terrain(terrain)
-	local inner_hexes = self:get_inner_hexes()
-	for i, hex in ipairs(inner_hexes) do
-		local x1 = hex[1]
-		local y1 = hex[2]
-		wesnoth.current.map[{x1, y1}] = terrain
-	end
-end
-
---check if any of the border tiles of r1 are in r2
-Room.half_intersect = function(r1, r2)
-	local intersects = false
-	local edge_hexes = r1:get_edge_hexes()
-	for i, hex in ipairs(edge_hexes) do
-		local x1 = hex[1]
-		local y1 = hex[2]
-		intersects = r2:contains_hex(x1, y1)
-		if intersects then
-			break
-		end
-	end
-	return intersects
-end
-
-function Room:intersects_with(r2)
-	local intersects = false
-	return (Room.half_intersect(self, r2) or Room.half_intersect(r2, self))
-end
-
-function Room:presenting_side_to(r2)
-	-- find sides closest to each other
-	local center_x, center_y = table.unpack(self:get_approx_center())
-	local r2_center_x, r2_center_y = table.unpack(r2:get_approx_center())
-	local side = ""
-	if center_x < r2_center_x and center_y < r2_center_y then
-		side = "se"
-	elseif center_x >= r2_center_x and center_y < r2_center_y then
-		side = "sw"
-	elseif center_x < r2_center_x and center_y >= r2_center_y then
-		side = "ne"
-	elseif center_x >= r2_center_x and center_y >= r2_center_y then
-		side = "nw"
-	end
-	return side
-end
-
-function Room:minimum_wall_distance(r2)
-	local presenting_side = self:presenting_side_to(r2)
-	local source_hex_list = nil
-	local dest_hex_list = nil
-	if presenting_side == "se" then
-		source_hex_list = self:get_specific_edge_hexes()[4] -- SE wall
-		dest_hex_list = r2:get_specific_edge_hexes()[1] -- NW wall
-	elseif presenting_side == "sw" then
-		source_hex_list = self:get_specific_edge_hexes()[3] -- SW wall
-		dest_hex_list = r2:get_specific_edge_hexes()[2] -- NE wall
-	elseif presenting_side == "ne" then
-		source_hex_list = self:get_specific_edge_hexes()[2] -- NE wall
-		dest_hex_list = r2:get_specific_edge_hexes()[3] -- SW wall
-	elseif presenting_side == "nw" then
-		source_hex_list = self:get_specific_edge_hexes()[1] -- NW wall
-		dest_hex_list = r2:get_specific_edge_hexes()[4] -- SE wall
-	end
-	local min_dist = nil
-	for i, hex1 in ipairs(source_hex_list) do
-		for j, hex2 in ipairs(dest_hex_list) do
-			local dist = wesnoth.map.distance_between(hex1, hex2)
-			if min_dist == nil or dist < min_dist then
-				min_dist = dist
-			end
-		end
-	end
-	return min_dist
-end
-
-------------------------
------ map setup functions
-------------------------
-
--- essential=true used for story rooms
-local function find_room(r_height, s_height, min_x, max_x, min_y, max_y, existing_rooms, essential)
-	local attempts = 0
-	local max_attempts = 200
-	local placed = false
-	local room = nil
-	while not placed do
-		room = Room:new()
-		local x1 = mathx.random(min_x, max_x)
-		local y1 = mathx.random(min_y, max_y)
-		room:set_left_corner(x1, y1)
-		room:set_dimensions(r_height, s_height)
-		if room:fits_in_map() then
-			local intersects = false
-			for i, r2 in ipairs(existing_rooms) do
-				if room:intersects_with(r2) then
-					intersects = true
-					break
-				end
-			end
-			if not intersects then
-				placed = true
-			end
-		end
-		attempts = attempts + 1
-		if (not essential) and (attempts > max_attempts) then
-			room = nil
-			break
-		end
-	end
-	return room
 end
 
 local function add_terrain_overlay(x, y, overlay_code)
@@ -477,76 +132,8 @@ local function hex_to_wml_var(hex, x_var, y_var)
 	wml.variables[y_var] = hex[2]
 end
 
--- q, r, s: starting cubic coordinates
--- inst: list of instructions ("nw", "ne", "sw", "se") to extend the tunnel
-local function plot_corridor(q, r, s, corridor_width, inst_list)
-	local corridor_tiles = {}
-	local half_corridor_width = math.floor(corridor_width / 2)
-	-- q, r, s track center of coordinate and vary along its length
-	for i, inst in ipairs(inst_list) do
-		-- q_hex, r_hex, and s_hex vary along corridor width
-		local q_hex = q
-		local r_hex = r
-		local s_hex = s
-		if inst == "nw" then -- +s
-			-- start adding tiles halfway along positive r axis
-			q_hex = q_hex - half_corridor_width
-			r_hex = r_hex + half_corridor_width
-			for w = 1, corridor_width do
-				table.insert(corridor_tiles, from_cubic(q_hex, r_hex, s_hex))
-				-- now sweep along negative r axis
-				q_hex = q_hex + 1
-				r_hex = r_hex - 1
-			end
-			-- now advance corridor center along positive s axis
-			q = q - 1
-			s = s + 1
-		elseif inst == "ne" then -- -r
-			-- start adding tiles halfway along positive s axis
-			q_hex = q_hex - half_corridor_width
-			s_hex = s_hex + half_corridor_width
-			for w = 1, corridor_width do
-				table.insert(corridor_tiles, from_cubic(q_hex, r_hex, s_hex))
-				-- now sweep along negative s axis
-				q_hex = q_hex + 1
-				s_hex = s_hex - 1
-			end
-			-- now advance corridor center along negative r axis
-			q = q + 1
-			r = r - 1
-		elseif inst == "sw" then -- +r
-			-- start adding tiles halfway along negative s axis
-			q_hex = q_hex + half_corridor_width
-			s_hex = s_hex - half_corridor_width
-			for w = 1, corridor_width do
-				table.insert(corridor_tiles, from_cubic(q_hex, r_hex, s_hex))
-				-- now sweep along positive s axis
-				q_hex = q_hex - 1
-				s_hex = s_hex + 1
-			end
-			-- now advance corridor center along positive r axis
-			q = q - 1
-			r = r + 1
-		elseif inst == "se" then -- -s
-			-- start adding tiles halfway along negative r axis
-			q_hex = q_hex + half_corridor_width
-			r_hex = r_hex - half_corridor_width
-			for w = 1, corridor_width do
-				table.insert(corridor_tiles, from_cubic(q_hex, r_hex, s_hex))
-				-- now sweep along positive r axis
-				q_hex = q_hex - 1
-				r_hex = r_hex + 1
-			end
-			-- now advance corridor center along negative s axis
-			q = q + 1
-			s = s - 1
-		end
-	end
-	return corridor_tiles
-end
-
 ------------------------
------ room setup functions
+----- room definitions
 ------------------------
 
 -- keep this separate for name-indexed dictionaries (making them upfront causes wmlxgettext to choke)
@@ -564,27 +151,29 @@ for i, s in pairs(colors_list) do
 	orb_colors_desc[s] = orb_colors_desc_tr[i]
 end
 
--- all rooms made by these functions should have all pre-corridor things "ready to go"
--- including item graphics, units, and WML variables for events
-local function place_start_room(current_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	-- start room in bottom left of the map
-	local start_room = find_room(8, 8, 1, 1, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
-	start_room.id = "start_room"
-	start_room:set_inner_terrain("Isa")
-	start_room:set_wall_terrain("Xor")
-	table.insert(current_rooms, start_room)
+StartRoom = Room:new()
+
+function StartRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(8, 8)
+	return o
+end
+
+-- since we need the cave entrance and start variables set before other rooms are instantiated
+function StartRoom:initial_setup()
+	self:set_inner_terrain("Isa")
+	self:set_wall_terrain("Xor")
 	-- cave passage in
-	local start_room_x, start_room_y = table.unpack(start_room:left_corner())
 	wesnoth.wml_actions.terrain_mask({
 		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_cave_entrance.mask"),
-		x = start_room_x,
-		y = start_room_y + 1,
+		x = self.x1,
+		y = self.y1 + 1,
 		border = true,
 	})
-	local malakar_start_x = start_room_x + 6
-	local malakar_start_y = start_room_y
+	local malakar_start_x = self.x1 + 6
+	local malakar_start_y = self.y1
 	wesnoth.units.get("Malakar"):to_map(malakar_start_x, malakar_start_y)
 	local q, r, s = table.unpack(get_cubic({malakar_start_x, malakar_start_y}))
 	local malakar_run_x, malakar_run_y = table.unpack(from_cubic(q-6, r+6, s))
@@ -593,18 +182,22 @@ local function place_start_room(current_rooms)
 	wml.variables["malakar_start_x"] = malakar_start_x
 	wml.variables["malakar_start_y"] = malakar_start_y
 	wesnoth.interface.add_item_image(malakar_start_x, malakar_start_y, "scenery/castle-ruins3.png")
-	return current_rooms
 end
 
-local function place_control_room(current_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	-- control room in top right of the map
-	local control_room = find_room(11, 9, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), current_rooms, true)
-	control_room.id = "control_room"
-	control_room:set_inner_terrain("Fypd")
-	control_room:set_wall_terrain("Xoi") -- white wall
-	local machine_x, machine_y = table.unpack(control_room:get_approx_center())
+ControlRoom = Room:new()
+
+function ControlRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(11, 9)
+	return o
+end
+
+function ControlRoom:pre_corridor_setup()
+	self:set_inner_terrain("Fypd")
+	self:set_wall_terrain("Xoi") -- white wall
+	local machine_x, machine_y = table.unpack(self:get_approx_center())
 	wml.variables["machine_x"] = machine_x
 	wml.variables["machine_y"] = machine_y
 	wesnoth.interface.add_item_halo(machine_x - 2, machine_y, "terrain/electrode-thingy-[1,2~9,8,9,8,9,1].png~NO_TOD_SHIFT():[2000,100*8,50*5]")
@@ -641,57 +234,57 @@ local function place_control_room(current_rooms)
 			layer = "overlay",
 		},
 	})
-	hex_list_to_wml_var(control_room:get_inner_hexes(), "control_room_x", "control_room_y")
-	table.insert(current_rooms, control_room)
-	return current_rooms
+	hex_list_to_wml_var(self:get_inner_hexes(), "control_room_x", "control_room_y")
 end
 
-local function place_orb_rooms(current_rooms, num_orb_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	local orb_colors = {}
-	local orb_colors_desc = {}
-	for i, s in pairs(colors_list) do
-		table.insert(orb_colors, s)
-		orb_colors_desc[s] = orb_colors_desc_tr[i]
-	end
-	mathx.shuffle(orb_colors)
-	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
-	local orb_hexes = {}
-	local orb_guard_hexes = {}
-	-- orb rooms
-	for i = 1, num_orb_rooms do
-		local orb_room = find_room(5, 5, 1, map_size_x, 1, map_size_y, current_rooms, true)
-		orb_room.id = "orb_" .. tostring(i)
-		orb_room:set_inner_terrain("Isa")
-		local orb_room_x, orb_room_y = table.unpack(orb_room:left_corner())
-		local orb_x = orb_room_x + 4
-		local orb_y = orb_room_y
-		wesnoth.interface.add_item_image(orb_x, orb_y, "items/altar.png")
-		local orb_image_path = "items/magic-orb.png~RC(magenta>" .. orb_colors[i] .. ")"
-		wesnoth.interface.add_item_image(orb_x, orb_y, orb_image_path)
-		table.insert(orb_hexes, {orb_x, orb_y})
-		wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)~NO_TOD_SHIFT()")
-		table.insert(orb_guard_hexes, {orb_x, orb_y - 1})
-		table.insert(current_rooms, orb_room)
-	end
-	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
-	hex_list_to_wml_var(orb_guard_hexes, "orb_guards_x", "orb_guards_y")
-	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
-	wml.variables["orig_orb_colors"] = wml.variables["orb_colors"]
+OrbRoom = Room:new()
 
-	return current_rooms
+function OrbRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	o.color = ""
+	self:set_dimensions(5, 5)
+	return o
 end
 
-local function place_library_room(current_rooms)
-	-- library room in top left of map
-	local library_room = find_room(12, 7, 1, 10, 1, 15, current_rooms, true)
-	library_room.id = "library_room"
-	library_room:set_inner_terrain("Iwr") -- wood floor
-	library_room:set_wall_terrain("Xoc") -- clean stone wall
+function OrbRoom:set_color(color)
+	self.color = color
+end
+
+function OrbRoom:get_orb_hex()
+	return {self.x1 + 4, self.y1}
+end
+
+function OrbRoom:get_guard_hex()
+	return {self.x1 + 4, self.y1 - 1}
+end
+
+function OrbRoom:pre_corridor_setup()
+	self:set_inner_terrain("Isa")
+	local orb_x = self.x1 + 4
+	local orb_y = self.y1
+	wesnoth.interface.add_item_image(orb_x, orb_y, "items/altar.png")
+	local orb_image_path = "items/magic-orb.png~RC(magenta>" .. self.color .. ")"
+	wesnoth.interface.add_item_image(orb_x, orb_y, orb_image_path)
+	wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)~NO_TOD_SHIFT()")
+end
+
+LibraryRoom = Room:new()
+
+function LibraryRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(12, 7)
+	return o
+end
+
+function LibraryRoom:pre_corridor_setup()
+	self:set_inner_terrain("Iwr") -- wood floor
+	self:set_wall_terrain("Xoc") -- clean stone wall
 	-- place furniture
-	local library_x , library_y = table.unpack(library_room:left_corner())
-	local q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	local q, r, s = table.unpack(get_cubic({self.x1 + 6, self.y1}))
 	q = q - 1
 	r = r + 1
 	for i = 1, 8 do
@@ -702,7 +295,7 @@ local function place_library_room(current_rooms)
 		q = q + 1
 		r = r - 1
 	end
-	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	q, r, s = table.unpack(get_cubic({self.x1 + 6, self.y1}))
 	q = q - 2
 	r = r + 1
 	s = s + 1
@@ -714,7 +307,7 @@ local function place_library_room(current_rooms)
 		q = q + 1
 		r = r - 1
 	end
-	q, r, s = table.unpack(get_cubic({library_x + 6, library_y}))
+	q, r, s = table.unpack(get_cubic({self.x1 + 6, self.y1}))
 	r = r + 1
 	s = s - 1
 	for i = 1, 8 do
@@ -725,7 +318,7 @@ local function place_library_room(current_rooms)
 		q = q + 1
 		r = r - 1
 	end
-	q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
+	q, r, s = table.unpack(get_cubic({self.x1 + 2, self.y1}))
 	for i = 1, 10 do
 		local hex = from_cubic(q, r, s)
 		local hex_to_check = from_cubic(q - 1, r, s + 1)
@@ -739,7 +332,7 @@ local function place_library_room(current_rooms)
 		r = r - 1
 	end
 	-- randomly place lore/flavor books
-	local possible_book_hexes = library_room:get_inner_hexes()
+	local possible_book_hexes = self:get_inner_hexes()
 	mathx.shuffle(possible_book_hexes)
 	local num_books_placed = 0
 	for i, hex in ipairs(possible_book_hexes) do
@@ -767,527 +360,11 @@ local function place_library_room(current_rooms)
 			num_books_placed = num_books_placed + 1
 		end
 	end
-	table.insert(current_rooms, library_room)
-	return current_rooms
 end
 
--- Sol'kan's living quarters
-local function place_bedroom(current_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	local bedroom = find_room(7, 5, math.floor(map_size_x * 0.75), map_size_x, math.floor(map_size_y * 0.25), math.floor(map_size_y * 0.75), current_rooms, true)
-	bedroom.id = "bedroom"
-	bedroom:set_inner_terrain("Iwr")
-	local bedroom_x, bedroom_y = table.unpack(bedroom:left_corner())
-	wesnoth.wml_actions.terrain_mask({
-		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_bedroom.mask"),
-		x = bedroom_x,
-		y = bedroom_y - 2,
-		border = true,
-	})
-	local inner_hexes = bedroom:get_inner_hexes()
-	for i, hex in ipairs(inner_hexes) do
-		if wesnoth.current.map[{hex[1], hex[2]}] == "Iwr" and mathx.random(1, 2) == 1 then
-			wesnoth.current.map[{hex[1], hex[2]}] = "Iwo" -- old wood floor
-		end
-	end
-	wesnoth.interface.add_item_image(bedroom_x + 6, bedroom_y - 1, "scenery/bed-fancy-sw.png")
-	local q, r, s = table.unpack(get_cubic({bedroom_x + 6, bedroom_y - 1}))
-	local journal_x, journal_y = table.unpack(from_cubic(q+1, r, s-1))
-	wml.variables["journal_x"] = journal_x
-	wml.variables["journal_y"] = journal_y
-	wesnoth.interface.add_item_image(journal_x, journal_y, "items/book2.png")
-	local chair_x, chair_y = table.unpack(from_cubic(q-2, r+2, s))
-	wesnoth.interface.add_item_image(chair_x, chair_y, "scenery/chair-2-nw.png~SCALE(100,100)")
-	local desk_x, desk_y = table.unpack(from_cubic(q-3, r+2, s-1))
-	wesnoth.interface.add_item_image(desk_x, desk_y, "scenery/desk-se.png")
-	local wardrobe_x, wardrobe_y = table.unpack(from_cubic(q+1, r-1, s))
-	wesnoth.interface.add_item_image(wardrobe_x, wardrobe_y, "scenery/wardrobe-drawer-open.png")
-	bedroom.max_degree = 1
-	table.insert(current_rooms, bedroom)
-	return current_rooms
-end
-
-local function place_prison_room(current_rooms)
-	local function place_cell_content(hex, content_type)
-		if content_type == 1 then
-			-- just a skeleton
-			wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png")
-		elseif content_type == 2 then
-			-- magic resist amulet
-			wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png~FL(horiz)~BLIT(items/ankh-necklace.png, 0, 10)")
-			wml.variables["resist_amulet_x"] = hex[1]
-			wml.variables["resist_amulet_y"] = hex[2]
-		elseif content_type == 3 then
-			wesnoth.units.to_map({type="Automaton Reaper", side=3}, hex[1], hex[2])
-		end
-		-- room type 4 is empty
-	end
-
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	local room_content_ids = {1, 2, 3, 4}
-	mathx.shuffle(room_content_ids)
-	local prison_room = find_room(12, 9, 1, map_size_x, math.floor(map_size_y * 0.75), map_size_y, current_rooms, true)
-	prison_room.id = "prison_room"
-	prison_room:set_inner_terrain("Ur")
-	prison_room.max_degree = 2
-	local room_x, room_y = table.unpack(prison_room:left_corner())
-	wesnoth.wml_actions.terrain_mask({
-		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_prison.mask"),
-		x = room_x + 2,
-		y = room_y - 5,
-		border = true,
-		wml.tag.rule {
-			layer = "overlay",
-		},
-	})
-	local prison_lever_hexes = {}
-	local prison_cell_idx = {}
-	local q, r, s = table.unpack(get_cubic({room_x + 6, room_y}))
-	-- upper left door, cell #1
-	q = q - 1
-	r = r - 1
-	s = s + 2
-	local lever_hex = from_cubic(q, r, s)
-	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
-	table.insert(prison_lever_hexes, lever_hex)
-	table.insert(prison_cell_idx, 1)
-	place_cell_content(from_cubic(q+1, r+1, s-2), room_content_ids[1])
-	-- lower left door, cell #2
-	q = q + 6
-	s = s - 6
-	lever_hex = from_cubic(q, r, s)
-	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
-	table.insert(prison_lever_hexes, lever_hex)
-	table.insert(prison_cell_idx, 2)
-	place_cell_content(from_cubic(q-3, r+1, s+2), room_content_ids[2])
-	-- lower right door, cell #4
-	q = q + 3
-	r = r - 3
-	lever_hex = from_cubic(q, r, s)
-	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
-	table.insert(prison_lever_hexes, lever_hex)
-	table.insert(prison_cell_idx, 4)
-	place_cell_content(from_cubic(q-1, r-1, s+2), room_content_ids[3])
-	-- upper right door, cell #3
-	q = q - 6
-	s = s + 6
-	lever_hex = from_cubic(q, r, s)
-	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
-	table.insert(prison_lever_hexes, lever_hex)
-	table.insert(prison_cell_idx, 3)
-	place_cell_content(from_cubic(q+3, r-1, s-2), room_content_ids[4])
-
-	hex_list_to_wml_var(prison_lever_hexes, "prison_levers_x", "prison_levers_y")
-	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
-	table.insert(current_rooms, prison_room)
-	return current_rooms
-end
-
-local function place_operating_room(current_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	-- it can go anywhere
-	local operating_room = find_room(9, 10, 1, map_size_x, 1, map_size_y, current_rooms, true)
-	operating_room.id = "operating_room"
-	table.insert(current_rooms, operating_room)
-	return current_rooms
-end
-
-local function place_workshop_room(current_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	-- it can go anywhere, and it's not essential
-	local workshop_room = find_room(9, 9, 1, map_size_x, 1, map_size_y, current_rooms, false)
-	if workshop_room ~= nil then
-		workshop_room.id = "workshop_room"
-		workshop_room:set_inner_terrain("Isa")
-		local q, r, s = table.unpack(get_cubic(workshop_room:left_corner()))
-		q = q + 4
-		r = r - 2
-		s = s - 2
-		for i = 0, 2 do
-			for j = 0, 2 do
-				local hex_x, hex_y = table.unpack(from_cubic(q + (i * 2) + (j * 2), r - (i * 2), s - (j * 2)))
-				local table_variant = mathx.random(2, 4)
-				wesnoth.interface.add_item_image(hex_x, hex_y, "scenery/table-metal-" .. tostring(table_variant) .. ".png")
-			end
-		end
-		table.insert(current_rooms, workshop_room)
-	end
-	return current_rooms
-end
-
--- random rooms include empty rooms, non-unique monsters, etc.
-local function place_random_rooms(current_rooms, num_random_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	local malakar_start_x = wml.variables["malakar_start_x"]
-	local malakar_start_y = wml.variables["malakar_start_y"]
-	local random_rooms = {}
-
-	-- this includes walls
-	local random_room_dim_mean = 12
-	local random_room_dim_sd = 5
-	local random_room_dim_min = 5
-	local random_room_dim_max = 12
-
-	local rand_rooms_generated = 0
-
-	while rand_rooms_generated < num_random_rooms do
-		local r_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
-		r_height = math.max(r_height, random_room_dim_min)
-		r_height = math.min(r_height, random_room_dim_max)
-		local s_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
-		s_height = math.max(s_height, random_room_dim_min)
-		s_height = math.min(s_height, random_room_dim_max)
-		local r = find_room(r_height, s_height, 1, map_size_x, 1, map_size_y, current_rooms, false)
-		if r ~= nil then
-			rand_rooms_generated = rand_rooms_generated + 1
-			r.id = "random_" .. tostring(rand_rooms_generated)
-			r:set_inner_terrain("Isa")
-			table.insert(current_rooms, r)
-			table.insert(random_rooms, r)
-		end
-	end
-
-	-- populate random rooms
-	local num_undead_per_catacomb = 3
-	local num_catacombs = 4
-	-- difficulty scores range from 3 to 11 (range is 8)
-	-- if easiest, all units will be level 2 (average)
-	-- if hardest, all units will be level 3
-	-- otherwise, random combination of them
-	local undead_level_sum = (num_undead_per_catacomb * num_catacombs * 2) + math.ceil(((num_undead_per_catacomb * num_catacombs) / 8.0) * (wml.variables["difficulty_score"] - 3))
-	local undead_levels = get_random_level_list(num_undead_per_catacomb * num_catacombs, undead_level_sum, 3)
-	local total_undead_placed = 0
-	for i = 1, rand_rooms_generated do
-		-- undead catacombs
-		if i >= 1 and i <= num_catacombs then
-			random_rooms[i]:set_wall_terrain("Xot") -- catacomb wall
-			--random_rooms[i]:set_inner_terrain("Rb") -- dark dirt
-			local room_wall_hexes = random_rooms[i]:get_edge_hexes()
-			for j, hex in ipairs(room_wall_hexes) do
-				local rand_decor = mathx.random(1, 6)
-				if rand_decor <= 2 then
-					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
-				elseif rand_decor == 3 then
-					add_terrain_overlay(hex[1], hex[2], "Efs") -- brazier
-				end
-			end
-			local room_inner_hexes = random_rooms[i]:get_inner_hexes()
-			mathx.shuffle(room_inner_hexes)
-			for j, hex in ipairs(room_inner_hexes) do
-				local rand_decor = mathx.random(1, 4)
-				if rand_decor <= 3 then
-					add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
-				end
-			end
-			for j = 1, num_undead_per_catacomb do
-				local hex = room_inner_hexes[j]
-				total_undead_placed = total_undead_placed + 1
-				local level = undead_levels[total_undead_placed]
-				local monster_type = nil
-				if level == 1 then
-					monster_type = mathx.random_choice{"Ghost", "Skeleton", "Skeleton Archer", "Soulless"}
-				-- prevent high-level spirits from spawning near start position
-				elseif wesnoth.map.distance_between({malakar_start_x, malakar_start_y}, hex) > math.floor(math.min(map_size_x, map_size_y) / 2) then
-					if level == 2 then
-						monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
-					else
-						monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Draug", "Banebow"}
-					end
-				elseif level == 2 then
-					monster_type = mathx.random_choice{"Shadow", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
-				else
-					monster_type = mathx.random_choice{"Nightgaunt", "Draug", "Draug", "Banebow"}
-				end
-				wesnoth.units.to_map({type=monster_type, side=2}, hex[1], hex[2])
-			end
-		end
-		-- some other room ideas:
-		--   other monster room
-		--   kitchen room
-		--   servant or guard quarters
-		--   creepy lab room
-		--   treasure room
-		-- if gets to be too many unique rooms (which would probably be a good problem), could always increase map size
-	end
-	return current_rooms
-end
-
-local function place_corridors(current_rooms)
-	local map_size_x = wesnoth.current.map.playable_width
-	local map_size_y = wesnoth.current.map.playable_height
-	-- build graph of all rooms
-	local num_rooms = #current_rooms
-	graph = Graph:new()
-	graph:init_unconnected(num_rooms)
-	-- until graph is fully connected, i.e. all rooms are accessible:
-	---- pick random room
-	---- cast a ray at random angle
-	---- first room that we hit (if any), if no edge between source and destination try to connect them (both in graph and on map)
-	local max_connect_attempts = 1000 -- avoid infinte loop in case there's a room that can't be connected anywhere
-	local connect_attempts = 0 -- tracks number of failed connections (resets if successful connection made)
-	local rays_failed = 0
-	local starting_max_ray_length = 15 -- restrict maximum distance algorithm will try to connect rooms
-	--local corridor_created = false
-	--while not corridor_created do
-	while not graph:is_connected() do
-		local origin_room_selected = false
-		local origin_room_num = nil
-		local origin_room = nil
-		while not origin_room_selected do
-			origin_room_num = mathx.random(1, num_rooms)
-			origin_room = current_rooms[origin_room_num]
-			if origin_room.max_degree == nil or graph:degree(origin_room_num) < origin_room.max_degree then
-				origin_room_selected = true
-			end
-		end
-		local center_x, center_y = table.unpack(origin_room:get_approx_center())
-		--print("Source hex: " .. tostring(center_x) .. ", " .. tostring(center_y))
-		local theta = mathx.random() * math.pi * 2.0
-		--print("Theta: " .. (theta * 180.0 / math.pi))
-		local radius = 1
-		local casting_ray = true
-		-- start with trying to make shorter connections, but gradually extend the reach
-		-- so that far-away rooms eventually do get connected
-		local max_ray_length = starting_max_ray_length + math.floor(rays_failed / 100)
-		while casting_ray do
-			local test_x, test_y = find_offset_hex_polar(center_x, center_y, radius, theta)
-			if test_x >= 1 and test_x <= map_size_x and test_y >= 1 and test_y <= map_size_y and radius <= max_ray_length then
-				--print("Eval hex: " .. tostring(test_x) .. ", " .. tostring(test_y))
-				for i = 1, num_rooms do
-					if i ~= origin_room_num then
-						if current_rooms[i]:contains_hex(test_x, test_y) then
-							--print("Found target: " .. tostring(test_x) .. ", " .. tostring(test_y))
-							local dest_room = current_rooms[i]
-							-- don't make duplicate tunnels between rooms
-							-- also fail corridor if it would exceed a room's max_degree
-							if graph:get_edge(origin_room_num, i) == 0 and (dest_room.max_degree == nil or graph:degree(i) < dest_room.max_degree) then
-								-- create corridor on map
-								local corridor_created = false
-								local corridor_tiles = {}
-								local max_corridor_attempts = 200
-								local corridor_attempts = 0
-								while not corridor_created do
-									corridor_created = true
-									local corridor_width = 2 -- mathx.random(2, 3)
-									local half_corridor_width = math.floor(corridor_width / 2)
-									local presenting_side = origin_room:presenting_side_to(dest_room)
-									local source_hex_list = nil
-									local dest_hex_list = nil
-									if presenting_side == "se" then
-										-- SE of origin to NW of destination
-										source_hex_list = origin_room:get_specific_edge_hexes()[4]
-										dest_hex_list = dest_room:get_specific_edge_hexes()[1]
-									elseif presenting_side == "sw" then
-										-- SW of origin to NE of destination
-										source_hex_list = origin_room:get_specific_edge_hexes()[3]
-										dest_hex_list = dest_room:get_specific_edge_hexes()[2]
-									elseif presenting_side == "ne" then
-										-- NE of origin to SW of destination
-										source_hex_list = origin_room:get_specific_edge_hexes()[2]
-										dest_hex_list = dest_room:get_specific_edge_hexes()[3]
-									elseif presenting_side == "nw" then
-										-- NW of origin to SE of destination
-										source_hex_list = origin_room:get_specific_edge_hexes()[1]
-										dest_hex_list = dest_room:get_specific_edge_hexes()[4]
-									end
-									-- exclude left and right corners as possible connection points
-									table.remove(source_hex_list)
-									table.remove(source_hex_list, 1)
-									table.remove(dest_hex_list)
-									table.remove(dest_hex_list, 1)
-									mathx.shuffle(source_hex_list)
-									mathx.shuffle(dest_hex_list)
-									local source_hex = nil
-									local dest_hex = nil
-									-- if rooms are sufficiently close try to find a straight path
-									local min_wall_dist = origin_room:minimum_wall_distance(dest_room)
-									if min_wall_dist <= 6 then
-										for j, hex1 in ipairs(source_hex_list) do
-											local q1, r1, s1 = table.unpack(get_cubic(hex1))
-											for k = 1, min_wall_dist do
-												if source_hex == nil then
-													if presenting_side == "se" then
-														q1 = q1 + 1
-														s1 = s1 - 1
-													elseif presenting_side == "sw" then
-														q1 = q1 - 1
-														r1 = r1 + 1
-													elseif presenting_side == "ne" then
-														q1 = q1 + 1
-														r1 = r1 - 1
-													elseif presenting_side == "nw" then
-														q1 = q1 - 1
-														s1 = s1 + 1
-													end
-													local hex2 = from_cubic(q1, r1, s1)
-													for l, poss_dest_hex in ipairs(dest_hex_list) do
-														if hex2[1] == poss_dest_hex[1] and hex2[2] == poss_dest_hex[2] then
-															source_hex = hex1
-															dest_hex = hex2
-														end
-													end
-												end
-											end
-											if source_hex ~= nil then
-												break
-											end
-										end
-									end
-									if source_hex == nil then
-										source_hex = source_hex_list[1]
-										dest_hex = dest_hex_list[1]
-									end
-									local q1, r1, s1 = table.unpack(get_cubic(source_hex))
-									local q2, r2, s2 = table.unpack(get_cubic(dest_hex))
-									local r_dist = r2 - r1
-									local s_dist = s2 - s1
-									local inst = {}
-									-- middle direction occurs anywhere from 25% to 75% of the way down corridor
-									local first_prop = mathx.random() * 0.5 + 0.25
-									if presenting_side == "sw" or presenting_side == "ne" then
-										-- connecting SW:NE, so move in r, then s, then r
-										local r1 = math.floor(r_dist * first_prop)
-										local r2 = r_dist - r1
-										for k = 1, math.abs(r1) do
-											if r_dist < 0 then
-												table.insert(inst, "ne")
-											else
-												table.insert(inst, "sw")
-											end
-										end
-										for k = 1, math.abs(s_dist) do
-											if s_dist < 0 then
-												table.insert(inst, "se")
-											else
-												table.insert(inst, "nw")
-											end
-										end
-										for k = 1, math.abs(r2) + 1 do
-											if r_dist < 0 then
-												table.insert(inst, "ne")
-											else
-												table.insert(inst, "sw")
-											end
-										end
-									else
-										-- connecting SE:NW, so move in s, then r, then s
-										local s1 = math.floor(s_dist * first_prop)
-										local s2 = s_dist - s1
-										for k = 1, math.abs(s1) do
-											if s_dist < 0 then
-												table.insert(inst, "se")
-											else
-												table.insert(inst, "nw")
-											end
-										end
-										for k = 1, math.abs(r_dist) do
-											if r_dist < 0 then
-												table.insert(inst, "ne")
-											else
-												table.insert(inst, "sw")
-											end
-										end
-										for k = 1, math.abs(s2) + 1 do
-											if s_dist < 0 then
-												table.insert(inst, "se")
-											else
-												table.insert(inst, "nw")
-											end
-										end
-									end
-									-- make sure that side direction is at least slightly offset from room wall
-									if #inst > 1 and (inst[1] ~= inst[2] or inst[#inst] ~= inst[#inst - 1]) then
-										corridor_created = false
-										corridor_tiles = {}
-										corridor_attempts = corridor_attempts + 1
-										break
-									end
-									corridor_tiles = plot_corridor(q1, r1, s1, corridor_width, inst)
-									for t = 1, #corridor_tiles do
-										local hex_x = corridor_tiles[t][1]
-										local hex_y = corridor_tiles[t][2]
-										-- make sure corridor doesn't go off edge of map
-										if not (hex_x >= 1 and hex_x <= map_size_x and hex_y >=1 and hex_y <= map_size_y) then
-												corridor_created = false
-												break
-										end
-										-- make sure we won't exceed max_degree of a room
-										for k = 1, num_rooms do
-											if current_rooms[k]:contains_hex(hex_x, hex_y) and current_rooms[k].max_degree ~= nil and graph:degree(k) >= current_rooms[k].max_degree then
-												corridor_created = false
-												break
-											end
-										end
-									end
-									if not corridor_created then
-										corridor_tiles = {}
-										corridor_attempts = corridor_attempts + 1
-										if corridor_attempts > max_corridor_attempts then
-											-- give up on connecting these rooms
-											connect_attempts = connect_attempts + 1
-											corridor_created = true
-										end
-										break
-									end
-								end
-								local current_origin_room_num = origin_room_num
-								for t = 1, #corridor_tiles do
-									local hex_x = corridor_tiles[t][1]
-									local hex_y = corridor_tiles[t][2]
-									-- check what connections we've made along the way (including but not limited to dest_room)
-									for k = 1, num_rooms do
-										if k ~= current_origin_room_num then
-											if current_rooms[k]:contains_hex(hex_x, hex_y) then
-												-- left and right corners don't permit unit movement into rooms so don't count them as graph connections
-												local k_left_corner_x, k_left_corner_y = table.unpack(current_rooms[k]:left_corner())
-												local k_right_corner_x, k_right_corner_y = table.unpack(current_rooms[k]:right_corner())
-												if (k_left_corner_x ~= hex_x or k_left_corner_y ~= hex_y) and (k_right_corner_x ~= hex_x or k_right_corner_y ~= hex_y) then
-													if graph:get_edge(current_origin_room_num, k) == 0 then
-														print("Connecting room " .. current_rooms[current_origin_room_num].id .. " to room " .. current_rooms[k].id)
-														graph:set_edge(current_origin_room_num, k, 1)
-														graph:set_edge(k, current_origin_room_num, 1)
-													end
-													-- if corridor from A -> C goes through B, then link A:B and B:C (but not A:C) in graph
-													current_origin_room_num = k
-												end
-											end
-										end
-									end
-									-- only overwrite wall terrains
-									if string.sub(wesnoth.current.map[{hex_x, hex_y}], 1, 1) == "X" then
-										wesnoth.current.map[{hex_x, hex_y}] = "Isa" -- "Gg"
-									end
-									connect_attempts = 0
-								end
-							end
-							casting_ray = false
-							break
-						end
-					end
-				end
-				radius = radius + 1
-			else
-				casting_ray = false
-				rays_failed = rays_failed + 1
-			end
-		end
-		if connect_attempts > max_connect_attempts then
-			-- todo: if mapgen fails, potentially endlevel back to itself?
-			break
-		end
-	end
-	return graph
-end
-
--- remove any bookshelves that would visually block off a corridor
-local function remove_library_bookshelves(library_room)
-	local library_x , library_y = table.unpack(library_room:left_corner())
-	q, r, s = table.unpack(get_cubic({library_x + 2, library_y}))
+function LibraryRoom:post_corridor_setup()
+	-- remove any bookshelves that would visually block off a corridor
+	local q, r, s = table.unpack(get_cubic({self.x1 + 2, self.y1}))
 	for i = 1, 10 do
 		local hex = from_cubic(q, r, s)
 		local hex_to_check = from_cubic(q - 1, r, s + 1)
@@ -1300,15 +377,142 @@ local function remove_library_bookshelves(library_room)
 	end
 end
 
-local function place_or_contents(operating_room)
-	local room_x, room_y = table.unpack(operating_room:left_corner())
+-- Sol'kan's living quarters
+BedRoom = Room:new()
+
+function BedRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(7, 5)
+	return o
+end
+
+function BedRoom:pre_corridor_setup()
+	self:set_inner_terrain("Iwr")
 	wesnoth.wml_actions.terrain_mask({
-		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_operating_room.mask"),
-		x = room_x + 2,
-		y = room_y - 4,
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_bedroom.mask"),
+		x = self.x1,
+		y = self.y1 - 2,
 		border = true,
 	})
-	local q, r, s = table.unpack(get_cubic({room_x, room_y}))
+	local inner_hexes = self:get_inner_hexes()
+	for i, hex in ipairs(inner_hexes) do
+		if wesnoth.current.map[{hex[1], hex[2]}] == "Iwr" and mathx.random(1, 2) == 1 then
+			wesnoth.current.map[{hex[1], hex[2]}] = "Iwo" -- old wood floor
+		end
+	end
+	wesnoth.interface.add_item_image(self.x1 + 6, self.y1 - 1, "scenery/bed-fancy-sw.png")
+	local q, r, s = table.unpack(get_cubic({self.x1 + 6, self.y1 - 1}))
+	local journal_x, journal_y = table.unpack(from_cubic(q+1, r, s-1))
+	wml.variables["journal_x"] = journal_x
+	wml.variables["journal_y"] = journal_y
+	wesnoth.interface.add_item_image(journal_x, journal_y, "items/book2.png")
+	local chair_x, chair_y = table.unpack(from_cubic(q-2, r+2, s))
+	wesnoth.interface.add_item_image(chair_x, chair_y, "scenery/chair-2-nw.png~SCALE(100,100)")
+	local desk_x, desk_y = table.unpack(from_cubic(q-3, r+2, s-1))
+	wesnoth.interface.add_item_image(desk_x, desk_y, "scenery/desk-se.png")
+	local wardrobe_x, wardrobe_y = table.unpack(from_cubic(q+1, r-1, s))
+	wesnoth.interface.add_item_image(wardrobe_x, wardrobe_y, "scenery/wardrobe-drawer-open.png")
+end
+
+PrisonRoom = Room:new()
+
+function PrisonRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(12, 9)
+	return o
+end
+
+function PrisonRoom:place_cell_content(hex, content_type)
+	if content_type == 1 then
+		-- just a skeleton
+		wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png")
+	elseif content_type == 2 then
+		-- magic resist amulet
+		wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png~FL(horiz)~BLIT(items/ankh-necklace.png, 0, 10)")
+		wml.variables["resist_amulet_x"] = hex[1]
+		wml.variables["resist_amulet_y"] = hex[2]
+	elseif content_type == 3 then
+		wesnoth.units.to_map({type="Automaton Reaper", side=3}, hex[1], hex[2])
+	end
+	-- room type 4 is empty
+end
+
+function PrisonRoom:pre_corridor_setup()
+	local room_content_ids = {1, 2, 3, 4}
+	mathx.shuffle(room_content_ids)
+	self:set_inner_terrain("Ur")
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_prison.mask"),
+		x = self.x1 + 2,
+		y = self.y1 - 5,
+		border = true,
+		wml.tag.rule {
+			layer = "overlay",
+		},
+	})
+	local prison_lever_hexes = {}
+	local prison_cell_idx = {}
+	local q, r, s = table.unpack(get_cubic({self.x1 + 6, self.y1}))
+	-- upper left door, cell #1
+	q = q - 1
+	r = r - 1
+	s = s + 2
+	local lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 1)
+	self:place_cell_content(from_cubic(q+1, r+1, s-2), room_content_ids[1])
+	-- lower left door, cell #2
+	q = q + 6
+	s = s - 6
+	lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 2)
+	self:place_cell_content(from_cubic(q-3, r+1, s+2), room_content_ids[2])
+	-- lower right door, cell #4
+	q = q + 3
+	r = r - 3
+	lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 4)
+	self:place_cell_content(from_cubic(q-1, r-1, s+2), room_content_ids[3])
+	-- upper right door, cell #3
+	q = q - 6
+	s = s + 6
+	lever_hex = from_cubic(q, r, s)
+	wesnoth.interface.add_item_image(lever_hex[1], lever_hex[2], "items/switch-left.png~XBRZ(2)")
+	table.insert(prison_lever_hexes, lever_hex)
+	table.insert(prison_cell_idx, 3)
+	self:place_cell_content(from_cubic(q+3, r-1, s-2), room_content_ids[4])
+
+	hex_list_to_wml_var(prison_lever_hexes, "prison_levers_x", "prison_levers_y")
+	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
+end
+
+OperatingRoom = Room:new()
+
+function OperatingRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(9, 10)
+	return o
+end
+
+function OperatingRoom:post_corridor_setup()
+	wesnoth.wml_actions.terrain_mask({
+		mask = filesystem.read_file("~add-ons/Flight_Freedom/masks/11b_operating_room.mask"),
+		x = self.x1 + 2,
+		y = self.y1 - 4,
+		border = true,
+	})
+	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
 	q = q + 10
 	r = r - 3
 	s = s - 7
@@ -1336,6 +540,361 @@ local function place_or_contents(operating_room)
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/surgical.png")
 end
+
+WorkshopRoom = Room:new()
+
+function WorkshopRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	self:set_dimensions(9, 9)
+	return o
+end
+
+function WorkshopRoom:pre_corridor_setup()
+	self:set_inner_terrain("Isa")
+	local q, r, s = table.unpack(get_cubic({self.x1, self.y1}))
+	q = q + 4
+	r = r - 2
+	s = s - 2
+	for i = 0, 2 do
+		for j = 0, 2 do
+			local hex_x, hex_y = table.unpack(from_cubic(q + (i * 2) + (j * 2), r - (i * 2), s - (j * 2)))
+			local table_variant = mathx.random(2, 4)
+			wesnoth.interface.add_item_image(hex_x, hex_y, "scenery/table-metal-" .. tostring(table_variant) .. ".png")
+		end
+	end
+end
+
+UndeadRoom = Room:new()
+
+function UndeadRoom:new(o)
+	o = o or Room:new()
+	setmetatable(o, self)
+	self.__index = self
+	o.undead_levels = {}
+	return o
+end
+
+function UndeadRoom:set_levels(levels)
+	self.undead_levels = levels
+end
+
+function UndeadRoom:pre_corridor_setup()
+	local malakar_start_x = wml.variables["malakar_start_x"]
+	local malakar_start_y = wml.variables["malakar_start_y"]
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	self:set_inner_terrain("Isa")
+	self:set_wall_terrain("Xot") -- catacomb wall
+	local room_wall_hexes = self:get_edge_hexes()
+	for j, hex in ipairs(room_wall_hexes) do
+		local rand_decor = mathx.random(1, 6)
+		if rand_decor <= 2 then
+			add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
+		elseif rand_decor == 3 then
+			add_terrain_overlay(hex[1], hex[2], "Efs") -- brazier
+		end
+	end
+	local room_inner_hexes = self:get_inner_hexes()
+	mathx.shuffle(room_inner_hexes)
+	for j, hex in ipairs(room_inner_hexes) do
+		local rand_decor = mathx.random(1, 4)
+		if rand_decor <= 3 then
+			add_terrain_overlay(hex[1], hex[2], "Edb") -- remains
+		end
+	end
+	for j, level in ipairs(self.undead_levels) do
+		local hex = room_inner_hexes[j]
+		local monster_type = nil
+		if level == 1 then
+			monster_type = mathx.random_choice{"Ghost", "Skeleton", "Skeleton Archer", "Soulless"}
+		-- prevent high-level spirits from spawning near start position
+		elseif wesnoth.map.distance_between({malakar_start_x, malakar_start_y}, hex) > math.floor(math.min(map_size_x, map_size_y) / 2) then
+			if level == 2 then
+				monster_type = mathx.random_choice{"Shadow", "Wraith", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
+			else
+				monster_type = mathx.random_choice{"Spectre", "Nightgaunt", "Draug", "Draug", "Banebow"}
+			end
+		elseif level == 2 then
+			monster_type = mathx.random_choice{"Shadow", "Revenant", "Revenant", "Deathblade", "Bone Shooter"}
+		else
+			monster_type = mathx.random_choice{"Nightgaunt", "Draug", "Draug", "Banebow"}
+		end
+		wesnoth.units.to_map({type=monster_type, side=2}, hex[1], hex[2])
+	end
+end
+
+MessHallRoom = Room:new()
+
+function MessHallRoom:pre_corridor_setup()
+	self:set_inner_terrain("Isa")
+end
+
+function MessHallRoom:post_corridor_setup()
+	local q0, r0, s0 = table.unpack(get_cubic({self.x1 + 2, self.y1}))
+	-- start at second row along -s axis
+	local q1 = q0 + 1
+	local r1 = r0
+	local s1 = s0 - 1
+	for i = 1, self.r_height - 2 do
+		local q2 = q1
+		local r2 = r1
+		local s2 = s1
+		-- skip the top row
+		for j = 2, self.s_height - 2 do
+			-- don't place tables in the middle of the room
+			-- also make sure that there are multiples of 2 tables on r axis
+			if ((self.r_height - 2) % 4 == 0 or math.abs(i - (self.r_height - 1) / 2) > math.floor((self.r_height - 2) % 4) / 2) and (self.s_height % 2 == 0 or j ~= (self.s_height - 1) / 2) then
+				local hex_x, hex_y = table.unpack(from_cubic(q2, r2, s2))
+				add_terrain_overlay(hex_x, hex_y, "TabY")
+			end
+			q2 = q2 + 1
+			s2 = s2 - 1
+		end
+		q1 = q1 + 1
+		r1 = r1 - 1
+	end
+end
+
+SupplyRoom = Room:new()
+
+function SupplyRoom:pre_corridor_setup()
+	self:set_inner_terrain("Isa")
+	local center_hex = self:get_approx_center()
+	local hexes = self:get_inner_hexes()
+	for i, hex in ipairs(hexes) do
+		local distance = cartesian_distance_between_hexes(center_hex[1], center_hex[2], hex[1], hex[2])
+		local thingy_prob = norm_pdf(distance, 0, 4) * 4.0
+		if mathx.random() < thingy_prob then
+			local item = mathx.random_choice{
+				"items/box.png",
+				"scenery/brokenbarrel.png",
+				"items/barrel.png",
+				"scenery/barrel1.png",
+				"scenery/barrel2.png",
+				"scenery/barrel3.png"
+			}
+			wesnoth.interface.add_item_image(hex[1], hex[2], item)
+		end
+	end
+end
+
+ClassRoom = Room:new()
+
+function ClassRoom:pre_corridor_setup()
+	self:set_inner_terrain("Isa")
+	local q0, r0, s0 = table.unpack(get_cubic({self.x1 + 2, self.y1}))
+	-- student chairs, skip the rightmost two rows
+	for i = 1, self.r_height - 4 do
+		local q1 = q0
+		local r1 = r0
+		local s1 = s0
+		for j = 1, self.s_height - 2 do
+			local hex_x, hex_y = table.unpack(from_cubic(q1, r1, s1))
+			wesnoth.interface.add_item_image(hex_x, hex_y, "scenery/chairNE.png")
+			q1 = q1 + 1
+			s1 = s1 - 1
+		end
+		q0 = q0 + 1
+		r0 = r0 - 1
+	end
+	-- teacher chair, midway on rightmost row
+	q0 = q0 + math.ceil((self.s_height - 2) / 2)
+	r0 = r0 - 1
+	s0 = s0 - math.ceil((self.s_height - 2) / 2) + 1
+	local hex_x, hex_y = table.unpack(from_cubic(q0, r0, s0))
+	wesnoth.interface.add_item_image(hex_x, hex_y, "scenery/chairSW-fancier.png")
+end
+
+EmptyRoom = Room:new()
+
+function EmptyRoom:pre_corridor_setup()
+	self:set_inner_terrain("Isa")
+end
+
+------------------------
+----- room setup functions
+------------------------
+
+-- keep this separate for name-indexed dictionaries (making them upfront causes wmlxgettext to choke)
+local colors_list = {"red", "blue", "green", "white", "black", "yellow"}
+local orb_colors_desc_tr = {
+	_"Red Orb",
+	_"Blue Orb",
+	_"Green Orb",
+	_"White Orb",
+	_"Black Orb",
+	_"Yellow Orb",
+}
+local orb_colors_desc = {}
+for i, s in pairs(colors_list) do
+	orb_colors_desc[s] = orb_colors_desc_tr[i]
+end
+
+local function place_start_room(mapgen)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	-- start room in bottom left of the map
+	local start_room = StartRoom:new()
+	start_room.id = "start_room"
+	mapgen:find_room_placement(start_room, 1, 1, math.floor(map_size_y * 0.75), map_size_y, true)
+	mapgen:register_room(start_room)
+	start_room:initial_setup()
+end
+
+local function place_control_room(mapgen)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	-- control room in top right of the map
+	local control_room = ControlRoom:new()
+	control_room.id = "control_room"
+	mapgen:find_room_placement(control_room, math.floor(map_size_x * 0.5), map_size_x, 1, math.floor(map_size_y * 0.25), true)
+	mapgen:register_room(control_room)
+end
+
+local function place_orb_rooms(mapgen, num_orb_rooms)
+	local orb_colors = {}
+	local orb_colors_desc = {}
+	for i, s in pairs(colors_list) do
+		table.insert(orb_colors, s)
+		orb_colors_desc[s] = orb_colors_desc_tr[i]
+	end
+	mathx.shuffle(orb_colors)
+	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
+	local orb_hexes = {}
+	local orb_guard_hexes = {}
+	-- orb rooms
+	for i = 1, num_orb_rooms do
+		local orb_room = OrbRoom:new()
+		orb_room.id = "orb_" .. tostring(i)
+		orb_room:set_color(orb_colors[i])
+		mapgen:find_placement_anywhere(orb_room, true)
+		mapgen:register_room(orb_room)
+		table.insert(orb_hexes, orb_room:get_orb_hex())
+		table.insert(orb_guard_hexes, orb_room:get_guard_hex())
+	end
+	hex_list_to_wml_var(orb_hexes, "orbs_x", "orbs_y")
+	hex_list_to_wml_var(orb_guard_hexes, "orb_guards_x", "orb_guards_y")
+	wml.variables["orb_colors"] = table.concat(orb_colors, ",")
+	wml.variables["orig_orb_colors"] = wml.variables["orb_colors"]
+end
+
+local function place_library_room(mapgen)
+	local library_room = LibraryRoom:new()
+	library_room.id = "library_room"
+	-- library room in top left of map
+	mapgen:find_room_placement(library_room, 1, 10, 1, 15, true)
+	mapgen:register_room(library_room)
+end
+
+local function place_bedroom(mapgen)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	local bedroom = BedRoom:new()
+	bedroom.id = "bedroom"
+	bedroom.max_degree = 1
+	-- library room in top left of map
+	mapgen:find_room_placement(bedroom, math.floor(map_size_x * 0.75), map_size_x, math.floor(map_size_y * 0.25), math.floor(map_size_y * 0.75), true)
+	mapgen:register_room(bedroom)
+end
+
+local function place_prison_room(mapgen)
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	local prison_room = PrisonRoom:new()
+	prison_room.id = "prison_room"
+	prison_room.max_degree = 2
+	mapgen:find_room_placement(prison_room, 1, map_size_x, math.floor(map_size_y * 0.75), map_size_y, true)
+	mapgen:register_room(prison_room)
+end
+
+local function place_operating_room(mapgen)
+	local operating_room = OperatingRoom:new()
+	operating_room.id = "operating_room"
+	-- it can go anywhere
+	mapgen:find_placement_anywhere(operating_room, true)
+	mapgen:register_room(operating_room)
+end
+
+local function place_workshop_room(mapgen)
+	local workshop_room = WorkshopRoom:new()
+	workshop_room.id = "workshop_room"
+	-- it can go anywhere, and it's not essential
+	local placed = mapgen:find_placement_anywhere(workshop_room, false)
+	if placed then
+		mapgen:register_room(workshop_room)
+	end
+end
+
+-- random rooms include empty rooms, non-unique monsters, etc.
+local function place_random_rooms(mapgen, num_random_rooms, num_undead_per_room, num_undead_rooms)
+	local malakar_start_x = wml.variables["malakar_start_x"]
+	local malakar_start_y = wml.variables["malakar_start_y"]
+
+	-- this includes walls
+	local random_room_dim_mean = 12
+	local random_room_dim_sd = 5
+	local random_room_dim_min = 5
+	local random_room_dim_max = 12
+
+	-- difficulty scores range from 3 to 11 (range is 8)
+	-- if easiest, all units will be level 2 (average)
+	-- if hardest, all units will be level 3
+	-- otherwise, random combination of them
+	local undead_level_sum = (num_undead_per_room * num_undead_rooms * 2) + math.ceil(((num_undead_per_room * num_undead_rooms) / 8.0) * (wml.variables["difficulty_score"] - 3))
+	local undead_levels = get_random_level_list(num_undead_per_room * num_undead_rooms, undead_level_sum, 3)
+
+	local rand_rooms_generated = 0
+	while rand_rooms_generated < num_random_rooms do
+		local r_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
+		r_height = math.max(r_height, random_room_dim_min)
+		r_height = math.min(r_height, random_room_dim_max)
+		local s_height = math.ceil(random_norm(random_room_dim_mean, random_room_dim_sd))
+		s_height = math.max(s_height, random_room_dim_min)
+		s_height = math.min(s_height, random_room_dim_max)
+		local r = nil
+		if rand_rooms_generated < num_undead_rooms then
+			r = UndeadRoom:new()
+			r:set_levels({table.unpack(undead_levels, num_undead_per_room * rand_rooms_generated + 1, num_undead_per_room * (rand_rooms_generated + 1))})
+		elseif rand_rooms_generated < num_undead_rooms + 1 then
+			r = SupplyRoom:new()
+		elseif rand_rooms_generated < num_undead_rooms + 2 then
+			r = ClassRoom:new()
+			r_height = math.max(r_height, 6)
+			s_height = math.min(s_height, 9)
+		else
+			r = EmptyRoom:new()
+		end
+		r:set_dimensions(r_height, s_height)
+		r.max_degree = 4
+		local placed = mapgen:find_placement_anywhere(r, false)
+		if placed then
+			rand_rooms_generated = rand_rooms_generated + 1
+			r.id = "random_" .. tostring(rand_rooms_generated)
+			mapgen:register_room(r)
+		end
+	end
+end
+
+local function place_messhall_room(mapgen)
+	local messhall_room = MessHallRoom:new()
+	local r_height = 3 + mathx.random(1, 2) * 4
+	local s_height = math.min(math.ceil(random_norm(9, 5)), 12)
+	s_height = math.max(s_height, 7)
+	messhall_room:set_dimensions(r_height, s_height)
+	messhall_room.id = "messhall_room"
+	-- it can go anywhere, and it's not essential
+	local placed = mapgen:find_placement_anywhere(messhall_room, false)
+	if placed then
+		mapgen:register_room(messhall_room)
+	end
+end
+
+
+------------------------
+----- other map setup functions
+------------------------
 
 local function place_healing_glyph_in_room(room)
 	local glyph_hex = nil
@@ -1420,14 +979,6 @@ local function place_assistant_notes(num_notes)
 		end
 	end
 	return assistant_note_locs
-end
-
--- for debug purposes, label rooms in map
-local function label_rooms(rooms)
-	for i, room in ipairs(rooms) do
-		local center_x, center_y = table.unpack(room:get_approx_center())
-		wesnoth.map.add_label({x=center_x, y=center_y, text=room.id})
-	end
 end
 
 ------------------------
@@ -1539,7 +1090,9 @@ end
 ------------------------
 
 function randomize_scenario()
-	local all_rooms = {}
+	local map_size_x = wesnoth.current.map.playable_width
+	local map_size_y = wesnoth.current.map.playable_height
+	local mapgen = DungeonMapGen:new()
 
 	local num_orb_rooms = 5
 	if wesnoth.scenario.difficulty == "EASY" then
@@ -1550,35 +1103,29 @@ function randomize_scenario()
 	local num_healing_glyphs = 6
 
 	-- start out by placing and setting up story-important rooms
-	all_rooms = place_start_room(all_rooms)
-	all_rooms = place_control_room(all_rooms)
-	all_rooms = place_orb_rooms(all_rooms, num_orb_rooms)
-	all_rooms = place_library_room(all_rooms)
-	all_rooms = place_bedroom(all_rooms)
+	place_start_room(mapgen)
+	place_control_room(mapgen)
+	place_orb_rooms(mapgen, num_orb_rooms)
+	place_library_room(mapgen)
+	place_bedroom(mapgen)
 	-- now one-off unique rooms
-	all_rooms = place_prison_room(all_rooms)
-	all_rooms = place_operating_room(all_rooms)
-	all_rooms = place_workshop_room(all_rooms)
+	place_prison_room(mapgen)
+	place_operating_room(mapgen)
+	place_workshop_room(mapgen)
 
 	-- now make and position some random rooms (not involved in objectives)
 	local num_random_rooms = 7
-	all_rooms = place_random_rooms(all_rooms, num_random_rooms)
+	local num_undead_per_room = 3
+	local num_undead_rooms = 4
+	place_random_rooms(mapgen, num_random_rooms, num_undead_per_room, num_undead_rooms)
+	place_messhall_room(mapgen)
 
-	--label_rooms(all_rooms)
-
-	local map_graph = place_corridors(all_rooms)
-
-	-- now place post-corridor features
-	for i, room in ipairs(all_rooms) do
-		if room.id == "library_room" then
-			remove_library_bookshelves(room)
-		elseif room.id == "operating_room" then
-			place_or_contents(room)
-		end
-	end
+	mapgen:pre_corridor_setup()
+	mapgen:place_corridors("Isa")
+	mapgen:post_corridor_setup()
 
 	-- scatter healing and damage glyphs
-	local healing_glyphs = place_healing_glyphs(all_rooms, num_healing_glyphs)
+	local healing_glyphs = place_healing_glyphs(mapgen:get_rooms_list(), num_healing_glyphs)
 	hex_list_to_wml_var(healing_glyphs, "healing_glyph_x", "healing_glyph_y")
 
 	local damage_glyphs = place_damage_glyphs(15)
@@ -1663,7 +1210,7 @@ function wesnoth.wml_actions.handle_orb(cfg)
 			end
 		end
 		if wml.variables["automata_notification_state"] == 1 and #orb_colors > 1 then
-			wesnoth.wml_actions.message({x=x,y=y,message=_"This time the machine did not activate. There must be a way to safely break the orbs!"})
+			wesnoth.wml_actions.message({x=x,y=y,message=_"This time the machine did not activate.\nThere must be a way to safely break the orbs!"})
 			wml.variables["automata_notification_state"] = 2
 		end
 	end
@@ -1838,7 +1385,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	wesnoth.audio.sources["engine_start"] = {id="engine_start", sounds="dark-2.ogg", delay=0, chance=100, loop=-1, range=999, locations={machine_x, machine_y}}
 	wesnoth.wml_actions.redraw{}
 	wesnoth.interface.delay(1000)
-	wesnoth.wml_actions.message({id="Malakar",message=_"The machine is active! By Gar-Alagar... no..."})
+	wesnoth.wml_actions.message({id="Malakar",message=_"The machine is active!\nBy Gar-Alagar... no..."})
 	wesnoth.interface.delay(500)
 	-- central orb enlarges
 	for i = 1, 5 do

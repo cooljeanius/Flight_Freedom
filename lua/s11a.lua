@@ -165,7 +165,7 @@ function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
 		end
 	end
 
-	graph = Graph:new()
+	local graph = Graph:new()
 	graph:init_adjacency_mat(initial_adjacency_mat)
 
 	local map_image_overlay = ""

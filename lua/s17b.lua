@@ -42,7 +42,7 @@ local function get_total_food()
 end
 
 function wesnoth.wml_actions.show_food_table(cfg)
-	function pre_show(self)
+	local function pre_show(self)
 		local total_food = get_total_food()
 		local total_food_label = ""
 		if total_food >= food_needed then
