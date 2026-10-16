@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2026-10-07 04:38 UTC\n"
+"POT-Creation-Date: 2026-10-16 21:18 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5991,7 +5991,7 @@ msgid "(Kogw) A shame we lost a member of our fleet in this storm, but I suppose
 msgstr ""
 
 #. [message]: speaker=Unforgiver
-#: Flight_Freedom/scenarios/07a_The_Open_Ocean.cfg:452
+#: Flight_Freedom/scenarios/07a_The_Open_Ocean.cfg:448
 msgid "(Kogw) We'll never outdistance this storm, and it's gaining strength by the minute! We're doomed!"
 msgstr ""
 
@@ -9537,19 +9537,19 @@ msgid "Focus on the gate!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1245
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1246
 msgid ""
 "The Gate...\n"
 "It is glowing..."
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1328
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1329
 msgid "Get... out... of... my... HEAD!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1336
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1337
 msgid ""
 "No...\n"
 "These voices compel me...\n"
@@ -9558,49 +9558,49 @@ msgid ""
 msgstr ""
 
 #. [message]: speaker=Morlin Ka
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1343
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1344
 msgid ""
 "Malakar, hold fast!\n"
 "You must not let this evil overtake you!"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1363
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1364
 msgid "doom to all turn back TURN BACK nightmare of ending doom destruction desolation death DEATH to the world"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1364
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1365
 msgid "darkness awaits all YOU CANNOT PREVAIL failure despair empty death void hatred misery enmity black HATE"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1365
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1366
 msgid "evil will NOT BE DENIED all must die ALL MUST END torture PAIN agony terror suffering why fight the inevitable"
 msgstr ""
 
 #. [scenario]: id=Gate_Storms
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1366
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1367
 msgid "all must die YOU WILL DIE DARKNESS OBLIVION give up GIVE UP ALL IS DEATH death awaits you DIE DIE DIE"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1385
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1386
 msgid "Some sort of barrier is keeping me from approaching the lich!"
 msgstr ""
 
 #. [message]: speaker=Malakar
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1665
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1666
 msgid "We must destroy the Gate!"
 msgstr ""
 
 #. [message]: speaker=unit
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1697
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1698
 msgid "I feel the air thickening, as if the world itself is being pulled into the Gate!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1702
+#: Flight_Freedom/scenarios/15_Gate_of_Storms.cfg:1703
 msgid "Units close to the Gate of Storms will only be able to move one hex per turn."
 msgstr ""
 
@@ -13171,7 +13171,7 @@ msgstr ""
 
 #. [unit_type]: id=Doombringer, race=undead
 #: Flight_Freedom/units/undead/Skele_Doombringer.cfg:29
-msgid "Mighty belligerents of the long forgotten past raised once again for combat. Confined in crumbling memories of their former glory they hunt down foes relentlessly."
+msgid "When a Chocobone has served long enough in the undead legions, the dark magic that animates it begins to seep into the very bones of both rider and mount, forging them into a single, terrible entity known as a Doombringer. The skeletal warrior and its bird-like steed become one in purpose and form, their movements synchronized to a degree that defies the limitations of undeath, and they wield their spears with the grim determination of those who have forgotten everything except the art of war. They are the elite cavalry of the lost civilization's undead armies, striking with the precision of death itself as they charge into battle with a dread that chills the hearts of the living."
 msgstr ""
 
 #. [unit_type]: id=Wisp, race=undead
