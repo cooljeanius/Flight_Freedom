@@ -6,9 +6,6 @@ Author: Alarantalara (username on the Battle for Wesnoth forum)
 
 animate_path is a new tag that allows for movement of an object along paths not restricted by the hex grid
 
-NOTE: All images used should have a 72 pixel wide transparent border surrounding them.
-The only exception is if you are using this tag to animate a sequence of images that do not move.
-
 Required keys:
 hex_x, hex_y: a sequence of reference hexes on the map for the animation.
 image: The image or sequence of images to display. If the value of frames exceeds the number of images,
@@ -79,8 +76,6 @@ This value will be in the range [0..length[segment_number]]
 The function must return the absolute x,y coordinates of the associated point
 x, y = get_point_on_current_segment_from_offset( offset )
 ]=]
-
-local items = wesnoth.require "lua/wml/items.lua"
 
 -- Linear Algebra
 local epsilon = 0.0000000001
@@ -503,7 +498,7 @@ function wesnoth.wml_actions.animate_path(cfg)
 	end
 	for j = 1, num_animations do
 		if animation[j].linger then
-			items.place_halo(animation[j].target_hex_x, animation[j].target_hex_y, animation[j].image_name)
+			wesnoth.interface.add_item_halo(animation[j].target_hex_x, animation[j].target_hex_y, animation[j].image_name)
 		end
 	end
 end
