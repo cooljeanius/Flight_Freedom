@@ -66,12 +66,12 @@ function cloudsim.CloudSim:new()
 	o.cloud_max_x = wesnoth.current.map.playable_width
 	o.cloud_min_y = 1
 	o.cloud_max_y = wesnoth.current.map.playable_height
-	o.id = next_id
 	local local_id = tostring(next_id)
+	o.id = local_id
 	-- inject victory event to cleanup the WML variables we create
 	wesnoth.game_events.add{
 		name = "scenario_end",
-		id = "CloudSim_variable_cleanup_" .. tostring(next_id),
+		id = "CloudSim_variable_cleanup_" .. local_id,
 		action = function()
 			local variable_stems = {
 				"initial_setup",
@@ -99,18 +99,18 @@ end
 ---Note: this will restore mid-scenario changes from set_* methods, but will NOT overturn any set_* calls prior to this
 function cloudsim.CloudSim:post_config()
 	-- regenerate the cloud map on save load (when called by preload event)
-	if wml.variables["CloudSim_initial_setup_" .. tostring(self.id)] == 1 then
-		if wml.variables["CloudSim_flag_threshold_" .. tostring(self.id)] ~= nil then
-			self.flag_threshold = wml.variables["CloudSim_flag_threshold_" .. tostring(self.id)]
+	if wml.variables["CloudSim_initial_setup_" .. self.id] == 1 then
+		if wml.variables["CloudSim_flag_threshold_" .. self.id] ~= nil then
+			self.flag_threshold = wml.variables["CloudSim_flag_threshold_" .. self.id]
 		end
-		if wml.variables["CloudSim_cloud_scale_x_" .. tostring(self.id)] ~= nil then
-			self.cloud_scale_x = wml.variables["CloudSim_cloud_scale_x_" .. tostring(self.id)]
-			self.cloud_scale_y = wml.variables["CloudSim_cloud_scale_y_" .. tostring(self.id)]
-			self.time_scale = wml.variables["CloudSim_time_scale_" .. tostring(self.id)]
+		if wml.variables["CloudSim_cloud_scale_x_" .. self.id] ~= nil then
+			self.cloud_scale_x = wml.variables["CloudSim_cloud_scale_x_" .. self.id]
+			self.cloud_scale_y = wml.variables["CloudSim_cloud_scale_y_" .. self.id]
+			self.time_scale = wml.variables["CloudSim_time_scale_" .. self.id]
 		end
-		if wml.variables["CloudSim_wind_speed_x_" .. tostring(self.id)] ~= nil then
-			self.wind_speed_x = wml.variables["CloudSim_wind_speed_x_" .. tostring(self.id)]
-			self.wind_speed_y = wml.variables["CloudSim_wind_speed_y_" .. tostring(self.id)]
+		if wml.variables["CloudSim_wind_speed_x_" .. self.id] ~= nil then
+			self.wind_speed_x = wml.variables["CloudSim_wind_speed_x_" .. self.id]
+			self.wind_speed_y = wml.variables["CloudSim_wind_speed_y_" .. self.id]
 		end
 		self:_reload_offsets()
 		self:update_cloud_map(wesnoth.current.turn)
@@ -123,7 +123,7 @@ function cloudsim.CloudSim:initial_scenario_setup()
 		self:_init_random_offsets()
 	end
 	self:update_cloud_map(1)
-	wml.variables["CloudSim_initial_setup_" .. tostring(self.id)] = 1
+	wml.variables["CloudSim_initial_setup_" .. self.id] = 1
 end
 
 ---Manually set initial offsets for simplex clouds; by default they will be randomly set
@@ -132,11 +132,11 @@ end
 ---@param z_offset integer #Starting offset in z-dimension in simplex noise field
 function cloudsim.CloudSim:config_set_offsets(x_offset, y_offset, z_offset)
 	self.x_offset = x_offset
-	wml.variables["CloudSim_x_offset_" .. tostring(self.id)] = x_offset
+	wml.variables["CloudSim_x_offset_" .. self.id] = x_offset
 	self.y_offset = y_offset
-	wml.variables["CloudSim_y_offset_" .. tostring(self.id)] = y_offset
+	wml.variables["CloudSim_y_offset_" .. self.id] = y_offset
 	self.z_offset = z_offset
-	wml.variables["CloudSim_z_offset_" .. tostring(self.id)] = z_offset
+	wml.variables["CloudSim_z_offset_" .. self.id] = z_offset
 end
 
 ---Constrain the CloudSim to the specified hexes
@@ -167,9 +167,9 @@ function cloudsim.CloudSim:set_scale_factors(cloud_scale_x, cloud_scale_y, time_
 	self.cloud_scale_x = cloud_scale_x
 	self.cloud_scale_y = cloud_scale_y
 	self.time_scale = time_scale
-	wml.variables["CloudSim_cloud_scale_x_" .. tostring(self.id)] = cloud_scale_x
-	wml.variables["CloudSim_cloud_scale_y_" .. tostring(self.id)] = cloud_scale_y
-	wml.variables["CloudSim_time_scale_" .. tostring(self.id)] = time_scale
+	wml.variables["CloudSim_cloud_scale_x_" .. self.id] = cloud_scale_x
+	wml.variables["CloudSim_cloud_scale_y_" .. self.id] = cloud_scale_y
+	wml.variables["CloudSim_time_scale_" .. self.id] = time_scale
 end
 
 ---Set wind speed
@@ -180,8 +180,8 @@ end
 function cloudsim.CloudSim:set_wind_speed(wind_speed_x, wind_speed_y)
 	self.wind_speed_x = wind_speed_x
 	self.wind_speed_y = wind_speed_y
-	wml.variables["CloudSim_wind_speed_x_" .. tostring(self.id)] = wind_speed_x
-	wml.variables["CloudSim_wind_speed_y_" .. tostring(self.id)] = wind_speed_y
+	wml.variables["CloudSim_wind_speed_x_" .. self.id] = wind_speed_x
+	wml.variables["CloudSim_wind_speed_y_" .. self.id] = wind_speed_y
 end
 
 ---Set the intensity threshold that a hex must meet to be flagged
@@ -190,7 +190,7 @@ end
 ---@param flag_threshold number #Minimum cloud intensity to flag a hex
 function cloudsim.CloudSim:set_flag_threshold(flag_threshold)
 	self.flag_threshold = flag_threshold
-	wml.variables["CloudSim_flag_threshold_" .. tostring(self.id)] = flag_threshold
+	wml.variables["CloudSim_flag_threshold_" .. self.id] = flag_threshold
 end
 
 ---@private
@@ -203,9 +203,9 @@ end
 
 ---@private
 function cloudsim.CloudSim:_reload_offsets()
-	self.x_offset = wml.variables["CloudSim_x_offset_" .. tostring(self.id)]
-	self.y_offset = wml.variables["CloudSim_y_offset_" .. tostring(self.id)]
-	self.z_offset = wml.variables["CloudSim_z_offset_" .. tostring(self.id)]
+	self.x_offset = wml.variables["CloudSim_x_offset_" .. self.id]
+	self.y_offset = wml.variables["CloudSim_y_offset_" .. self.id]
+	self.z_offset = wml.variables["CloudSim_z_offset_" .. self.id]
 end
 
 -- x: input
