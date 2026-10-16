@@ -254,7 +254,7 @@ function dungeonmapgen.Room:set_wall_terrain(terrain)
 end
 
 ---Obtain list of the inner hexes (i.e. not part of the walls) of this Room
----@treturn {integer, integer}[] list of inner hexes
+---@treturn {integer, integer}[] #List of inner hexes
 function dungeonmapgen.Room:get_inner_hexes()
 	local inner_hexes = {}
 	local x1 = self.x1
@@ -406,8 +406,8 @@ function dungeonmapgen.Generator:new()
 	setmetatable(o, self)
 	o.rooms_list = {}
 	o.dungeon_min_x = 1
-	o.dungeon_min_y = 1
 	o.dungeon_max_x = wesnoth.current.map.playable_width
+	o.dungeon_min_y = 1
 	o.dungeon_max_y = wesnoth.current.map.playable_height
 	o.min_corridor_width = 2
 	o.max_corridor_width = 2
@@ -561,7 +561,7 @@ end
 ---| "sw" #Extend the corridor SW
 ---| "se" #Extend the corridor SE
 ---@param inst_list instruction[] #List of instructions to extend the tunnel
----@treturn {integer, integer}[] the hexes along the specified corridor
+---@treturn {integer, integer}[] #The hexes along the specified corridor
 function dungeonmapgen.Generator:plot_corridor(q, r, s, corridor_width, inst_list)
 	local corridor_tiles = {}
 	local half_corridor_width = math.floor(corridor_width / 2)
@@ -945,6 +945,7 @@ end
 
 ---to allow for different random function, e.g. deterministic unit testing
 ---by calling math.randomseed() and passing math.random()
+---@param rng_func function #Random function with same prototype as math.random() or mathx.random()
 function dungeonmapgen.set_rng(rng_func)
 	random = rng_func
 end
