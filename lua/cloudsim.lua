@@ -12,7 +12,7 @@
 --    * as desired, configure it. Any desired config_* method calls MUST occur before object is used
 --       (set_* methods can be called on-demand now or later)
 --    * Call its post_config() method immediately after: this is mandatory for saveload safety
---    In prestart:
+--    In prestart (NOT preload):
 --    * Call initial_scenario_setup()
 --    Subsequent usage:
 --    * Call update_cloud_map() when you need it updated (probably want to do so in a new_turn or turn_end event)
@@ -272,7 +272,7 @@ end
 ---For a particular cloud map, compute the specified quantile
 ---This returns a threshold number, that is highter than proportion q of cloud intensities
 ---One possible use: calibrate a flag threshold to an approximate proportion of hexes
----Note: calling set_flag_threshold with this result will approximately flag (1 - q) percentage of hexes
+---Note: calling set_flag_threshold with this result will approximately flag (1 - q) proportion of hexes
 ---@param q number #The desired proportion
 ---@return number
 function cloudsim.CloudSim:quantile(q)
@@ -308,16 +308,15 @@ end
 ---Get the list of all flagged hexes
 ---@treturn {integer, integer}[] #The list of flagged hexes
 function cloudsim.CloudSim:get_flagged_hexes()
-	local flagged_locs = {}
-	for x = self.cloud_min_x, self.cloud_max_x do
-		for y = self.cloud_min_y, self.cloud_max_y do
-			if self.cloud_matrix[x][y] > self.flag_threshold then
-				local hex = {x, y}
-				table.insert(flagged_locs, hex)
-			end
-		end
-	end
-	return flagged_locs
+	return self:get_hexes_custom_func(function(i, x, y) return i > self.flag_threshold end)
+end
+
+---@alias location_set table
+
+---Get the list of all flagged hexes as a location_set
+---@return location_set #The list of flagged hexes
+function cloudsim.CloudSim:get_flagged_hexes_location_set()
+	return location_set.of_pairs(self:get_flagged_hexes())
 end
 
 ---Convenience method to run the desired function on all flagged hexes
@@ -332,6 +331,23 @@ function cloudsim.CloudSim:execute_per_flagged_hex(action_func, shuffle)
 	for i, hex in ipairs(flagged_hexes) do
 		action_func(hex, self.cloud_matrix[hex[1]][hex[2]])
 	end
+end
+
+---Get list of hexes for which the specified function returns true
+---Must fit the prototype test_func(cloud_intensity, x, y) and return true or false
+---@param test_func function #The test function
+---@treturn {integer, integer}[] #The list of passing hexes
+function cloudsim.CloudSim:get_hexes_custom_func(test_func)
+	local flagged_locs = {}
+	for x = self.cloud_min_x, self.cloud_max_x do
+		for y = self.cloud_min_y, self.cloud_max_y do
+			if test_func(self.cloud_matrix[x][y], x, y) then
+				local hex = {x, y}
+				table.insert(flagged_locs, hex)
+			end
+		end
+	end
+	return flagged_locs
 end
 
 ---Label each hex covered by the CloudSim with the current cloud intensity
