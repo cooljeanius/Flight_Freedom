@@ -1,81 +1,10 @@
-
-local function calc_image_hex_offset(hex_x, hex_y, x, y)
-	-- given a reference hex and an offset in pixels
-	-- find the hex closest to the target and adjust the offset to be relative to that hex
-	-- returns the new hex coordinates followed by the new pixel offset
-	local hex_off_x = math.floor((x + 27) / 54)
-	local k = 0
-	if math.abs(hex_off_x) % 2 == 1 then
-		if math.abs(hex_x) % 2 == 0 then
-			k = 36
-		else
-			y = y - 36
-		end
-	end
-	local hex_off_y = math.floor((y + 36) / 72)
-	local new_x = x - hex_off_x * 54
-	local new_y = y - (hex_off_y * 72) + k
-	if new_y > 36 then
-		new_y = new_y - 72
-		hex_off_y = hex_off_y+1
-	end
-
-	return hex_x+hex_off_x, hex_y+hex_off_y, new_x, new_y
-end
-
---[=[
-[calc_image_hex_offset]
-Author: MadMax (username on the Battle for Wesnoth forum)
-
-Calculates the closest hex from an origin hex and an offest in polar coordinates.
-
-Required keys:
-origin_x, origin_y: the first tile
-radius: vector length in tiles
-theta: angle in radians; note that this is counterclockwise (i.e. not with reversed Y-axis)
-
-Optional keys:
-new_x_variable, new_y_variable: variable names to store new hex coordinates
-	If not specified, will default to "new_x" and "new_y" respectively
-
-Example:
-[find_offset_hex_polar]
-	origin_x=30
-	origin_y=10
-	radius=9
-	theta=$(pi()/4)
-[/find_offset_hex_polar]
-]=]
-
-function find_offset_hex_polar(origin_x, origin_y, radius, theta)
-	local radius = radius * 72.0
-	local theta = theta * -1
-	local offset_x = math.cos(theta) * radius
-	local offset_y = math.sin(theta) * radius
-	local new_x,new_y = calc_image_hex_offset(origin_x, origin_y, offset_x, offset_y)
-	return new_x, new_y
-end
-
-function wesnoth.wml_actions.find_offset_hex_polar(cfg)
-	local origin_x = tonumber(cfg.origin_x)
-	local origin_y = tonumber(cfg.origin_y)
-	local radius = tonumber(cfg.radius)
-	local theta = tonumber(cfg.theta)
-	local new_x, new_y = find_offset_hex_polar(origin_x, origin_y, radius, theta)
-	local new_x_varname = cfg.new_x_variable or "new_x"
-	local new_y_varname = cfg.new_y_variable or "new_y"
-	wml.variables[new_x_varname] = new_x
-	wml.variables[new_y_varname] = new_y
-end
+local hexutils = wesnoth.require("hexutils")
 
 --[=[
 [animate_path]
 Author: Alarantalara (username on the Battle for Wesnoth forum)
 
 animate_path is a new tag that allows for movement of an object along paths not restricted by the hex grid
-
-NOTE: All images used should have a 72 pixel wide transparent border surrounding them.
-The only exception is if you are using this tag to animate a sequence of images that do not move.
 
 Required keys:
 hex_x, hex_y: a sequence of reference hexes on the map for the animation.
@@ -148,8 +77,6 @@ The function must return the absolute x,y coordinates of the associated point
 x, y = get_point_on_current_segment_from_offset( offset )
 ]=]
 
-local items = wesnoth.require "lua/wml/items.lua"
-
 -- Linear Algebra
 local epsilon = 0.0000000001
 
@@ -197,36 +124,32 @@ end
 -- Image Placement Functions
 
 local function get_image_name_with_offset(x, y, image)
-	-- since halo doesn't have a key to offset an image, use the CROP
-	-- function built into the wesnoth image placement to fake it
-	-- requires a 72 pixel border around the image to work properly
+	-- using PAD function avoids old requirement of 72 pixel border
 	x = x*2
 	y = y*2
-	local w, h = filesystem.image_size(image)
-
-	w = w-math.abs(x)
-	if w <= 0 then
-		return
-	end
-	h = h-math.abs(y)
-	if h <= 0 then
-		return
-	end
-	if x > 0 then
-		x = 0
-	else
-		x = -x
-	end
-	if y > 0 then
-		y = 0
-	else
-		y = -y
-	end
 	x = math.floor(x+0.5)
 	y = math.floor(y+0.5)
-	w = math.floor(w+0.5)
-	h = math.floor(h+0.5)
-	return string.format("%s~CROP(%d,%d,%d,%d)",image,x,y,w,h)
+	local x_offset_str = ""
+	if x > 0 then
+		x_offset_str = "l=" .. tostring(x)
+	elseif x < 0 then
+		x_offset_str = "r=" .. tostring(-1 * x)
+	end
+	local y_offset_str = ""
+	if y > 0 then
+		y_offset_str = "t=" .. tostring(y)
+	elseif y < 0 then
+		y_offset_str = "b=" .. tostring(-1 * y)
+	end
+	local image_path = image
+	if x_offset_str ~= "" and y_offset_str ~= "" then
+		image_path = image_path .. "~PAD(" .. x_offset_str .. "," .. y_offset_str .. ")"
+	elseif x_offset_str ~= "" then
+		image_path = image_path .. "~PAD(" .. x_offset_str .. ")"
+	elseif y_offset_str ~= "" then
+		image_path = image_path .. "~PAD(" .. y_offset_str .. ")"
+	end
+	return image_path
 end
 
 -- x and y are hex values in this function
@@ -442,7 +365,7 @@ function interpolation_methods.cubic_spline(state, x_locs, y_locs, num_locs )
 
 		local function reached_point(point)
 			state.index = point+1
-			state.delta_x = x_locs[point+1] - x_locs[point] or 0
+			state.delta_x = (x_locs[point+1] - x_locs[point]) or 0
 		end
 
 		local function get_location(offset)
@@ -521,10 +444,6 @@ local function load_path(cfg, container_name)
 end
 
 function wesnoth.wml_actions.animate_path(cfg)
-	if wesnoth.get_image_size == nil then
-		wesnoth.interface.add_chat_message("Animation skipped. To see the animation, upgrade to Battle for Wesnoth version 1.9.4 or later")
-		return
-	end
 	local animation = {}
 	animation[1] = load_path(cfg, "[animate_path]")
 	local frames = tonumber(cfg.frames) or animation[1].num_images
@@ -565,7 +484,7 @@ function wesnoth.wml_actions.animate_path(cfg)
 			if animation[j].transpose then
 				x, y = y, x
 			end
-			animation[j].target_hex_x, animation[j].target_hex_y, x, y = calc_image_hex_offset(animation[j].hex_x,animation[j].hex_y,x,y)
+			animation[j].target_hex_x, animation[j].target_hex_y, x, y = hexutils.calc_image_hex_offset_screen(animation[j].hex_x,animation[j].hex_y,x,y)
 			animation[j].image_name = get_image_name_with_offset(x, y, animation[j].images[i%animation[j].num_images])
 			wesnoth.interface.add_hex_overlay(animation[j].target_hex_x, animation[j].target_hex_y, {
 				x = animation[j].target_hex_x,
@@ -579,7 +498,7 @@ function wesnoth.wml_actions.animate_path(cfg)
 	end
 	for j = 1, num_animations do
 		if animation[j].linger then
-			items.place_halo(animation[j].target_hex_x, animation[j].target_hex_y, animation[j].image_name)
+			wesnoth.interface.add_item_halo(animation[j].target_hex_x, animation[j].target_hex_y, animation[j].image_name)
 		end
 	end
 end

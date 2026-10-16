@@ -25,6 +25,63 @@ function wesnoth.interface.game_display.unit_weapons()
 	return new_unit_weapons_theme
 end
 
+-- semi-randomizes a list of units with less "clumping" of similar-cost units than a fully random shuffle
+-- representative logic of this with 10 units, cost ranging from 0 to 9:
+--   0,1,2,3,4,5,6,7,8,9         (starting list)
+--   (0,1,2),(3,4,5),(6,7,8),(9) (floor(sqrt(10)) = group size 3)
+--   (2,0,1),(5,4,3),(6,8,7),(9) (randomize unit order within groups)
+--   (2,5,6,9),(0,4,8),(1,3,7)   (select units from each group)
+--   (5,6,2,9),(0,8,4),(3,7,1)   (randomize within selections)
+--   (0,8,4),(5,6,2,9),(3,7,1)   (randomize order of selections)
+--   0,8,4,5,6,2,9,3,7,1         (final output)
+function wesnoth.wml_actions.evenly_shuffle_unitlist(cfg)
+	local varname = cfg.variable or wml.error("Missing required variable= attribute in [evenly_shuffle_unitlist]")
+	local dest_varname = cfg.to_variable or varname
+	local unit_list = wml.array_access.get(varname)
+	table.sort(unit_list, function(a, b) return a.cost < b.cost end)
+	local even_shuffle_unit_list = {}
+	-- first, group units with similar cost
+	local group_size = math.floor(math.sqrt(#unit_list))
+	local num_groups = math.ceil(#unit_list / group_size)
+	-- for now, generate a list of indices with groups in order
+	local indices_list = {}
+	for i = 1, num_groups do
+		local min_idx = ((i - 1) * group_size) + 1
+		local max_idx = math.min(i * group_size, #unit_list)
+		local group_indices = {}
+		for j = min_idx, max_idx do
+			table.insert(group_indices, j)
+		end
+		-- randomize unit order within each group
+		mathx.shuffle(group_indices)
+		for x = 1, #group_indices do
+			table.insert(indices_list, group_indices[x])
+		end
+	end
+	-- now, select one index sequentially from each group
+	local selections_list = {}
+	for i = 1, group_size do
+		local j = i
+		local selections_indices = {}
+		while j <= #indices_list do
+			table.insert(selections_indices, indices_list[j])
+			j = j + group_size
+		end
+		-- shuffle within each block of selections
+		mathx.shuffle(selections_indices)
+		table.insert(selections_list, selections_indices)
+	end
+	-- shuffle the blocks of selections
+	mathx.shuffle(selections_list)
+	for i = 1, #selections_list do
+		local selections_indices = selections_list[i]
+		for j = 1, #selections_indices do
+			table.insert(even_shuffle_unit_list, unit_list[selections_indices[j]])
+		end
+	end
+	wml.array_access.set(dest_varname, even_shuffle_unit_list)
+end
+
 -- places where recall list units can spawn
 local recall_spawn_locs = {}
 table.insert(recall_spawn_locs,{1,7})

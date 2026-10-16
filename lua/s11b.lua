@@ -3,7 +3,11 @@
 local _ = wesnoth.textdomain "wesnoth-Flight_Freedom"
 
 local functional = wesnoth.require("functional")
-wesnoth.dofile('~add-ons/Flight_Freedom/lua/dungeonmapgen.lua')
+local hexutils = wesnoth.require("hexutils")
+local dungeonmapgen = wesnoth.require("dungeonmapgen")
+
+local get_cubic = hexutils.get_cubic
+local from_cubic = hexutils.from_cubic
 
 ------------------------
 ----- dynamic difficulty handling functions
@@ -11,7 +15,7 @@ wesnoth.dofile('~add-ons/Flight_Freedom/lua/dungeonmapgen.lua')
 
 -- since it's just Malakar and his loadout's quite variable
 -- overall difficulty scales based on Malakar and set difficulty
-function calc_difficulty_score()
+function wesnoth.wml_actions.calc_difficulty_score(cfg)
 	local score = 1
 	if wesnoth.scenario.difficulty == "NORMAL" then
 		score = score + 2
@@ -37,6 +41,7 @@ end
 -- generate a list of numbers of length list_length, summing to level_sum, with no number > max_level
 local function get_random_level_list(list_length, level_sum, max_level)
 	local levels = {}
+	assert(level_sum <= max_level * list_length, "Error: level_sum cannot be greater than max_level * list_length")
 	local breakpoints = random_sample_wor(list_length, level_sum)
 	local current_floor = 0
 	local total_levels = 0
@@ -93,17 +98,36 @@ end
 local journal_window_def = wml.load('~add-ons/Flight_Freedom/gui/journal_window.cfg')
 gui.add_widget_definition("window", "journal", wml.get_child(journal_window_def, "window_definition"))
 
-local function show_journal_dialog(text, font)
-	local text_font = font
-	if text_font == nil then
-		if wesnoth.current_version() >= wesnoth.version("1.19.15") then
-			text_font = "WesScript"
+local function permute_text_size(text, base_size, spread)
+	spread = spread or base_size / 12.0
+	local new_text = ""
+	local post_translate_text = stringx.vformat("$s",{s=text})
+	local parsing_markup = false
+	for i, code in utf8.codes(post_translate_text) do
+		local c = utf8.char(code)
+		if c == "<" then
+			parsing_markup = true
+		end
+		if not parsing_markup then
+			-- no real science to these constants, besides [-spread, spread] range, exponent should be odd, and index multiplier should be prime
+			local size_delta = (((((string.byte(c) + (61 * i)) % 100) / 50.0) - 1) ^ 5) * spread
+			local size = base_size + size_delta
+			local rise = (((((string.byte(c) + (37 * i)) % 100) / 50.0) - 1) ^ 5) * (spread / 5.0)
+			new_text = new_text .. "<span size='" .. string.format("%.2f", size) .. "pt' rise='" .. string.format("%.2f", rise) .. "pt'>" .. c .. "</span>"
 		else
-			text_font = "Oldania ADF Std"
+			new_text = new_text .. c
+		end
+		if c == ">" then
+			parsing_markup = false
 		end
 	end
+	return new_text
+end
+
+local function show_journal_dialog(text, font)
+	font = font or "WesScript"
 	local function pre_show(self)
-		self.text.label = "<span font_family='" .. text_font .. "' size='xx-large' color='#000000'>" .. text .. "</span>"
+		self.text.label = "<span font_family='" .. font .. "' color='#000000'>" .. permute_text_size(text, 30, 3) .. "</span>"
 	end
 	local dialog_wml = wml.load("~add-ons/Flight_Freedom/gui/journal_dialog.cfg")
 	gui.show_dialog(wml.get_child(dialog_wml, 'resolution'), pre_show)
@@ -136,28 +160,14 @@ end
 ----- room definitions
 ------------------------
 
--- keep this separate for name-indexed dictionaries (making them upfront causes wmlxgettext to choke)
-local colors_list = {"red", "blue", "green", "white", "black", "yellow"}
-local orb_colors_desc_tr = {
-	_"Red Orb",
-	_"Blue Orb",
-	_"Green Orb",
-	_"White Orb",
-	_"Black Orb",
-	_"Yellow Orb",
-}
-local orb_colors_desc = {}
-for i, s in pairs(colors_list) do
-	orb_colors_desc[s] = orb_colors_desc_tr[i]
-end
+StartRoom = {}
+setmetatable(StartRoom, {__index = dungeonmapgen.Room})
+StartRoom.__index = StartRoom
 
-StartRoom = Room:new()
-
-function StartRoom:new(o)
-	o = o or Room:new()
+function StartRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(8, 8)
+	o:set_dimensions(8, 8)
 	return o
 end
 
@@ -184,13 +194,14 @@ function StartRoom:initial_setup()
 	wesnoth.interface.add_item_image(malakar_start_x, malakar_start_y, "scenery/castle-ruins3.png")
 end
 
-ControlRoom = Room:new()
+ControlRoom = {}
+setmetatable(ControlRoom, {__index = dungeonmapgen.Room})
+ControlRoom.__index = ControlRoom
 
-function ControlRoom:new(o)
-	o = o or Room:new()
+function ControlRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(11, 9)
+	o:set_dimensions(11, 9)
 	return o
 end
 
@@ -237,14 +248,15 @@ function ControlRoom:pre_corridor_setup()
 	hex_list_to_wml_var(self:get_inner_hexes(), "control_room_x", "control_room_y")
 end
 
-OrbRoom = Room:new()
+OrbRoom = {}
+setmetatable(OrbRoom, {__index = dungeonmapgen.Room})
+OrbRoom.__index = OrbRoom
 
-function OrbRoom:new(o)
-	o = o or Room:new()
+function OrbRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
 	o.color = ""
-	self:set_dimensions(5, 5)
+	o:set_dimensions(5, 5)
 	return o
 end
 
@@ -270,13 +282,14 @@ function OrbRoom:pre_corridor_setup()
 	wesnoth.interface.add_item_image(orb_x, orb_y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)~NO_TOD_SHIFT()")
 end
 
-LibraryRoom = Room:new()
+LibraryRoom = {}
+setmetatable(LibraryRoom, {__index = dungeonmapgen.Room})
+LibraryRoom.__index = LibraryRoom
 
-function LibraryRoom:new(o)
-	o = o or Room:new()
+function LibraryRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(12, 7)
+	o:set_dimensions(12, 7)
 	return o
 end
 
@@ -321,7 +334,6 @@ function LibraryRoom:pre_corridor_setup()
 	q, r, s = table.unpack(get_cubic({self.x1 + 2, self.y1}))
 	for i = 1, 10 do
 		local hex = from_cubic(q, r, s)
-		local hex_to_check = from_cubic(q - 1, r, s + 1)
 		local full_shelf = mathx.random(1, 2)
 		if full_shelf == 1 then
 			wesnoth.interface.add_item_image(hex[1], hex[2], "scenery/bookshelf-full.png")
@@ -339,22 +351,18 @@ function LibraryRoom:pre_corridor_setup()
 		if #wesnoth.interface.get_items(hex[1], hex[2]) == 0 then
 			if num_books_placed == 0 then
 				wesnoth.interface.add_item_image(hex[1], hex[2], "items/blueprints.png")
-				wml.variables["blueprint_x"] = hex[1]
-				wml.variables["blueprint_y"] = hex[2]
+				hex_to_wml_var(hex, "blueprint_x", "blueprint_y")
 			elseif num_books_placed == 1 then
 				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book3.png")
-				wml.variables["isle_book_x"] = hex[1]
-				wml.variables["isle_book_y"] = hex[2]
+				hex_to_wml_var(hex, "isle_book_x", "isle_book_y")
 			elseif num_books_placed == 2 then
 				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book4.png")
-				wml.variables["lab_book_x"] = hex[1]
-				wml.variables["lab_book_y"] = hex[2]
+				hex_to_wml_var(hex, "lab_book_x", "lab_book_y")
 			elseif num_books_placed == 3 then
 				-- would like to have a factory room if there's suitable graphics
 				-- if so, this would be more appropriate going there
 				wesnoth.interface.add_item_image(hex[1], hex[2], "items/book6.png")
-				wml.variables["automata_book_x"] = hex[1]
-				wml.variables["automata_book_y"] = hex[2]
+				hex_to_wml_var(hex, "automata_book_x", "automata_book_y")
 				break
 			end
 			num_books_placed = num_books_placed + 1
@@ -378,13 +386,14 @@ function LibraryRoom:post_corridor_setup()
 end
 
 -- Sol'kan's living quarters
-BedRoom = Room:new()
+BedRoom = {}
+setmetatable(BedRoom, {__index = dungeonmapgen.Room})
+BedRoom.__index = BedRoom
 
-function BedRoom:new(o)
-	o = o or Room:new()
+function BedRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(7, 5)
+	o:set_dimensions(7, 5)
 	return o
 end
 
@@ -416,13 +425,14 @@ function BedRoom:pre_corridor_setup()
 	wesnoth.interface.add_item_image(wardrobe_x, wardrobe_y, "scenery/wardrobe-drawer-open.png")
 end
 
-PrisonRoom = Room:new()
+PrisonRoom = {}
+setmetatable(PrisonRoom, {__index = dungeonmapgen.Room})
+PrisonRoom.__index = PrisonRoom
 
-function PrisonRoom:new(o)
-	o = o or Room:new()
+function PrisonRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(12, 9)
+	o:set_dimensions(12, 9)
 	return o
 end
 
@@ -433,8 +443,7 @@ function PrisonRoom:place_cell_content(hex, content_type)
 	elseif content_type == 2 then
 		-- magic resist amulet
 		wesnoth.interface.add_item_image(hex[1], hex[2], "items/bones.png~FL(horiz)~BLIT(items/ankh-necklace.png, 0, 10)")
-		wml.variables["resist_amulet_x"] = hex[1]
-		wml.variables["resist_amulet_y"] = hex[2]
+		hex_to_wml_var(hex, "resist_amulet_x", "resist_amulet_y")
 	elseif content_type == 3 then
 		wesnoth.units.to_map({type="Automaton Reaper", side=3}, hex[1], hex[2])
 	end
@@ -495,13 +504,14 @@ function PrisonRoom:pre_corridor_setup()
 	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
 end
 
-OperatingRoom = Room:new()
+OperatingRoom = {}
+setmetatable(OperatingRoom, {__index = dungeonmapgen.Room})
+OperatingRoom.__index = OperatingRoom
 
-function OperatingRoom:new(o)
-	o = o or Room:new()
+function OperatingRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(9, 10)
+	o:set_dimensions(9, 10)
 	return o
 end
 
@@ -522,8 +532,12 @@ function OperatingRoom:post_corridor_setup()
 	r = r - 2
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/sink-metal.png")
-	q = q - 4
-	s = s + 4
+	q = q - 3
+	s = s + 3
+	item_x, item_y = table.unpack(from_cubic(q, r, s))
+	wesnoth.interface.add_item_image(item_x, item_y, "scenery/ivpole.png")
+	q = q - 1
+	s = s + 1
 	item_x, item_y = table.unpack(from_cubic(q, r, s))
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/cabinet-metal.png")
 	q = q - 2
@@ -541,13 +555,14 @@ function OperatingRoom:post_corridor_setup()
 	wesnoth.interface.add_item_image(item_x, item_y, "scenery/surgical.png")
 end
 
-WorkshopRoom = Room:new()
+WorkshopRoom = {}
+setmetatable(WorkshopRoom, {__index = dungeonmapgen.Room})
+WorkshopRoom.__index = WorkshopRoom
 
-function WorkshopRoom:new(o)
-	o = o or Room:new()
+function WorkshopRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
-	self:set_dimensions(9, 9)
+	o:set_dimensions(9, 9)
 	return o
 end
 
@@ -566,12 +581,13 @@ function WorkshopRoom:pre_corridor_setup()
 	end
 end
 
-UndeadRoom = Room:new()
+UndeadRoom = {}
+setmetatable(UndeadRoom, {__index = dungeonmapgen.Room})
+UndeadRoom.__index = UndeadRoom
 
-function UndeadRoom:new(o)
-	o = o or Room:new()
+function UndeadRoom:new()
+	local o = dungeonmapgen.Room:new()
 	setmetatable(o, self)
-	self.__index = self
 	o.undead_levels = {}
 	return o
 end
@@ -625,7 +641,15 @@ function UndeadRoom:pre_corridor_setup()
 	end
 end
 
-MessHallRoom = Room:new()
+MessHallRoom = {}
+setmetatable(MessHallRoom, {__index = dungeonmapgen.Room})
+MessHallRoom.__index = MessHallRoom
+
+function MessHallRoom:new()
+	local o = dungeonmapgen.Room:new()
+	setmetatable(o, self)
+	return o
+end
 
 function MessHallRoom:pre_corridor_setup()
 	self:set_inner_terrain("Isa")
@@ -657,14 +681,22 @@ function MessHallRoom:post_corridor_setup()
 	end
 end
 
-SupplyRoom = Room:new()
+SupplyRoom = {}
+setmetatable(SupplyRoom, {__index = dungeonmapgen.Room})
+SupplyRoom.__index = SupplyRoom
+
+function SupplyRoom:new()
+	local o = dungeonmapgen.Room:new()
+	setmetatable(o, self)
+	return o
+end
 
 function SupplyRoom:pre_corridor_setup()
 	self:set_inner_terrain("Isa")
 	local center_hex = self:get_approx_center()
 	local hexes = self:get_inner_hexes()
 	for i, hex in ipairs(hexes) do
-		local distance = cartesian_distance_between_hexes(center_hex[1], center_hex[2], hex[1], hex[2])
+		local distance = hexutils.distance_between_hexes_cartesian(center_hex[1], center_hex[2], hex[1], hex[2])
 		local thingy_prob = norm_pdf(distance, 0, 4) * 4.0
 		if mathx.random() < thingy_prob then
 			local item = mathx.random_choice{
@@ -680,7 +712,15 @@ function SupplyRoom:pre_corridor_setup()
 	end
 end
 
-ClassRoom = Room:new()
+ClassRoom = {}
+setmetatable(ClassRoom, {__index = dungeonmapgen.Room})
+ClassRoom.__index = ClassRoom
+
+function ClassRoom:new()
+	local o = dungeonmapgen.Room:new()
+	setmetatable(o, self)
+	return o
+end
 
 function ClassRoom:pre_corridor_setup()
 	self:set_inner_terrain("Isa")
@@ -707,7 +747,15 @@ function ClassRoom:pre_corridor_setup()
 	wesnoth.interface.add_item_image(hex_x, hex_y, "scenery/chairSW-fancier.png")
 end
 
-EmptyRoom = Room:new()
+EmptyRoom = {}
+setmetatable(EmptyRoom, {__index = dungeonmapgen.Room})
+EmptyRoom.__index = EmptyRoom
+
+function EmptyRoom:new()
+	local o = dungeonmapgen.Room:new()
+	setmetatable(o, self)
+	return o
+end
 
 function EmptyRoom:pre_corridor_setup()
 	self:set_inner_terrain("Isa")
@@ -716,6 +764,11 @@ end
 ------------------------
 ----- room setup functions
 ------------------------
+
+local function split_to_number(s, sep)
+	local separator = sep or ","
+	return functional.map(stringx.split(s, separator), function(j) return tonumber(j) end)
+end
 
 -- keep this separate for name-indexed dictionaries (making them upfront causes wmlxgettext to choke)
 local colors_list = {"red", "blue", "green", "white", "black", "yellow"}
@@ -755,10 +808,8 @@ end
 
 local function place_orb_rooms(mapgen, num_orb_rooms)
 	local orb_colors = {}
-	local orb_colors_desc = {}
 	for i, s in pairs(colors_list) do
 		table.insert(orb_colors, s)
-		orb_colors_desc[s] = orb_colors_desc_tr[i]
 	end
 	mathx.shuffle(orb_colors)
 	orb_colors = {table.unpack(orb_colors, 1, num_orb_rooms)}
@@ -794,7 +845,7 @@ local function place_bedroom(mapgen)
 	local bedroom = BedRoom:new()
 	bedroom.id = "bedroom"
 	bedroom.max_degree = 1
-	-- library room in top left of map
+	-- bedroom in right side of map
 	mapgen:find_room_placement(bedroom, math.floor(map_size_x * 0.75), map_size_x, math.floor(map_size_y * 0.25), math.floor(map_size_y * 0.75), true)
 	mapgen:register_room(bedroom)
 end
@@ -829,9 +880,6 @@ end
 
 -- random rooms include empty rooms, non-unique monsters, etc.
 local function place_random_rooms(mapgen, num_random_rooms, num_undead_per_room, num_undead_rooms)
-	local malakar_start_x = wml.variables["malakar_start_x"]
-	local malakar_start_y = wml.variables["malakar_start_y"]
-
 	-- this includes walls
 	local random_room_dim_mean = 12
 	local random_room_dim_sd = 5
@@ -839,7 +887,7 @@ local function place_random_rooms(mapgen, num_random_rooms, num_undead_per_room,
 	local random_room_dim_max = 12
 
 	-- difficulty scores range from 3 to 11 (range is 8)
-	-- if easiest, all units will be level 2 (average)
+	-- if easiest, units will have average level 2
 	-- if hardest, all units will be level 3
 	-- otherwise, random combination of them
 	local undead_level_sum = (num_undead_per_room * num_undead_rooms * 2) + math.ceil(((num_undead_per_room * num_undead_rooms) / 8.0) * (wml.variables["difficulty_score"] - 3))
@@ -873,6 +921,10 @@ local function place_random_rooms(mapgen, num_random_rooms, num_undead_per_room,
 			rand_rooms_generated = rand_rooms_generated + 1
 			r.id = "random_" .. tostring(rand_rooms_generated)
 			mapgen:register_room(r)
+		else
+			-- if mapgen couldn't find an adequate room placement, try smaller rooms next
+			random_room_dim_mean = math.max(5, random_room_dim_mean - 2)
+			random_room_dim_max = math.max(5, random_room_dim_max - 1)
 		end
 	end
 end
@@ -1014,6 +1066,7 @@ table.insert(months_list, _"Verglas Bloom")
 table.insert(months_list, _"Blackfire")
 
 -- in case Irdya's months-per-year schedule is defined to be different from Earth's in the future
+-- also deciding to ignore whether not not Irdya has leap years
 local days_per_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 local days_per_year = functional.reduce(days_per_month, function(a,b) return a+b end, 0)
 
@@ -1069,6 +1122,7 @@ local function generate_journal()
 			end
 		end
 		table.insert(journal_days, day)
+		assert(day)
 		journal_entries_by_day[day] = distractor_journal_entries[i]
 	end
 
@@ -1092,7 +1146,7 @@ end
 function randomize_scenario()
 	local map_size_x = wesnoth.current.map.playable_width
 	local map_size_y = wesnoth.current.map.playable_height
-	local mapgen = DungeonMapGen:new()
+	local mapgen = dungeonmapgen.Generator:new()
 
 	local num_orb_rooms = 5
 	if wesnoth.scenario.difficulty == "EASY" then
@@ -1120,9 +1174,8 @@ function randomize_scenario()
 	place_random_rooms(mapgen, num_random_rooms, num_undead_per_room, num_undead_rooms)
 	place_messhall_room(mapgen)
 
-	mapgen:pre_corridor_setup()
-	mapgen:place_corridors("Isa")
-	mapgen:post_corridor_setup()
+	mapgen:set_corridor_floor_terrain("Isa")
+	mapgen:generate()
 
 	-- scatter healing and damage glyphs
 	local healing_glyphs = place_healing_glyphs(mapgen:get_rooms_list(), num_healing_glyphs)
@@ -1178,8 +1231,8 @@ function wesnoth.wml_actions.handle_orb(cfg)
 	malakar.moves = 0
 	malakar.attacks_left = 0
 	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
-	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
-	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
+	local orbs_x = split_to_number(wml.variables["orbs_x"])
+	local orbs_y = split_to_number(wml.variables["orbs_y"])
 	if orb_colors[1] ~= orb_color then
 		-- player smashed orb out of sequence
 		wml.variables["alarms_triggered"] = wml.variables["alarms_triggered"] + 1
@@ -1196,7 +1249,17 @@ function wesnoth.wml_actions.handle_orb(cfg)
 			wesnoth.interface.delay(1700)
 		end
 		wesnoth.interface.remove_item(x, y - 1, "units/monsters/automaton-defender.png~RC(magenta>green)~NO_TOD_SHIFT()")
+		-- in case there's another unit (e.g. an undead) on top of the automaton
+		local current_unit = nil
+		if wesnoth.units.get(x, y-1) ~= nil then
+			current_unit = wesnoth.units.get(x, y-1)
+			wesnoth.units.extract(current_unit)
+		end
 		wesnoth.units.to_map({type="Automaton Defender", side=3, facing="se"}, x, y - 1)
+		if current_unit ~= nil then
+			local current_unit_x, current_unit_y = wesnoth.paths.find_vacant_hex(x, y - 1, current_unit)
+			current_unit:to_map(current_unit_x, current_unit_y)
+		end
 		wesnoth.game_events.remove("guard_description")
 	else
 		if #orb_colors > 1 then
@@ -1284,9 +1347,9 @@ function wesnoth.wml_actions.handle_prison_lever(cfg)
 	wesnoth.interface.remove_item(x, y, "items/switch-left.png~XBRZ(2)")
 	wesnoth.interface.add_item_image(x, y, "items/switch-right.png~XBRZ(2)")
 	local q, r, s = table.unpack(get_cubic({x, y}))
-	local prison_levers_x = functional.map(stringx.split(wml.variables["prison_levers_x"], ","), function(s) return tonumber(s) end)
-	local prison_levers_y = functional.map(stringx.split(wml.variables["prison_levers_y"], ","), function(s) return tonumber(s) end)
-	local prison_cell_idx = functional.map(stringx.split(wml.variables["prison_cell_idx"], ","), function(s) return tonumber(s) end)
+	local prison_levers_x = split_to_number(wml.variables["prison_levers_x"])
+	local prison_levers_y = split_to_number(wml.variables["prison_levers_y"])
+	local prison_cell_idx = split_to_number(wml.variables["prison_cell_idx"])
 	local door_hex = nil
 	for j, idx in ipairs(prison_cell_idx) do
 		if prison_levers_x[j] == x and prison_levers_y[j] == y then
@@ -1302,6 +1365,7 @@ function wesnoth.wml_actions.handle_prison_lever(cfg)
 			break
 		end
 	end
+	assert(door_hex)
 	add_terrain_overlay(door_hex[1], door_hex[2], "Pr\\o")
 	wesnoth.wml_actions.redraw{clear_shroud=true}
 	wml.variables["prison_cell_idx"] = table.concat(prison_cell_idx, ",")
@@ -1309,21 +1373,50 @@ function wesnoth.wml_actions.handle_prison_lever(cfg)
 	wml.variables["prison_levers_y"] = table.concat(prison_levers_y, ",")
 end
 
+local function strip_pango_markup(input_str)
+	local parsing_markup = false
+	local output_str = ""
+	for i, code in utf8.codes(input_str) do
+		local c = utf8.char(code)
+		if c == "<" then
+			parsing_markup = true
+		end
+		if not parsing_markup then
+			output_str = output_str .. c
+		end
+		if c == ">" then
+			parsing_markup = false
+		end
+	end
+	return output_str
+end
+
+local function insert_aligned_periods(string1, string2, total_length)
+	total_length = total_length or 45
+	string1 = string1 or ""
+	string2 = string2 or ""
+	local post_po_string1 = stringx.vformat("$s",{s=string1})
+	local post_po_string2 = stringx.vformat("$s",{s=string2})
+	local current_periods = total_length - utf8.len(strip_pango_markup(post_po_string1)) - utf8.len(strip_pango_markup(post_po_string2))
+	current_periods = math.max(current_periods, 0)
+	local output_str = post_po_string1 .. string.rep(".", current_periods) .. post_po_string2
+	return output_str
+end
+
 function wesnoth.wml_actions.display_console_screen(cfg)
 	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
 	local orig_orb_colors = stringx.split(wml.variables["orig_orb_colors"], ",")
 	local alarms_triggered = wml.variables["alarms_triggered"]
 	local console_str = "<span font_family='DejaVuSansMono' size='large'>"
-	-- po: number of periods should vary so that status entries are aligned
 	if #orb_colors > 0 then
-		console_str = console_str .. _"VOID ENGINE STATUS............<span color='yellow'>INITIALIZING</span>" .. "\n\n"
-		console_str = console_str .. _"INNER CONTAINMENT FIELD.......<span color='yellow'>ENABLED</span>"
+		console_str = console_str .. insert_aligned_periods(_"VOID ENGINE STATUS", "<span color='yellow'>" .. _"INITIALIZING" .. "</span>") .. "\n\n"
+		console_str = console_str .. insert_aligned_periods(_"INNER CONTAINMENT FIELD", "<span color='yellow'>" .. _"ENABLED" .. "</span>")
 	else
-		console_str = console_str .. _"VOID ENGINE STATUS............<span color='green'>READY</span>" .. "\n\n"
-		console_str = console_str .. _"INNER CONTAINMENT FIELD.......DISABLED"
+		console_str = console_str .. insert_aligned_periods(_"VOID ENGINE STATUS", "<span color='green'>" .. _"READY" .. "</span>") .. "\n\n"
+		console_str = console_str .. insert_aligned_periods(_"INNER CONTAINMENT FIELD", _"DISABLED")
 	end
 	console_str = console_str .. "\n"
-	console_str = console_str .. _"OUTER CONTAINMENT FIELD.......<span color='red'>OFFLINE</span>"
+	console_str = console_str .. insert_aligned_periods(_"OUTER CONTAINMENT FIELD", "<span color='red'>" .. _"OFFLINE" .. "</span>")
 	console_str = console_str .. "\n\n"
 	local function list_contains(list, element)
 		local result = false
@@ -1338,18 +1431,28 @@ function wesnoth.wml_actions.display_console_screen(cfg)
 	for i, color in ipairs(orig_orb_colors) do
 		console_str = console_str .. stringx.vformat(_"ENERGY SOURCE $i:", {i=i}) .. "\n"
 		if list_contains(orb_colors, color) then
-			console_str = console_str .. _"   CHARGE.....................<span color='green'>100%</span>" .. "\n"
-			console_str = console_str .. _"   TRANSFER...................<span color='yellow'>STANDBY</span>" .. "\n\n"
+			console_str = console_str .. insert_aligned_periods(_"   CHARGE", "<span color='green'>" .. _"100%" .. "</span>") .. "\n"
+			console_str = console_str .. insert_aligned_periods(_"   TRANSFER", "<span color='yellow'>" .. _"STANDBY" .. "</span>") .. "\n\n"
 		else
-			console_str = console_str .. _"   CHARGE.....................<span color='red'>0%</span>" .. "\n"
-			console_str = console_str .. _"   TRANSFER...................<span color='green'>COMPLETED</span>" .. "\n\n"
+			console_str = console_str .. insert_aligned_periods(_"   CHARGE", "<span color='red'>" .. _"0%" .. "</span>") .. "\n"
+			console_str = console_str .. insert_aligned_periods(_"   TRANSFER", "<span color='green'>" .. _"COMPLETED" .. "</span>") .. "\n\n"
 		end
 	end
 	if alarms_triggered > 0 then
-		console_str = console_str .. stringx.vformat(_"ALARMS TRIGGERED..............<span color='red'>$i</span>", {i=alarms_triggered}) .. "\n"
+		console_str = console_str .. insert_aligned_periods(_"ALARMS TRIGGERED", stringx.vformat("<span color='red'>$i</span>", {i=alarms_triggered})) .. "\n\n"
 	else
-		console_str = console_str .. _"ALARMS TRIGGERED..............<span color='green'>0</span>" .. "\n"
+		console_str = console_str .. insert_aligned_periods(_"ALARMS TRIGGERED", "<span color='green'>0</span>") .. "\n\n"
 	end
+	---@diagnostic disable-next-line: undefined-global
+	local date = os.date("!*t")
+	-- yes, this will roll over every new year but that's too small a detail to deal with
+	-- it's also purely cosmetic so does not need to be consistent across replays
+	local hour_str = string.format("%.2i",date["hour"])
+	local min_str = string.format("%.2i", date["min"])
+	local sec_str = string.format("%.2i", date["sec"])
+	-- Sol'kan's folly occurred in 112 YW; it is now 331 YW
+	local time_interval = stringx.vformat(_"$d|d $h|h $m|m $s|s", {d=(days_per_year * (331 - 112)) + date["yday"], h=hour_str, m=min_str, s=sec_str})
+	console_str = console_str .. insert_aligned_periods(_"KERNEL UPTIME", time_interval) .. "\n"
 	console_str = console_str .. "</span>"
 	show_text_box_borderless_dialog(console_str)
 end
@@ -1363,7 +1466,7 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		mult = mult or 1
 		local tremor_coordinates = { {5,0},{-10,0},{-5,5},{0,-10},{0,5} } -- adapted from Wesnoth Lua Pack
 		for i, c in ipairs(tremor_coordinates) do
-			wesnoth.interface.scroll(c[1] * mult, c[2] * mult)
+			wesnoth.interface.scroll(mathx.round(c[1] * mult), mathx.round(c[2] * mult))
 			wesnoth.interface.delay(50)
 		end
 	end
@@ -1453,13 +1556,13 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		wesnoth.interface.delay(200)
 		wesnoth.wml_actions.redraw{}
 	end
-	local theta = find_angle_between_hexes(machine_x, machine_y, unit_x, unit_y)
+	local theta = hexutils.angle_between_hexes_cartesian(machine_x, machine_y, unit_x, unit_y)
 	local retreat_x = nil
 	local retreat_y = nil
 	-- in case player debug-teleports to the machine
 	if unit_x ~= machine_x or unit_y ~= machine_y then
 		for i = 1, 10 do
-			local test_x, test_y = find_offset_hex_polar(machine_x, machine_y, i, theta)
+			local test_x, test_y = hexutils.find_offset_hex_polar_cartesian(machine_x, machine_y, i, theta)
 			local terrain_code = wesnoth.current.map[{test_x, test_y}]
 			if retreat_x == nil and terrain_code == "Fypd" then
 				-- first hex outside machine along a line from machine center to unit's position
@@ -1504,6 +1607,8 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	tremor(5)
 	wesnoth.interface.color_adjust(100, 0, 0)
 	wesnoth.audio.play("explosion-big.ogg")
+	wesnoth.interface.remove_item(machine_x, machine_y, "scenery/sentinel.png")
+	wesnoth.interface.add_item_halo(machine_x, machine_y, "scenery/sentinel-broken.png")
 	for i = 1, 8 do
 		local img_path = "halo/explosion-big-" .. tostring(i) .. ".png"
 		wesnoth.interface.add_item_halo(machine_x, machine_y, img_path)
@@ -1522,11 +1627,13 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 	local throw_x = nil
 	local throw_y = nil
 	local throw_steps = nil
-	theta = find_angle_between_hexes(machine_x, machine_y, retreat_x, retreat_y)
+	theta = hexutils.angle_between_hexes_cartesian(machine_x, machine_y, retreat_x, retreat_y)
+	local hit_wall = false
 	for i = 1, 16 do
-		local test_x, test_y = find_offset_hex_polar(retreat_x, retreat_y, (i / 2.0), theta)
+		local test_x, test_y = hexutils.find_offset_hex_polar_cartesian(retreat_x, retreat_y, (i / 2.0), theta)
 		local terrain_code = wesnoth.current.map[{test_x, test_y}]
 		if string.sub(terrain_code, 1, 1) == "X" then
+			hit_wall = true
 			break
 		else
 			-- we want the last hex before the wall
@@ -1564,6 +1671,10 @@ function wesnoth.wml_actions.engine_activation_sequence(cfg)
 		unit_img = unit_img_base .. "~ROTATE(-90)~NO_TOD_SHIFT()"
 	end
 	wesnoth.interface.add_item_image(throw_x, throw_y, unit_img)
+	wesnoth.wml_actions.redraw{}
+	if hit_wall then
+		tremor(0.5)
+	end
 	for i = 1, 6 do
 		wesnoth.interface.color_adjust(-40 * i, -40 * i, -40 * i)
 		wesnoth.interface.delay(200)
@@ -1612,8 +1723,8 @@ end
 function wesnoth.wml_actions.display_assistant_note(cfg)
 	local x = cfg.x
 	local y = cfg.y
-	local assistant_note_x = functional.map(stringx.split(wml.variables["assistant_note_x"], ","), function(s) return tonumber(s) end)
-	local assistant_note_y = functional.map(stringx.split(wml.variables["assistant_note_y"], ","), function(s) return tonumber(s) end)
+	local assistant_note_x = split_to_number(wml.variables["assistant_note_x"])
+	local assistant_note_y = split_to_number(wml.variables["assistant_note_y"])
 	local notes = {
 _"I've been stuck down here for months now. I pledged myself to Sol'kan to learn magic after Alduin rejected me. But all I've done is help with insane experiments, each more dangerous than the last. He hasn't taught me even one spell yet. Both of the only real friends I had down here are dead. Leofric died to a malfunctioning Automaton and Perrin was literally turned inside out. Sol'kan does not care. I've fantasized more than once about gutting him with a knife during one of his walks or while he's wrapped up in one of his experiments. And I know I'm not the only one who thinks about it.",
 _"That crazy bastard actually did it. The Engine is complete, and Sol'kan is making his final preparations. Already he has activated the containment fields. None of us can get in or out. I know that he promised us all eternal rewards from the void. But I don't believe him anymore. He'll have no need of us, and I think he'll just leave us to rot.\n\nI've talked to my mates and they're with me. He dies tonight. Then we plunder this place and get out of here.",
@@ -1640,12 +1751,23 @@ end
 
 -- for color-blind accessibility
 function wesnoth.wml_actions.label_orb_colors(cfg)
-	local orbs_x = functional.map(stringx.split(wml.variables["orbs_x"], ","), function(s) return tonumber(s) end)
-	local orbs_y = functional.map(stringx.split(wml.variables["orbs_y"], ","), function(s) return tonumber(s) end)
+	local orbs_x = split_to_number(wml.variables["orbs_x"])
+	local orbs_y = split_to_number(wml.variables["orbs_y"])
 	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
 	for i, color in ipairs(orb_colors) do
 		local x = orbs_x[i]
 		local y = orbs_y[i]
 		wesnoth.map.add_label({x=x, y=y, text=orb_colors_desc[color]})
+	end
+end
+
+function wesnoth.wml_actions.unlabel_orb_colors(cfg)
+	local orbs_x = split_to_number(wml.variables["orbs_x"])
+	local orbs_y = split_to_number(wml.variables["orbs_y"])
+	local orb_colors = stringx.split(wml.variables["orb_colors"], ",")
+	for i, color in ipairs(orb_colors) do
+		local x = orbs_x[i]
+		local y = orbs_y[i]
+		wesnoth.map.remove_label({x=x, y=y})
 	end
 end

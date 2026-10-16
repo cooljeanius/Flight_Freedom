@@ -1,6 +1,6 @@
 -- Lua code used by scenario 11A (River of Skulls)
 
-wesnoth.dofile('~add-ons/Flight_Freedom/lua/graph_utils.lua')
+local graph_utils = wesnoth.require("graph_utils")
 
 local start_node = 1
 local dest_node = 23
@@ -165,7 +165,7 @@ function randomize_map(max_guaranteed_path_length, closure_prop, chasm_prop)
 		end
 	end
 
-	local graph = Graph:new()
+	local graph = graph_utils.Graph:new()
 	graph:init_adjacency_mat(initial_adjacency_mat)
 
 	local map_image_overlay = ""

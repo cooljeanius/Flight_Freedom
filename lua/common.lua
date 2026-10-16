@@ -1,7 +1,8 @@
---- return a replay-safe random number sampled from specified normal distribution
-function random_norm(mean, sd)
-	local u = mathx.random()
-	local v = mathx.random()
+--- return a replay-safe (by default) random number sampled from specified normal distribution
+function random_norm(mean, sd, random_func)
+	random_func = random_func or mathx.random
+	local u = 1.0 - random_func()
+	local v = 1.0 - random_func()
 	local n = math.sqrt(-2.0 * math.log(u)) * math.cos(2.0 * math.pi * v)
 	local r = (n * sd) + mean
 	return r
@@ -12,21 +13,26 @@ function norm_pdf(x, mean, sd)
 end
 
 --- randomly generate k integers from 1 to n without replacement
-function random_sample_wor(k, n)
+--- integers are returned in sorted order
+function random_sample_wor(k, n, random_func)
+	random_func = random_func or mathx.random
 	local reservoir = {}
-	for i = 1, k do
-		table.insert(reservoir, i)
-	end
-	local w = math.exp(math.log(mathx.random()) / k)
-	local i = k
-	while i <= n do
-		i = i + math.floor(math.log(mathx.random()) / math.log(1 - w)) + 1
-		if i <= n then
-			reservoir[mathx.random(1, k)] = i
-			w = w * math.exp(math.log(mathx.random()) / k)
+	assert(k <= n)
+	if k > 0 then
+		for i = 1, k do
+			table.insert(reservoir, i)
 		end
+		local w = math.exp(math.log(1.0 - random_func()) / k)
+		local i = k
+		while i <= n do
+			i = i + math.floor(math.log(1.0 - random_func()) / math.log(1 - w)) + 1
+			if i <= n then
+				reservoir[random_func(1, k)] = i
+				w = w * math.exp(math.log(1.0 - random_func()) / k)
+			end
+		end
+		table.sort(reservoir)
 	end
-	table.sort(reservoir)
 	return reservoir
 end
 
@@ -36,60 +42,6 @@ function trunc(n)
 	else
 		return math.ceil(n)
 	end
-end
-
--- useful reference for cubic grid math: https://www.redblobgames.com/grids/hexagons/
-
--- since mainline wesnoth.map.from_cubic is broken as of 1.19.13, reimplement it here
--- (c++ backend expects a cubic_location struct which isn't accessible to lua)
-function from_cubic(q, r, s)
-	local x = q
-	local y = r + trunc((q + (math.abs(q) % 2)) / 2)
-	return({x, y})
-end
-
-get_cubic = nil
-if wesnoth.current_version() >= wesnoth.version("1.19.4") then
-	get_cubic = wesnoth.map.get_cubic
-else
-	-- even-q -> cubic conversion prior to 1.19.4
-	get_cubic = function(loc)
-		local parity = math.abs(loc[1]) % 2
-		local q = loc[1]
-		local r = loc[2] - trunc((loc[1] + parity) / 2)
-		local s = -1 * (q+r)
-		return({q, r, s})
-	end
-end
-
-function find_angle_between_hexes(x1, y1, x2, y2)
-	local q1, r1, s1 = table.unpack(get_cubic({x1, y1}))
-	local q2, r2, s2 = table.unpack(get_cubic({x2, y2}))
-	local x1_pixel = (3.0 / 2) * q1
-	local y1_pixel = ((math.sqrt(3.0) / 2) * q1) + (math.sqrt(3.0) * r1)
-	local x2_pixel = (3.0 / 2) * q2
-	local y2_pixel = ((math.sqrt(3.0) / 2) * q2) + (math.sqrt(3.0) * r2)
-	local theta = math.atan(math.abs(y2_pixel - y1_pixel) / math.abs(x2_pixel - x1_pixel))
-	-- y2 reversed here to account for flipped Y axis
-	if x1_pixel >= x2_pixel and y2_pixel <= y1_pixel then -- quadrant II
-		theta = math.pi - theta
-	elseif x1_pixel >= x2_pixel and y2_pixel > y1_pixel then -- quadrant III
-		theta = math.pi + theta
-	elseif x1_pixel < x2_pixel and y2_pixel > y1_pixel then -- quadrant IV
-		theta = (math.pi * 2) - theta
-	end
-	return theta
-end
-
--- find the distance between two hexes in a straight line between them
-function cartesian_distance_between_hexes(x1, y1, x2, y2)
-	local q1, r1, s1 = table.unpack(get_cubic({x1, y1}))
-	local q2, r2, s2 = table.unpack(get_cubic({x2, y2}))
-	local x1_pixel = (3.0 / 2) * q1
-	local y1_pixel = ((math.sqrt(3.0) / 2) * q1) + (math.sqrt(3.0) * r1)
-	local x2_pixel = (3.0 / 2) * q2
-	local y2_pixel = ((math.sqrt(3.0) / 2) * q2) + (math.sqrt(3.0) * r2)
-	return math.sqrt(((x1_pixel - x2_pixel) ^ 2) + ((y1_pixel - y2_pixel) ^ 2)) / math.sqrt(3)
 end
 
 --- adjusts side numbers in the sidebar to 'skip over' listed sides
@@ -155,29 +107,6 @@ function wesnoth.wml_actions.total_unit_cost(cfg)
 	end
 end
 
-if wesnoth.current_version() < wesnoth.version("1.19.17") then
-	---
-	-- Clears the chat log.
-	--
-	-- [clear_chat]
-	-- [/clear_chat]
-	---
-	function wesnoth.wml_actions.clear_chat(cfg)
-		wesnoth.interface.clear_chat_messages()
-	end
-
-	---
-	-- Get current game zoom level.
-	--
-	-- [store_zoom]
-	--     variable=zoom
-	-- [/store_zoom]
-	---
-	function wesnoth.wml_actions.store_zoom(cfg)
-		wml.variables[cfg.variable or "zoom"] = wesnoth.interface.zoom(1, true)
-	end
-end
-
 --- Conditional tag if player has debug mode set
 --
 -- [if]
@@ -191,6 +120,21 @@ end
 function wesnoth.wml_conditionals.debug_mode(cfg)
 	return (wesnoth.game_config.debug or wesnoth.game_config.debug_lua or wesnoth.game_config.mp_debug)
 end
+
+--- Conditional tag if viewing a replay
+--
+-- [if]
+--     [replay_mode]
+--     [/replay_mode]
+--     [then]
+--         ...
+--     [/then]
+-- [/if]
+---
+function wesnoth.wml_conditionals.replay_mode(cfg)
+	return wesnoth.current.user_is_replaying
+end
+
 
 --[=[
 [has_possible_actions]
@@ -452,6 +396,34 @@ function select_tile(caption, validator_func, action_func, cancel_func)
 			return true
 		end
 	end
+end
+
+-- Find the unit which matches provided SUF that is closest to target_x and target_y
+-- If multiple units are equidistant, which unit is selected is arbitrary
+function wesnoth.wml_actions.get_unit_closest_to(cfg)
+	cfg = wml.literal(cfg)
+	local varname = "closest_unit"
+	if cfg.variable ~= nil then
+		varname = cfg.variable
+		cfg.variable = nil
+	end
+	local target_x = tonumber(cfg.target_x)
+	local target_y = tonumber(cfg.target_y)
+	cfg.target_x = nil
+	cfg.target_y = nil
+	local units_list = wesnoth.units.find_on_map(cfg)
+	local return_unit_x = nil
+	local return_unit_y = nil
+	local current_dist = nil
+	for i,unit in ipairs(units_list) do
+		local dist = wesnoth.map.distance_between({unit.x, unit.y}, {target_x, target_y})
+		if current_dist == nil or dist < current_dist then
+			return_unit_x = unit.x
+			return_unit_y = unit.y
+			current_dist = dist
+		end
+	end
+	wml.fire("store_unit", {wml.tag.filter{x=return_unit_x, y=return_unit_y}, variable=varname})
 end
 
 ---
