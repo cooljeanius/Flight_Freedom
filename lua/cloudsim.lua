@@ -18,6 +18,7 @@
 --    * Call update_cloud_map() when you need it updated (probably want to do so in a new_turn or turn_end event)
 -- CAUTION: loading this file and creating all CloudSim objects you want MUST happen in preload context!
 
+local location_set = wesnoth.require("location_set")
 local hexutils = wesnoth.require("hexutils")
 local simplex = wesnoth.require("simplex")
 local cloudsim = {}
@@ -172,7 +173,7 @@ function cloudsim.CloudSim:set_scale_factors(cloud_scale_x, cloud_scale_y, time_
 end
 
 ---Set wind speed
----CAUTION: this will affect all future calls to update_cloud_map, which will 
+---CAUTION: this will affect all future calls to update_cloud_map, which will
 ---start updating *as if this has been the wind speed the entire scenario*
 ---@param wind_speed_x integer #how many hexes clouds move east to west per turn
 ---@param wind_speed_y integer #how many hexes clouds move south to north per turn
